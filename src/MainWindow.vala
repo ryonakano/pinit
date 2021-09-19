@@ -17,10 +17,22 @@ public class MainWindow : Gtk.ApplicationWindow {
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("This name is shown in Applications Menu or Dock."));
         var name_entry = new Entry ();
+        var name_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        name_grid.attach (name_label, 0, 0, 1, 1);
+        name_grid.attach (name_desc_label, 0, 1, 1, 1);
+        name_grid.attach (name_entry, 0, 2, 1, 1);
 
         var comment_label = new Granite.HeaderLabel (_("Comment"));
         var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
         var comment_entry = new Entry ();
+        var comment_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        comment_grid.attach (comment_label, 0, 0, 1, 1);
+        comment_grid.attach (comment_desc_label, 0, 1, 1, 1);
+        comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
         var exec_label = new Granite.HeaderLabel (_("Exec File"));
         var exec_desc_label = new DimLabel (_("Location of the app itself."));
@@ -30,6 +42,12 @@ public class MainWindow : Gtk.ApplicationWindow {
         ) {
             halign = Gtk.Align.START
         };
+        var exec_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        exec_grid.attach (exec_label, 0, 0, 1, 1);
+        exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
+        exec_grid.attach (exec_chooser, 0, 2, 1, 1);
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
         var icon_desc_label = new DimLabel (_("Location of an icon for the app."));
@@ -39,10 +57,22 @@ public class MainWindow : Gtk.ApplicationWindow {
         ) {
             halign = Gtk.Align.START
         };
+        var icon_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        icon_grid.attach (icon_label, 0, 0, 1, 1);
+        icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
+        icon_grid.attach (icon_chooser, 0, 2, 1, 1);
 
         var categories_label = new Granite.HeaderLabel (_("App Category"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
         var categories_entry = new Entry ();
+        var categories_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        categories_grid.attach (categories_label, 0, 0, 1, 1);
+        categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
+        categories_grid.attach (categories_entry, 0, 2, 1, 1);
 
         var no_display_checkbox = new Gtk.CheckButton.with_label (_("No Display")) {
             margin_bottom = 6
@@ -65,21 +95,11 @@ public class MainWindow : Gtk.ApplicationWindow {
             margin = 24,
             margin_top = 12
         };
-        main_grid.attach (name_label, 0, 0, 1, 1);
-        main_grid.attach (name_desc_label, 0, 1, 1, 1);
-        main_grid.attach (name_entry, 0, 2, 1, 1);
-        main_grid.attach (comment_label, 0, 3, 1, 1);
-        main_grid.attach (comment_desc_label, 0, 4, 1, 1);
-        main_grid.attach (comment_entry, 0, 5, 1, 1);
-        main_grid.attach (exec_label, 0, 6, 1, 1);
-        main_grid.attach (exec_desc_label, 0, 7, 1, 1);
-        main_grid.attach (exec_chooser, 0, 8, 1, 1);
-        main_grid.attach (icon_label, 0, 9, 1, 1);
-        main_grid.attach (icon_desc_label, 0, 10, 1, 1);
-        main_grid.attach (icon_chooser, 0, 11, 1, 1);
-        main_grid.attach (categories_label, 0, 12, 1, 1);
-        main_grid.attach (categories_desc_label, 0, 13, 1, 1);
-        main_grid.attach (categories_entry, 0, 14, 1, 1);
+        main_grid.attach (name_grid, 0, 0, 1, 3);
+        main_grid.attach (comment_grid, 0, 3, 1, 3);
+        main_grid.attach (exec_grid, 0, 6, 1, 3);
+        main_grid.attach (icon_grid, 0, 9, 1, 3);
+        main_grid.attach (categories_grid, 0, 12, 1, 3);
         main_grid.attach (no_display_checkbox, 0, 15, 1, 1);
         main_grid.attach (no_display_desc_label, 0, 16, 1, 1);
         main_grid.attach (terminal_checkbox, 0, 17, 1, 1);

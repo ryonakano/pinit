@@ -5,7 +5,6 @@
 
 public class Entry : Gtk.Entry {
     construct {
-        margin_bottom = 12;
         expand = true;
 
         notify["text"].connect (() => {
