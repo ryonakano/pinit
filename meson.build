@@ -26,6 +26,7 @@ sources = files(
     'src' / 'DesktopFile.vala',
     'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
+    'src' / 'MainGrid.vala',
     'src' / 'MainWindow.vala'
 )
 
