@@ -213,7 +213,7 @@ public class MainWindow : Gtk.ApplicationWindow {
                     terminal_checkbox.active = desktop_file.is_cli;
                 }
 
-                action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid);
+                action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
             });
             filechooser.show ();
         });
@@ -225,7 +225,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
 
         key_release_event.connect (() => {
-            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid);
+            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
             return false;
         });
 

@@ -7,7 +7,7 @@ public class DesktopFile : GLib.Object {
     public string id { get; construct; }
     public string app_name { get; construct; }
     public string comment { get; construct; }
-    public string? exec_file { get; construct; }
+    public string exec_file { get; construct; }
     public string? icon_file { get; construct; }
     public string categories { get; construct; }
     public bool is_no_display { get; construct; }
@@ -17,7 +17,7 @@ public class DesktopFile : GLib.Object {
         string id,
         string app_name,
         string comment,
-        string? exec_file,
+        string exec_file,
         string? icon_file,
         string categories,
         bool is_no_display,
