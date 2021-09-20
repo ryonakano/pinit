@@ -55,21 +55,6 @@ public class MainWindow : Gtk.ApplicationWindow {
             expand = true,
             secondary_icon_name = "document-open-symbolic"
         };
-        exec_entry.icon_press.connect ((icon_pos, event) => {
-            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
-                return;
-            }
-
-            var filechooser = new Gtk.FileChooserNative (_("Select an executable file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-                local_only = true
-            };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    exec_entry.text = filechooser.get_filename ();
-                }
-            });
-            filechooser.show ();
-        });
         var exec_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -83,25 +68,6 @@ public class MainWindow : Gtk.ApplicationWindow {
             expand = true,
             secondary_icon_name = "document-open-symbolic"
         };
-        icon_entry.icon_press.connect ((icon_pos, event) => {
-            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
-                return;
-            }
-
-            var filefilter = new Gtk.FileFilter ();
-            filefilter.add_mime_type ("image/*");
-
-            var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-                local_only = true,
-                filter = filefilter
-            };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    icon_entry.text = filechooser.get_filename ();
-                }
-            });
-            filechooser.show ();
-        });
         var icon_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -175,6 +141,42 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         set_titlebar (header_bar);
         show_all ();
+
+        exec_entry.icon_press.connect ((icon_pos, event) => {
+            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
+                return;
+            }
+
+            var filechooser = new Gtk.FileChooserNative (_("Select an executable file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+                local_only = true
+            };
+            filechooser.response.connect ((response_id) => {
+                if (response_id == Gtk.ResponseType.ACCEPT) {
+                    exec_entry.text = filechooser.get_filename ();
+                }
+            });
+            filechooser.show ();
+        });
+
+        icon_entry.icon_press.connect ((icon_pos, event) => {
+            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
+                return;
+            }
+
+            var filefilter = new Gtk.FileFilter ();
+            filefilter.add_mime_type ("image/*");
+
+            var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+                local_only = true,
+                filter = filefilter
+            };
+            filechooser.response.connect ((response_id) => {
+                if (response_id == Gtk.ResponseType.ACCEPT) {
+                    icon_entry.text = filechooser.get_filename ();
+                }
+            });
+            filechooser.show ();
+        });
 
         action_button.clicked.connect (() => {
             var desktop_file = new DesktopFile (
