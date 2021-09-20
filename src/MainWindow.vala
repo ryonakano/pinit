@@ -77,7 +77,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
-        var categories_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        var categories_entry = new Granite.ValidatedEntry.from_regex (/^(.+;)+$/) {
             expand = true
         };
         var categories_grid = new Gtk.Grid () {
