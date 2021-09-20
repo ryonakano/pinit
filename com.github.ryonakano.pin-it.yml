@@ -1,0 +1,17 @@
+app-id: com.github.ryonakano.pin-it
+runtime: io.elementary.Platform
+runtime-version: '6'
+sdk: io.elementary.Sdk
+command: com.github.ryonakano.pin-it
+finish-args:
+  - '--share=ipc'
+  - '--socket=wayland'
+  - '--socket=fallback-x11'
+  # needed for perfers-color-scheme
+  - '--system-talk-name=org.freedesktop.Accounts'
+modules:
+  - name: pin-it
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
