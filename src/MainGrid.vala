@@ -113,7 +113,7 @@ public class MainGrid : Gtk.Grid {
 
         action_button = new Gtk.Button.with_label ("Pin It!") {
             margin_top = 24,
-            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid)
+            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid)
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
