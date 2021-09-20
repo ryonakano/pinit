@@ -14,6 +14,16 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        var id_label = new Granite.HeaderLabel (_("File Name"));
+        var id_desc_label = new DimLabel (_("File name of the desktop file."));
+        var id_entry = new Entry ();
+        var id_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        id_grid.attach (id_label, 0, 0, 1, 1);
+        id_grid.attach (id_desc_label, 0, 1, 1, 1);
+        id_grid.attach (id_entry, 0, 2, 1, 1);
+
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("This name is shown in Applications Menu or Dock."));
         var name_entry = new Entry ();
@@ -38,7 +48,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var exec_desc_label = new DimLabel (_("Location of the app itself."));
         var exec_chooser = new Gtk.FileChooserButton (
             _("Choose an exec file"),
-            Gtk.FileChooserAction.SELECT_FOLDER
+            Gtk.FileChooserAction.OPEN
         ) {
             halign = Gtk.Align.START
         };
@@ -53,7 +63,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var icon_desc_label = new DimLabel (_("Location of an icon for the app."));
         var icon_chooser = new Gtk.FileChooserButton (
             _("Choose an icon file"),
-            Gtk.FileChooserAction.SELECT_FOLDER
+            Gtk.FileChooserAction.OPEN
         ) {
             halign = Gtk.Align.START
         };
@@ -64,7 +74,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
         icon_grid.attach (icon_chooser, 0, 2, 1, 1);
 
-        var categories_label = new Granite.HeaderLabel (_("App Category"));
+        var categories_label = new Granite.HeaderLabel (_("App Categories"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
         var categories_entry = new Entry ();
         var categories_grid = new Gtk.Grid () {
@@ -95,16 +105,17 @@ public class MainWindow : Gtk.ApplicationWindow {
             margin = 24,
             margin_top = 12
         };
-        main_grid.attach (name_grid, 0, 0, 1, 3);
-        main_grid.attach (comment_grid, 0, 3, 1, 3);
-        main_grid.attach (exec_grid, 0, 6, 1, 3);
-        main_grid.attach (icon_grid, 0, 9, 1, 3);
-        main_grid.attach (categories_grid, 0, 12, 1, 3);
-        main_grid.attach (no_display_checkbox, 0, 15, 1, 1);
-        main_grid.attach (no_display_desc_label, 0, 16, 1, 1);
-        main_grid.attach (terminal_checkbox, 0, 17, 1, 1);
-        main_grid.attach (terminal_desc_label, 0, 18, 1, 1);
-        main_grid.attach (action_button, 0, 19, 1, 1);
+        main_grid.attach (id_grid, 0, 0, 1, 3);
+        main_grid.attach (name_grid, 0, 3, 1, 3);
+        main_grid.attach (comment_grid, 0, 6, 1, 3);
+        main_grid.attach (exec_grid, 0, 9, 1, 3);
+        main_grid.attach (icon_grid, 0, 12, 1, 3);
+        main_grid.attach (categories_grid, 0, 15, 1, 3);
+        main_grid.attach (no_display_checkbox, 0, 18, 1, 1);
+        main_grid.attach (no_display_desc_label, 0, 19, 1, 1);
+        main_grid.attach (terminal_checkbox, 0, 20, 1, 1);
+        main_grid.attach (terminal_desc_label, 0, 21, 1, 1);
+        main_grid.attach (action_button, 0, 22, 1, 1);
 
         add (main_grid);
 
@@ -128,6 +139,20 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         set_titlebar (header_bar);
         show_all ();
+
+        action_button.clicked.connect (() => {
+            var desktop_file = new DesktopFile (
+                id_entry.text,
+                name_entry.text,
+                comment_entry.text,
+                exec_chooser.get_filename (),
+                icon_chooser.get_filename (),
+                categories_entry.text,
+                no_display_checkbox.active,
+                terminal_checkbox.active
+            );
+            DesktopFileOperator.get_default ().write_to_file (desktop_file);
+        });
 
         key_press_event.connect ((key) => {
             if (Gdk.ModifierType.CONTROL_MASK in key.state && key.keyval == Gdk.Key.q) {

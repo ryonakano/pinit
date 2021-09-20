@@ -23,6 +23,8 @@ config_file = configure_file(
 
 sources = files(
     'src' / 'Application.vala',
+    'src' / 'DesktopFile.vala',
+    'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
     'src' / 'Entry.vala',
     'src' / 'MainWindow.vala'
