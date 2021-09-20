@@ -23,8 +23,9 @@ config_file = configure_file(
 
 sources = files(
     'src' / 'Application.vala',
+    'src' / 'DesktopFile.vala',
+    'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
-    'src' / 'Entry.vala',
     'src' / 'MainWindow.vala'
 )
 
@@ -33,7 +34,7 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('granite', version: '>= 5.4.0'),
+        dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0')
     ],
     install: true
