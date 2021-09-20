@@ -11,7 +11,7 @@ Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/
 You'll need the following dependencies to build:
 
 * libgtk-3.0-dev
-* libgranite-dev (>= 5.4.0)
+* libgranite-dev (>= 6.0.0)
 * meson (>=0.49.0)
 * valac
 

@@ -16,7 +16,9 @@ public class MainWindow : Gtk.ApplicationWindow {
     construct {
         var id_label = new Granite.HeaderLabel (_("File Name"));
         var id_desc_label = new DimLabel (_("File name of the desktop file."));
-        var id_entry = new Entry ();
+        var id_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+            expand = true
+        };
         var id_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -26,7 +28,9 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("This name is shown in Applications Menu or Dock."));
-        var name_entry = new Entry ();
+        var name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+            expand = true
+        };
         var name_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -36,7 +40,9 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var comment_label = new Granite.HeaderLabel (_("Comment"));
         var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
-        var comment_entry = new Entry ();
+        var comment_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+            expand = true
+        };
         var comment_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -76,7 +82,9 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
-        var categories_entry = new Entry ();
+        var categories_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+            expand = true
+        };
         var categories_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
@@ -97,7 +105,8 @@ public class MainWindow : Gtk.ApplicationWindow {
         var terminal_desc_label = new DimLabel (_("Check this in if you want to registar a CUI app."));
 
         var action_button = new Gtk.Button.with_label ("Pin It!") {
-            margin_top = 24
+            margin_top = 24,
+            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid)
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -154,11 +163,16 @@ public class MainWindow : Gtk.ApplicationWindow {
             DesktopFileOperator.get_default ().write_to_file (desktop_file);
         });
 
+        key_release_event.connect (() => {
+            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid);
+            return false;
+        });
+
         key_press_event.connect ((key) => {
             if (Gdk.ModifierType.CONTROL_MASK in key.state && key.keyval == Gdk.Key.q) {
                 destroy ();
             }
-    
+
             return false;
         });
 
