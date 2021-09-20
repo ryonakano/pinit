@@ -8,7 +8,7 @@ public class DesktopFileOperator : GLib.Object {
     public DesktopFile? last_edited { get; private set; default = null; }
 
     private string preferred_language;
-    private string startup_dir;
+    private string desktop_dir;
 
     public static DesktopFileOperator get_default () {
         if (_instance == null) {
@@ -23,13 +23,9 @@ public class DesktopFileOperator : GLib.Object {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        // Get path to user's startup directory (typically ~/.local/share/applications)
-        var data_dir = Environment.get_user_data_dir ();
-        startup_dir = Path.build_filename (data_dir, "applications");
-
-        // If startup directory doesn't exist, create it.
-        if (!FileUtils.test (startup_dir, FileTest.EXISTS)) {
-            var file = File.new_for_path (startup_dir);
+        desktop_dir = Path.build_filename ("/home/%s/.local/share/applications".printf (Environment.get_user_name ()));
+        if (!FileUtils.test (desktop_dir, FileTest.EXISTS)) {
+            var file = File.new_for_path (desktop_dir);
 
             try {
                 file.make_directory_with_parents ();
@@ -54,7 +50,7 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY, desktop_file.is_no_display);
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        var path = Path.build_filename (startup_dir, desktop_file.id + ".desktop");
+        var path = Path.build_filename (desktop_dir, desktop_file.id + ".desktop");
 
         // Create or update desktop file
         try {
