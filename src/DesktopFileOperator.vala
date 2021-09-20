@@ -5,6 +5,8 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
+    public DesktopFile? last_edited { get; private set; default = null; }
+
     private string preferred_language;
     private string startup_dir;
 
@@ -106,6 +108,7 @@ public class DesktopFileOperator : GLib.Object {
             is_no_display,
             is_cli
         );
+        last_edited = desktop_file;
 
         return desktop_file;
     }

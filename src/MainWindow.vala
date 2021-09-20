@@ -7,7 +7,6 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public MainWindow () {
         Object (
-            title: "Pin It!",
             resizable: false,
             default_width: 400
         );
@@ -134,7 +133,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         };
 
         var header_bar = new Gtk.HeaderBar () {
-            title = "Pin It!",
+            title = _("Untitled desktop file"),
             show_close_button = true,
             has_subtitle = false,
         };
@@ -179,6 +178,12 @@ public class MainWindow : Gtk.ApplicationWindow {
                 action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid);
             });
             filechooser.show ();
+        });
+
+        DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
+            if (DesktopFileOperator.get_default ().last_edited != null) {
+                header_bar.title = _("Edit “%s”").printf (DesktopFileOperator.get_default ().last_edited.app_name);
+            }
         });
 
         key_release_event.connect (() => {
