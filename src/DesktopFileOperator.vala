@@ -5,6 +5,7 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
+    private string preferred_language;
     private string startup_dir;
 
     public static DesktopFileOperator get_default () {
@@ -20,9 +21,12 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void init () {
-        // Get path to user's startup directory (typically ~/.local/share/application)
+        var languages = Intl.get_language_names ();
+        preferred_language = languages[0];
+
+        // Get path to user's startup directory (typically ~/.local/share/applications)
         var data_dir = Environment.get_user_data_dir ();
-        startup_dir = Path.build_filename (data_dir, "application");
+        startup_dir = Path.build_filename (data_dir, "applications");
 
         // If startup directory doesn't exist, create it.
         if (!FileUtils.test (startup_dir, FileTest.EXISTS)) {
@@ -38,9 +42,6 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void write_to_file (DesktopFile desktop_file) {
-        var languages = Intl.get_language_names ();
-        var preferred_language = languages [0];
-
         var keyfile = new GLib.KeyFile ();
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
@@ -62,5 +63,50 @@ public class DesktopFileOperator : GLib.Object {
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
+    }
+
+    public DesktopFile? load_from_file (string path) {
+        DesktopFile desktop_file = null;
+        string id = "";
+        string app_name = "";
+        string comment = "";
+        string exec_file = "";
+        string icon_file = "";
+        string categories = "";
+        bool is_no_display = false;
+        bool is_cli = false;
+
+        try {
+            var keyfile = new GLib.KeyFile ();
+            keyfile.load_from_file (path, GLib.KeyFileFlags.KEEP_TRANSLATIONS);
+            string[] splited_path = path.split ("/");
+            string basename = splited_path[splited_path.length - 1];
+
+            id = basename.slice (0, basename.length - ".desktop".length);
+            app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
+            comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+            exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
+            icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+            categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+            is_no_display = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY);
+            is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+        } catch (GLib.KeyFileError e) {
+            warning (e.message);
+        } catch (GLib.FileError e) {
+            warning (e.message);
+        }
+
+        desktop_file = new DesktopFile (
+            id,
+            app_name,
+            comment,
+            exec_file,
+            icon_file,
+            categories,
+            is_no_display,
+            is_cli
+        );
+
+        return desktop_file;
     }
 }

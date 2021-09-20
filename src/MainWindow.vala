@@ -129,11 +129,9 @@ public class MainWindow : Gtk.ApplicationWindow {
         add (main_grid);
 
         var open_image = new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.SMALL_TOOLBAR);
-        var open_button = new Gtk.ToolButton (open_image, null);
-        open_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"));
-        open_button.clicked.connect (() => {
-            // Open existing .desktop file
-        });
+        var open_button = new Gtk.ToolButton (open_image, null) {
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"))
+        };
 
         var header_bar = new Gtk.HeaderBar () {
             title = "Pin It!",
@@ -161,6 +159,26 @@ public class MainWindow : Gtk.ApplicationWindow {
                 terminal_checkbox.active
             );
             DesktopFileOperator.get_default ().write_to_file (desktop_file);
+        });
+
+        open_button.clicked.connect (() => {
+            var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel"));
+            filechooser.response.connect ((response_id) => {
+                if (response_id == Gtk.ResponseType.ACCEPT) {
+                    var desktop_file = DesktopFileOperator.get_default ().load_from_file (filechooser.get_filename ());
+                    id_entry.text = desktop_file.id;
+                    name_entry.text = desktop_file.app_name;
+                    comment_entry.text = desktop_file.comment;
+                    exec_chooser.set_filename (desktop_file.exec_file);
+                    icon_chooser.set_filename (desktop_file.icon_file);
+                    categories_entry.text = desktop_file.categories;
+                    no_display_checkbox.active = desktop_file.is_no_display;
+                    terminal_checkbox.active = desktop_file.is_cli;
+                }
+
+                action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid);
+            });
+            filechooser.show ();
         });
 
         key_release_event.connect (() => {
