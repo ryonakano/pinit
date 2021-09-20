@@ -50,34 +50,64 @@ public class MainWindow : Gtk.ApplicationWindow {
         comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
         var exec_label = new Granite.HeaderLabel (_("Exec File"));
-        var exec_desc_label = new DimLabel (_("Location of the app itself."));
-        var exec_chooser = new Gtk.FileChooserButton (
-            _("Choose an exec file"),
-            Gtk.FileChooserAction.OPEN
-        ) {
-            halign = Gtk.Align.START
+        var exec_desc_label = new DimLabel (_("Location of the app itself in an absolute path or an app's alias name."));
+        var exec_entry = new Gtk.Entry () {
+            expand = true,
+            secondary_icon_name = "document-open-symbolic"
         };
+        exec_entry.icon_press.connect ((icon_pos, event) => {
+            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
+                return;
+            }
+
+            var filechooser = new Gtk.FileChooserNative (_("Select an executable file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+                local_only = true
+            };
+            filechooser.response.connect ((response_id) => {
+                if (response_id == Gtk.ResponseType.ACCEPT) {
+                    exec_entry.text = filechooser.get_filename ();
+                }
+            });
+            filechooser.show ();
+        });
         var exec_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
         exec_grid.attach (exec_label, 0, 0, 1, 1);
         exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
-        exec_grid.attach (exec_chooser, 0, 2, 1, 1);
+        exec_grid.attach (exec_entry, 0, 2, 1, 1);
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
-        var icon_desc_label = new DimLabel (_("Location of an icon for the app."));
-        var icon_chooser = new Gtk.FileChooserButton (
-            _("Choose an icon file"),
-            Gtk.FileChooserAction.OPEN
-        ) {
-            halign = Gtk.Align.START
+        var icon_desc_label = new DimLabel (_("Location of an icon for the app in an absolute path or an icon's alias name."));
+        var icon_entry = new Gtk.Entry () {
+            expand = true,
+            secondary_icon_name = "document-open-symbolic"
         };
+        icon_entry.icon_press.connect ((icon_pos, event) => {
+            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
+                return;
+            }
+
+            var filefilter = new Gtk.FileFilter ();
+            filefilter.add_mime_type ("image/*");
+
+            var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+                local_only = true,
+                filter = filefilter
+            };
+            filechooser.response.connect ((response_id) => {
+                if (response_id == Gtk.ResponseType.ACCEPT) {
+                    icon_entry.text = filechooser.get_filename ();
+                }
+            });
+            filechooser.show ();
+        });
         var icon_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
         icon_grid.attach (icon_label, 0, 0, 1, 1);
         icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
-        icon_grid.attach (icon_chooser, 0, 2, 1, 1);
+        icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
@@ -151,8 +181,8 @@ public class MainWindow : Gtk.ApplicationWindow {
                 id_entry.text,
                 name_entry.text,
                 comment_entry.text,
-                exec_chooser.get_filename (),
-                icon_chooser.get_filename (),
+                exec_entry.text,
+                icon_entry.text,
                 categories_entry.text,
                 no_display_checkbox.active,
                 terminal_checkbox.active
@@ -168,8 +198,8 @@ public class MainWindow : Gtk.ApplicationWindow {
                     id_entry.text = desktop_file.id;
                     name_entry.text = desktop_file.app_name;
                     comment_entry.text = desktop_file.comment;
-                    exec_chooser.set_filename (desktop_file.exec_file);
-                    icon_chooser.set_filename (desktop_file.icon_file);
+                    exec_entry.text = desktop_file.exec_file;
+                    icon_entry.text = desktop_file.icon_file;
                     categories_entry.text = desktop_file.categories;
                     no_display_checkbox.active = desktop_file.is_no_display;
                     terminal_checkbox.active = desktop_file.is_cli;
