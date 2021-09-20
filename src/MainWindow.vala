@@ -191,7 +191,13 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
 
         open_button.clicked.connect (() => {
-            var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel"));
+            var filefilter = new Gtk.FileFilter ();
+            filefilter.add_pattern ("*.desktop");
+
+            var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+                local_only = true,
+                filter = filefilter
+            };
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
                     var desktop_file = DesktopFileOperator.get_default ().load_from_file (filechooser.get_filename ());
