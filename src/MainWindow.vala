@@ -164,7 +164,9 @@ public class MainWindow : Gtk.ApplicationWindow {
             }
 
             var filefilter = new Gtk.FileFilter ();
-            filefilter.add_mime_type ("image/*");
+            filefilter.add_mime_type ("image/png");
+            filefilter.add_mime_type ("image/svg+xml");
+            filefilter.add_mime_type ("application/rdf+xml");
 
             var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
                 local_only = true,
@@ -194,7 +196,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         open_button.clicked.connect (() => {
             var filefilter = new Gtk.FileFilter ();
-            filefilter.add_pattern ("*.desktop");
+            filefilter.add_mime_type ("application/x-desktop");
 
             var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
                 local_only = true,
