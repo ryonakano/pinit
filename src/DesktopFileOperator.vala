@@ -20,9 +20,6 @@ public class DesktopFileOperator : GLib.Object {
     private static DesktopFileOperator _instance;
 
     private DesktopFileOperator () {
-    }
-
-    public void init () {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 

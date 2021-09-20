@@ -31,7 +31,6 @@ public class Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        DesktopFileOperator.get_default ().init ();
         return new Application ().run ();
     }
 }
