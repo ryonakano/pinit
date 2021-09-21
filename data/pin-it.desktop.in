@@ -2,7 +2,7 @@
 Name=Pin It!
 GenericName=Desktop File Creator
 Comment=Pin any apps into the launcher
-Categories=Utility;
+Categories=System;Utility;
 Exec=com.github.ryonakano.pin-it
 Icon=com.github.ryonakano.pin-it
 Terminal=false
