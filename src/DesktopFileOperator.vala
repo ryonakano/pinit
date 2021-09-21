@@ -62,8 +62,7 @@ public class DesktopFileOperator : GLib.Object {
         last_edited = desktop_file;
     }
 
-    public DesktopFile? load_from_file (string path) {
-        DesktopFile desktop_file = null;
+    public DesktopFile load_from_file (string path) {
         string id = "";
         string app_name = "";
         string comment = "";
@@ -91,7 +90,7 @@ public class DesktopFileOperator : GLib.Object {
             warning (e.message);
         }
 
-        desktop_file = new DesktopFile (
+        var desktop_file = new DesktopFile (
             id,
             app_name,
             comment,
