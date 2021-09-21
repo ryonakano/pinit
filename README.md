@@ -1,13 +1,17 @@
 # Pin It!
+![Welcome View](data/screenshot-1.png)
 
-![Welcome View](data/screenshot-1.png) ![Edit View](data/screenshot-2.png)
+![Edit View](data/screenshot-2.png)
 
 Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/dfc
 
 ## Installation
+### For Users
+On elementary OS? Click the button to get Pin It! on AppCenter:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pin-it)
 
 ### For Developers
-
 You'll need the following dependencies to build:
 
 * libgtk-3.0-dev
