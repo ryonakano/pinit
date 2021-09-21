@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class MainGrid : Gtk.Grid {
+public class EditView : Gtk.Overlay {
     public MainWindow window { get; construct; }
 
     private Granite.ValidatedEntry id_entry;
@@ -12,23 +12,23 @@ public class MainGrid : Gtk.Grid {
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
     private Granite.ValidatedEntry categories_entry;
-    private Gtk.CheckButton no_display_checkbox;
     private Gtk.CheckButton terminal_checkbox;
     private Gtk.Button action_button;
 
-    public MainGrid (MainWindow window) {
+    public EditView (MainWindow window) {
         Object (
-            margin: 24,
-            margin_top: 12,
             window: window
         );
     }
 
     construct {
         var id_label = new Granite.HeaderLabel (_("File Name"));
-        var id_desc_label = new DimLabel (_("File name of the desktop file."));
-        id_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        var id_desc_label = new DimLabel (_("File name of the desktop file. Only lowercase letters and numbers are allowed."));
+        id_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
             expand = true
+        };
+        var suffix_label = new Gtk.Label (".desktop") {
+            margin_start = 6
         };
         var id_grid = new Gtk.Grid () {
             margin_bottom = 12
@@ -36,9 +36,10 @@ public class MainGrid : Gtk.Grid {
         id_grid.attach (id_label, 0, 0, 1, 1);
         id_grid.attach (id_desc_label, 0, 1, 1, 1);
         id_grid.attach (id_entry, 0, 2, 1, 1);
+        id_grid.attach (suffix_label, 1, 2, 1, 1);
 
         var name_label = new Granite.HeaderLabel (_("App Name"));
-        var name_desc_label = new DimLabel (_("This name is shown in Applications Menu or Dock."));
+        var name_desc_label = new DimLabel (_("Shown in Applications Menu or Dock."));
         name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
             expand = true
         };
@@ -99,13 +100,6 @@ public class MainGrid : Gtk.Grid {
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
         categories_grid.attach (categories_entry, 0, 2, 1, 1);
 
-        no_display_checkbox = new Gtk.CheckButton.with_label (_("No Display")) {
-            margin_bottom = 6
-        };
-        var no_display_desc_label = new DimLabel (_("Whether to show the app entry in Application Menu.")) {
-            margin_bottom = 12
-        };
-
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
@@ -113,21 +107,28 @@ public class MainGrid : Gtk.Grid {
 
         action_button = new Gtk.Button.with_label ("Pin It!") {
             margin_top = 24,
-            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid)
+            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""))
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        attach (id_grid, 0, 0, 1, 3);
-        attach (name_grid, 0, 3, 1, 3);
-        attach (comment_grid, 0, 6, 1, 3);
-        attach (exec_grid, 0, 9, 1, 3);
-        attach (icon_grid, 0, 12, 1, 3);
-        attach (categories_grid, 0, 15, 1, 3);
-        attach (no_display_checkbox, 0, 18, 1, 1);
-        attach (no_display_desc_label, 0, 19, 1, 1);
-        attach (terminal_checkbox, 0, 20, 1, 1);
-        attach (terminal_desc_label, 0, 21, 1, 1);
-        attach (action_button, 0, 22, 1, 1);
+        var main_grid = new Gtk.Grid () {
+            margin = 24,
+            margin_top = 12
+        };
+        main_grid.attach (id_grid, 0, 0, 1, 3);
+        main_grid.attach (name_grid, 0, 3, 1, 3);
+        main_grid.attach (comment_grid, 0, 6, 1, 3);
+        main_grid.attach (exec_grid, 0, 9, 1, 3);
+        main_grid.attach (icon_grid, 0, 12, 1, 3);
+        main_grid.attach (categories_grid, 0, 15, 1, 3);
+        main_grid.attach (terminal_checkbox, 0, 20, 1, 1);
+        main_grid.attach (terminal_desc_label, 0, 21, 1, 1);
+        main_grid.attach (action_button, 0, 22, 1, 1);
+
+        add (main_grid);
+
+        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
+        add_overlay (toast);
 
         exec_entry.icon_press.connect ((icon_pos, event) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
@@ -175,14 +176,14 @@ public class MainGrid : Gtk.Grid {
                 exec_entry.text,
                 icon_entry.text,
                 categories_entry.text,
-                no_display_checkbox.active,
                 terminal_checkbox.active
             );
             DesktopFileOperator.get_default ().write_to_file (desktop_file);
+            toast.send_notification ();
         });
 
         key_release_event.connect (() => {
-            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
+            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""));
             return false;
         });
     }
@@ -194,9 +195,8 @@ public class MainGrid : Gtk.Grid {
         exec_entry.text = desktop_file.exec_file;
         icon_entry.text = desktop_file.icon_file;
         categories_entry.text = desktop_file.categories;
-        no_display_checkbox.active = desktop_file.is_no_display;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
+        action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""));
     }
 }

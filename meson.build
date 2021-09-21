@@ -26,8 +26,9 @@ sources = files(
     'src' / 'DesktopFile.vala',
     'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
-    'src' / 'MainGrid.vala',
-    'src' / 'MainWindow.vala'
+    'src' / 'EditView.vala',
+    'src' / 'MainWindow.vala',
+    'src' / 'WelcomeView.vala'
 )
 
 executable(

@@ -1,2 +1,3 @@
-src/MainGrid.vala
+src/EditView.vala
 src/MainWindow.vala
+src/WelcomeView.vala

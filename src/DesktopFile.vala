@@ -10,7 +10,6 @@ public class DesktopFile : GLib.Object {
     public string exec_file { get; construct; }
     public string? icon_file { get; construct; }
     public string categories { get; construct; }
-    public bool is_no_display { get; construct; }
     public bool is_cli { get; construct; }
 
     public DesktopFile (
@@ -20,7 +19,6 @@ public class DesktopFile : GLib.Object {
         string exec_file,
         string? icon_file,
         string categories,
-        bool is_no_display,
         bool is_cli
     ) {
         Object (
@@ -30,7 +28,6 @@ public class DesktopFile : GLib.Object {
             exec_file: exec_file,
             icon_file: icon_file,
             categories: categories,
-            is_no_display: is_no_display,
             is_cli: is_cli
         );
     }

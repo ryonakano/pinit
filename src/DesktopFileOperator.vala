@@ -48,7 +48,6 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
-        keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY, desktop_file.is_no_display);
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
         var path = Path.build_filename (desktop_dir, desktop_file.id + ".desktop");
@@ -59,6 +58,8 @@ public class DesktopFileOperator : GLib.Object {
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
+
+        last_edited = desktop_file;
     }
 
     public DesktopFile? load_from_file (string path) {
@@ -69,7 +70,6 @@ public class DesktopFileOperator : GLib.Object {
         string exec_file = "";
         string icon_file = "";
         string categories = "";
-        bool is_no_display = false;
         bool is_cli = false;
 
         try {
@@ -84,7 +84,6 @@ public class DesktopFileOperator : GLib.Object {
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
-            is_no_display = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
         } catch (GLib.KeyFileError e) {
             warning (e.message);
@@ -99,7 +98,6 @@ public class DesktopFileOperator : GLib.Object {
             exec_file,
             icon_file,
             categories,
-            is_no_display,
             is_cli
         );
         last_edited = desktop_file;
