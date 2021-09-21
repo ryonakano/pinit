@@ -15,6 +15,10 @@ public class WelcomeView : Granite.Widgets.Welcome {
     }
 
     construct {
+        // The background color of this widget is rgb(255, 255, 255) by default.
+        // Remove this class so that the background color of the headerbar and the welcome view matches
+        get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+
         append ("document-new", _("New File"), _("Create a new desktop file."));
         append ("document-open", _("Open File"), _("Open an existing desktop file."));
 
