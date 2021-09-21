@@ -14,7 +14,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ryonakano/pin-it/main/data/Screenshot.png</image>
+      <caption>Welcome View</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pin-it/main/data/screenshot-1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Edit View</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pin-it/main/data/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 

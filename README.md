@@ -1,6 +1,6 @@
 # Pin It!
 
-![app screenshot](data/Screenshot.png)
+![Welcome View](data/screenshot-1.png) ![Edit View](data/screenshot-2.png)
 
 Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/dfc
 
