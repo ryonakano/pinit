@@ -8,18 +8,18 @@ public class DesktopFile : GLib.Object {
     public string app_name { get; construct; }
     public string comment { get; construct; }
     public string exec_file { get; construct; }
-    public string? icon_file { get; construct; }
+    public string icon_file { get; construct; }
     public string categories { get; construct; }
     public bool is_cli { get; construct; }
 
     public DesktopFile (
-        string id,
-        string app_name,
-        string comment,
-        string exec_file,
-        string? icon_file,
-        string categories,
-        bool is_cli
+        string id = "",
+        string app_name = "",
+        string comment = "",
+        string exec_file = "",
+        string icon_file = "",
+        string categories = "",
+        bool is_cli = false
     ) {
         Object (
             id: id,

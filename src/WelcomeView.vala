@@ -24,9 +24,9 @@ public class WelcomeView : Granite.Widgets.Welcome {
 
         activated.connect ((i) => {
             if (i == 0) {
-                window.set_visible_view ("edit_view");
+                window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
             } else {
-                window.open_file ();
+                window.show_files_view ();
             }
         });
     }
