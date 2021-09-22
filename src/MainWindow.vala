@@ -6,7 +6,7 @@
 public class MainWindow : Gtk.ApplicationWindow {
     private EditView edit_view;
     private Gtk.Stack stack;
-    private Gtk.ToolButton open_button;
+    private Gtk.ToolButton home_button;
     private Gtk.HeaderBar header_bar;
 
     public MainWindow () {
@@ -29,27 +29,27 @@ public class MainWindow : Gtk.ApplicationWindow {
         stack.add_named (edit_view, "edit_view");
         add (stack);
 
-        var open_image = new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.SMALL_TOOLBAR);
-        open_button = new Gtk.ToolButton (open_image, null) {
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"))
+        var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
+        home_button = new Gtk.ToolButton (home_image, null) {
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or open"))
         };
 
         header_bar = new Gtk.HeaderBar () {
-            title = "Pin It!",
             show_close_button = true,
             has_subtitle = false,
         };
-        header_bar.pack_start (open_button);
+        header_bar.pack_start (home_button);
 
         unowned var header_bar_style = header_bar.get_style_context ();
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         header_bar_style.add_class ("default-decoration");
 
         set_titlebar (header_bar);
+        show_welcome_view ();
         show_all ();
 
-        open_button.clicked.connect (() => {
-            show_files_view ();
+        home_button.clicked.connect (() => {
+            show_welcome_view ();
         });
 
         DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
@@ -77,20 +77,20 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public void show_welcome_view () {
         header_bar.title = "Pin It!";
-        open_button.sensitive = true;
+        home_button.sensitive = false;
         stack.visible_child_name = "welcome_view";
     }
 
     public void show_files_view () {
         header_bar.title = _("Open a desktop file");
-        open_button.sensitive = false;
+        home_button.sensitive = true;
         stack.visible_child_name = "files_view";
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         set_header_file_info ();
-        open_button.sensitive = true;
+        home_button.sensitive = true;
         stack.visible_child_name = "edit_view";
     }
 

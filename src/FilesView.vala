@@ -30,20 +30,14 @@ public class FilesView : Gtk.Grid {
             file_list.add (list_item);
         }
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
-        var open_button = new Gtk.Button.with_label (_("Open"));
+        var open_button = new Gtk.Button.with_label (_("Open")) {
+            expand = false,
+            halign = Gtk.Align.END
+        };
         open_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var buttons_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        buttons_box.pack_end (open_button, false, false);
-        buttons_box.pack_end (cancel_button, false, false);
-
         attach (file_list, 0, 0, 1, 1);
-        attach (buttons_box, 0, 1, 1, 1);
-
-        cancel_button.clicked.connect (() => {
-            window.show_welcome_view ();
-        });
+        attach (open_button, 0, 1, 1, 1);
 
         open_button.clicked.connect (() => {
             string path = files.get (file_list.get_selected_row ().get_index ()).path;
