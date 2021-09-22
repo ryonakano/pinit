@@ -5,13 +5,8 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
-    public struct FileObject {
-        public string basename;
-        public string path;
-    }
-
     public DesktopFile? last_edited { get; private set; default = null; }
-    private Gee.ArrayList<FileObject?> file_list = new Gee.ArrayList<FileObject?> ();
+    private Gee.ArrayList<DesktopFile> file_list = new Gee.ArrayList<DesktopFile> ();
 
     private string preferred_language;
     private File desktop_dir;
@@ -42,7 +37,7 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
-    public Gee.ArrayList<FileObject?> get_file_list () {
+    public Gee.ArrayList<DesktopFile> get_files_list () {
         file_list.clear ();
 
         try {
@@ -54,16 +49,14 @@ public class DesktopFileOperator : GLib.Object {
                     continue;
                 }
 
-                var file = FileObject () {
-                    basename = name,
-                    path = "%s/%s".printf (desktop_dir.get_path (), name)
-                };
-                file_list.add (file);
+                var desktop_file = load_from_file ("%s/%s".printf (desktop_dir.get_path (), name));
+                file_list.add (desktop_file);
             }
         } catch (Error e) {
             warning (e.message);
         }
 
+        last_edited = null;
         return file_list;
     }
 

@@ -4,6 +4,7 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    private FilesView files_view;
     private EditView edit_view;
     private Gtk.Stack stack;
     private Gtk.ToolButton home_button;
@@ -18,7 +19,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     construct {
         var welcome_view = new WelcomeView (this);
-        var files_view = new FilesView (this);
+        files_view = new FilesView (this);
         edit_view = new EditView (this);
 
         stack = new Gtk.Stack () {
@@ -53,7 +54,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
 
         DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
-            set_header_file_info ();
+            set_header_file_info (DesktopFileOperator.get_default ().last_edited);
         });
 
         key_press_event.connect ((key) => {
@@ -89,14 +90,14 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
-        set_header_file_info ();
+        set_header_file_info (desktop_file);
         home_button.sensitive = true;
         stack.visible_child_name = "edit_view";
     }
 
-    private void set_header_file_info () {
-        if (DesktopFileOperator.get_default ().last_edited != null) {
-            header_bar.title = _("Editing “%s”").printf (DesktopFileOperator.get_default ().last_edited.id + ".desktop");
+    private void set_header_file_info (DesktopFile desktop_file) {
+        if (desktop_file.id != "") {
+            header_bar.title = _("Editing “%s”").printf (desktop_file.id + ".desktop");
         } else {
             header_bar.title = _("Untitled desktop file");
         }
