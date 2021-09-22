@@ -83,6 +83,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     public void show_files_view () {
+        files_view.update_list ();
         header_bar.title = _("Open a desktop file");
         home_button.sensitive = true;
         stack.visible_child_name = "files_view";
