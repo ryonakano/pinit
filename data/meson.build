@@ -1,3 +1,12 @@
+icon_sizes = ['24', '48', '64']
+
+foreach i : icon_sizes
+    install_data(
+        'icons' / i / meson.project_name() + '.svg',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
+    )
+endforeach
+
 i18n.merge_file(
     input: 'pinit.desktop.in',
     output: meson.project_name() + '.desktop',
