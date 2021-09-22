@@ -6,6 +6,7 @@
 public class MainWindow : Gtk.ApplicationWindow {
     private EditView edit_view;
     private Gtk.Stack stack;
+    private Gtk.ToolButton open_button;
     private Gtk.HeaderBar header_bar;
 
     public MainWindow () {
@@ -17,17 +18,19 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     construct {
         var welcome_view = new WelcomeView (this);
+        var files_view = new FilesView (this);
         edit_view = new EditView (this);
 
         stack = new Gtk.Stack () {
             transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
         stack.add_named (welcome_view, "welcome_view");
+        stack.add_named (files_view, "files_view");
         stack.add_named (edit_view, "edit_view");
         add (stack);
 
         var open_image = new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.SMALL_TOOLBAR);
-        var open_button = new Gtk.ToolButton (open_image, null) {
+        open_button = new Gtk.ToolButton (open_image, null) {
             tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"))
         };
 
@@ -46,11 +49,11 @@ public class MainWindow : Gtk.ApplicationWindow {
         show_all ();
 
         open_button.clicked.connect (() => {
-            open_file ();
+            show_files_view ();
         });
 
         DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
-            update_header_label ();
+            set_header_file_info ();
         });
 
         key_press_event.connect ((key) => {
@@ -72,33 +75,26 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    public void open_file () {
-        var filefilter = new Gtk.FileFilter ();
-        filefilter.add_mime_type ("application/x-desktop");
-
-        var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-            local_only = true,
-            filter = filefilter
-        };
-        filechooser.response.connect ((response_id) => {
-            if (response_id == Gtk.ResponseType.ACCEPT) {
-                var desktop_file = DesktopFileOperator.get_default ().load_from_file (filechooser.get_filename ());
-                edit_view.set_desktop_file (desktop_file);
-                set_visible_view ("edit_view");
-            }
-        });
-        filechooser.show ();
+    public void show_welcome_view () {
+        header_bar.title = "Pin It!";
+        open_button.sensitive = true;
+        stack.visible_child_name = "welcome_view";
     }
 
-    public void set_visible_view (string view_name) {
-        if (view_name == "edit_view") {
-            update_header_label ();
-        }
-
-        stack.visible_child_name = view_name;
+    public void show_files_view () {
+        header_bar.title = _("Open a desktop file");
+        open_button.sensitive = false;
+        stack.visible_child_name = "files_view";
     }
 
-    private void update_header_label () {
+    public void show_edit_view (DesktopFile desktop_file) {
+        edit_view.set_desktop_file (desktop_file);
+        set_header_file_info ();
+        open_button.sensitive = true;
+        stack.visible_child_name = "edit_view";
+    }
+
+    private void set_header_file_info () {
         if (DesktopFileOperator.get_default ().last_edited != null) {
             header_bar.title = _("Editing “%s”").printf (DesktopFileOperator.get_default ().last_edited.id + ".desktop");
         } else {
