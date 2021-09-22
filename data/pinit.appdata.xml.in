@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2021 Ryo Nakano -->
 <component type="desktop">
-  <id>com.github.ryonakano.pin-it</id>
-  <launchable type="desktop-id">com.github.ryonakano.pin-it.desktop</launchable>
+  <id>com.github.ryonakano.pinit</id>
+  <launchable type="desktop-id">com.github.ryonakano.pinit.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Pin It!</name>
@@ -15,11 +15,11 @@
   <screenshots>
     <screenshot type="default">
       <caption>Welcome View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pin-it/main/data/screenshot-1.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshot-1.png</image>
     </screenshot>
     <screenshot>
       <caption>Edit View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pin-it/main/data/screenshot-2.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
@@ -64,10 +64,10 @@
   </releases>
 
   <developer_name>Ryo Nakano</developer_name>
-  <url type="homepage">https://github.com/ryonakano/pin-it</url>
-  <url type="bugtracker">https://github.com/ryonakano/pin-it/issues</url>
-  <url type="help">https://github.com/ryonakano/pin-it/discussions</url>
-  <url type="translate">https://github.com/ryonakano/pin-it</url>
+  <url type="homepage">https://github.com/ryonakano/pinit</url>
+  <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
+  <url type="help">https://github.com/ryonakano/pinit/discussions</url>
+  <url type="translate">https://github.com/ryonakano/pinit</url>
   
   <custom>
     <value key="x-appcenter-color-primary">#007367</value>

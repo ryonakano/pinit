@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-21 21:42+0900\n"
+"POT-Creation-Date: 2021-09-22 09:01+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/pin-it.appdata.xml.in:8 data/pin-it.desktop.in:3
+#: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:9 data/pin-it.desktop.in:5
+#: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
 msgid "Pin any apps into the launcher"
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:11
+#: data/pinit.appdata.xml.in:11
 msgid ""
 "Pin It! is an app that lets you registar any portable apps (raw executable "
 "files, AppImage files, etc.) into Application Menu."
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:17
+#: data/pinit.appdata.xml.in:17
 msgid "Welcome View"
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:21
+#: data/pinit.appdata.xml.in:21
 msgid "Edit View"
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:60
+#: data/pinit.appdata.xml.in:60
 msgid "Initial release"
 msgstr ""
 
-#: data/pin-it.appdata.xml.in:66
+#: data/pinit.appdata.xml.in:66
 msgid "Ryo Nakano"
 msgstr ""
 
-#: data/pin-it.desktop.in:4
+#: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
 msgstr ""
 
-#: data/pin-it.desktop.in:8
-msgid "com.github.ryonakano.pin-it"
+#: data/pinit.desktop.in:8
+msgid "com.github.ryonakano.pinit"
 msgstr ""
 
-#: data/pin-it.desktop.in:11
+#: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""

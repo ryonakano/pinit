@@ -9,7 +9,7 @@ Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/
 ### For Users
 On elementary OS? Click the button to get Pin It! on AppCenter:
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pin-it)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pinit)
 
 ### For Developers
 You'll need the following dependencies to build:
@@ -25,7 +25,7 @@ Run `meson build` to configure the build environment. Change to the build direct
     cd build
     ninja
 
-To install, use `ninja install`, then execute with `com.github.ryonakano.pin-it`
+To install, use `ninja install`, then execute with `com.github.ryonakano.pinit`
 
     ninja install
-    com.github.ryonakano.pin-it
+    com.github.ryonakano.pinit
