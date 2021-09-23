@@ -66,9 +66,15 @@ public class FilesView : Gtk.Stack {
             };
             app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
+            var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = _("Delete…"),
+                expand = true,
+                halign = Gtk.Align.END
+            };
+
             var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic", Gtk.IconSize.BUTTON) {
                 tooltip_text = _("Edit…"),
-                expand = true,
+                expand = false,
                 halign = Gtk.Align.END
             };
 
@@ -79,11 +85,36 @@ public class FilesView : Gtk.Stack {
             app_grid.attach (app_icon, 0, 0, 1, 2);
             app_grid.attach (app_name_label, 1, 0, 1, 1);
             app_grid.attach (app_comment_label, 1, 1, 1, 1);
-            app_grid.attach (edit_button, 2, 0, 1, 2);
+            app_grid.attach (delete_button, 2, 0, 1, 2);
+            app_grid.attach (edit_button, 3, 0, 1, 2);
+
+            delete_button.clicked.connect (() => {
+                var delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    _("Are you sure you want to delete this desktop file?"),
+                    _("This file is permanently deleted and can't be restored."),
+                    "dialog-warning",
+                    Gtk.ButtonsType.NONE
+                ) {
+                    modal = true
+                };
+                delete_dialog.add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+                var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
+                confirm_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+                delete_dialog.response.connect ((response_id) => {
+                    if (response_id == Gtk.ResponseType.OK) {
+                        DesktopFileOperator.get_default ().delete_file (file);
+                        update_list ();
+                    }
+
+                    delete_dialog.destroy ();
+                });
+
+                delete_dialog.show ();
+            });
 
             edit_button.clicked.connect (() => {
-                DesktopFile desktop_file = files.get (files_list.get_selected_row ().get_index ());
-                window.show_edit_view (desktop_file);
+                window.show_edit_view (file);
             });    
 
             var list_item = new Gtk.ListBoxRow ();

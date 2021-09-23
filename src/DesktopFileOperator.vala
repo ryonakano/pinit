@@ -5,7 +5,6 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
-    public DesktopFile? last_edited { get; private set; default = null; }
     private Gee.ArrayList<DesktopFile> file_list = new Gee.ArrayList<DesktopFile> ();
 
     private string preferred_language;
@@ -56,12 +55,10 @@ public class DesktopFileOperator : GLib.Object {
             warning (e.message);
         }
 
-        last_edited = null;
         return file_list;
     }
 
     public DesktopFile create_new () {
-        last_edited = null;
         return new DesktopFile ();
     }
 
@@ -87,8 +84,6 @@ public class DesktopFileOperator : GLib.Object {
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
-
-        last_edited = desktop_file;
     }
 
     public DesktopFile load_from_file (string path) {
@@ -128,8 +123,18 @@ public class DesktopFileOperator : GLib.Object {
             categories,
             is_cli
         );
-        last_edited = desktop_file;
 
         return desktop_file;
+    }
+
+    public void delete_file (DesktopFile desktop_file) {
+        var path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        var file = File.new_for_path (path);
+
+        try {
+            file.delete ();
+        } catch (Error e) {
+            warning ("Could not delete file %s: %s", path, e.message);
+        }
     }
 }

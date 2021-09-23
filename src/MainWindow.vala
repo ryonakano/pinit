@@ -53,12 +53,6 @@ public class MainWindow : Gtk.ApplicationWindow {
             show_welcome_view ();
         });
 
-        DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
-            if (DesktopFileOperator.get_default ().last_edited != null) {
-                set_header_file_info (DesktopFileOperator.get_default ().last_edited);
-            }
-        });
-
         key_press_event.connect ((key) => {
             if (Gdk.ModifierType.CONTROL_MASK in key.state && key.keyval == Gdk.Key.q) {
                 destroy ();
