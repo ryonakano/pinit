@@ -7,7 +7,7 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
-  - '--filesystem=home/.local/share/applications'
+  - '--filesystem=home'
   # needed for perfers-color-scheme
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
