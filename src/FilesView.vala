@@ -79,7 +79,9 @@ public class FilesView : Gtk.Grid {
             };
             app_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-            var app_comment_label = new Gtk.Label (file.comment);
+            var app_comment_label = new Gtk.Label (file.comment) {
+                halign = Gtk.Align.START
+            };
             app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             var app_grid = new Gtk.Grid () {
