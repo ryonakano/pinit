@@ -20,7 +20,7 @@ public class WelcomeView : Granite.Widgets.Welcome {
         get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
         append ("document-new", _("New File"), _("Create a new desktop file."));
-        append ("document-open", _("Open File"), _("Open an existing desktop file."));
+        append ("document-edit", _("Edit File"), _("Edit an existing desktop file."));
 
         activated.connect ((i) => {
             if (i == 0) {

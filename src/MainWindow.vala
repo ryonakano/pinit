@@ -32,7 +32,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
         home_button = new Gtk.ToolButton (home_image, null) {
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or open"))
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
         header_bar = new Gtk.HeaderBar () {
@@ -86,7 +86,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public void show_files_view () {
         files_view.update_list ();
-        header_bar.title = _("Open a desktop file");
+        header_bar.title = _("Edit a desktop file");
         home_button.sensitive = true;
         stack.visible_child_name = "files_view";
     }

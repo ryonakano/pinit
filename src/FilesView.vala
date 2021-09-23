@@ -3,19 +3,16 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class FilesView : Gtk.Grid {
+public class FilesView : Gtk.Stack {
     public MainWindow window { get; construct; }
 
     private Gee.ArrayList<DesktopFile> files;
     private Gtk.ListBox files_list;
-    private Gtk.Stack stack;
-    private Gtk.Button open_button;
 
     public FilesView (MainWindow window) {
         Object (
             window: window,
-            margin: 12,
-            row_spacing: 12
+            margin: 12
         );
     }
 
@@ -30,24 +27,9 @@ public class FilesView : Gtk.Grid {
             "dialog-information"
         );
 
-        stack = new Gtk.Stack ();
-        stack.get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
-        stack.add_named (files_list, "files_list");
-        stack.add_named (no_files_grid, "no_files_grid");
-
-        open_button = new Gtk.Button.with_label (_("Open")) {
-            expand = false,
-            halign = Gtk.Align.END
-        };
-        open_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-        attach (stack, 0, 0, 1, 1);
-        attach (open_button, 0, 1, 1, 1);
-
-        open_button.clicked.connect (() => {
-            DesktopFile desktop_file = files.get (files_list.get_selected_row ().get_index ());
-            window.show_edit_view (desktop_file);
-        });
+        get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
+        add_named (files_list, "files_list");
+        add_named (no_files_grid, "no_files_grid");
     }
 
     public void update_list () {
@@ -84,6 +66,12 @@ public class FilesView : Gtk.Grid {
             };
             app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
+            var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = _("Edit…"),
+                expand = true,
+                halign = Gtk.Align.END
+            };
+
             var app_grid = new Gtk.Grid () {
                 margin = 12,
                 column_spacing = 6
@@ -91,6 +79,12 @@ public class FilesView : Gtk.Grid {
             app_grid.attach (app_icon, 0, 0, 1, 2);
             app_grid.attach (app_name_label, 1, 0, 1, 1);
             app_grid.attach (app_comment_label, 1, 1, 1, 1);
+            app_grid.attach (edit_button, 2, 0, 1, 2);
+
+            edit_button.clicked.connect (() => {
+                DesktopFile desktop_file = files.get (files_list.get_selected_row ().get_index ());
+                window.show_edit_view (desktop_file);
+            });    
 
             var list_item = new Gtk.ListBoxRow ();
             list_item.add (app_grid);
@@ -101,12 +95,10 @@ public class FilesView : Gtk.Grid {
         files_list.show_all ();
 
         if (files_list.get_children () != null) {
-            stack.visible_child_name = "files_list";
-            open_button.sensitive = true;
+            visible_child_name = "files_list";
             files_list.select_row (files_list.get_row_at_index (0));
         } else {
-            stack.visible_child_name = "no_files_grid";
-            open_button.sensitive = false;
+            visible_child_name = "no_files_grid";
         }
     }
 }
