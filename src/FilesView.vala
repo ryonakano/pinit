@@ -101,9 +101,9 @@ public class FilesView : Gtk.Grid {
         files_list.show_all ();
 
         if (files_list.get_children () != null) {
-            files_list.get_row_at_index (0).grab_focus ();
             stack.visible_child_name = "files_list";
             open_button.sensitive = true;
+            files_list.select_row (files_list.get_row_at_index (0));
         } else {
             stack.visible_child_name = "no_files_grid";
             open_button.sensitive = false;
