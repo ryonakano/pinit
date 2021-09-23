@@ -44,8 +44,6 @@ public class FilesView : Gtk.Grid {
         attach (stack, 0, 0, 1, 1);
         attach (open_button, 0, 1, 1, 1);
 
-        update_list ();
-
         open_button.clicked.connect (() => {
             DesktopFile desktop_file = files.get (files_list.get_selected_row ().get_index ());
             window.show_edit_view (desktop_file);
@@ -53,6 +51,10 @@ public class FilesView : Gtk.Grid {
     }
 
     public void update_list () {
+        foreach (var row in files_list.get_children ()) {
+            row.destroy ();
+        }
+
         files = DesktopFileOperator.get_default ().get_files_list ();
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
@@ -94,9 +96,12 @@ public class FilesView : Gtk.Grid {
             files_list.add (list_item);
         }
 
+        files_list.show_all ();
+
         if (files_list.get_children () != null) {
-            stack.visible_child_name = "files_list";
             files_list.get_row_at_index (0).grab_focus ();
+            stack.visible_child_name = "files_list";
+            open_button.sensitive = true;
         } else {
             stack.visible_child_name = "no_files_grid";
             open_button.sensitive = false;
