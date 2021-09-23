@@ -5,6 +5,8 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
+    public signal void file_updated ();
+
     private Gee.ArrayList<DesktopFile> file_list = new Gee.ArrayList<DesktopFile> ();
 
     private string preferred_language;
@@ -84,6 +86,8 @@ public class DesktopFileOperator : GLib.Object {
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
+
+        file_updated ();
     }
 
     public DesktopFile load_from_file (string path) {

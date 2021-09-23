@@ -28,7 +28,14 @@ public class MainWindow : Gtk.ApplicationWindow {
         stack.add_named (welcome_view, "welcome_view");
         stack.add_named (files_view, "files_view");
         stack.add_named (edit_view, "edit_view");
-        add (stack);
+
+        var overlay = new Gtk.Overlay ();
+        overlay.add (stack);
+
+        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
+        overlay.add_overlay (toast);
+
+        add (overlay);
 
         var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
         home_button = new Gtk.ToolButton (home_image, null) {
@@ -51,6 +58,11 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         home_button.clicked.connect (() => {
             show_welcome_view ();
+        });
+
+        DesktopFileOperator.get_default ().file_updated.connect (() => {
+            show_welcome_view ();
+            toast.send_notification ();
         });
 
         key_press_event.connect ((key) => {
