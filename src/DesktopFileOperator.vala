@@ -5,10 +5,12 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
-    public DesktopFile? last_edited { get; private set; default = null; }
+    public signal void file_updated ();
+
+    private Gee.ArrayList<DesktopFile> file_list = new Gee.ArrayList<DesktopFile> ();
 
     private string preferred_language;
-    private string desktop_dir;
+    private File desktop_dir;
 
     public static DesktopFileOperator get_default () {
         if (_instance == null) {
@@ -23,17 +25,43 @@ public class DesktopFileOperator : GLib.Object {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        desktop_dir = Path.build_filename ("/home/%s/.local/share/applications".printf (Environment.get_user_name ()));
-        if (!FileUtils.test (desktop_dir, FileTest.EXISTS)) {
-            var file = File.new_for_path (desktop_dir);
+        string location = Path.build_filename ("/home/%s/.local/share/applications".printf (Environment.get_user_name ()));
+        desktop_dir = File.new_for_path (location);
 
+        if (!FileUtils.test (location, FileTest.EXISTS)) {
             try {
-                file.make_directory_with_parents ();
+                desktop_dir.make_directory_with_parents ();
             } catch (Error e) {
                 warning (e.message);
                 return;
             }
         }
+    }
+
+    public Gee.ArrayList<DesktopFile> get_files_list () {
+        file_list.clear ();
+
+        try {
+            var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, GLib.FileQueryInfoFlags.NONE);
+            FileInfo file_info = null;
+            while ((file_info = emumerator.next_file ()) != null) {
+                string name = file_info.get_name ();
+                if (!name.has_suffix (".desktop")) {
+                    continue;
+                }
+
+                var desktop_file = load_from_file ("%s/%s".printf (desktop_dir.get_path (), name));
+                file_list.add (desktop_file);
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        return file_list;
+    }
+
+    public DesktopFile create_new () {
+        return new DesktopFile ();
     }
 
     public void write_to_file (DesktopFile desktop_file) {
@@ -50,7 +78,7 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        var path = Path.build_filename (desktop_dir, desktop_file.id + ".desktop");
+        var path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
 
         // Create or update desktop file
         try {
@@ -59,7 +87,7 @@ public class DesktopFileOperator : GLib.Object {
             warning ("Could not write to file %s: %s", path, e.message);
         }
 
-        last_edited = desktop_file;
+        file_updated ();
     }
 
     public DesktopFile load_from_file (string path) {
@@ -99,8 +127,18 @@ public class DesktopFileOperator : GLib.Object {
             categories,
             is_cli
         );
-        last_edited = desktop_file;
 
         return desktop_file;
+    }
+
+    public void delete_file (DesktopFile desktop_file) {
+        var path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        var file = File.new_for_path (path);
+
+        try {
+            file.delete ();
+        } catch (Error e) {
+            warning ("Could not delete file %s: %s", path, e.message);
+        }
     }
 }

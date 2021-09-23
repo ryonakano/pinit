@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class EditView : Gtk.Overlay {
+public class EditView : Gtk.Grid {
     public MainWindow window { get; construct; }
 
     private Granite.ValidatedEntry id_entry;
@@ -17,7 +17,9 @@ public class EditView : Gtk.Overlay {
 
     public EditView (MainWindow window) {
         Object (
-            window: window
+            window: window,
+            margin: 24,
+            margin_top: 12
         );
     }
 
@@ -111,24 +113,15 @@ public class EditView : Gtk.Overlay {
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var main_grid = new Gtk.Grid () {
-            margin = 24,
-            margin_top = 12
-        };
-        main_grid.attach (id_grid, 0, 0, 1, 3);
-        main_grid.attach (name_grid, 0, 3, 1, 3);
-        main_grid.attach (comment_grid, 0, 6, 1, 3);
-        main_grid.attach (exec_grid, 0, 9, 1, 3);
-        main_grid.attach (icon_grid, 0, 12, 1, 3);
-        main_grid.attach (categories_grid, 0, 15, 1, 3);
-        main_grid.attach (terminal_checkbox, 0, 20, 1, 1);
-        main_grid.attach (terminal_desc_label, 0, 21, 1, 1);
-        main_grid.attach (action_button, 0, 22, 1, 1);
-
-        add (main_grid);
-
-        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
-        add_overlay (toast);
+        attach (id_grid, 0, 0, 1, 3);
+        attach (name_grid, 0, 3, 1, 3);
+        attach (comment_grid, 0, 6, 1, 3);
+        attach (exec_grid, 0, 9, 1, 3);
+        attach (icon_grid, 0, 12, 1, 3);
+        attach (categories_grid, 0, 15, 1, 3);
+        attach (terminal_checkbox, 0, 20, 1, 1);
+        attach (terminal_desc_label, 0, 21, 1, 1);
+        attach (action_button, 0, 22, 1, 1);
 
         exec_entry.icon_press.connect ((icon_pos, event) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
@@ -179,7 +172,6 @@ public class EditView : Gtk.Overlay {
                 terminal_checkbox.active
             );
             DesktopFileOperator.get_default ().write_to_file (desktop_file);
-            toast.send_notification ();
         });
 
         key_release_event.connect (() => {

@@ -27,6 +27,7 @@ sources = files(
     'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
     'src' / 'EditView.vala',
+    'src' / 'FilesView.vala',
     'src' / 'MainWindow.vala',
     'src' / 'WelcomeView.vala'
 )
