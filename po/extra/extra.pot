@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-22 09:01+0900\n"
+"POT-Creation-Date: 2021-09-23 20:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,14 +36,18 @@ msgid "Welcome View"
 msgstr ""
 
 #: data/pinit.appdata.xml.in:21
+msgid "Files View"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:25
 msgid "Edit View"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:60
+#: data/pinit.appdata.xml.in:64
 msgid "Initial release"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:66
+#: data/pinit.appdata.xml.in:70
 msgid "Ryo Nakano"
 msgstr ""
 
@@ -51,8 +55,8 @@ msgstr ""
 msgid "Desktop File Creator"
 msgstr ""
 
-#: data/pinit.desktop.in:8
-msgid "com.github.ryonakano.pinit"
+#: data/pinit.desktop.in:9
+msgid "Terminal=false"
 msgstr ""
 
 #: data/pinit.desktop.in:11
