@@ -1,3 +1,4 @@
 src/EditView.vala
+src/FilesView.vala
 src/MainWindow.vala
 src/WelcomeView.vala

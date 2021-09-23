@@ -20,13 +20,13 @@ public class WelcomeView : Granite.Widgets.Welcome {
         get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
         append ("document-new", _("New File"), _("Create a new desktop file."));
-        append ("document-open", _("Open File"), _("Open an existing desktop file."));
+        append ("document-edit", _("Edit File"), _("Edit an existing desktop file."));
 
         activated.connect ((i) => {
             if (i == 0) {
-                window.set_visible_view ("edit_view");
+                window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
             } else {
-                window.open_file ();
+                window.show_files_view ();
             }
         });
     }

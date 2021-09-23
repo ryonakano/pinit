@@ -4,8 +4,10 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    private FilesView files_view;
     private EditView edit_view;
     private Gtk.Stack stack;
+    private Gtk.ToolButton home_button;
     private Gtk.HeaderBar header_bar;
 
     public MainWindow () {
@@ -17,40 +19,50 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     construct {
         var welcome_view = new WelcomeView (this);
+        files_view = new FilesView (this);
         edit_view = new EditView (this);
 
         stack = new Gtk.Stack () {
             transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
         stack.add_named (welcome_view, "welcome_view");
+        stack.add_named (files_view, "files_view");
         stack.add_named (edit_view, "edit_view");
-        add (stack);
 
-        var open_image = new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.SMALL_TOOLBAR);
-        var open_button = new Gtk.ToolButton (open_image, null) {
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"))
+        var overlay = new Gtk.Overlay ();
+        overlay.add (stack);
+
+        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
+        overlay.add_overlay (toast);
+
+        add (overlay);
+
+        var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
+        home_button = new Gtk.ToolButton (home_image, null) {
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
         header_bar = new Gtk.HeaderBar () {
-            title = "Pin It!",
             show_close_button = true,
             has_subtitle = false,
         };
-        header_bar.pack_start (open_button);
+        header_bar.pack_start (home_button);
 
         unowned var header_bar_style = header_bar.get_style_context ();
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         header_bar_style.add_class ("default-decoration");
 
         set_titlebar (header_bar);
+        show_welcome_view ();
         show_all ();
 
-        open_button.clicked.connect (() => {
-            open_file ();
+        home_button.clicked.connect (() => {
+            show_welcome_view ();
         });
 
-        DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
-            update_header_label ();
+        DesktopFileOperator.get_default ().file_updated.connect (() => {
+            show_welcome_view ();
+            toast.send_notification ();
         });
 
         key_press_event.connect ((key) => {
@@ -72,35 +84,29 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    public void open_file () {
-        var filefilter = new Gtk.FileFilter ();
-        filefilter.add_mime_type ("application/x-desktop");
-
-        var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-            local_only = true,
-            filter = filefilter
-        };
-        filechooser.response.connect ((response_id) => {
-            if (response_id == Gtk.ResponseType.ACCEPT) {
-                var desktop_file = DesktopFileOperator.get_default ().load_from_file (filechooser.get_filename ());
-                edit_view.set_desktop_file (desktop_file);
-                set_visible_view ("edit_view");
-            }
-        });
-        filechooser.show ();
+    public void show_welcome_view () {
+        header_bar.title = "Pin It!";
+        home_button.sensitive = false;
+        stack.visible_child_name = "welcome_view";
     }
 
-    public void set_visible_view (string view_name) {
-        if (view_name == "edit_view") {
-            update_header_label ();
-        }
-
-        stack.visible_child_name = view_name;
+    public void show_files_view () {
+        files_view.update_list ();
+        header_bar.title = _("Edit a desktop file");
+        home_button.sensitive = true;
+        stack.visible_child_name = "files_view";
     }
 
-    private void update_header_label () {
-        if (DesktopFileOperator.get_default ().last_edited != null) {
-            header_bar.title = _("Editing “%s”").printf (DesktopFileOperator.get_default ().last_edited.id + ".desktop");
+    public void show_edit_view (DesktopFile desktop_file) {
+        edit_view.set_desktop_file (desktop_file);
+        set_header_file_info (desktop_file);
+        home_button.sensitive = true;
+        stack.visible_child_name = "edit_view";
+    }
+
+    private void set_header_file_info (DesktopFile desktop_file) {
+        if (desktop_file.id != "") {
+            header_bar.title = _("Editing %s").printf (desktop_file.app_name);
         } else {
             header_bar.title = _("Untitled desktop file");
         }
