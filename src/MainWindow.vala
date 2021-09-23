@@ -50,7 +50,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         unowned var header_bar_style = header_bar.get_style_context ();
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
-        header_bar_style.add_class ("default-decoration");
+        header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
         set_titlebar (header_bar);
         show_welcome_view ();
