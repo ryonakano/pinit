@@ -22,14 +22,14 @@ config_file = configure_file(
 )
 
 sources = files(
+    'src' / 'Backend' / 'DesktopFile.vala',
+    'src' / 'Backend' / 'DesktopFileOperator.vala',
+    'src' / 'Views' / 'EditView.vala',
+    'src' / 'Views' / 'FilesView.vala',
+    'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
-    'src' / 'DesktopFile.vala',
-    'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
-    'src' / 'EditView.vala',
-    'src' / 'FilesView.vala',
-    'src' / 'MainWindow.vala',
-    'src' / 'WelcomeView.vala'
+    'src' / 'MainWindow.vala'
 )
 
 executable(

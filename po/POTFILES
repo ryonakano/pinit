@@ -1,4 +1,4 @@
-src/EditView.vala
-src/FilesView.vala
+src/Views/EditView.vala
+src/Views/FilesView.vala
+src/Views/WelcomeView.vala
 src/MainWindow.vala
-src/WelcomeView.vala
