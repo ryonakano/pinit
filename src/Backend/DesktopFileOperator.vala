@@ -42,7 +42,7 @@ public class DesktopFileOperator : GLib.Object {
         file_list.clear ();
 
         try {
-            var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, GLib.FileQueryInfoFlags.NONE);
+            var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
             FileInfo file_info = null;
             while ((file_info = emumerator.next_file ()) != null) {
                 string name = file_info.get_name ();
@@ -65,7 +65,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void write_to_file (DesktopFile desktop_file) {
-        var keyfile = new GLib.KeyFile ();
+        var keyfile = new KeyFile ();
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
         );
@@ -82,7 +82,7 @@ public class DesktopFileOperator : GLib.Object {
 
         // Create or update desktop file
         try {
-            GLib.FileUtils.set_contents (path, keyfile.to_data ());
+            FileUtils.set_contents (path, keyfile.to_data ());
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
@@ -100,8 +100,8 @@ public class DesktopFileOperator : GLib.Object {
         bool is_cli = false;
 
         try {
-            var keyfile = new GLib.KeyFile ();
-            keyfile.load_from_file (path, GLib.KeyFileFlags.KEEP_TRANSLATIONS);
+            var keyfile = new KeyFile ();
+            keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
             string[] splited_path = path.split ("/");
             string basename = splited_path[splited_path.length - 1];
 
@@ -112,9 +112,9 @@ public class DesktopFileOperator : GLib.Object {
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
-        } catch (GLib.KeyFileError e) {
+        } catch (KeyFileError e) {
             warning (e.message);
-        } catch (GLib.FileError e) {
+        } catch (FileError e) {
             warning (e.message);
         }
 
