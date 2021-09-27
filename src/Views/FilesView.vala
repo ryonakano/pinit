@@ -6,7 +6,6 @@
 public class FilesView : Gtk.Stack {
     public MainWindow window { get; construct; }
 
-    private Gee.ArrayList<DesktopFile> files;
     private Gtk.ListBox files_list;
 
     public FilesView (MainWindow window) {
@@ -37,7 +36,7 @@ public class FilesView : Gtk.Stack {
             row.destroy ();
         }
 
-        files = DesktopFileOperator.get_default ().get_files_list ();
+        var files = DesktopFileOperator.get_default ().get_files_list ();
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
