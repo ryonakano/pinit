@@ -1,7 +1,7 @@
 /*
  * Copyright 2021 Ryo Nakano
  * SPDX-License-Identifier: GPL-3.0-or-later
- * Code borrowed from elementary/switchboard-plug-keyboard#374
+ * Inspired from elementary/switchboard-plug-keyboard#374
  */
 
 public class DesktopFileOperator : GLib.Object {
