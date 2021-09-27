@@ -144,10 +144,11 @@ public class EditView : Gtk.Grid {
                 return;
             }
 
+            // See https://specifications.freedesktop.org/icon-theme-spec/latest/ar01s02.html
             var filefilter = new Gtk.FileFilter ();
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
-            filefilter.add_mime_type ("application/rdf+xml");
+            filefilter.add_mime_type ("image/x‑xpixmap");
 
             var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), window, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
                 local_only = true,
