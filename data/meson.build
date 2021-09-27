@@ -1,4 +1,4 @@
-icon_sizes = ['24', '48', '64']
+icon_sizes = ['16', '32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data(
