@@ -4,7 +4,7 @@
  */
 
 public class FilesView : Gtk.Stack {
-    public MainWindow window { get; construct; }
+    public MainWindow window { private get; construct; }
 
     private Gtk.ListBox files_list;
 

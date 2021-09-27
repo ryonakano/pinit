@@ -4,7 +4,7 @@
  */
 
 public class EditView : Gtk.Grid {
-    public MainWindow window { get; construct; }
+    public MainWindow window { private get; construct; }
 
     private Granite.ValidatedEntry id_entry;
     private Granite.ValidatedEntry name_entry;
