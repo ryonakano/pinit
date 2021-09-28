@@ -1,11 +1,17 @@
 # Pin It!
+Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/dfc
+
 ![Welcome View](data/screenshot-welcome-view.png)
+
+Add portable apps like raw executable files, AppImage files, etc. into Applications Menu easily. Edit or delete them without opening a file manager.
 
 ![Files View](data/screenshot-files-view.png)
 
+Are you still using your text editor to create/edit your customized desktop files? Possibly you open Files and press Ctrl + H to show the hidden destination folder? Say goodbye to that life! Hit the "Edit File" in this app and it's done. All entries you created are there and you can edit or delete them.
+
 ![Edit View](data/screenshot-edit-view.png)
 
-Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/dfc
+You surely created a desktop entry but it won't be shown in Applications Menu? Ah, you found a tiny syntax error after a couple of hours in struggle! That's too bad. Pin It! prevent saving destkop entries with any syntax error, so you will never need to waste your time.
 
 ## Installation
 ### For Users
