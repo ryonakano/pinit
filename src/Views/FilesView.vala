@@ -90,7 +90,7 @@ public class FilesView : Gtk.Stack {
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
                     _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                    _("This removes the app from Application Menu."),
+                    _("This removes the app from Applications Menu."),
                     "dialog-warning",
                     Gtk.ButtonsType.NONE
                 ) {
