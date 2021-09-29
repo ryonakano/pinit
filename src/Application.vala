@@ -9,7 +9,7 @@ public class Application : Gtk.Application {
     public Application () {
         Object (
             application_id: "com.github.ryonakano.pinit",
-            flags: ApplicationFlags.HANDLES_OPEN
+            flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
@@ -22,6 +22,7 @@ public class Application : Gtk.Application {
 
     protected override void activate () {
         if (window != null) {
+            window.present ();
             return;
         }
 

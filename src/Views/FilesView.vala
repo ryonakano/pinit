@@ -4,9 +4,8 @@
  */
 
 public class FilesView : Gtk.Stack {
-    public MainWindow window { get; construct; }
+    public MainWindow window { private get; construct; }
 
-    private Gee.ArrayList<DesktopFile> files;
     private Gtk.ListBox files_list;
 
     public FilesView (MainWindow window) {
@@ -37,7 +36,7 @@ public class FilesView : Gtk.Stack {
             row.destroy ();
         }
 
-        files = DesktopFileOperator.get_default ().get_files_list ();
+        var files = DesktopFileOperator.get_default ().get_files_list ();
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
@@ -90,8 +89,8 @@ public class FilesView : Gtk.Stack {
 
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                    _("Are you sure you want to delete this desktop file?"),
-                    _("This file is permanently deleted and can't be restored."),
+                    _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    _("This removes the app from Applications Menu."),
                     "dialog-warning",
                     Gtk.ButtonsType.NONE
                 ) {

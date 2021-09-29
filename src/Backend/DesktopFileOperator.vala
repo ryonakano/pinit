@@ -1,7 +1,9 @@
 /*
  * Copyright 2021 Ryo Nakano
  * SPDX-License-Identifier: GPL-3.0-or-later
- * Code borrowed from elementary/switchboard-plug-keyboard#374
+ * Inspired from:
+ * - elementary/switchboard-plug-keyboard, #374
+ * - pantheon-tweaks/pantheon-tweaks, src/Settings/ThemeSettings.vala
  */
 
 public class DesktopFileOperator : GLib.Object {
@@ -12,6 +14,7 @@ public class DesktopFileOperator : GLib.Object {
     private string preferred_language;
     private File desktop_dir;
 
+    private static DesktopFileOperator _instance;
     public static DesktopFileOperator get_default () {
         if (_instance == null) {
             _instance = new DesktopFileOperator ();
@@ -19,7 +22,6 @@ public class DesktopFileOperator : GLib.Object {
 
         return _instance;
     }
-    private static DesktopFileOperator _instance;
 
     private DesktopFileOperator () {
         var languages = Intl.get_language_names ();
@@ -50,7 +52,7 @@ public class DesktopFileOperator : GLib.Object {
                     continue;
                 }
 
-                var desktop_file = load_from_file ("%s/%s".printf (desktop_dir.get_path (), name));
+                var desktop_file = load_from_file (Path.build_filename (desktop_dir.get_path (), name));
                 file_list.add (desktop_file);
             }
         } catch (Error e) {
@@ -78,7 +80,7 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        var path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
 
         // Create or update desktop file
         try {
@@ -132,7 +134,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void delete_file (DesktopFile desktop_file) {
-        var path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
         var file = File.new_for_path (path);
 
         try {
