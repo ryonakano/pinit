@@ -61,7 +61,7 @@
   </content_rating>
 
   <releases>
-    <release version="0.1.0" date="2021-09-20" urgency="low">
+    <release version="0.1.0" date="2021-10-01" urgency="medium">
       <description>
         <ul>
           <li>Initial release</li>
