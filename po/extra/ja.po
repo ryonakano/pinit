@@ -1,0 +1,80 @@
+# Japanese translations for extra package.
+# Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-01 15:42+0900\n"
+"PO-Revision-Date: 2021-10-01 15:46+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr "Pin It!"
+
+#: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
+msgid "Pin any apps into the launcher"
+msgstr "ランチャーにアプリをピン止めします"
+
+#: data/pinit.appdata.xml.in:11
+msgid ""
+"Add portable apps like raw executable files, AppImage files, etc. into "
+"Applications Menu easily. Edit or delete existing desktop files without "
+"opening a file manager."
+msgstr ""
+"実行可能ファイルや AppImage ファイルなどのポータブルアプリを、アプリケーショ"
+"ンメニューに簡単に追加できます。また、ファイルマネージャーを開かずに既存のデ"
+"スクトップファイルを編集・削除できます。"
+
+#: data/pinit.appdata.xml.in:14
+msgid ""
+"Pin It! comes with syntax errors detection, so you will never need to waste "
+"your time seeking for why your desktop entry won't be shown in Applications "
+"Menu."
+msgstr ""
+"Pin It! にはシンタックスエラーの検知機能が搭載されているので、追加したはずの"
+"デスクトップエントリーがアプリケーションメニューに表示されないと頭を悩ませる"
+"ことはありません。"
+
+#: data/pinit.appdata.xml.in:20
+msgid "Welcome View"
+msgstr "ようこそ画面"
+
+#: data/pinit.appdata.xml.in:24
+msgid "Files View"
+msgstr "ファイル画面"
+
+#: data/pinit.appdata.xml.in:28
+msgid "Edit View"
+msgstr "編集画面"
+
+#: data/pinit.appdata.xml.in:67
+msgid "Initial release"
+msgstr "最初のリリース"
+
+#: data/pinit.appdata.xml.in:73
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "デスクトップファイル作成アプリ"
+
+#: data/pinit.desktop.in:8
+msgid "com.github.ryonakano.pinit"
+msgstr "com.github.ryonakano.pinit"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr ""
+"Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
+"情報;アイコン;AppImage;"

@@ -1,0 +1,167 @@
+# Japanese translations for com.github.ryonakano.pinit package.
+# Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-01 15:42+0900\n"
+"PO-Revision-Date: 2021-10-01 15:42+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/Views/EditView.vala:27
+msgid "File Name"
+msgstr "ファイル名"
+
+#: src/Views/EditView.vala:29
+msgid ""
+"File name of the desktop file. Only lowercase letters and numbers are "
+"allowed."
+msgstr "デスクトップファイルの名前です。小文字と数字のみを使用してください。"
+
+#: src/Views/EditView.vala:45
+msgid "App Name"
+msgstr "アプリ名"
+
+#: src/Views/EditView.vala:46
+msgid "Shown in Applications Menu or Dock."
+msgstr "アプリケーションメニューやドックに表示されます。"
+
+#: src/Views/EditView.vala:57
+msgid "Comment"
+msgstr "コメント"
+
+#: src/Views/EditView.vala:58
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
+
+#: src/Views/EditView.vala:69
+msgid "Exec File"
+msgstr "実行ファイル"
+
+#: src/Views/EditView.vala:71
+msgid "Location of the app itself in an absolute path or an app's alias name."
+msgstr "アプリ本体の場所を、絶対パスかエイリアス名で記入します。"
+
+#: src/Views/EditView.vala:84
+msgid "Icon File"
+msgstr "アイコンファイル"
+
+#: src/Views/EditView.vala:86
+msgid ""
+"Location of an icon for the app in an absolute path or an icon's alias name."
+msgstr "アプリのアイコンの場所を、絶対パスかエイリアス名で記入します。"
+
+#: src/Views/EditView.vala:99
+msgid "App Categories"
+msgstr "アプリのカテゴリー"
+
+#: src/Views/EditView.vala:100
+msgid "Type of the app."
+msgstr "アプリの種類です。"
+
+#: src/Views/EditView.vala:111
+msgid "Run in Terminal"
+msgstr "ターミナルで実行"
+
+#: src/Views/EditView.vala:114
+msgid "Check this in if you want to registar a CUI app."
+msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
+
+#: src/Views/EditView.vala:141
+msgid "Select an executable file"
+msgstr "実行ファイルを選択"
+
+#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+msgid "Open"
+msgstr "開く"
+
+#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+#: src/Views/FilesView.vala:99
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/Views/EditView.vala:166
+msgid "Select an icon file"
+msgstr "アイコンファイルを選択"
+
+#: src/Views/FilesView.vala:24
+msgid "No valid desktop files found"
+msgstr "有効なデスクトップファイルが見つかりません"
+
+#: src/Views/FilesView.vala:25
+msgid ""
+"If you've never created one, go back to Welcome View and click “New File”."
+msgstr ""
+"デスクトップファイルを作成したことがない場合は、ようこそ画面に戻って“新しい"
+"ファイル”をクリックしてください。"
+
+#: src/Views/FilesView.vala:69
+msgid "Delete…"
+msgstr "削除…"
+
+#: src/Views/FilesView.vala:75
+msgid "Edit…"
+msgstr "編集…"
+
+#: src/Views/FilesView.vala:92
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "“%s”を削除してもよろしいですか？"
+
+#: src/Views/FilesView.vala:93
+msgid "This removes the app from Applications Menu."
+msgstr "この操作によって、アプリケーションメニューからアプリが削除されます。"
+
+#: src/Views/FilesView.vala:100
+msgid "Delete"
+msgstr "削除"
+
+#: src/Views/WelcomeView.vala:12
+msgid "Pin any apps into the launcher"
+msgstr "ランチャーにアプリをピン止めします"
+
+#: src/Views/WelcomeView.vala:22
+msgid "New File"
+msgstr "新しいファイル"
+
+#: src/Views/WelcomeView.vala:22
+msgid "Create a new desktop file."
+msgstr "新しいデスクトップファイルを作成します。"
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit File"
+msgstr "ファイルを編集"
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit an existing desktop file."
+msgstr "既存のデスクトップファイルを編集します。"
+
+#: src/MainWindow.vala:35
+msgid "Saved changes!"
+msgstr "変更を保存しました！"
+
+#: src/MainWindow.vala:42
+msgid "Create new or edit"
+msgstr "ファイルを作成または編集します"
+
+#: src/MainWindow.vala:95
+msgid "Edit a desktop file"
+msgstr "デスクトップファイルを編集します"
+
+#: src/MainWindow.vala:109
+#, c-format
+msgid "Editing “%s”"
+msgstr "“%s”を編集しています"
+
+#: src/MainWindow.vala:111
+msgid "Untitled desktop file"
+msgstr "名称未設定のデスクトップファイル"
