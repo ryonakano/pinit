@@ -82,6 +82,9 @@ public class MainWindow : Gtk.ApplicationWindow {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
+
+        //add rounded corners
+        get_style_context ().add_class (Granite.STYLE_CLASS_ROUNDED);
     }
 
     public void show_welcome_view () {
