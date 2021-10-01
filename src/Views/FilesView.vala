@@ -114,7 +114,7 @@ public class FilesView : Gtk.Stack {
 
             edit_button.clicked.connect (() => {
                 window.show_edit_view (file);
-            });    
+            });
 
             var list_item = new Gtk.ListBoxRow ();
             list_item.add (app_grid);
