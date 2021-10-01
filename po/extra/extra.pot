@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 20:37+0900\n"
+"POT-Creation-Date: 2021-10-01 15:41+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,27 +27,35 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:11
 msgid ""
-"Pin It! is an app that lets you registar any portable apps (raw executable "
-"files, AppImage files, etc.) into Application Menu."
+"Add portable apps like raw executable files, AppImage files, etc. into "
+"Applications Menu easily. Edit or delete existing desktop files without "
+"opening a file manager."
 msgstr ""
 
-#: data/pinit.appdata.xml.in:17
+#: data/pinit.appdata.xml.in:14
+msgid ""
+"Pin It! comes with syntax errors detection, so you will never need to waste "
+"your time seeking for why your desktop entry won't be shown in Applications "
+"Menu."
+msgstr ""
+
+#: data/pinit.appdata.xml.in:20
 msgid "Welcome View"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:21
+#: data/pinit.appdata.xml.in:24
 msgid "Files View"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:25
+#: data/pinit.appdata.xml.in:28
 msgid "Edit View"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:64
+#: data/pinit.appdata.xml.in:67
 msgid "Initial release"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:70
+#: data/pinit.appdata.xml.in:73
 msgid "Ryo Nakano"
 msgstr ""
 
@@ -55,8 +63,8 @@ msgstr ""
 msgid "Desktop File Creator"
 msgstr ""
 
-#: data/pinit.desktop.in:9
-msgid "Terminal=false"
+#: data/pinit.desktop.in:8
+msgid "com.github.ryonakano.pinit"
 msgstr ""
 
 #: data/pinit.desktop.in:11
