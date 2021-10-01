@@ -1,5 +1,5 @@
 project(
-    'com.github.ryonakano.pin-it',
+    'com.github.ryonakano.pinit',
     'vala', 'c',
     version: '0.1.0',
     meson_version: '>=0.49.0'
@@ -22,9 +22,12 @@ config_file = configure_file(
 )
 
 sources = files(
+    'src' / 'Backend' / 'DesktopFile.vala',
+    'src' / 'Backend' / 'DesktopFileOperator.vala',
+    'src' / 'Views' / 'EditView.vala',
+    'src' / 'Views' / 'FilesView.vala',
+    'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
-    'src' / 'DesktopFile.vala',
-    'src' / 'DesktopFileOperator.vala',
     'src' / 'DimLabel.vala',
     'src' / 'MainWindow.vala'
 )

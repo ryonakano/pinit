@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-23 20:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/EditView.vala:27
+msgid "File Name"
+msgstr ""
+
+#: src/Views/EditView.vala:28
+msgid ""
+"File name of the desktop file. Only lowercase letters and numbers are "
+"allowed."
+msgstr ""
+
+#: src/Views/EditView.vala:43
+msgid "App Name"
+msgstr ""
+
+#: src/Views/EditView.vala:44
+msgid "Shown in Applications Menu or Dock."
+msgstr ""
+
+#: src/Views/EditView.vala:55
+msgid "Comment"
+msgstr ""
+
+#: src/Views/EditView.vala:56
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr ""
+
+#: src/Views/EditView.vala:67
+msgid "Exec File"
+msgstr ""
+
+#: src/Views/EditView.vala:68
+msgid "Location of the app itself in an absolute path or an app's alias name."
+msgstr ""
+
+#: src/Views/EditView.vala:80
+msgid "Icon File"
+msgstr ""
+
+#: src/Views/EditView.vala:81
+msgid ""
+"Location of an icon for the app in an absolute path or an icon's alias name."
+msgstr ""
+
+#: src/Views/EditView.vala:93
+msgid "App Categories"
+msgstr ""
+
+#: src/Views/EditView.vala:94
+msgid "Type of the app."
+msgstr ""
+
+#: src/Views/EditView.vala:105
+msgid "Run in Terminal"
+msgstr ""
+
+#: src/Views/EditView.vala:108
+msgid "Check this in if you want to registar a CUI app."
+msgstr ""
+
+#: src/Views/EditView.vala:131
+msgid "Select an executable file"
+msgstr ""
+
+#: src/Views/EditView.vala:131 src/Views/EditView.vala:152
+msgid "Open"
+msgstr ""
+
+#: src/Views/EditView.vala:131 src/Views/EditView.vala:152
+#: src/Views/FilesView.vala:100
+msgid "Cancel"
+msgstr ""
+
+#: src/Views/EditView.vala:152
+msgid "Select an icon file"
+msgstr ""
+
+#: src/Views/FilesView.vala:25
+msgid "No valid desktop files found"
+msgstr ""
+
+#: src/Views/FilesView.vala:26
+msgid ""
+"If you've never created one, go back to Welcome View and click “New File”."
+msgstr ""
+
+#: src/Views/FilesView.vala:70
+msgid "Delete…"
+msgstr ""
+
+#: src/Views/FilesView.vala:76
+msgid "Edit…"
+msgstr ""
+
+#: src/Views/FilesView.vala:93
+msgid "Are you sure you want to delete this desktop file?"
+msgstr ""
+
+#: src/Views/FilesView.vala:94
+msgid "This file is permanently deleted and can't be restored."
+msgstr ""
+
+#: src/Views/FilesView.vala:101
+msgid "Delete"
+msgstr ""
+
+#: src/Views/WelcomeView.vala:11
+msgid "Pin It!"
+msgstr ""
+
+#: src/Views/WelcomeView.vala:12
+msgid "Pin any apps into the launcher"
+msgstr ""
+
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
+#: src/Views/WelcomeView.vala:22
+msgid "New File"
+msgstr ""
+
+#: src/Views/WelcomeView.vala:22
+msgid "Create a new desktop file."
+msgstr ""
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit File"
+msgstr ""
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit an existing desktop file."
+msgstr ""
+
+#: src/MainWindow.vala:35
+msgid "Saved changes!"
+msgstr ""
+
+#: src/MainWindow.vala:42
+msgid "Create new or edit"
+msgstr ""
+
+#: src/MainWindow.vala:95
+msgid "Edit a desktop file"
+msgstr ""
+
+#: src/MainWindow.vala:109
+#, c-format
+msgid "Editing %s"
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Untitled desktop file"
+msgstr ""

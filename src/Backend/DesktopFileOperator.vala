@@ -1,15 +1,20 @@
 /*
  * Copyright 2021 Ryo Nakano
  * SPDX-License-Identifier: GPL-3.0-or-later
- * Code borrowed from elementary/switchboard-plug-keyboard#374
+ * Inspired from:
+ * - elementary/switchboard-plug-keyboard, #374
+ * - pantheon-tweaks/pantheon-tweaks, src/Settings/ThemeSettings.vala
  */
 
 public class DesktopFileOperator : GLib.Object {
-    public DesktopFile? last_edited { get; private set; default = null; }
+    public signal void file_updated ();
+
+    private Gee.ArrayList<DesktopFile> file_list = new Gee.ArrayList<DesktopFile> ();
 
     private string preferred_language;
-    private string startup_dir;
+    private File desktop_dir;
 
+    private static DesktopFileOperator _instance;
     public static DesktopFileOperator get_default () {
         if (_instance == null) {
             _instance = new DesktopFileOperator ();
@@ -17,25 +22,17 @@ public class DesktopFileOperator : GLib.Object {
 
         return _instance;
     }
-    private static DesktopFileOperator _instance;
 
     private DesktopFileOperator () {
-    }
-
-    public void init () {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        // Get path to user's startup directory (typically ~/.local/share/applications)
-        var data_dir = Environment.get_user_data_dir ();
-        startup_dir = Path.build_filename (data_dir, "applications");
+        string location = Path.build_filename ("/home/%s/.local/share/applications".printf (Environment.get_user_name ()));
+        desktop_dir = File.new_for_path (location);
 
-        // If startup directory doesn't exist, create it.
-        if (!FileUtils.test (startup_dir, FileTest.EXISTS)) {
-            var file = File.new_for_path (startup_dir);
-
+        if (!FileUtils.test (location, FileTest.EXISTS)) {
             try {
-                file.make_directory_with_parents ();
+                desktop_dir.make_directory_with_parents ();
             } catch (Error e) {
                 warning (e.message);
                 return;
@@ -43,8 +40,34 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
+    public Gee.ArrayList<DesktopFile> get_files_list () {
+        file_list.clear ();
+
+        try {
+            var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
+            FileInfo file_info = null;
+            while ((file_info = emumerator.next_file ()) != null) {
+                string name = file_info.get_name ();
+                if (!name.has_suffix (".desktop")) {
+                    continue;
+                }
+
+                var desktop_file = load_from_file (Path.build_filename (desktop_dir.get_path (), name));
+                file_list.add (desktop_file);
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        return file_list;
+    }
+
+    public DesktopFile create_new () {
+        return new DesktopFile ();
+    }
+
     public void write_to_file (DesktopFile desktop_file) {
-        var keyfile = new GLib.KeyFile ();
+        var keyfile = new KeyFile ();
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
         );
@@ -54,33 +77,33 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC, desktop_file.exec_file);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
-        keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY, desktop_file.is_no_display);
+        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        var path = Path.build_filename (startup_dir, desktop_file.id + ".desktop");
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
 
         // Create or update desktop file
         try {
-            GLib.FileUtils.set_contents (path, keyfile.to_data ());
+            FileUtils.set_contents (path, keyfile.to_data ());
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
+
+        file_updated ();
     }
 
-    public DesktopFile? load_from_file (string path) {
-        DesktopFile desktop_file = null;
+    public DesktopFile load_from_file (string path) {
         string id = "";
         string app_name = "";
         string comment = "";
         string exec_file = "";
         string icon_file = "";
         string categories = "";
-        bool is_no_display = false;
         bool is_cli = false;
 
         try {
-            var keyfile = new GLib.KeyFile ();
-            keyfile.load_from_file (path, GLib.KeyFileFlags.KEEP_TRANSLATIONS);
+            var keyfile = new KeyFile ();
+            keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
             string[] splited_path = path.split ("/");
             string basename = splited_path[splited_path.length - 1];
 
@@ -90,26 +113,34 @@ public class DesktopFileOperator : GLib.Object {
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
-            is_no_display = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NO_DISPLAY);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
-        } catch (GLib.KeyFileError e) {
+        } catch (KeyFileError e) {
             warning (e.message);
-        } catch (GLib.FileError e) {
+        } catch (FileError e) {
             warning (e.message);
         }
 
-        desktop_file = new DesktopFile (
+        var desktop_file = new DesktopFile (
             id,
             app_name,
             comment,
             exec_file,
             icon_file,
             categories,
-            is_no_display,
             is_cli
         );
-        last_edited = desktop_file;
 
         return desktop_file;
+    }
+
+    public void delete_file (DesktopFile desktop_file) {
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        var file = File.new_for_path (path);
+
+        try {
+            file.delete ();
+        } catch (Error e) {
+            warning ("Could not delete file %s: %s", path, e.message);
+        }
     }
 }

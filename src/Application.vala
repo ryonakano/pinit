@@ -8,20 +8,21 @@ public class Application : Gtk.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.pin-it",
-            flags: ApplicationFlags.HANDLES_OPEN
+            application_id: "com.github.ryonakano.pinit",
+            flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
     construct {
         Intl.setlocale (LocaleCategory.ALL, "");
-        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        GLib.Intl.textdomain (GETTEXT_PACKAGE);
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
     }
 
     protected override void activate () {
         if (window != null) {
+            window.present ();
             return;
         }
 
@@ -31,7 +32,6 @@ public class Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        DesktopFileOperator.get_default ().init ();
         return new Application ().run ();
     }
 }

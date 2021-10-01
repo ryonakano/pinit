@@ -4,6 +4,11 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    private FilesView files_view;
+    private EditView edit_view;
+    private Gtk.Stack stack;
+    private Gtk.ToolButton home_button;
+    private Gtk.HeaderBar header_bar;
 
     public MainWindow () {
         Object (
@@ -13,222 +18,51 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var id_label = new Granite.HeaderLabel (_("File Name"));
-        var id_desc_label = new DimLabel (_("File name of the desktop file."));
-        var id_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
-        };
-        var id_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        id_grid.attach (id_label, 0, 0, 1, 1);
-        id_grid.attach (id_desc_label, 0, 1, 1, 1);
-        id_grid.attach (id_entry, 0, 2, 1, 1);
+        var welcome_view = new WelcomeView (this);
+        files_view = new FilesView (this);
+        edit_view = new EditView (this);
 
-        var name_label = new Granite.HeaderLabel (_("App Name"));
-        var name_desc_label = new DimLabel (_("This name is shown in Applications Menu or Dock."));
-        var name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
+        stack = new Gtk.Stack () {
+            transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
-        var name_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        name_grid.attach (name_label, 0, 0, 1, 1);
-        name_grid.attach (name_desc_label, 0, 1, 1, 1);
-        name_grid.attach (name_entry, 0, 2, 1, 1);
+        stack.add_named (welcome_view, "welcome_view");
+        stack.add_named (files_view, "files_view");
+        stack.add_named (edit_view, "edit_view");
 
-        var comment_label = new Granite.HeaderLabel (_("Comment"));
-        var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
-        var comment_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
-        };
-        var comment_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        comment_grid.attach (comment_label, 0, 0, 1, 1);
-        comment_grid.attach (comment_desc_label, 0, 1, 1, 1);
-        comment_grid.attach (comment_entry, 0, 2, 1, 1);
+        var overlay = new Gtk.Overlay ();
+        overlay.add (stack);
 
-        var exec_label = new Granite.HeaderLabel (_("Exec File"));
-        var exec_desc_label = new DimLabel (_("Location of the app itself in an absolute path or an app's alias name."));
-        var exec_entry = new Gtk.Entry () {
-            expand = true,
-            secondary_icon_name = "document-open-symbolic"
-        };
-        var exec_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        exec_grid.attach (exec_label, 0, 0, 1, 1);
-        exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
-        exec_grid.attach (exec_entry, 0, 2, 1, 1);
+        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
+        overlay.add_overlay (toast);
 
-        var icon_label = new Granite.HeaderLabel (_("Icon File"));
-        var icon_desc_label = new DimLabel (_("Location of an icon for the app in an absolute path or an icon's alias name."));
-        var icon_entry = new Gtk.Entry () {
-            expand = true,
-            secondary_icon_name = "document-open-symbolic"
-        };
-        var icon_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        icon_grid.attach (icon_label, 0, 0, 1, 1);
-        icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
-        icon_grid.attach (icon_entry, 0, 2, 1, 1);
+        add (overlay);
 
-        var categories_label = new Granite.HeaderLabel (_("App Categories"));
-        var categories_desc_label = new DimLabel (_("Type of the app."));
-        var categories_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
-        };
-        var categories_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        categories_grid.attach (categories_label, 0, 0, 1, 1);
-        categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
-        categories_grid.attach (categories_entry, 0, 2, 1, 1);
-
-        var no_display_checkbox = new Gtk.CheckButton.with_label (_("No Display")) {
-            margin_bottom = 6
-        };
-        var no_display_desc_label = new DimLabel (_("Whether to show the app entry in Application Menu.")) {
-            margin_bottom = 12
+        var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
+        home_button = new Gtk.ToolButton (home_image, null) {
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
-        var terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
-            margin_bottom = 6
-        };
-        var terminal_desc_label = new DimLabel (_("Check this in if you want to registar a CUI app."));
-
-        var action_button = new Gtk.Button.with_label ("Pin It!") {
-            margin_top = 24,
-            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && categories_entry.is_valid)
-        };
-        action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var main_grid = new Gtk.Grid () {
-            margin = 24,
-            margin_top = 12
-        };
-        main_grid.attach (id_grid, 0, 0, 1, 3);
-        main_grid.attach (name_grid, 0, 3, 1, 3);
-        main_grid.attach (comment_grid, 0, 6, 1, 3);
-        main_grid.attach (exec_grid, 0, 9, 1, 3);
-        main_grid.attach (icon_grid, 0, 12, 1, 3);
-        main_grid.attach (categories_grid, 0, 15, 1, 3);
-        main_grid.attach (no_display_checkbox, 0, 18, 1, 1);
-        main_grid.attach (no_display_desc_label, 0, 19, 1, 1);
-        main_grid.attach (terminal_checkbox, 0, 20, 1, 1);
-        main_grid.attach (terminal_desc_label, 0, 21, 1, 1);
-        main_grid.attach (action_button, 0, 22, 1, 1);
-
-        add (main_grid);
-
-        var open_image = new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.SMALL_TOOLBAR);
-        var open_button = new Gtk.ToolButton (open_image, null) {
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>O"}, _("Open an existing desktop file"))
-        };
-
-        var header_bar = new Gtk.HeaderBar () {
-            title = _("Untitled desktop file"),
+        header_bar = new Gtk.HeaderBar () {
             show_close_button = true,
             has_subtitle = false,
         };
-        header_bar.pack_start (open_button);
+        header_bar.pack_start (home_button);
 
         unowned var header_bar_style = header_bar.get_style_context ();
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
-        header_bar_style.add_class ("default-decoration");
+        header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
         set_titlebar (header_bar);
+        show_welcome_view ();
         show_all ();
 
-        exec_entry.icon_press.connect ((icon_pos, event) => {
-            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
-                return;
-            }
-
-            var filechooser = new Gtk.FileChooserNative (_("Select an executable file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-                local_only = true
-            };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    exec_entry.text = filechooser.get_filename ();
-                }
-            });
-            filechooser.show ();
+        home_button.clicked.connect (() => {
+            show_welcome_view ();
         });
 
-        icon_entry.icon_press.connect ((icon_pos, event) => {
-            if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
-                return;
-            }
-
-            var filefilter = new Gtk.FileFilter ();
-            filefilter.add_mime_type ("image/png");
-            filefilter.add_mime_type ("image/svg+xml");
-            filefilter.add_mime_type ("application/rdf+xml");
-
-            var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-                local_only = true,
-                filter = filefilter
-            };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    icon_entry.text = filechooser.get_filename ();
-                }
-            });
-            filechooser.show ();
-        });
-
-        action_button.clicked.connect (() => {
-            var desktop_file = new DesktopFile (
-                id_entry.text,
-                name_entry.text,
-                comment_entry.text,
-                exec_entry.text,
-                icon_entry.text,
-                categories_entry.text,
-                no_display_checkbox.active,
-                terminal_checkbox.active
-            );
-            DesktopFileOperator.get_default ().write_to_file (desktop_file);
-        });
-
-        open_button.clicked.connect (() => {
-            var filefilter = new Gtk.FileFilter ();
-            filefilter.add_mime_type ("application/x-desktop");
-
-            var filechooser = new Gtk.FileChooserNative (_("Open a desktop file"), this, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
-                local_only = true,
-                filter = filefilter
-            };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    var desktop_file = DesktopFileOperator.get_default ().load_from_file (filechooser.get_filename ());
-                    id_entry.text = desktop_file.id;
-                    name_entry.text = desktop_file.app_name;
-                    comment_entry.text = desktop_file.comment;
-                    exec_entry.text = desktop_file.exec_file;
-                    icon_entry.text = desktop_file.icon_file;
-                    categories_entry.text = desktop_file.categories;
-                    no_display_checkbox.active = desktop_file.is_no_display;
-                    terminal_checkbox.active = desktop_file.is_cli;
-                }
-
-                action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
-            });
-            filechooser.show ();
-        });
-
-        DesktopFileOperator.get_default ().notify["last-edited"].connect (() => {
-            if (DesktopFileOperator.get_default ().last_edited != null) {
-                header_bar.title = _("Edit “%s”").printf (DesktopFileOperator.get_default ().last_edited.app_name);
-            }
-        });
-
-        key_release_event.connect (() => {
-            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && categories_entry.is_valid);
-            return false;
+        DesktopFileOperator.get_default ().file_updated.connect (() => {
+            show_welcome_view ();
+            toast.send_notification ();
         });
 
         key_press_event.connect ((key) => {
@@ -248,5 +82,33 @@ public class MainWindow : Gtk.ApplicationWindow {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
+    }
+
+    public void show_welcome_view () {
+        header_bar.title = "Pin It!";
+        home_button.sensitive = false;
+        stack.visible_child_name = "welcome_view";
+    }
+
+    public void show_files_view () {
+        files_view.update_list ();
+        header_bar.title = _("Edit a desktop file");
+        home_button.sensitive = true;
+        stack.visible_child_name = "files_view";
+    }
+
+    public void show_edit_view (DesktopFile desktop_file) {
+        edit_view.set_desktop_file (desktop_file);
+        set_header_file_info (desktop_file);
+        home_button.sensitive = true;
+        stack.visible_child_name = "edit_view";
+    }
+
+    private void set_header_file_info (DesktopFile desktop_file) {
+        if (desktop_file.id != "") {
+            header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
+        } else {
+            header_bar.title = _("Untitled desktop file");
+        }
     }
 }
