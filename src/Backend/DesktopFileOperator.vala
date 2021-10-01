@@ -27,7 +27,9 @@ public class DesktopFileOperator : GLib.Object {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        string location = Path.build_filename ("/home/%s/.local/share/applications".printf (Environment.get_user_name ()));
+        string location = Path.build_filename (
+            "/home/%s/.local/share/applications".printf (Environment.get_user_name ())
+        );
         desktop_dir = File.new_for_path (location);
 
         if (!FileUtils.test (location, FileTest.EXISTS)) {

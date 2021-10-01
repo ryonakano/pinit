@@ -25,7 +25,9 @@ public class EditView : Gtk.Grid {
 
     construct {
         var id_label = new Granite.HeaderLabel (_("File Name"));
-        var id_desc_label = new DimLabel (_("File name of the desktop file. Only lowercase letters and numbers are allowed."));
+        var id_desc_label = new DimLabel (
+            _("File name of the desktop file. Only lowercase letters and numbers are allowed.")
+        );
         id_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
             expand = true
         };
@@ -65,7 +67,9 @@ public class EditView : Gtk.Grid {
         comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
         var exec_label = new Granite.HeaderLabel (_("Exec File"));
-        var exec_desc_label = new DimLabel (_("Location of the app itself in an absolute path or an app's alias name."));
+        var exec_desc_label = new DimLabel (
+            _("Location of the app itself in an absolute path or an app's alias name.")
+        );
         exec_entry = new Gtk.Entry () {
             expand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -78,7 +82,9 @@ public class EditView : Gtk.Grid {
         exec_grid.attach (exec_entry, 0, 2, 1, 1);
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
-        var icon_desc_label = new DimLabel (_("Location of an icon for the app in an absolute path or an icon's alias name."));
+        var icon_desc_label = new DimLabel (
+            _("Location of an icon for the app in an absolute path or an icon's alias name.")
+        );
         icon_entry = new Gtk.Entry () {
             expand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -92,7 +98,7 @@ public class EditView : Gtk.Grid {
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
         var categories_desc_label = new DimLabel (_("Type of the app."));
-        categories_entry = new Granite.ValidatedEntry.from_regex (/^(.+;)+$/) {
+        categories_entry = new Granite.ValidatedEntry.from_regex (/^(.+;)+$/) { // vala-lint=space-before-paren
             expand = true
         };
         var categories_grid = new Gtk.Grid () {
@@ -109,7 +115,10 @@ public class EditView : Gtk.Grid {
 
         action_button = new Gtk.Button.with_label ("Pin It!") {
             margin_top = 24,
-            sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""))
+            sensitive = (
+                id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+                exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
+            )
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -128,7 +137,10 @@ public class EditView : Gtk.Grid {
                 return;
             }
 
-            var filechooser = new Gtk.FileChooserNative (_("Select an executable file"), window, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+            var filechooser = new Gtk.FileChooserNative (
+                _("Select an executable file"), window, Gtk.FileChooserAction.OPEN,
+                _("Open"), _("Cancel")
+            ) {
                 local_only = true
             };
             filechooser.response.connect ((response_id) => {
@@ -150,7 +162,10 @@ public class EditView : Gtk.Grid {
             filefilter.add_mime_type ("image/svg+xml");
             filefilter.add_mime_type ("image/x‑xpixmap");
 
-            var filechooser = new Gtk.FileChooserNative (_("Select an icon file"), window, Gtk.FileChooserAction.OPEN, _("Open"), _("Cancel")) {
+            var filechooser = new Gtk.FileChooserNative (
+                _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
+                _("Open"), _("Cancel")
+            ) {
                 local_only = true,
                 filter = filefilter
             };
@@ -176,7 +191,10 @@ public class EditView : Gtk.Grid {
         });
 
         key_release_event.connect (() => {
-            action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""));
+            action_button.sensitive = (
+                id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+                exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
+            );
             return false;
         });
     }
@@ -190,6 +208,9 @@ public class EditView : Gtk.Grid {
         categories_entry.text = desktop_file.categories;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        action_button.sensitive = (id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid && exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == ""));
+        action_button.sensitive = (
+            id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+            exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
+        );
     }
 }
