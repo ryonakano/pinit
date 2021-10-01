@@ -3,7 +3,7 @@ Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/
 
 ![Welcome View](data/screenshot-welcome-view.png)
 
-Add portable apps like raw executable files, AppImage files, etc. into Applications Menu easily. Edit or delete them without opening a file manager.
+Add portable apps like raw executable files, AppImage files, etc. into Applications Menu easily. Edit or delete existing desktop files without opening a file manager.
 
 ![Files View](data/screenshot-files-view.png)
 
