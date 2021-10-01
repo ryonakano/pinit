@@ -18,8 +18,8 @@ jobs:
       - name: Build
         uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
         with:
-          bundle: pin-it.flatpak
-          manifest-path: com.github.ryonakano.pin-it.yml
+          bundle: pinit.flatpak
+          manifest-path: com.github.ryonakano.pinit.yml
           run-tests: true
           repository-name: appcenter
           repository-url: https://flatpak.elementary.io/repo.flatpakrepo
