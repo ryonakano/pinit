@@ -87,11 +87,11 @@ public class MainWindow : Hdy.Window {
 
         deck.notify["transition-running"].connect (() => {
             if (!deck.transition_running) {
-                if(deck.visible_child == welcome_view)
+                if (deck.visible_child == welcome_view)
                     show_welcome_view ();
             }
         });
-        
+
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
