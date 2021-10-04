@@ -72,7 +72,7 @@ msgstr "Categorías de aplicación"
 
 #: src/Views/EditView.vala:100
 msgid "Type of the app."
-msgstr "Tipo de aplicación"
+msgstr "Tipo de aplicación."
 
 #: src/Views/EditView.vala:111
 msgid "Run in Terminal"
@@ -108,7 +108,7 @@ msgid ""
 "If you've never created one, go back to Welcome View and click “New File”."
 msgstr ""
 "Si nunca has creado uno, vuelve a la sección de bienvenida y selecciona "
-"\"Nuevo Archivo\""
+"\"Nuevo Archivo\"."
 
 #: src/Views/FilesView.vala:69
 msgid "Delete…"
@@ -125,7 +125,7 @@ msgstr "¿Estás seguro que quieres eliminar \"%s\"?"
 
 #: src/Views/FilesView.vala:93
 msgid "This removes the app from Applications Menu."
-msgstr "Esto remueve la aplicación del menú de aplicaciones"
+msgstr "Esto remueve la aplicación del menú de aplicaciones."
 
 #: src/Views/FilesView.vala:100
 msgid "Delete"
