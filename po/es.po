@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-01 15:41+0900\n"
+"PO-Revision-Date: 2021-10-04 00:51-0600\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#: src/Views/EditView.vala:27
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#: src/Views/EditView.vala:29
+msgid ""
+"File name of the desktop file. Only lowercase letters and numbers are "
+"allowed."
+msgstr "Nombre del archivo de escritorio. Solo se aceptan letras y números."
+
+#: src/Views/EditView.vala:45
+msgid "App Name"
+msgstr "Nombre de la aplicación"
+
+#: src/Views/EditView.vala:46
+msgid "Shown in Applications Menu or Dock."
+msgstr "Mostrar en el menú de aplicaciones o en el dock."
+
+#: src/Views/EditView.vala:57
+msgid "Comment"
+msgstr "Comentario"
+
+#: src/Views/EditView.vala:58
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr "Una descripción que diga lo que la aplicación te ayuda a hacer."
+
+#: src/Views/EditView.vala:69
+msgid "Exec File"
+msgstr "Archivo ejecutable"
+
+#: src/Views/EditView.vala:71
+msgid "Location of the app itself in an absolute path or an app's alias name."
+msgstr ""
+"Locación de la aplicación en una ruta absoluta o el alias del nombre de una "
+"aplicación."
+
+#: src/Views/EditView.vala:84
+msgid "Icon File"
+msgstr "Archivo del icono"
+
+#: src/Views/EditView.vala:86
+msgid ""
+"Location of an icon for the app in an absolute path or an icon's alias name."
+msgstr ""
+"Locación de un icono para la aplicación en una ruta absoluta o el alias del "
+"nombre de un icono."
+
+#: src/Views/EditView.vala:99
+msgid "App Categories"
+msgstr "Categorías de aplicación"
+
+#: src/Views/EditView.vala:100
+msgid "Type of the app."
+msgstr "Tipo de aplicación"
+
+#: src/Views/EditView.vala:111
+msgid "Run in Terminal"
+msgstr "Ejecutar en terminal"
+
+#: src/Views/EditView.vala:114
+msgid "Check this in if you want to registar a CUI app."
+msgstr "Selecciona esto si quieres registrar una aplicación CUI."
+
+#: src/Views/EditView.vala:141
+msgid "Select an executable file"
+msgstr "Selecciona un archivo ejecutable"
+
+#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+msgid "Open"
+msgstr "Abrir"
+
+#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+#: src/Views/FilesView.vala:99
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/Views/EditView.vala:166
+msgid "Select an icon file"
+msgstr "Selecciona un archivo de icono"
+
+#: src/Views/FilesView.vala:24
+msgid "No valid desktop files found"
+msgstr "No se encontraron archivos de escritorios validos"
+
+#: src/Views/FilesView.vala:25
+msgid ""
+"If you've never created one, go back to Welcome View and click “New File”."
+msgstr ""
+"Si nunca has creado uno, vuelve a la sección de bienvenida y selecciona "
+"\"Nuevo Archivo\""
+
+#: src/Views/FilesView.vala:69
+msgid "Delete…"
+msgstr "Borrar..."
+
+#: src/Views/FilesView.vala:75
+msgid "Edit…"
+msgstr "Editar..."
+
+#: src/Views/FilesView.vala:92
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "¿Estás seguro que quieres eliminar \"%s\"?"
+
+#: src/Views/FilesView.vala:93
+msgid "This removes the app from Applications Menu."
+msgstr "Esto remueve la aplicación del menú de aplicaciones"
+
+#: src/Views/FilesView.vala:100
+msgid "Delete"
+msgstr "Eliminar"
+
+#: src/Views/WelcomeView.vala:12
+msgid "Pin any apps into the launcher"
+msgstr "Fija cualquier aplicación en el lanzador"
+
+#: src/Views/WelcomeView.vala:22
+msgid "New File"
+msgstr "Nuevo Archivo"
+
+#: src/Views/WelcomeView.vala:22
+msgid "Create a new desktop file."
+msgstr "Crear un nuevo archivo de escritorio."
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit File"
+msgstr "Editar Archivo"
+
+#: src/Views/WelcomeView.vala:23
+msgid "Edit an existing desktop file."
+msgstr "Editar un archivo de escritorio existente."
+
+#: src/MainWindow.vala:35
+msgid "Saved changes!"
+msgstr "¡Cambios guardados!"
+
+#: src/MainWindow.vala:42
+msgid "Create new or edit"
+msgstr "Crear nuevo o editar"
+
+#: src/MainWindow.vala:95
+msgid "Edit a desktop file"
+msgstr "Editar un archivo de escritorio"
+
+#: src/MainWindow.vala:109
+#, c-format
+msgid "Editing “%s”"
+msgstr "Editando \"%s\""
+
+#: src/MainWindow.vala:111
+msgid "Untitled desktop file"
+msgstr "Archivo de escritorio sin nombre"
