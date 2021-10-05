@@ -19,10 +19,9 @@ public class MainWindow : Hdy.Window {
     }
 
     construct {
-
         Hdy.init ();
 
-        welcome_view = new WelcomeView (this);
+        var welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
         edit_view = new EditView (this);
 
@@ -55,16 +54,11 @@ public class MainWindow : Hdy.Window {
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
-        var grid = new Gtk.Grid () {
-            column_homogeneous = true,
-            expand = true,
-            orientation = Gtk.Orientation.VERTICAL,
-        };
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (header_bar);
+        main_box.add (overlay);
 
-        grid.add (header_bar);
-        grid.add (overlay);
-
-        add (grid);
+        add (main_box);
         show_welcome_view ();
         show_all ();
 

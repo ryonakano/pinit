@@ -24,6 +24,7 @@ You'll need the following dependencies to build:
 
 * libgtk-3.0-dev
 * libgranite-dev (>= 6.0.0)
+* libhandy-1-dev
 * meson (>=0.49.0)
 * valac
 
