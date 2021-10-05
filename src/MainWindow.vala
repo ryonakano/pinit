@@ -21,7 +21,7 @@ public class MainWindow : Hdy.Window {
     construct {
         Hdy.init ();
 
-        var welcome_view = new WelcomeView (this);
+        welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
         edit_view = new EditView (this);
 
