@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class MainWindow : Gtk.ApplicationWindow {
+public class MainWindow : Hdy.Window {
     private FilesView files_view;
     private EditView edit_view;
     private Gtk.Stack stack;
     private Gtk.ToolButton home_button;
-    private Gtk.HeaderBar header_bar;
+    private Hdy.HeaderBar header_bar;
 
     public MainWindow () {
         Object (
@@ -18,6 +18,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        Hdy.init ();
+
         var welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
         edit_view = new EditView (this);
@@ -35,14 +37,12 @@ public class MainWindow : Gtk.ApplicationWindow {
         var toast = new Granite.Widgets.Toast (_("Saved changes!"));
         overlay.add_overlay (toast);
 
-        add (overlay);
-
         var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
         home_button = new Gtk.ToolButton (home_image, null) {
             tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
-        header_bar = new Gtk.HeaderBar () {
+        header_bar = new Hdy.HeaderBar () {
             show_close_button = true,
             has_subtitle = false,
         };
@@ -52,7 +52,11 @@ public class MainWindow : Gtk.ApplicationWindow {
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
-        set_titlebar (header_bar);
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (header_bar);
+        main_box.add (overlay);
+
+        add (main_box);
         show_welcome_view ();
         show_all ();
 
