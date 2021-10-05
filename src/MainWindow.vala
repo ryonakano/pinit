@@ -80,9 +80,8 @@ public class MainWindow : Hdy.Window {
         });
 
         deck.notify["transition-running"].connect (() => {
-            if (!deck.transition_running) {
-                if (deck.visible_child == welcome_view)
-                    show_welcome_view ();
+            if (!deck.transition_running && deck.visible_child == welcome_view) {
+                show_welcome_view ();
             }
         });
 
