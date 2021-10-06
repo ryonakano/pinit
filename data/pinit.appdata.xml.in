@@ -77,7 +77,7 @@
   <url type="translate">https://github.com/ryonakano/pinit</url>
   
   <custom>
-    <value key="x-appcenter-color-primary">#007367</value>
-    <value key="x-appcenter-color-primary-text">#fafafa</value>
+    <value key="x-appcenter-color-primary">#28bca3</value>
+    <value key="x-appcenter-color-primary-text">#1a1a1a</value>
   </custom>
 </component>
