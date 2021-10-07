@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-07 19:32+0900\n"
-"PO-Revision-Date: 2021-10-01 15:46+0900\n"
+"PO-Revision-Date: 2021-10-07 19:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -59,35 +59,37 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:67
 msgid "Add 128px app icon (thanks to @hanaral)"
-msgstr ""
+msgstr "128px のアプリアイコンを追加 (貢献者: @hanaral)"
 
 #: data/pinit.appdata.xml.in:68
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
+"スタイルシートの種類によらずウィンドウが角丸になるように修正 (貢献者: "
+"@JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:69
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr ""
+msgstr "マルチタッチジェスチャーに対応 (貢献者: @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:70
 msgid "Fix unreadable description text in AppCenter"
-msgstr ""
+msgstr "AppCenter で表示される説明テキストが見にくい不具合を修正"
 
 #: data/pinit.appdata.xml.in:71
 msgid "Save and restore window position"
-msgstr ""
+msgstr "ウィンドウの位置を保存し復元するように修正"
 
 #: data/pinit.appdata.xml.in:73
 msgid "Translation updates:"
-msgstr ""
+msgstr "翻訳の更新:"
 
 #: data/pinit.appdata.xml.in:75
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr ""
+msgstr "スペイン語翻訳を追加 (貢献者: @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:76
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "日本語翻訳を更新"
 
 #: data/pinit.appdata.xml.in:83
 msgid "Initial release"
