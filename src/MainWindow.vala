@@ -62,7 +62,6 @@ public class MainWindow : Hdy.Window {
 
         add (main_box);
         show_welcome_view ();
-        show_all ();
 
         home_button.clicked.connect (() => {
             show_welcome_view ();
