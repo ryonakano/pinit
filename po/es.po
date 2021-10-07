@@ -7,17 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-01 15:41+0900\n"
+"POT-Creation-Date: 2021-10-07 19:32+0900\n"
 "PO-Revision-Date: 2021-10-04 01:02-0600\n"
+"Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
-"Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail."
-"com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es\n"
 
 #: src/Views/EditView.vala:27
 msgid "File Name"
@@ -151,23 +150,23 @@ msgstr "Editar Archivo"
 msgid "Edit an existing desktop file."
 msgstr "Editar un archivo de escritorio existente."
 
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:41
 msgid "Saved changes!"
 msgstr "¡Cambios guardados!"
 
-#: src/MainWindow.vala:42
+#: src/MainWindow.vala:46
 msgid "Create new or edit"
 msgstr "Crear nuevo o editar"
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:108
 msgid "Edit a desktop file"
 msgstr "Editar un archivo de escritorio"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:124
 #, c-format
 msgid "Editing “%s”"
 msgstr "Editando \"%s\""
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:126
 msgid "Untitled desktop file"
 msgstr "Archivo de escritorio sin nombre"

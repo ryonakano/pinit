@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-01 15:42+0900\n"
+"POT-Creation-Date: 2021-10-07 19:32+0900\n"
 "PO-Revision-Date: 2021-10-01 15:46+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -58,10 +58,42 @@ msgid "Edit View"
 msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:67
+msgid "Add 128px app icon (thanks to @hanaral)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:68
+msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:69
+msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:70
+msgid "Fix unreadable description text in AppCenter"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:71
+msgid "Save and restore window position"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:73
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:75
+msgid "Add Spanish translation (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:76
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:83
 msgid "Initial release"
 msgstr "最初のリリース"
 
-#: data/pinit.appdata.xml.in:73
+#: data/pinit.appdata.xml.in:89
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
