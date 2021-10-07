@@ -61,6 +61,22 @@
   </content_rating>
 
   <releases>
+    <release version="1.0.0" date="2021-10-07" urgency="medium">
+      <description>
+        <ul>
+          <li>Add 128px app icon (thanks to @hanaral)</li>
+          <li>Rounded window corners on any stylesheet (thanks to @JeysonFlores)</li>
+          <li>Support multitouch gestures (thanks to @JeysonFlores)</li>
+          <li>Fix unreadable description text in AppCenter</li>
+          <li>Save and restore window position</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Add Spanish translation (thanks to @JeysonFlores)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2021-10-01" urgency="medium">
       <description>
         <ul>
