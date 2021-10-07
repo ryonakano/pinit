@@ -23,3 +23,9 @@ i18n.merge_file(
     install: true,
     install_dir: get_option('datadir') / 'metainfo'
 )
+
+install_data(
+    'pinit.gschema.xml',
+    rename: meson.project_name() + '.gschema.xml',
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+)
