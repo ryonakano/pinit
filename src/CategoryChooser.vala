@@ -23,7 +23,7 @@ public class CategoryChooser : Gtk.Grid {
                 toggle.active = false;
 
                 foreach (var category in categories) {
-                    if (toggle.label == category) {
+                    if (toggle.category == category) {
                         toggle.active = true;
                         continue;
                     }
