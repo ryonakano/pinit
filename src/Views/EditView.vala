@@ -11,7 +11,7 @@ public class EditView : Gtk.Grid {
     private Granite.ValidatedEntry comment_entry;
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
-    private Granite.ValidatedEntry categories_entry;
+    private CategoryChooser category_chooser;
     private Gtk.CheckButton terminal_checkbox;
     private Gtk.Button action_button;
 
@@ -97,16 +97,14 @@ public class EditView : Gtk.Grid {
         icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
-        var categories_desc_label = new DimLabel (_("Type of the app."));
-        categories_entry = new Granite.ValidatedEntry.from_regex (/^(.+;)+$/) { // vala-lint=space-before-paren
-            expand = true
-        };
+        var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
+        category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
-            margin_bottom = 12
+            margin_bottom = 24
         };
         categories_grid.attach (categories_label, 0, 0, 1, 1);
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
-        categories_grid.attach (categories_entry, 0, 2, 1, 1);
+        categories_grid.attach (category_chooser, 0, 2, 1, 1);
 
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
@@ -117,7 +115,7 @@ public class EditView : Gtk.Grid {
             margin_top = 24,
             sensitive = (
                 id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-                exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
+                exec_entry.text.length > 0 && category_chooser.selected != ""
             )
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
@@ -184,19 +182,18 @@ public class EditView : Gtk.Grid {
                 comment_entry.text,
                 exec_entry.text,
                 icon_entry.text,
-                categories_entry.text,
+                category_chooser.selected,
                 terminal_checkbox.active
             );
             DesktopFileOperator.get_default ().write_to_file (desktop_file);
         });
 
         key_release_event.connect (() => {
-            action_button.sensitive = (
-                id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-                exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
-            );
+            set_action_button_sensitivity ();
             return false;
         });
+
+        category_chooser.toggled.connect (set_action_button_sensitivity);
     }
 
     public void set_desktop_file (DesktopFile desktop_file) {
@@ -205,12 +202,16 @@ public class EditView : Gtk.Grid {
         comment_entry.text = desktop_file.comment;
         exec_entry.text = desktop_file.exec_file;
         icon_entry.text = desktop_file.icon_file;
-        categories_entry.text = desktop_file.categories;
+        category_chooser.selected = desktop_file.categories;
         terminal_checkbox.active = desktop_file.is_cli;
 
+        set_action_button_sensitivity ();
+    }
+
+    private void set_action_button_sensitivity () {
         action_button.sensitive = (
             id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-            exec_entry.text.length > 0 && (categories_entry.is_valid || categories_entry.text == "")
+            exec_entry.text.length > 0 && category_chooser.selected != ""
         );
     }
 }

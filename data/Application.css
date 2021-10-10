@@ -1,0 +1,10 @@
+.toggle {
+    margin-right: 6px;
+    background: #d4d4d4;
+    color: #1a1a1a;
+}
+.toggle:checked {
+    margin-right: 6px;
+    background: #206b00;
+    color: #fafafa;
+}

@@ -5,6 +5,7 @@ project(
     meson_version: '>=0.49.0'
 )
 
+gnome = import('gnome')
 i18n = import('i18n')
 
 add_project_arguments(
@@ -21,6 +22,13 @@ config_file = configure_file(
     configuration: config_data
 )
 
+asresources = gnome.compile_resources(
+    'as-resources',
+    'data' / 'pinit.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
+
 sources = files(
     'src' / 'Backend' / 'DesktopFile.vala',
     'src' / 'Backend' / 'DesktopFileOperator.vala',
@@ -28,12 +36,14 @@ sources = files(
     'src' / 'Views' / 'FilesView.vala',
     'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
+    'src' / 'CategoryChooser.vala',
     'src' / 'DimLabel.vala',
     'src' / 'MainWindow.vala'
 )
 
 executable(
     meson.project_name(),
+    asresources,
     config_file,
     sources,
     dependencies: [
