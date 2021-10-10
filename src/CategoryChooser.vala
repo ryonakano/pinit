@@ -6,10 +6,9 @@
 public class CategoryChooser : Gtk.Grid {
     public signal void toggled ();
 
-    private string _selected;
     public string selected {
-        get {
-            _selected = "";
+        owned get {
+            string _selected = "";
             foreach (var toggle in toggles) {
                 if (toggle.active) {
                     _selected += "%s;".printf (toggle.label);
