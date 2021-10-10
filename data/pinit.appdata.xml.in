@@ -61,6 +61,17 @@
   </content_rating>
 
   <releases>
+    <release version="1.0.1" date="2021-10-10" urgency="low">
+      <description>
+        <ul>
+          <li>Add CategoryChooser</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2021-10-07" urgency="medium">
       <description>
         <ul>
