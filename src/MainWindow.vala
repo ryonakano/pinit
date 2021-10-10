@@ -23,6 +23,12 @@ public class MainWindow : Hdy.Window {
     construct {
         Hdy.init ();
 
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Application.css");
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                    cssprovider,
+                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
         edit_view = new EditView (this);

@@ -33,21 +33,6 @@ public class CategoryChooser : Gtk.Grid {
         }
     }
 
-    private const string CSS_DATA = """
-.toggle {
-    margin-right: 6px;
-    background: #d4d4d4;
-    color: #1a1a1a;
-    transition: 1s;
-}
-.toggle:checked {
-    margin-right: 6px;
-    background: #206b00;
-    color: #fafafa;
-    transition: 1s;
-}
-    """;
-
     private Gee.ArrayList<ToggleButton> toggles;
     private Gee.HashMap<string, string> categories;
 
@@ -58,16 +43,6 @@ public class CategoryChooser : Gtk.Grid {
     }
 
     construct {
-        var cssprovider = new Gtk.CssProvider ();
-        try {
-            cssprovider.load_from_data (CSS_DATA, -1);
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                        cssprovider,
-                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        } catch (Error e) {
-            warning (e.message);
-        }
-
         toggles = new Gee.ArrayList<ToggleButton> ();
         categories = new Gee.HashMap<string, string> ();
 
