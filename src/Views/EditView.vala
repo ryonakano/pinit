@@ -97,7 +97,7 @@ public class EditView : Gtk.Grid {
         icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
         var categories_label = new Granite.HeaderLabel (_("App Categories"));
-        var categories_desc_label = new DimLabel (_("Type of the app."));
+        var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
             margin_bottom = 12
