@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-07 19:32+0900\n"
+"POT-Creation-Date: 2021-10-10 21:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,31 +65,31 @@ msgid "App Categories"
 msgstr ""
 
 #: src/Views/EditView.vala:100
-msgid "Type of the app."
+msgid "Type of the app, multiplly selectable."
 msgstr ""
 
-#: src/Views/EditView.vala:111
+#: src/Views/EditView.vala:109
 msgid "Run in Terminal"
 msgstr ""
 
-#: src/Views/EditView.vala:114
+#: src/Views/EditView.vala:112
 msgid "Check this in if you want to registar a CUI app."
 msgstr ""
 
-#: src/Views/EditView.vala:141
+#: src/Views/EditView.vala:139
 msgid "Select an executable file"
 msgstr ""
 
-#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+#: src/Views/EditView.vala:140 src/Views/EditView.vala:165
 msgid "Open"
 msgstr ""
 
-#: src/Views/EditView.vala:142 src/Views/EditView.vala:167
+#: src/Views/EditView.vala:140 src/Views/EditView.vala:165
 #: src/Views/FilesView.vala:99
 msgid "Cancel"
 msgstr ""
 
-#: src/Views/EditView.vala:166
+#: src/Views/EditView.vala:164
 msgid "Select an icon file"
 msgstr ""
 
@@ -127,6 +127,8 @@ msgstr ""
 msgid "Pin any apps into the launcher"
 msgstr ""
 
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr ""
@@ -143,23 +145,75 @@ msgstr ""
 msgid "Edit an existing desktop file."
 msgstr ""
 
-#: src/MainWindow.vala:41
+#: src/CategoryChooser.vala:48
+msgid "Audio & Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:49
+msgid "Audio"
+msgstr ""
+
+#: src/CategoryChooser.vala:50
+msgid "Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:51
+msgid "Development"
+msgstr ""
+
+#: src/CategoryChooser.vala:52
+msgid "Education"
+msgstr ""
+
+#: src/CategoryChooser.vala:53
+msgid "Game"
+msgstr ""
+
+#: src/CategoryChooser.vala:54
+msgid "Graphics"
+msgstr ""
+
+#: src/CategoryChooser.vala:55
+msgid "Network"
+msgstr ""
+
+#: src/CategoryChooser.vala:56
+msgid "Office"
+msgstr ""
+
+#: src/CategoryChooser.vala:57
+msgid "Science"
+msgstr ""
+
+#: src/CategoryChooser.vala:58
+msgid "Settings"
+msgstr ""
+
+#: src/CategoryChooser.vala:59
+msgid "System"
+msgstr ""
+
+#: src/CategoryChooser.vala:60
+msgid "Utility"
+msgstr ""
+
+#: src/MainWindow.vala:47
 msgid "Saved changes!"
 msgstr ""
 
-#: src/MainWindow.vala:46
+#: src/MainWindow.vala:52
 msgid "Create new or edit"
 msgstr ""
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:114
 msgid "Edit a desktop file"
 msgstr ""
 
-#: src/MainWindow.vala:124
+#: src/MainWindow.vala:130
 #, c-format
 msgid "Editing “%s”"
 msgstr ""
 
-#: src/MainWindow.vala:126
+#: src/MainWindow.vala:132
 msgid "Untitled desktop file"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-07 19:32+0900\n"
+"POT-Creation-Date: 2021-10-10 21:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,42 +52,46 @@ msgid "Edit View"
 msgstr ""
 
 #: data/pinit.appdata.xml.in:67
-msgid "Add 128px app icon (thanks to @hanaral)"
+msgid "Add CategoryChooser"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:68
-msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:69
-msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:70
-msgid "Fix unreadable description text in AppCenter"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:71
-msgid "Save and restore window position"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:73
+#: data/pinit.appdata.xml.in:69 data/pinit.appdata.xml.in:84
 msgid "Translation updates:"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:75
-msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:76
+#: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:87
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:78
+msgid "Add 128px app icon (thanks to @hanaral)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:79
+msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:80
+msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:81
+msgid "Fix unreadable description text in AppCenter"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:82
+msgid "Save and restore window position"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:86
+msgid "Add Spanish translation (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:94
 msgid "Initial release"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:89
+#: data/pinit.appdata.xml.in:100
 msgid "Ryo Nakano"
 msgstr ""
 
