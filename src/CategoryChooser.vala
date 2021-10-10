@@ -11,7 +11,7 @@ public class CategoryChooser : Gtk.Grid {
             string _selected = "";
             foreach (var toggle in toggles) {
                 if (toggle.active) {
-                    _selected += "%s;".printf (toggle.label);
+                    _selected += "%s;".printf (toggle.category);
                 }
             }
 
