@@ -100,7 +100,7 @@ public class EditView : Gtk.Grid {
         var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
-            margin_bottom = 12
+            margin_bottom = 24
         };
         categories_grid.attach (categories_label, 0, 0, 1, 1);
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
