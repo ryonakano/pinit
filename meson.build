@@ -28,6 +28,7 @@ sources = files(
     'src' / 'Views' / 'FilesView.vala',
     'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
+    'src' / 'CategoryChooser.vala',
     'src' / 'DimLabel.vala',
     'src' / 'MainWindow.vala'
 )
