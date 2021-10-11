@@ -83,6 +83,10 @@ public class MainWindow : Hdy.Window {
                 destroy ();
             }
 
+            if (Gdk.ModifierType.MOD1_MASK in key.state && key.keyval == Gdk.Key.Home) {
+                show_welcome_view ();
+            }
+
             return false;
         });
 
