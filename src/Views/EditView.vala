@@ -6,7 +6,7 @@
 public class EditView : Gtk.Grid {
     public MainWindow window { private get; construct; }
 
-    private Granite.ValidatedEntry id_entry;
+    private Granite.ValidatedEntry file_name_entry;
     private Granite.ValidatedEntry name_entry;
     private Granite.ValidatedEntry comment_entry;
     private Gtk.Entry exec_entry;
@@ -24,23 +24,23 @@ public class EditView : Gtk.Grid {
     }
 
     construct {
-        var id_label = new Granite.HeaderLabel (_("File Name"));
-        var id_desc_label = new DimLabel (
+        var file_name_label = new Granite.HeaderLabel (_("File Name"));
+        var file_name_desc_label = new DimLabel (
             _("File name of the desktop file. Only lowercase letters and numbers are allowed.")
         );
-        id_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
+        file_name_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
             expand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
             margin_start = 6
         };
-        var id_grid = new Gtk.Grid () {
+        var file_name_grid = new Gtk.Grid () {
             margin_bottom = 12
         };
-        id_grid.attach (id_label, 0, 0, 1, 1);
-        id_grid.attach (id_desc_label, 0, 1, 1, 1);
-        id_grid.attach (id_entry, 0, 2, 1, 1);
-        id_grid.attach (suffix_label, 1, 2, 1, 1);
+        file_name_grid.attach (file_name_label, 0, 0, 1, 1);
+        file_name_grid.attach (file_name_desc_label, 0, 1, 1, 1);
+        file_name_grid.attach (file_name_entry, 0, 2, 1, 1);
+        file_name_grid.attach (suffix_label, 1, 2, 1, 1);
 
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("Shown in Applications Menu or Dock."));
@@ -114,13 +114,13 @@ public class EditView : Gtk.Grid {
         action_button = new Gtk.Button.with_label ("Pin It!") {
             margin_top = 24,
             sensitive = (
-                id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+                file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
                 exec_entry.text.length > 0 && category_chooser.selected != ""
             )
         };
         action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        attach (id_grid, 0, 0, 1, 3);
+        attach (file_name_grid, 0, 0, 1, 3);
         attach (name_grid, 0, 3, 1, 3);
         attach (comment_grid, 0, 6, 1, 3);
         attach (exec_grid, 0, 9, 1, 3);
@@ -177,7 +177,7 @@ public class EditView : Gtk.Grid {
 
         action_button.clicked.connect (() => {
             var desktop_file = new DesktopFile (
-                id_entry.text,
+                file_name_entry.text,
                 name_entry.text,
                 comment_entry.text,
                 exec_entry.text,
@@ -197,7 +197,7 @@ public class EditView : Gtk.Grid {
     }
 
     public void set_desktop_file (DesktopFile desktop_file) {
-        id_entry.text = desktop_file.id;
+        file_name_entry.text = desktop_file.file_name;
         name_entry.text = desktop_file.app_name;
         comment_entry.text = desktop_file.comment;
         exec_entry.text = desktop_file.exec_file;
@@ -210,7 +210,7 @@ public class EditView : Gtk.Grid {
 
     private void set_action_button_sensitivity () {
         action_button.sensitive = (
-            id_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+            file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
             exec_entry.text.length > 0 && category_chooser.selected != ""
         );
     }

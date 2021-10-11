@@ -82,7 +82,7 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
 
         // Create or update desktop file
         try {
@@ -95,7 +95,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public DesktopFile load_from_file (string path) {
-        string id = "";
+        string file_name = "";
         string app_name = "";
         string comment = "";
         string exec_file = "";
@@ -109,7 +109,7 @@ public class DesktopFileOperator : GLib.Object {
             string[] splited_path = path.split ("/");
             string basename = splited_path[splited_path.length - 1];
 
-            id = basename.slice (0, basename.length - ".desktop".length);
+            file_name = basename.slice (0, basename.length - ".desktop".length);
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
             comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
@@ -123,7 +123,7 @@ public class DesktopFileOperator : GLib.Object {
         }
 
         var desktop_file = new DesktopFile (
-            id,
+            file_name,
             app_name,
             comment,
             exec_file,
@@ -136,7 +136,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void delete_file (DesktopFile desktop_file) {
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.id + ".desktop");
+        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
         var file = File.new_for_path (path);
 
         try {

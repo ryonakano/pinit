@@ -4,7 +4,7 @@
  */
 
 public class DesktopFile : GLib.Object {
-    public string id { get; construct; }
+    public string file_name { get; construct; }
     public string app_name { get; construct; }
     public string comment { get; construct; }
     public string exec_file { get; construct; }
@@ -13,7 +13,7 @@ public class DesktopFile : GLib.Object {
     public bool is_cli { get; construct; }
 
     public DesktopFile (
-        string id = "",
+        string file_name = "",
         string app_name = "",
         string comment = "",
         string exec_file = "",
@@ -22,7 +22,7 @@ public class DesktopFile : GLib.Object {
         bool is_cli = false
     ) {
         Object (
-            id: id,
+            file_name: file_name,
             app_name: app_name,
             comment: comment,
             exec_file: exec_file,
