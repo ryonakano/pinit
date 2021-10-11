@@ -8,6 +8,8 @@ finish-args:
   - '--socket=wayland'
   - '--socket=fallback-x11'
   - '--filesystem=home'
+  # For drawing icons
+  - '--device=dri'
   # needed for perfers-color-scheme
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
