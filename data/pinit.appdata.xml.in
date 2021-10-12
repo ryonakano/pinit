@@ -65,6 +65,8 @@
       <description>
         <ul>
           <li>Add CategoryChooser</li>
+          <li>Support Alt+Home to show welcome</li>
+          <li>Allow GPU acceralation by default</li>
         </ul>
         <p>Translation updates:</p>
         <ul>
