@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 21:54+0900\n"
+"POT-Creation-Date: 2021-10-12 11:49+0900\n"
 "PO-Revision-Date: 2021-10-04 01:02-0600\n"
 "Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
 "Language-Team: \n"
@@ -134,8 +134,6 @@ msgstr "Eliminar"
 msgid "Pin any apps into the launcher"
 msgstr "Fija cualquier aplicación en el lanzador"
 
-#. The background color of this widget is rgb(255, 255, 255) by default.
-#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr "Nuevo Archivo"
@@ -212,16 +210,16 @@ msgstr "¡Cambios guardados!"
 msgid "Create new or edit"
 msgstr "Crear nuevo o editar"
 
-#: src/MainWindow.vala:114
+#: src/MainWindow.vala:118
 msgid "Edit a desktop file"
 msgstr "Editar un archivo de escritorio"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:134
 #, c-format
 msgid "Editing “%s”"
 msgstr "Editando \"%s\""
 
-#: src/MainWindow.vala:132
+#: src/MainWindow.vala:136
 msgid "Untitled desktop file"
 msgstr "Archivo de escritorio sin nombre"
 

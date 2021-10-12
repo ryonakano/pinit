@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 21:54+0900\n"
+"POT-Creation-Date: 2021-10-12 11:49+0900\n"
 "PO-Revision-Date: 2021-10-01 15:42+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -129,8 +129,6 @@ msgstr "削除"
 msgid "Pin any apps into the launcher"
 msgstr "ランチャーにアプリをピン止めします"
 
-#. The background color of this widget is rgb(255, 255, 255) by default.
-#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr "新しいファイル"
@@ -207,16 +205,16 @@ msgstr "変更を保存しました！"
 msgid "Create new or edit"
 msgstr "ファイルを作成または編集します"
 
-#: src/MainWindow.vala:114
+#: src/MainWindow.vala:118
 msgid "Edit a desktop file"
 msgstr "デスクトップファイルを編集します"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:134
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/MainWindow.vala:132
+#: src/MainWindow.vala:136
 msgid "Untitled desktop file"
 msgstr "名称未設定のデスクトップファイル"
 

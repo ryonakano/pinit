@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 21:54+0900\n"
+"POT-Creation-Date: 2021-10-12 11:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -127,8 +127,6 @@ msgstr ""
 msgid "Pin any apps into the launcher"
 msgstr ""
 
-#. The background color of this widget is rgb(255, 255, 255) by default.
-#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr ""
@@ -205,15 +203,15 @@ msgstr ""
 msgid "Create new or edit"
 msgstr ""
 
-#: src/MainWindow.vala:114
+#: src/MainWindow.vala:118
 msgid "Edit a desktop file"
 msgstr ""
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:134
 #, c-format
 msgid "Editing “%s”"
 msgstr ""
 
-#: src/MainWindow.vala:132
+#: src/MainWindow.vala:136
 msgid "Untitled desktop file"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 21:54+0900\n"
+"POT-Creation-Date: 2021-10-12 11:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,43 +55,51 @@ msgstr ""
 msgid "Add CategoryChooser"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:69 data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:68
+msgid "Support Alt+Home to show welcome"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:69
+msgid "Allow GPU acceralation by default"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:86
 msgid "Translation updates:"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:87
+#: data/pinit.appdata.xml.in:73 data/pinit.appdata.xml.in:89
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:78
+#: data/pinit.appdata.xml.in:80
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:79
+#: data/pinit.appdata.xml.in:81
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:80
+#: data/pinit.appdata.xml.in:82
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:83
 msgid "Fix unreadable description text in AppCenter"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:82
+#: data/pinit.appdata.xml.in:84
 msgid "Save and restore window position"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:86
+#: data/pinit.appdata.xml.in:88
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:94
+#: data/pinit.appdata.xml.in:96
 msgid "Initial release"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:100
+#: data/pinit.appdata.xml.in:102
 msgid "Ryo Nakano"
 msgstr ""
 
