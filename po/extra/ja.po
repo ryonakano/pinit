@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 11:49+0900\n"
-"PO-Revision-Date: 2021-10-07 19:36+0900\n"
+"PO-Revision-Date: 2021-10-12 12:25+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -59,15 +59,15 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:67
 msgid "Add CategoryChooser"
-msgstr ""
+msgstr "カテゴリーを選べるウィジェットを追加"
 
 #: data/pinit.appdata.xml.in:68
 msgid "Support Alt+Home to show welcome"
-msgstr ""
+msgstr "Alt+Home キーでようこそ画面を表示できる機能を追加"
 
 #: data/pinit.appdata.xml.in:69
 msgid "Allow GPU acceralation by default"
-msgstr ""
+msgstr "GPU アクセラレーションをデフォルトで有効化"
 
 #: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:86
 msgid "Translation updates:"

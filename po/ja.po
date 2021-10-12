@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-12 11:49+0900\n"
-"PO-Revision-Date: 2021-10-01 15:42+0900\n"
+"PO-Revision-Date: 2021-10-12 11:51+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -66,7 +66,7 @@ msgstr "アプリのカテゴリー"
 
 #: src/Views/EditView.vala:100
 msgid "Type of the app, multiplly selectable."
-msgstr ""
+msgstr "アプリの種類です。複数選択できます。"
 
 #: src/Views/EditView.vala:109
 msgid "Run in Terminal"
@@ -147,55 +147,55 @@ msgstr "既存のデスクトップファイルを編集します。"
 
 #: src/CategoryChooser.vala:48
 msgid "Audio & Video"
-msgstr ""
+msgstr "オーディオとビデオ"
 
 #: src/CategoryChooser.vala:49
 msgid "Audio"
-msgstr ""
+msgstr "オーディオ"
 
 #: src/CategoryChooser.vala:50
 msgid "Video"
-msgstr ""
+msgstr "ビデオ"
 
 #: src/CategoryChooser.vala:51
 msgid "Development"
-msgstr ""
+msgstr "開発"
 
 #: src/CategoryChooser.vala:52
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 #: src/CategoryChooser.vala:53
 msgid "Game"
-msgstr ""
+msgstr "ゲーム"
 
 #: src/CategoryChooser.vala:54
 msgid "Graphics"
-msgstr ""
+msgstr "グラフィックス"
 
 #: src/CategoryChooser.vala:55
 msgid "Network"
-msgstr ""
+msgstr "ネットワーク"
 
 #: src/CategoryChooser.vala:56
 msgid "Office"
-msgstr ""
+msgstr "オフィス"
 
 #: src/CategoryChooser.vala:57
 msgid "Science"
-msgstr ""
+msgstr "科学"
 
 #: src/CategoryChooser.vala:58
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: src/CategoryChooser.vala:59
 msgid "System"
-msgstr ""
+msgstr "システム"
 
 #: src/CategoryChooser.vala:60
 msgid "Utility"
-msgstr ""
+msgstr "ユーティリティー"
 
 #: src/MainWindow.vala:47
 msgid "Saved changes!"
@@ -217,6 +217,3 @@ msgstr "“%s”を編集しています"
 #: src/MainWindow.vala:136
 msgid "Untitled desktop file"
 msgstr "名称未設定のデスクトップファイル"
-
-#~ msgid "Type of the app."
-#~ msgstr "アプリの種類です。"
