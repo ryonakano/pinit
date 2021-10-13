@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-13 11:35+0900\n"
-"PO-Revision-Date: 2021-10-12 11:51+0900\n"
+"PO-Revision-Date: 2021-10-13 11:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -32,9 +32,8 @@ msgid "App Name"
 msgstr "アプリ名"
 
 #: src/Views/EditView.vala:46
-#, fuzzy
 msgid "Shown in the launcher or Dock."
-msgstr "アプリケーションメニューやドックに表示されます。"
+msgstr "ランチャーやドックに表示されます。"
 
 #: src/Views/EditView.vala:57
 msgid "Comment"
@@ -119,9 +118,8 @@ msgid "Are you sure you want to delete “%s”?"
 msgstr "“%s”を削除してもよろしいですか？"
 
 #: src/Views/FilesView.vala:94 src/Views/FilesView.vala:106
-#, fuzzy
 msgid "This removes the app from the launcher."
-msgstr "この操作によって、アプリケーションメニューからアプリが削除されます。"
+msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
 #: src/Views/FilesView.vala:109
 msgid "Delete"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-13 11:35+0900\n"
-"PO-Revision-Date: 2021-10-12 12:25+0900\n"
+"PO-Revision-Date: 2021-10-13 11:37+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -59,11 +59,11 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:67
 msgid "Improved support for other desktop environments"
-msgstr ""
+msgstr "ほかのデスクトップ環境への対応を改善"
 
 #: data/pinit.appdata.xml.in:68
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
-msgstr ""
+msgstr "\"Pin It!\" ボタンをクリックすると実行権限を付与するように修正"
 
 #: data/pinit.appdata.xml.in:70 data/pinit.appdata.xml.in:83
 #: data/pinit.appdata.xml.in:98
