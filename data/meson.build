@@ -9,6 +9,7 @@ endforeach
 
 if get_option('for_pantheon') == false
     install_data([
+        # From elementary/icons, status/symbolic/*
         'icons' / 'symbolic' / 'process-completed-symbolic.svg',
         'icons' / 'symbolic' / 'process-error-symbolic.svg'],
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps'
