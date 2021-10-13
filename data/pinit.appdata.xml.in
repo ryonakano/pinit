@@ -61,6 +61,18 @@
   </content_rating>
 
   <releases>
+    <release version="1.2.0" date="2021-10-13" urgency="medium">
+      <description>
+        <ul>
+          <li>Improved support for other desktop environments</li>
+          <li>Add execution permisson on clicking the "Pin It!" button</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2021-10-12" urgency="low">
       <description>
         <ul>
