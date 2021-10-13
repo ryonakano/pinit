@@ -43,7 +43,7 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
 
         var name_label = new Granite.HeaderLabel (_("App Name"));
-        var name_desc_label = new DimLabel (_("Shown in Applications Menu or Dock."));
+        var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
         name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
             expand = true
         };

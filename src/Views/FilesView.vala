@@ -91,7 +91,7 @@ public class FilesView : Gtk.Stack {
 #if FOR_PANTHEON
                 var delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
                     _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                    _("This removes the app from Applications Menu."),
+                    _("This removes the app from the launcher."),
                     "dialog-warning",
                     Gtk.ButtonsType.NONE
                 ) {
@@ -103,7 +103,7 @@ public class FilesView : Gtk.Stack {
                     window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
                 ) {
                     text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                    secondary_text = _("This removes the app from Applications Menu.")
+                    secondary_text = _("This removes the app from the launcher.")
                 };
 #endif
                 var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
