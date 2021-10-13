@@ -74,6 +74,8 @@ modules:
 
   - name: pinit
     buildsystem: meson
+    config-opts:
+      - -Dfor_pantheon=false
     sources:
       - type: dir
         path: .

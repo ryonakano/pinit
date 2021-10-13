@@ -13,6 +13,10 @@ add_project_arguments(
     language: 'c'
 )
 
+if get_option('for_pantheon')
+    add_project_arguments('--define=FOR_PANTHEON', language: 'vala')
+endif
+
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
