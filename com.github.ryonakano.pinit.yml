@@ -28,3 +28,5 @@ modules:
     sources:
       - type: dir
         path: .
+      - type: patch
+        path: appdata-screenshots.patch
