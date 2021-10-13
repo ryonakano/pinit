@@ -29,6 +29,14 @@ public class MainWindow : Hdy.Window {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
+#if !FOR_PANTHEON
+        var extra_cssprovider = new Gtk.CssProvider ();
+        extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                    extra_cssprovider,
+                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+#endif
+
         welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
         edit_view = new EditView (this);

@@ -1,0 +1,11 @@
+.h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.h2 {
+    font-weight: 300;
+    font-size: 18pt;
+    letter-spacing: -0.05em;
+}

@@ -7,6 +7,14 @@ foreach i : icon_sizes
     )
 endforeach
 
+if get_option('for_pantheon') == false
+    install_data([
+        'icons' / 'symbolic' / 'process-completed-symbolic.svg',
+        'icons' / 'symbolic' / 'process-error-symbolic.svg'],
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps'
+    )
+endif
+
 i18n.merge_file(
     input: 'pinit.desktop.in',
     output: meson.project_name() + '.desktop',
