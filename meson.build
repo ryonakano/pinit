@@ -54,6 +54,7 @@ executable(
         dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0'),
         dependency('libhandy-1'),
+        meson.get_compiler('vala').find_library('posix')
     ],
     install: true
 )
