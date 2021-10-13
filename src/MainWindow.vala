@@ -15,6 +15,7 @@ public class MainWindow : Hdy.Window {
 
     public MainWindow () {
         Object (
+            title: "Pin It!",
             resizable: false,
             default_width: 400
         );
@@ -28,6 +29,14 @@ public class MainWindow : Hdy.Window {
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+#if !FOR_PANTHEON
+        var extra_cssprovider = new Gtk.CssProvider ();
+        extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                    extra_cssprovider,
+                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+#endif
 
         welcome_view = new WelcomeView (this);
         files_view = new FilesView (this);
@@ -96,6 +105,7 @@ public class MainWindow : Hdy.Window {
             }
         });
 
+#if FOR_PANTHEON
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
@@ -105,6 +115,7 @@ public class MainWindow : Hdy.Window {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
+#endif
     }
 
     public void show_welcome_view () {

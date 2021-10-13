@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/com/github/ryonakano/pinit">
     <file alias="Application.css">Application.css</file>
+    <file alias="Extra.css">Extra.css</file>
   </gresource>
 </gresources>

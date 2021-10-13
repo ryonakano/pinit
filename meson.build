@@ -13,6 +13,10 @@ add_project_arguments(
     language: 'c'
 )
 
+if get_option('for_pantheon')
+    add_project_arguments('--define=FOR_PANTHEON', language: 'vala')
+endif
+
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
@@ -50,6 +54,7 @@ executable(
         dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0'),
         dependency('libhandy-1'),
+        meson.get_compiler('vala').find_library('posix')
     ],
     install: true
 )

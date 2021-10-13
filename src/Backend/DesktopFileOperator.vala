@@ -69,6 +69,9 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void write_to_file (DesktopFile desktop_file) {
+        // Add exec permission to the exec file
+        Posix.chmod (desktop_file.exec_file, 0700);
+
         var keyfile = new KeyFile ();
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
