@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 11:49+0900\n"
+"POT-Creation-Date: 2021-10-13 11:35+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid "App Name"
 msgstr ""
 
 #: src/Views/EditView.vala:46
-msgid "Shown in Applications Menu or Dock."
+msgid "Shown in the launcher or Dock."
 msgstr ""
 
 #: src/Views/EditView.vala:57
@@ -85,7 +85,7 @@ msgid "Open"
 msgstr ""
 
 #: src/Views/EditView.vala:140 src/Views/EditView.vala:165
-#: src/Views/FilesView.vala:99
+#: src/Views/FilesView.vala:100
 msgid "Cancel"
 msgstr ""
 
@@ -110,16 +110,16 @@ msgstr ""
 msgid "Edit…"
 msgstr ""
 
-#: src/Views/FilesView.vala:92
+#: src/Views/FilesView.vala:93 src/Views/FilesView.vala:105
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr ""
 
-#: src/Views/FilesView.vala:93
-msgid "This removes the app from Applications Menu."
+#: src/Views/FilesView.vala:94 src/Views/FilesView.vala:106
+msgid "This removes the app from the launcher."
 msgstr ""
 
-#: src/Views/FilesView.vala:100
+#: src/Views/FilesView.vala:109
 msgid "Delete"
 msgstr ""
 
@@ -195,23 +195,23 @@ msgstr ""
 msgid "Utility"
 msgstr ""
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:56
 msgid "Saved changes!"
 msgstr ""
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:61
 msgid "Create new or edit"
 msgstr ""
 
-#: src/MainWindow.vala:118
+#: src/MainWindow.vala:129
 msgid "Edit a desktop file"
 msgstr ""
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:145
 #, c-format
 msgid "Editing “%s”"
 msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:147
 msgid "Untitled desktop file"
 msgstr ""

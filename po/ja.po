@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 11:49+0900\n"
+"POT-Creation-Date: 2021-10-13 11:35+0900\n"
 "PO-Revision-Date: 2021-10-12 11:51+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -32,7 +32,8 @@ msgid "App Name"
 msgstr "アプリ名"
 
 #: src/Views/EditView.vala:46
-msgid "Shown in Applications Menu or Dock."
+#, fuzzy
+msgid "Shown in the launcher or Dock."
 msgstr "アプリケーションメニューやドックに表示されます。"
 
 #: src/Views/EditView.vala:57
@@ -85,7 +86,7 @@ msgid "Open"
 msgstr "開く"
 
 #: src/Views/EditView.vala:140 src/Views/EditView.vala:165
-#: src/Views/FilesView.vala:99
+#: src/Views/FilesView.vala:100
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -112,16 +113,17 @@ msgstr "削除…"
 msgid "Edit…"
 msgstr "編集…"
 
-#: src/Views/FilesView.vala:92
+#: src/Views/FilesView.vala:93 src/Views/FilesView.vala:105
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "“%s”を削除してもよろしいですか？"
 
-#: src/Views/FilesView.vala:93
-msgid "This removes the app from Applications Menu."
+#: src/Views/FilesView.vala:94 src/Views/FilesView.vala:106
+#, fuzzy
+msgid "This removes the app from the launcher."
 msgstr "この操作によって、アプリケーションメニューからアプリが削除されます。"
 
-#: src/Views/FilesView.vala:100
+#: src/Views/FilesView.vala:109
 msgid "Delete"
 msgstr "削除"
 
@@ -197,23 +199,23 @@ msgstr "システム"
 msgid "Utility"
 msgstr "ユーティリティー"
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:56
 msgid "Saved changes!"
 msgstr "変更を保存しました！"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:61
 msgid "Create new or edit"
 msgstr "ファイルを作成または編集します"
 
-#: src/MainWindow.vala:118
+#: src/MainWindow.vala:129
 msgid "Edit a desktop file"
 msgstr "デスクトップファイルを編集します"
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:145
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:147
 msgid "Untitled desktop file"
 msgstr "名称未設定のデスクトップファイル"

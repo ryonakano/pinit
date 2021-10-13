@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 11:49+0900\n"
+"POT-Creation-Date: 2021-10-13 11:35+0900\n"
 "PO-Revision-Date: 2021-10-12 12:25+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -58,56 +58,66 @@ msgid "Edit View"
 msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:67
-msgid "Add CategoryChooser"
-msgstr "カテゴリーを選べるウィジェットを追加"
+msgid "Improved support for other desktop environments"
+msgstr ""
 
 #: data/pinit.appdata.xml.in:68
-msgid "Support Alt+Home to show welcome"
-msgstr "Alt+Home キーでようこそ画面を表示できる機能を追加"
+msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:69
-msgid "Allow GPU acceralation by default"
-msgstr "GPU アクセラレーションをデフォルトで有効化"
-
-#: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:86
+#: data/pinit.appdata.xml.in:70 data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:98
 msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
-#: data/pinit.appdata.xml.in:73 data/pinit.appdata.xml.in:89
+#: data/pinit.appdata.xml.in:72 data/pinit.appdata.xml.in:85
+#: data/pinit.appdata.xml.in:101
 msgid "Update Japanese translation"
 msgstr "日本語翻訳を更新"
 
+#: data/pinit.appdata.xml.in:79
+msgid "Add CategoryChooser"
+msgstr "カテゴリーを選べるウィジェットを追加"
+
 #: data/pinit.appdata.xml.in:80
+msgid "Support Alt+Home to show welcome"
+msgstr "Alt+Home キーでようこそ画面を表示できる機能を追加"
+
+#: data/pinit.appdata.xml.in:81
+msgid "Allow GPU acceralation by default"
+msgstr "GPU アクセラレーションをデフォルトで有効化"
+
+#: data/pinit.appdata.xml.in:92
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr "128px のアプリアイコンを追加 (貢献者: @hanaral)"
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:93
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 "スタイルシートの種類によらずウィンドウが角丸になるように修正 (貢献者: "
 "@JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:82
+#: data/pinit.appdata.xml.in:94
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr "マルチタッチジェスチャーに対応 (貢献者: @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:95
 msgid "Fix unreadable description text in AppCenter"
 msgstr "AppCenter で表示される説明テキストが見にくい不具合を修正"
 
-#: data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:96
 msgid "Save and restore window position"
 msgstr "ウィンドウの位置を保存し復元するように修正"
 
-#: data/pinit.appdata.xml.in:88
+#: data/pinit.appdata.xml.in:100
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr "スペイン語翻訳を追加 (貢献者: @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:96
+#: data/pinit.appdata.xml.in:108
 msgid "Initial release"
 msgstr "最初のリリース"
 
-#: data/pinit.appdata.xml.in:102
+#: data/pinit.appdata.xml.in:114
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
