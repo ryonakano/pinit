@@ -36,7 +36,7 @@ public class FilesView : Gtk.Stack {
             row.destroy ();
         }
 
-        var files = DesktopFileOperator.get_default ().get_files_list ();
+        var files = DesktopFileOperator.get_default ().files;
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
