@@ -1,6 +1,7 @@
 /*
- * Copyright 2021 Ryo Nakano
  * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
+ *
  * Inspired from:
  * - elementary/switchboard-plug-keyboard, #374
  * - pantheon-tweaks/pantheon-tweaks, src/Settings/ThemeSettings.vala
