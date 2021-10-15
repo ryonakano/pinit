@@ -206,6 +206,7 @@ public class EditView : Gtk.Grid {
         terminal_checkbox.active = desktop_file.is_cli;
 
         set_action_button_sensitivity ();
+        file_name_entry.grab_focus ();
     }
 
     private void set_action_button_sensitivity () {
