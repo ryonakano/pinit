@@ -3,15 +3,17 @@
  * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class FilesView : Gtk.Stack {
+public class FilesView : Gtk.ScrolledWindow {
     public MainWindow window { private get; construct; }
 
     private Gtk.ListBox files_list;
+    private Gtk.Stack stack;
 
     public FilesView (MainWindow window) {
         Object (
             window: window,
-            margin: 12
+            margin: 12,
+            hscrollbar_policy: Gtk.PolicyType.NEVER
         );
     }
 
@@ -26,9 +28,12 @@ public class FilesView : Gtk.Stack {
             "dialog-information"
         );
 
+        stack = new Gtk.Stack ();
+        stack.add_named (files_list, "files_list");
+        stack.add_named (no_files_grid, "no_files_grid");
+
         get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
-        add_named (files_list, "files_list");
-        add_named (no_files_grid, "no_files_grid");
+        add (stack);
     }
 
     public void update_list () {
@@ -134,10 +139,10 @@ public class FilesView : Gtk.Stack {
         files_list.show_all ();
 
         if (files_list.get_children () != null) {
-            visible_child_name = "files_list";
+            stack.visible_child_name = "files_list";
             files_list.select_row (files_list.get_row_at_index (0));
         } else {
-            visible_child_name = "no_files_grid";
+            stack.visible_child_name = "no_files_grid";
         }
     }
 }
