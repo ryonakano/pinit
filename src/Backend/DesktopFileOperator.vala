@@ -14,7 +14,7 @@ public class DesktopFileOperator : GLib.Object {
     public Gee.ArrayList<DesktopFile> files {
         get {
             _files.clear ();
-    
+
             try {
                 var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
                 FileInfo file_info = null;
@@ -23,14 +23,14 @@ public class DesktopFileOperator : GLib.Object {
                     if (!name.has_suffix (".desktop")) {
                         continue;
                     }
-    
+
                     var desktop_file = load_from_file (Path.build_filename (desktop_dir.get_path (), name));
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
                 warning (e.message);
             }
-    
+
             return _files;
         }
     }
