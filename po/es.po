@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-13 11:35+0900\n"
+"POT-Creation-Date: 2021-10-18 16:39+0200\n"
 "PO-Revision-Date: 2021-10-04 01:02-0600\n"
 "Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
 "Language-Team: \n"
@@ -136,6 +136,8 @@ msgstr "Eliminar"
 msgid "Pin any apps into the launcher"
 msgstr "Fija cualquier aplicación en el lanzador"
 
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr "Nuevo Archivo"

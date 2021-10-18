@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-13 11:35+0900\n"
+"POT-Creation-Date: 2021-10-18 16:39+0200\n"
 "PO-Revision-Date: 2021-10-13 11:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -129,6 +129,8 @@ msgstr "削除"
 msgid "Pin any apps into the launcher"
 msgstr "ランチャーにアプリをピン止めします"
 
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr "新しいファイル"
