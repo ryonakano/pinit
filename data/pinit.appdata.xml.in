@@ -61,6 +61,19 @@
   </content_rating>
 
   <releases>
+    <release version="1.2.1" date="2021-10-19" urgency="medium">
+      <description>
+        <ul>
+          <li>EditView: Focus on file name entry by default</li>
+          <li>FilesView: Make scrollable and fix the window get bigger if many entries</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Add French translation (thanks to @NathanBnm)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.0" date="2021-10-13" urgency="medium">
       <description>
         <ul>
