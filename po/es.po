@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-18 16:39+0200\n"
+"POT-Creation-Date: 2021-10-19 09:19+0900\n"
 "PO-Revision-Date: 2021-10-04 01:02-0600\n"
 "Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
 "Language-Team: \n"
@@ -91,7 +91,7 @@ msgid "Open"
 msgstr "Abrir"
 
 #: src/Views/EditView.vala:140 src/Views/EditView.vala:165
-#: src/Views/FilesView.vala:100
+#: src/Views/FilesView.vala:105
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -99,36 +99,36 @@ msgstr "Cancelar"
 msgid "Select an icon file"
 msgstr "Selecciona un archivo de icono"
 
-#: src/Views/FilesView.vala:24
+#: src/Views/FilesView.vala:26
 msgid "No valid desktop files found"
 msgstr "No se encontraron archivos de escritorios validos"
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:27
 msgid ""
 "If you've never created one, go back to Welcome View and click “New File”."
 msgstr ""
 "Si nunca has creado uno, vuelve a la sección de bienvenida y selecciona "
 "\"Nuevo Archivo\"."
 
-#: src/Views/FilesView.vala:69
+#: src/Views/FilesView.vala:74
 msgid "Delete…"
 msgstr "Borrar..."
 
-#: src/Views/FilesView.vala:75
+#: src/Views/FilesView.vala:80
 msgid "Edit…"
 msgstr "Editar..."
 
-#: src/Views/FilesView.vala:93 src/Views/FilesView.vala:105
+#: src/Views/FilesView.vala:98 src/Views/FilesView.vala:110
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "¿Estás seguro que quieres eliminar \"%s\"?"
 
-#: src/Views/FilesView.vala:94 src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
 #, fuzzy
 msgid "This removes the app from the launcher."
 msgstr "Esto remueve la aplicación del menú de aplicaciones."
 
-#: src/Views/FilesView.vala:109
+#: src/Views/FilesView.vala:114
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -136,8 +136,6 @@ msgstr "Eliminar"
 msgid "Pin any apps into the launcher"
 msgstr "Fija cualquier aplicación en el lanzador"
 
-#. The background color of this widget is rgb(255, 255, 255) by default.
-#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr "Nuevo Archivo"

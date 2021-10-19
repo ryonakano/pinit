@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-18 16:39+0200\n"
+"POT-Creation-Date: 2021-10-19 09:19+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,7 @@ msgid "Open"
 msgstr ""
 
 #: src/Views/EditView.vala:140 src/Views/EditView.vala:165
-#: src/Views/FilesView.vala:100
+#: src/Views/FilesView.vala:105
 msgid "Cancel"
 msgstr ""
 
@@ -93,33 +93,33 @@ msgstr ""
 msgid "Select an icon file"
 msgstr ""
 
-#: src/Views/FilesView.vala:24
+#: src/Views/FilesView.vala:26
 msgid "No valid desktop files found"
 msgstr ""
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:27
 msgid ""
 "If you've never created one, go back to Welcome View and click “New File”."
 msgstr ""
 
-#: src/Views/FilesView.vala:69
+#: src/Views/FilesView.vala:74
 msgid "Delete…"
 msgstr ""
 
-#: src/Views/FilesView.vala:75
+#: src/Views/FilesView.vala:80
 msgid "Edit…"
 msgstr ""
 
-#: src/Views/FilesView.vala:93 src/Views/FilesView.vala:105
+#: src/Views/FilesView.vala:98 src/Views/FilesView.vala:110
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr ""
 
-#: src/Views/FilesView.vala:94 src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
 msgid "This removes the app from the launcher."
 msgstr ""
 
-#: src/Views/FilesView.vala:109
+#: src/Views/FilesView.vala:114
 msgid "Delete"
 msgstr ""
 
@@ -127,8 +127,6 @@ msgstr ""
 msgid "Pin any apps into the launcher"
 msgstr ""
 
-#. The background color of this widget is rgb(255, 255, 255) by default.
-#. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:22
 msgid "New File"
 msgstr ""
