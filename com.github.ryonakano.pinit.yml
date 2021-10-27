@@ -10,8 +10,6 @@ finish-args:
   - '--filesystem=home'
   # For drawing icons
   - '--device=dri'
-  # needed for perfers-color-scheme
-  - '--system-talk-name=org.freedesktop.Accounts'
 modules:
   - name: pinit
     buildsystem: meson
