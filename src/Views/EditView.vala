@@ -83,7 +83,7 @@ public class EditView : Gtk.Grid {
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
         var icon_desc_label = new DimLabel (
-            _("Location of an icon for the app in an absolute path or an icon's alias name.")
+            _("Location of an icon for the app in an absolute path or an icon's alias name. PNG, SVG, and XPM formats are accepted.")
         );
         icon_entry = new Gtk.Entry () {
             expand = true,
