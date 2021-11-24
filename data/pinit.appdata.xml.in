@@ -61,6 +61,17 @@
   </content_rating>
 
   <releases>
+    <release version="1.2.2" date="2021-11-24" urgency="low">
+      <description>
+        <ul>
+          <li>FilesView: Ellipsize if label texts are too long</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.1" date="2021-10-19" urgency="medium">
       <description>
         <ul>
