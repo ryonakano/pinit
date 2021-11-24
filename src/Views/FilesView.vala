@@ -61,12 +61,16 @@ public class FilesView : Gtk.ScrolledWindow {
 
             var app_name_label = new Gtk.Label (file.app_name) {
                 halign = Gtk.Align.START,
+                ellipsize = Pango.EllipsizeMode.END,
+                tooltip_text = file.app_name,
                 margin_bottom = 12
             };
             app_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
             var app_comment_label = new Gtk.Label (file.comment) {
-                halign = Gtk.Align.START
+                halign = Gtk.Align.START,
+                ellipsize = Pango.EllipsizeMode.END,
+                tooltip_text = file.comment
             };
             app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
