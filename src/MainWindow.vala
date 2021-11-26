@@ -38,9 +38,9 @@ public class MainWindow : Hdy.Window {
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 #endif
 
-        welcome_view = new WelcomeView (this);
-        files_view = new FilesView (this);
-        edit_view = new EditView (this);
+        welcome_view = new WelcomeView ();
+        files_view = new FilesView ();
+        edit_view = new EditView ();
 
         deck = new Hdy.Deck () {
             can_swipe_back = true,

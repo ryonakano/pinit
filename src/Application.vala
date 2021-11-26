@@ -5,7 +5,7 @@
 
 public class Application : Gtk.Application {
     public static Settings settings;
-    private MainWindow window;
+    public MainWindow window { get; private set; }
 
     public Application () {
         Object (

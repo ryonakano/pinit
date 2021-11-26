@@ -4,14 +4,11 @@
  */
 
 public class FilesView : Gtk.ScrolledWindow {
-    public MainWindow window { private get; construct; }
-
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
 
-    public FilesView (MainWindow window) {
+    public FilesView () {
         Object (
-            window: window,
             margin: 12,
             hscrollbar_policy: Gtk.PolicyType.NEVER
         );
@@ -131,7 +128,7 @@ public class FilesView : Gtk.ScrolledWindow {
             });
 
             edit_button.clicked.connect (() => {
-                window.show_edit_view (file);
+                ((Application) GLib.Application.get_default ()).window.show_edit_view (file);
             });
 
             var list_item = new Gtk.ListBoxRow ();
