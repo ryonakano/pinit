@@ -4,8 +4,6 @@
  */
 
 public class EditView : Gtk.Grid {
-    public MainWindow window { private get; construct; }
-
     private Granite.ValidatedEntry file_name_entry;
     private Granite.ValidatedEntry name_entry;
     private Granite.ValidatedEntry comment_entry;
@@ -15,9 +13,8 @@ public class EditView : Gtk.Grid {
     private Gtk.CheckButton terminal_checkbox;
     private Gtk.Button action_button;
 
-    public EditView (MainWindow window) {
+    public EditView () {
         Object (
-            window: window,
             margin: 24,
             margin_top: 12
         );
@@ -136,7 +133,7 @@ public class EditView : Gtk.Grid {
             }
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an executable file"), window, Gtk.FileChooserAction.OPEN,
+                _("Select an executable file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
             ) {
                 local_only = true
@@ -161,7 +158,7 @@ public class EditView : Gtk.Grid {
             filefilter.add_mime_type ("image/x‑xpixmap");
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
+                _("Select an icon file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
             ) {
                 local_only = true,

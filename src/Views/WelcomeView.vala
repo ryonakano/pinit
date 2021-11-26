@@ -4,13 +4,10 @@
  */
 
 public class WelcomeView : Granite.Widgets.Welcome {
-    public MainWindow window { private get; construct; }
-
-    public WelcomeView (MainWindow window) {
+    public WelcomeView () {
         Object (
             title: "Pin It!",
-            subtitle: _("Pin any apps into the launcher"),
-            window: window
+            subtitle: _("Pin any apps into the launcher")
         );
     }
 
@@ -23,6 +20,8 @@ public class WelcomeView : Granite.Widgets.Welcome {
         append ("document-edit", _("Edit File"), _("Edit an existing desktop file."));
 
         activated.connect ((i) => {
+            unowned var window = ((Application) GLib.Application.get_default ()).window;
+
             if (i == 0) {
                 window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
             } else {
