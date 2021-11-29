@@ -97,12 +97,12 @@ msgstr "Selecionar um arquivo de ícones"
 
 #: src/Views/FilesView.vala:26
 msgid "No valid desktop files found"
-msgstr "Não foi encontrado arquivos de desktop válidos"
+msgstr "Não foram encontrados arquivos de desktop válidos"
 
 #: src/Views/FilesView.vala:27
 msgid ""
 "If you've never created one, go back to Welcome View and click “New File”."
-msgstr "Se você nunca criou um, volte à Página inicial e clique em \“Novo Arquivo\”."
+msgstr "Se você nunca criou um, volte à Página Inicial e clique em “Novo Arquivo”."
 
 #: src/Views/FilesView.vala:74
 msgid "Delete…"
@@ -115,7 +115,7 @@ msgstr "Editar…"
 #: src/Views/FilesView.vala:98 src/Views/FilesView.vala:110
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr "Tem certeza que deseja deletar “%s”?""
+msgstr "Tem certeza que deseja deletar “%s”?"
 
 #: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
 msgid "This removes the app from the launcher."
