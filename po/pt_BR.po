@@ -175,7 +175,7 @@ msgstr "Gráficos"
 
 #: src/CategoryChooser.vala:55
 msgid "Network"
-msgstr ""
+msgstr "Rede"
 
 #: src/CategoryChooser.vala:56
 msgid "Office"
