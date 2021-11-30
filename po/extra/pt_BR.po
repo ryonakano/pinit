@@ -118,11 +118,11 @@ msgstr "Corrige texto de descrição ilegível no AppCenter"
 
 #: data/pinit.appdata.xml.in:109
 msgid "Save and restore window position"
-msgstr ""
+msgstr "Salvar e restaurar posição da janela"
 
 #: data/pinit.appdata.xml.in:113
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr ""
+msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:121
 msgid "Initial release"
