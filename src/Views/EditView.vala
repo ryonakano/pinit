@@ -80,7 +80,7 @@ public class EditView : Gtk.Grid {
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
         var icon_desc_label = new DimLabel (
-            _("Location of an icon for the app in an absolute path or an icon's alias name. PNG, SVG, and XPM formats are accepted.")
+            _("Location of an icon for the app in an absolute path or an icon's alias name.")
         );
         icon_entry = new Gtk.Entry () {
             expand = true,
@@ -156,14 +156,15 @@ public class EditView : Gtk.Grid {
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
             filefilter.add_mime_type ("image/x‑xpixmap");
+            filefilter.set_filter_name (_("PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileChooserNative (
                 _("Select an icon file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
             ) {
-                local_only = true,
-                filter = filefilter
+                local_only = true
             };
+            filechooser.add_filter (filefilter);
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
                     icon_entry.text = filechooser.get_filename ();
