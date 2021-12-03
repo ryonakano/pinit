@@ -113,7 +113,12 @@ public class MainWindow : Hdy.Window {
 
         destroy.connect (() => {
             Application.settings.set_enum ("last-view", (int) get_visible_child_name ());
-            edit_view.backup_unsaved ();
+
+            unowned var is_unsaved = edit_view.is_unsaved;
+            Application.settings.set_boolean ("has-unsaved-file", is_unsaved);
+            if (is_unsaved) {
+                edit_view.save_file (is_unsaved);
+            }
         });
 
 #if FOR_PANTHEON

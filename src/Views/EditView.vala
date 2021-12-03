@@ -184,16 +184,7 @@ public class EditView : Gtk.Grid {
         });
 
         action_button.clicked.connect (() => {
-            var desktop_file = new DesktopFile (
-                file_name_entry.text,
-                name_entry.text,
-                comment_entry.text,
-                exec_entry.text,
-                icon_entry.text,
-                category_chooser.selected,
-                terminal_checkbox.active
-            );
-            DesktopFileOperator.get_default ().write_to_file (desktop_file);
+            save_file ();
         });
 
         key_release_event.connect (() => {
@@ -224,19 +215,16 @@ public class EditView : Gtk.Grid {
         );
     }
 
-    public void backup_unsaved () {
-        Application.settings.set_boolean ("has-unsaved-file", is_unsaved);
-        if (is_unsaved) {
-            var desktop_file = new DesktopFile (
-                file_name_entry.text,
-                name_entry.text,
-                comment_entry.text,
-                exec_entry.text,
-                icon_entry.text,
-                category_chooser.selected,
-                terminal_checkbox.active
-            );
-            DesktopFileOperator.get_default ().write_to_file (desktop_file, true);
-        }
+    public void save_file (bool is_unsaved = false) {
+        var desktop_file = new DesktopFile (
+            file_name_entry.text,
+            name_entry.text,
+            comment_entry.text,
+            exec_entry.text,
+            icon_entry.text,
+            category_chooser.selected,
+            terminal_checkbox.active
+        );
+        DesktopFileOperator.get_default ().write_to_file (desktop_file, is_unsaved);
     }
 }
