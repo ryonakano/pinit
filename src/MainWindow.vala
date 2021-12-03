@@ -16,8 +16,7 @@ public class MainWindow : Hdy.Window {
     public MainWindow () {
         Object (
             title: "Pin It!",
-            resizable: false,
-            default_width: 400
+            resizable: false
         );
     }
 
