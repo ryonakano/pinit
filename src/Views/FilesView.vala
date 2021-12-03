@@ -31,6 +31,7 @@ public class FilesView : Gtk.ScrolledWindow {
 
         get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
         add (stack);
+        show_all ();
     }
 
     public void update_list () {
