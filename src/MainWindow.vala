@@ -81,7 +81,7 @@ public class MainWindow : Hdy.Window {
         main_box.add (overlay);
 
         add (main_box);
-        restore_last_view ();
+        set_visible_view ();
         show_all ();
 
         home_button.clicked.connect (() => {
@@ -112,7 +112,7 @@ public class MainWindow : Hdy.Window {
         });
 
         destroy.connect (() => {
-            Application.settings.set_enum ("last-view", (int) get_visible_child_name ());
+            Application.settings.set_enum ("last-view", (int) get_visible_view ());
 
             unowned var is_unsaved = edit_view.is_unsaved;
             Application.settings.set_boolean ("has-unsaved-file", is_unsaved);
@@ -164,7 +164,7 @@ public class MainWindow : Hdy.Window {
         }
     }
 
-    private Views get_visible_child_name () {
+    private Views get_visible_view () {
         if (deck.visible_child == files_view) {
             return Views.FILES_VIEW;
         } else if (deck.visible_child == edit_view) {
@@ -174,7 +174,7 @@ public class MainWindow : Hdy.Window {
         }
     }
 
-    private void restore_last_view () {
+    private void set_visible_view () {
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
         switch (last_view) {
             case Views.FILES_VIEW:
