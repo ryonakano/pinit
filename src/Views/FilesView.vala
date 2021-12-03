@@ -102,7 +102,8 @@ public class FilesView : Gtk.ScrolledWindow {
                     "dialog-warning",
                     Gtk.ButtonsType.NONE
                 ) {
-                    modal = true
+                    modal = true,
+                    transient_for = ((Application) GLib.Application.get_default ()).window
                 };
                 delete_dialog.add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 #else
