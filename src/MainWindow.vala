@@ -13,6 +13,12 @@ public class MainWindow : Hdy.Window {
     private Gtk.ToolButton home_button;
     private Hdy.HeaderBar header_bar;
 
+    private enum Views {
+        WELCOME_VIEW,
+        EDIT_VIEW,
+        FILES_VIEW;
+    }
+
     public MainWindow () {
         Object (
             title: "Pin It!",
@@ -106,7 +112,7 @@ public class MainWindow : Hdy.Window {
         });
 
         destroy.connect (() => {
-            Application.settings.set_enum ("last-view", get_visible_child_name ());
+            Application.settings.set_enum ("last-view", (int) get_visible_child_name ());
         });
 
 #if FOR_PANTHEON
@@ -152,25 +158,26 @@ public class MainWindow : Hdy.Window {
         }
     }
 
-    private int get_visible_child_name () {
+    private Views get_visible_child_name () {
         if (deck.visible_child == files_view) {
-            return 2;
+            return Views.FILES_VIEW;
         } else if (deck.visible_child == edit_view) {
-            return 1;
+            return Views.EDIT_VIEW;
         } else {
-            return 0;
+            return Views.WELCOME_VIEW;
         }
     }
 
     private void restore_last_view () {
-        unowned int last_view = Application.settings.get_enum ("last-view");
+        unowned var last_view = (Views) Application.settings.get_enum ("last-view");
         switch (last_view) {
-            case 2:
+            case Views.FILES_VIEW:
                 show_files_view ();
                 break;
-            case 1:
+            case Views.EDIT_VIEW:
                 show_edit_view (new DesktopFile ());
                 break;
+            case Views.WELCOME_VIEW:
             default:
                 show_welcome_view ();
                 break;
