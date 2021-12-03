@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-03 16:30+0900\n"
-"PO-Revision-Date: 2021-10-19 09:22+0900\n"
+"PO-Revision-Date: 2021-12-03 16:33+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -59,11 +59,11 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:39
 msgid "FilesView: Ellipsize if label texts are too long"
-msgstr ""
+msgstr "ファイル画面: ラベルのテキストが長すぎる場合は省略するように修正"
 
 #: data/pinit.appdata.xml.in:40
 msgid "Tell accepted file formats in FileChooser"
-msgstr ""
+msgstr "使用可能なファイル形式をファイル選択ダイアログに表示するように修正"
 
 #: data/pinit.appdata.xml.in:42 data/pinit.appdata.xml.in:55
 #: data/pinit.appdata.xml.in:68 data/pinit.appdata.xml.in:81
@@ -72,9 +72,8 @@ msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
 #: data/pinit.appdata.xml.in:44
-#, fuzzy
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr "スペイン語翻訳を追加 (貢献者: @JeysonFlores)"
+msgstr "ブラジルポルトガル語翻訳を追加 (貢献者: @DanielTolentino)"
 
 #: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:58
 #: data/pinit.appdata.xml.in:70 data/pinit.appdata.xml.in:83
@@ -163,4 +162,4 @@ msgstr "com.github.ryonakano.pinit"
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
-"情報;アイコン;AppImage;"
+"情報;アイコン;"
