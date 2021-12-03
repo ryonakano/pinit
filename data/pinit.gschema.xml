@@ -17,5 +17,10 @@
       <summary>Last view</summary>
       <description>View of last closed window</description>
     </key>
+    <key name="has-unsaved-file" type="b">
+      <default>false</default>
+      <summary>Last edited file</summary>
+      <description>Whether last time the app closed with an unsaved .desktop file</description>
+    </key>
   </schema>
 </schemalist>

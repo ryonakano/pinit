@@ -113,6 +113,7 @@ public class MainWindow : Hdy.Window {
 
         destroy.connect (() => {
             Application.settings.set_enum ("last-view", (int) get_visible_child_name ());
+            edit_view.backup_unsaved ();
         });
 
 #if FOR_PANTHEON
@@ -175,7 +176,7 @@ public class MainWindow : Hdy.Window {
                 show_files_view ();
                 break;
             case Views.EDIT_VIEW:
-                show_edit_view (new DesktopFile ());
+                show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? new DesktopFile ());
                 break;
             case Views.WELCOME_VIEW:
             default:

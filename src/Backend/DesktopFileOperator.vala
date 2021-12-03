@@ -10,6 +10,16 @@
 public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
 
+    private string DESTINATION_PATH {
+        get;
+        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
+    }
+
+    private string UNSAVED_FILE_PATH {
+        get;
+        default = "%s/unsaved.desktop".printf (Environment.get_user_cache_dir ());
+    }
+
     private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
     public Gee.ArrayList<DesktopFile> files {
         get {
@@ -24,7 +34,7 @@ public class DesktopFileOperator : GLib.Object {
                         continue;
                     }
 
-                    var desktop_file = load_from_file (Path.build_filename (desktop_dir.get_path (), name));
+                    var desktop_file = load_from_file (Path.build_filename (DESTINATION_PATH, name));
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
@@ -51,12 +61,8 @@ public class DesktopFileOperator : GLib.Object {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        string location = Path.build_filename (
-            "/home/%s/.local/share/applications".printf (Environment.get_user_name ())
-        );
-        desktop_dir = File.new_for_path (location);
-
-        if (!FileUtils.test (location, FileTest.EXISTS)) {
+        desktop_dir = File.new_for_path (DESTINATION_PATH);
+        if (!FileUtils.test (DESTINATION_PATH, FileTest.EXISTS)) {
             try {
                 desktop_dir.make_directory_with_parents ();
             } catch (Error e) {
@@ -66,11 +72,7 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
-    public DesktopFile create_new () {
-        return new DesktopFile ();
-    }
-
-    public void write_to_file (DesktopFile desktop_file) {
+    public void write_to_file (DesktopFile desktop_file, bool is_unsaved_file = false) {
         // Add exec permission to the exec file
         Posix.chmod (desktop_file.exec_file, 0700);
 
@@ -87,7 +89,12 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
+        string path;
+        if (is_unsaved_file) {
+            path = UNSAVED_FILE_PATH;
+        } else {
+            path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
+        }
 
         // Create or update desktop file
         try {
@@ -140,8 +147,12 @@ public class DesktopFileOperator : GLib.Object {
         return desktop_file;
     }
 
+    public DesktopFile? get_unsaved_file () {
+        return Application.settings.get_boolean ("has-unsaved-file") ? load_from_file (UNSAVED_FILE_PATH) : null;
+    }
+
     public void delete_file (DesktopFile desktop_file) {
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
+        string path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
         var file = File.new_for_path (path);
 
         try {
