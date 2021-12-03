@@ -66,10 +66,6 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
-    public DesktopFile create_new () {
-        return new DesktopFile ();
-    }
-
     public void write_to_file (DesktopFile desktop_file) {
         // Add exec permission to the exec file
         Posix.chmod (desktop_file.exec_file, 0700);
