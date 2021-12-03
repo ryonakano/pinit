@@ -42,8 +42,6 @@ public class Application : Gtk.Application {
         } else { // First time launch
             window.window_position = Gtk.WindowPosition.CENTER;
         }
-
-        window.show_all ();
     }
 
     public static int main (string[] args) {

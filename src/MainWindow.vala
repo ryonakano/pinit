@@ -75,7 +75,8 @@ public class MainWindow : Hdy.Window {
         main_box.add (overlay);
 
         add (main_box);
-        show_welcome_view ();
+        restore_last_view ();
+        show_all ();
 
         home_button.clicked.connect (() => {
             show_welcome_view ();
@@ -102,6 +103,10 @@ public class MainWindow : Hdy.Window {
             if (!deck.transition_running && deck.visible_child == welcome_view) {
                 show_welcome_view ();
             }
+        });
+
+        destroy.connect (() => {
+            Application.settings.set_enum ("last-view", get_visible_child_name ());
         });
 
 #if FOR_PANTHEON
@@ -144,6 +149,31 @@ public class MainWindow : Hdy.Window {
             header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
         } else {
             header_bar.title = _("Untitled desktop file");
+        }
+    }
+
+    private int get_visible_child_name () {
+        if (deck.visible_child == files_view) {
+            return 2;
+        } else if (deck.visible_child == edit_view) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    private void restore_last_view () {
+        unowned int last_view = Application.settings.get_enum ("last-view");
+        switch (last_view) {
+            case 2:
+                show_files_view ();
+                break;
+            case 1:
+                show_edit_view (new DesktopFile ());
+                break;
+            default:
+                show_welcome_view ();
+                break;
         }
     }
 
