@@ -13,6 +13,12 @@ public class MainWindow : Hdy.Window {
     private Gtk.ToolButton home_button;
     private Hdy.HeaderBar header_bar;
 
+    private enum Views {
+        WELCOME_VIEW,
+        EDIT_VIEW,
+        FILES_VIEW;
+    }
+
     public MainWindow () {
         Object (
             title: "Pin It!",
@@ -75,7 +81,8 @@ public class MainWindow : Hdy.Window {
         main_box.add (overlay);
 
         add (main_box);
-        show_welcome_view ();
+        set_visible_view ();
+        show_all ();
 
         home_button.clicked.connect (() => {
             show_welcome_view ();
@@ -102,6 +109,10 @@ public class MainWindow : Hdy.Window {
             if (!deck.transition_running && deck.visible_child == welcome_view) {
                 show_welcome_view ();
             }
+        });
+
+        destroy.connect (() => {
+            Application.settings.set_enum ("last-view", (int) get_visible_view ());
         });
 
 #if FOR_PANTHEON
@@ -144,6 +155,32 @@ public class MainWindow : Hdy.Window {
             header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
         } else {
             header_bar.title = _("Untitled desktop file");
+        }
+    }
+
+    private Views get_visible_view () {
+        if (deck.visible_child == files_view) {
+            return Views.FILES_VIEW;
+        } else if (deck.visible_child == edit_view) {
+            return Views.EDIT_VIEW;
+        } else {
+            return Views.WELCOME_VIEW;
+        }
+    }
+
+    private void set_visible_view () {
+        unowned var last_view = (Views) Application.settings.get_enum ("last-view");
+        switch (last_view) {
+            case Views.FILES_VIEW:
+                show_files_view ();
+                break;
+            case Views.EDIT_VIEW:
+                show_edit_view (DesktopFileOperator.get_default ().create_new ());
+                break;
+            case Views.WELCOME_VIEW:
+            default:
+                show_welcome_view ();
+                break;
         }
     }
 

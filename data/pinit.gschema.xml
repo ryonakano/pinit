@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <enum id="views">
+    <value value="0" nick="welcome-view"/>
+    <value value="1" nick="edit-view"/>
+    <value value="2" nick="files-view"/>
+  </enum>
+
   <schema path="/com/github/ryonakano/pinit/" id="com.github.ryonakano.pinit">
     <key name="window-position" type="(ii)">
       <default>(-1, -1)</default>
       <summary>Window position</summary>
       <description>Position of last closed window</description>
+    </key>
+    <key name="last-view" enum="views">
+      <default>'welcome-view'</default>
+      <summary>Last view</summary>
+      <description>View of last closed window</description>
     </key>
   </schema>
 </schemalist>
