@@ -113,12 +113,6 @@ public class MainWindow : Hdy.Window {
 
         destroy.connect (() => {
             Application.settings.set_enum ("last-view", (int) get_visible_child_name ());
-
-            unowned var is_unsaved = edit_view.is_unsaved;
-            Application.settings.set_boolean ("has-unsaved-file", is_unsaved);
-            if (is_unsaved) {
-                edit_view.save_file (is_unsaved);
-            }
         });
 
 #if FOR_PANTHEON
@@ -181,7 +175,7 @@ public class MainWindow : Hdy.Window {
                 show_files_view ();
                 break;
             case Views.EDIT_VIEW:
-                show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? new DesktopFile ());
+                show_edit_view (DesktopFileOperator.get_default ().create_new ());
                 break;
             case Views.WELCOME_VIEW:
             default:
