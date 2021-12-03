@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 23:30+0900\n"
+"POT-Creation-Date: 2021-12-03 16:30+0900\n"
 "PO-Revision-Date: 2021-11-29 16:05-0300\n"
 "Last-Translator: Daniel Tolentino <danieltolentino@protonmail.com>\n"
 "Language-Team: none\n"
@@ -32,9 +32,9 @@ msgid ""
 "Applications Menu easily. Edit or delete existing desktop files without "
 "opening a file manager."
 msgstr ""
-"Adicione aplicativos portáteis como arquivos executáveis brutos, arquivos AppImage, etc."
-"facilmente no Menu de Aplicativos. Edite ou delete arquivos de desktop existentes sem "
-"abrir o gerenciador de arquivos."
+"Adicione aplicativos portáteis como arquivos executáveis brutos, arquivos "
+"AppImage, etc.facilmente no Menu de Aplicativos. Edite ou delete arquivos de "
+"desktop existentes sem abrir o gerenciador de arquivos."
 
 #: data/pinit.appdata.xml.in:14
 msgid ""
@@ -42,8 +42,9 @@ msgid ""
 "your time seeking for why your desktop entry won't be shown in Applications "
 "Menu."
 msgstr ""
-"Pint It! vem com detecção de erros de sintaxe, para que você não precise perder "
-"seu tempo procurando porque o seu atalho de desktop não está no Menu de Aplicativos."
+"Pint It! vem com detecção de erros de sintaxe, para que você não precise "
+"perder seu tempo procurando porque o seu atalho de desktop não está no Menu "
+"de Aplicativos."
 
 #: data/pinit.appdata.xml.in:20
 msgid "Welcome View"
@@ -57,78 +58,97 @@ msgstr "Página de Arquivos"
 msgid "Edit View"
 msgstr "Página de Edição"
 
-#: data/pinit.appdata.xml.in:67
-msgid "EditView: Focus on file name entry by default"
-msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+#: data/pinit.appdata.xml.in:39
+msgid "FilesView: Ellipsize if label texts are too long"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:68
-msgid ""
-"FilesView: Make scrollable and fix the window get bigger if many entries"
-msgstr "Página de Arquivos: Faz a página ralável e conserte a janela ficar maior se houver muitas entradas"
+#: data/pinit.appdata.xml.in:40
+msgid "Tell accepted file formats in FileChooser"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:70 data/pinit.appdata.xml.in:83
-#: data/pinit.appdata.xml.in:96 data/pinit.appdata.xml.in:111
+#: data/pinit.appdata.xml.in:42 data/pinit.appdata.xml.in:55
+#: data/pinit.appdata.xml.in:68 data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:96
 msgid "Translation updates:"
 msgstr "Atualizações de tradução:"
 
-#: data/pinit.appdata.xml.in:72
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+#: data/pinit.appdata.xml.in:44
+#, fuzzy
+msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:73 data/pinit.appdata.xml.in:85
-#: data/pinit.appdata.xml.in:98 data/pinit.appdata.xml.in:114
+#: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:58
+#: data/pinit.appdata.xml.in:70 data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:99
 msgid "Update Japanese translation"
 msgstr "Atualiza tradução Japonesa"
 
-#: data/pinit.appdata.xml.in:80
+#: data/pinit.appdata.xml.in:52
+msgid "EditView: Focus on file name entry by default"
+msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#: data/pinit.appdata.xml.in:53
+msgid ""
+"FilesView: Make scrollable and fix the window get bigger if many entries"
+msgstr ""
+"Página de Arquivos: Faz a página ralável e conserte a janela ficar maior se "
+"houver muitas entradas"
+
+#: data/pinit.appdata.xml.in:57
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#: data/pinit.appdata.xml.in:65
 msgid "Improved support for other desktop environments"
 msgstr "Melhorias no suporte para outros ambientes de trabalho"
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:66
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
 
-#: data/pinit.appdata.xml.in:92
+#: data/pinit.appdata.xml.in:77
 msgid "Add CategoryChooser"
 msgstr "Adiciona SeletorDeCategoria"
 
-#: data/pinit.appdata.xml.in:93
+#: data/pinit.appdata.xml.in:78
 msgid "Support Alt+Home to show welcome"
 msgstr "Suporta Alt+Home para exibir início"
 
-#: data/pinit.appdata.xml.in:94
+#: data/pinit.appdata.xml.in:79
 msgid "Allow GPU acceralation by default"
 msgstr "Permite aceleração de GPU por padrão"
 
-#: data/pinit.appdata.xml.in:105
+#: data/pinit.appdata.xml.in:90
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
 
-#: data/pinit.appdata.xml.in:106
+#: data/pinit.appdata.xml.in:91
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-msgstr "Cantos de janela arredondados em qualquer folha de estilo (agradecimentos a @JeysonFlores)"
+msgstr ""
+"Cantos de janela arredondados em qualquer folha de estilo (agradecimentos a "
+"@JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:107
+#: data/pinit.appdata.xml.in:92
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:108
+#: data/pinit.appdata.xml.in:93
 msgid "Fix unreadable description text in AppCenter"
 msgstr "Corrige texto de descrição ilegível no AppCenter"
 
-#: data/pinit.appdata.xml.in:109
+#: data/pinit.appdata.xml.in:94
 msgid "Save and restore window position"
 msgstr "Salvar e restaurar posição da janela"
 
-#: data/pinit.appdata.xml.in:113
+#: data/pinit.appdata.xml.in:98
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:121
+#: data/pinit.appdata.xml.in:106
 msgid "Initial release"
 msgstr "Lançamento inicial"
 
-#: data/pinit.appdata.xml.in:127
+#: data/pinit.appdata.xml.in:112
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 

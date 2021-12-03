@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 09:19+0900\n"
+"POT-Creation-Date: 2021-12-03 16:30+0900\n"
 "PO-Revision-Date: 2021-10-13 11:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,131 +17,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/Views/EditView.vala:27
+#: src/Views/EditView.vala:24
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/Views/EditView.vala:29
+#: src/Views/EditView.vala:26
 msgid ""
 "File name of the desktop file. Only lowercase letters and numbers are "
 "allowed."
 msgstr "デスクトップファイルの名前です。小文字と数字のみを使用してください。"
 
-#: src/Views/EditView.vala:45
+#: src/Views/EditView.vala:42
 msgid "App Name"
 msgstr "アプリ名"
 
-#: src/Views/EditView.vala:46
+#: src/Views/EditView.vala:43
 msgid "Shown in the launcher or Dock."
 msgstr "ランチャーやドックに表示されます。"
 
-#: src/Views/EditView.vala:57
+#: src/Views/EditView.vala:54
 msgid "Comment"
 msgstr "コメント"
 
-#: src/Views/EditView.vala:58
+#: src/Views/EditView.vala:55
 msgid "A tooltip text to describe what the app helps you to do."
 msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
 
-#: src/Views/EditView.vala:69
+#: src/Views/EditView.vala:66
 msgid "Exec File"
 msgstr "実行ファイル"
 
-#: src/Views/EditView.vala:71
+#: src/Views/EditView.vala:68
 msgid "Location of the app itself in an absolute path or an app's alias name."
 msgstr "アプリ本体の場所を、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:84
+#: src/Views/EditView.vala:81
 msgid "Icon File"
 msgstr "アイコンファイル"
 
-#: src/Views/EditView.vala:86
+#: src/Views/EditView.vala:83
 msgid ""
 "Location of an icon for the app in an absolute path or an icon's alias name."
 msgstr "アプリのアイコンの場所を、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:99
+#: src/Views/EditView.vala:96
 msgid "App Categories"
 msgstr "アプリのカテゴリー"
 
-#: src/Views/EditView.vala:100
+#: src/Views/EditView.vala:97
 msgid "Type of the app, multiplly selectable."
 msgstr "アプリの種類です。複数選択できます。"
 
-#: src/Views/EditView.vala:109
+#: src/Views/EditView.vala:106
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
-#: src/Views/EditView.vala:112
+#: src/Views/EditView.vala:109
 msgid "Check this in if you want to registar a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
-#: src/Views/EditView.vala:139
+#: src/Views/EditView.vala:136
 msgid "Select an executable file"
 msgstr "実行ファイルを選択"
 
-#: src/Views/EditView.vala:140 src/Views/EditView.vala:165
+#: src/Views/EditView.vala:137 src/Views/EditView.vala:163
 msgid "Open"
 msgstr "開く"
 
-#: src/Views/EditView.vala:140 src/Views/EditView.vala:165
-#: src/Views/FilesView.vala:105
+#: src/Views/EditView.vala:137 src/Views/EditView.vala:163
+#: src/Views/FilesView.vala:106
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/EditView.vala:164
+#: src/Views/EditView.vala:159
+msgid "PNG, SVG, or XMP files"
+msgstr ""
+
+#: src/Views/EditView.vala:162
 msgid "Select an icon file"
 msgstr "アイコンファイルを選択"
 
-#: src/Views/FilesView.vala:26
+#: src/Views/FilesView.vala:23
 msgid "No valid desktop files found"
 msgstr "有効なデスクトップファイルが見つかりません"
 
-#: src/Views/FilesView.vala:27
+#: src/Views/FilesView.vala:24
 msgid ""
 "If you've never created one, go back to Welcome View and click “New File”."
 msgstr ""
 "デスクトップファイルを作成したことがない場合は、ようこそ画面に戻って“新しい"
 "ファイル”をクリックしてください。"
 
-#: src/Views/FilesView.vala:74
+#: src/Views/FilesView.vala:75
 msgid "Delete…"
 msgstr "削除…"
 
-#: src/Views/FilesView.vala:80
+#: src/Views/FilesView.vala:81
 msgid "Edit…"
 msgstr "編集…"
 
-#: src/Views/FilesView.vala:98 src/Views/FilesView.vala:110
+#: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "“%s”を削除してもよろしいですか？"
 
-#: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
+#: src/Views/FilesView.vala:100 src/Views/FilesView.vala:112
 msgid "This removes the app from the launcher."
 msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
-#: src/Views/FilesView.vala:114
+#: src/Views/FilesView.vala:115
 msgid "Delete"
 msgstr "削除"
 
-#: src/Views/WelcomeView.vala:12
+#: src/Views/WelcomeView.vala:10
 msgid "Pin any apps into the launcher"
 msgstr "ランチャーにアプリをピン止めします"
 
-#: src/Views/WelcomeView.vala:22
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
+#: src/Views/WelcomeView.vala:19
 msgid "New File"
 msgstr "新しいファイル"
 
-#: src/Views/WelcomeView.vala:22
+#: src/Views/WelcomeView.vala:19
 msgid "Create a new desktop file."
 msgstr "新しいデスクトップファイルを作成します。"
 
-#: src/Views/WelcomeView.vala:23
+#: src/Views/WelcomeView.vala:20
 msgid "Edit File"
 msgstr "ファイルを編集"
 
-#: src/Views/WelcomeView.vala:23
+#: src/Views/WelcomeView.vala:20
 msgid "Edit an existing desktop file."
 msgstr "既存のデスクトップファイルを編集します。"
 
@@ -197,23 +203,23 @@ msgstr "システム"
 msgid "Utility"
 msgstr "ユーティリティー"
 
-#: src/MainWindow.vala:56
+#: src/MainWindow.vala:55
 msgid "Saved changes!"
 msgstr "変更を保存しました！"
 
-#: src/MainWindow.vala:61
+#: src/MainWindow.vala:60
 msgid "Create new or edit"
 msgstr "ファイルを作成または編集します"
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:128
 msgid "Edit a desktop file"
 msgstr "デスクトップファイルを編集します"
 
-#: src/MainWindow.vala:145
+#: src/MainWindow.vala:144
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/MainWindow.vala:147
+#: src/MainWindow.vala:146
 msgid "Untitled desktop file"
 msgstr "名称未設定のデスクトップファイル"
