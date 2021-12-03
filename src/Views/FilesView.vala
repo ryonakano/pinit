@@ -106,7 +106,7 @@ public class FilesView : Gtk.ScrolledWindow {
                 delete_dialog.add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 #else
                 var delete_dialog = new Gtk.MessageDialog (
-                    window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
+                    ((Application) GLib.Application.get_default ()).window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
                 ) {
                     text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
                     secondary_text = _("This removes the app from the launcher.")
