@@ -10,12 +10,12 @@
 public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
 
-    private string DESTINATION_PATH {
+    private string DESTINATION_PATH { //vala-lint=naming-convention
         get;
         default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
     }
 
-    private string UNSAVED_FILE_PATH {
+    private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
         get;
         default = "%s/unsaved.desktop".printf (Environment.get_user_cache_dir ());
     }
