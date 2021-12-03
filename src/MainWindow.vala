@@ -175,7 +175,7 @@ public class MainWindow : Hdy.Window {
                 show_files_view ();
                 break;
             case Views.EDIT_VIEW:
-                show_edit_view (DesktopFileOperator.get_default ().create_new ());
+                show_edit_view (new DesktopFile ());
                 break;
             case Views.WELCOME_VIEW:
             default:
