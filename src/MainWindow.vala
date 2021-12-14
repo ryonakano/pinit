@@ -66,11 +66,32 @@ public class MainWindow : Hdy.Window {
             tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
+        var preferences_grid = new Gtk.Grid () {
+            margin = 12,
+            column_spacing = 6,
+            row_spacing = 6
+        };
+        preferences_grid.attach (new StyleSwitcher (), 0, 0);
+
+        var preferences_button = new Gtk.ToolButton (
+            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
+        ) {
+            tooltip_text = _("Preferences")
+        };
+
+        var preferences_popover = new Gtk.Popover (preferences_button);
+        preferences_popover.add (preferences_grid);
+
+        preferences_button.clicked.connect (() => {
+            preferences_popover.show_all ();
+        });
+
         header_bar = new Hdy.HeaderBar () {
             show_close_button = true,
             has_subtitle = false,
         };
         header_bar.pack_start (home_button);
+        header_bar.pack_end (preferences_button);
 
         unowned var header_bar_style = header_bar.get_style_context ();
         header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
