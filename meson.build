@@ -42,7 +42,8 @@ sources = files(
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'DimLabel.vala',
-    'src' / 'MainWindow.vala'
+    'src' / 'MainWindow.vala',
+    'src' / 'StyleSwitcher.vala'
 )
 
 executable(

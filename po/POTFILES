@@ -3,3 +3,4 @@ src/Views/FilesView.vala
 src/Views/WelcomeView.vala
 src/CategoryChooser.vala
 src/MainWindow.vala
+src/StyleSwitcher.vala
