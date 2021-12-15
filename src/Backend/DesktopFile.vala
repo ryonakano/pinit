@@ -11,6 +11,7 @@ public class DesktopFile : GLib.Object {
     public string icon_file { get; construct; }
     public string categories { get; construct; }
     public bool is_cli { get; construct; }
+    public bool is_backup { get; construct; }
 
     public DesktopFile (
         string file_name = "",
@@ -19,7 +20,8 @@ public class DesktopFile : GLib.Object {
         string exec_file = "",
         string icon_file = "",
         string categories = "",
-        bool is_cli = false
+        bool is_cli = false,
+        bool is_backup = false
     ) {
         Object (
             file_name: file_name,
@@ -28,7 +30,8 @@ public class DesktopFile : GLib.Object {
             exec_file: exec_file,
             icon_file: icon_file,
             categories: categories,
-            is_cli: is_cli
+            is_cli: is_cli,
+            is_backup: is_backup
         );
     }
 }

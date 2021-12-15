@@ -136,7 +136,7 @@ public class MainWindow : Hdy.Window {
             unowned Views visible_view = get_visible_view ();
             Application.settings.set_enum ("last-view", (int) visible_view);
             if (visible_view == Views.EDIT_VIEW && edit_view.is_unsaved) {
-                edit_view.save_file ();
+                edit_view.save_file (true);
             }
         });
     }

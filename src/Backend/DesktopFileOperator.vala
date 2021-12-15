@@ -11,12 +11,12 @@ public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
 
     private string DESTINATION_PATH { //vala-lint=naming-convention
-        get;
+        private get;
         default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
     }
 
     private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
-        get;
+        private get;
         default = Environment.get_user_cache_dir ();
     }
 
@@ -67,12 +67,11 @@ public class DesktopFileOperator : GLib.Object {
                 desktop_dir.make_directory_with_parents ();
             } catch (Error e) {
                 warning (e.message);
-                return;
             }
         }
     }
 
-    public void write_to_file (DesktopFile desktop_file, bool is_unsaved_file = false) {
+    public void write_to_file (DesktopFile desktop_file) {
         // Add exec permission to the exec file
         Posix.chmod (desktop_file.exec_file, 0700);
 
@@ -91,7 +90,7 @@ public class DesktopFileOperator : GLib.Object {
 
         // Create or update desktop file
         string path;
-        if (is_unsaved_file) {
+        if (desktop_file.is_backup) {
             path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
             Application.settings.set_string ("last-edited-file", path);
         } else {
@@ -122,6 +121,7 @@ public class DesktopFileOperator : GLib.Object {
         string icon_file = "";
         string categories = "";
         bool is_cli = false;
+        bool is_backup = false;
 
         try {
             var keyfile = new KeyFile ();
@@ -136,6 +136,7 @@ public class DesktopFileOperator : GLib.Object {
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+            is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
             warning (e.message);
         } catch (FileError e) {
@@ -149,7 +150,8 @@ public class DesktopFileOperator : GLib.Object {
             exec_file,
             icon_file,
             categories,
-            is_cli
+            is_cli,
+            is_backup
         );
 
         return desktop_file;

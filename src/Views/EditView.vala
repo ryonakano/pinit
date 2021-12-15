@@ -215,7 +215,7 @@ public class EditView : Gtk.Grid {
         );
     }
 
-    public void save_file () {
+    public void save_file (bool is_backup = false) {
         var desktop_file = new DesktopFile (
             file_name_entry.text,
             name_entry.text,
@@ -223,8 +223,9 @@ public class EditView : Gtk.Grid {
             exec_entry.text,
             icon_entry.text,
             category_chooser.selected,
-            terminal_checkbox.active
+            terminal_checkbox.active,
+            is_backup
         );
-        DesktopFileOperator.get_default ().write_to_file (desktop_file, is_unsaved);
+        DesktopFileOperator.get_default ().write_to_file (desktop_file);
     }
 }
