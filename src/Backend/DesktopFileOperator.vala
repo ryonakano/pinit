@@ -96,6 +96,13 @@ public class DesktopFileOperator : GLib.Object {
             Application.settings.set_string ("last-edited-file", path);
         } else {
             path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
+
+            // Because unsaved work is now saved
+            string unsaved_file_path = Application.settings.get_string ("last-edited-file");
+            if (unsaved_file_path != "") {
+                delete_from_path (unsaved_file_path);
+                Application.settings.set_string ("last-edited-file", "");
+            }
         }
 
         try {
@@ -154,7 +161,10 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public void delete_file (DesktopFile desktop_file) {
-        string path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
+        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop"));
+    }
+
+    private void delete_from_path (string path) {
         var file = File.new_for_path (path);
 
         try {
