@@ -71,6 +71,11 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
+    public DesktopFile create_new () {
+        Application.settings.set_string ("last-edited-file", "");
+        return new DesktopFile ();
+    }
+
     public void write_to_file (DesktopFile desktop_file) {
         // Add exec permission to the exec file
         Posix.chmod (desktop_file.exec_file, 0700);
@@ -113,7 +118,7 @@ public class DesktopFileOperator : GLib.Object {
         file_updated ();
     }
 
-    public DesktopFile load_from_file (string path) {
+    public DesktopFile? load_from_file (string path) {
         string file_name = "";
         string app_name = "";
         string comment = "";
@@ -139,8 +144,10 @@ public class DesktopFileOperator : GLib.Object {
             is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
             warning (e.message);
+            return null;
         } catch (FileError e) {
             warning (e.message);
+            return null;
         }
 
         var desktop_file = new DesktopFile (
@@ -168,11 +175,12 @@ public class DesktopFileOperator : GLib.Object {
 
     private void delete_from_path (string path) {
         var file = File.new_for_path (path);
-
-        try {
-            file.delete ();
-        } catch (Error e) {
-            warning ("Could not delete file %s: %s", path, e.message);
+        if (file.query_exists ()) {
+            try {
+                file.delete ();
+            } catch (Error e) {
+                warning ("Could not delete file %s: %s", path, e.message);
+            }
         }
     }
 }
