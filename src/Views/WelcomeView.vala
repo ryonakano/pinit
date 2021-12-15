@@ -19,13 +19,25 @@ public class WelcomeView : Granite.Widgets.Welcome {
         append ("document-new", _("New File"), _("Create a new desktop file."));
         append ("document-edit", _("Edit File"), _("Edit an existing desktop file."));
 
+        DesktopFile unsaved_file;
+        if (DesktopFileOperator.get_default ().get_unsaved_file () != null) {
+            append ("document-revert", _("Last Unsaved File"), _("Continue with the unsaved desktop file last opened."));
+            unsaved_file = DesktopFileOperator.get_default ().get_unsaved_file ();
+        }
+
         activated.connect ((i) => {
             unowned var window = ((Application) GLib.Application.get_default ()).window;
 
-            if (i == 0) {
-                window.show_edit_view (new DesktopFile ());
-            } else {
-                window.show_files_view ();
+            switch (i) {
+                case 0:
+                    window.show_edit_view (new DesktopFile ());
+                    break;
+                case 1:
+                    window.show_files_view ();
+                    break;
+                case 2:
+                    window.show_edit_view (unsaved_file);
+                    break;
             }
         });
     }
