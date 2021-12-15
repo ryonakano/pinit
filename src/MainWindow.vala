@@ -141,18 +141,6 @@ public class MainWindow : Hdy.Window {
                 edit_view.save_file (is_unsaved);
             }
         });
-
-#if FOR_PANTHEON
-        // Follow elementary OS-wide dark preference
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
-
-        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-
-        granite_settings.notify["prefers-color-scheme"].connect (() => {
-            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-        });
-#endif
     }
 
     public void show_welcome_view () {
