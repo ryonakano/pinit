@@ -17,7 +17,7 @@ public class DesktopFileOperator : GLib.Object {
 
     private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
         get;
-        default = "%s/unsaved.desktop".printf (Environment.get_user_cache_dir ());
+        default = Environment.get_user_cache_dir ();
     }
 
     private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
@@ -89,14 +89,15 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
+        // Create or update desktop file
         string path;
         if (is_unsaved_file) {
-            path = UNSAVED_FILE_PATH;
+            path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
+            Application.settings.set_string ("last-edited-file", path);
         } else {
             path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
         }
 
-        // Create or update desktop file
         try {
             FileUtils.set_contents (path, keyfile.to_data ());
         } catch (Error e) {
@@ -148,7 +149,8 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     public DesktopFile? get_unsaved_file () {
-        return Application.settings.get_boolean ("has-unsaved-file") ? load_from_file (UNSAVED_FILE_PATH) : null;
+        string last_edited_file = Application.settings.get_string ("last-edited-file");
+        return last_edited_file != "" ? load_from_file (last_edited_file) : null;
     }
 
     public void delete_file (DesktopFile desktop_file) {

@@ -133,12 +133,10 @@ public class MainWindow : Hdy.Window {
         });
 
         destroy.connect (() => {
-            Application.settings.set_enum ("last-view", (int) get_visible_view ());
-
-            unowned var is_unsaved = edit_view.is_unsaved;
-            Application.settings.set_boolean ("has-unsaved-file", is_unsaved);
-            if (is_unsaved) {
-                edit_view.save_file (is_unsaved);
+            unowned Views visible_view = get_visible_view ();
+            Application.settings.set_enum ("last-view", (int) visible_view);
+            if (visible_view == Views.EDIT_VIEW && edit_view.is_unsaved) {
+                edit_view.save_file ();
             }
         });
     }

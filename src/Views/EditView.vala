@@ -215,7 +215,7 @@ public class EditView : Gtk.Grid {
         );
     }
 
-    public void save_file (bool is_unsaved = false) {
+    public void save_file () {
         var desktop_file = new DesktopFile (
             file_name_entry.text,
             name_entry.text,
