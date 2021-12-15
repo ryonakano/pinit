@@ -155,7 +155,7 @@ public class EditView : Gtk.Grid {
             var filefilter = new Gtk.FileFilter ();
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
-            filefilter.add_mime_type ("image/x‑xpixmap");
+            filefilter.add_mime_type ("image/x-xpixmap");
             filefilter.set_filter_name (_("PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileChooserNative (
