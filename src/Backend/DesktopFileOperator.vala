@@ -10,6 +10,16 @@
 public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
 
+    private string DESTINATION_PATH { //vala-lint=naming-convention
+        private get;
+        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
+    }
+
+    private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
+        private get;
+        default = Environment.get_user_cache_dir ();
+    }
+
     private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
     public Gee.ArrayList<DesktopFile> files {
         get {
@@ -24,7 +34,7 @@ public class DesktopFileOperator : GLib.Object {
                         continue;
                     }
 
-                    var desktop_file = load_from_file (Path.build_filename (desktop_dir.get_path (), name));
+                    var desktop_file = load_from_file (Path.build_filename (DESTINATION_PATH, name));
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
@@ -51,19 +61,19 @@ public class DesktopFileOperator : GLib.Object {
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
-        string location = Path.build_filename (
-            "/home/%s/.local/share/applications".printf (Environment.get_user_name ())
-        );
-        desktop_dir = File.new_for_path (location);
-
-        if (!FileUtils.test (location, FileTest.EXISTS)) {
+        desktop_dir = File.new_for_path (DESTINATION_PATH);
+        if (!FileUtils.test (DESTINATION_PATH, FileTest.EXISTS)) {
             try {
                 desktop_dir.make_directory_with_parents ();
             } catch (Error e) {
                 warning (e.message);
-                return;
             }
         }
+    }
+
+    public DesktopFile create_new () {
+        Application.settings.set_string ("last-edited-file", "");
+        return new DesktopFile ();
     }
 
     public void write_to_file (DesktopFile desktop_file) {
@@ -83,9 +93,22 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
-
         // Create or update desktop file
+        string path;
+        if (desktop_file.is_backup) {
+            path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
+            Application.settings.set_string ("last-edited-file", path);
+        } else {
+            path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
+
+            // Because unsaved work is now saved
+            string unsaved_file_path = Application.settings.get_string ("last-edited-file");
+            if (unsaved_file_path != "") {
+                delete_from_path (unsaved_file_path);
+                Application.settings.set_string ("last-edited-file", "");
+            }
+        }
+
         try {
             FileUtils.set_contents (path, keyfile.to_data ());
         } catch (Error e) {
@@ -95,7 +118,7 @@ public class DesktopFileOperator : GLib.Object {
         file_updated ();
     }
 
-    public DesktopFile load_from_file (string path) {
+    public DesktopFile? load_from_file (string path) {
         string file_name = "";
         string app_name = "";
         string comment = "";
@@ -103,6 +126,7 @@ public class DesktopFileOperator : GLib.Object {
         string icon_file = "";
         string categories = "";
         bool is_cli = false;
+        bool is_backup = false;
 
         try {
             var keyfile = new KeyFile ();
@@ -117,10 +141,13 @@ public class DesktopFileOperator : GLib.Object {
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+            is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
             warning (e.message);
+            return null;
         } catch (FileError e) {
             warning (e.message);
+            return null;
         }
 
         var desktop_file = new DesktopFile (
@@ -130,20 +157,30 @@ public class DesktopFileOperator : GLib.Object {
             exec_file,
             icon_file,
             categories,
-            is_cli
+            is_cli,
+            is_backup
         );
 
         return desktop_file;
     }
 
-    public void delete_file (DesktopFile desktop_file) {
-        string path = Path.build_filename (desktop_dir.get_path (), desktop_file.file_name + ".desktop");
-        var file = File.new_for_path (path);
+    public DesktopFile? get_unsaved_file () {
+        string last_edited_file = Application.settings.get_string ("last-edited-file");
+        return last_edited_file != "" ? load_from_file (last_edited_file) : null;
+    }
 
-        try {
-            file.delete ();
-        } catch (Error e) {
-            warning ("Could not delete file %s: %s", path, e.message);
+    public void delete_file (DesktopFile desktop_file) {
+        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop"));
+    }
+
+    private void delete_from_path (string path) {
+        var file = File.new_for_path (path);
+        if (file.query_exists ()) {
+            try {
+                file.delete ();
+            } catch (Error e) {
+                warning ("Could not delete file %s: %s", path, e.message);
+            }
         }
     }
 }

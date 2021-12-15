@@ -4,6 +4,16 @@
  */
 
 public class EditView : Gtk.Grid {
+    public bool is_unsaved {
+        get {
+            return (
+                file_name_entry.text.length > 0 || name_entry.text.length > 0 ||
+                comment_entry.text.length > 0 || exec_entry.text.length > 0 ||
+                icon_entry.text.length > 0 || category_chooser.selected != "" || terminal_checkbox.active
+            );
+        }
+    }
+
     private Granite.ValidatedEntry file_name_entry;
     private Granite.ValidatedEntry name_entry;
     private Granite.ValidatedEntry comment_entry;
@@ -174,16 +184,7 @@ public class EditView : Gtk.Grid {
         });
 
         action_button.clicked.connect (() => {
-            var desktop_file = new DesktopFile (
-                file_name_entry.text,
-                name_entry.text,
-                comment_entry.text,
-                exec_entry.text,
-                icon_entry.text,
-                category_chooser.selected,
-                terminal_checkbox.active
-            );
-            DesktopFileOperator.get_default ().write_to_file (desktop_file);
+            save_file ();
         });
 
         key_release_event.connect (() => {
@@ -212,5 +213,19 @@ public class EditView : Gtk.Grid {
             file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
             exec_entry.text.length > 0 && category_chooser.selected != ""
         );
+    }
+
+    public void save_file (bool is_backup = false) {
+        var desktop_file = new DesktopFile (
+            file_name_entry.text,
+            name_entry.text,
+            comment_entry.text,
+            exec_entry.text,
+            icon_entry.text,
+            category_chooser.selected,
+            terminal_checkbox.active,
+            is_backup
+        );
+        DesktopFileOperator.get_default ().write_to_file (desktop_file);
     }
 }

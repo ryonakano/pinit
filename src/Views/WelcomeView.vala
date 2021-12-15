@@ -23,7 +23,7 @@ public class WelcomeView : Granite.Widgets.Welcome {
             unowned var window = ((Application) GLib.Application.get_default ()).window;
 
             if (i == 0) {
-                window.show_edit_view (new DesktopFile ());
+                window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
             } else {
                 window.show_files_view ();
             }

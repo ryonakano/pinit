@@ -133,7 +133,11 @@ public class MainWindow : Hdy.Window {
         });
 
         destroy.connect (() => {
-            Application.settings.set_enum ("last-view", (int) get_visible_view ());
+            unowned Views visible_view = get_visible_view ();
+            Application.settings.set_enum ("last-view", (int) visible_view);
+            if (visible_view == Views.EDIT_VIEW && edit_view.is_unsaved) {
+                edit_view.save_file (true);
+            }
         });
     }
 
@@ -184,7 +188,7 @@ public class MainWindow : Hdy.Window {
                 show_files_view ();
                 break;
             case Views.EDIT_VIEW:
-                show_edit_view (new DesktopFile ());
+                show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? DesktopFileOperator.get_default ().create_new ());
                 break;
             case Views.WELCOME_VIEW:
             default:
