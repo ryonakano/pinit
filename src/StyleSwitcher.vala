@@ -5,7 +5,7 @@
  * Some code inspired from elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
- public class StyleSwitcher : Gtk.Box {
+public class StyleSwitcher : Gtk.Box {
     private Gtk.Settings gtk_settings = Gtk.Settings.get_default ();
 
 #if FOR_PANTHEON
