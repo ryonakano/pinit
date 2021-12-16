@@ -61,6 +61,7 @@ public class CategoryChooser : Gtk.Grid {
 
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
+            toggle.get_style_context ().add_class ("category-toggle");
             toggle.toggled.connect (() => {
                 toggled ();
             });
