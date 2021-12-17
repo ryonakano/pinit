@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 12:59+0900\n"
+"POT-Creation-Date: 2021-12-17 14:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,16 +27,15 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:11
 msgid ""
-"Add portable apps like raw executable files, AppImage files, etc. into "
-"Applications Menu easily. Edit or delete existing desktop files without "
+"Add portable apps like raw executable files, AppImage files, etc. into your "
+"application launcher easily. Edit or delete existing app entries without "
 "opening a file manager."
 msgstr ""
 
 #: data/pinit.appdata.xml.in:14
 msgid ""
 "Pin It! comes with syntax errors detection, so you will never need to waste "
-"your time seeking for why your desktop entry won't be shown in Applications "
-"Menu."
+"your time seeking for why your desktop entry won't be shown in the launcher."
 msgstr ""
 
 #: data/pinit.appdata.xml.in:20
