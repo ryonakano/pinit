@@ -20,8 +20,8 @@ public class FilesView : Gtk.ScrolledWindow {
         };
 
         var no_files_grid = new Granite.Widgets.AlertView (
-            _("No valid desktop files found"),
-            _("If you've never created one, go back to Welcome View and click “New File”."),
+            _("No valid app entries found"),
+            _("If you've never created one, go back to Welcome View and click “New Entry”."),
             "dialog-information"
         );
 

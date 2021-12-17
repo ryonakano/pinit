@@ -16,8 +16,8 @@ public class WelcomeView : Granite.Widgets.Welcome {
         // Remove this class so that the background color of the headerbar and the welcome view matches
         get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        append ("document-new", _("New File"), _("Create a new desktop file."));
-        append ("document-edit", _("Edit File"), _("Edit an existing desktop file."));
+        append ("document-new", _("New Entry"), _("Create a new app entry."));
+        append ("document-edit", _("Edit Entry"), _("Edit an existing app entry."));
 
         activated.connect ((i) => {
             unowned var window = ((Application) GLib.Application.get_default ()).window;

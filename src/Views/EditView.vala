@@ -33,12 +33,13 @@ public class EditView : Gtk.Grid {
     construct {
         var file_name_label = new Granite.HeaderLabel (_("File Name"));
         var file_name_desc_label = new DimLabel (
-            _("File name of the desktop file. Only lowercase letters and numbers are allowed.")
+            _("Name of the file where these app info is saved. Only lowercase letters and numbers are allowed.")
         );
         file_name_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
             expand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
+            tooltip_text = _("Suffix of the file"),
             margin_start = 6
         };
         var file_name_grid = new Gtk.Grid () {
@@ -75,7 +76,7 @@ public class EditView : Gtk.Grid {
 
         var exec_label = new Granite.HeaderLabel (_("Exec File"));
         var exec_desc_label = new DimLabel (
-            _("Location of the app itself in an absolute path or an app's alias name.")
+            _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         );
         exec_entry = new Gtk.Entry () {
             expand = true,
@@ -90,7 +91,7 @@ public class EditView : Gtk.Grid {
 
         var icon_label = new Granite.HeaderLabel (_("Icon File"));
         var icon_desc_label = new DimLabel (
-            _("Location of an icon for the app in an absolute path or an icon's alias name.")
+            _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         );
         icon_entry = new Gtk.Entry () {
             expand = true,
@@ -118,7 +119,7 @@ public class EditView : Gtk.Grid {
         };
         var terminal_desc_label = new DimLabel (_("Check this in if you want to registar a CUI app."));
 
-        action_button = new Gtk.Button.with_label ("Pin It!") {
+        action_button = new Gtk.Button.with_label (_("Save entry")) {
             margin_top = 24,
             sensitive = (
                 file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&

@@ -151,7 +151,7 @@ public class MainWindow : Hdy.Window {
 
     public void show_files_view () {
         files_view.update_list ();
-        header_bar.title = _("Edit a desktop file");
+        header_bar.title = _("Edit Entry");
         home_button.sensitive = true;
         deck.reorder_child_after (files_view, welcome_view);
         deck.visible_child = files_view;
@@ -170,10 +170,10 @@ public class MainWindow : Hdy.Window {
             if (desktop_file.app_name != "") {
                 header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
             } else {
-                header_bar.title = _("Editing untitled desktop file");
+                header_bar.title = _("Editing Entry");
             }
         } else {
-            header_bar.title = _("Untitled desktop file");
+            header_bar.title = _("New Entry");
         }
     }
 

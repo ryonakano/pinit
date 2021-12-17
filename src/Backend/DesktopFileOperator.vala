@@ -93,7 +93,6 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
-        // Create or update desktop file
         string path;
         if (desktop_file.is_backup) {
             path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
