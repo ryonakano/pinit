@@ -133,8 +133,12 @@ public class MainWindow : Hdy.Window {
         destroy.connect (() => {
             unowned Views visible_view = get_visible_view ();
             Application.settings.set_enum ("last-view", (int) visible_view);
-            if (visible_view == Views.EDIT_VIEW && edit_view.is_unsaved) {
-                edit_view.save_file (true);
+            if (visible_view == Views.EDIT_VIEW) {
+                if (edit_view.is_unsaved) {
+                    edit_view.save_file (true);
+                } else {
+                    DesktopFileOperator.get_default ().delete_backup ();
+                }
             }
         });
     }
