@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 16:30+0900\n"
+"POT-Creation-Date: 2021-12-17 12:59+0900\n"
 "PO-Revision-Date: 2021-10-04 01:02-0600\n"
 "Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
 "Language-Team: \n"
@@ -18,121 +18,137 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Views/EditView.vala:24
+#: src/Views/EditView.vala:34
 msgid "File Name"
 msgstr "Nombre del archivo"
 
-#: src/Views/EditView.vala:26
+#: src/Views/EditView.vala:36
+#, fuzzy
 msgid ""
-"File name of the desktop file. Only lowercase letters and numbers are "
-"allowed."
+"Name of the file where these app info is saved. Only lowercase letters and "
+"numbers are allowed."
 msgstr "Nombre del archivo de escritorio. Solo se aceptan letras y números."
 
 #: src/Views/EditView.vala:42
+msgid "Suffix of the file"
+msgstr ""
+
+#: src/Views/EditView.vala:53
 msgid "App Name"
 msgstr "Nombre de la aplicación"
 
-#: src/Views/EditView.vala:43
+#: src/Views/EditView.vala:54
 #, fuzzy
 msgid "Shown in the launcher or Dock."
 msgstr "Mostrar en el menú de aplicaciones o en el dock."
 
-#: src/Views/EditView.vala:54
+#: src/Views/EditView.vala:65
 msgid "Comment"
 msgstr "Comentario"
 
-#: src/Views/EditView.vala:55
+#: src/Views/EditView.vala:66
 msgid "A tooltip text to describe what the app helps you to do."
 msgstr "Una descripción que diga lo que la aplicación te ayuda a hacer."
 
-#: src/Views/EditView.vala:66
+#: src/Views/EditView.vala:77
 msgid "Exec File"
 msgstr "Archivo ejecutable"
 
-#: src/Views/EditView.vala:68
-msgid "Location of the app itself in an absolute path or an app's alias name."
+#: src/Views/EditView.vala:79
+#, fuzzy
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
 msgstr ""
 "Locación de la aplicación en una ruta absoluta o el alias del nombre de una "
 "aplicación."
 
-#: src/Views/EditView.vala:81
+#: src/Views/EditView.vala:92
 msgid "Icon File"
 msgstr "Archivo del icono"
 
-#: src/Views/EditView.vala:83
+#: src/Views/EditView.vala:94
+#, fuzzy
 msgid ""
-"Location of an icon for the app in an absolute path or an icon's alias name."
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
 msgstr ""
 "Locación de un icono para la aplicación en una ruta absoluta o el alias del "
 "nombre de un icono."
 
-#: src/Views/EditView.vala:96
+#: src/Views/EditView.vala:107
 msgid "App Categories"
 msgstr "Categorías de aplicación"
 
-#: src/Views/EditView.vala:97
+#: src/Views/EditView.vala:108
 msgid "Type of the app, multiplly selectable."
 msgstr ""
 
-#: src/Views/EditView.vala:106
+#: src/Views/EditView.vala:117
 msgid "Run in Terminal"
 msgstr "Ejecutar en terminal"
 
-#: src/Views/EditView.vala:109
+#: src/Views/EditView.vala:120
 msgid "Check this in if you want to registar a CUI app."
 msgstr "Selecciona esto si quieres registrar una aplicación CUI."
 
-#: src/Views/EditView.vala:136
+#: src/Views/EditView.vala:122
+msgid "Save entry"
+msgstr ""
+
+#: src/Views/EditView.vala:147
 msgid "Select an executable file"
 msgstr "Selecciona un archivo ejecutable"
 
-#: src/Views/EditView.vala:137 src/Views/EditView.vala:163
+#: src/Views/EditView.vala:148 src/Views/EditView.vala:174
 msgid "Open"
 msgstr "Abrir"
 
-#: src/Views/EditView.vala:137 src/Views/EditView.vala:163
-#: src/Views/FilesView.vala:106
+#: src/Views/EditView.vala:148 src/Views/EditView.vala:174
+#: src/Views/FilesView.vala:108
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Views/EditView.vala:159
+#: src/Views/EditView.vala:170
 msgid "PNG, SVG, or XMP files"
 msgstr ""
 
-#: src/Views/EditView.vala:162
+#: src/Views/EditView.vala:173
 msgid "Select an icon file"
 msgstr "Selecciona un archivo de icono"
 
 #: src/Views/FilesView.vala:23
-msgid "No valid desktop files found"
+#, fuzzy
+msgid "No valid app entries found"
 msgstr "No se encontraron archivos de escritorios validos"
 
 #: src/Views/FilesView.vala:24
+#, fuzzy
 msgid ""
-"If you've never created one, go back to Welcome View and click “New File”."
+"If you've never created one, go back to Welcome View and click “New Entry”."
 msgstr ""
 "Si nunca has creado uno, vuelve a la sección de bienvenida y selecciona "
 "\"Nuevo Archivo\"."
 
-#: src/Views/FilesView.vala:75
+#: src/Views/FilesView.vala:76
 msgid "Delete…"
 msgstr "Borrar..."
 
-#: src/Views/FilesView.vala:81
+#: src/Views/FilesView.vala:82
 msgid "Edit…"
 msgstr "Editar..."
 
-#: src/Views/FilesView.vala:99 src/Views/FilesView.vala:111
+#: src/Views/FilesView.vala:100 src/Views/FilesView.vala:113
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "¿Estás seguro que quieres eliminar \"%s\"?"
 
-#: src/Views/FilesView.vala:100 src/Views/FilesView.vala:112
+#: src/Views/FilesView.vala:101 src/Views/FilesView.vala:114
 #, fuzzy
 msgid "This removes the app from the launcher."
 msgstr "Esto remueve la aplicación del menú de aplicaciones."
 
-#: src/Views/FilesView.vala:115
+#: src/Views/FilesView.vala:117
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -142,20 +158,22 @@ msgstr "Fija cualquier aplicación en el lanzador"
 
 #. The background color of this widget is rgb(255, 255, 255) by default.
 #. Remove this class so that the background color of the headerbar and the welcome view matches
-#: src/Views/WelcomeView.vala:19
-msgid "New File"
-msgstr "Nuevo Archivo"
+#: src/Views/WelcomeView.vala:19 src/MainWindow.vala:176
+msgid "New Entry"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:19
-msgid "Create a new desktop file."
+#, fuzzy
+msgid "Create a new app entry."
 msgstr "Crear un nuevo archivo de escritorio."
 
-#: src/Views/WelcomeView.vala:20
-msgid "Edit File"
-msgstr "Editar Archivo"
+#: src/Views/WelcomeView.vala:20 src/MainWindow.vala:154
+msgid "Edit Entry"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:20
-msgid "Edit an existing desktop file."
+#, fuzzy
+msgid "Edit an existing app entry."
 msgstr "Editar un archivo de escritorio existente."
 
 #: src/CategoryChooser.vala:48
@@ -202,7 +220,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: src/CategoryChooser.vala:59
+#: src/CategoryChooser.vala:59 src/StyleSwitcher.vala:56
 msgid "System"
 msgstr ""
 
@@ -210,26 +228,62 @@ msgstr ""
 msgid "Utility"
 msgstr ""
 
-#: src/MainWindow.vala:55
+#: src/MainWindow.vala:61
 msgid "Saved changes!"
 msgstr "¡Cambios guardados!"
 
-#: src/MainWindow.vala:60
+#: src/MainWindow.vala:66
 msgid "Create new or edit"
 msgstr "Crear nuevo o editar"
 
-#: src/MainWindow.vala:128
-msgid "Edit a desktop file"
-msgstr "Editar un archivo de escritorio"
+#: src/MainWindow.vala:77
+msgid "Preferences"
+msgstr ""
 
-#: src/MainWindow.vala:144
+#: src/MainWindow.vala:171
 #, c-format
 msgid "Editing “%s”"
 msgstr "Editando \"%s\""
 
-#: src/MainWindow.vala:146
-msgid "Untitled desktop file"
-msgstr "Archivo de escritorio sin nombre"
+#: src/MainWindow.vala:173
+msgid "Editing Entry"
+msgstr ""
+
+#: src/StyleSwitcher.vala:25
+msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:34
+msgid "Light"
+msgstr ""
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:41
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:53
+msgid "Use the same style set in the system"
+msgstr ""
+
+#~ msgid "New File"
+#~ msgstr "Nuevo Archivo"
+
+#~ msgid "Edit File"
+#~ msgstr "Editar Archivo"
+
+#~ msgid "Edit a desktop file"
+#~ msgstr "Editar un archivo de escritorio"
+
+#~ msgid "Untitled desktop file"
+#~ msgstr "Archivo de escritorio sin nombre"
 
 #~ msgid "Type of the app."
 #~ msgstr "Tipo de aplicación."
