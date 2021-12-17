@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-17 12:59+0900\n"
-"PO-Revision-Date: 2021-12-03 16:33+0900\n"
+"PO-Revision-Date: 2021-12-17 14:22+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -59,27 +59,30 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:39
 msgid "Fix build error on other distros"
-msgstr ""
+msgstr "ほかのディストリビューションにおけるビルドエラーを修正"
 
 #: data/pinit.appdata.xml.in:40
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr ""
+"ファイル画面: アプリのウィンドウに対して中央にダイアログを表示するように修正"
 
 #: data/pinit.appdata.xml.in:41
 msgid "Restore last opened view and its state"
-msgstr ""
+msgstr "最後に開いた画面とその状態を復元するように修正"
 
 #: data/pinit.appdata.xml.in:42
 msgid "Add new style switcher"
-msgstr ""
+msgstr "新しいスタイルスイッチャーを追加"
 
 #: data/pinit.appdata.xml.in:43
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
+"アプリ名が設定されていなくてもタイトルバーに適切なラベルが表示されるように修"
+"正"
 
 #: data/pinit.appdata.xml.in:44
 msgid "Readable copies"
-msgstr ""
+msgstr "画面上のテキストの意味がわかりやすくなるように修正"
 
 #: data/pinit.appdata.xml.in:46 data/pinit.appdata.xml.in:58
 #: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:84

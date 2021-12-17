@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-17 12:59+0900\n"
-"PO-Revision-Date: 2021-12-03 16:31+0900\n"
+"PO-Revision-Date: 2021-12-17 14:19+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -22,15 +22,16 @@ msgid "File Name"
 msgstr "ファイル名"
 
 #: src/Views/EditView.vala:36
-#, fuzzy
 msgid ""
 "Name of the file where these app info is saved. Only lowercase letters and "
 "numbers are allowed."
-msgstr "デスクトップファイルの名前です。小文字と数字のみを使用してください。"
+msgstr ""
+"以下の情報が保存されるファイルの名前です。小文字と数字のみを使用してくださ"
+"い。"
 
 #: src/Views/EditView.vala:42
 msgid "Suffix of the file"
-msgstr ""
+msgstr "ファイル拡張子"
 
 #: src/Views/EditView.vala:53
 msgid "App Name"
@@ -53,22 +54,22 @@ msgid "Exec File"
 msgstr "実行ファイル"
 
 #: src/Views/EditView.vala:79
-#, fuzzy
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
-msgstr "アプリ本体の場所を、絶対パスかエイリアス名で記入します。"
+msgstr ""
+"ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
+"を、絶対パスかエイリアス名で記入します。"
 
 #: src/Views/EditView.vala:92
 msgid "Icon File"
 msgstr "アイコンファイル"
 
 #: src/Views/EditView.vala:94
-#, fuzzy
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
-msgstr "アプリのアイコンの場所を、絶対パスかエイリアス名で記入します。"
+msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
 
 #: src/Views/EditView.vala:107
 msgid "App Categories"
@@ -88,7 +89,7 @@ msgstr "CUI アプリを登録したい場合、チェックを入れてくだ�
 
 #: src/Views/EditView.vala:122
 msgid "Save entry"
-msgstr ""
+msgstr "エントリーを保存"
 
 #: src/Views/EditView.vala:147
 msgid "Select an executable file"
@@ -112,17 +113,15 @@ msgid "Select an icon file"
 msgstr "アイコンファイルを選択"
 
 #: src/Views/FilesView.vala:23
-#, fuzzy
 msgid "No valid app entries found"
-msgstr "有効なデスクトップファイルが見つかりません"
+msgstr "有効なアプリのエントリーが見つかりません"
 
 #: src/Views/FilesView.vala:24
-#, fuzzy
 msgid ""
 "If you've never created one, go back to Welcome View and click “New Entry”."
 msgstr ""
-"デスクトップファイルを作成したことがない場合は、ようこそ画面に戻って“新しい"
-"ファイル”をクリックしてください。"
+"アプリのエントリーを作成したことがない場合は、ようこそ画面に戻って“新しいエ"
+"ントリー”をクリックしてください。"
 
 #: src/Views/FilesView.vala:76
 msgid "Delete…"
@@ -153,21 +152,19 @@ msgstr "ランチャーにアプリをピン止めします"
 #. Remove this class so that the background color of the headerbar and the welcome view matches
 #: src/Views/WelcomeView.vala:19 src/MainWindow.vala:176
 msgid "New Entry"
-msgstr ""
+msgstr "新しいエントリー"
 
 #: src/Views/WelcomeView.vala:19
-#, fuzzy
 msgid "Create a new app entry."
-msgstr "新しいデスクトップファイルを作成します。"
+msgstr "新しいアプリのエントリーを作成します。"
 
 #: src/Views/WelcomeView.vala:20 src/MainWindow.vala:154
 msgid "Edit Entry"
-msgstr ""
+msgstr "エントリーを編集"
 
 #: src/Views/WelcomeView.vala:20
-#, fuzzy
 msgid "Edit an existing app entry."
-msgstr "既存のデスクトップファイルを編集します。"
+msgstr "既存のエントリーを編集します。"
 
 #: src/CategoryChooser.vala:48
 msgid "Audio & Video"
@@ -231,7 +228,7 @@ msgstr "ファイルを作成または編集します"
 
 #: src/MainWindow.vala:77
 msgid "Preferences"
-msgstr ""
+msgstr "設定"
 
 #: src/MainWindow.vala:171
 #, c-format
@@ -240,31 +237,31 @@ msgstr "“%s”を編集しています"
 
 #: src/MainWindow.vala:173
 msgid "Editing Entry"
-msgstr ""
+msgstr "エントリーを編集しています"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "スタイル:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "ライトスタイル"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "ライト"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "ダークスタイル"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "ダーク"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "システムの設定と同じスタイルを使います"
 
 #~ msgid "New File"
 #~ msgstr "新しいファイル"
