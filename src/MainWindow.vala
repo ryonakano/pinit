@@ -167,7 +167,11 @@ public class MainWindow : Hdy.Window {
 
     private void set_header_file_info (DesktopFile desktop_file) {
         if (desktop_file.file_name != "") {
-            header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
+            if (desktop_file.app_name != "") {
+                header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
+            } else {
+                header_bar.title = _("Editing untitled desktop file");
+            }
         } else {
             header_bar.title = _("Untitled desktop file");
         }
