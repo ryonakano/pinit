@@ -262,15 +262,3 @@ msgstr "ダーク"
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
 msgstr "システムの設定と同じスタイルを使います"
-
-#~ msgid "New File"
-#~ msgstr "新しいファイル"
-
-#~ msgid "Edit File"
-#~ msgstr "ファイルを編集"
-
-#~ msgid "Edit a desktop file"
-#~ msgstr "デスクトップファイルを編集します"
-
-#~ msgid "Untitled desktop file"
-#~ msgstr "名称未設定のデスクトップファイル"

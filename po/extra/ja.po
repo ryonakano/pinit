@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-17 14:25+0900\n"
-"PO-Revision-Date: 2021-12-17 14:22+0900\n"
+"PO-Revision-Date: 2021-12-17 14:26+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -26,25 +26,23 @@ msgid "Pin any apps into the launcher"
 msgstr "ランチャーにアプリをピン止めします"
 
 #: data/pinit.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Add portable apps like raw executable files, AppImage files, etc. into your "
 "application launcher easily. Edit or delete existing app entries without "
 "opening a file manager."
 msgstr ""
 "実行可能ファイルや AppImage ファイルなどのポータブルアプリを、アプリケーショ"
-"ンメニューに簡単に追加できます。また、ファイルマネージャーを開かずに既存のデ"
-"スクトップファイルを編集・削除できます。"
+"ンランチャーに簡単に追加できます。また、ファイルマネージャーを開かずに既存の"
+"アプリのエントリーを編集・削除できます。"
 
 #: data/pinit.appdata.xml.in:14
-#, fuzzy
 msgid ""
 "Pin It! comes with syntax errors detection, so you will never need to waste "
 "your time seeking for why your desktop entry won't be shown in the launcher."
 msgstr ""
 "Pin It! にはシンタックスエラーの検知機能が搭載されているので、追加したはずの"
-"デスクトップエントリーがアプリケーションメニューに表示されないと頭を悩ませる"
-"ことはありません。"
+"デスクトップエントリーがランチャーに表示されないと頭を悩ませることはありませ"
+"ん。"
 
 #: data/pinit.appdata.xml.in:20
 msgid "Welcome View"
