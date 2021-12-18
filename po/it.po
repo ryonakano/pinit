@@ -1,0 +1,264 @@
+# ITALIAN TRANSLATION FOR PINT.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-17 14:25+0900\n"
+"PO-Revision-Date: 2021-12-17 21:35+0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/EditView.vala:34
+msgid "File Name"
+msgstr "Nome File"
+
+#: src/Views/EditView.vala:36
+msgid ""
+"Name of the file where these app info is saved. Only lowercase letters and "
+"numbers are allowed."
+msgstr ""
+"Nome del file in cui vengono salvate queste informazioni sull'app. Solo lettere minuscole e "
+"i numeri sono ammessi."
+
+#: src/Views/EditView.vala:42
+msgid "Suffix of the file"
+msgstr "Suffisso del file"
+
+#: src/Views/EditView.vala:53
+msgid "App Name"
+msgstr "Nome App"
+
+#: src/Views/EditView.vala:54
+msgid "Shown in the launcher or Dock."
+msgstr "Mostrato nel launcher o Dock."
+
+#: src/Views/EditView.vala:65
+msgid "Comment"
+msgstr "Commento"
+
+#: src/Views/EditView.vala:66
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr "Un testo di descrizione per descrivere cosa ti aiuta a fare l'app."
+
+#: src/Views/EditView.vala:77
+msgid "Exec File"
+msgstr "File esecutivo"
+
+#: src/Views/EditView.vala:79
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Il comando/l'app è avviata quando si fa clic sulla voce dell'app nel programma di avvio. "
+"Specificare in un percorso assoluto o il nome alias di un'app."
+
+#: src/Views/EditView.vala:92
+msgid "Icon File"
+msgstr "Icona File"
+
+#: src/Views/EditView.vala:94
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"L'icona che contraddistingue l'app. Specifica in un percorso assoluto il nome o l'alias "
+"dell'icona."
+
+#: src/Views/EditView.vala:107
+msgid "App Categories"
+msgstr "Categorie di app"
+
+#: src/Views/EditView.vala:108
+msgid "Type of the app, multiplly selectable."
+msgstr "Tipo di app, selezionabile in modo multiplo."
+
+#: src/Views/EditView.vala:117
+msgid "Run in Terminal"
+msgstr "Esegui nel terminale"
+
+#: src/Views/EditView.vala:120
+msgid "Check this in if you want to registar a CUI app."
+msgstr "Controlla questo se vuoi registrare un'app CUI."
+
+#: src/Views/EditView.vala:122
+msgid "Save entry"
+msgstr "Salva voce"
+
+#: src/Views/EditView.vala:147
+msgid "Select an executable file"
+msgstr "Seleziona un file eseguibile"
+
+#: src/Views/EditView.vala:148 src/Views/EditView.vala:174
+msgid "Open"
+msgstr "Apri"
+
+#: src/Views/EditView.vala:148 src/Views/EditView.vala:174
+#: src/Views/FilesView.vala:108
+msgid "Cancel"
+msgstr "Cancella"
+
+#: src/Views/EditView.vala:170
+msgid "PNG, SVG, or XMP files"
+msgstr "File PNG, SVG o XMP"
+
+#: src/Views/EditView.vala:173
+msgid "Select an icon file"
+msgstr "Seleziona un file icona"
+
+#: src/Views/FilesView.vala:23
+msgid "No valid app entries found"
+msgstr "Nessuna voce valida per l'app trovata"
+
+#: src/Views/FilesView.vala:24
+msgid ""
+"If you've never created one, go back to Welcome View and click “New Entry”."
+msgstr ""
+"Se non ne hai mai creato uno, torna alla visualizzazione di benvenuto e fai clic su “Nuova voce”."
+
+#: src/Views/FilesView.vala:76
+msgid "Delete…"
+msgstr "Cancella…"
+
+#: src/Views/FilesView.vala:82
+msgid "Edit…"
+msgstr "Modifica…"
+
+#: src/Views/FilesView.vala:100 src/Views/FilesView.vala:113
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "Sei sicuro di voler eliminare “%s”?"
+
+#: src/Views/FilesView.vala:101 src/Views/FilesView.vala:114
+msgid "This removes the app from the launcher."
+msgstr "Questo rimuove l'app dal launcher."
+
+#: src/Views/FilesView.vala:117
+msgid "Delete"
+msgstr "Cancella"
+
+#: src/Views/WelcomeView.vala:10
+msgid "Pin any apps into the launcher"
+msgstr "Blocca qualsiasi app nell'launcher"
+
+#. The background color of this widget is rgb(255, 255, 255) by default.
+#. Remove this class so that the background color of the headerbar and the welcome view matches
+#: src/Views/WelcomeView.vala:19 src/MainWindow.vala:176
+msgid "New Entry"
+msgstr "Nuova Voce"
+
+#: src/Views/WelcomeView.vala:19
+msgid "Create a new app entry."
+msgstr "Crea una nuova voce per l'app."
+
+#: src/Views/WelcomeView.vala:20 src/MainWindow.vala:154
+msgid "Edit Entry"
+msgstr "Modifica Voce"
+
+#: src/Views/WelcomeView.vala:20
+msgid "Edit an existing app entry."
+msgstr "Modifica una voce dell'app esistente."
+
+#: src/CategoryChooser.vala:48
+msgid "Audio & Video"
+msgstr "Audio & Video"
+
+#: src/CategoryChooser.vala:49
+msgid "Audio"
+msgstr "Audio"
+
+#: src/CategoryChooser.vala:50
+msgid "Video"
+msgstr "Video"
+
+#: src/CategoryChooser.vala:51
+msgid "Development"
+msgstr "Sviluppo"
+
+#: src/CategoryChooser.vala:52
+msgid "Education"
+msgstr "Istruzione"
+
+#: src/CategoryChooser.vala:53
+msgid "Game"
+msgstr "Giochi"
+
+#: src/CategoryChooser.vala:54
+msgid "Graphics"
+msgstr "Grafica"
+
+#: src/CategoryChooser.vala:55
+msgid "Network"
+msgstr "Rete"
+
+#: src/CategoryChooser.vala:56
+msgid "Office"
+msgstr "Ufficio"
+
+#: src/CategoryChooser.vala:57
+msgid "Science"
+msgstr "Scienza"
+
+#: src/CategoryChooser.vala:58
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: src/CategoryChooser.vala:59 src/StyleSwitcher.vala:56
+msgid "System"
+msgstr "Sistema"
+
+#: src/CategoryChooser.vala:60
+msgid "Utility"
+msgstr "Utilità"
+
+#: src/MainWindow.vala:61
+msgid "Saved changes!"
+msgstr "Modifiche salvate!"
+
+#: src/MainWindow.vala:66
+msgid "Create new or edit"
+msgstr "Crea nuovo o modifica"
+
+#: src/MainWindow.vala:77
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: src/MainWindow.vala:171
+#, c-format
+msgid "Editing “%s”"
+msgstr "Modifica “%s”"
+
+#: src/MainWindow.vala:173
+msgid "Editing Entry"
+msgstr "Modifica Voce"
+
+#: src/StyleSwitcher.vala:25
+msgid "Style:"
+msgstr "Stile:"
+
+#: src/StyleSwitcher.vala:31
+msgid "Light style"
+msgstr "Stile chiaro"
+
+#: src/StyleSwitcher.vala:34
+msgid "Light"
+msgstr "Chiaro"
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark style"
+msgstr "Stile scuro"
+
+#: src/StyleSwitcher.vala:41
+msgid "Dark"
+msgstr "Scuro"
+
+#: src/StyleSwitcher.vala:53
+msgid "Use the same style set in the system"
+msgstr "Usa lo stesso stile impostato nel sistema"
