@@ -1,0 +1,181 @@
+# ITALIAN TRANSLATION FOR PINIT.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-17 14:25+0900\n"
+"PO-Revision-Date: 2021-12-18 18:19+0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr "Pin It!"
+
+#: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
+msgid "Pin any apps into the launcher"
+msgstr "Aggiungi qualsiasi app al launcher"
+
+#: data/pinit.appdata.xml.in:11
+msgid ""
+"Add portable apps like raw executable files, AppImage files, etc. into your "
+"application launcher easily. Edit or delete existing app entries without "
+"opening a file manager."
+msgstr ""
+"Aggiungi app portatili come file eseguibili non elaborati, file AppImage, ecc. nel tuo "
+"avviatore di applicazioni facilmente. Modifica o elimina le voci di app esistenti senza "
+"apertura di un file manager."
+
+#: data/pinit.appdata.xml.in:14
+msgid ""
+"Pin It! comes with syntax errors detection, so you will never need to waste "
+"your time seeking for why your desktop entry won't be shown in the launcher."
+msgstr ""
+"Pin It! viene fornito con il rilevamento degli errori di sintassi, quindi non avrai mai bisogno di sprecare "
+"il tuo tempo cercando il motivo per cui la tua voce sul desktop non verrà mostrata nel programma di avvio."
+
+#: data/pinit.appdata.xml.in:20
+msgid "Welcome View"
+msgstr "Vista di Benvenuto"
+
+#: data/pinit.appdata.xml.in:24
+msgid "Files View"
+msgstr "Visualizzazione File"
+
+#: data/pinit.appdata.xml.in:28
+msgid "Edit View"
+msgstr "Modifica visualizzazione"
+
+#: data/pinit.appdata.xml.in:39
+msgid "Fix build error on other distros"
+msgstr "Corretto l'errore di compilazione su altre distribuzioni"
+
+#: data/pinit.appdata.xml.in:40
+msgid "FilesView: Properly center the dialog against the app window"
+msgstr "Visualizzazione file: centra correttamente la finestra di dialogo rispetto alla finestra dell'app"
+
+#: data/pinit.appdata.xml.in:41
+msgid "Restore last opened view and its state"
+msgstr "Ripristina l'ultima vista aperta e il suo stato"
+
+#: data/pinit.appdata.xml.in:42
+msgid "Add new style switcher"
+msgstr "Aggiunto un nuovo selettore di stile"
+
+#: data/pinit.appdata.xml.in:43
+msgid "Correct titlebar label when no app name specified"
+msgstr "Corretto l'etichetta della barra del titolo quando non è specificato il nome dell'app"
+
+#: data/pinit.appdata.xml.in:44
+msgid "Readable copies"
+msgstr "Copie leggibili"
+
+#: data/pinit.appdata.xml.in:46 data/pinit.appdata.xml.in:58
+#: data/pinit.appdata.xml.in:71 data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:97 data/pinit.appdata.xml.in:112
+msgid "Translation updates:"
+msgstr "Aggiornamenti di traduzione:"
+
+#: data/pinit.appdata.xml.in:48 data/pinit.appdata.xml.in:61
+#: data/pinit.appdata.xml.in:74 data/pinit.appdata.xml.in:86
+#: data/pinit.appdata.xml.in:99 data/pinit.appdata.xml.in:115
+msgid "Update Japanese translation"
+msgstr "Aggiornata traduzione giapponese"
+
+#: data/pinit.appdata.xml.in:55
+msgid "FilesView: Ellipsize if label texts are too long"
+msgstr "Visualizzazione file: ellissi se i testi delle etichette sono troppo lunghi"
+
+#: data/pinit.appdata.xml.in:56
+msgid "Tell accepted file formats in FileChooser"
+msgstr "Indica i formati di file accettati in Selezione file"
+
+#: data/pinit.appdata.xml.in:60
+msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+msgstr "Aggiunta la traduzione in portoghese brasiliano (grazie a @DanielTolentino)"
+
+#: data/pinit.appdata.xml.in:68
+msgid "EditView: Focus on file name entry by default"
+msgstr "Modifica visualizzazione: concentrarsi sulla voce del nome del file per impostazione predefinita"
+
+#: data/pinit.appdata.xml.in:69
+msgid ""
+"FilesView: Make scrollable and fix the window get bigger if many entries"
+msgstr ""
+"Visualizzazione file: reso scorrevole e fissa la finestra che diventa più grande se ci sono molte voci"
+
+#: data/pinit.appdata.xml.in:73
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Aggiunta la traduzione francese (grazie a @NathanBnm)"
+
+#: data/pinit.appdata.xml.in:81
+msgid "Improved support for other desktop environments"
+msgstr "Supporto migliorato per altri ambienti desktop"
+
+#: data/pinit.appdata.xml.in:82
+msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgstr "Aggiunto il permesso di esecuzione facendo clic sul pulsante \"Pin It!\""
+
+#: data/pinit.appdata.xml.in:93
+msgid "Add CategoryChooser"
+msgstr "Aggiunto il selettore di categorie"
+
+#: data/pinit.appdata.xml.in:94
+msgid "Support Alt+Home to show welcome"
+msgstr "Supporta Alt+Home per mostrare il benvenuto"
+
+#: data/pinit.appdata.xml.in:95
+msgid "Allow GPU acceralation by default"
+msgstr "Consente accelerazione GPU per impostazione predefinita"
+
+#: data/pinit.appdata.xml.in:106
+msgid "Add 128px app icon (thanks to @hanaral)"
+msgstr "Aggiunta l'icona dell'app 128px (grazie a @hanaral)"
+
+#: data/pinit.appdata.xml.in:107
+msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+msgstr "Angoli delle finestre arrotondati su qualsiasi foglio di stile (grazie a @JeysonFlores)"
+
+#: data/pinit.appdata.xml.in:108
+msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+msgstr "Supporta i gesti multitouch (grazie a @JeysonFlores)"
+
+#: data/pinit.appdata.xml.in:109
+msgid "Fix unreadable description text in AppCenter"
+msgstr "Corretto il testo della descrizione illeggibile in AppCenter"
+
+#: data/pinit.appdata.xml.in:110
+msgid "Save and restore window position"
+msgstr "Salva e ripristina la posizione della finestra"
+
+#: data/pinit.appdata.xml.in:114
+msgid "Add Spanish translation (thanks to @JeysonFlores)"
+msgstr "Aggiunto la traduzione spagnola (grazie a @JeysonFlores)"
+
+#: data/pinit.appdata.xml.in:122
+msgid "Initial release"
+msgstr "Versione iniziale"
+
+#: data/pinit.appdata.xml.in:128
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "Creatore di File Desktop"
+
+#: data/pinit.desktop.in:8
+msgid "com.github.ryonakano.pinit"
+msgstr "com.github.ryonakano.pinit"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
