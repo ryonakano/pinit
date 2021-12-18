@@ -50,7 +50,7 @@ msgstr "Un testo di descrizione per descrivere cosa ti aiuta a fare l'app."
 
 #: src/Views/EditView.vala:77
 msgid "Exec File"
-msgstr File esecutivo""
+msgstr "File esecutivo"
 
 #: src/Views/EditView.vala:79
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 "Specify in an absolute path or an app's alias name."
 msgstr ""
 "Il comando/l'app è avviata quando si fa clic sulla voce dell'app nel programma di avvio. "
-"Specificare in un percorso assoluto o il nome alias di un'app.
+"Specificare in un percorso assoluto o il nome alias di un'app."
 
 #: src/Views/EditView.vala:92
 msgid "Icon File"
