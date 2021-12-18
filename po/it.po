@@ -134,7 +134,7 @@ msgstr "Modifica…"
 #: src/Views/FilesView.vala:100 src/Views/FilesView.vala:113
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr "Sei sicuro di voler eliminare "%s"?"
+msgstr "Sei sicuro di voler eliminare “%s”?"
 
 #: src/Views/FilesView.vala:101 src/Views/FilesView.vala:114
 msgid "This removes the app from the launcher."
