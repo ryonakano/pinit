@@ -1,13 +1,13 @@
 app-id: com.github.ryonakano.pinit
 runtime: io.elementary.Platform
-runtime-version: '6'
+runtime-version: '6.1'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.pinit
 finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
-  - '--filesystem=home'
+  - '--filesystem=~/.local/share/applications'
   # For drawing icons
   - '--device=dri'
 modules:
