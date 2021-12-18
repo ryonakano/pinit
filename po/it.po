@@ -121,7 +121,7 @@ msgstr "Nessuna voce valida per l'app trovata"
 msgid ""
 "If you've never created one, go back to Welcome View and click “New Entry”."
 msgstr ""
-"Se non ne hai mai creato uno, torna alla visualizzazione di benvenuto e fai clic su "Nuova voce"."
+"Se non ne hai mai creato uno, torna alla visualizzazione di benvenuto e fai clic su “Nuova voce”."
 
 #: src/Views/FilesView.vala:76
 msgid "Delete…"
