@@ -1,4 +1,5 @@
-/* From elementary/granite, src/_typography.scss */
+/* From elementary/stylesheet, src/gtk-3.0/_typography.scss */
+
 .h1 {
     font-size: 24pt;
     font-weight: 700;
