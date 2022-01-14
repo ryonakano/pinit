@@ -35,13 +35,13 @@ public class MainWindow : Hdy.Window {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-#if !FOR_PANTHEON
-        var extra_cssprovider = new Gtk.CssProvider ();
-        extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                    extra_cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-#endif
+        if (Application.IS_ON_PANTHEON) {
+            var extra_cssprovider = new Gtk.CssProvider ();
+            extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                        extra_cssprovider,
+                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
 
         welcome_view = new WelcomeView ();
         files_view = new FilesView ();
