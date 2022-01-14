@@ -130,16 +130,16 @@ public class FilesView : Gtk.ScrolledWindow {
 
                     var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
                     confirm_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-    
+
                     delete_dialog.response.connect ((response_id) => {
                         if (response_id == Gtk.ResponseType.OK) {
                             DesktopFileOperator.get_default ().delete_file (file);
                             update_list ();
                         }
-    
+
                         delete_dialog.destroy ();
                     });
-    
+
                     delete_dialog.show ();
                 }
             });
