@@ -39,6 +39,7 @@
           <li>Check desktop environment on runtime</li>
           <li>Strict on permisson</li>
           <li>Make window resizable</li>
+          <li>Less strict on naming of files</li>
         </ul>
         <p>Translation updates:</p>
         <ul>
