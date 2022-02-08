@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CategoryChooser : Gtk.Grid {
+public class CategoryChooser : Gtk.FlowBox {
     public signal void toggled ();
 
     public string selected {
@@ -37,7 +37,10 @@ public class CategoryChooser : Gtk.Grid {
 
     public CategoryChooser () {
         Object (
-            expand: true
+            hexpand: true,
+            selection_mode: Gtk.SelectionMode.NONE,
+            column_spacing: 6,
+            row_spacing: 6
         );
     }
 
@@ -58,7 +61,9 @@ public class CategoryChooser : Gtk.Grid {
         categories.set ("Settings", _("Settings"));
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
+        max_children_per_line = categories.size;
 
+        int i = 0;
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
             toggle.get_style_context ().add_class ("category-toggle");
@@ -66,7 +71,8 @@ public class CategoryChooser : Gtk.Grid {
                 toggled ();
             });
             toggles.add (toggle);
-            add (toggle);
+            insert (toggle, i);
+            i++;
         }
     }
 

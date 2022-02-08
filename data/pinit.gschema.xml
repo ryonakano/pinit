@@ -22,6 +22,16 @@
       <summary>Window position</summary>
       <description>Position of last closed window</description>
     </key>
+    <key name="window-size" type="(ii)">
+      <default>(600, 500)</default>
+      <summary>Window size</summary>
+      <description>The saved size of the window</description>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+      <summary>Window maximized</summary>
+      <description>The saved value for whether the window is maximized or not</description>
+    </key>
     <key name="last-view" enum="views">
       <default>'welcome-view'</default>
       <summary>Last view</summary>

@@ -21,8 +21,7 @@ public class MainWindow : Hdy.Window {
 
     public MainWindow () {
         Object (
-            title: "Pin It!",
-            resizable: false
+            title: "Pin It!"
         );
     }
 
@@ -210,9 +209,12 @@ public class MainWindow : Hdy.Window {
 
         configure_id = Timeout.add (100, () => {
             configure_id = 0;
-            int x, y;
+            int width, height, x, y;
+            get_size (out width, out height);
             get_position (out x, out y);
             Application.settings.set ("window-position", "(ii)", x, y);
+            Application.settings.set ("window-size", "(ii)", width, height);
+            Application.settings.set_boolean ("window-maximized", this.is_maximized);
 
             return false;
         });

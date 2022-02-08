@@ -36,7 +36,7 @@ public class EditView : Gtk.Grid {
             _("Name of the file where these app info is saved. Only lowercase letters and numbers are allowed.")
         );
         file_name_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
-            expand = true
+            hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
             tooltip_text = _("Suffix of the file"),
@@ -53,7 +53,7 @@ public class EditView : Gtk.Grid {
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
         name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
+            hexpand = true
         };
         var name_grid = new Gtk.Grid () {
             margin_bottom = 12
@@ -65,7 +65,7 @@ public class EditView : Gtk.Grid {
         var comment_label = new Granite.HeaderLabel (_("Comment"));
         var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
         comment_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
-            expand = true
+            hexpand = true
         };
         var comment_grid = new Gtk.Grid () {
             margin_bottom = 12
@@ -79,7 +79,7 @@ public class EditView : Gtk.Grid {
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         );
         exec_entry = new Gtk.Entry () {
-            expand = true,
+            hexpand = true,
             secondary_icon_name = "document-open-symbolic"
         };
         var exec_grid = new Gtk.Grid () {
@@ -94,7 +94,7 @@ public class EditView : Gtk.Grid {
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         );
         icon_entry = new Gtk.Entry () {
-            expand = true,
+            hexpand = true,
             secondary_icon_name = "document-open-symbolic"
         };
         var icon_grid = new Gtk.Grid () {
