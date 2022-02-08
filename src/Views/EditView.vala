@@ -33,9 +33,11 @@ public class EditView : Gtk.Grid {
     construct {
         var file_name_label = new Granite.HeaderLabel (_("File Name"));
         var file_name_desc_label = new DimLabel (
-            _("Name of the file where these app info is saved. Only lowercase letters and numbers are allowed.")
+            _("Name of the file where these app info is saved.")
         );
-        file_name_entry = new Granite.ValidatedEntry.from_regex (/^[a-z1-9]+$/) {
+        // The actual pattern following fd.o specification would be:
+        // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
+        file_name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
@@ -49,6 +51,7 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (file_name_desc_label, 0, 1, 1, 1);
         file_name_grid.attach (file_name_entry, 0, 2, 1, 1);
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
+        file_name_grid.attach (new InfoButton (), 2, 2, 1, 1);
 
         var name_label = new Granite.HeaderLabel (_("App Name"));
         var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
