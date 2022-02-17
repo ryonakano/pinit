@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION FOR PINT.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 13:21+0900\n"
-"PO-Revision-Date: 2021-12-17 21:35+0100\n"
+"PO-Revision-Date: 2022-02-17 20:35+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -21,13 +21,11 @@ msgid "File Name"
 msgstr "Nome File"
 
 #: src/Views/EditView.vala:36
-#, fuzzy
 msgid "Name of the file where these app info is saved."
-msgstr ""
-"Nome del file in cui vengono salvate queste informazioni sull'app. Solo "
-"lettere minuscole e i numeri sono ammessi."
+msgstr "Nome del file in cui sono salvate queste informazioni sull'app."
 
 #: src/Views/EditView.vala:44
+Project Manager
 msgid "Suffix of the file"
 msgstr "Suffisso del file"
 
@@ -219,27 +217,30 @@ msgstr "Utilità"
 
 #: src/InfoButton.vala:11
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "Raccomandazioni per la denominazione"
 
 #: src/InfoButton.vala:17
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
+"Usa solo alfabeti, numeri e trattini bassi e nessuno che inizi con numeri."
 
 #: src/InfoButton.vala:18
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
+"Utilizza almeno un punto per assicurarti di essere separato in almeno due "
+"elementi."
 
 #: src/InfoButton.vala:24
 #, c-format
 msgid "For more info, see %s."
-msgstr ""
+msgstr "Per maggiori informazioni, vedi %s."
 
 #: src/InfoButton.vala:26
 msgid "the file naming specification by freedesktop.org"
-msgstr ""
+msgstr "la specifica di denominazione dei file di freedesktop.org"
 
 #: src/MainWindow.vala:60
 msgid "Saved changes!"
