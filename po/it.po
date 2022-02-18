@@ -25,7 +25,6 @@ msgid "Name of the file where these app info is saved."
 msgstr "Nome del file in cui sono salvate queste informazioni sull'app."
 
 #: src/Views/EditView.vala:44
-Project Manager
 msgid "Suffix of the file"
 msgstr "Suffisso del file"
 
