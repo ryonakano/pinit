@@ -1,17 +1,17 @@
 # Pin It!
-Pin any apps into the launcher. Inspired from https://github.com/alexkdeveloper/dfc
+Add portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
 
 ![Welcome View](data/screenshots/pantheon/screenshot-welcome-view.png)
 
-Add portable apps like raw executable files, AppImage files, etc. into the launcher easily. Edit or delete existing desktop files without opening a file manager.
-
-![Files View](data/screenshots/pantheon/screenshot-files-view.png)
-
-Are you still using your text editor to create/edit your customized desktop files? Possibly you open Files and press Ctrl + H to show the hidden destination folder? Say goodbye to that life! Hit the "Edit File" in this app and it's done. All entries you created are there and you can edit or delete them.
-
 ![Edit View](data/screenshots/pantheon/screenshot-edit-view.png)
 
-You surely created a desktop entry but it won't be shown in the launcher? Ah, you found a tiny syntax error after a couple of hours in struggle! That's too bad. Pin It! prevent saving destkop entries with any syntax error, so you will never need to waste your time.
+Other features include:
+
+- Edit or delete created app entries without opening the file manager
+- Syntax error detection
+- Automatically save everything―your data in editing, last open view, and preferences
+
+The app idea is inspired from https://github.com/alexkdeveloper/dfc.
 
 ## Installation
 ### For Users
