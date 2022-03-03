@@ -3,21 +3,30 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class WelcomeView : Granite.Widgets.Welcome {
+public class WelcomeView : Granite.Placeholder {
     public WelcomeView () {
         Object (
             title: "Pin It!",
-            subtitle: _("Pin any apps into the launcher")
+            description: _("Pin any apps into the launcher")
         );
     }
 
     construct {
         // The background color of this widget is rgb(255, 255, 255) by default.
         // Remove this class so that the background color of the headerbar and the welcome view matches
-        get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        //  get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
-        append ("document-new", _("New Entry"), _("Create a new app entry."));
-        append ("document-edit", _("Edit Entry"), _("Edit an existing app entry."));
+        Icon new_icon;
+        Icon edt_icon;
+        try {
+            new_icon = Icon.new_for_string ("document-new");
+            edt_icon = Icon.new_for_string ("document-edit");
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        append_button (new_icon, _("New Entry"), _("Create a new app entry."));
+        append_button (edt_icon, _("Edit Entry"), _("Edit an existing app entry."));
 
         activated.connect ((i) => {
             unowned var window = ((Application) GLib.Application.get_default ()).window;

@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class MainWindow : Hdy.Window {
+public class MainWindow : Gtk.Application.Window {
     private uint configure_id;
 
     private WelcomeView welcome_view;
@@ -26,8 +26,6 @@ public class MainWindow : Hdy.Window {
     }
 
     construct {
-        Hdy.init ();
-
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),

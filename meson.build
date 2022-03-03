@@ -49,10 +49,10 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('granite', version: '>= 6.0.0'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         dependency('pango'),
-        dependency('libhandy-1'),
+        dependency('libadwaita-1'),
         meson.get_compiler('vala').find_library('posix')
     ],
     install: true
