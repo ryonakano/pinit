@@ -38,7 +38,7 @@ public class EditView : Gtk.Grid {
         );
         // The actual pattern following fd.o specification would be:
         // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
-        file_name_entry = new Gtk.Entry.from_regex (/^.+$/) {
+        file_name_entry = new Gtk.Entry () {
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
@@ -57,7 +57,7 @@ public class EditView : Gtk.Grid {
         var name_label = new Gtk.Label (_("App Name"));
         name_label.get_style_context ().add_class ("large-title");
         var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
-        name_entry = new Gtk.Entry.from_regex (/^.+$/) {
+        name_entry = new Gtk.Entry () {
             hexpand = true
         };
         var name_grid = new Gtk.Grid () {
@@ -70,7 +70,7 @@ public class EditView : Gtk.Grid {
         var comment_label = new Gtk.Label (_("Comment"));
         comment_label.get_style_context ().add_class ("large-title");
         var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
-        comment_entry = new Gtk.Entry.from_regex (/^.+$/) {
+        comment_entry = new Gtk.Entry () {
             hexpand = true
         };
         var comment_grid = new Gtk.Grid () {

@@ -11,6 +11,6 @@ public class DimLabel : Gtk.Label {
     construct {
         halign = Gtk.Align.START;
         margin_bottom = 6;
-        get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        get_style_context ().add_class ("dim-label");
     }
 }

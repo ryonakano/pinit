@@ -28,17 +28,9 @@ public class MainWindow : Gtk.ApplicationWindow {
     construct {
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Application.css");
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+        Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        if (Application.IS_ON_PANTHEON) {
-            var extra_cssprovider = new Gtk.CssProvider ();
-            extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                        extra_cssprovider,
-                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        }
 
         welcome_view = new WelcomeView ();
         files_view = new FilesView ();
@@ -48,9 +40,9 @@ public class MainWindow : Gtk.ApplicationWindow {
             can_navigate_back = true,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
-        leaflet.add (welcome_view);
-        leaflet.add (files_view);
-        leaflet.add (edit_view);
+        leaflet.append (welcome_view);
+        leaflet.append (files_view);
+        leaflet.append (edit_view);
 
         var overlay = new Adw.ToastOverlay () {
             child = leaflet
@@ -59,7 +51,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var toast = new Adw.Toast (_("Saved changes!"));
         overlay.add_toast (toast);
 
-        home_button = new Gtk.Button.from_icon_name (home_image) {
+        home_button = new Gtk.Button.from_icon_name ("go-home") {
             //  tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
@@ -69,7 +61,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             margin_start = 12,
             margin_end = 12
         };
-        preferences_box.append (new StyleSwitcher ());
+        //  preferences_box.append (new StyleSwitcher ());
 
         var preferences_popover = new Gtk.Popover () {
             child = preferences_box
@@ -88,12 +80,25 @@ public class MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (preferences_button);
         set_titlebar (headerbar);
 
-        unowned var header_bar_style = header_bar.get_style_context ();
-        header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
+        //  unowned var header_bar_style = header_bar.get_style_context ();
+        //  header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         //  header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
         child = overlay;
         set_visible_view ();
+
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_pressed.connect ((keyval, keycode, state) => {
+            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.q) {
+                destroy ();
+            }
+
+            if (Gdk.ModifierType.ALT_MASK in state && keyval == Gdk.Key.Home) {
+                show_welcome_view ();
+            }
+
+            return false;
+        });
 
         home_button.clicked.connect (() => {
             show_welcome_view ();
@@ -101,22 +106,10 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
             show_welcome_view ();
-            toast.send_notification ();
+            //  toast.send_notification ();
         });
 
-        key_press_event.connect ((key) => {
-            if (Gdk.ModifierType.CONTROL_MASK in key.state && key.keyval == Gdk.Key.q) {
-                destroy ();
-            }
-
-            if (Gdk.ModifierType.MOD1_MASK in key.state && key.keyval == Gdk.Key.Home) {
-                show_welcome_view ();
-            }
-
-            return false;
-        });
-
-        destroy.connect (() => {
+        close_request.connect (() => {
             unowned Views visible_view = get_visible_view ();
             Application.settings.set_enum ("last-view", (int) visible_view);
             if (visible_view == Views.EDIT_VIEW) {
@@ -142,14 +135,14 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     public void show_welcome_view () {
-        header_bar.title = "Pin It!";
+        ((Gtk.Label) header_bar.title_widget).label = "Pin It!";
         home_button.sensitive = false;
         leaflet.visible_child = welcome_view;
     }
 
     public void show_files_view () {
         files_view.update_list ();
-        header_bar.title = _("Edit Entry");
+        ((Gtk.Label) header_bar.title_widget).label = _("Edit Entry");
         home_button.sensitive = true;
         leaflet.reorder_child_after (files_view, welcome_view);
         leaflet.visible_child = files_view;
@@ -166,12 +159,12 @@ public class MainWindow : Gtk.ApplicationWindow {
     private void set_header_file_info (DesktopFile desktop_file) {
         if (desktop_file.file_name != "") {
             if (desktop_file.app_name != "") {
-                header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
+                ((Gtk.Label) header_bar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
             } else {
-                header_bar.title = _("Editing Entry");
+                ((Gtk.Label) header_bar.title_widget).label = _("Editing Entry");
             }
         } else {
-            header_bar.title = _("New Entry");
+            ((Gtk.Label) header_bar.title_widget).label = _("New Entry");
         }
     }
 

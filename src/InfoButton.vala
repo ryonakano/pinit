@@ -6,7 +6,7 @@
 public class InfoButton : Gtk.MenuButton {
     public InfoButton () {
         Object (
-            image: new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.BUTTON),
+            image: new Gtk.Image.from_icon_name ("dialog-information-symbolic"),
             margin_start: 6,
             tooltip_text: _("Recommendations for naming")
         );
@@ -30,13 +30,17 @@ public class InfoButton : Gtk.MenuButton {
         };
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin = 12
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        box.pack_start (label);
-        box.pack_start (detailed_label);
+        box.append (label);
+        box.append (detailed_label);
 
-        var popover = new Gtk.Popover (null);
-        popover.add (box);
+        var popover = new Gtk.Popover () {
+            child = box
+        };
 
         this.popover = popover;
 

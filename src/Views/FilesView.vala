@@ -16,7 +16,8 @@ public class FilesView : Gtk.ScrolledWindow {
 
     construct {
         files_list = new Gtk.ListBox () {
-            expand = true
+            vexpand = true,
+            hexpand = true
         };
 
         var no_files_grid = new Gtk.Label (
@@ -29,14 +30,13 @@ public class FilesView : Gtk.ScrolledWindow {
         stack.add_named (files_list, "files_list");
         stack.add_named (no_files_grid, "no_files_grid");
 
-        get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
-        add (stack);
-        show_all ();
+        //  get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
+        child = stack;
     }
 
     public void update_list () {
-        foreach (var row in files_list.get_children ()) {
-            row.destroy ();
+        while ((Gtk.ListBoxRow) files_list.get_last_child () != null) {
+            files_list.remove ((Gtk.ListBoxRow) files_list.get_last_child ());
         }
 
         var files = DesktopFileOperator.get_default ().files;
@@ -44,7 +44,7 @@ public class FilesView : Gtk.ScrolledWindow {
             var file = files.get (i);
 
             // Fallback icon
-            var app_icon = new Gtk.Image.from_icon_name ("image-missing", Gtk.IconSize.DIALOG);
+            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
             // Inspired from https://stackoverflow.com/a/42800483
             if (file.icon_file != "") {
                 try {
@@ -63,29 +63,32 @@ public class FilesView : Gtk.ScrolledWindow {
                 tooltip_text = file.app_name,
                 margin_bottom = 12
             };
-            app_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            app_name_label.get_style_context ().add_class ("title-1");
 
             var app_comment_label = new Gtk.Label (file.comment) {
                 halign = Gtk.Align.START,
                 ellipsize = Pango.EllipsizeMode.END,
                 tooltip_text = file.comment
             };
-            app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            app_comment_label.get_style_context ().add_class ("dim-label");
 
-            var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.BUTTON) {
+            var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
-                expand = true,
+                //  expand = true,
                 halign = Gtk.Align.END
             };
 
-            var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic", Gtk.IconSize.BUTTON) {
+            var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic") {
                 tooltip_text = _("Edit…"),
-                expand = false,
+                //  expand = false,
                 halign = Gtk.Align.END
             };
 
             var app_grid = new Gtk.Grid () {
-                margin = 12,
+                margin_top = 12,
+                margin_bottom = 12,
+                margin_start = 12,
+                margin_end = 12,
                 column_spacing = 6
             };
             app_grid.attach (app_icon, 0, 0, 1, 2);
@@ -103,7 +106,7 @@ public class FilesView : Gtk.ScrolledWindow {
                 };
 
                 var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
-                confirm_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                confirm_button.get_style_context ().add_class ("destructive-action");
 
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.OK) {
@@ -121,15 +124,14 @@ public class FilesView : Gtk.ScrolledWindow {
                 ((Application) GLib.Application.get_default ()).window.show_edit_view (file);
             });
 
-            var list_item = new Gtk.ListBoxRow ();
-            list_item.add (app_grid);
+            var list_item = new Gtk.ListBoxRow () {
+                child = app_grid
+            };
 
-            files_list.add (list_item);
+            files_list.append (list_item);
         }
 
-        files_list.show_all ();
-
-        if (files_list.get_children () != null) {
+        if (files_list.get_last_child () != null) {
             stack.visible_child_name = "files_list";
             files_list.select_row (files_list.get_row_at_index (0));
         } else {

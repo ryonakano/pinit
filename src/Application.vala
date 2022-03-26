@@ -40,21 +40,17 @@ public class Application : Gtk.Application {
         window = new MainWindow ();
         window.set_application (this);
 
-        int window_x, window_y, window_width, window_height;
-        settings.get ("window-position", "(ii)", out window_x, out window_y);
+        int window_width, window_height;
         settings.get ("window-size", "(ii)", out window_width, out window_height);
 
         if (Application.settings.get_boolean ("window-maximized")) {
             window.maximize ();
         }
 
-        if (window_x != -1 || window_y != -1) { // Not a first time launch
-            window.move (window_x, window_y);
-        } else { // First time launch
-            window.window_position = Gtk.WindowPosition.CENTER;
-        }
+        window.default_width = window_width;
+        window.default_height = window_height;
 
-        window.resize (window_width, window_height);
+        window.present ();
     }
 
     public static int main (string[] args) {
