@@ -1,7 +1,7 @@
 app-id: com.github.ryonakano.pinit
-runtime: io.elementary.Platform
-runtime-version: 'daily'
-sdk: io.elementary.Sdk
+runtime: org.gnome.Platform
+runtime-version: '42'
+sdk: org.gnome.Sdk
 command: com.github.ryonakano.pinit
 finish-args:
   - '--share=ipc'
@@ -11,15 +11,6 @@ finish-args:
   # For drawing icons
   - '--device=dri'
 modules:
-  - name: libadwaita
-    buildsystem: meson
-    build-options:
-      build-args:
-        - '--share=network'
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/libadwaita.git
-        tag: '1.0.2'
   - name: pinit
     buildsystem: meson
     sources:

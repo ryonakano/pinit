@@ -14,9 +14,9 @@ public class EditView : Gtk.Grid {
         }
     }
 
-    private Granite.ValidatedEntry file_name_entry;
-    private Granite.ValidatedEntry name_entry;
-    private Granite.ValidatedEntry comment_entry;
+    private Gtk.Entry file_name_entry;
+    private Gtk.Entry name_entry;
+    private Gtk.Entry comment_entry;
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
     private CategoryChooser category_chooser;
@@ -31,13 +31,14 @@ public class EditView : Gtk.Grid {
     }
 
     construct {
-        var file_name_label = new Granite.HeaderLabel (_("File Name"));
+        var file_name_label = new Gtk.Label (_("File Name"));
+        file_name_label.get_style_context ().add_class ("large-title");
         var file_name_desc_label = new DimLabel (
             _("Name of the file where these app info is saved.")
         );
         // The actual pattern following fd.o specification would be:
         // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
-        file_name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        file_name_entry = new Gtk.Entry.from_regex (/^.+$/) {
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
@@ -53,9 +54,10 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
         file_name_grid.attach (new InfoButton (), 2, 2, 1, 1);
 
-        var name_label = new Granite.HeaderLabel (_("App Name"));
+        var name_label = new Gtk.Label (_("App Name"));
+        name_label.get_style_context ().add_class ("large-title");
         var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
-        name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        name_entry = new Gtk.Entry.from_regex (/^.+$/) {
             hexpand = true
         };
         var name_grid = new Gtk.Grid () {
@@ -65,9 +67,10 @@ public class EditView : Gtk.Grid {
         name_grid.attach (name_desc_label, 0, 1, 1, 1);
         name_grid.attach (name_entry, 0, 2, 1, 1);
 
-        var comment_label = new Granite.HeaderLabel (_("Comment"));
+        var comment_label = new Gtk.Label (_("Comment"));
+        comment_label.get_style_context ().add_class ("large-title");
         var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
-        comment_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        comment_entry = new Gtk.Entry.from_regex (/^.+$/) {
             hexpand = true
         };
         var comment_grid = new Gtk.Grid () {
@@ -77,7 +80,8 @@ public class EditView : Gtk.Grid {
         comment_grid.attach (comment_desc_label, 0, 1, 1, 1);
         comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
-        var exec_label = new Granite.HeaderLabel (_("Exec File"));
+        var exec_label = new Gtk.Label (_("Exec File"));
+        exec_label.get_style_context ().add_class ("large-title");
         var exec_desc_label = new DimLabel (
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         );
@@ -92,7 +96,8 @@ public class EditView : Gtk.Grid {
         exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
         exec_grid.attach (exec_entry, 0, 2, 1, 1);
 
-        var icon_label = new Granite.HeaderLabel (_("Icon File"));
+        var icon_label = new Gtk.Label (_("Icon File"));
+        icon_label.get_style_context ().add_class ("large-title");
         var icon_desc_label = new DimLabel (
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         );
@@ -107,7 +112,8 @@ public class EditView : Gtk.Grid {
         icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
         icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
-        var categories_label = new Granite.HeaderLabel (_("App Categories"));
+        var categories_label = new Gtk.Label (_("App Categories"));
+        categories_label.get_style_context ().add_class ("large-title");
         var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {

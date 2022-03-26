@@ -19,10 +19,10 @@ public class FilesView : Gtk.ScrolledWindow {
             expand = true
         };
 
-        var no_files_grid = new Granite.Widgets.AlertView (
-            _("No valid app entries found"),
-            _("If you've never created one, go back to Welcome View and click “New Entry”."),
-            "dialog-information"
+        var no_files_grid = new Gtk.Label (
+            _("No valid app entries found")
+            //  _("If you've never created one, go back to Welcome View and click “New Entry”."),
+            //  "dialog-information"
         );
 
         stack = new Gtk.Stack ();
@@ -95,26 +95,12 @@ public class FilesView : Gtk.ScrolledWindow {
             app_grid.attach (edit_button, 3, 0, 1, 2);
 
             delete_button.clicked.connect (() => {
-                Gtk.Dialog delete_dialog;
-                if (Application.IS_ON_PANTHEON) {
-                    delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                        _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                        _("This removes the app from the launcher."),
-                        "dialog-warning",
-                        Gtk.ButtonsType.NONE
-                    ) {
-                        modal = true,
-                        transient_for = ((Application) GLib.Application.get_default ()).window
-                    };
-                    delete_dialog.add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
-                } else {
-                    delete_dialog = new Gtk.MessageDialog (
-                        ((Application) GLib.Application.get_default ()).window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
-                    ) {
-                        text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                        secondary_text = _("This removes the app from the launcher.")
-                    };
-                }
+                var delete_dialog = new Gtk.MessageDialog (
+                    ((Application) GLib.Application.get_default ()).window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
+                ) {
+                    text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    secondary_text = _("This removes the app from the launcher.")
+                };
 
                 var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
                 confirm_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);

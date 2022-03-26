@@ -40,7 +40,7 @@ sources = files(
     'src' / 'DimLabel.vala',
     'src' / 'InfoButton.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'StyleSwitcher.vala'
+    # 'src' / 'StyleSwitcher.vala'
 )
 
 executable(
@@ -49,7 +49,7 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('granite-7'),
+        dependency('gee-0.8'),
         dependency('gtk4'),
         dependency('pango'),
         dependency('libadwaita-1'),
