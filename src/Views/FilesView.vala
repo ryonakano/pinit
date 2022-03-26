@@ -9,7 +9,10 @@ public class FilesView : Gtk.ScrolledWindow {
 
     public FilesView () {
         Object (
-            margin: 12,
+            margin_top: 12,
+            margin_bottom: 24,
+            margin_start: 24,
+            margin_end: 24,
             hscrollbar_policy: Gtk.PolicyType.NEVER
         );
     }

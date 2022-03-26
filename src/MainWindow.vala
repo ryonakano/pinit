@@ -4,8 +4,6 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
-    private uint configure_id;
-
     private WelcomeView welcome_view;
     private FilesView files_view;
     private EditView edit_view;
@@ -99,6 +97,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
             return false;
         });
+        ((Gtk.Widget) this).add_controller (event_controller);
 
         home_button.clicked.connect (() => {
             show_welcome_view ();

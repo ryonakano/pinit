@@ -25,8 +25,10 @@ public class EditView : Gtk.Grid {
 
     public EditView () {
         Object (
-            margin: 24,
-            margin_top: 12
+            margin_top: 12,
+            margin_bottom: 24,
+            margin_start: 24,
+            margin_end: 24
         );
     }
 
@@ -130,12 +132,12 @@ public class EditView : Gtk.Grid {
 
         action_button = new Gtk.Button.with_label (_("Save entry")) {
             margin_top = 24,
-            sensitive = (
-                file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-                exec_entry.text.length > 0 && category_chooser.selected != ""
-            )
+            //  sensitive = (
+            //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+            //      exec_entry.text.length > 0 && category_chooser.selected != ""
+            //  )
         };
-        action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        action_button.get_style_context ().add_class ("suggested-action");
 
         attach (file_name_grid, 0, 0, 1, 3);
         attach (name_grid, 0, 3, 1, 3);
@@ -147,7 +149,7 @@ public class EditView : Gtk.Grid {
         attach (terminal_desc_label, 0, 21, 1, 1);
         attach (action_button, 0, 22, 1, 1);
 
-        exec_entry.icon_press.connect ((icon_pos, event) => {
+        exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
@@ -155,18 +157,16 @@ public class EditView : Gtk.Grid {
             var filechooser = new Gtk.FileChooserNative (
                 _("Select an executable file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
-            ) {
-                local_only = true
-            };
+            );
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
-                    exec_entry.text = filechooser.get_filename ();
+                    exec_entry.text = filechooser.get_file ().get_path ();
                 }
             });
             filechooser.show ();
         });
 
-        icon_entry.icon_press.connect ((icon_pos, event) => {
+        icon_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
@@ -181,13 +181,11 @@ public class EditView : Gtk.Grid {
             var filechooser = new Gtk.FileChooserNative (
                 _("Select an icon file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
-            ) {
-                local_only = true
-            };
+            );
             filechooser.add_filter (filefilter);
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
-                    icon_entry.text = filechooser.get_filename ();
+                    icon_entry.text = filechooser.get_file ().get_path ();
                 }
             });
             filechooser.show ();
@@ -197,10 +195,11 @@ public class EditView : Gtk.Grid {
             save_file ();
         });
 
-        key_release_event.connect (() => {
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_released.connect ((keyval, keycode, state) => {
             set_action_button_sensitivity ();
-            return false;
         });
+        ((Gtk.Widget) this).add_controller (event_controller);
 
         category_chooser.toggled.connect (set_action_button_sensitivity);
     }
@@ -219,10 +218,10 @@ public class EditView : Gtk.Grid {
     }
 
     private void set_action_button_sensitivity () {
-        action_button.sensitive = (
-            file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-            exec_entry.text.length > 0 && category_chooser.selected != ""
-        );
+        //  action_button.sensitive = (
+        //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+        //      exec_entry.text.length > 0 && category_chooser.selected != ""
+        //  );
     }
 
     public void save_file (bool is_backup = false) {

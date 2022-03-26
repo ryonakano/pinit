@@ -6,8 +6,8 @@
 public class WelcomeView : Gtk.Grid {
     public WelcomeView () {
         Object (
-            title: "Pin It!",
-            description: _("Pin any apps into the launcher")
+            //  title: "Pin It!",
+            //  description: _("Pin any apps into the launcher")
         );
     }
 

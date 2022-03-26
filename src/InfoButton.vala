@@ -6,7 +6,7 @@
 public class InfoButton : Gtk.MenuButton {
     public InfoButton () {
         Object (
-            image: new Gtk.Image.from_icon_name ("dialog-information-symbolic"),
+            icon_name: "dialog-information-symbolic",
             margin_start: 6,
             tooltip_text: _("Recommendations for naming")
         );
@@ -44,8 +44,8 @@ public class InfoButton : Gtk.MenuButton {
 
         this.popover = popover;
 
-        toggled.connect (() => {
-            popover.show_all ();
+        activate.connect (() => {
+            popover.popup ();
         });
     }
 }
