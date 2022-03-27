@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class MainWindow : Gtk.ApplicationWindow {
+public class MainWindow : Adw.ApplicationWindow {
     private WelcomeView welcome_view;
     private FilesView files_view;
     private EditView edit_view;
@@ -47,7 +47,6 @@ public class MainWindow : Gtk.ApplicationWindow {
         };
 
         var toast = new Adw.Toast (_("Saved changes!"));
-        overlay.add_toast (toast);
 
         home_button = new Gtk.Button.from_icon_name ("go-home") {
             //  tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
@@ -76,13 +75,16 @@ public class MainWindow : Gtk.ApplicationWindow {
         };
         headerbar.pack_start (home_button);
         headerbar.pack_end (preferences_button);
-        set_titlebar (headerbar);
+
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.append (headerbar);
+        main_box.append (overlay);
 
         //  unowned var header_bar_style = header_bar.get_style_context ();
         //  header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
         //  header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
-        child = overlay;
+        content = main_box;
         set_visible_view ();
 
         var event_controller = new Gtk.EventControllerKey ();
@@ -105,7 +107,8 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
             show_welcome_view ();
-            //  toast.send_notification ();
+            overlay.add_toast (toast);
+            toast.dismiss ();
         });
 
         close_request.connect (() => {
