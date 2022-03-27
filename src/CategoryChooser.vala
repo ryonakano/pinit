@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CategoryChooser : Gtk.FlowBox {
+public class CategoryChooser : Gtk.Box {
     public signal void toggled ();
 
     public string selected {
@@ -38,9 +38,7 @@ public class CategoryChooser : Gtk.FlowBox {
     public CategoryChooser () {
         Object (
             hexpand: true,
-            selection_mode: Gtk.SelectionMode.NONE,
-            column_spacing: 6,
-            row_spacing: 6
+            spacing: 6
         );
     }
 
@@ -61,7 +59,13 @@ public class CategoryChooser : Gtk.FlowBox {
         categories.set ("Settings", _("Settings"));
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
-        max_children_per_line = categories.size;
+
+        var flowbox = new Gtk.FlowBox () {
+            max_children_per_line = categories.size,
+            selection_mode = Gtk.SelectionMode.NONE
+        };
+
+        append (flowbox);
 
         int i = 0;
         foreach (var entry in categories.entries) {
@@ -71,7 +75,7 @@ public class CategoryChooser : Gtk.FlowBox {
                 toggled ();
             });
             toggles.add (toggle);
-            insert (toggle, i);
+            flowbox.insert (toggle, i);
             i++;
         }
     }

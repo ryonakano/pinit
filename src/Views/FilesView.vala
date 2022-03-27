@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class FilesView : Gtk.ScrolledWindow {
+public class FilesView : Gtk.Box {
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
 
@@ -12,8 +12,7 @@ public class FilesView : Gtk.ScrolledWindow {
             margin_top: 12,
             margin_bottom: 24,
             margin_start: 24,
-            margin_end: 24,
-            hscrollbar_policy: Gtk.PolicyType.NEVER
+            margin_end: 24
         );
     }
 
@@ -33,8 +32,13 @@ public class FilesView : Gtk.ScrolledWindow {
         stack.add_named (files_list, "files_list");
         stack.add_named (no_files_grid, "no_files_grid");
 
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = stack,
+            hscrollbar_policy = Gtk.PolicyType.NEVER
+        };
+
         //  get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
-        child = stack;
+        append (scrolled);
     }
 
     public void update_list () {

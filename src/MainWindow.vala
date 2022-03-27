@@ -9,7 +9,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     private EditView edit_view;
     private Adw.Leaflet leaflet;
     private Gtk.Button home_button;
-    private Gtk.HeaderBar header_bar;
+    private Gtk.HeaderBar headerbar;
 
     private enum Views {
         WELCOME_VIEW,
@@ -71,7 +71,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             popover = preferences_popover
         };
 
-        var headerbar = new Gtk.HeaderBar () {
+        headerbar = new Gtk.HeaderBar () {
             title_widget = new Gtk.Label ("")
         };
         headerbar.pack_start (home_button);
@@ -134,14 +134,14 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     public void show_welcome_view () {
-        ((Gtk.Label) header_bar.title_widget).label = "Pin It!";
+        ((Gtk.Label) headerbar.title_widget).label = "Pin It!";
         home_button.sensitive = false;
         leaflet.visible_child = welcome_view;
     }
 
     public void show_files_view () {
         files_view.update_list ();
-        ((Gtk.Label) header_bar.title_widget).label = _("Edit Entry");
+        ((Gtk.Label) headerbar.title_widget).label = _("Edit Entry");
         home_button.sensitive = true;
         leaflet.reorder_child_after (files_view, welcome_view);
         leaflet.visible_child = files_view;
@@ -158,12 +158,12 @@ public class MainWindow : Gtk.ApplicationWindow {
     private void set_header_file_info (DesktopFile desktop_file) {
         if (desktop_file.file_name != "") {
             if (desktop_file.app_name != "") {
-                ((Gtk.Label) header_bar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
             } else {
-                ((Gtk.Label) header_bar.title_widget).label = _("Editing Entry");
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing Entry");
             }
         } else {
-            ((Gtk.Label) header_bar.title_widget).label = _("New Entry");
+            ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
         }
     }
 

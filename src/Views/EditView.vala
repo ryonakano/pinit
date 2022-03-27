@@ -35,9 +35,13 @@ public class EditView : Gtk.Grid {
     construct {
         var file_name_label = new Gtk.Label (_("File Name"));
         file_name_label.get_style_context ().add_class ("large-title");
-        var file_name_desc_label = new DimLabel (
+        var file_name_desc_label = new Gtk.Label (
             _("Name of the file where these app info is saved.")
-        );
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        file_name_desc_label.get_style_context ().add_class ("dim-label");
         // The actual pattern following fd.o specification would be:
         // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
         file_name_entry = new Gtk.Entry () {
@@ -54,11 +58,15 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (file_name_desc_label, 0, 1, 1, 1);
         file_name_grid.attach (file_name_entry, 0, 2, 1, 1);
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
-        file_name_grid.attach (new InfoButton (), 2, 2, 1, 1);
+        file_name_grid.attach (create_info_button (), 2, 2, 1, 1);
 
         var name_label = new Gtk.Label (_("App Name"));
         name_label.get_style_context ().add_class ("large-title");
-        var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
+        var name_desc_label = new Gtk.Label (_("Shown in the launcher or Dock.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        name_desc_label.get_style_context ().add_class ("dim-label");
         name_entry = new Gtk.Entry () {
             hexpand = true
         };
@@ -71,7 +79,11 @@ public class EditView : Gtk.Grid {
 
         var comment_label = new Gtk.Label (_("Comment"));
         comment_label.get_style_context ().add_class ("large-title");
-        var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
+        var comment_desc_label = new Gtk.Label (_("A tooltip text to describe what the app helps you to do.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        name_desc_label.get_style_context ().add_class ("dim-label");
         comment_entry = new Gtk.Entry () {
             hexpand = true
         };
@@ -84,9 +96,13 @@ public class EditView : Gtk.Grid {
 
         var exec_label = new Gtk.Label (_("Exec File"));
         exec_label.get_style_context ().add_class ("large-title");
-        var exec_desc_label = new DimLabel (
+        var exec_desc_label = new Gtk.Label (
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
-        );
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        name_desc_label.get_style_context ().add_class ("dim-label");
         exec_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -100,9 +116,13 @@ public class EditView : Gtk.Grid {
 
         var icon_label = new Gtk.Label (_("Icon File"));
         icon_label.get_style_context ().add_class ("large-title");
-        var icon_desc_label = new DimLabel (
+        var icon_desc_label = new Gtk.Label (
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
-        );
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        icon_desc_label.get_style_context ().add_class ("dim-label");
         icon_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -116,7 +136,11 @@ public class EditView : Gtk.Grid {
 
         var categories_label = new Gtk.Label (_("App Categories"));
         categories_label.get_style_context ().add_class ("large-title");
-        var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
+        var categories_desc_label = new Gtk.Label (_("Type of the app, multiplly selectable.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        categories_desc_label.get_style_context ().add_class ("dim-label");
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
             margin_bottom = 24
@@ -128,7 +152,11 @@ public class EditView : Gtk.Grid {
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
-        var terminal_desc_label = new DimLabel (_("Check this in if you want to registar a CUI app."));
+        var terminal_desc_label = new Gtk.Label (_("Check this in if you want to registar a CUI app.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        terminal_desc_label.get_style_context ().add_class ("dim-label");
 
         action_button = new Gtk.Button.with_label (_("Save entry")) {
             margin_top = 24,
@@ -236,5 +264,49 @@ public class EditView : Gtk.Grid {
             is_backup
         );
         DesktopFileOperator.get_default ().write_to_file (desktop_file);
+    }
+
+    private Gtk.MenuButton create_info_button () {
+        var label = new Gtk.Label (
+            _("Only use alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
+            _("Use at least one period to make sure to be separated into at least two elements.")
+        ) {
+            halign = Gtk.Align.START
+        };
+
+        var detailed_label = new Gtk.Label (
+            _("For more info, see %s.").printf (
+            "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
+            _("the file naming specification by freedesktop.org")
+        )) {
+            use_markup = true,
+            halign = Gtk.Align.START
+        };
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
+        };
+        box.append (label);
+        box.append (detailed_label);
+
+        var popover = new Gtk.Popover () {
+            child = box
+        };
+
+        var menu_button = new Gtk.MenuButton () {
+            icon_name = "dialog-information-symbolic",
+            margin_start = 6,
+            tooltip_text = _("Recommendations for naming"),
+            popover = popover
+        };
+
+        menu_button.activate.connect (() => {
+            popover.popup ();
+        });
+
+        return menu_button;
     }
 }

@@ -37,8 +37,6 @@ sources = files(
     'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
-    'src' / 'DimLabel.vala',
-    'src' / 'InfoButton.vala',
     'src' / 'MainWindow.vala',
     # 'src' / 'StyleSwitcher.vala'
 )
