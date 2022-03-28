@@ -37,7 +37,6 @@ public class FilesView : Gtk.Box {
             hscrollbar_policy = Gtk.PolicyType.NEVER
         };
 
-        //  get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
         append (scrolled);
     }
 
@@ -49,35 +48,6 @@ public class FilesView : Gtk.Box {
         var files = DesktopFileOperator.get_default ().files;
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
-
-            // Fallback icon
-            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
-            // Inspired from https://stackoverflow.com/a/42800483
-            if (file.icon_file != "") {
-                try {
-                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.icon_file, 48, 48, true);
-                    app_icon = new Gtk.Image.from_pixbuf (pixbuf);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            }
-
-            app_icon.margin_end = 12;
-
-            var app_name_label = new Gtk.Label (file.app_name) {
-                halign = Gtk.Align.START,
-                ellipsize = Pango.EllipsizeMode.END,
-                tooltip_text = file.app_name,
-                margin_bottom = 12
-            };
-            app_name_label.get_style_context ().add_class ("title-1");
-
-            var app_comment_label = new Gtk.Label (file.comment) {
-                halign = Gtk.Align.START,
-                ellipsize = Pango.EllipsizeMode.END,
-                tooltip_text = file.comment
-            };
-            app_comment_label.get_style_context ().add_class ("dim-label");
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
@@ -92,17 +62,11 @@ public class FilesView : Gtk.Box {
             };
 
             var app_grid = new Gtk.Grid () {
-                margin_top = 12,
-                margin_bottom = 12,
-                margin_start = 12,
-                margin_end = 12,
-                column_spacing = 6
+                column_spacing = 6,
+                valign = Gtk.Align.CENTER
             };
-            app_grid.attach (app_icon, 0, 0, 1, 2);
-            app_grid.attach (app_name_label, 1, 0, 1, 1);
-            app_grid.attach (app_comment_label, 1, 1, 1, 1);
-            app_grid.attach (delete_button, 2, 0, 1, 2);
-            app_grid.attach (edit_button, 3, 0, 1, 2);
+            app_grid.attach (delete_button, 0, 0, 1, 1);
+            app_grid.attach (edit_button, 1, 0, 1, 1);
 
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Gtk.MessageDialog (
@@ -131,9 +95,13 @@ public class FilesView : Gtk.Box {
                 ((Application) GLib.Application.get_default ()).window.show_edit_view (file);
             });
 
-            var list_item = new Gtk.ListBoxRow () {
-                child = app_grid
+            var list_item = new Adw.ActionRow () {
+                icon_name = file.icon_file != "" ? file.icon_file : "image-missing",
+                title = file.app_name,
+                subtitle = file.comment,
             };
+            list_item.get_style_context ().add_class ("boxed-list");
+            list_item.add_suffix (app_grid);
 
             files_list.append (list_item);
         }

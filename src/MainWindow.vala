@@ -33,6 +33,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         leaflet = new Adw.Leaflet () {
             can_navigate_back = true,
+            can_unfold = false,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
         leaflet.append (files_view);
