@@ -47,7 +47,7 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         create_new_button = new Gtk.Button.from_icon_name ("document-new-symbolic") {
-            //  tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
+            tooltip_text = _("Create a new app entry")
         };
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
@@ -140,7 +140,7 @@ public class MainWindow : Adw.ApplicationWindow {
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         set_header_file_info (desktop_file);
-        create_new_button.sensitive = true;
+        create_new_button.sensitive = false;
         leaflet.reorder_child_after (edit_view, files_view);
         leaflet.visible_child = edit_view;
     }

@@ -1,6 +1,5 @@
 src/Views/EditView.vala
 src/Views/FilesView.vala
-src/Views/WelcomeView.vala
 src/CategoryChooser.vala
 src/InfoButton.vala
 src/MainWindow.vala

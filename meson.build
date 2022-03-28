@@ -34,7 +34,6 @@ sources = files(
     'src' / 'Backend' / 'DesktopFileOperator.vala',
     'src' / 'Views' / 'EditView.vala',
     'src' / 'Views' / 'FilesView.vala',
-    'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'MainWindow.vala',
