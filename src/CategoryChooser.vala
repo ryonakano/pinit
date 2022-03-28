@@ -37,7 +37,6 @@ public class CategoryChooser : Gtk.Box {
 
     public CategoryChooser () {
         Object (
-            hexpand: true,
             spacing: 6
         );
     }
@@ -61,6 +60,7 @@ public class CategoryChooser : Gtk.Box {
         categories.set ("Utility", _("Utility"));
 
         var flowbox = new Gtk.FlowBox () {
+            hexpand = true,
             max_children_per_line = categories.size,
             selection_mode = Gtk.SelectionMode.NONE
         };

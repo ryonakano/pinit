@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Application : Gtk.Application {
+public class Application : Adw.Application {
     public static bool IS_ON_PANTHEON {
         get {
             return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";

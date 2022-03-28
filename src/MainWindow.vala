@@ -4,15 +4,13 @@
  */
 
 public class MainWindow : Adw.ApplicationWindow {
-    private WelcomeView welcome_view;
     private FilesView files_view;
     private EditView edit_view;
     private Adw.Leaflet leaflet;
-    private Gtk.Button home_button;
+    private Gtk.Button create_new_button;
     private Gtk.HeaderBar headerbar;
 
     private enum Views {
-        WELCOME_VIEW,
         EDIT_VIEW,
         FILES_VIEW;
     }
@@ -30,7 +28,6 @@ public class MainWindow : Adw.ApplicationWindow {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        welcome_view = new WelcomeView ();
         files_view = new FilesView ();
         edit_view = new EditView ();
 
@@ -38,7 +35,6 @@ public class MainWindow : Adw.ApplicationWindow {
             can_navigate_back = true,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
-        leaflet.append (welcome_view);
         leaflet.append (files_view);
         leaflet.append (edit_view);
 
@@ -46,9 +42,11 @@ public class MainWindow : Adw.ApplicationWindow {
             child = leaflet
         };
 
-        var toast = new Adw.Toast (_("Saved changes!"));
+        var toast = new Adw.Toast (_("Saved changes!")) {
+            timeout = 5
+        };
 
-        home_button = new Gtk.Button.from_icon_name ("go-home") {
+        create_new_button = new Gtk.Button.from_icon_name ("document-new-symbolic") {
             //  tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
         };
 
@@ -73,16 +71,12 @@ public class MainWindow : Adw.ApplicationWindow {
         headerbar = new Gtk.HeaderBar () {
             title_widget = new Gtk.Label ("")
         };
-        headerbar.pack_start (home_button);
+        headerbar.pack_start (create_new_button);
         headerbar.pack_end (preferences_button);
 
         var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         main_box.append (headerbar);
         main_box.append (overlay);
-
-        //  unowned var header_bar_style = header_bar.get_style_context ();
-        //  header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
-        //  header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
 
         content = main_box;
         set_visible_view ();
@@ -93,22 +87,21 @@ public class MainWindow : Adw.ApplicationWindow {
                 destroy ();
             }
 
-            if (Gdk.ModifierType.ALT_MASK in state && keyval == Gdk.Key.Home) {
-                show_welcome_view ();
+            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
+                show_edit_view (DesktopFileOperator.get_default ().create_new ());
             }
 
             return false;
         });
         ((Gtk.Widget) this).add_controller (event_controller);
 
-        home_button.clicked.connect (() => {
-            show_welcome_view ();
+        create_new_button.clicked.connect (() => {
+            show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
-            show_welcome_view ();
+            show_files_view ();
             overlay.add_toast (toast);
-            toast.dismiss ();
         });
 
         close_request.connect (() => {
@@ -136,25 +129,19 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
-    public void show_welcome_view () {
-        ((Gtk.Label) headerbar.title_widget).label = "Pin It!";
-        home_button.sensitive = false;
-        leaflet.visible_child = welcome_view;
-    }
-
     public void show_files_view () {
         files_view.update_list ();
         ((Gtk.Label) headerbar.title_widget).label = _("Edit Entry");
-        home_button.sensitive = true;
-        leaflet.reorder_child_after (files_view, welcome_view);
+        create_new_button.sensitive = true;
+        leaflet.reorder_child_after (files_view, edit_view);
         leaflet.visible_child = files_view;
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         set_header_file_info (desktop_file);
-        home_button.sensitive = true;
-        leaflet.reorder_child_after (edit_view, welcome_view);
+        create_new_button.sensitive = true;
+        leaflet.reorder_child_after (edit_view, files_view);
         leaflet.visible_child = edit_view;
     }
 
@@ -173,10 +160,8 @@ public class MainWindow : Adw.ApplicationWindow {
     private Views get_visible_view () {
         if (leaflet.visible_child == files_view) {
             return Views.FILES_VIEW;
-        } else if (leaflet.visible_child == edit_view) {
-            return Views.EDIT_VIEW;
         } else {
-            return Views.WELCOME_VIEW;
+            return Views.EDIT_VIEW;
         }
     }
 
@@ -189,9 +174,9 @@ public class MainWindow : Adw.ApplicationWindow {
             case Views.EDIT_VIEW:
                 show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? DesktopFileOperator.get_default ().create_new ());
                 break;
-            case Views.WELCOME_VIEW:
             default:
-                show_welcome_view ();
+                warning ("Unexpected view %s, falling back to the files view".printf (last_view.to_string ()));
+                show_files_view ();
                 break;
         }
     }

@@ -33,8 +33,10 @@ public class EditView : Gtk.Grid {
     }
 
     construct {
-        var file_name_label = new Gtk.Label (_("File Name"));
-        file_name_label.get_style_context ().add_class ("large-title");
+        var file_name_label = new Gtk.Label (_("File Name")) {
+            halign = Gtk.Align.START
+        };
+        file_name_label.get_style_context ().add_class ("heading");
         var file_name_desc_label = new Gtk.Label (
             _("Name of the file where these app info is saved.")
         ) {
@@ -60,8 +62,10 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
         file_name_grid.attach (create_info_button (), 2, 2, 1, 1);
 
-        var name_label = new Gtk.Label (_("App Name"));
-        name_label.get_style_context ().add_class ("large-title");
+        var name_label = new Gtk.Label (_("App Name")) {
+            halign = Gtk.Align.START
+        };
+        name_label.get_style_context ().add_class ("heading");
         var name_desc_label = new Gtk.Label (_("Shown in the launcher or Dock.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
@@ -77,13 +81,15 @@ public class EditView : Gtk.Grid {
         name_grid.attach (name_desc_label, 0, 1, 1, 1);
         name_grid.attach (name_entry, 0, 2, 1, 1);
 
-        var comment_label = new Gtk.Label (_("Comment"));
-        comment_label.get_style_context ().add_class ("large-title");
+        var comment_label = new Gtk.Label (_("Comment")) {
+            halign = Gtk.Align.START
+        };
+        comment_label.get_style_context ().add_class ("heading");
         var comment_desc_label = new Gtk.Label (_("A tooltip text to describe what the app helps you to do.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        name_desc_label.get_style_context ().add_class ("dim-label");
+        comment_desc_label.get_style_context ().add_class ("dim-label");
         comment_entry = new Gtk.Entry () {
             hexpand = true
         };
@@ -94,15 +100,17 @@ public class EditView : Gtk.Grid {
         comment_grid.attach (comment_desc_label, 0, 1, 1, 1);
         comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
-        var exec_label = new Gtk.Label (_("Exec File"));
-        exec_label.get_style_context ().add_class ("large-title");
+        var exec_label = new Gtk.Label (_("Exec File")) {
+            halign = Gtk.Align.START
+        };
+        exec_label.get_style_context ().add_class ("heading");
         var exec_desc_label = new Gtk.Label (
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        name_desc_label.get_style_context ().add_class ("dim-label");
+        exec_desc_label.get_style_context ().add_class ("dim-label");
         exec_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -114,8 +122,10 @@ public class EditView : Gtk.Grid {
         exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
         exec_grid.attach (exec_entry, 0, 2, 1, 1);
 
-        var icon_label = new Gtk.Label (_("Icon File"));
-        icon_label.get_style_context ().add_class ("large-title");
+        var icon_label = new Gtk.Label (_("Icon File")) {
+            halign = Gtk.Align.START
+        };
+        icon_label.get_style_context ().add_class ("heading");
         var icon_desc_label = new Gtk.Label (
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         ) {
@@ -134,8 +144,10 @@ public class EditView : Gtk.Grid {
         icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
         icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
-        var categories_label = new Gtk.Label (_("App Categories"));
-        categories_label.get_style_context ().add_class ("large-title");
+        var categories_label = new Gtk.Label (_("App Categories")) {
+            halign = Gtk.Align.START
+        };
+        categories_label.get_style_context ().add_class ("heading");
         var categories_desc_label = new Gtk.Label (_("Type of the app, multiplly selectable.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
