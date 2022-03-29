@@ -22,10 +22,10 @@ public class FilesView : Gtk.Box {
         };
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
         };
         preferences_box.append (new StyleSwitcher ());
 
