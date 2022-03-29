@@ -6,6 +6,8 @@
 public class FilesView : Gtk.Box {
     public MainWindow window { private get; construct; }
 
+    public Adw.HeaderBar headerbar { get; private set; }
+
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
 
@@ -37,7 +39,7 @@ public class FilesView : Gtk.Box {
             popover = preferences_popover
         };
 
-        var headerbar = new Adw.HeaderBar () {
+        headerbar = new Adw.HeaderBar () {
             title_widget = new Gtk.Label ("Pin It!")
         };
         headerbar.pack_start (create_button);
@@ -75,10 +77,6 @@ public class FilesView : Gtk.Box {
             window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
 
-        files_list.row_selected.connect ((row) => {
-            window.show_edit_view (DesktopFileOperator.get_default ().files.get (row.get_index ()));
-        });
-
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
         append (scrolled);
@@ -95,26 +93,12 @@ public class FilesView : Gtk.Box {
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
-                //  expand = true,
-                halign = Gtk.Align.END
-            };
-
-            var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic") {
-                tooltip_text = _("Edit…"),
-                //  expand = false,
-                halign = Gtk.Align.END
-            };
-
-            var app_grid = new Gtk.Grid () {
-                column_spacing = 6,
+                halign = Gtk.Align.END,
                 valign = Gtk.Align.CENTER
             };
-            app_grid.attach (delete_button, 0, 0, 1, 1);
-            app_grid.attach (edit_button, 1, 0, 1, 1);
-
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Gtk.MessageDialog (
-                    ((Application) GLib.Application.get_default ()).window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
+                    window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
                 ) {
                     text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
                     secondary_text = _("This removes the app from the launcher.")
@@ -135,17 +119,17 @@ public class FilesView : Gtk.Box {
                 delete_dialog.show ();
             });
 
-            edit_button.clicked.connect (() => {
-                ((Application) GLib.Application.get_default ()).window.show_edit_view (file);
-            });
-
             var list_item = new Adw.ActionRow () {
                 icon_name = file.icon_file != "" ? file.icon_file : "image-missing",
                 title = file.app_name,
                 subtitle = file.comment,
+                activatable = true
             };
             list_item.get_style_context ().add_class ("boxed-list");
-            list_item.add_suffix (app_grid);
+            list_item.add_suffix (delete_button);
+            list_item.activated.connect (() => {
+                window.show_edit_view (file);
+            });
 
             files_list.append (list_item);
         }

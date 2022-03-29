@@ -15,6 +15,7 @@ public class EditView : Gtk.Box {
         }
     }
 
+    public Gtk.Button back_button { get; private set; }
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
@@ -32,7 +33,7 @@ public class EditView : Gtk.Box {
 
     construct {
         // Headerbar part
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        back_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
 
         save_button = new Gtk.Button.with_label (_("Save")) {
             //  sensitive = (
@@ -45,7 +46,7 @@ public class EditView : Gtk.Box {
         headerbar = new Adw.HeaderBar () {
             title_widget = new Gtk.Label ("")
         };
-        headerbar.pack_start (cancel_button);
+        headerbar.pack_start (back_button);
         headerbar.pack_end (save_button);
 
         // Main part
@@ -205,6 +206,14 @@ public class EditView : Gtk.Box {
         append (headerbar);
         append (main_box);
 
+        back_button.clicked.connect (() => {
+            window.show_files_view ();
+        });
+
+        save_button.clicked.connect (() => {
+            save_file ();
+        });
+
         exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
@@ -245,10 +254,6 @@ public class EditView : Gtk.Box {
                 }
             });
             filechooser.show ();
-        });
-
-        save_button.clicked.connect (() => {
-            save_file ();
         });
 
         var event_controller = new Gtk.EventControllerKey ();

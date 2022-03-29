@@ -33,6 +33,8 @@ public class MainWindow : Adw.ApplicationWindow {
             can_navigate_back = true,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
+        leaflet.bind_property ("folded", files_view.headerbar, "show-end-title-buttons", GLib.BindingFlags.SYNC_CREATE);
+        leaflet.bind_property ("folded", edit_view.back_button, "visible", GLib.BindingFlags.SYNC_CREATE);
         leaflet.append (files_view);
         leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         leaflet.append (edit_view);
