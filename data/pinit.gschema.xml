@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <enum id="color-schemes">
+    <value value="1" nick="force-dark"/>
+    <value value="2" nick="force-light"/>
+    <value value="4" nick="prefer-light"/>
+  </enum>
   <enum id="views">
-    <value value="0" nick="welcome-view"/>
+    <value value="0" nick="files-view"/>
     <value value="1" nick="edit-view"/>
-    <value value="2" nick="files-view"/>
   </enum>
 
   <schema path="/com/github/ryonakano/pinit/" id="com.github.ryonakano.pinit">
-    <key name="is-prefer-dark" type="b">
-        <default>false</default>
-        <summary>Prefer dark</summary>
-        <description>Whether to show the window in a dark style or not</description>
-    </key>
-    <key name="is-follow-system-style" type="b">
-        <default>true</default>
-        <summary>Follow system style</summary>
-        <description>Whether to follow system's dark style settings or not</description>
+    <key name="color-scheme" enum="color-schemes">
+      <default>'force-light'</default>
+      <summary>Color scheme</summary>
+      <description>Whether to show the window in a dark style or not</description>
     </key>
     <key name="window-size" type="(ii)">
       <default>(600, 500)</default>

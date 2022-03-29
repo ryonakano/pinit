@@ -27,7 +27,7 @@ public class FilesView : Gtk.Box {
             margin_start = 12,
             margin_end = 12
         };
-        //  preferences_box.append (new StyleSwitcher ());
+        preferences_box.append (new StyleSwitcher ());
 
         var preferences_popover = new Gtk.Popover () {
             child = preferences_box

@@ -37,7 +37,7 @@ sources = files(
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'MainWindow.vala',
-    # 'src' / 'StyleSwitcher.vala'
+    'src' / 'StyleSwitcher.vala'
 )
 
 executable(
