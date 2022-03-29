@@ -3,7 +3,8 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class EditView : Gtk.Grid {
+public class EditView : Gtk.Box {
+    public MainWindow window { private get; construct; }
     public bool is_unsaved {
         get {
             return (
@@ -14,6 +15,9 @@ public class EditView : Gtk.Grid {
         }
     }
 
+    private Gtk.Button save_button;
+    private Adw.HeaderBar headerbar;
+
     private Gtk.Entry file_name_entry;
     private Gtk.Entry name_entry;
     private Gtk.Entry comment_entry;
@@ -21,18 +25,30 @@ public class EditView : Gtk.Grid {
     private Gtk.Entry icon_entry;
     private CategoryChooser category_chooser;
     private Gtk.CheckButton terminal_checkbox;
-    private Gtk.Button action_button;
 
-    public EditView () {
-        Object (
-            margin_top: 12,
-            margin_bottom: 24,
-            margin_start: 24,
-            margin_end: 24
-        );
+    public EditView (MainWindow window) {
+        Object (window: window);
     }
 
     construct {
+        // Headerbar part
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+
+        save_button = new Gtk.Button.with_label (_("Save")) {
+            //  sensitive = (
+            //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+            //      exec_entry.text.length > 0 && category_chooser.selected != ""
+            //  )
+        };
+        save_button.get_style_context ().add_class ("suggested-action");
+
+        headerbar = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label ("")
+        };
+        headerbar.pack_start (cancel_button);
+        headerbar.pack_end (save_button);
+
+        // Main part
         var file_name_label = new Gtk.Label (_("File Name")) {
             halign = Gtk.Align.START
         };
@@ -170,24 +186,24 @@ public class EditView : Gtk.Grid {
         };
         terminal_desc_label.get_style_context ().add_class ("dim-label");
 
-        action_button = new Gtk.Button.with_label (_("Save entry")) {
-            margin_top = 24,
-            //  sensitive = (
-            //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-            //      exec_entry.text.length > 0 && category_chooser.selected != ""
-            //  )
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
+            margin_top = 12,
+            margin_bottom = 24,
+            margin_start = 24,
+            margin_end = 24
         };
-        action_button.get_style_context ().add_class ("suggested-action");
+        main_box.append (file_name_grid);
+        main_box.append (name_grid);
+        main_box.append (comment_grid);
+        main_box.append (exec_grid);
+        main_box.append (icon_grid);
+        main_box.append (categories_grid);
+        main_box.append (terminal_checkbox);
+        main_box.append (terminal_desc_label);
 
-        attach (file_name_grid, 0, 0, 1, 3);
-        attach (name_grid, 0, 3, 1, 3);
-        attach (comment_grid, 0, 6, 1, 3);
-        attach (exec_grid, 0, 9, 1, 3);
-        attach (icon_grid, 0, 12, 1, 3);
-        attach (categories_grid, 0, 15, 1, 3);
-        attach (terminal_checkbox, 0, 20, 1, 1);
-        attach (terminal_desc_label, 0, 21, 1, 1);
-        attach (action_button, 0, 22, 1, 1);
+        orientation = Gtk.Orientation.VERTICAL;
+        append (headerbar);
+        append (main_box);
 
         exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
@@ -231,17 +247,17 @@ public class EditView : Gtk.Grid {
             filechooser.show ();
         });
 
-        action_button.clicked.connect (() => {
+        save_button.clicked.connect (() => {
             save_file ();
         });
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_released.connect ((keyval, keycode, state) => {
-            set_action_button_sensitivity ();
+            set_save_button_sensitivity ();
         });
         ((Gtk.Widget) this).add_controller (event_controller);
 
-        category_chooser.toggled.connect (set_action_button_sensitivity);
+        category_chooser.toggled.connect (set_save_button_sensitivity);
     }
 
     public void set_desktop_file (DesktopFile desktop_file) {
@@ -253,12 +269,22 @@ public class EditView : Gtk.Grid {
         category_chooser.selected = desktop_file.categories;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        set_action_button_sensitivity ();
+        if (desktop_file.file_name != "") {
+            if (desktop_file.app_name != "") {
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
+            } else {
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing Entry");
+            }
+        } else {
+            ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
+        }
+
+        set_save_button_sensitivity ();
         file_name_entry.grab_focus ();
     }
 
-    private void set_action_button_sensitivity () {
-        //  action_button.sensitive = (
+    private void set_save_button_sensitivity () {
+        //  save_button.sensitive = (
         //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
         //      exec_entry.text.length > 0 && category_chooser.selected != ""
         //  );

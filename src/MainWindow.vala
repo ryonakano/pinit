@@ -7,8 +7,6 @@ public class MainWindow : Adw.ApplicationWindow {
     private FilesView files_view;
     private EditView edit_view;
     private Adw.Leaflet leaflet;
-    private Gtk.Button create_button;
-    private Adw.HeaderBar headerbar;
 
     private enum Views {
         EDIT_VIEW,
@@ -28,15 +26,15 @@ public class MainWindow : Adw.ApplicationWindow {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        files_view = new FilesView ();
-        edit_view = new EditView ();
+        files_view = new FilesView (this);
+        edit_view = new EditView (this);
 
         leaflet = new Adw.Leaflet () {
             can_navigate_back = true,
-            can_unfold = false,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
         leaflet.append (files_view);
+        leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         leaflet.append (edit_view);
 
         var overlay = new Adw.ToastOverlay () {
@@ -47,39 +45,7 @@ public class MainWindow : Adw.ApplicationWindow {
             timeout = 5
         };
 
-        create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
-            tooltip_text = _("Create a new entry")
-        };
-
-        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
-        //  preferences_box.append (new StyleSwitcher ());
-
-        var preferences_popover = new Gtk.Popover () {
-            child = preferences_box
-        };
-
-        var preferences_button = new Gtk.MenuButton () {
-            tooltip_text = _("Preferences"),
-            icon_name = "open-menu",
-            popover = preferences_popover
-        };
-
-        headerbar = new Adw.HeaderBar () {
-            title_widget = new Gtk.Label ("Pin It!")
-        };
-        headerbar.pack_start (create_button);
-        headerbar.pack_end (preferences_button);
-
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.append (headerbar);
-        main_box.append (overlay);
-
-        content = main_box;
+        content = overlay;
         set_visible_view ();
 
         var event_controller = new Gtk.EventControllerKey ();
@@ -95,10 +61,6 @@ public class MainWindow : Adw.ApplicationWindow {
             return false;
         });
         ((Gtk.Widget) this).add_controller (event_controller);
-
-        create_button.clicked.connect (() => {
-            show_edit_view (DesktopFileOperator.get_default ().create_new ());
-        });
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
             show_files_view ();
@@ -132,30 +94,12 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public void show_files_view () {
         files_view.update_list ();
-        ((Gtk.Label) headerbar.title_widget).label = _("All Entries");
-        create_button.sensitive = true;
-        leaflet.reorder_child_after (files_view, edit_view);
         leaflet.visible_child = files_view;
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
-        set_header_file_info (desktop_file);
-        create_button.sensitive = false;
-        leaflet.reorder_child_after (edit_view, files_view);
         leaflet.visible_child = edit_view;
-    }
-
-    private void set_header_file_info (DesktopFile desktop_file) {
-        if (desktop_file.file_name != "") {
-            if (desktop_file.app_name != "") {
-                ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
-            } else {
-                ((Gtk.Label) headerbar.title_widget).label = _("Editing Entry");
-            }
-        } else {
-            ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
-        }
     }
 
     private Views get_visible_view () {

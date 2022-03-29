@@ -4,19 +4,46 @@
  */
 
 public class FilesView : Gtk.Box {
+    public MainWindow window { private get; construct; }
+
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
 
-    public FilesView () {
-        Object (
-            margin_top: 12,
-            margin_bottom: 24,
-            margin_start: 24,
-            margin_end: 24
-        );
+    public FilesView (MainWindow window) {
+        Object (window: window);
     }
 
     construct {
+        // HeaderBar part
+        var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
+            tooltip_text = _("Create a new entry")
+        };
+
+        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
+        };
+        //  preferences_box.append (new StyleSwitcher ());
+
+        var preferences_popover = new Gtk.Popover () {
+            child = preferences_box
+        };
+
+        var preferences_button = new Gtk.MenuButton () {
+            tooltip_text = _("Preferences"),
+            icon_name = "open-menu",
+            popover = preferences_popover
+        };
+
+        var headerbar = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label ("Pin It!")
+        };
+        headerbar.pack_start (create_button);
+        headerbar.pack_end (preferences_button);
+
+        // Main part
         files_list = new Gtk.ListBox () {
             vexpand = true,
             hexpand = true
@@ -37,9 +64,23 @@ public class FilesView : Gtk.Box {
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = stack,
-            hscrollbar_policy = Gtk.PolicyType.NEVER
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            margin_top = 12,
+            margin_bottom = 24,
+            margin_start = 24,
+            margin_end = 24
         };
 
+        create_button.clicked.connect (() => {
+            window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
+        });
+
+        files_list.row_selected.connect ((row) => {
+            window.show_edit_view (DesktopFileOperator.get_default ().files.get (row.get_index ()));
+        });
+
+        orientation = Gtk.Orientation.VERTICAL;
+        append (headerbar);
         append (scrolled);
     }
 
