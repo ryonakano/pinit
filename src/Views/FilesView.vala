@@ -77,6 +77,8 @@ public class FilesView : Gtk.Box {
             window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
 
+        update_list ();
+
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
         append (scrolled);
