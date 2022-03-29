@@ -9,6 +9,7 @@
 
 public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
+    public signal void file_deleted ();
 
     private string DESTINATION_PATH { //vala-lint=naming-convention
         private get;
@@ -174,6 +175,7 @@ public class DesktopFileOperator : GLib.Object {
 
     public void delete_file (DesktopFile desktop_file) {
         delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop"));
+        file_deleted ();
     }
 
     private void delete_from_path (string path) {

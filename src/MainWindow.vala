@@ -43,7 +43,11 @@ public class MainWindow : Adw.ApplicationWindow {
             child = leaflet
         };
 
-        var toast = new Adw.Toast (_("Saved changes!")) {
+        var updated_toast = new Adw.Toast (_("Updated entry.")) {
+            timeout = 5
+        };
+
+        var deleted_toast = new Adw.Toast (_("Deleted entry.")) {
             timeout = 5
         };
 
@@ -66,7 +70,11 @@ public class MainWindow : Adw.ApplicationWindow {
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
             show_files_view ();
-            overlay.add_toast (toast);
+            overlay.add_toast (updated_toast);
+        });
+
+        DesktopFileOperator.get_default ().file_deleted.connect (() => {
+            overlay.add_toast (deleted_toast);
         });
 
         close_request.connect (() => {
