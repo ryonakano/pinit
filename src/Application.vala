@@ -4,12 +4,6 @@
  */
 
 public class Application : Adw.Application {
-    public static bool IS_ON_PANTHEON {
-        get {
-            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
-        }
-    }
-
     public static Settings settings;
     public MainWindow window { get; private set; }
 

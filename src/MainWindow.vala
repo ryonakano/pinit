@@ -7,8 +7,8 @@ public class MainWindow : Adw.ApplicationWindow {
     private FilesView files_view;
     private EditView edit_view;
     private Adw.Leaflet leaflet;
-    private Gtk.Button create_new_button;
-    private Gtk.HeaderBar headerbar;
+    private Gtk.Button home_button;
+    private Adw.HeaderBar headerbar;
 
     private enum Views {
         EDIT_VIEW,
@@ -47,8 +47,8 @@ public class MainWindow : Adw.ApplicationWindow {
             timeout = 5
         };
 
-        create_new_button = new Gtk.Button.from_icon_name ("document-new-symbolic") {
-            tooltip_text = _("Create a new app entry")
+        home_button = new Gtk.Button.from_icon_name ("go-home") {
+            tooltip_text = _("Create new or edit")
         };
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
@@ -69,10 +69,10 @@ public class MainWindow : Adw.ApplicationWindow {
             popover = preferences_popover
         };
 
-        headerbar = new Gtk.HeaderBar () {
-            title_widget = new Gtk.Label ("")
+        headerbar = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label ("Pin It!")
         };
-        headerbar.pack_start (create_new_button);
+        headerbar.pack_start (home_button);
         headerbar.pack_end (preferences_button);
 
         var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -89,15 +89,15 @@ public class MainWindow : Adw.ApplicationWindow {
             }
 
             if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
-                show_edit_view (DesktopFileOperator.get_default ().create_new ());
+                show_files_view ();
             }
 
             return false;
         });
         ((Gtk.Widget) this).add_controller (event_controller);
 
-        create_new_button.clicked.connect (() => {
-            show_edit_view (DesktopFileOperator.get_default ().create_new ());
+        home_button.clicked.connect (() => {
+            show_files_view ();
         });
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
@@ -133,7 +133,7 @@ public class MainWindow : Adw.ApplicationWindow {
     public void show_files_view () {
         files_view.update_list ();
         ((Gtk.Label) headerbar.title_widget).label = _("Edit Entry");
-        create_new_button.sensitive = true;
+        home_button.sensitive = false;
         leaflet.reorder_child_after (files_view, edit_view);
         leaflet.visible_child = files_view;
     }
@@ -141,7 +141,7 @@ public class MainWindow : Adw.ApplicationWindow {
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         set_header_file_info (desktop_file);
-        create_new_button.sensitive = false;
+        home_button.sensitive = true;
         leaflet.reorder_child_after (edit_view, files_view);
         leaflet.visible_child = edit_view;
     }
