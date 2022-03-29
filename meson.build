@@ -48,8 +48,8 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('gtk4'),
-        dependency('pango'),
         dependency('libadwaita-1'),
+        dependency('pango'),
         meson.get_compiler('vala').find_library('posix')
     ],
     install: true
