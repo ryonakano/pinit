@@ -22,15 +22,18 @@ public class FilesView : Gtk.Box {
             hexpand = true
         };
 
-        var no_files_grid = new Gtk.Label (
-            _("No valid app entries found")
-            //  _("If you've never created one, go back to Welcome View and click “New Entry”."),
-            //  "dialog-information"
-        );
+        var files_list_page = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        files_list_page.append (files_list);
+
+        var no_files_page = new Adw.StatusPage () {
+            title = _("No valid app entries found"),
+            description = _("If you've never created one, click the + button on the top."),
+            icon_name = "dialog-information"
+        };
 
         stack = new Gtk.Stack ();
-        stack.add_named (files_list, "files_list");
-        stack.add_named (no_files_grid, "no_files_grid");
+        stack.add_named (files_list_page, "files_list_page");
+        stack.add_named (no_files_page, "no_files_page");
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = stack,
@@ -107,10 +110,9 @@ public class FilesView : Gtk.Box {
         }
 
         if (files_list.get_last_child () != null) {
-            stack.visible_child_name = "files_list";
-            files_list.select_row (files_list.get_row_at_index (0));
+            stack.visible_child_name = "files_list_page";
         } else {
-            stack.visible_child_name = "no_files_grid";
+            stack.visible_child_name = "no_files_page";
         }
     }
 }

@@ -7,7 +7,7 @@ public class MainWindow : Adw.ApplicationWindow {
     private FilesView files_view;
     private EditView edit_view;
     private Adw.Leaflet leaflet;
-    private Gtk.Button home_button;
+    private Gtk.Button create_button;
     private Adw.HeaderBar headerbar;
 
     private enum Views {
@@ -47,8 +47,8 @@ public class MainWindow : Adw.ApplicationWindow {
             timeout = 5
         };
 
-        home_button = new Gtk.Button.from_icon_name ("go-home") {
-            tooltip_text = _("Create new or edit")
+        create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
+            tooltip_text = _("Create a new entry")
         };
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
@@ -72,7 +72,7 @@ public class MainWindow : Adw.ApplicationWindow {
         headerbar = new Adw.HeaderBar () {
             title_widget = new Gtk.Label ("Pin It!")
         };
-        headerbar.pack_start (home_button);
+        headerbar.pack_start (create_button);
         headerbar.pack_end (preferences_button);
 
         var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -89,15 +89,15 @@ public class MainWindow : Adw.ApplicationWindow {
             }
 
             if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
-                show_files_view ();
+                show_edit_view (DesktopFileOperator.get_default ().create_new ());
             }
 
             return false;
         });
         ((Gtk.Widget) this).add_controller (event_controller);
 
-        home_button.clicked.connect (() => {
-            show_files_view ();
+        create_button.clicked.connect (() => {
+            show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
 
         DesktopFileOperator.get_default ().file_updated.connect (() => {
@@ -132,8 +132,8 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public void show_files_view () {
         files_view.update_list ();
-        ((Gtk.Label) headerbar.title_widget).label = _("Edit Entry");
-        home_button.sensitive = false;
+        ((Gtk.Label) headerbar.title_widget).label = _("All Entries");
+        create_button.sensitive = true;
         leaflet.reorder_child_after (files_view, edit_view);
         leaflet.visible_child = files_view;
     }
@@ -141,7 +141,7 @@ public class MainWindow : Adw.ApplicationWindow {
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         set_header_file_info (desktop_file);
-        home_button.sensitive = true;
+        create_button.sensitive = false;
         leaflet.reorder_child_after (edit_view, files_view);
         leaflet.visible_child = edit_view;
     }
