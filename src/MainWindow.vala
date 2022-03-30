@@ -125,23 +125,14 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     private void set_visible_view () {
-        if (DesktopFileOperator.get_default ().files.size == 0) {
-            show_files_view ();
-            return;
-        }
-
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
-        switch (last_view) {
-            case Views.FILES_VIEW:
-                show_files_view ();
-                break;
-            case Views.EDIT_VIEW:
-                show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? DesktopFileOperator.get_default ().create_new ());
-                break;
-            default:
-                warning ("Unexpected view %s, falling back to the files view".printf (last_view.to_string ()));
-                show_files_view ();
-                break;
+        if (DesktopFileOperator.get_default ().files.size == 0 || last_view == Views.FILES_VIEW) {
+            show_files_view ();
+        } else if (last_view == Views.EDIT_VIEW) {
+            show_edit_view (
+                DesktopFileOperator.get_default ().get_unsaved_file () ??
+                DesktopFileOperator.get_default ().create_new ()
+            );
         }
     }
 
