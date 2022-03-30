@@ -125,6 +125,11 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     private void set_visible_view () {
+        if (DesktopFileOperator.get_default ().files.size == 0) {
+            show_files_view ();
+            return;
+        }
+
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
         switch (last_view) {
             case Views.FILES_VIEW:
