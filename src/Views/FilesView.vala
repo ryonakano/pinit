@@ -112,7 +112,6 @@ public class FilesView : Gtk.Box {
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.OK) {
                         DesktopFileOperator.get_default ().delete_file (file);
-                        update_list ();
                     }
 
                     delete_dialog.destroy ();

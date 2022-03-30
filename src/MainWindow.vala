@@ -57,7 +57,7 @@ public class MainWindow : Adw.ApplicationWindow {
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
             if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.q) {
-                destroy ();
+                close_request ();
             }
 
             if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
@@ -74,6 +74,8 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         DesktopFileOperator.get_default ().file_deleted.connect (() => {
+            edit_view.hide_all ();
+            files_view.update_list ();
             overlay.add_toast (deleted_toast);
         });
 
@@ -87,6 +89,8 @@ public class MainWindow : Adw.ApplicationWindow {
                     DesktopFileOperator.get_default ().delete_backup ();
                 }
             }
+
+            destroy ();
         });
 
         notify["default-width"].connect (() => {

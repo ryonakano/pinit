@@ -27,6 +27,8 @@ public class EditView : Gtk.Box {
     private CategoryChooser category_chooser;
     private Gtk.CheckButton terminal_checkbox;
 
+    private Gtk.Stack stack;
+
     public EditView (MainWindow window) {
         Object (window: window);
     }
@@ -202,9 +204,16 @@ public class EditView : Gtk.Box {
         main_box.append (terminal_checkbox);
         main_box.append (terminal_desc_label);
 
+        var no_selection_page = new Adw.StatusPage ();
+
+        stack = new Gtk.Stack ();
+        stack.add_named (main_box, "main_box");
+        stack.add_named (no_selection_page, "no_selection_page");
+
+        hide_all ();
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
-        append (main_box);
+        append (stack);
 
         back_button.clicked.connect (() => {
             window.show_files_view ();
@@ -274,6 +283,9 @@ public class EditView : Gtk.Box {
         category_chooser.selected = desktop_file.categories;
         terminal_checkbox.active = desktop_file.is_cli;
 
+        stack.visible_child_name = "main_box";
+        file_name_entry.grab_focus ();
+
         if (desktop_file.file_name != "") {
             if (desktop_file.app_name != "") {
                 ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
@@ -284,8 +296,15 @@ public class EditView : Gtk.Box {
             ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
         }
 
+        save_button.visible = true;
         set_save_button_sensitivity ();
-        file_name_entry.grab_focus ();
+    }
+
+    public void hide_all () {
+        stack.visible_child_name = "no_selection_page";
+
+        ((Gtk.Label) headerbar.title_widget).label = "";
+        save_button.visible = false;
     }
 
     private void set_save_button_sensitivity () {
