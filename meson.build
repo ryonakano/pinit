@@ -1,7 +1,7 @@
 project(
     'com.github.ryonakano.pinit',
     'vala', 'c',
-    version: '1.3.0',
+    version: '2.0.0',
     meson_version: '>=0.56.0'
 )
 
@@ -16,6 +16,8 @@ add_project_arguments(
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_data.set_quoted('VERSION', meson.project_version())
+config_data.set_quoted('RDNN_NAME', meson.project_name())
 config_file = configure_file(
     input: 'src' / 'Config.vala.in',
     output: '@BASENAME@',
@@ -36,8 +38,7 @@ sources = files(
     'src' / 'Views' / 'FilesView.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
-    'src' / 'MainWindow.vala',
-    'src' / 'StyleSwitcher.vala'
+    'src' / 'MainWindow.vala'
 )
 
 executable(

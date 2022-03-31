@@ -21,26 +21,24 @@ public class FilesView : Gtk.Box {
             tooltip_text = _("Create a new entry")
         };
 
-        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6
-        };
-        preferences_box.append (new StyleSwitcher ());
+        var theme_submenu = new GLib.Menu ();
+        theme_submenu.append (_("Light"), "app.style-light");
+        theme_submenu.append (_("Dark"), "app.style-dark");
+        theme_submenu.append (_("System"), "app.style-system");
 
-        var preferences_popover = new Gtk.Popover () {
-            child = preferences_box
-        };
+        var menu = new GLib.Menu ();
+        menu.append_submenu (_("Style"), theme_submenu);
+        ///TRANSLATORS: %s represents the app name (Pin It!) here
+        menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),
             icon_name = "open-menu",
-            popover = preferences_popover
+            menu_model = menu
         };
 
         headerbar = new Adw.HeaderBar () {
-            title_widget = new Gtk.Label ("Pin It!")
+            title_widget = new Gtk.Label (Constants.APP_NAME)
         };
         headerbar.pack_start (create_button);
         headerbar.pack_end (preferences_button);

@@ -15,7 +15,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public MainWindow () {
         Object (
-            title: "Pin It!"
+            title: Constants.APP_NAME
         );
     }
 
