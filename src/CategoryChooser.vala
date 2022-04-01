@@ -70,8 +70,13 @@ public class CategoryChooser : Gtk.Box {
         int i = 0;
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
-            toggle.get_style_context ().add_class ("category-toggle");
             toggle.toggled.connect (() => {
+                if (toggle.active) {
+                    toggle.get_style_context ().add_class ("accent");
+                } else {
+                    toggle.get_style_context ().remove_class ("accent");
+                }
+
                 toggled ();
             });
             toggles.add (toggle);

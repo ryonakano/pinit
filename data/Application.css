@@ -1,8 +1,0 @@
-.category-toggle {
-    background: #d4d4d4;
-    color: #1a1a1a;
-}
-.category-toggle:checked {
-    background: #206b00;
-    color: #fafafa;
-}

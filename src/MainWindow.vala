@@ -20,12 +20,6 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Application.css");
-        Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
-                                                    cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
         files_view = new FilesView (this);
         edit_view = new EditView (this);
 
