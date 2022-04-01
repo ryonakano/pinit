@@ -27,8 +27,9 @@ public class MainWindow : Adw.ApplicationWindow {
             can_navigate_back = true,
             transition_type = Adw.LeafletTransitionType.SLIDE
         };
-        leaflet.bind_property ("folded", files_view.headerbar, "show-end-title-buttons", GLib.BindingFlags.SYNC_CREATE);
-        leaflet.bind_property ("folded", edit_view.back_button, "visible", GLib.BindingFlags.SYNC_CREATE);
+        leaflet.notify["folded"].connect (() => {
+            set_header_buttons_form ();
+        });
         leaflet.append (files_view);
         leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         leaflet.append (edit_view);
@@ -46,6 +47,7 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         content = overlay;
+        set_header_buttons_form ();
         set_visible_view ();
 
         var event_controller = new Gtk.EventControllerKey ();
@@ -98,6 +100,11 @@ public class MainWindow : Adw.ApplicationWindow {
         notify["maximized"].connect (() => {
             Application.settings.set_boolean ("window-maximized", maximized);
         });
+    }
+
+    private void set_header_buttons_form () {
+        edit_view.update_cancel_button_form (leaflet.folded);
+        files_view.headerbar.show_end_title_buttons = leaflet.folded;
     }
 
     public void show_files_view () {

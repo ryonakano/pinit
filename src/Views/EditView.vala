@@ -15,7 +15,7 @@ public class EditView : Gtk.Box {
         }
     }
 
-    public Gtk.Button back_button { get; private set; }
+    private Gtk.Button cancel_button;
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
@@ -35,7 +35,7 @@ public class EditView : Gtk.Box {
 
     construct {
         // Headerbar part
-        back_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
+        cancel_button = new Gtk.Button ();
 
         save_button = new Gtk.Button.with_label (_("Save"));
         save_button.get_style_context ().add_class ("suggested-action");
@@ -43,7 +43,7 @@ public class EditView : Gtk.Box {
         headerbar = new Adw.HeaderBar () {
             title_widget = new Gtk.Label ("")
         };
-        headerbar.pack_start (back_button);
+        headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
         // Main part
@@ -208,7 +208,8 @@ public class EditView : Gtk.Box {
         append (headerbar);
         append (stack);
 
-        back_button.clicked.connect (() => {
+        cancel_button.clicked.connect (() => {
+            hide_all ();
             window.show_files_view ();
         });
 
@@ -291,6 +292,7 @@ public class EditView : Gtk.Box {
             ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
         }
 
+        cancel_button.visible = true;
         save_button.visible = true;
         save_button.sensitive = get_save_button_sensitivity ();
     }
@@ -299,7 +301,19 @@ public class EditView : Gtk.Box {
         stack.visible_child_name = "no_selection_page";
 
         ((Gtk.Label) headerbar.title_widget).label = "";
+        cancel_button.visible = false;
         save_button.visible = false;
+    }
+
+    public void update_cancel_button_form (bool folded) {
+        // Clear the current form
+        cancel_button.child = null;
+
+        if (folded) {
+            cancel_button.icon_name = "go-previous-symbolic";
+        } else {
+            cancel_button.label = _("Cancel");
+        }
     }
 
     private bool get_save_button_sensitivity () {
