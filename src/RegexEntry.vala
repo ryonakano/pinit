@@ -17,21 +17,26 @@ public class RegexEntry : Gtk.Entry {
 
     construct {
         buffer.notify["text"].connect (() => {
-            if (pattern.match (buffer.text)) {
-                get_style_context ().remove_class ("error");
-                get_style_context ().remove_class ("warning");
-                get_style_context ().add_class ("success");
-                is_valid = true;
-            } else if (is_strict) {
+            if (buffer.text == "") {
                 get_style_context ().remove_class ("success");
                 get_style_context ().remove_class ("warning");
-                get_style_context ().add_class ("error");
+                get_style_context ().remove_class ("error");
                 is_valid = false;
-            } else {
+            } else if (pattern.match (buffer.text)) {
+                get_style_context ().remove_class ("warning");
+                get_style_context ().remove_class ("error");
+                get_style_context ().add_class ("success");
+                is_valid = true;
+            } else if (!is_strict) {
                 get_style_context ().remove_class ("success");
                 get_style_context ().remove_class ("error");
                 get_style_context ().add_class ("warning");
                 is_valid = true;
+            } else {
+                get_style_context ().remove_class ("success");
+                get_style_context ().remove_class ("warning");
+                get_style_context ().add_class ("error");
+                is_valid = false;
             }
         });
     }
