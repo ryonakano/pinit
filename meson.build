@@ -38,7 +38,8 @@ sources = files(
     'src' / 'Views' / 'FilesView.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
-    'src' / 'MainWindow.vala'
+    'src' / 'MainWindow.vala',
+    'src' / 'RegexEntry.vala'
 )
 
 executable(

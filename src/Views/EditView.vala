@@ -19,9 +19,9 @@ public class EditView : Gtk.Box {
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
-    private Gtk.Entry file_name_entry;
-    private Gtk.Entry name_entry;
-    private Gtk.Entry comment_entry;
+    private RegexEntry file_name_entry;
+    private RegexEntry name_entry;
+    private RegexEntry comment_entry;
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
     private CategoryChooser category_chooser;
@@ -37,12 +37,7 @@ public class EditView : Gtk.Box {
         // Headerbar part
         back_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
 
-        save_button = new Gtk.Button.with_label (_("Save")) {
-            //  sensitive = (
-            //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-            //      exec_entry.text.length > 0 && category_chooser.selected != ""
-            //  )
-        };
+        save_button = new Gtk.Button.with_label (_("Save"));
         save_button.get_style_context ().add_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar () {
@@ -63,9 +58,7 @@ public class EditView : Gtk.Box {
             margin_bottom = 6
         };
         file_name_desc_label.get_style_context ().add_class ("dim-label");
-        // The actual pattern following fd.o specification would be:
-        // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
-        file_name_entry = new Gtk.Entry () {
+        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) {
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
@@ -90,7 +83,7 @@ public class EditView : Gtk.Box {
             margin_bottom = 6
         };
         name_desc_label.get_style_context ().add_class ("dim-label");
-        name_entry = new Gtk.Entry () {
+        name_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
         var name_grid = new Gtk.Grid () {
@@ -109,7 +102,7 @@ public class EditView : Gtk.Box {
             margin_bottom = 6
         };
         comment_desc_label.get_style_context ().add_class ("dim-label");
-        comment_entry = new Gtk.Entry () {
+        comment_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
         var comment_grid = new Gtk.Grid () {
@@ -267,11 +260,13 @@ public class EditView : Gtk.Box {
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_released.connect ((keyval, keycode, state) => {
-            set_save_button_sensitivity ();
+            save_button.sensitive = get_save_button_sensitivity ();
         });
         ((Gtk.Widget) this).add_controller (event_controller);
 
-        category_chooser.toggled.connect (set_save_button_sensitivity);
+        category_chooser.toggled.connect (() => {
+            save_button.sensitive = get_save_button_sensitivity ();
+        });
     }
 
     public void set_desktop_file (DesktopFile desktop_file) {
@@ -297,7 +292,7 @@ public class EditView : Gtk.Box {
         }
 
         save_button.visible = true;
-        set_save_button_sensitivity ();
+        save_button.sensitive = get_save_button_sensitivity ();
     }
 
     public void hide_all () {
@@ -307,11 +302,11 @@ public class EditView : Gtk.Box {
         save_button.visible = false;
     }
 
-    private void set_save_button_sensitivity () {
-        //  save_button.sensitive = (
-        //      file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-        //      exec_entry.text.length > 0 && category_chooser.selected != ""
-        //  );
+    private bool get_save_button_sensitivity () {
+        return (
+            file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
+            exec_entry.text.length > 0 && category_chooser.selected != ""
+        );
     }
 
     public void save_file (bool is_backup = false) {
