@@ -9,23 +9,23 @@ public class Application : Adw.Application {
 
     public Application () {
         Object (
-            application_id: Constants.RDNN_NAME,
+            application_id: Constants.PROJECT_NAME,
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
     construct {
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (Constants.GETTEXT_PACKAGE);
+        Intl.bindtextdomain (Constants.PROJECT_NAME, Constants.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Constants.PROJECT_NAME);
 
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
             var about_dialog = new Gtk.AboutDialog () {
                 transient_for = window,
                 modal = true,
-                logo_icon_name = Constants.RDNN_NAME,
+                logo_icon_name = Constants.PROJECT_NAME,
                 program_name = Constants.APP_NAME,
                 version = Constants.VERSION,
                 comments = _("Pin any apps into the launcher"),
@@ -67,7 +67,7 @@ public class Application : Adw.Application {
     }
 
     static construct {
-        settings = new Settings (Constants.RDNN_NAME);
+        settings = new Settings (Constants.PROJECT_NAME);
     }
 
     private void set_app_style (Adw.ColorScheme color_scheme) {

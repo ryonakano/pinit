@@ -1,7 +1,6 @@
 public class Constants {
-    public const string GETTEXT_PACKAGE = @GETTEXT_PACKAGE@;
+    public const string APP_NAME = "Pin It!";
     public const string LOCALEDIR = @LOCALEDIR@;
     public const string VERSION = @VERSION@;
-    public const string RDNN_NAME = @RDNN_NAME@;
-    public const string APP_NAME = "Pin It!";
+    public const string PROJECT_NAME = @PROJECT_NAME@;
 }
