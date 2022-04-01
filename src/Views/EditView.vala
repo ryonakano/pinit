@@ -58,7 +58,7 @@ public class EditView : Gtk.Box {
             margin_bottom = 6
         };
         file_name_desc_label.get_style_context ().add_class ("dim-label");
-        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) {
+        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
