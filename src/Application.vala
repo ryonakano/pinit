@@ -30,7 +30,7 @@ public class Application : Adw.Application {
                 version = Constants.PROJECT_VERSION,
                 comments = _("Pin any apps into the launcher"),
                 website = "https://github.com/ryonakano/pinit",
-                copyright = "2021-2022 Ryo Nakano",
+                copyright = "© 2021-2022 Ryo Nakano",
                 license_type = Gtk.License.GPL_3_0,
                 authors = { "Ryo Nakano" },
                 ///TRANSLATORS: Replace with your name and email address, don't translate literally
