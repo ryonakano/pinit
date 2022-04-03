@@ -25,7 +25,7 @@ You'll need the following dependencies to build:
 * libgee-0.8-dev
 * libgtk4-dev
 * libadwaita-1-dev
-* meson (>=0.56.0)
+* meson (>= 0.57.0)
 * valac
 
 Run `meson build` to configure the build environment. Change to the build directory and run `ninja` to build
