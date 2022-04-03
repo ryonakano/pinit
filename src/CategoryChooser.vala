@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CategoryChooser : Gtk.Box {
+public class CategoryChooser : Gtk.Grid {
     public signal void toggled ();
 
     public string selected {
@@ -17,6 +17,7 @@ public class CategoryChooser : Gtk.Box {
 
             return _selected;
         }
+
         set {
             string[] categories = value.split (";");
             foreach (var toggle in toggles) {
@@ -37,7 +38,8 @@ public class CategoryChooser : Gtk.Box {
 
     public CategoryChooser () {
         Object (
-            spacing: 6
+            column_spacing: 6,
+            row_spacing: 6
         );
     }
 
@@ -59,15 +61,8 @@ public class CategoryChooser : Gtk.Box {
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
 
-        var flowbox = new Gtk.FlowBox () {
-            hexpand = true,
-            max_children_per_line = categories.size,
-            selection_mode = Gtk.SelectionMode.NONE
-        };
-
-        append (flowbox);
-
         int i = 0;
+        int j = 0;
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
             toggle.toggled.connect (() => {
@@ -80,7 +75,14 @@ public class CategoryChooser : Gtk.Box {
                 toggled ();
             });
             toggles.add (toggle);
-            flowbox.insert (toggle, i);
+
+            if (i % 7 == 0) {
+                // attach in the next row
+                j++;
+                i = 0;
+            }
+
+            attach (toggle, i, j, 1, 1);
             i++;
         }
     }
@@ -91,7 +93,8 @@ public class CategoryChooser : Gtk.Box {
         public ToggleButton (string category, string label) {
             Object (
                 category: category,
-                label: label
+                label: label,
+                hexpand: true
             );
         }
     }
