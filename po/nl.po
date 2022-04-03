@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 13:21+0900\n"
+"POT-Creation-Date: 2022-04-03 18:54+0900\n"
 "PO-Revision-Date: 2022-02-10 13:36+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -24,8 +24,7 @@ msgstr "Bestandsnaam"
 
 #: src/Views/EditView.vala:36
 msgid "Name of the file where these app info is saved."
-msgstr ""
-"De naam van het bestand waarin de toepassingsinformatie is opgeslagen."
+msgstr "De naam van het bestand waarin de toepassingsinformatie is opgeslagen."
 
 #: src/Views/EditView.vala:44
 msgid "Suffix of the file"
@@ -56,8 +55,8 @@ msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
-"De opdracht/toepassing die wordt uitgevoerd als je de toepassing aanklikt "
-"in de starter. Geef een directe locatie of toepassingsalias op."
+"De opdracht/toepassing die wordt uitgevoerd als je de toepassing aanklikt in "
+"de starter. Geef een directe locatie of toepassingsalias op."
 
 #: src/Views/EditView.vala:95
 msgid "Icon File"
@@ -68,8 +67,8 @@ msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
-"Het pictogram dat bij de toepassing wordt getoond. Geef een directe "
-"locatie of pictogramalias op."
+"Het pictogram dat bij de toepassing wordt getoond. Geef een directe locatie "
+"of pictogramalias op."
 
 #: src/Views/EditView.vala:110
 msgid "App Categories"
