@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION FOR PINIT.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2021.
+# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2021,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 18:54+0900\n"
-"PO-Revision-Date: 2021-12-18 18:19+0100\n"
+"PO-Revision-Date: 2022-04-04 21:19+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -25,32 +25,32 @@ msgid "Pin any apps into the launcher"
 msgstr "Aggiungi qualsiasi app al launcher"
 
 #: data/pinit.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Add portable apps like raw executable files, AppImage files, etc. into the "
 "app launcher of your desktop environment."
 msgstr ""
-"Aggiungi app portatili come file eseguibili non elaborati, file AppImage, "
-"ecc. nel tuo avviatore di applicazioni facilmente. Modifica o elimina le "
-"voci di app esistenti senza apertura di un file manager."
+"Aggiungi app portatili come file eseguibili non elaborati, file AppImage, ecc. nel "
+"lanciatore di app del tuo ambiente desktop."
 
 #: data/pinit.appdata.xml.in:14
 msgid "Other features include:"
-msgstr ""
+msgstr "Altre funzionalità includono:"
 
 #: data/pinit.appdata.xml.in:18
 msgid "Edit or delete created app entries without opening the file manager"
-msgstr ""
+msgstr "Modifica o elimina le voci dell'app create senza aprire il file manager"
 
 #: data/pinit.appdata.xml.in:19
 msgid "Syntax error detection"
-msgstr ""
+msgstr "Rilevamento degli errori di sintassi"
 
 #: data/pinit.appdata.xml.in:20
 msgid ""
 "Automatically save everything―your data in editing, last open view, and "
 "preferences"
 msgstr ""
+"Salva automaticamente tutto: i tuoi dati in fase di modifica, ultima visualizzazione aperta e "
+"preferenze"
 
 #: data/pinit.appdata.xml.in:25
 msgid "Welcome View"
@@ -66,22 +66,19 @@ msgstr "Modifica visualizzazione"
 
 #: data/pinit.appdata.xml.in:44
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "Controlla l'ambiente desktop in runtime"
 
 #: data/pinit.appdata.xml.in:45
 msgid "Lessen scope of file access"
-msgstr ""
+msgstr "Riduci la portata dell'accesso ai file"
 
 #: data/pinit.appdata.xml.in:46
 msgid "Make window resizable"
-msgstr ""
+msgstr "Rendi ridimensionabile la finestra"
 
 #: data/pinit.appdata.xml.in:47
-#, fuzzy
 msgid "EditView: Less strict on file names"
-msgstr ""
-"Modifica visualizzazione: concentrarsi sulla voce del nome del file per "
-"impostazione predefinita"
+msgstr "Modifica Vista: meno severo sui nomi dei file"
 
 #: data/pinit.appdata.xml.in:49 data/pinit.appdata.xml.in:67
 #: data/pinit.appdata.xml.in:79 data/pinit.appdata.xml.in:92
@@ -91,15 +88,12 @@ msgid "Translation updates:"
 msgstr "Aggiornamenti di traduzione:"
 
 #: data/pinit.appdata.xml.in:51
-#, fuzzy
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
-"Aggiunta la traduzione in portoghese brasiliano (grazie a @DanielTolentino)"
+msgstr "Aggiunta Traduzione Italiana (grazie a @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:52
-#, fuzzy
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Aggiunta la traduzione francese (grazie a @NathanBnm)"
+msgstr "Aggiungi la traduzione in olandese (grazie a @Vistaus)"
 
 #: data/pinit.appdata.xml.in:53 data/pinit.appdata.xml.in:69
 #: data/pinit.appdata.xml.in:82 data/pinit.appdata.xml.in:95
