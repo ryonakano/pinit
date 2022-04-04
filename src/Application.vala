@@ -33,6 +33,7 @@ public class Application : Adw.Application {
                 copyright = "© 2021-2022 Ryo Nakano",
                 license_type = Gtk.License.GPL_3_0,
                 authors = { "Ryo Nakano" },
+                artists = { "hanaral" },
                 ///TRANSLATORS: Replace with your name and email address, don't translate literally
                 translator_credits = _("translator-credits")
             };
