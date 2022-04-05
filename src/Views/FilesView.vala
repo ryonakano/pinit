@@ -28,7 +28,7 @@ public class FilesView : Gtk.Box {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("Style"), theme_submenu);
-        ///TRANSLATORS: %s represents the app name (Pin It!) here
+        ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
         menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
 
         var preferences_button = new Gtk.MenuButton () {

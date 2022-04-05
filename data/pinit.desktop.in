@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Pin It!
 GenericName=Desktop File Creator
-Comment=Pin any apps into the launcher
+Comment=Pin portable apps into your application launcher
 Categories=System;Utility;
 Exec=com.github.ryonakano.pinit
 Icon=com.github.ryonakano.pinit
