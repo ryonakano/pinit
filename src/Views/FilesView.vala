@@ -91,6 +91,19 @@ public class FilesView : Gtk.Box {
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
+            // Fallback icon
+            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
+            // Inspired from https://stackoverflow.com/a/42800483
+            if (file.icon_file != "") {
+                // TODO: Check if icon_file represents a path to the icon or just the alias
+                try {
+                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.icon_file, 48, 48, true);
+                    app_icon = new Gtk.Image.from_pixbuf (pixbuf);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            }
+
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
                 halign = Gtk.Align.END,
@@ -119,12 +132,12 @@ public class FilesView : Gtk.Box {
             });
 
             var list_item = new Adw.ActionRow () {
-                icon_name = file.icon_file != "" ? file.icon_file : "image-missing",
                 title = file.app_name,
                 subtitle = file.comment,
                 activatable = true
             };
             list_item.get_style_context ().add_class ("boxed-list");
+            list_item.add_prefix (app_icon);
             list_item.add_suffix (delete_button);
             list_item.activated.connect (() => {
                 window.show_edit_view (file);
