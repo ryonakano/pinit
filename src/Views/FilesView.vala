@@ -104,7 +104,6 @@ public class FilesView : Gtk.Box {
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
-                halign = Gtk.Align.END,
                 valign = Gtk.Align.CENTER
             };
             delete_button.clicked.connect (() => {
