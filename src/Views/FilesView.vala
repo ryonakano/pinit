@@ -133,7 +133,6 @@ public class FilesView : Gtk.Box {
                 subtitle = file.comment,
                 activatable = true
             };
-            list_item.get_style_context ().add_class ("boxed-list");
             list_item.add_prefix (app_icon);
             list_item.add_suffix (delete_button);
             list_item.activated.connect (() => {
