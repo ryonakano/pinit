@@ -1,9 +1,9 @@
 # Pin It!
 Add portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
 
-![Welcome View](data/screenshots/pantheon/screenshot-welcome-view.png)
+![Files View](data/screenshots/screenshot-files-view.png)
 
-![Edit View](data/screenshots/pantheon/screenshot-edit-view.png)
+![Edit View](data/screenshots/screenshot-edit-view.png)
 
 Other features include:
 
