@@ -22,22 +22,30 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>Welcome View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-welcome-view.png</image>
-    </screenshot>
-    <screenshot>
       <caption>Files View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-files-view.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/screenshot-files-view.png</image>
     </screenshot>
     <screenshot>
       <caption>Edit View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-edit-view.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/screenshot-edit-view.png</image>
     </screenshot>
   </screenshots>
 
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="2.0.0" date="2021-04-07" urgency="high">
+      <description>
+        <ul>
+          <li>The app now fully redesigned for modern desktop environments!</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Italian translation (thanks to @albanobattistella)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2021-04-04" urgency="medium">
       <description>
         <ul>
