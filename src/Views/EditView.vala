@@ -223,9 +223,11 @@ public class EditView : Gtk.Box {
             }
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an executable file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
+                _("Select an executable file"), window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
-            );
+            ) {
+                modal = true
+            };
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
                     exec_entry.text = filechooser.get_file ().get_path ();
@@ -247,9 +249,11 @@ public class EditView : Gtk.Box {
             filefilter.set_filter_name (_("PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an icon file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
+                _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
-            );
+            ) {
+                modal = true
+            };
             filechooser.add_filter (filefilter);
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {

@@ -5,7 +5,7 @@
 
 public class Application : Adw.Application {
     public static Settings settings;
-    public MainWindow window { get; private set; }
+    private MainWindow window;
 
     public Application () {
         Object (
