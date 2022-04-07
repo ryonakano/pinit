@@ -93,14 +93,12 @@ public class FilesView : Gtk.Box {
 
             // Fallback icon
             var app_icon = new Gtk.Image.from_icon_name ("image-missing");
-            // Inspired from https://stackoverflow.com/a/42800483
             if (file.icon_file != "") {
-                // TODO: Check if icon_file represents a path to the icon or just the alias
-                try {
-                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.icon_file, 48, 48, true);
-                    app_icon = new Gtk.Image.from_pixbuf (pixbuf);
-                } catch (Error e) {
-                    warning (e.message);
+                // Check if icon_file represents a path to the icon or just the alias
+                if (File.new_for_path (file.icon_file).query_exists ()) {
+                    app_icon.file = file.icon_file;
+                } else {
+                    app_icon.icon_name = file.icon_file;
                 }
             }
 
