@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 18:54+0900\n"
+"POT-Creation-Date: 2022-04-10 08:57+0900\n"
 "PO-Revision-Date: 2022-02-10 13:41+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -23,14 +23,15 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
-msgid "Pin any apps into the launcher"
-msgstr "Voeg toepassingen toe aan de starter"
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
 
 #: data/pinit.appdata.xml.in:11
 #, fuzzy
 msgid ""
-"Add portable apps like raw executable files, AppImage files, etc. into the "
-"app launcher of your desktop environment."
+"Create the shortcut to portable apps like raw executable files, AppImage "
+"files, etc. into the app launcher of your desktop environment."
 msgstr ""
 "Voeg eenvoudig toepassingen toe aan de starter, zoals uitvoerbare bestanden, "
 "AppImage-bestanden, etc. Bewerk of verwijder reeds aanwezige items zonder "
@@ -55,154 +56,163 @@ msgid ""
 msgstr ""
 
 #: data/pinit.appdata.xml.in:25
-msgid "Welcome View"
-msgstr "Welkomstscherm"
-
-#: data/pinit.appdata.xml.in:29
 msgid "Files View"
 msgstr "Bestandsscherm"
 
-#: data/pinit.appdata.xml.in:33
+#: data/pinit.appdata.xml.in:29
 msgid "Edit View"
 msgstr "Bewerkscherm"
 
-#: data/pinit.appdata.xml.in:44
+#: data/pinit.appdata.xml.in:40
+msgid "The app now fully redesigned for modern desktop environments!"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:42 data/pinit.appdata.xml.in:54
+#: data/pinit.appdata.xml.in:68 data/pinit.appdata.xml.in:86
+#: data/pinit.appdata.xml.in:98 data/pinit.appdata.xml.in:111
+#: data/pinit.appdata.xml.in:124 data/pinit.appdata.xml.in:137
+#: data/pinit.appdata.xml.in:152
+msgid "Translation updates:"
+msgstr "Bijgewerkte vertalingen:"
+
+#: data/pinit.appdata.xml.in:44 data/pinit.appdata.xml.in:56
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:72
+#: data/pinit.appdata.xml.in:88 data/pinit.appdata.xml.in:101
+#: data/pinit.appdata.xml.in:114 data/pinit.appdata.xml.in:126
+#: data/pinit.appdata.xml.in:139 data/pinit.appdata.xml.in:155
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:52
+msgid "AppData: Fix release year"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:63
 msgid "Check desktop environment on runtime"
 msgstr "Controleer de werkomgeving bij het uitvoeren"
 
-#: data/pinit.appdata.xml.in:45
+#: data/pinit.appdata.xml.in:64
 msgid "Lessen scope of file access"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:46
+#: data/pinit.appdata.xml.in:65
 msgid "Make window resizable"
 msgstr "Pas de vensterafmetingen aan"
 
-#: data/pinit.appdata.xml.in:47
+#: data/pinit.appdata.xml.in:66
 #, fuzzy
 msgid "EditView: Less strict on file names"
 msgstr "Minder streng bij bestandsnamen"
 
-#: data/pinit.appdata.xml.in:49 data/pinit.appdata.xml.in:67
-#: data/pinit.appdata.xml.in:79 data/pinit.appdata.xml.in:92
-#: data/pinit.appdata.xml.in:105 data/pinit.appdata.xml.in:118
-#: data/pinit.appdata.xml.in:133
-msgid "Translation updates:"
-msgstr "Bijgewerkte vertalingen:"
-
-#: data/pinit.appdata.xml.in:51
+#: data/pinit.appdata.xml.in:70
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:52
+#: data/pinit.appdata.xml.in:71
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:53 data/pinit.appdata.xml.in:69
-#: data/pinit.appdata.xml.in:82 data/pinit.appdata.xml.in:95
-#: data/pinit.appdata.xml.in:107 data/pinit.appdata.xml.in:120
-#: data/pinit.appdata.xml.in:136
-msgid "Update Japanese translation"
-msgstr ""
-
-#: data/pinit.appdata.xml.in:60
+#: data/pinit.appdata.xml.in:79
 msgid "Fix build error on other distros"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:61
+#: data/pinit.appdata.xml.in:80
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:62
+#: data/pinit.appdata.xml.in:81
 msgid "Restore last opened view and its state"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:63
+#: data/pinit.appdata.xml.in:82
 msgid "Add new style switcher"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:64
+#: data/pinit.appdata.xml.in:83
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:65
+#: data/pinit.appdata.xml.in:84
 msgid "Readable copies"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:76
+#: data/pinit.appdata.xml.in:95
 msgid "FilesView: Ellipsize if label texts are too long"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:77
+#: data/pinit.appdata.xml.in:96
 msgid "Tell accepted file formats in FileChooser"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:100
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:89
+#: data/pinit.appdata.xml.in:108
 msgid "EditView: Focus on file name entry by default"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:90
+#: data/pinit.appdata.xml.in:109
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:94
+#: data/pinit.appdata.xml.in:113
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:102
+#: data/pinit.appdata.xml.in:121
 msgid "Improved support for other desktop environments"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:103
+#: data/pinit.appdata.xml.in:122
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:114
+#: data/pinit.appdata.xml.in:133
 msgid "Add CategoryChooser"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:115
+#: data/pinit.appdata.xml.in:134
 msgid "Support Alt+Home to show welcome"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:116
+#: data/pinit.appdata.xml.in:135
 msgid "Allow GPU acceralation by default"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:127
+#: data/pinit.appdata.xml.in:146
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:128
+#: data/pinit.appdata.xml.in:147
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:129
+#: data/pinit.appdata.xml.in:148
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:130
+#: data/pinit.appdata.xml.in:149
 msgid "Fix unreadable description text in AppCenter"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:131
+#: data/pinit.appdata.xml.in:150
 msgid "Save and restore window position"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:135
+#: data/pinit.appdata.xml.in:154
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.appdata.xml.in:143
+#: data/pinit.appdata.xml.in:162
 msgid "Initial release"
 msgstr "Eerste uitgave"
 
-#: data/pinit.appdata.xml.in:149
+#: data/pinit.appdata.xml.in:168
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -213,6 +223,12 @@ msgstr "Maak toepassingsitems"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Bestand;Desktop;Items;Maken;Bewerken;Pictogram;AppImage;"
+
+#~ msgid "Pin any apps into the launcher"
+#~ msgstr "Voeg toepassingen toe aan de starter"
+
+#~ msgid "Welcome View"
+#~ msgstr "Welkomstscherm"
 
 #~ msgid ""
 #~ "Pin It! comes with syntax errors detection, so you will never need to "

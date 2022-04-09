@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 18:54+0900\n"
+"POT-Creation-Date: 2022-04-10 08:57+0900\n"
 "PO-Revision-Date: 2021-12-17 14:19+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,42 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/Views/EditView.vala:34
+#: src/Views/EditView.vala:40
+msgid "Save"
+msgstr ""
+
+#: src/Views/EditView.vala:50
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/Views/EditView.vala:36
+#: src/Views/EditView.vala:55
 #, fuzzy
 msgid "Name of the file where these app info is saved."
 msgstr ""
 "以下の情報が保存されるファイルの名前です。小文字と数字のみを使用してくださ"
 "い。"
 
-#: src/Views/EditView.vala:44
+#: src/Views/EditView.vala:65
 msgid "Suffix of the file"
 msgstr "ファイル拡張子"
 
-#: src/Views/EditView.vala:56
+#: src/Views/EditView.vala:77
 msgid "App Name"
 msgstr "アプリ名"
 
-#: src/Views/EditView.vala:57
+#: src/Views/EditView.vala:81
 msgid "Shown in the launcher or Dock."
 msgstr "ランチャーやドックに表示されます。"
 
-#: src/Views/EditView.vala:68
+#: src/Views/EditView.vala:96
 msgid "Comment"
 msgstr "コメント"
 
-#: src/Views/EditView.vala:69
+#: src/Views/EditView.vala:100
 msgid "A tooltip text to describe what the app helps you to do."
 msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
 
-#: src/Views/EditView.vala:80
+#: src/Views/EditView.vala:115
 msgid "Exec File"
 msgstr "実行ファイル"
 
-#: src/Views/EditView.vala:82
+#: src/Views/EditView.vala:120
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
@@ -60,226 +64,241 @@ msgstr ""
 "ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
 "を、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:95
+#: src/Views/EditView.vala:137
 msgid "Icon File"
 msgstr "アイコンファイル"
 
-#: src/Views/EditView.vala:97
+#: src/Views/EditView.vala:142
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:110
+#: src/Views/EditView.vala:159
 msgid "App Categories"
 msgstr "アプリのカテゴリー"
 
-#: src/Views/EditView.vala:111
+#: src/Views/EditView.vala:163
 msgid "Type of the app, multiplly selectable."
 msgstr "アプリの種類です。複数選択できます。"
 
-#: src/Views/EditView.vala:120
+#: src/Views/EditView.vala:176
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
-#: src/Views/EditView.vala:123
+#: src/Views/EditView.vala:179
 msgid "Check this in if you want to registar a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
-#: src/Views/EditView.vala:125
-msgid "Save entry"
-msgstr "エントリーを保存"
-
-#: src/Views/EditView.vala:150
+#: src/Views/EditView.vala:226
 msgid "Select an executable file"
 msgstr "実行ファイルを選択"
 
-#: src/Views/EditView.vala:151 src/Views/EditView.vala:177
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
 msgid "Open"
 msgstr "開く"
 
-#: src/Views/EditView.vala:151 src/Views/EditView.vala:177
-#: src/Views/FilesView.vala:109
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
+#: src/Views/EditView.vala:319
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/EditView.vala:173
+#: src/Views/EditView.vala:249
 msgid "PNG, SVG, or XMP files"
 msgstr "PNG、SVG、XMP ファイル"
 
-#: src/Views/EditView.vala:176
+#: src/Views/EditView.vala:252
 msgid "Select an icon file"
 msgstr "アイコンファイルを選択"
 
-#: src/Views/FilesView.vala:23
-msgid "No valid app entries found"
-msgstr "有効なアプリのエントリーが見つかりません"
-
-#: src/Views/FilesView.vala:24
-msgid ""
-"If you've never created one, go back to Welcome View and click “New Entry”."
-msgstr ""
-"アプリのエントリーを作成したことがない場合は、ようこそ画面に戻って“新しいエン"
-"トリー”をクリックしてください。"
-
-#: src/Views/FilesView.vala:76
-msgid "Delete…"
-msgstr "削除…"
-
-#: src/Views/FilesView.vala:82
-msgid "Edit…"
-msgstr "編集…"
-
-#: src/Views/FilesView.vala:101 src/Views/FilesView.vala:114
+#: src/Views/EditView.vala:291
 #, c-format
-msgid "Are you sure you want to delete “%s”?"
-msgstr "“%s”を削除してもよろしいですか？"
+msgid "Editing “%s”"
+msgstr "“%s”を編集しています"
 
-#: src/Views/FilesView.vala:102 src/Views/FilesView.vala:115
-msgid "This removes the app from the launcher."
-msgstr "この操作によって、ランチャーからアプリが削除されます。"
+#: src/Views/EditView.vala:293
+msgid "Editing Entry"
+msgstr "エントリーを編集しています"
 
-#: src/Views/FilesView.vala:119
-msgid "Delete"
-msgstr "削除"
-
-#: src/Views/WelcomeView.vala:10
-msgid "Pin any apps into the launcher"
-msgstr "ランチャーにアプリをピン止めします"
-
-#: src/Views/WelcomeView.vala:19 src/MainWindow.vala:175
+#: src/Views/EditView.vala:296
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/Views/WelcomeView.vala:19
-msgid "Create a new app entry."
-msgstr "新しいアプリのエントリーを作成します。"
-
-#: src/Views/WelcomeView.vala:20 src/MainWindow.vala:153
-msgid "Edit Entry"
-msgstr "エントリーを編集"
-
-#: src/Views/WelcomeView.vala:20
-msgid "Edit an existing app entry."
-msgstr "既存のエントリーを編集します。"
-
-#: src/CategoryChooser.vala:51
-msgid "Audio & Video"
-msgstr "オーディオとビデオ"
-
-#: src/CategoryChooser.vala:52
-msgid "Audio"
-msgstr "オーディオ"
-
-#: src/CategoryChooser.vala:53
-msgid "Video"
-msgstr "ビデオ"
-
-#: src/CategoryChooser.vala:54
-msgid "Development"
-msgstr "開発"
-
-#: src/CategoryChooser.vala:55
-msgid "Education"
-msgstr "教育"
-
-#: src/CategoryChooser.vala:56
-msgid "Game"
-msgstr "ゲーム"
-
-#: src/CategoryChooser.vala:57
-msgid "Graphics"
-msgstr "グラフィックス"
-
-#: src/CategoryChooser.vala:58
-msgid "Network"
-msgstr "ネットワーク"
-
-#: src/CategoryChooser.vala:59
-msgid "Office"
-msgstr "オフィス"
-
-#: src/CategoryChooser.vala:60
-msgid "Science"
-msgstr "科学"
-
-#: src/CategoryChooser.vala:61
-msgid "Settings"
-msgstr "設定"
-
-#: src/CategoryChooser.vala:62 src/StyleSwitcher.vala:56
-msgid "System"
-msgstr "システム"
-
-#: src/CategoryChooser.vala:63
-msgid "Utility"
-msgstr "ユーティリティー"
-
-#: src/InfoButton.vala:11
-msgid "Recommendations for naming"
-msgstr ""
-
-#: src/InfoButton.vala:17
+#: src/Views/EditView.vala:346
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
 
-#: src/InfoButton.vala:18
+#: src/Views/EditView.vala:347
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
 
-#: src/InfoButton.vala:24
+#: src/Views/EditView.vala:353
 #, c-format
 msgid "For more info, see %s."
 msgstr ""
 
-#: src/InfoButton.vala:26
+#: src/Views/EditView.vala:355
 msgid "the file naming specification by freedesktop.org"
 msgstr ""
 
-#: src/MainWindow.vala:60
-msgid "Saved changes!"
-msgstr "変更を保存しました！"
+#: src/Views/EditView.vala:377
+msgid "Recommendations for naming"
+msgstr ""
 
-#: src/MainWindow.vala:65
-msgid "Create new or edit"
-msgstr "ファイルを作成または編集します"
+#: src/Views/FilesView.vala:21
+#, fuzzy
+msgid "Create a new entry"
+msgstr "新しいアプリのエントリーを作成します。"
 
-#: src/MainWindow.vala:76
-msgid "Preferences"
-msgstr "設定"
-
-#: src/MainWindow.vala:170
-#, c-format
-msgid "Editing “%s”"
-msgstr "“%s”を編集しています"
-
-#: src/MainWindow.vala:172
-msgid "Editing Entry"
-msgstr "エントリーを編集しています"
-
-#: src/StyleSwitcher.vala:24
-msgid "Style:"
-msgstr "スタイル:"
-
-#: src/StyleSwitcher.vala:30
-msgid "Light style"
-msgstr "ライトスタイル"
-
-#: src/StyleSwitcher.vala:33
+#: src/Views/FilesView.vala:25
 msgid "Light"
 msgstr "ライト"
 
-#: src/StyleSwitcher.vala:37
-msgid "Dark style"
-msgstr "ダークスタイル"
-
-#: src/StyleSwitcher.vala:40
+#: src/Views/FilesView.vala:26
 msgid "Dark"
 msgstr "ダーク"
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr "システムの設定と同じスタイルを使います"
+#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+msgid "System"
+msgstr "システム"
+
+#: src/Views/FilesView.vala:30
+#, fuzzy
+msgid "Style"
+msgstr "スタイル:"
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/Views/FilesView.vala:32
+#, c-format
+msgid "About %s…"
+msgstr ""
+
+#: src/Views/FilesView.vala:35
+msgid "Preferences"
+msgstr "設定"
+
+#: src/Views/FilesView.vala:56
+msgid "No valid app entries found"
+msgstr "有効なアプリのエントリーが見つかりません"
+
+#: src/Views/FilesView.vala:57
+#, fuzzy
+msgid "If you've never created one, click the + button on the top."
+msgstr ""
+"アプリのエントリーを作成したことがない場合は、ようこそ画面に戻って“新しいエン"
+"トリー”をクリックしてください。"
+
+#: src/Views/FilesView.vala:106
+msgid "Delete…"
+msgstr "削除…"
+
+#: src/Views/FilesView.vala:113
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "“%s”を削除してもよろしいですか？"
+
+#: src/Views/FilesView.vala:114
+msgid "This removes the app from the launcher."
+msgstr "この操作によって、ランチャーからアプリが削除されます。"
+
+#: src/Views/FilesView.vala:117
+msgid "Delete"
+msgstr "削除"
+
+#: src/CategoryChooser.vala:50
+msgid "Audio & Video"
+msgstr "オーディオとビデオ"
+
+#: src/CategoryChooser.vala:51
+msgid "Audio"
+msgstr "オーディオ"
+
+#: src/CategoryChooser.vala:52
+msgid "Video"
+msgstr "ビデオ"
+
+#: src/CategoryChooser.vala:53
+msgid "Development"
+msgstr "開発"
+
+#: src/CategoryChooser.vala:54
+msgid "Education"
+msgstr "教育"
+
+#: src/CategoryChooser.vala:55
+msgid "Game"
+msgstr "ゲーム"
+
+#: src/CategoryChooser.vala:56
+msgid "Graphics"
+msgstr "グラフィックス"
+
+#: src/CategoryChooser.vala:57
+msgid "Network"
+msgstr "ネットワーク"
+
+#: src/CategoryChooser.vala:58
+msgid "Office"
+msgstr "オフィス"
+
+#: src/CategoryChooser.vala:59
+msgid "Science"
+msgstr "科学"
+
+#: src/CategoryChooser.vala:60
+msgid "Settings"
+msgstr "設定"
+
+#: src/CategoryChooser.vala:62
+msgid "Utility"
+msgstr "ユーティリティー"
+
+#: src/Application.vala:31
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+
+#. TRANSLATORS: Replace with your name and email address, don't translate literally
+#: src/Application.vala:38
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:41
+#, fuzzy
+msgid "Updated entry."
+msgstr "エントリーを保存"
+
+#: src/MainWindow.vala:45
+#, fuzzy
+msgid "Deleted entry."
+msgstr "削除"
+
+#~ msgid "Edit…"
+#~ msgstr "編集…"
+
+#~ msgid "Pin any apps into the launcher"
+#~ msgstr "ランチャーにアプリをピン止めします"
+
+#~ msgid "Edit Entry"
+#~ msgstr "エントリーを編集"
+
+#~ msgid "Edit an existing app entry."
+#~ msgstr "既存のエントリーを編集します。"
+
+#~ msgid "Saved changes!"
+#~ msgstr "変更を保存しました！"
+
+#~ msgid "Create new or edit"
+#~ msgstr "ファイルを作成または編集します"
+
+#~ msgid "Light style"
+#~ msgstr "ライトスタイル"
+
+#~ msgid "Dark style"
+#~ msgstr "ダークスタイル"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "システムの設定と同じスタイルを使います"
