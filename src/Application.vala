@@ -28,7 +28,7 @@ public class Application : Adw.Application {
                 logo_icon_name = Constants.PROJECT_NAME,
                 program_name = Constants.APP_NAME,
                 version = Constants.PROJECT_VERSION,
-                comments = _("Pin portable apps into your application launcher"),
+                comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
                 website = "https://github.com/ryonakano/pinit",
                 copyright = "© 2021-2022 Ryo Nakano",
                 license_type = Gtk.License.GPL_3_0,

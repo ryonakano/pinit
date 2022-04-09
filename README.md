@@ -1,5 +1,5 @@
 # Pin It!
-Add portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
+Create the shortcut to portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
 
 ![Files View](data/screenshots/screenshot-files-view.png)
 
