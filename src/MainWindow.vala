@@ -21,7 +21,7 @@ public class MainWindow : Hdy.Window {
 
     public MainWindow () {
         Object (
-            title: "Pin It!"
+            title: Constants.APP_NAME
         );
     }
 
@@ -143,7 +143,7 @@ public class MainWindow : Hdy.Window {
     }
 
     public void show_welcome_view () {
-        header_bar.title = "Pin It!";
+        header_bar.title = Constants.APP_NAME;
         home_button.sensitive = false;
         deck.visible_child = welcome_view;
     }

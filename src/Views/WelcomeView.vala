@@ -6,7 +6,7 @@
 public class WelcomeView : Granite.Widgets.Welcome {
     public WelcomeView () {
         Object (
-            title: "Pin It!",
+            title: Constants.APP_NAME,
             subtitle: _("Pin any apps into the launcher")
         );
     }
