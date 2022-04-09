@@ -9,8 +9,8 @@ public class MainWindow : Adw.ApplicationWindow {
     private Adw.Leaflet leaflet;
 
     private enum Views {
-        EDIT_VIEW,
-        FILES_VIEW;
+        FILES_VIEW,
+        EDIT_VIEW;
     }
 
     public MainWindow () {
@@ -127,13 +127,11 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private void set_visible_view () {
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
-        if (DesktopFileOperator.get_default ().files.size == 0 || last_view == Views.FILES_VIEW) {
+        var last_edited_file = DesktopFileOperator.get_default ().get_unsaved_file ();
+        if (last_view == Views.FILES_VIEW || last_edited_file == null) {
             show_files_view ();
-        } else if (last_view == Views.EDIT_VIEW) {
-            show_edit_view (
-                DesktopFileOperator.get_default ().get_unsaved_file () ??
-                DesktopFileOperator.get_default ().create_new ()
-            );
+        } else {
+            show_edit_view (last_edited_file);
         }
     }
 
