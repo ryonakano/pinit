@@ -3,40 +3,88 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class FilesView : Gtk.ScrolledWindow {
+public class FilesView : Gtk.Box {
+    public MainWindow window { private get; construct; }
+
+    public Adw.HeaderBar headerbar { get; private set; }
+
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
 
-    public FilesView () {
-        Object (
-            margin: 12,
-            hscrollbar_policy: Gtk.PolicyType.NEVER
-        );
+    public FilesView (MainWindow window) {
+        Object (window: window);
     }
 
     construct {
-        files_list = new Gtk.ListBox () {
-            expand = true
+        // HeaderBar part
+        var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
+            tooltip_text = _("Create a new entry")
         };
 
-        var no_files_grid = new Granite.Widgets.AlertView (
-            _("No valid app entries found"),
-            _("If you've never created one, go back to Welcome View and click “New Entry”."),
-            "dialog-information"
-        );
+        var theme_submenu = new GLib.Menu ();
+        theme_submenu.append (_("Light"), "app.style-light");
+        theme_submenu.append (_("Dark"), "app.style-dark");
+        theme_submenu.append (_("System"), "app.style-system");
+
+        var menu = new GLib.Menu ();
+        menu.append_submenu (_("Style"), theme_submenu);
+        ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
+        menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
+
+        var preferences_button = new Gtk.MenuButton () {
+            tooltip_text = _("Preferences"),
+            icon_name = "open-menu",
+            menu_model = menu
+        };
+
+        headerbar = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label (Constants.APP_NAME)
+        };
+        headerbar.pack_start (create_button);
+        headerbar.pack_end (preferences_button);
+
+        // Main part
+        files_list = new Gtk.ListBox () {
+            vexpand = true,
+            hexpand = true
+        };
+
+        var files_list_page = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        files_list_page.append (files_list);
+
+        var no_files_page = new Adw.StatusPage () {
+            title = _("No valid app entries found"),
+            description = _("If you've never created one, click the + button on the top."),
+            icon_name = "dialog-information"
+        };
 
         stack = new Gtk.Stack ();
-        stack.add_named (files_list, "files_list");
-        stack.add_named (no_files_grid, "no_files_grid");
+        stack.add_named (files_list_page, "files_list_page");
+        stack.add_named (no_files_page, "no_files_page");
 
-        get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
-        add (stack);
-        show_all ();
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = stack,
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            margin_top = 12,
+            margin_bottom = 24,
+            margin_start = 24,
+            margin_end = 24
+        };
+
+        create_button.clicked.connect (() => {
+            window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
+        });
+
+        update_list ();
+
+        orientation = Gtk.Orientation.VERTICAL;
+        append (headerbar);
+        append (scrolled);
     }
 
     public void update_list () {
-        foreach (var row in files_list.get_children ()) {
-            row.destroy ();
+        while ((Gtk.ListBoxRow) files_list.get_last_child () != null) {
+            files_list.remove ((Gtk.ListBoxRow) files_list.get_last_child ());
         }
 
         var files = DesktopFileOperator.get_default ().files;
@@ -44,85 +92,34 @@ public class FilesView : Gtk.ScrolledWindow {
             var file = files.get (i);
 
             // Fallback icon
-            var app_icon = new Gtk.Image.from_icon_name ("image-missing", Gtk.IconSize.DIALOG);
-            // Inspired from https://stackoverflow.com/a/42800483
+            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
             if (file.icon_file != "") {
-                try {
-                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.icon_file, 48, 48, true);
-                    app_icon = new Gtk.Image.from_pixbuf (pixbuf);
-                } catch (Error e) {
-                    warning (e.message);
+                // Check if icon_file represents a path to the icon or just the alias
+                if (File.new_for_path (file.icon_file).query_exists ()) {
+                    app_icon.file = file.icon_file;
+                } else {
+                    app_icon.icon_name = file.icon_file;
                 }
             }
 
-            app_icon.margin_end = 12;
-
-            var app_name_label = new Gtk.Label (file.app_name) {
-                halign = Gtk.Align.START,
-                ellipsize = Pango.EllipsizeMode.END,
-                tooltip_text = file.app_name,
-                margin_bottom = 12
-            };
-            app_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-
-            var app_comment_label = new Gtk.Label (file.comment) {
-                halign = Gtk.Align.START,
-                ellipsize = Pango.EllipsizeMode.END,
-                tooltip_text = file.comment
-            };
-            app_comment_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-
-            var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.BUTTON) {
+            var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
-                expand = true,
-                halign = Gtk.Align.END
+                valign = Gtk.Align.CENTER
             };
-
-            var edit_button = new Gtk.Button.from_icon_name ("document-edit-symbolic", Gtk.IconSize.BUTTON) {
-                tooltip_text = _("Edit…"),
-                expand = false,
-                halign = Gtk.Align.END
-            };
-
-            var app_grid = new Gtk.Grid () {
-                margin = 12,
-                column_spacing = 6
-            };
-            app_grid.attach (app_icon, 0, 0, 1, 2);
-            app_grid.attach (app_name_label, 1, 0, 1, 1);
-            app_grid.attach (app_comment_label, 1, 1, 1, 1);
-            app_grid.attach (delete_button, 2, 0, 1, 2);
-            app_grid.attach (edit_button, 3, 0, 1, 2);
-
             delete_button.clicked.connect (() => {
-                Gtk.Dialog delete_dialog;
-                if (Application.IS_ON_PANTHEON) {
-                    delete_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                        _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                        _("This removes the app from the launcher."),
-                        "dialog-warning",
-                        Gtk.ButtonsType.NONE
-                    ) {
-                        modal = true,
-                        transient_for = ((Application) GLib.Application.get_default ()).window
-                    };
-                    delete_dialog.add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
-                } else {
-                    delete_dialog = new Gtk.MessageDialog (
-                        ((Application) GLib.Application.get_default ()).window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
-                    ) {
-                        text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                        secondary_text = _("This removes the app from the launcher.")
-                    };
-                }
+                var delete_dialog = new Gtk.MessageDialog (
+                    window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
+                ) {
+                    text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    secondary_text = _("This removes the app from the launcher.")
+                };
 
                 var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
-                confirm_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                confirm_button.get_style_context ().add_class ("destructive-action");
 
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.OK) {
                         DesktopFileOperator.get_default ().delete_file (file);
-                        update_list ();
                     }
 
                     delete_dialog.destroy ();
@@ -131,23 +128,24 @@ public class FilesView : Gtk.ScrolledWindow {
                 delete_dialog.show ();
             });
 
-            edit_button.clicked.connect (() => {
-                ((Application) GLib.Application.get_default ()).window.show_edit_view (file);
+            var list_item = new Adw.ActionRow () {
+                title = file.app_name,
+                subtitle = file.comment,
+                activatable = true
+            };
+            list_item.add_prefix (app_icon);
+            list_item.add_suffix (delete_button);
+            list_item.activated.connect (() => {
+                window.show_edit_view (file);
             });
 
-            var list_item = new Gtk.ListBoxRow ();
-            list_item.add (app_grid);
-
-            files_list.add (list_item);
+            files_list.append (list_item);
         }
 
-        files_list.show_all ();
-
-        if (files_list.get_children () != null) {
-            stack.visible_child_name = "files_list";
-            files_list.select_row (files_list.get_row_at_index (0));
+        if (files_list.get_last_child () != null) {
+            stack.visible_child_name = "files_list_page";
         } else {
-            stack.visible_child_name = "no_files_grid";
+            stack.visible_child_name = "no_files_page";
         }
     }
 }

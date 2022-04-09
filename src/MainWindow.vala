@@ -3,20 +3,14 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class MainWindow : Hdy.Window {
-    private uint configure_id;
-
-    private WelcomeView welcome_view;
+public class MainWindow : Adw.ApplicationWindow {
     private FilesView files_view;
     private EditView edit_view;
-    private Hdy.Deck deck;
-    private Gtk.ToolButton home_button;
-    private Hdy.HeaderBar header_bar;
+    private Adw.Leaflet leaflet;
 
     private enum Views {
-        WELCOME_VIEW,
-        EDIT_VIEW,
-        FILES_VIEW;
+        FILES_VIEW,
+        EDIT_VIEW;
     }
 
     public MainWindow () {
@@ -26,110 +20,62 @@ public class MainWindow : Hdy.Window {
     }
 
     construct {
-        Hdy.init ();
+        files_view = new FilesView (this);
+        edit_view = new EditView (this);
 
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Application.css");
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                    cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        if (!Application.IS_ON_PANTHEON) {
-            var extra_cssprovider = new Gtk.CssProvider ();
-            extra_cssprovider.load_from_resource ("/com/github/ryonakano/pinit/Extra.css");
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                        extra_cssprovider,
-                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        }
-
-        welcome_view = new WelcomeView ();
-        files_view = new FilesView ();
-        edit_view = new EditView ();
-
-        deck = new Hdy.Deck () {
-            can_swipe_back = true,
-            transition_type = Hdy.DeckTransitionType.SLIDE
+        leaflet = new Adw.Leaflet () {
+            can_navigate_back = true,
+            transition_type = Adw.LeafletTransitionType.SLIDE
         };
-        deck.add (welcome_view);
-        deck.add (files_view);
-        deck.add (edit_view);
-
-        var overlay = new Gtk.Overlay ();
-        overlay.add (deck);
-
-        var toast = new Granite.Widgets.Toast (_("Saved changes!"));
-        overlay.add_overlay (toast);
-
-        var home_image = new Gtk.Image.from_icon_name ("go-home", Gtk.IconSize.SMALL_TOOLBAR);
-        home_button = new Gtk.ToolButton (home_image, null) {
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Alt>Home"}, _("Create new or edit"))
-        };
-
-        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin = 12
-        };
-        preferences_box.add (new StyleSwitcher ());
-
-        var preferences_button = new Gtk.ToolButton (
-            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
-        ) {
-            tooltip_text = _("Preferences")
-        };
-
-        var preferences_popover = new Gtk.Popover (preferences_button);
-        preferences_popover.add (preferences_box);
-
-        preferences_button.clicked.connect (() => {
-            preferences_popover.show_all ();
+        leaflet.notify["folded"].connect (() => {
+            set_header_buttons_form ();
         });
+        leaflet.append (files_view);
+        leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
+        leaflet.append (edit_view);
 
-        header_bar = new Hdy.HeaderBar () {
-            show_close_button = true,
-            has_subtitle = false,
+        var overlay = new Adw.ToastOverlay () {
+            child = leaflet
         };
-        header_bar.pack_start (home_button);
-        header_bar.pack_end (preferences_button);
 
-        unowned var header_bar_style = header_bar.get_style_context ();
-        header_bar_style.add_class (Gtk.STYLE_CLASS_FLAT);
-        header_bar_style.add_class (Granite.STYLE_CLASS_DEFAULT_DECORATION);
+        var updated_toast = new Adw.Toast (_("Updated entry.")) {
+            timeout = 5
+        };
 
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.add (header_bar);
-        main_box.add (overlay);
+        var deleted_toast = new Adw.Toast (_("Deleted entry.")) {
+            timeout = 5
+        };
 
-        add (main_box);
+        content = overlay;
+        set_header_buttons_form ();
         set_visible_view ();
-        show_all ();
 
-        home_button.clicked.connect (() => {
-            show_welcome_view ();
-        });
-
-        DesktopFileOperator.get_default ().file_updated.connect (() => {
-            show_welcome_view ();
-            toast.send_notification ();
-        });
-
-        key_press_event.connect ((key) => {
-            if (Gdk.ModifierType.CONTROL_MASK in key.state && key.keyval == Gdk.Key.q) {
-                destroy ();
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_pressed.connect ((keyval, keycode, state) => {
+            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.q) {
+                close_request ();
             }
 
-            if (Gdk.ModifierType.MOD1_MASK in key.state && key.keyval == Gdk.Key.Home) {
-                show_welcome_view ();
+            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
+                show_edit_view (DesktopFileOperator.get_default ().create_new ());
             }
 
             return false;
         });
+        ((Gtk.Widget) this).add_controller (event_controller);
 
-        deck.notify["transition-running"].connect (() => {
-            if (!deck.transition_running && deck.visible_child == welcome_view) {
-                show_welcome_view ();
-            }
+        DesktopFileOperator.get_default ().file_updated.connect (() => {
+            show_files_view ();
+            overlay.add_toast (updated_toast);
         });
 
-        destroy.connect (() => {
+        DesktopFileOperator.get_default ().file_deleted.connect (() => {
+            edit_view.hide_all ();
+            files_view.update_list ();
+            overlay.add_toast (deleted_toast);
+        });
+
+        close_request.connect (() => {
             unowned Views visible_view = get_visible_view ();
             Application.settings.set_enum ("last-view", (int) visible_view);
             if (visible_view == Views.EDIT_VIEW) {
@@ -139,86 +85,57 @@ public class MainWindow : Hdy.Window {
                     DesktopFileOperator.get_default ().delete_backup ();
                 }
             }
+
+            destroy ();
+        });
+
+        notify["default-width"].connect (() => {
+            save_window_size ();
+        });
+
+        notify["default-height"].connect (() => {
+            save_window_size ();
+        });
+
+        notify["maximized"].connect (() => {
+            Application.settings.set_boolean ("window-maximized", maximized);
         });
     }
 
-    public void show_welcome_view () {
-        header_bar.title = Constants.APP_NAME;
-        home_button.sensitive = false;
-        deck.visible_child = welcome_view;
+    private void set_header_buttons_form () {
+        edit_view.update_cancel_button_form (leaflet.folded);
+        files_view.headerbar.show_end_title_buttons = leaflet.folded;
     }
 
     public void show_files_view () {
         files_view.update_list ();
-        header_bar.title = _("Edit Entry");
-        home_button.sensitive = true;
-        deck.reorder_child_after (files_view, welcome_view);
-        deck.visible_child = files_view;
+        leaflet.visible_child = files_view;
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
-        set_header_file_info (desktop_file);
-        home_button.sensitive = true;
-        deck.reorder_child_after (edit_view, welcome_view);
-        deck.visible_child = edit_view;
-    }
-
-    private void set_header_file_info (DesktopFile desktop_file) {
-        if (desktop_file.file_name != "") {
-            if (desktop_file.app_name != "") {
-                header_bar.title = _("Editing “%s”").printf (desktop_file.app_name);
-            } else {
-                header_bar.title = _("Editing Entry");
-            }
-        } else {
-            header_bar.title = _("New Entry");
-        }
+        leaflet.visible_child = edit_view;
     }
 
     private Views get_visible_view () {
-        if (deck.visible_child == files_view) {
+        if (leaflet.visible_child == files_view) {
             return Views.FILES_VIEW;
-        } else if (deck.visible_child == edit_view) {
-            return Views.EDIT_VIEW;
         } else {
-            return Views.WELCOME_VIEW;
+            return Views.EDIT_VIEW;
         }
     }
 
     private void set_visible_view () {
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
-        switch (last_view) {
-            case Views.FILES_VIEW:
-                show_files_view ();
-                break;
-            case Views.EDIT_VIEW:
-                show_edit_view (DesktopFileOperator.get_default ().get_unsaved_file () ?? DesktopFileOperator.get_default ().create_new ());
-                break;
-            case Views.WELCOME_VIEW:
-            default:
-                show_welcome_view ();
-                break;
+        var last_edited_file = DesktopFileOperator.get_default ().get_unsaved_file ();
+        if (last_view == Views.FILES_VIEW || last_edited_file == null) {
+            show_files_view ();
+        } else {
+            show_edit_view (last_edited_file);
         }
     }
 
-    protected override bool configure_event (Gdk.EventConfigure event) {
-        if (configure_id != 0) {
-            Source.remove (configure_id);
-        }
-
-        configure_id = Timeout.add (100, () => {
-            configure_id = 0;
-            int width, height, x, y;
-            get_size (out width, out height);
-            get_position (out x, out y);
-            Application.settings.set ("window-position", "(ii)", x, y);
-            Application.settings.set ("window-size", "(ii)", width, height);
-            Application.settings.set_boolean ("window-maximized", this.is_maximized);
-
-            return false;
-        });
-
-        return base.configure_event (event);
+    private void save_window_size () {
+        Application.settings.set ("window-size", "(ii)", default_width, default_height);
     }
 }

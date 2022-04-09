@@ -2,4 +2,5 @@ public class Constants {
     public const string APP_NAME = "Pin It!";
     public const string LOCALEDIR = @LOCALEDIR@;
     public const string PROJECT_NAME = @PROJECT_NAME@;
+    public const string PROJECT_VERSION = @PROJECT_VERSION@;
 }

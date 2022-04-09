@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CategoryChooser : Gtk.FlowBox {
+public class CategoryChooser : Gtk.Grid {
     public signal void toggled ();
 
     public string selected {
@@ -17,6 +17,7 @@ public class CategoryChooser : Gtk.FlowBox {
 
             return _selected;
         }
+
         set {
             string[] categories = value.split (";");
             foreach (var toggle in toggles) {
@@ -37,8 +38,6 @@ public class CategoryChooser : Gtk.FlowBox {
 
     public CategoryChooser () {
         Object (
-            hexpand: true,
-            selection_mode: Gtk.SelectionMode.NONE,
             column_spacing: 6,
             row_spacing: 6
         );
@@ -61,17 +60,29 @@ public class CategoryChooser : Gtk.FlowBox {
         categories.set ("Settings", _("Settings"));
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
-        max_children_per_line = categories.size;
 
         int i = 0;
+        int j = 0;
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
-            toggle.get_style_context ().add_class ("category-toggle");
             toggle.toggled.connect (() => {
+                if (toggle.active) {
+                    toggle.get_style_context ().add_class ("accent");
+                } else {
+                    toggle.get_style_context ().remove_class ("accent");
+                }
+
                 toggled ();
             });
             toggles.add (toggle);
-            insert (toggle, i);
+
+            if (i % 7 == 0) {
+                // attach in the next row
+                j++;
+                i = 0;
+            }
+
+            attach (toggle, i, j, 1, 1);
             i++;
         }
     }
@@ -82,7 +93,8 @@ public class CategoryChooser : Gtk.FlowBox {
         public ToggleButton (string category, string label) {
             Object (
                 category: category,
-                label: label
+                label: label,
+                hexpand: true
             );
         }
     }

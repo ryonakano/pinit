@@ -7,13 +7,6 @@ foreach i : icon_sizes
     )
 endforeach
 
-install_data([
-    # From elementary/icons, status/symbolic/*
-    'icons' / 'symbolic' / 'process-completed-symbolic.svg',
-    'icons' / 'symbolic' / 'process-error-symbolic.svg'],
-    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps'
-)
-
 i18n.merge_file(
     input: 'pinit.desktop.in',
     output: meson.project_name() + '.desktop',

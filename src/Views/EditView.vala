@@ -3,7 +3,8 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class EditView : Gtk.Grid {
+public class EditView : Gtk.Box {
+    public MainWindow window { private get; construct; }
     public bool is_unsaved {
         get {
             return (
@@ -14,30 +15,50 @@ public class EditView : Gtk.Grid {
         }
     }
 
-    private Granite.ValidatedEntry file_name_entry;
-    private Granite.ValidatedEntry name_entry;
-    private Granite.ValidatedEntry comment_entry;
+    private Gtk.Button cancel_button;
+    private Gtk.Button save_button;
+    private Adw.HeaderBar headerbar;
+
+    private RegexEntry file_name_entry;
+    private RegexEntry name_entry;
+    private RegexEntry comment_entry;
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
     private CategoryChooser category_chooser;
     private Gtk.CheckButton terminal_checkbox;
-    private Gtk.Button action_button;
 
-    public EditView () {
-        Object (
-            margin: 24,
-            margin_top: 12
-        );
+    private Gtk.Stack stack;
+
+    public EditView (MainWindow window) {
+        Object (window: window);
     }
 
     construct {
-        var file_name_label = new Granite.HeaderLabel (_("File Name"));
-        var file_name_desc_label = new DimLabel (
+        // Headerbar part
+        cancel_button = new Gtk.Button ();
+
+        save_button = new Gtk.Button.with_label (_("Save"));
+        save_button.get_style_context ().add_class ("suggested-action");
+
+        headerbar = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label ("")
+        };
+        headerbar.pack_start (cancel_button);
+        headerbar.pack_end (save_button);
+
+        // Main part
+        var file_name_label = new Gtk.Label (_("File Name")) {
+            halign = Gtk.Align.START
+        };
+        file_name_label.get_style_context ().add_class ("heading");
+        var file_name_desc_label = new Gtk.Label (
             _("Name of the file where these app info is saved.")
-        );
-        // The actual pattern following fd.o specification would be:
-        // /^[^.]([A-Za-z][A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/
-        file_name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        file_name_desc_label.get_style_context ().add_class ("dim-label");
+        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
             hexpand = true
         };
         var suffix_label = new Gtk.Label (".desktop") {
@@ -51,11 +72,18 @@ public class EditView : Gtk.Grid {
         file_name_grid.attach (file_name_desc_label, 0, 1, 1, 1);
         file_name_grid.attach (file_name_entry, 0, 2, 1, 1);
         file_name_grid.attach (suffix_label, 1, 2, 1, 1);
-        file_name_grid.attach (new InfoButton (), 2, 2, 1, 1);
+        file_name_grid.attach (create_info_button (), 2, 2, 1, 1);
 
-        var name_label = new Granite.HeaderLabel (_("App Name"));
-        var name_desc_label = new DimLabel (_("Shown in the launcher or Dock."));
-        name_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        var name_label = new Gtk.Label (_("App Name")) {
+            halign = Gtk.Align.START
+        };
+        name_label.get_style_context ().add_class ("heading");
+        var name_desc_label = new Gtk.Label (_("Shown in the launcher or Dock.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        name_desc_label.get_style_context ().add_class ("dim-label");
+        name_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
         var name_grid = new Gtk.Grid () {
@@ -65,9 +93,16 @@ public class EditView : Gtk.Grid {
         name_grid.attach (name_desc_label, 0, 1, 1, 1);
         name_grid.attach (name_entry, 0, 2, 1, 1);
 
-        var comment_label = new Granite.HeaderLabel (_("Comment"));
-        var comment_desc_label = new DimLabel (_("A tooltip text to describe what the app helps you to do."));
-        comment_entry = new Granite.ValidatedEntry.from_regex (/^.+$/) {
+        var comment_label = new Gtk.Label (_("Comment")) {
+            halign = Gtk.Align.START
+        };
+        comment_label.get_style_context ().add_class ("heading");
+        var comment_desc_label = new Gtk.Label (_("A tooltip text to describe what the app helps you to do.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        comment_desc_label.get_style_context ().add_class ("dim-label");
+        comment_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
         var comment_grid = new Gtk.Grid () {
@@ -77,10 +112,17 @@ public class EditView : Gtk.Grid {
         comment_grid.attach (comment_desc_label, 0, 1, 1, 1);
         comment_grid.attach (comment_entry, 0, 2, 1, 1);
 
-        var exec_label = new Granite.HeaderLabel (_("Exec File"));
-        var exec_desc_label = new DimLabel (
+        var exec_label = new Gtk.Label (_("Exec File")) {
+            halign = Gtk.Align.START
+        };
+        exec_label.get_style_context ().add_class ("heading");
+        var exec_desc_label = new Gtk.Label (
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
-        );
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        exec_desc_label.get_style_context ().add_class ("dim-label");
         exec_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -92,10 +134,17 @@ public class EditView : Gtk.Grid {
         exec_grid.attach (exec_desc_label, 0, 1, 1, 1);
         exec_grid.attach (exec_entry, 0, 2, 1, 1);
 
-        var icon_label = new Granite.HeaderLabel (_("Icon File"));
-        var icon_desc_label = new DimLabel (
+        var icon_label = new Gtk.Label (_("Icon File")) {
+            halign = Gtk.Align.START
+        };
+        icon_label.get_style_context ().add_class ("heading");
+        var icon_desc_label = new Gtk.Label (
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
-        );
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        icon_desc_label.get_style_context ().add_class ("dim-label");
         icon_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -107,8 +156,15 @@ public class EditView : Gtk.Grid {
         icon_grid.attach (icon_desc_label, 0, 1, 1, 1);
         icon_grid.attach (icon_entry, 0, 2, 1, 1);
 
-        var categories_label = new Granite.HeaderLabel (_("App Categories"));
-        var categories_desc_label = new DimLabel (_("Type of the app, multiplly selectable."));
+        var categories_label = new Gtk.Label (_("App Categories")) {
+            halign = Gtk.Align.START
+        };
+        categories_label.get_style_context ().add_class ("heading");
+        var categories_desc_label = new Gtk.Label (_("Type of the app, multiplly selectable.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        categories_desc_label.get_style_context ().add_class ("dim-label");
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
             margin_bottom = 24
@@ -120,47 +176,67 @@ public class EditView : Gtk.Grid {
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
-        var terminal_desc_label = new DimLabel (_("Check this in if you want to registar a CUI app."));
-
-        action_button = new Gtk.Button.with_label (_("Save entry")) {
-            margin_top = 24,
-            sensitive = (
-                file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-                exec_entry.text.length > 0 && category_chooser.selected != ""
-            )
+        var terminal_desc_label = new Gtk.Label (_("Check this in if you want to registar a CUI app.")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
         };
-        action_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        terminal_desc_label.get_style_context ().add_class ("dim-label");
 
-        attach (file_name_grid, 0, 0, 1, 3);
-        attach (name_grid, 0, 3, 1, 3);
-        attach (comment_grid, 0, 6, 1, 3);
-        attach (exec_grid, 0, 9, 1, 3);
-        attach (icon_grid, 0, 12, 1, 3);
-        attach (categories_grid, 0, 15, 1, 3);
-        attach (terminal_checkbox, 0, 20, 1, 1);
-        attach (terminal_desc_label, 0, 21, 1, 1);
-        attach (action_button, 0, 22, 1, 1);
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
+            margin_top = 12,
+            margin_bottom = 24,
+            margin_start = 24,
+            margin_end = 24
+        };
+        main_box.append (file_name_grid);
+        main_box.append (name_grid);
+        main_box.append (comment_grid);
+        main_box.append (exec_grid);
+        main_box.append (icon_grid);
+        main_box.append (categories_grid);
+        main_box.append (terminal_checkbox);
+        main_box.append (terminal_desc_label);
 
-        exec_entry.icon_press.connect ((icon_pos, event) => {
+        var no_selection_page = new Adw.StatusPage ();
+
+        stack = new Gtk.Stack ();
+        stack.add_named (main_box, "main_box");
+        stack.add_named (no_selection_page, "no_selection_page");
+
+        hide_all ();
+        orientation = Gtk.Orientation.VERTICAL;
+        append (headerbar);
+        append (stack);
+
+        cancel_button.clicked.connect (() => {
+            hide_all ();
+            window.show_files_view ();
+        });
+
+        save_button.clicked.connect (() => {
+            save_file ();
+        });
+
+        exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an executable file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
+                _("Select an executable file"), window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
             ) {
-                local_only = true
+                modal = true
             };
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
-                    exec_entry.text = filechooser.get_filename ();
+                    exec_entry.text = filechooser.get_file ().get_path ();
                 }
             });
             filechooser.show ();
         });
 
-        icon_entry.icon_press.connect ((icon_pos, event) => {
+        icon_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
@@ -173,30 +249,29 @@ public class EditView : Gtk.Grid {
             filefilter.set_filter_name (_("PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileChooserNative (
-                _("Select an icon file"), ((Application) GLib.Application.get_default ()).window, Gtk.FileChooserAction.OPEN,
+                _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
                 _("Open"), _("Cancel")
             ) {
-                local_only = true
+                modal = true
             };
             filechooser.add_filter (filefilter);
             filechooser.response.connect ((response_id) => {
                 if (response_id == Gtk.ResponseType.ACCEPT) {
-                    icon_entry.text = filechooser.get_filename ();
+                    icon_entry.text = filechooser.get_file ().get_path ();
                 }
             });
             filechooser.show ();
         });
 
-        action_button.clicked.connect (() => {
-            save_file ();
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_released.connect ((keyval, keycode, state) => {
+            save_button.sensitive = get_save_button_sensitivity ();
         });
+        ((Gtk.Widget) this).add_controller (event_controller);
 
-        key_release_event.connect (() => {
-            set_action_button_sensitivity ();
-            return false;
+        category_chooser.toggled.connect (() => {
+            save_button.sensitive = get_save_button_sensitivity ();
         });
-
-        category_chooser.toggled.connect (set_action_button_sensitivity);
     }
 
     public void set_desktop_file (DesktopFile desktop_file) {
@@ -208,12 +283,45 @@ public class EditView : Gtk.Grid {
         category_chooser.selected = desktop_file.categories;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        set_action_button_sensitivity ();
+        stack.visible_child_name = "main_box";
         file_name_entry.grab_focus ();
+
+        if (desktop_file.file_name != "") {
+            if (desktop_file.app_name != "") {
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
+            } else {
+                ((Gtk.Label) headerbar.title_widget).label = _("Editing Entry");
+            }
+        } else {
+            ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
+        }
+
+        cancel_button.visible = true;
+        save_button.visible = true;
+        save_button.sensitive = get_save_button_sensitivity ();
     }
 
-    private void set_action_button_sensitivity () {
-        action_button.sensitive = (
+    public void hide_all () {
+        stack.visible_child_name = "no_selection_page";
+
+        ((Gtk.Label) headerbar.title_widget).label = "";
+        cancel_button.visible = false;
+        save_button.visible = false;
+    }
+
+    public void update_cancel_button_form (bool folded) {
+        // Clear the current form
+        cancel_button.child = null;
+
+        if (folded) {
+            cancel_button.icon_name = "go-previous-symbolic";
+        } else {
+            cancel_button.label = _("Cancel");
+        }
+    }
+
+    private bool get_save_button_sensitivity () {
+        return (
             file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
             exec_entry.text.length > 0 && category_chooser.selected != ""
         );
@@ -231,5 +339,49 @@ public class EditView : Gtk.Grid {
             is_backup
         );
         DesktopFileOperator.get_default ().write_to_file (desktop_file);
+    }
+
+    private Gtk.MenuButton create_info_button () {
+        var label = new Gtk.Label (
+            _("Only use alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
+            _("Use at least one period to make sure to be separated into at least two elements.")
+        ) {
+            halign = Gtk.Align.START
+        };
+
+        var detailed_label = new Gtk.Label (
+            _("For more info, see %s.").printf (
+            "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
+            _("the file naming specification by freedesktop.org")
+        )) {
+            use_markup = true,
+            halign = Gtk.Align.START
+        };
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
+        };
+        box.append (label);
+        box.append (detailed_label);
+
+        var popover = new Gtk.Popover () {
+            child = box
+        };
+
+        var menu_button = new Gtk.MenuButton () {
+            icon_name = "dialog-information-symbolic",
+            margin_start = 6,
+            tooltip_text = _("Recommendations for naming"),
+            popover = popover
+        };
+
+        menu_button.activate.connect (() => {
+            popover.popup ();
+        });
+
+        return menu_button;
     }
 }

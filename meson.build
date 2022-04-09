@@ -1,7 +1,7 @@
 project(
     'com.github.ryonakano.pinit',
     'vala', 'c',
-    version: '1.4.1',
+    version: '2.0.0',
     meson_version: '>=0.57.0'
 )
 
@@ -16,17 +16,11 @@ add_project_arguments(
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('PROJECT_NAME', meson.project_name())
+config_data.set_quoted('PROJECT_VERSION', meson.project_version())
 config_file = configure_file(
     input: 'src' / 'Config.vala.in',
     output: '@BASENAME@',
     configuration: config_data
-)
-
-asresources = gnome.compile_resources(
-    'as-resources',
-    'data' / 'pinit.gresource.xml',
-    source_dir: 'data',
-    c_name: 'as'
 )
 
 sources = files(
@@ -34,25 +28,21 @@ sources = files(
     'src' / 'Backend' / 'DesktopFileOperator.vala',
     'src' / 'Views' / 'EditView.vala',
     'src' / 'Views' / 'FilesView.vala',
-    'src' / 'Views' / 'WelcomeView.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
-    'src' / 'DimLabel.vala',
-    'src' / 'InfoButton.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'StyleSwitcher.vala'
+    'src' / 'RegexEntry.vala'
 )
 
 executable(
     meson.project_name(),
-    asresources,
     config_file,
     sources,
     dependencies: [
-        dependency('granite', version: '>= 6.0.0'),
-        dependency('gtk+-3.0'),
+        dependency('gee-0.8'),
+        dependency('gtk4'),
+        dependency('libadwaita-1'),
         dependency('pango'),
-        dependency('libhandy-1'),
         meson.get_compiler('vala').find_library('posix')
     ],
     install: true
