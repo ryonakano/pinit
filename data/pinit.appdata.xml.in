@@ -38,6 +38,17 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="1.4.1" date="2022-04-09" urgency="low">
+      <description>
+        <ul>
+          <li>AppData: Fix release year</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Italian translation (thanks to @albanobattistella)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2022-04-04" urgency="medium">
       <description>
         <ul>
