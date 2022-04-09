@@ -2,5 +2,4 @@ src/Views/EditView.vala
 src/Views/FilesView.vala
 src/CategoryChooser.vala
 src/Application.vala
-src/InfoButton.vala
 src/MainWindow.vala
