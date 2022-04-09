@@ -15,20 +15,20 @@ public class Application : Gtk.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.pinit",
+            application_id: Constants.PROJECT_NAME,
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
     construct {
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (GETTEXT_PACKAGE);
+        Intl.bindtextdomain (Constants.PROJECT_NAME, Constants.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Constants.PROJECT_NAME);
     }
 
     static construct {
-        settings = new Settings ("com.github.ryonakano.pinit");
+        settings = new Settings (Constants.PROJECT_NAME);
     }
 
     protected override void activate () {

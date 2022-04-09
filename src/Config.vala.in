@@ -1,2 +1,5 @@
-public const string GETTEXT_PACKAGE = @GETTEXT_PACKAGE@;
-public const string LOCALEDIR = @LOCALEDIR@;
+public class Constants {
+    public const string APP_NAME = "Pin It!";
+    public const string LOCALEDIR = @LOCALEDIR@;
+    public const string PROJECT_NAME = @PROJECT_NAME@;
+}
