@@ -1,14 +1,14 @@
 # Japanese translations for extra package.
 # Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-10 08:57+0900\n"
-"PO-Revision-Date: 2021-12-17 14:26+0900\n"
+"PO-Revision-Date: 2022-04-10 14:10+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -24,35 +24,36 @@ msgstr "Pin It!"
 #: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
+msgstr "ポータブルアプリのショートカットをアプリランチャーに作成します"
 
 #: data/pinit.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
-"実行可能ファイルや AppImage ファイルなどのポータブルアプリを、アプリケーショ"
-"ンランチャーに簡単に追加できます。また、ファイルマネージャーを開かずに既存の"
-"アプリのエントリーを編集・削除できます。"
+"実行可能ファイルや AppImage ファイルなどのポータブルアプリのショートカット"
+"を、お使いのデスクトップ環境のアプリランチャーに作成できます。"
 
 #: data/pinit.appdata.xml.in:14
 msgid "Other features include:"
-msgstr ""
+msgstr "そのほかの機能:"
 
 #: data/pinit.appdata.xml.in:18
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"作成したアプリのエントリーを編集・削除できます。ファイルマネージャーを開く必"
+"要はありません"
 
 #: data/pinit.appdata.xml.in:19
 msgid "Syntax error detection"
-msgstr ""
+msgstr "シンタックスエラーの検出機能"
 
 #: data/pinit.appdata.xml.in:20
 msgid ""
 "Automatically save everything―your data in editing, last open view, and "
 "preferences"
 msgstr ""
+"編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存します"
 
 #: data/pinit.appdata.xml.in:25
 msgid "Files View"
@@ -63,9 +64,9 @@ msgid "Edit View"
 msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:40
-#, fuzzy
 msgid "The app now fully redesigned for modern desktop environments!"
-msgstr "ほかのデスクトップ環境への対応を改善"
+msgstr ""
+"現代的なデスクトップ環境に合うよう、アプリのデザインを抜本的に変更しました！"
 
 #: data/pinit.appdata.xml.in:42 data/pinit.appdata.xml.in:54
 #: data/pinit.appdata.xml.in:68 data/pinit.appdata.xml.in:86
@@ -76,9 +77,8 @@ msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
 #: data/pinit.appdata.xml.in:44 data/pinit.appdata.xml.in:56
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "ブラジルポルトガル語翻訳を追加 (貢献者: @DanielTolentino)"
+msgstr "イタリア語翻訳を更新 (貢献者: @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:72
 #: data/pinit.appdata.xml.in:88 data/pinit.appdata.xml.in:101
@@ -89,34 +89,31 @@ msgstr "日本語翻訳を更新"
 
 #: data/pinit.appdata.xml.in:52
 msgid "AppData: Fix release year"
-msgstr ""
+msgstr "アプリデータ: リリース年を修正"
 
 #: data/pinit.appdata.xml.in:63
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "実行時にデスクトップ環境を確認するように修正"
 
 #: data/pinit.appdata.xml.in:64
 msgid "Lessen scope of file access"
-msgstr ""
+msgstr "ファイルアクセス権の見直し"
 
 #: data/pinit.appdata.xml.in:65
 msgid "Make window resizable"
-msgstr ""
+msgstr "ウィンドウサイズを変更可能に修正"
 
 #: data/pinit.appdata.xml.in:66
-#, fuzzy
 msgid "EditView: Less strict on file names"
-msgstr "編集画面: デフォルトでファイル名の欄にフォーカスするように修正"
+msgstr "編集画面: ファイル命名規則の寛容化"
 
 #: data/pinit.appdata.xml.in:70
-#, fuzzy
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "ブラジルポルトガル語翻訳を追加 (貢献者: @DanielTolentino)"
+msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:71
-#, fuzzy
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "フランス語翻訳を追加 (貢献者: @NathanBnm)"
+msgstr "ドイツ語翻訳を追加 (貢献者: Vistaus)"
 
 #: data/pinit.appdata.xml.in:79
 msgid "Fix build error on other distros"
@@ -235,21 +232,3 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
 "情報;アイコン;"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "ランチャーにアプリをピン止めします"
-
-#~ msgid "Welcome View"
-#~ msgstr "ようこそ画面"
-
-#~ msgid ""
-#~ "Pin It! comes with syntax errors detection, so you will never need to "
-#~ "waste your time seeking for why your desktop entry won't be shown in the "
-#~ "launcher."
-#~ msgstr ""
-#~ "Pin It! にはシンタックスエラーの検知機能が搭載されているので、追加したはず"
-#~ "のデスクトップエントリーがランチャーに表示されないと頭を悩ませることはあり"
-#~ "ません。"
-
-#~ msgid "com.github.ryonakano.pinit"
-#~ msgstr "com.github.ryonakano.pinit"

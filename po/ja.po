@@ -1,14 +1,14 @@
 # Japanese translations for com.github.ryonakano.pinit package.
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-10 08:57+0900\n"
-"PO-Revision-Date: 2021-12-17 14:19+0900\n"
+"PO-Revision-Date: 2022-04-10 14:18+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -19,18 +19,15 @@ msgstr ""
 
 #: src/Views/EditView.vala:40
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/Views/EditView.vala:50
 msgid "File Name"
 msgstr "ファイル名"
 
 #: src/Views/EditView.vala:55
-#, fuzzy
 msgid "Name of the file where these app info is saved."
-msgstr ""
-"以下の情報が保存されるファイルの名前です。小文字と数字のみを使用してくださ"
-"い。"
+msgstr "以下のアプリ情報の保存先となるファイルの前です。"
 
 #: src/Views/EditView.vala:65
 msgid "Suffix of the file"
@@ -128,30 +125,31 @@ msgstr "新しいエントリー"
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
+"英数字とアンダースコアのみを使用してください。また、最初の文字は数字以外に"
+"してください。"
 
 #: src/Views/EditView.vala:347
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
-msgstr ""
+msgstr "最低でも1回ピリオドを使い、2つ以上の要素に分けてください。"
 
 #: src/Views/EditView.vala:353
 #, c-format
 msgid "For more info, see %s."
-msgstr ""
+msgstr "詳細情報は %sを参照してください。"
 
 #: src/Views/EditView.vala:355
 msgid "the file naming specification by freedesktop.org"
-msgstr ""
+msgstr "freedesktop.org が策定するファイル命名仕様"
 
 #: src/Views/EditView.vala:377
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "ファイル名に関する推奨事項"
 
 #: src/Views/FilesView.vala:21
-#, fuzzy
 msgid "Create a new entry"
-msgstr "新しいアプリのエントリーを作成します。"
+msgstr "新しいエントリーを作成"
 
 #: src/Views/FilesView.vala:25
 msgid "Light"
@@ -166,15 +164,14 @@ msgid "System"
 msgstr "システム"
 
 #: src/Views/FilesView.vala:30
-#, fuzzy
 msgid "Style"
-msgstr "スタイル:"
+msgstr "スタイル"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:32
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "%s について…"
 
 #: src/Views/FilesView.vala:35
 msgid "Preferences"
@@ -185,11 +182,10 @@ msgid "No valid app entries found"
 msgstr "有効なアプリのエントリーが見つかりません"
 
 #: src/Views/FilesView.vala:57
-#, fuzzy
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
-"アプリのエントリーを作成したことがない場合は、ようこそ画面に戻って“新しいエン"
-"トリー”をクリックしてください。"
+"アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックして"
+"ください。"
 
 #: src/Views/FilesView.vala:106
 msgid "Delete…"
@@ -259,46 +255,17 @@ msgstr "ユーティリティー"
 #: src/Application.vala:31
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
+msgstr "ポータブルアプリのショートカットをアプリランチャーに作成します"
 
 #. TRANSLATORS: Replace with your name and email address, don't translate literally
 #: src/Application.vala:38
 msgid "translator-credits"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:41
-#, fuzzy
 msgid "Updated entry."
-msgstr "エントリーを保存"
+msgstr "エントリーを更新しました。"
 
 #: src/MainWindow.vala:45
-#, fuzzy
 msgid "Deleted entry."
-msgstr "削除"
-
-#~ msgid "Edit…"
-#~ msgstr "編集…"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "ランチャーにアプリをピン止めします"
-
-#~ msgid "Edit Entry"
-#~ msgstr "エントリーを編集"
-
-#~ msgid "Edit an existing app entry."
-#~ msgstr "既存のエントリーを編集します。"
-
-#~ msgid "Saved changes!"
-#~ msgstr "変更を保存しました！"
-
-#~ msgid "Create new or edit"
-#~ msgstr "ファイルを作成または編集します"
-
-#~ msgid "Light style"
-#~ msgstr "ライトスタイル"
-
-#~ msgid "Dark style"
-#~ msgstr "ダークスタイル"
-
-#~ msgid "Use the same style set in the system"
-#~ msgstr "システムの設定と同じスタイルを使います"
+msgstr "エントリーを削除しました。"
