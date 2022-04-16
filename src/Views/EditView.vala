@@ -246,7 +246,8 @@ public class EditView : Gtk.Box {
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
             filefilter.add_mime_type ("image/x-xpixmap");
-            filefilter.set_filter_name (_("PNG, SVG, or XMP files"));
+            filefilter.add_mime_type ("image/vnd.microsoft.icon");
+            filefilter.set_filter_name (_("ICO, PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileChooserNative (
                 _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
