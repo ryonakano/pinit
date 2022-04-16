@@ -16,6 +16,7 @@
     </p>
     <ul>
       <li>Edit or delete created app entries without opening the file manager</li>
+      <li>Automatically add execution permission to the file you select</li>
       <li>Syntax error detection</li>
       <li>Automatically save everything―your data in editing, last open view, and preferences</li>
     </ul>

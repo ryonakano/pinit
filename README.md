@@ -8,6 +8,7 @@ Create the shortcut to portable apps like raw executable files, AppImage files, 
 Other features include:
 
 - Edit or delete created app entries without opening the file manager
+- Automatically add execution permission to the file you select
 - Syntax error detection
 - Automatically save everything―your data in editing, last open view, and preferences
 
