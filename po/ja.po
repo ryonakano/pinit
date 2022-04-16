@@ -125,8 +125,8 @@ msgstr "新しいエントリー"
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
-"英数字とアンダースコアのみを使用してください。また、最初の文字は数字以外に"
-"してください。"
+"英数字とアンダースコアのみを使用してください。また、最初の文字は数字以外にし"
+"てください。"
 
 #: src/Views/EditView.vala:347
 msgid ""
@@ -184,8 +184,8 @@ msgstr "有効なアプリのエントリーが見つかりません"
 #: src/Views/FilesView.vala:57
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
-"アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックして"
-"ください。"
+"アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックしてく"
+"ださい。"
 
 #: src/Views/FilesView.vala:106
 msgid "Delete…"
