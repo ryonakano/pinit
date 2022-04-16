@@ -170,7 +170,7 @@
   <url type="homepage">https://github.com/ryonakano/pinit</url>
   <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
   <url type="help">https://github.com/ryonakano/pinit/discussions</url>
-  <url type="translate">https://github.com/ryonakano/pinit</url>
+  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
   
   <custom>
     <value key="x-appcenter-color-primary">#28bca3</value>
