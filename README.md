@@ -41,3 +41,12 @@ To install, use `ninja install`, then execute with `com.github.ryonakano.pinit`
 
     ninja install
     com.github.ryonakano.pinit
+
+## Help Translation of This Project!
+We accept translations of this project through [Weblate](https://weblate.org/). We would appreciate it if you would join our translation work!
+
+Click the following graphs to get started:
+
+| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
+| --- | --- |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-main/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-extra/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) |
