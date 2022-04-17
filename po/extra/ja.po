@@ -2,20 +2,21 @@
 # Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-17 19:14+0900\n"
-"PO-Revision-Date: 2022-04-10 14:10+0900\n"
+"PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: none\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"pinit-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -46,7 +47,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:19
 msgid "Automatically add execution permission to the file you select"
-msgstr ""
+msgstr "選択したファイルに自動的に実行権限を追加"
 
 #: data/pinit.appdata.xml.in:20
 msgid "Syntax error detection"
@@ -117,7 +118,7 @@ msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:72
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "ドイツ語翻訳を追加 (貢献者: Vistaus)"
+msgstr "ドイツ語翻訳を追加 (貢献者: @Vistaus)"
 
 #: data/pinit.appdata.xml.in:80
 msgid "Fix build error on other distros"
