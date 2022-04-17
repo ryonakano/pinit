@@ -2,21 +2,22 @@
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>, 2021.
-#
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-17 19:14+0900\n"
-"PO-Revision-Date: 2021-10-04 01:02-0600\n"
-"Last-Translator: Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2022-04-19 00:07+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-main/"
+"es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
@@ -118,7 +119,7 @@ msgstr "Selecciona un archivo de icono"
 #: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
-msgstr "Editando \"%s\""
+msgstr "Editando «%s»"
 
 #: src/Views/EditView.vala:294
 msgid "Editing Entry"
@@ -202,7 +203,7 @@ msgstr "Borrar..."
 #: src/Views/FilesView.vala:113
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr "¿Estás seguro que quieres eliminar \"%s\"?"
+msgstr "¿Estás seguro/a que quieres eliminar «%s»?"
 
 #: src/Views/FilesView.vala:114
 #, fuzzy
