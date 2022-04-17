@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-10 08:57+0900\n"
+"POT-Creation-Date: 2022-04-17 19:14+0900\n"
 "PO-Revision-Date: 2022-02-10 13:36+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -94,59 +94,61 @@ msgstr "Kruis als je een cli-toepassing wilt uitvoeren."
 msgid "Select an executable file"
 msgstr "Kies een uitvoerbaar bestand"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 msgid "Open"
 msgstr "Openen"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
-#: src/Views/EditView.vala:319
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+#: src/Views/EditView.vala:320
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/Views/EditView.vala:249
-msgid "PNG, SVG, or XMP files"
+#: src/Views/EditView.vala:250
+#, fuzzy
+#| msgid "PNG, SVG, or XMP files"
+msgid "ICO, PNG, SVG, or XMP files"
 msgstr "PNG-, SVG of XMP-bestand"
 
-#: src/Views/EditView.vala:252
+#: src/Views/EditView.vala:253
 msgid "Select an icon file"
 msgstr "Kies een pictogrambestand"
 
-#: src/Views/EditView.vala:291
+#: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
 msgstr "‘%s’ bewerken"
 
-#: src/Views/EditView.vala:293
+#: src/Views/EditView.vala:294
 msgid "Editing Entry"
 msgstr "Item bewerken"
 
-#: src/Views/EditView.vala:296
+#: src/Views/EditView.vala:297
 msgid "New Entry"
 msgstr "Nieuw item"
 
-#: src/Views/EditView.vala:346
+#: src/Views/EditView.vala:347
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
 "Gebruik alleen letters, cijfers en onderliggende streepjes, en begin geen "
 "enkele itemnaam met een cijfer."
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr "Gebruik minimaal één punt als je twee naamdelen wilt scheiden."
 
-#: src/Views/EditView.vala:353
+#: src/Views/EditView.vala:354
 #, c-format
 msgid "For more info, see %s."
 msgstr "Meer informatie: %s."
 
-#: src/Views/EditView.vala:355
+#: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
 msgstr "de bestandsnaamspecificaties op freedesktop.org"
 
-#: src/Views/EditView.vala:377
+#: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
 msgstr "Tips omtrent namen"
 

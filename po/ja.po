@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-10 08:57+0900\n"
+"POT-Creation-Date: 2022-04-17 19:14+0900\n"
 "PO-Revision-Date: 2022-04-10 14:18+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -91,59 +91,61 @@ msgstr "CUI アプリを登録したい場合、チェックを入れてくだ�
 msgid "Select an executable file"
 msgstr "実行ファイルを選択"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 msgid "Open"
 msgstr "開く"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
-#: src/Views/EditView.vala:319
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+#: src/Views/EditView.vala:320
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/EditView.vala:249
-msgid "PNG, SVG, or XMP files"
+#: src/Views/EditView.vala:250
+#, fuzzy
+#| msgid "PNG, SVG, or XMP files"
+msgid "ICO, PNG, SVG, or XMP files"
 msgstr "PNG、SVG、XMP ファイル"
 
-#: src/Views/EditView.vala:252
+#: src/Views/EditView.vala:253
 msgid "Select an icon file"
 msgstr "アイコンファイルを選択"
 
-#: src/Views/EditView.vala:291
+#: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/Views/EditView.vala:293
+#: src/Views/EditView.vala:294
 msgid "Editing Entry"
 msgstr "エントリーを編集しています"
 
-#: src/Views/EditView.vala:296
+#: src/Views/EditView.vala:297
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/Views/EditView.vala:346
+#: src/Views/EditView.vala:347
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
 "英数字とアンダースコアのみを使用してください。また、最初の文字は数字以外にし"
 "てください。"
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr "最低でも1回ピリオドを使い、2つ以上の要素に分けてください。"
 
-#: src/Views/EditView.vala:353
+#: src/Views/EditView.vala:354
 #, c-format
 msgid "For more info, see %s."
 msgstr "詳細情報は %sを参照してください。"
 
-#: src/Views/EditView.vala:355
+#: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
 msgstr "freedesktop.org が策定するファイル命名仕様"
 
-#: src/Views/EditView.vala:377
+#: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 

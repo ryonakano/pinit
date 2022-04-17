@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-10 08:57+0900\n"
+"POT-Creation-Date: 2022-04-17 19:14+0900\n"
 "PO-Revision-Date: 2021-10-18 16:14+0200\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -96,57 +96,57 @@ msgstr ""
 msgid "Select an executable file"
 msgstr "Sélectionnez un fichier exécutable"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 msgid "Open"
 msgstr "Ouvrir"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
-#: src/Views/EditView.vala:319
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+#: src/Views/EditView.vala:320
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/Views/EditView.vala:249
-msgid "PNG, SVG, or XMP files"
+#: src/Views/EditView.vala:250
+msgid "ICO, PNG, SVG, or XMP files"
 msgstr ""
 
-#: src/Views/EditView.vala:252
+#: src/Views/EditView.vala:253
 msgid "Select an icon file"
 msgstr "Sélectionnez un fichier d'icône"
 
-#: src/Views/EditView.vala:291
+#: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
 msgstr "Modification de « %s »"
 
-#: src/Views/EditView.vala:293
+#: src/Views/EditView.vala:294
 msgid "Editing Entry"
 msgstr ""
 
-#: src/Views/EditView.vala:296
+#: src/Views/EditView.vala:297
 msgid "New Entry"
 msgstr ""
 
-#: src/Views/EditView.vala:346
+#: src/Views/EditView.vala:347
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
 
-#: src/Views/EditView.vala:353
+#: src/Views/EditView.vala:354
 #, c-format
 msgid "For more info, see %s."
 msgstr ""
 
-#: src/Views/EditView.vala:355
+#: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
 msgstr ""
 
-#: src/Views/EditView.vala:377
+#: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
 msgstr ""
 

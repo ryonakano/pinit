@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-10 08:57+0900\n"
+"POT-Creation-Date: 2022-04-17 19:14+0900\n"
 "PO-Revision-Date: 2022-02-17 20:35+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -93,43 +93,45 @@ msgstr "Controlla questo se vuoi registrare un'app CUI."
 msgid "Select an executable file"
 msgstr "Seleziona un file eseguibile"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 msgid "Open"
 msgstr "Apri"
 
-#: src/Views/EditView.vala:227 src/Views/EditView.vala:253
-#: src/Views/EditView.vala:319
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+#: src/Views/EditView.vala:320
 msgid "Cancel"
 msgstr "Cancella"
 
-#: src/Views/EditView.vala:249
-msgid "PNG, SVG, or XMP files"
+#: src/Views/EditView.vala:250
+#, fuzzy
+#| msgid "PNG, SVG, or XMP files"
+msgid "ICO, PNG, SVG, or XMP files"
 msgstr "File PNG, SVG o XMP"
 
-#: src/Views/EditView.vala:252
+#: src/Views/EditView.vala:253
 msgid "Select an icon file"
 msgstr "Seleziona un file icona"
 
-#: src/Views/EditView.vala:291
+#: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
 msgstr "Modifica “%s”"
 
-#: src/Views/EditView.vala:293
+#: src/Views/EditView.vala:294
 msgid "Editing Entry"
 msgstr "Modifica Voce"
 
-#: src/Views/EditView.vala:296
+#: src/Views/EditView.vala:297
 msgid "New Entry"
 msgstr "Nuova Voce"
 
-#: src/Views/EditView.vala:346
+#: src/Views/EditView.vala:347
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
 "Usa solo alfabeti, numeri e trattini bassi e nessuno che inizi con numeri."
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
@@ -137,16 +139,16 @@ msgstr ""
 "Utilizza almeno un punto per assicurarti di essere separato in almeno due "
 "elementi."
 
-#: src/Views/EditView.vala:353
+#: src/Views/EditView.vala:354
 #, c-format
 msgid "For more info, see %s."
 msgstr "Per maggiori informazioni, vedi %s."
 
-#: src/Views/EditView.vala:355
+#: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
 msgstr "la specifica di denominazione dei file di freedesktop.org"
 
-#: src/Views/EditView.vala:377
+#: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
 msgstr "Raccomandazioni per la denominazione"
 
