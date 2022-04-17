@@ -2,20 +2,21 @@
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-17 19:14+0900\n"
-"PO-Revision-Date: 2022-04-10 14:18+0900\n"
+"PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: none\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
+"ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
@@ -101,10 +102,8 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: src/Views/EditView.vala:250
-#, fuzzy
-#| msgid "PNG, SVG, or XMP files"
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr "PNG、SVG、XMP ファイル"
+msgstr "ICO、PNG、SVG、XMP ファイル"
 
 #: src/Views/EditView.vala:253
 msgid "Select an icon file"
