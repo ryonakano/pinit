@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the extra package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-17 19:14+0900\n"
-"PO-Revision-Date: 2021-10-18 16:14+0200\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-19 00:07+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-extra/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -25,29 +28,33 @@ msgstr "Pin It!"
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Créez un raccourci vers vos applications portables préférées dans votre "
+"lanceur d'applications"
 
 #: data/pinit.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
-"Ajoutez facilement des applications portables telles que des fichiers "
-"exécutables, des fichiers AppImage, etc. au Menu des Applications. Modifiez "
-"ou supprimez les fichiers desktop existants sans avoir besoin d'ouvrir de "
-"gestionnaire de fichier."
+"Créez un raccourci vers les applications portables (fichiers exécutables "
+"bruts, fichiers AppImage, etc.) dans le lanceur d'applications de votre "
+"environnement de bureau."
 
 #: data/pinit.appdata.xml.in:14
 msgid "Other features include:"
-msgstr ""
+msgstr "Les autres caractéristiques sont les suivantes :"
 
 #: data/pinit.appdata.xml.in:18
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"Modifier ou supprimer des entrées d'applications créées sans ouvrir le "
+"gestionnaire de fichiers"
 
 #: data/pinit.appdata.xml.in:19
 msgid "Automatically add execution permission to the file you select"
 msgstr ""
+"Ajouter automatiquement l'autorisation d'exécution au fichier que vous "
+"sélectionnez"
 
 #: data/pinit.appdata.xml.in:20
 msgid "Syntax error detection"
