@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-17 19:14+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/EditView.vala:40
+msgid "Save"
+msgstr ""
+
+#: src/Views/EditView.vala:50
+msgid "File Name"
+msgstr ""
+
+#: src/Views/EditView.vala:55
+msgid "Name of the file where these app info is saved."
+msgstr ""
+
+#: src/Views/EditView.vala:65
+msgid "Suffix of the file"
+msgstr ""
+
+#: src/Views/EditView.vala:77
+msgid "App Name"
+msgstr ""
+
+#: src/Views/EditView.vala:81
+msgid "Shown in the launcher or Dock."
+msgstr ""
+
+#: src/Views/EditView.vala:96
+msgid "Comment"
+msgstr ""
+
+#: src/Views/EditView.vala:100
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr ""
+
+#: src/Views/EditView.vala:115
+msgid "Exec File"
+msgstr ""
+
+#: src/Views/EditView.vala:120
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+
+#: src/Views/EditView.vala:137
+msgid "Icon File"
+msgstr ""
+
+#: src/Views/EditView.vala:142
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+
+#: src/Views/EditView.vala:159
+msgid "App Categories"
+msgstr ""
+
+#: src/Views/EditView.vala:163
+msgid "Type of the app, multiplly selectable."
+msgstr ""
+
+#: src/Views/EditView.vala:176
+msgid "Run in Terminal"
+msgstr ""
+
+#: src/Views/EditView.vala:179
+msgid "Check this in if you want to registar a CUI app."
+msgstr ""
+
+#: src/Views/EditView.vala:226
+msgid "Select an executable file"
+msgstr ""
+
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+msgid "Open"
+msgstr ""
+
+#: src/Views/EditView.vala:227 src/Views/EditView.vala:254
+#: src/Views/EditView.vala:320
+msgid "Cancel"
+msgstr ""
+
+#: src/Views/EditView.vala:250
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr ""
+
+#: src/Views/EditView.vala:253
+msgid "Select an icon file"
+msgstr ""
+
+#: src/Views/EditView.vala:292
+#, c-format
+msgid "Editing “%s”"
+msgstr ""
+
+#: src/Views/EditView.vala:294
+msgid "Editing Entry"
+msgstr ""
+
+#: src/Views/EditView.vala:297
+msgid "New Entry"
+msgstr ""
+
+#: src/Views/EditView.vala:347
+msgid ""
+"Only use alphabets, numbers, and underscores, and none begins with numbers."
+msgstr ""
+
+#: src/Views/EditView.vala:348
+msgid ""
+"Use at least one period to make sure to be separated into at least two "
+"elements."
+msgstr ""
+
+#: src/Views/EditView.vala:354
+#, c-format
+msgid "For more info, see %s."
+msgstr ""
+
+#: src/Views/EditView.vala:356
+msgid "the file naming specification by freedesktop.org"
+msgstr ""
+
+#: src/Views/EditView.vala:378
+msgid "Recommendations for naming"
+msgstr ""
+
+#: src/Views/FilesView.vala:21
+msgid "Create a new entry"
+msgstr ""
+
+#: src/Views/FilesView.vala:25
+msgid "Light"
+msgstr ""
+
+#: src/Views/FilesView.vala:26
+msgid "Dark"
+msgstr ""
+
+#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+msgid "System"
+msgstr ""
+
+#: src/Views/FilesView.vala:30
+msgid "Style"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/Views/FilesView.vala:32
+#, c-format
+msgid "About %s…"
+msgstr ""
+
+#: src/Views/FilesView.vala:35
+msgid "Preferences"
+msgstr ""
+
+#: src/Views/FilesView.vala:56
+msgid "No valid app entries found"
+msgstr ""
+
+#: src/Views/FilesView.vala:57
+msgid "If you've never created one, click the + button on the top."
+msgstr ""
+
+#: src/Views/FilesView.vala:106
+msgid "Delete…"
+msgstr ""
+
+#: src/Views/FilesView.vala:113
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr ""
+
+#: src/Views/FilesView.vala:114
+msgid "This removes the app from the launcher."
+msgstr ""
+
+#: src/Views/FilesView.vala:117
+msgid "Delete"
+msgstr ""
+
+#: src/CategoryChooser.vala:50
+msgid "Audio & Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:51
+msgid "Audio"
+msgstr ""
+
+#: src/CategoryChooser.vala:52
+msgid "Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:53
+msgid "Development"
+msgstr ""
+
+#: src/CategoryChooser.vala:54
+msgid "Education"
+msgstr ""
+
+#: src/CategoryChooser.vala:55
+msgid "Game"
+msgstr ""
+
+#: src/CategoryChooser.vala:56
+msgid "Graphics"
+msgstr ""
+
+#: src/CategoryChooser.vala:57
+msgid "Network"
+msgstr ""
+
+#: src/CategoryChooser.vala:58
+msgid "Office"
+msgstr ""
+
+#: src/CategoryChooser.vala:59
+msgid "Science"
+msgstr ""
+
+#: src/CategoryChooser.vala:60
+msgid "Settings"
+msgstr ""
+
+#: src/CategoryChooser.vala:62
+msgid "Utility"
+msgstr ""
+
+#: src/Application.vala:31
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+
+#. TRANSLATORS: Replace with your name and email address, don't translate literally
+#: src/Application.vala:38
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:41
+msgid "Updated entry."
+msgstr ""
+
+#: src/MainWindow.vala:45
+msgid "Deleted entry."
+msgstr ""
