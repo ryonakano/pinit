@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-17 19:14+0900\n"
+"POT-Creation-Date: 2022-05-21 00:58+0900\n"
 "PO-Revision-Date: 2022-04-24 13:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-extra/"
@@ -142,7 +142,8 @@ msgstr "Pridaný nový prepínač štýlov"
 
 #: data/pinit.appdata.xml.in:84
 msgid "Correct titlebar label when no app name specified"
-msgstr "Opravený štítok vrchnej lišty, keď nie je špecifikovaný názov aplikácie"
+msgstr ""
+"Opravený štítok vrchnej lišty, keď nie je špecifikovaný názov aplikácie"
 
 #: data/pinit.appdata.xml.in:85
 msgid "Readable copies"
@@ -203,8 +204,8 @@ msgstr "Pridaná ikonka veľkosti 128 pixelov (vďaka @hanaral)"
 #: data/pinit.appdata.xml.in:148
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
-"Zaoblené rohy okna pri použití akéhokoľvek zoznamu štýlov (stylesheet) ("
-"vďaka @JeysonFlores)"
+"Zaoblené rohy okna pri použití akéhokoľvek zoznamu štýlov (stylesheet) "
+"(vďaka @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:149
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
@@ -236,4 +237,5 @@ msgstr "Tvorba súborov pracovnej plochy"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr "Pracovná plocha;Súbor;Vytvoriť;Upraviť;Info;Informácie;Ikonka;AppImage;"
+msgstr ""
+"Pracovná plocha;Súbor;Vytvoriť;Upraviť;Info;Informácie;Ikonka;AppImage;"
