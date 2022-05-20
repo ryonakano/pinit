@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 01:02+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
+"PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "ja/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
@@ -77,8 +77,6 @@ msgid "App Categories"
 msgstr "アプリのカテゴリー"
 
 #: src/Views/EditView.vala:163
-#, fuzzy
-#| msgid "Type of the app, multiplly selectable."
 msgid "Type of the app, multiply selectable."
 msgstr "アプリの種類です。複数選択できます。"
 
@@ -87,8 +85,6 @@ msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
 #: src/Views/EditView.vala:179
-#, fuzzy
-#| msgid "Check this in if you want to registar a CUI app."
 msgid "Check this in if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
