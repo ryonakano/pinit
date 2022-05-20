@@ -160,7 +160,7 @@ public class EditView : Gtk.Box {
             halign = Gtk.Align.START
         };
         categories_label.get_style_context ().add_class ("heading");
-        var categories_desc_label = new Gtk.Label (_("Type of the app, multiplly selectable.")) {
+        var categories_desc_label = new Gtk.Label (_("Type of the app, multiply selectable.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
@@ -176,7 +176,7 @@ public class EditView : Gtk.Box {
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
-        var terminal_desc_label = new Gtk.Label (_("Check this in if you want to registar a CUI app.")) {
+        var terminal_desc_label = new Gtk.Label (_("Check this in if you want to register a CUI app.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
