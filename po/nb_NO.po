@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 01:02+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
+"PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
 "pinit-main/nb_NO/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
@@ -48,7 +48,7 @@ msgstr "Kommentar"
 
 #: src/Views/EditView.vala:100
 msgid "A tooltip text to describe what the app helps you to do."
-msgstr ""
+msgstr "Et verktøytips som beskriver hva programmet hjelper deg å gjøre."
 
 #: src/Views/EditView.vala:115
 #, fuzzy
@@ -56,36 +56,41 @@ msgid "Exec File"
 msgstr "Kjørbar fil"
 
 #: src/Views/EditView.vala:120
+#, fuzzy
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"Kommandoen/programmet som blir startet når du klikker programoppføringen i "
+"oppstarteren. Angi en absolutt sti eller et programalias."
 
 #: src/Views/EditView.vala:137
 msgid "Icon File"
 msgstr "Ikonfil"
 
 #: src/Views/EditView.vala:142
+#, fuzzy
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
-msgstr ""
+msgstr "Ikondrakten til symbolet. Angi en absolutt sti eller et programalias."
 
 #: src/Views/EditView.vala:159
 msgid "App Categories"
-msgstr ""
+msgstr "Programkategorier"
 
 #: src/Views/EditView.vala:163
 msgid "Type of the app, multiply selectable."
-msgstr ""
+msgstr "Typen program, der du kan velge flere deler."
 
 #: src/Views/EditView.vala:176
 msgid "Run in Terminal"
 msgstr "Kjør i terminal"
 
 #: src/Views/EditView.vala:179
+#, fuzzy
 msgid "Check this in if you want to register a CUI app."
-msgstr ""
+msgstr "Velg dette hvis du vil registrere et dialogbasert program."
 
 #: src/Views/EditView.vala:226
 msgid "Select an executable file"
@@ -122,15 +127,20 @@ msgid "New Entry"
 msgstr "Ny oppføring"
 
 #: src/Views/EditView.vala:347
+#, fuzzy
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
+"Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
 
 #: src/Views/EditView.vala:348
+#, fuzzy
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
+"Bruk minst ett punktum for å forsikre deg om at du har delt inn i minst to "
+"elementer."
 
 #: src/Views/EditView.vala:354
 #, c-format
@@ -139,11 +149,11 @@ msgstr "Mer info er å finne i %s."
 
 #: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
-msgstr ""
+msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
 
 #: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "Anbefalt for navngivning"
 
 #: src/Views/FilesView.vala:21
 msgid "Create a new entry"
@@ -180,8 +190,9 @@ msgid "No valid app entries found"
 msgstr "Fant ingen gyldige programoppføringer"
 
 #: src/Views/FilesView.vala:57
+#, fuzzy
 msgid "If you've never created one, click the + button on the top."
-msgstr ""
+msgstr "Hvis du aldri har opprettet en kan du klikke «+»-knappen der oppe."
 
 #: src/Views/FilesView.vala:106
 msgid "Delete…"
@@ -190,7 +201,7 @@ msgstr "Slett ."
 #: src/Views/FilesView.vala:113
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr ""
+msgstr "Ønsker du å slette «%s»?"
 
 #: src/Views/FilesView.vala:114
 msgid "This removes the app from the launcher."
@@ -249,9 +260,11 @@ msgid "Utility"
 msgstr "Verktøy"
 
 #: src/Application.vala:31
+#, fuzzy
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Opprett snarveien til dine flyttbare favorittprogrammer i oppstarteren din"
 
 #. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
 #: src/Application.vala:38
