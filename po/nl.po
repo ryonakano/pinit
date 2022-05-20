@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-17 19:14+0900\n"
+"POT-Creation-Date: 2022-05-21 00:57+0900\n"
 "PO-Revision-Date: 2022-02-10 13:36+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -265,7 +265,7 @@ msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
 
-#. TRANSLATORS: Replace with your name and email address, don't translate literally
+#. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
 #: src/Application.vala:38
 msgid "translator-credits"
 msgstr ""
