@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:57+0900\n"
+"POT-Creation-Date: 2022-05-21 01:02+0900\n"
 "PO-Revision-Date: 2022-04-24 13:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -81,7 +81,9 @@ msgid "App Categories"
 msgstr "Kategórie aplikácie"
 
 #: src/Views/EditView.vala:163
-msgid "Type of the app, multiplly selectable."
+#, fuzzy
+#| msgid "Type of the app, multiplly selectable."
+msgid "Type of the app, multiply selectable."
 msgstr "Typ aplikácie, možnosť výberu viacerých položiek."
 
 #: src/Views/EditView.vala:176
@@ -89,7 +91,9 @@ msgid "Run in Terminal"
 msgstr "Spustiť v termináli"
 
 #: src/Views/EditView.vala:179
-msgid "Check this in if you want to registar a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to registar a CUI app."
+msgid "Check this in if you want to register a CUI app."
 msgstr "Začiarknite, ak chcete zaregistrovať CUI aplikáciu."
 
 #: src/Views/EditView.vala:226

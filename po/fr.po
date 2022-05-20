@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:57+0900\n"
+"POT-Creation-Date: 2022-05-21 01:02+0900\n"
 "PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -84,7 +84,9 @@ msgid "App Categories"
 msgstr "Catégories de l'application"
 
 #: src/Views/EditView.vala:163
-msgid "Type of the app, multiplly selectable."
+#, fuzzy
+#| msgid "Type of the app, multiplly selectable."
+msgid "Type of the app, multiply selectable."
 msgstr "Type de l'application, sélection multiple possible."
 
 #: src/Views/EditView.vala:176
@@ -92,7 +94,9 @@ msgid "Run in Terminal"
 msgstr "Exécuter dans le Terminal"
 
 #: src/Views/EditView.vala:179
-msgid "Check this in if you want to registar a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to registar a CUI app."
+msgid "Check this in if you want to register a CUI app."
 msgstr ""
 "Cochez ceci si vous souhaitez ajouter une application en ligne de commande."
 

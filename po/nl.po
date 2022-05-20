@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:57+0900\n"
+"POT-Creation-Date: 2022-05-21 01:02+0900\n"
 "PO-Revision-Date: 2022-02-10 13:36+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -79,7 +79,9 @@ msgid "App Categories"
 msgstr "Categorieën"
 
 #: src/Views/EditView.vala:163
-msgid "Type of the app, multiplly selectable."
+#, fuzzy
+#| msgid "Type of the app, multiplly selectable."
+msgid "Type of the app, multiply selectable."
 msgstr "Het soort toepassing (meerdere categorieën mogelijk)."
 
 #: src/Views/EditView.vala:176
@@ -87,7 +89,9 @@ msgid "Run in Terminal"
 msgstr "Uitvoeren in terminalvenster"
 
 #: src/Views/EditView.vala:179
-msgid "Check this in if you want to registar a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to registar a CUI app."
+msgid "Check this in if you want to register a CUI app."
 msgstr "Kruis als je een cli-toepassing wilt uitvoeren."
 
 #: src/Views/EditView.vala:226

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:57+0900\n"
+"POT-Creation-Date: 2022-05-21 01:02+0900\n"
 "PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -77,7 +77,9 @@ msgid "App Categories"
 msgstr "アプリのカテゴリー"
 
 #: src/Views/EditView.vala:163
-msgid "Type of the app, multiplly selectable."
+#, fuzzy
+#| msgid "Type of the app, multiplly selectable."
+msgid "Type of the app, multiply selectable."
 msgstr "アプリの種類です。複数選択できます。"
 
 #: src/Views/EditView.vala:176
@@ -85,7 +87,9 @@ msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
 #: src/Views/EditView.vala:179
-msgid "Check this in if you want to registar a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to registar a CUI app."
+msgid "Check this in if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
 #: src/Views/EditView.vala:226

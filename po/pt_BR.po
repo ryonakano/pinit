@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:57+0900\n"
+"POT-Creation-Date: 2022-05-21 01:02+0900\n"
 "PO-Revision-Date: 2021-11-29 16:05-0300\n"
 "Last-Translator: Daniel Tolentino Ferreira Santos "
 "<danieltolentino@protonmail.com>\n"
@@ -84,7 +84,9 @@ msgid "App Categories"
 msgstr "Categorias do Aplicativo"
 
 #: src/Views/EditView.vala:163
-msgid "Type of the app, multiplly selectable."
+#, fuzzy
+#| msgid "Type of the app, multiplly selectable."
+msgid "Type of the app, multiply selectable."
 msgstr "Tipo do aplicativo, múltipla escolha."
 
 #: src/Views/EditView.vala:176
@@ -92,7 +94,9 @@ msgid "Run in Terminal"
 msgstr "Executar no Terminal"
 
 #: src/Views/EditView.vala:179
-msgid "Check this in if you want to registar a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to registar a CUI app."
+msgid "Check this in if you want to register a CUI app."
 msgstr "Marque aqui se você quiser registar uma aplicativo CUI"
 
 #: src/Views/EditView.vala:226
