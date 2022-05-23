@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021,2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# albanobattistella <albano_battistella@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 01:02+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "it/>\n"
 "Language: it\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
@@ -81,20 +82,16 @@ msgid "App Categories"
 msgstr "Categorie di app"
 
 #: src/Views/EditView.vala:163
-#, fuzzy
-#| msgid "Type of the app, multiplly selectable."
 msgid "Type of the app, multiply selectable."
-msgstr "Tipo di app, selezionabile in modo multiplo."
+msgstr "Tipo di app, selezione multipla."
 
 #: src/Views/EditView.vala:176
 msgid "Run in Terminal"
 msgstr "Esegui nel terminale"
 
 #: src/Views/EditView.vala:179
-#, fuzzy
-#| msgid "Check this in if you want to registar a CUI app."
 msgid "Check this in if you want to register a CUI app."
-msgstr "Controlla questo se vuoi registrare un'app CUI."
+msgstr "Controlla questo se desideri registrare un'app CUI."
 
 #: src/Views/EditView.vala:226
 msgid "Select an executable file"
@@ -270,7 +267,7 @@ msgstr ""
 #. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
 #: src/Application.vala:38
 msgid "translator-credits"
-msgstr ""
+msgstr "Albano Battistella"
 
 #: src/MainWindow.vala:41
 msgid "Updated entry."
