@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the extra package.
 # ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2021,2022.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# albanobattistella <albano_battistella@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 00:58+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "it/>\n"
 "Language: it\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -31,13 +32,12 @@ msgstr ""
 "avvio"
 
 #: data/pinit.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
-"Aggiungi app portatili come file eseguibili non elaborati, file AppImage, "
-"ecc. nel lanciatore di app del tuo ambiente desktop."
+"Crea il collegamento ad app portatili come file eseguibili, file AppImage, "
+"ecc. nel programma di avvio delle app del tuo ambiente desktop."
 
 #: data/pinit.appdata.xml.in:14
 msgid "Other features include:"
@@ -51,6 +51,7 @@ msgstr ""
 #: data/pinit.appdata.xml.in:19
 msgid "Automatically add execution permission to the file you select"
 msgstr ""
+"Aggiunge automaticamente l'autorizzazione di esecuzione al file selezionato"
 
 #: data/pinit.appdata.xml.in:20
 msgid "Syntax error detection"
@@ -73,9 +74,8 @@ msgid "Edit View"
 msgstr "Modifica visualizzazione"
 
 #: data/pinit.appdata.xml.in:41
-#, fuzzy
 msgid "The app now fully redesigned for modern desktop environments!"
-msgstr "Supporto migliorato per altri ambienti desktop"
+msgstr "L'app ora completamente ridisegnata per i moderni ambienti desktop!"
 
 #: data/pinit.appdata.xml.in:43 data/pinit.appdata.xml.in:55
 #: data/pinit.appdata.xml.in:69 data/pinit.appdata.xml.in:87
@@ -86,9 +86,8 @@ msgid "Translation updates:"
 msgstr "Aggiornamenti di traduzione:"
 
 #: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:57
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Aggiunta Traduzione Italiana (grazie a @albanobattistella)"
+msgstr "Aggiornata traduzione Italiana (grazie a @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:46 data/pinit.appdata.xml.in:73
 #: data/pinit.appdata.xml.in:89 data/pinit.appdata.xml.in:102
