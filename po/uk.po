@@ -7,257 +7,270 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 01:02+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
+"pinit-main/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #: src/Views/EditView.vala:50
 msgid "File Name"
-msgstr ""
+msgstr "Назва файлу"
 
 #: src/Views/EditView.vala:55
 msgid "Name of the file where these app info is saved."
-msgstr ""
+msgstr "Назва файлу, у якому зберігаються ці відомості про застосунок."
 
 #: src/Views/EditView.vala:65
 msgid "Suffix of the file"
-msgstr ""
+msgstr "Суфікс файлу"
 
 #: src/Views/EditView.vala:77
 msgid "App Name"
-msgstr ""
+msgstr "Назва застосунку"
 
 #: src/Views/EditView.vala:81
 msgid "Shown in the launcher or Dock."
-msgstr ""
+msgstr "Показується на панелі запуску або в Dock."
 
 #: src/Views/EditView.vala:96
 msgid "Comment"
-msgstr ""
+msgstr "Коментар"
 
 #: src/Views/EditView.vala:100
 msgid "A tooltip text to describe what the app helps you to do."
-msgstr ""
+msgstr "Текст підказки для опису того, що застосунок допомагає вам робити."
 
 #: src/Views/EditView.vala:115
 msgid "Exec File"
-msgstr ""
+msgstr "Виконуваний файл"
 
 #: src/Views/EditView.vala:120
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"Команда/застосунок, що запускається, коли ви клацаєте запис застосунку на "
+"панелі запуску. Вкажіть абсолютний шлях або альтернативну назву застосунку."
 
 #: src/Views/EditView.vala:137
 msgid "Icon File"
-msgstr ""
+msgstr "Файл піктограми"
 
 #: src/Views/EditView.vala:142
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
+"Піктограма, що маркує застосунок. Укажіть абсолютний шлях або альтернативну "
+"назву піктограми."
 
 #: src/Views/EditView.vala:159
 msgid "App Categories"
-msgstr ""
+msgstr "Категорії застосунку"
 
 #: src/Views/EditView.vala:163
 msgid "Type of the app, multiply selectable."
-msgstr ""
+msgstr "Тип застосунку. Можна вибрати кілька варіантів."
 
 #: src/Views/EditView.vala:176
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Запускати у терміналі"
 
 #: src/Views/EditView.vala:179
 msgid "Check this in if you want to register a CUI app."
-msgstr ""
+msgstr "Позначте, якщо хочете зареєструвати застосунок CUI."
 
 #: src/Views/EditView.vala:226
 msgid "Select an executable file"
-msgstr ""
+msgstr "Вибрати виконуваний файл"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 msgid "Open"
-msgstr ""
+msgstr "Відкрити"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
 #: src/Views/EditView.vala:320
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/Views/EditView.vala:250
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "Файли ICO, PNG, SVG або XMP"
 
 #: src/Views/EditView.vala:253
 msgid "Select an icon file"
-msgstr ""
+msgstr "Вибрати файл піктограми"
 
 #: src/Views/EditView.vala:292
 #, c-format
 msgid "Editing “%s”"
-msgstr ""
+msgstr "Редагування «%s»"
 
 #: src/Views/EditView.vala:294
 msgid "Editing Entry"
-msgstr ""
+msgstr "Редагування запису"
 
 #: src/Views/EditView.vala:297
 msgid "New Entry"
-msgstr ""
+msgstr "Новий запис"
 
 #: src/Views/EditView.vala:347
 msgid ""
 "Only use alphabets, numbers, and underscores, and none begins with numbers."
 msgstr ""
+"Використовуйте лише букви, цифри та підкреслення. Не може починатися з чисел."
 
 #: src/Views/EditView.vala:348
 msgid ""
 "Use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
+"Використовуйте принаймні одну крапку, щоб переконатися, що текст розділений "
+"принаймні на два елементи."
 
 #: src/Views/EditView.vala:354
 #, c-format
 msgid "For more info, see %s."
-msgstr ""
+msgstr "Докладніше у %s."
 
 #: src/Views/EditView.vala:356
 msgid "the file naming specification by freedesktop.org"
-msgstr ""
+msgstr "специфікації назв файлів від freedesktop.org"
 
 #: src/Views/EditView.vala:378
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "Рекомендації щодо іменування"
 
 #: src/Views/FilesView.vala:21
 msgid "Create a new entry"
-msgstr ""
+msgstr "Створити новий запис"
 
 #: src/Views/FilesView.vala:25
 msgid "Light"
-msgstr ""
+msgstr "Світлий"
 
 #: src/Views/FilesView.vala:26
 msgid "Dark"
-msgstr ""
+msgstr "Темний"
 
 #: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
 msgid "System"
-msgstr ""
+msgstr "Системи"
 
 #: src/Views/FilesView.vala:30
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:32
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "Про %s…"
 
 #: src/Views/FilesView.vala:35
 msgid "Preferences"
-msgstr ""
+msgstr "Налаштування"
 
 #: src/Views/FilesView.vala:56
 msgid "No valid app entries found"
-msgstr ""
+msgstr "Не знайдено дійсних записів застосунків"
 
 #: src/Views/FilesView.vala:57
 msgid "If you've never created one, click the + button on the top."
-msgstr ""
+msgstr "Якщо ви ніколи не створювали його, клацніть кнопку + угорі."
 
 #: src/Views/FilesView.vala:106
 msgid "Delete…"
-msgstr ""
+msgstr "Видалити…"
 
 #: src/Views/FilesView.vala:113
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr ""
+msgstr "Справді видалити «%s»?"
 
 #: src/Views/FilesView.vala:114
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "Це видалить застосунок з панелі запуску."
 
 #: src/Views/FilesView.vala:117
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #: src/CategoryChooser.vala:50
 msgid "Audio & Video"
-msgstr ""
+msgstr "Аудіо та відео"
 
 #: src/CategoryChooser.vala:51
 msgid "Audio"
-msgstr ""
+msgstr "Аудіо"
 
 #: src/CategoryChooser.vala:52
 msgid "Video"
-msgstr ""
+msgstr "Відео"
 
 #: src/CategoryChooser.vala:53
 msgid "Development"
-msgstr ""
+msgstr "Розробка"
 
 #: src/CategoryChooser.vala:54
 msgid "Education"
-msgstr ""
+msgstr "Освіта"
 
 #: src/CategoryChooser.vala:55
 msgid "Game"
-msgstr ""
+msgstr "Гра"
 
 #: src/CategoryChooser.vala:56
 msgid "Graphics"
-msgstr ""
+msgstr "Графіка"
 
 #: src/CategoryChooser.vala:57
 msgid "Network"
-msgstr ""
+msgstr "Мережа"
 
 #: src/CategoryChooser.vala:58
 msgid "Office"
-msgstr ""
+msgstr "Офіс"
 
 #: src/CategoryChooser.vala:59
 msgid "Science"
-msgstr ""
+msgstr "Наука"
 
 #: src/CategoryChooser.vala:60
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 #: src/CategoryChooser.vala:62
 msgid "Utility"
-msgstr ""
+msgstr "Утиліта"
 
 #: src/Application.vala:31
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Створіть ярлик до улюблених портативних застосунків у панелі запуску "
+"застосунків"
 
 #. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
 #: src/Application.vala:38
 msgid "translator-credits"
-msgstr ""
+msgstr "Ihor Hordiichuk <igor_ck@outlook.com>"
 
 #: src/MainWindow.vala:41
 msgid "Updated entry."
-msgstr ""
+msgstr "Оновлений запис."
 
 #: src/MainWindow.vala:45
 msgid "Deleted entry."
-msgstr ""
+msgstr "Видалений запис."
