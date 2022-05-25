@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 00:58+0900\n"
-"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"PO-Revision-Date: 2022-05-27 18:15+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "pinit-extra/uk/>\n"
@@ -168,67 +168,72 @@ msgstr "EditView: Фокусування на записі назви файлу
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
+"FilesView: вікно стало прокручуваним і виправлено можливість збільшення, "
+"якщо багато записів"
 
 #: data/pinit.appdata.xml.in:114
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
 
 #: data/pinit.appdata.xml.in:122
 msgid "Improved support for other desktop environments"
-msgstr ""
+msgstr "Поліпшена підтримка інших стільничних середовищ"
 
 #: data/pinit.appdata.xml.in:123
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
-msgstr ""
+msgstr "Додавання дозволу на виконання натисканням кнопки «Pin It!»"
 
 #: data/pinit.appdata.xml.in:134
 msgid "Add CategoryChooser"
-msgstr ""
+msgstr "Доданий вибір категорій"
 
 #: data/pinit.appdata.xml.in:135
 msgid "Support Alt+Home to show welcome"
-msgstr ""
+msgstr "Підтримка Alt+Home, щоб перейти на сторінку привітання"
 
 #: data/pinit.appdata.xml.in:136
 msgid "Allow GPU acceralation by default"
-msgstr ""
+msgstr "Додано GPU-прискорення з коробки"
 
 #: data/pinit.appdata.xml.in:147
 msgid "Add 128px app icon (thanks to @hanaral)"
-msgstr ""
+msgstr "Додана піктограма застосунку 128px (завдяки @hanaral)"
 
 #: data/pinit.appdata.xml.in:148
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
+"Закруглені кути вікон на будь-якій таблиці стилів (завдяки @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:149
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr ""
+msgstr "Підтримка мультитач жестів (завдяки @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:150
 msgid "Fix unreadable description text in AppCenter"
-msgstr ""
+msgstr "Виправлено нечитабельний текст опису у Центрі застосунків"
 
 #: data/pinit.appdata.xml.in:151
 msgid "Save and restore window position"
-msgstr ""
+msgstr "Збереження та відновлення розташування вікна"
 
 #: data/pinit.appdata.xml.in:155
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr ""
+msgstr "Доданий переклад іспанською мовою (спасибі @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:163
 msgid "Initial release"
-msgstr ""
+msgstr "Початковий випуск"
 
 #: data/pinit.appdata.xml.in:169
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Створення файлів робочого столу"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
+"Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;File"
+";Create;Edit;Info;Icon;AppImage;"
