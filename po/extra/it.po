@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 00:58+0900\n"
-"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"PO-Revision-Date: 2022-05-27 18:15+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "it/>\n"
@@ -98,7 +98,7 @@ msgstr "Aggiornata traduzione giapponese"
 
 #: data/pinit.appdata.xml.in:53
 msgid "AppData: Fix release year"
-msgstr ""
+msgstr "AppData: Corretto l'anno di rilascio"
 
 #: data/pinit.appdata.xml.in:64
 msgid "Check desktop environment on runtime"
@@ -118,7 +118,7 @@ msgstr "Modifica Vista: meno severo sui nomi dei file"
 
 #: data/pinit.appdata.xml.in:71
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Aggiunta Traduzione Italiana (grazie a @albanobattistella)"
+msgstr "Aggiunta traduzione italiana (grazie a @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:72
 msgid "Add Dutch translation (thanks to @Vistaus)"
