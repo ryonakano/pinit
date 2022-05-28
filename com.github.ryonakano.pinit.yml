@@ -7,7 +7,7 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
-  - '--filesystem=~/.local/share/applications'
+  - '--filesystem=home'
   # For drawing icons
   - '--device=dri'
 modules:
