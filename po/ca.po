@@ -7,55 +7,61 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-21 01:02+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"Last-Translator: Maite Guix <maite.guix@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/rosp/pinit-main/"
+"ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Views/EditView.vala:40
 msgid "Save"
-msgstr ""
+msgstr "Desar"
 
 #: src/Views/EditView.vala:50
 msgid "File Name"
-msgstr ""
+msgstr "Nom del fitxer"
 
 #: src/Views/EditView.vala:55
 msgid "Name of the file where these app info is saved."
-msgstr ""
+msgstr "Nom del fitxer on es desa aquesta informació de l'aplicació."
 
 #: src/Views/EditView.vala:65
 msgid "Suffix of the file"
-msgstr ""
+msgstr "Sufix del fitxer"
 
 #: src/Views/EditView.vala:77
 msgid "App Name"
-msgstr ""
+msgstr "Nom de l'aplicació"
 
 #: src/Views/EditView.vala:81
 msgid "Shown in the launcher or Dock."
-msgstr ""
+msgstr "Es mostra al llançador o al Dock."
 
 #: src/Views/EditView.vala:96
 msgid "Comment"
-msgstr ""
+msgstr "Comentari"
 
 #: src/Views/EditView.vala:100
 msgid "A tooltip text to describe what the app helps you to do."
-msgstr ""
+msgstr "Una descripció sobre què ajuda a fer l'aplicació."
 
 #: src/Views/EditView.vala:115
 msgid "Exec File"
-msgstr ""
+msgstr "Fitxer executable"
 
 #: src/Views/EditView.vala:120
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"L'ordre/aplicació es llança quan feu clic a l'entrada de l'aplicació al "
+"llançador. Especifiqueu-ho en un camí absolut o amb el nom de l'àlies d'una "
+"aplicació."
 
 #: src/Views/EditView.vala:137
 msgid "Icon File"
