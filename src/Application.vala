@@ -34,7 +34,7 @@ public class Application : Adw.Application {
                 license_type = Gtk.License.GPL_3_0,
                 authors = { "Ryo Nakano" },
                 artists = { "hanaral" },
-                ///TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
+                ///TRANSLATORS: Replace with your name; don't translate literally
                 translator_credits = _("translator-credits")
             };
             about_dialog.present ();
@@ -92,9 +92,7 @@ public class Application : Adw.Application {
             window.maximize ();
         }
 
-        window.default_width = window_width;
-        window.default_height = window_height;
-
+        window.set_default_size (window_width, window_height);
         window.present ();
     }
 
