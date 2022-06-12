@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 01:02+0900\n"
+"POT-Creation-Date: 2022-06-12 13:27+0900\n"
 "PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -101,7 +101,7 @@ msgid "Open"
 msgstr "Åpne"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
-#: src/Views/EditView.vala:320
+#: src/Views/EditView.vala:322
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -126,88 +126,94 @@ msgstr "Redigerer oppføring"
 msgid "New Entry"
 msgstr "Ny oppføring"
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
+msgid "Recommendations for naming"
+msgstr "Anbefalt for navngivning"
+
+#: src/Views/EditView.vala:354
 #, fuzzy
 msgid ""
-"Only use alphabets, numbers, and underscores, and none begins with numbers."
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
 msgstr ""
 "Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:355
 #, fuzzy
 msgid ""
-"Use at least one period to make sure to be separated into at least two "
+"Also, use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
 "Bruk minst ett punktum for å forsikre deg om at du har delt inn i minst to "
 "elementer."
 
-#: src/Views/EditView.vala:354
+#: src/Views/EditView.vala:362
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr ""
+
+#: src/Views/EditView.vala:370
 #, c-format
 msgid "For more info, see %s."
 msgstr "Mer info er å finne i %s."
 
-#: src/Views/EditView.vala:356
+#: src/Views/EditView.vala:372
 msgid "the file naming specification by freedesktop.org"
 msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
 
-#: src/Views/EditView.vala:378
-msgid "Recommendations for naming"
-msgstr "Anbefalt for navngivning"
-
-#: src/Views/FilesView.vala:21
+#: src/Views/FilesView.vala:20
 msgid "Create a new entry"
 msgstr "Opprett en ny oppføring"
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:24
 msgid "Light"
 msgstr "Lys"
 
-#: src/Views/FilesView.vala:26
+#: src/Views/FilesView.vala:25
 msgid "Dark"
 msgstr "Mørk"
 
-#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+#: src/Views/FilesView.vala:26 src/CategoryChooser.vala:61
 msgid "System"
 msgstr "Systemet"
 
-#: src/Views/FilesView.vala:30
+#: src/Views/FilesView.vala:29
 msgid "Style"
 msgstr "Stil"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:32
+#: src/Views/FilesView.vala:34
 #, c-format
 msgid "About %s…"
 msgstr "Om %s…"
 
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:38
 msgid "Preferences"
 msgstr "Innstillinger"
 
-#: src/Views/FilesView.vala:56
+#: src/Views/FilesView.vala:59
 msgid "No valid app entries found"
 msgstr "Fant ingen gyldige programoppføringer"
 
-#: src/Views/FilesView.vala:57
+#: src/Views/FilesView.vala:60
 #, fuzzy
 msgid "If you've never created one, click the + button on the top."
 msgstr "Hvis du aldri har opprettet en kan du klikke «+»-knappen der oppe."
 
-#: src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:109
 msgid "Delete…"
 msgstr "Slett ."
 
-#: src/Views/FilesView.vala:113
+#: src/Views/FilesView.vala:116
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Ønsker du å slette «%s»?"
 
-#: src/Views/FilesView.vala:114
+#: src/Views/FilesView.vala:117
 msgid "This removes the app from the launcher."
 msgstr "Dette sletter programmet fra oppstarteren."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:120
 msgid "Delete"
 msgstr "Slett"
 
@@ -259,15 +265,15 @@ msgstr "Innstillinger"
 msgid "Utility"
 msgstr "Verktøy"
 
-#: src/Application.vala:31
+#: src/Application.vala:66
 #, fuzzy
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
 "Opprett snarveien til dine flyttbare favorittprogrammer i oppstarteren din"
 
-#. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
-#: src/Application.vala:38
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/Application.vala:73
 msgid "translator-credits"
 msgstr "Allan Nordhøy, <epost@anotheragency.no>"
 

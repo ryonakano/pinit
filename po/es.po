@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 01:02+0900\n"
+"POT-Creation-Date: 2022-06-12 13:27+0900\n"
 "PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -108,7 +108,7 @@ msgid "Open"
 msgstr "Abrir"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
-#: src/Views/EditView.vala:320
+#: src/Views/EditView.vala:322
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -133,88 +133,94 @@ msgstr ""
 msgid "New Entry"
 msgstr ""
 
-#: src/Views/EditView.vala:347
-msgid ""
-"Only use alphabets, numbers, and underscores, and none begins with numbers."
-msgstr ""
-
 #: src/Views/EditView.vala:348
-msgid ""
-"Use at least one period to make sure to be separated into at least two "
-"elements."
+msgid "Recommendations for naming"
 msgstr ""
 
 #: src/Views/EditView.vala:354
+msgid ""
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
+msgstr ""
+
+#: src/Views/EditView.vala:355
+msgid ""
+"Also, use at least one period to make sure to be separated into at least two "
+"elements."
+msgstr ""
+
+#: src/Views/EditView.vala:362
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr ""
+
+#: src/Views/EditView.vala:370
 #, c-format
 msgid "For more info, see %s."
 msgstr ""
 
-#: src/Views/EditView.vala:356
+#: src/Views/EditView.vala:372
 msgid "the file naming specification by freedesktop.org"
 msgstr ""
 
-#: src/Views/EditView.vala:378
-msgid "Recommendations for naming"
-msgstr ""
-
-#: src/Views/FilesView.vala:21
+#: src/Views/FilesView.vala:20
 #, fuzzy
 msgid "Create a new entry"
 msgstr "Crear un nuevo archivo de escritorio."
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:24
 msgid "Light"
 msgstr ""
 
-#: src/Views/FilesView.vala:26
+#: src/Views/FilesView.vala:25
 msgid "Dark"
 msgstr ""
 
-#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+#: src/Views/FilesView.vala:26 src/CategoryChooser.vala:61
 msgid "System"
 msgstr ""
 
-#: src/Views/FilesView.vala:30
+#: src/Views/FilesView.vala:29
 msgid "Style"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:32
+#: src/Views/FilesView.vala:34
 #, c-format
 msgid "About %s…"
 msgstr ""
 
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:38
 msgid "Preferences"
 msgstr ""
 
-#: src/Views/FilesView.vala:56
+#: src/Views/FilesView.vala:59
 #, fuzzy
 msgid "No valid app entries found"
 msgstr "No se encontraron archivos de escritorios validos"
 
-#: src/Views/FilesView.vala:57
+#: src/Views/FilesView.vala:60
 #, fuzzy
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
 "Si nunca has creado uno, vuelve a la sección de bienvenida y selecciona "
 "\"Nuevo Archivo\"."
 
-#: src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:109
 msgid "Delete…"
 msgstr "Borrar..."
 
-#: src/Views/FilesView.vala:113
+#: src/Views/FilesView.vala:116
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "¿Estás seguro/a que quieres eliminar «%s»?"
 
-#: src/Views/FilesView.vala:114
+#: src/Views/FilesView.vala:117
 #, fuzzy
 msgid "This removes the app from the launcher."
 msgstr "Esto remueve la aplicación del menú de aplicaciones."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:120
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -266,13 +272,13 @@ msgstr ""
 msgid "Utility"
 msgstr ""
 
-#: src/Application.vala:31
+#: src/Application.vala:66
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
 
-#. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
-#: src/Application.vala:38
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/Application.vala:73
 msgid "translator-credits"
 msgstr ""
 

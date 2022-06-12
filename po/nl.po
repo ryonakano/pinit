@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 01:02+0900\n"
+"POT-Creation-Date: 2022-06-12 13:27+0900\n"
 "PO-Revision-Date: 2022-02-10 13:36+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -103,7 +103,7 @@ msgid "Open"
 msgstr "Openen"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
-#: src/Views/EditView.vala:320
+#: src/Views/EditView.vala:322
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -130,89 +130,103 @@ msgstr "Item bewerken"
 msgid "New Entry"
 msgstr "Nieuw item"
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
+msgid "Recommendations for naming"
+msgstr "Tips omtrent namen"
+
+#: src/Views/EditView.vala:354
+#, fuzzy
+#| msgid ""
+#| "Only use alphabets, numbers, and underscores, and none begins with "
+#| "numbers."
 msgid ""
-"Only use alphabets, numbers, and underscores, and none begins with numbers."
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
 msgstr ""
 "Gebruik alleen letters, cijfers en onderliggende streepjes, en begin geen "
 "enkele itemnaam met een cijfer."
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:355
+#, fuzzy
+#| msgid ""
+#| "Use at least one period to make sure to be separated into at least two "
+#| "elements."
 msgid ""
-"Use at least one period to make sure to be separated into at least two "
+"Also, use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr "Gebruik minimaal één punt als je twee naamdelen wilt scheiden."
 
-#: src/Views/EditView.vala:354
+#: src/Views/EditView.vala:362
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr ""
+
+#: src/Views/EditView.vala:370
 #, c-format
 msgid "For more info, see %s."
 msgstr "Meer informatie: %s."
 
-#: src/Views/EditView.vala:356
+#: src/Views/EditView.vala:372
 msgid "the file naming specification by freedesktop.org"
 msgstr "de bestandsnaamspecificaties op freedesktop.org"
 
-#: src/Views/EditView.vala:378
-msgid "Recommendations for naming"
-msgstr "Tips omtrent namen"
-
-#: src/Views/FilesView.vala:21
+#: src/Views/FilesView.vala:20
 #, fuzzy
 msgid "Create a new entry"
 msgstr "Maak een nieuw item aan."
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:24
 msgid "Light"
 msgstr "Licht"
 
-#: src/Views/FilesView.vala:26
+#: src/Views/FilesView.vala:25
 msgid "Dark"
 msgstr "Donker"
 
-#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+#: src/Views/FilesView.vala:26 src/CategoryChooser.vala:61
 msgid "System"
 msgstr "Systeem"
 
-#: src/Views/FilesView.vala:30
+#: src/Views/FilesView.vala:29
 #, fuzzy
 msgid "Style"
 msgstr "Thema:"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:32
+#: src/Views/FilesView.vala:34
 #, c-format
 msgid "About %s…"
 msgstr ""
 
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:38
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: src/Views/FilesView.vala:56
+#: src/Views/FilesView.vala:59
 msgid "No valid app entries found"
 msgstr "Geen geldige toepassingen aangetroffen"
 
-#: src/Views/FilesView.vala:57
+#: src/Views/FilesView.vala:60
 #, fuzzy
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
 "Als je nog nooit een item hebt aangemaakt, ga dan terug naar het "
 "welkomstscherm en klik op ‘Nieuw item’."
 
-#: src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:109
 msgid "Delete…"
 msgstr "Verwijderen…"
 
-#: src/Views/FilesView.vala:113
+#: src/Views/FilesView.vala:116
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Weet je zeker dat je ‘%s’ wilt verwijderen?"
 
-#: src/Views/FilesView.vala:114
+#: src/Views/FilesView.vala:117
 msgid "This removes the app from the launcher."
 msgstr "Hiermee verwijder je de toepassing uit de starter."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:120
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -264,13 +278,13 @@ msgstr "Instellingen"
 msgid "Utility"
 msgstr "Hulpmiddelen"
 
-#: src/Application.vala:31
+#: src/Application.vala:66
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
 
-#. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
-#: src/Application.vala:38
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/Application.vala:73
 msgid "translator-credits"
 msgstr ""
 

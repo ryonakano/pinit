@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 01:02+0900\n"
+"POT-Creation-Date: 2022-06-12 13:27+0900\n"
 "PO-Revision-Date: 2022-04-24 13:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -105,7 +105,7 @@ msgid "Open"
 msgstr "Otvoriť"
 
 #: src/Views/EditView.vala:227 src/Views/EditView.vala:254
-#: src/Views/EditView.vala:320
+#: src/Views/EditView.vala:322
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -130,85 +130,99 @@ msgstr "Úprava položky"
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: src/Views/EditView.vala:347
+#: src/Views/EditView.vala:348
+msgid "Recommendations for naming"
+msgstr "Odporúčania na pomenovávanie"
+
+#: src/Views/EditView.vala:354
+#, fuzzy
+#| msgid ""
+#| "Only use alphabets, numbers, and underscores, and none begins with "
+#| "numbers."
 msgid ""
-"Only use alphabets, numbers, and underscores, and none begins with numbers."
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
 msgstr ""
 "Použite iba písmená, číslice a podčiarkovníky. Nemôže sa začínať číslom."
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:355
+#, fuzzy
+#| msgid ""
+#| "Use at least one period to make sure to be separated into at least two "
+#| "elements."
 msgid ""
-"Use at least one period to make sure to be separated into at least two "
+"Also, use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
 "Použite aspoň jednu bodku aby ste sa uistili, že sa text rozdelí minimálne "
 "na dva prvky."
 
-#: src/Views/EditView.vala:354
+#: src/Views/EditView.vala:362
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr ""
+
+#: src/Views/EditView.vala:370
 #, c-format
 msgid "For more info, see %s."
 msgstr "Pre viac informácií viď %s."
 
-#: src/Views/EditView.vala:356
+#: src/Views/EditView.vala:372
 msgid "the file naming specification by freedesktop.org"
 msgstr "špecifiká pomenovávania súborov od freedesktop.org"
 
-#: src/Views/EditView.vala:378
-msgid "Recommendations for naming"
-msgstr "Odporúčania na pomenovávanie"
-
-#: src/Views/FilesView.vala:21
+#: src/Views/FilesView.vala:20
 msgid "Create a new entry"
 msgstr "Vytvoriť novú položku"
 
-#: src/Views/FilesView.vala:25
+#: src/Views/FilesView.vala:24
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/Views/FilesView.vala:26
+#: src/Views/FilesView.vala:25
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/Views/FilesView.vala:27 src/CategoryChooser.vala:61
+#: src/Views/FilesView.vala:26 src/CategoryChooser.vala:61
 msgid "System"
 msgstr "Systém"
 
-#: src/Views/FilesView.vala:30
+#: src/Views/FilesView.vala:29
 msgid "Style"
 msgstr "Štýl"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:32
+#: src/Views/FilesView.vala:34
 #, c-format
 msgid "About %s…"
 msgstr "O %s…"
 
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:38
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/Views/FilesView.vala:56
+#: src/Views/FilesView.vala:59
 msgid "No valid app entries found"
 msgstr "Neboli nájdené žiadne platné položky aplikácií"
 
-#: src/Views/FilesView.vala:57
+#: src/Views/FilesView.vala:60
 msgid "If you've never created one, click the + button on the top."
 msgstr "Ak ste nikdy nijakú nevytvorili, kliknite na tlačidlo + navrchu."
 
-#: src/Views/FilesView.vala:106
+#: src/Views/FilesView.vala:109
 msgid "Delete…"
 msgstr "Odstrániť…"
 
-#: src/Views/FilesView.vala:113
+#: src/Views/FilesView.vala:116
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Naozaj chcete odstrániť „%s“?"
 
-#: src/Views/FilesView.vala:114
+#: src/Views/FilesView.vala:117
 msgid "This removes the app from the launcher."
 msgstr "Toto odstráni aplikáciu zo spúšťača."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:120
 msgid "Delete"
 msgstr "Odstrániť"
 
@@ -260,14 +274,14 @@ msgstr "Nastavenia"
 msgid "Utility"
 msgstr "Užitočné"
 
-#: src/Application.vala:31
+#: src/Application.vala:66
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
 "Vytvorte skratku k vašim obľúbeným prenosným aplikáciám v spúšťači aplikácií"
 
-#. TRANSLATORS: Replace with your name and plus (optionally) your email address; don't translate literally
-#: src/Application.vala:38
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/Application.vala:73
 msgid "translator-credits"
 msgstr "John Dumpling"
 
