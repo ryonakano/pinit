@@ -11,7 +11,7 @@ public class Application : Adw.Application {
     }
 
     public static Settings settings;
-    private MainWindow window;
+    private MainWindow main_window;
 
     public Application () {
         Object (
@@ -58,7 +58,7 @@ public class Application : Adw.Application {
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
             var about_dialog = new Gtk.AboutDialog () {
-                transient_for = window,
+                transient_for = main_window,
                 modal = true,
                 logo_icon_name = Constants.PROJECT_NAME,
                 program_name = Constants.APP_NAME,
@@ -88,28 +88,28 @@ public class Application : Adw.Application {
     }
 
     protected override void activate () {
-        if (window != null) { // The app is already launched
-            window.present ();
+        if (main_window != null) { // The app is already launched
+            main_window.present ();
             return;
         }
 
-        window = new MainWindow ();
-        window.set_application (this);
-        // The window seems to need showing before restoring its size in Gtk4
-        window.present ();
+        main_window = new MainWindow ();
+        main_window.set_application (this);
+        // The main_window seems to need showing before restoring its size in Gtk4
+        main_window.present ();
 
-        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
-        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
+        settings.bind ("main_window-height", main_window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("main_window-width", main_window, "default-width", SettingsBindFlags.DEFAULT);
 
         /*
-         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+         * Binding of main_window maximization with "SettingsBindFlags.DEFAULT" results the main_window getting bigger and bigger on open.
          * So we use the prepared binding only for setting
          */
-        if (Application.settings.get_boolean ("window-maximized")) {
-            window.maximize ();
+        if (Application.settings.get_boolean ("main_window-maximized")) {
+            main_window.maximize ();
         }
 
-        settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
+        settings.bind ("main_window-maximized", main_window, "maximized", SettingsBindFlags.SET);
     }
 
     public static int main (string[] args) {
