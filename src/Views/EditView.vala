@@ -343,12 +343,26 @@ public class EditView : Gtk.Box {
     }
 
     private Gtk.MenuButton create_info_button () {
-        var label = new Gtk.Label (
-            _("Only use alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
-            _("Use at least one period to make sure to be separated into at least two elements.")
+        var title_label = new Gtk.Label (_("Recommendations for naming")) {
+            halign = Gtk.Align.START
+        };
+        title_label.get_style_context ().add_class ("heading");
+
+        var desc_label = new Gtk.Label (
+            _("It is recommended to use only alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
+            _("Also, use at least one period to make sure to be separated into at least two elements.")
         ) {
             halign = Gtk.Align.START
         };
+        desc_label.get_style_context ().add_class ("body");
+
+        var example_label = new Gtk.Label (
+            _("For example, you should use \"%s\" for the 2D game, SuperTux.").printf ("<b>org.supertuxproject.SuperTux</b>")
+        ) {
+            use_markup = true,
+            halign = Gtk.Align.START
+        };
+        example_label.get_style_context ().add_class ("body");
 
         var detailed_label = new Gtk.Label (
             _("For more info, see %s.").printf (
@@ -358,6 +372,7 @@ public class EditView : Gtk.Box {
             use_markup = true,
             halign = Gtk.Align.START
         };
+        detailed_label.get_style_context ().add_class ("body");
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
@@ -365,7 +380,9 @@ public class EditView : Gtk.Box {
             margin_start = 12,
             margin_end = 12
         };
-        box.append (label);
+        box.append (title_label);
+        box.append (desc_label);
+        box.append (example_label);
         box.append (detailed_label);
 
         var popover = new Gtk.Popover () {
@@ -375,7 +392,6 @@ public class EditView : Gtk.Box {
         var menu_button = new Gtk.MenuButton () {
             icon_name = "dialog-information-symbolic",
             margin_start = 6,
-            tooltip_text = _("Recommendations for naming"),
             popover = popover
         };
 
