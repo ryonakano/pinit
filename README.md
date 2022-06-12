@@ -16,7 +16,11 @@ The original idea of the app is inspired from https://github.com/alexkdeveloper/
 
 ## Installation
 ### For Users
-You can download the app from Flathub, which should make this app available for all Linux distribution:
+On elementary OS? Click the button to get Pin It! on AppCenter:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pinit)
+
+You can also download the app from Flathub, in case you're using another distribution. This version is tweaked to work well and look good on other desktop environment.
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/details/com.github.ryonakano.pinit)
 

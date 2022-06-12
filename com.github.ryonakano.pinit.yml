@@ -1,7 +1,7 @@
 app-id: com.github.ryonakano.pinit
-runtime: org.gnome.Platform
-runtime-version: '42'
-sdk: org.gnome.Sdk
+runtime: io.elementary.Platform
+runtime-version: '7'
+sdk: io.elementary.Sdk
 command: com.github.ryonakano.pinit
 finish-args:
   - '--share=ipc'
