@@ -95,16 +95,21 @@ public class Application : Adw.Application {
 
         window = new MainWindow ();
         window.set_application (this);
+        // The window seems to need showing before restoring its size in Gtk4
+        window.present ();
 
-        int window_width, window_height;
-        settings.get ("window-size", "(ii)", out window_width, out window_height);
+        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
 
+        /*
+         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+         * So we use the prepared binding only for setting
+         */
         if (Application.settings.get_boolean ("window-maximized")) {
             window.maximize ();
         }
 
-        window.set_default_size (window_width, window_height);
-        window.present ();
+        settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
     }
 
     public static int main (string[] args) {

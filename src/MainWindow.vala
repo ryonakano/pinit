@@ -88,18 +88,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
             destroy ();
         });
-
-        notify["default-width"].connect (() => {
-            save_window_size ();
-        });
-
-        notify["default-height"].connect (() => {
-            save_window_size ();
-        });
-
-        notify["maximized"].connect (() => {
-            Application.settings.set_boolean ("window-maximized", maximized);
-        });
     }
 
     // Show or hide the close button, maximize button, etc. depending on if the leaflet is folded
@@ -135,9 +123,5 @@ public class MainWindow : Adw.ApplicationWindow {
         } else {
             show_edit_view (last_edited_file);
         }
-    }
-
-    private void save_window_size () {
-        Application.settings.set ("window-size", "(ii)", default_width, default_height);
     }
 }
