@@ -27,8 +27,12 @@ public class FilesView : Gtk.Box {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("Style"), theme_submenu);
-        ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
+
+        // elementary prefers AppData for showcasing the app info, so don't construct useless AboutDialog on Pantheon
+        if (!Application.IS_ON_PANTHEON) {
+            ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
+            menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
+        }
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),

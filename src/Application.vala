@@ -4,6 +4,12 @@
  */
 
 public class Application : Adw.Application {
+    public static bool IS_ON_PANTHEON {
+        get {
+            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+        }
+    }
+
     public static Settings settings;
     private MainWindow window;
 
@@ -20,27 +26,8 @@ public class Application : Adw.Application {
         Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
         Intl.textdomain (Constants.PROJECT_NAME);
 
-        var about_action = new SimpleAction ("about", null);
-        about_action.activate.connect (() => {
-            var about_dialog = new Gtk.AboutDialog () {
-                transient_for = window,
-                modal = true,
-                logo_icon_name = Constants.PROJECT_NAME,
-                program_name = Constants.APP_NAME,
-                version = Constants.PROJECT_VERSION,
-                comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
-                website = "https://github.com/ryonakano/pinit",
-                copyright = "© 2021-2022 Ryo Nakano",
-                license_type = Gtk.License.GPL_3_0,
-                authors = { "Ryo Nakano" },
-                artists = { "hanaral" },
-                ///TRANSLATORS: Replace with your name; don't translate literally
-                translator_credits = _("translator-credits")
-            };
-            about_dialog.present ();
-        });
-        set_accels_for_action ("app.about", {"F1"});
-        add_action (about_action);
+        var style_manager = Adw.StyleManager.get_default ();
+        style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
 
         var style_light_action = new SimpleAction ("style-light", null);
         style_light_action.activate.connect (() => {
@@ -63,8 +50,32 @@ public class Application : Adw.Application {
         set_accels_for_action ("app.style-system", {""});
         add_action (style_system_action);
 
-        var style_manager = Adw.StyleManager.get_default ();
-        style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
+        // elementary prefers AppData for showcasing the app info, so don't construct useless AboutDialog on Pantheon
+        if (IS_ON_PANTHEON) {
+            return;
+        }
+
+        var about_action = new SimpleAction ("about", null);
+        about_action.activate.connect (() => {
+            var about_dialog = new Gtk.AboutDialog () {
+                transient_for = window,
+                modal = true,
+                logo_icon_name = Constants.PROJECT_NAME,
+                program_name = Constants.APP_NAME,
+                version = Constants.PROJECT_VERSION,
+                comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
+                website = "https://github.com/ryonakano/pinit",
+                copyright = "© 2021-2022 Ryo Nakano",
+                license_type = Gtk.License.GPL_3_0,
+                authors = { "Ryo Nakano" },
+                artists = { "hanaral" },
+                ///TRANSLATORS: Replace with your name; don't translate literally
+                translator_credits = _("translator-credits")
+            };
+            about_dialog.present ();
+        });
+        set_accels_for_action ("app.about", {"F1"});
+        add_action (about_action);
     }
 
     static construct {
