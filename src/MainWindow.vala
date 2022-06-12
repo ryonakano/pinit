@@ -102,8 +102,10 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
+    // Show or hide the close button, maximize button, etc. depending on if the leaflet is folded
     private void set_header_buttons_form () {
-        edit_view.update_cancel_button_form (leaflet.folded);
+        edit_view.set_header_buttons_form (leaflet.folded);
+        // We can use the end title buttons in the edit view when the leaflet is folded
         files_view.headerbar.show_end_title_buttons = leaflet.folded;
     }
 

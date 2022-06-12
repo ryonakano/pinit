@@ -5,7 +5,6 @@
 
 public class FilesView : Gtk.Box {
     public MainWindow window { private get; construct; }
-
     public Adw.HeaderBar headerbar { get; private set; }
 
     private Gtk.ListBox files_list;

@@ -310,10 +310,12 @@ public class EditView : Gtk.Box {
         save_button.visible = false;
     }
 
-    public void update_cancel_button_form (bool folded) {
-        // Clear the current form
-        cancel_button.child = null;
+    public void set_header_buttons_form (bool folded) {
+        // We can use the start title buttons in the files view when the leaflet is folded
+        headerbar.show_start_title_buttons = folded;
 
+        // Clear the current form of the cancel button and then reconstruct it
+        cancel_button.child = null;
         if (folded) {
             cancel_button.icon_name = "go-previous-symbolic";
         } else {
