@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-12 13:27+0900\n"
-"PO-Revision-Date: 2022-05-21 19:19+0000\n"
+"PO-Revision-Date: 2022-06-18 04:56+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "ja/>\n"
@@ -127,31 +127,22 @@ msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 
 #: src/Views/EditView.vala:354
-#, fuzzy
-#| msgid ""
-#| "Only use alphabets, numbers, and underscores, and none begins with "
-#| "numbers."
 msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
-msgstr ""
-"英数字とアンダースコアのみを使用してください。また、最初の文字は数字以外にし"
+msgstr "英数字とアンダースコアのみの使用を推奨します。また、最初の文字は数字以外にし"
 "てください。"
 
 #: src/Views/EditView.vala:355
-#, fuzzy
-#| msgid ""
-#| "Use at least one period to make sure to be separated into at least two "
-#| "elements."
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
-msgstr "最低でも1回ピリオドを使い、2つ以上の要素に分けてください。"
+msgstr "また、最低でも1回はピリオドを使って、2つ以上の要素に分けてください。"
 
 #: src/Views/EditView.vala:362
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr ""
+msgstr "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
 
 #: src/Views/EditView.vala:370
 #, c-format
