@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/builddir/com.github.ryonakano.pinit",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
