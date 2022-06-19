@@ -13,7 +13,7 @@ add_project_arguments(
     language: 'c'
 )
 
-if get_option('DEBUG')
+if get_option('enable_debug')
     add_project_arguments('--debug', language: 'vala')
 endif
 
