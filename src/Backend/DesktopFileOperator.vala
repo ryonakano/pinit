@@ -8,20 +8,14 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
+    /*
+     * These signals are emitted when some desktop file is created/updated or deleted.
+     * We catch this signal in the front end and tell users these changes using the toast.
+     */
     public signal void file_updated ();
     public signal void file_deleted ();
 
-    private string DESTINATION_PATH { //vala-lint=naming-convention
-        private get;
-        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
-    }
-
-    private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
-        private get;
-        default = Environment.get_user_cache_dir ();
-    }
-
-    private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
+    // The list of desktop files in the DesktopFile data type.
     public Gee.ArrayList<DesktopFile> files {
         get {
             _files.clear ();
@@ -29,12 +23,16 @@ public class DesktopFileOperator : GLib.Object {
             try {
                 var emumerator = desktop_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
                 FileInfo file_info = null;
+
+                // Check and address the files in the DESTINATION_PATH directory one by one
                 while ((file_info = emumerator.next_file ()) != null) {
+                    // We handle only the desktop file in this app, so ignore any files without the suffix ".desktop"
                     string name = file_info.get_name ();
                     if (!name.has_suffix (".desktop")) {
                         continue;
                     }
 
+                    // Add the desktop file found just now to the list
                     var desktop_file = load_from_file (Path.build_filename (DESTINATION_PATH, name));
                     _files.add (desktop_file);
                 }
@@ -45,11 +43,32 @@ public class DesktopFileOperator : GLib.Object {
             return _files;
         }
     }
+    private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
 
-    private string preferred_language;
+    /*
+     * We don't want to override these two strings so it's desired to declare as `const`,
+     * but couldn't because of the compiling error.
+     * Also we're telling the vala linter not to warn about using UPPER_SNAKE_CASE with non-const variables here.
+     */
+    // The path all of the user desktop files are saved.
+    private string DESTINATION_PATH { //vala-lint=naming-convention
+        private get;
+        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
+    }
+
+    // The path where this app automatically saves the latest state of unsaved changes
+    private string UNSAVED_FILE_PATH { //vala-lint=naming-convention
+        private get;
+        default = Environment.get_user_cache_dir ();
+    }
+
+    // The representation of the destination path in GLib.File type
     private File desktop_dir;
 
-    private static DesktopFileOperator _instance;
+    // We uses this info to show the KEY_NAME and KEY_COMMENT in the user's system language
+    private string preferred_language;
+
+    // This object is singleton because it's kind of a manager of desktop files
     public static DesktopFileOperator get_default () {
         if (_instance == null) {
             _instance = new DesktopFileOperator ();
@@ -57,11 +76,14 @@ public class DesktopFileOperator : GLib.Object {
 
         return _instance;
     }
+    private static DesktopFileOperator _instance;
 
     private DesktopFileOperator () {
+        // Get the user's system language and use it when loading/creating desktop files
         var languages = Intl.get_language_names ();
         preferred_language = languages[0];
 
+        // Create the destination directory if not existing
         desktop_dir = File.new_for_path (DESTINATION_PATH);
         if (!FileUtils.test (DESTINATION_PATH, FileTest.EXISTS)) {
             try {
@@ -72,15 +94,24 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
 
+    /*
+     * Create the new and blank desktop file.
+     */
     public DesktopFile create_new () {
         DesktopFileOperator.get_default ().delete_backup ();
         return new DesktopFile ();
     }
 
+    /*
+     * Write all changes made in the app into the desktop file.
+     */
     public void write_to_file (DesktopFile desktop_file) {
-        // Add exec permission to the exec file
+        // Add exec permission to the given exec file
         Posix.chmod (desktop_file.exec_file, 0700);
 
+        /*
+         * Setup the content of the file
+         */
         var keyfile = new KeyFile ();
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
@@ -94,26 +125,36 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
+        /*
+         * Setup the filename and saving destination depending on if it's a backup file that
+         * the app automatically saves the latest state, or the actual desktop file that
+         * users saved clicking by the "Save" button.
+         */
         string path;
         if (desktop_file.is_backup) {
             path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
+            // Get the app remember that it should automatically show this file in the next time app launched
             Application.settings.set_string ("last-edited-file", path);
         } else {
             path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
-
-            // Because unsaved work is now saved
+            // Delete the backup because unsaved work is now saved
             delete_backup ();
         }
 
+        // Write down the content into the designated path
         try {
             FileUtils.set_contents (path, keyfile.to_data ());
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
 
+        // Emit the signal for the front end
         file_updated ();
     }
 
+    /*
+     * Load the desktop file specified in `path`
+     */
     public DesktopFile? load_from_file (string path) {
         string file_name = "";
         string app_name = "";
@@ -125,12 +166,18 @@ public class DesktopFileOperator : GLib.Object {
         bool is_backup = false;
 
         try {
+            // Load the content as a keyfile
             var keyfile = new KeyFile ();
             keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
-            string[] splited_path = path.split ("/");
-            string basename = splited_path[splited_path.length - 1];
 
+            // Split the full path to the desktop file into an array
+            string[] splited_path = path.split ("/");
+            // Get the basename of the desktop file, which is in the last element of the array
+            string basename = splited_path[splited_path.length - 1];
+            // Get the filename without the ".desktop" suffix
             file_name = basename.slice (0, basename.length - ".desktop".length);
+
+            // Load the content from the keyfile
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
             comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
@@ -146,6 +193,7 @@ public class DesktopFileOperator : GLib.Object {
             return null;
         }
 
+        // Create the DesktopFile object from these info above
         var desktop_file = new DesktopFile (
             file_name,
             app_name,
@@ -160,24 +208,39 @@ public class DesktopFileOperator : GLib.Object {
         return desktop_file;
     }
 
+    /*
+     * Get an unsaved file if exists.
+     * @return: The unsaved file in the DesktopFile type. `null` when none exists
+     */
     public DesktopFile? get_unsaved_file () {
         string last_edited_file = Application.settings.get_string ("last-edited-file");
         return last_edited_file != "" ? load_from_file (last_edited_file) : null;
     }
 
+    /*
+     * Delete an unsaved file in the backup directory if exists.
+     */
     public void delete_backup () {
         string unsaved_file_path = Application.settings.get_string ("last-edited-file");
         if (unsaved_file_path != "") {
+            // It tells unsaved work exists, so try deleting it and clearing that info
             delete_from_path (unsaved_file_path);
             Application.settings.set_string ("last-edited-file", "");
         }
     }
 
+    /*
+     * Delete the given desktop file from the storage.
+     */
     public void delete_file (DesktopFile desktop_file) {
         delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop"));
+        // Emit the signal for the front end
         file_deleted ();
     }
 
+    /*
+     * Delete the given file from the storage if it really exists.
+     */
     private void delete_from_path (string path) {
         var file = File.new_for_path (path);
         if (file.query_exists ()) {
