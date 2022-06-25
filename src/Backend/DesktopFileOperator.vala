@@ -9,6 +9,10 @@
 
 public class DesktopFileOperator : GLib.Object {
     /*
+     * A singleton class to handle desktop files in `DesktopFile` type.
+     */
+
+    /*
      * These signals are emitted when some desktop file is created/updated or deleted.
      * We catch this signal in the front end and tell users these changes using the toast.
      */
