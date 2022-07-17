@@ -180,7 +180,7 @@ public class EditView : Gtk.Box {
         };
         startup_wm_class_label.get_style_context ().add_class ("heading");
         var startup_wm_class_desc_label = new Gtk.Label (
-            _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon come up to the dock when the app launches.")
+            _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon comes up to the dock when the app launches.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
