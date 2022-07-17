@@ -10,6 +10,7 @@ public class DesktopFile : GLib.Object {
     public string exec_file { get; construct; }
     public string icon_file { get; construct; }
     public string categories { get; construct; }
+    public string startup_wm_class { get; construct; }
     public bool is_cli { get; construct; }
     public bool is_backup { get; construct; }
 
@@ -20,6 +21,7 @@ public class DesktopFile : GLib.Object {
         string exec_file = "",
         string icon_file = "",
         string categories = "",
+        string startup_wm_class = "",
         bool is_cli = false,
         bool is_backup = false
     ) {
@@ -30,6 +32,7 @@ public class DesktopFile : GLib.Object {
             exec_file: exec_file,
             icon_file: icon_file,
             categories: categories,
+            startup_wm_class: startup_wm_class,
             is_cli: is_cli,
             is_backup: is_backup
         );
