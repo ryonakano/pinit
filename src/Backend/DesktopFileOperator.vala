@@ -96,12 +96,25 @@ public class DesktopFileOperator : GLib.Object {
         if (desktop_file.icon_file != "") {
             // Update the value when the corresponding entry has some value.
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
-        } else if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON)) {
+        } else {
+            bool has_icon_key = false;
+            try {
+                has_icon_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+            } catch (KeyFileError e) {
+                warning ("Failed to check if the key \"Icon\" exists: %s", e.message);
+            }
+
             /*
              * Section "Icon" is not required.
              * Remove the key when it exists and the corresponding entry has no value.
              */
-            keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+            if (has_icon_key) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+                } catch (KeyFileError e) {
+                    warning ("Failed to remove the blank key \"Icon\": %s", e.message);
+                }
+            }
         }
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
@@ -109,12 +122,25 @@ public class DesktopFileOperator : GLib.Object {
         if (desktop_file.startup_wm_class != "") {
             // Update the value when the corresponding entry has some value.
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
-        } else if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
+        } else {
+            bool has_startup_wm_class_key = false;
+            try {
+                has_startup_wm_class_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            } catch (KeyFileError e) {
+                warning ("Failed to check if the key \"StartupWMClass\" exists: %s", e.message);
+            }
+
             /*
              * Section "StartupWMClass" is not required.
              * Remove the key when it exists and the corresponding entry has no value.
              */
-            keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            if (has_startup_wm_class_key) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+                } catch (KeyFileError e) {
+                    warning ("Failed to remove the blank key \"StartupWMClass\": %s", e.message);
+                }
+            }
         }
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
