@@ -82,27 +82,43 @@ public class DesktopFileOperator : GLib.Object {
         Posix.chmod (desktop_file.exec_file, 0700);
 
         var keyfile = new KeyFile ();
+
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
         );
+
         keyfile.set_locale_string (
             KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language, desktop_file.comment
         );
+
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC, desktop_file.exec_file);
-        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
+
+        if (desktop_file.icon_file != "") {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
+        } else if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON)) {
+            /*
+             * Section "Icon" is not required.
+             * Remove the key when it exists and the corresponding entry has no value.
+             */
+            keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+        }
+
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
 
-        /*
-         * Update the value when the corresponding entry has some value.
-         * Remove the key when it exists and the corresponding entry has no value.
-         */
         if (desktop_file.startup_wm_class != "") {
+            // Update the value when the corresponding entry has some value.
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
         } else if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
+            /*
+             * Section "StartupWMClass" is not required.
+             * Remove the key when it exists and the corresponding entry has no value.
+             */
             keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
         }
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
+
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
         string path;
@@ -143,16 +159,25 @@ public class DesktopFileOperator : GLib.Object {
             string basename = splited_path[splited_path.length - 1];
 
             file_name = basename.slice (0, basename.length - ".desktop".length);
+
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
+
             comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
-            icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+
+            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON)) {
+                icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
+            }
+
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+
             if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
                 startup_wm_class = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
             }
 
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+
             is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
             warning (e.message);
