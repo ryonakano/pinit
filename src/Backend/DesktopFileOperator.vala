@@ -91,6 +91,7 @@ public class DesktopFileOperator : GLib.Object {
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC, desktop_file.exec_file);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
+        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
@@ -121,6 +122,7 @@ public class DesktopFileOperator : GLib.Object {
         string exec_file = "";
         string icon_file = "";
         string categories = "";
+        string startup_wm_class = "";
         bool is_cli = false;
         bool is_backup = false;
 
@@ -136,6 +138,7 @@ public class DesktopFileOperator : GLib.Object {
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
             icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+            //  startup_wm_class = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
             is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
@@ -153,6 +156,7 @@ public class DesktopFileOperator : GLib.Object {
             exec_file,
             icon_file,
             categories,
+            startup_wm_class,
             is_cli,
             is_backup
         );
