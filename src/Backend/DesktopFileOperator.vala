@@ -133,7 +133,7 @@ public class DesktopFileOperator : GLib.Object {
         }
 
         try {
-            FileUtils.set_contents (path, keyfile.to_data ());
+            keyfile.save_to_file (path);
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
