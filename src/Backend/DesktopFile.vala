@@ -17,6 +17,7 @@ public class DesktopFile : GLib.Object {
      * Exec=/home/ryonakano/Downloads/SuperTux-v0.6.3.glibc2.29-x86_64.AppImage
      * Icon=/home/ryonakano/Downloads/supertux2.svg
      * Categories=Video;Audio;Graphics;AudioVideo;Game;
+     * StartupWMClass=supertux
      * Type=Application
      * Terminal=false
      * ```
