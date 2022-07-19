@@ -292,7 +292,7 @@ public class EditView : Gtk.Box {
         event_controller.key_released.connect ((keyval, keycode, state) => {
             save_button.sensitive = get_save_button_sensitivity ();
         });
-        ((Gtk.Widget) this).add_controller (event_controller);
+        add_controller (event_controller);
 
         category_chooser.toggled.connect (() => {
             save_button.sensitive = get_save_button_sensitivity ();
