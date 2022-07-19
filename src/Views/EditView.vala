@@ -4,7 +4,13 @@
  */
 
 public class EditView : Gtk.Box {
-    public MainWindow window { private get; construct; }
+    /*
+     * The view where you can edit the content of a desktop file.
+     * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
+     * Otherwise it's shown when you click a desktop file in FilesView.
+     */
+
+    /* When at least one input widget in this view is changed, we consider the currently open desktop file as unsaved. */
     public bool is_unsaved {
         get {
             return (
@@ -15,6 +21,9 @@ public class EditView : Gtk.Box {
             );
         }
     }
+
+    /* Private properties and variables */
+    public MainWindow window { private get; construct; }
 
     private Gtk.Button cancel_button;
     private Gtk.Button save_button;
@@ -36,19 +45,26 @@ public class EditView : Gtk.Box {
     }
 
     construct {
-        // Headerbar part
+        /*
+         * Headerbar part
+         */
+
+        // Note that we'll determine the form of this button later in the set_header_buttons_form() method.
         cancel_button = new Gtk.Button ();
 
         save_button = new Gtk.Button.with_label (_("Save"));
         save_button.get_style_context ().add_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar () {
+            // Create a dummy Gtk.Label for the blank title.
             title_widget = new Gtk.Label ("")
         };
         headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
-        // Main part
+        /*
+         * Main part
+         */
         var file_name_label = new Gtk.Label (_("File Name")) {
             halign = Gtk.Align.START
         };
@@ -221,18 +237,22 @@ public class EditView : Gtk.Box {
         main_box.append (terminal_checkbox);
         main_box.append (terminal_desc_label);
 
+        // This blank page is shown when no desktop file open.
         var no_selection_page = new Adw.StatusPage ();
 
         stack = new Gtk.Stack ();
         stack.add_named (main_box, "main_box");
         stack.add_named (no_selection_page, "no_selection_page");
 
+        // No desktop file open when the app launches, so hide all widgets in the view.
         hide_all ();
+
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
         append (stack);
 
         cancel_button.clicked.connect (() => {
+            // When the cancel button is clicked, go back to FilesView.
             hide_all ();
             window.show_files_view ();
         });
@@ -241,6 +261,7 @@ public class EditView : Gtk.Box {
             save_file ();
         });
 
+        // Show FileChooser for selecting an executable file when the folder icon in the entry is clicked.
         exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
@@ -260,12 +281,20 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
+        // Show FileChooser for selecting an icon file when the folder icon in the entry is clicked.
         icon_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
 
-            // See https://specifications.freedesktop.org/icon-theme-spec/latest/ar01s02.html
+            /*
+             * Acceptable file formats in this FileChooser are: PNG, XPM, SVG, and plus ICO.
+             * The first three formats are defined as supported in the fd.o specification,
+             * see https://specifications.freedesktop.org/icon-theme-spec/latest/ar01s02.html.
+             *
+             * ICO, the last one, is not in the supported formats list above, but it should work as expected
+             * in the modern desktop environment.
+             */
             var filefilter = new Gtk.FileFilter ();
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
@@ -288,6 +317,10 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
+        /* 
+         * When there are some changes in the input widgets (entries, buttons, category chooser, etc.),
+         * update the sensitivity of the save button.
+         */
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_released.connect ((keyval, keycode, state) => {
             save_button.sensitive = get_save_button_sensitivity ();
@@ -342,8 +375,10 @@ public class EditView : Gtk.Box {
         // Clear the current form of the cancel button and then reconstruct it
         cancel_button.child = null;
         if (folded) {
+            // If the leaflet is holded, show the cancel button as an icon button
             cancel_button.icon_name = "go-previous-symbolic";
         } else {
+            // If the leaflet is not holded, show the cancel button as a normal button with the "Cancel" label
             cancel_button.label = _("Cancel");
         }
     }

@@ -4,6 +4,8 @@
  */
 
 public class FilesView : Gtk.Box {
+
+    /* We need to get access to the instance of MainWindow to execute some functions inside. */
     public MainWindow window { private get; construct; }
     public Adw.HeaderBar headerbar { get; private set; }
 
