@@ -205,26 +205,26 @@ public class EditView : Gtk.Box {
         };
         terminal_desc_label.get_style_context ().add_class ("dim-label");
 
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
+        var edit_page = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
             margin_top = 12,
             margin_bottom = 24,
             margin_start = 24,
             margin_end = 24
         };
-        main_box.append (file_name_grid);
-        main_box.append (name_grid);
-        main_box.append (comment_grid);
-        main_box.append (exec_grid);
-        main_box.append (icon_grid);
-        main_box.append (categories_grid);
-        main_box.append (startup_wm_class_grid);
-        main_box.append (terminal_checkbox);
-        main_box.append (terminal_desc_label);
+        edit_page.append (file_name_grid);
+        edit_page.append (name_grid);
+        edit_page.append (comment_grid);
+        edit_page.append (exec_grid);
+        edit_page.append (icon_grid);
+        edit_page.append (categories_grid);
+        edit_page.append (startup_wm_class_grid);
+        edit_page.append (terminal_checkbox);
+        edit_page.append (terminal_desc_label);
 
         var no_selection_page = new Adw.StatusPage ();
 
         stack = new Gtk.Stack ();
-        stack.add_named (main_box, "main_box");
+        stack.add_named (edit_page, "edit_page");
         stack.add_named (no_selection_page, "no_selection_page");
 
         hide_all ();
@@ -309,7 +309,7 @@ public class EditView : Gtk.Box {
         startup_wm_class_entry.text = desktop_file.startup_wm_class;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        stack.visible_child_name = "main_box";
+        stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
         if (desktop_file.file_name != "") {
