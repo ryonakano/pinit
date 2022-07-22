@@ -329,6 +329,9 @@ public class EditView : Gtk.Box {
         });
     }
 
+    /*
+     * Fill in the all input widgets in the EditView from the loaded desktp file.
+     */
     public void set_desktop_file (DesktopFile desktop_file) {
         file_name_entry.text = desktop_file.file_name;
         name_entry.text = desktop_file.app_name;
@@ -339,22 +342,50 @@ public class EditView : Gtk.Box {
         startup_wm_class_entry.text = desktop_file.startup_wm_class;
         terminal_checkbox.active = desktop_file.is_cli;
 
+        /*
+         * Show the page that filled in just now and set forcus at the first input widget.
+         */
         stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
+        /*
+         * Set title label of the header depends on the status of the opened desktop file
+         */
         if (desktop_file.file_name == "") {
+            /*
+             * This is the case when creating a new file.
+             * The opened desktop file has no filename.
+             */
             set_header_title_label (_("New Entry"));
         } else if (desktop_file.app_name == "") {
+            /*
+             * The opened desktop file has a filename but has no app name.
+             * This is a rare case because the app forces setting the app name to save desktop files,
+             * but since we'll use the app name normally for existing files (that code appears soon later),
+             * we may want to think about the case app_name is blank to avoid the strange label "Editing “”"
+             * shown in the header label.
+             */
             set_header_title_label (_("Editing Entry"));
         } else {
+            /*
+             * This is the normal case when editing an existing file.
+             * Show the app name which is the value of the "Name" key in desktop files.
+             */
             set_header_title_label (_("Editing “%s”").printf (desktop_file.app_name));
         }
 
+        /*
+         * Set the state of buttons in the headerbar.
+         */
         cancel_button.visible = true;
         save_button.visible = true;
         set_save_button_sensitivity ();
     }
 
+    /*
+     * This is called when no desktop file is selected in FilesView.
+     * Clear everything in the EditView!
+     */
     public void hide_all () {
         stack.visible_child_name = "no_selection_page";
 
@@ -363,11 +394,21 @@ public class EditView : Gtk.Box {
         save_button.visible = false;
     }
 
+    /*
+     * Set the given `label` as the title label of the headerbar.
+     */
     private void set_header_title_label (string label = "") {
         var header_title_widget = ((Gtk.Label) headerbar.title_widget);
         if (header_title_widget == null) {
+            /*
+             * When the label widget don't existing (e.g. when calling this method for the first time),
+             * create a new label widget with the given label text.
+             */
             headerbar.title_widget = new Gtk.Label (label);
         } else {
+            /*
+             * The label widget exists, so change that label to the given label text.
+             */
             header_title_widget.label = label;
         }
     }
@@ -387,6 +428,10 @@ public class EditView : Gtk.Box {
         }
     }
 
+    /*
+     * Allow clicking the save button only when the specified input widgets in the view
+     * has (valid) values.
+     */
     private void set_save_button_sensitivity () {
         save_button.sensitive = (
             file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
@@ -394,6 +439,9 @@ public class EditView : Gtk.Box {
         );
     }
 
+    /*
+     * Get values from the input widgets in the view and save them to a desktop file.
+     */
     public void save_file (bool is_backup = false) {
         var desktop_file = new DesktopFile (
             file_name_entry.text,
@@ -409,6 +457,9 @@ public class EditView : Gtk.Box {
         DesktopFileOperator.get_default ().write_to_file (desktop_file);
     }
 
+    /*
+     * Create the hint popover of naming.
+     */
     private Gtk.MenuButton create_info_button () {
         var title_label = new Gtk.Label (_("Recommendations for naming")) {
             halign = Gtk.Align.START
@@ -424,6 +475,8 @@ public class EditView : Gtk.Box {
         desc_label.get_style_context ().add_class ("body");
 
         var example_label = new Gtk.Label (
+            ///TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
+            ///the desktop file name of SuperTux.
             _("For example, you should use \"%s\" for the 2D game, SuperTux.").printf ("<b>org.supertuxproject.SuperTux</b>")
         ) {
             use_markup = true,
@@ -432,6 +485,7 @@ public class EditView : Gtk.Box {
         example_label.get_style_context ().add_class ("body");
 
         var detailed_label = new Gtk.Label (
+            ///TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
             _("For more info, see %s.").printf (
             "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
             _("the file naming specification by freedesktop.org")
