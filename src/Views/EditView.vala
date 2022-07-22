@@ -55,10 +55,7 @@ public class EditView : Gtk.Box {
         save_button = new Gtk.Button.with_label (_("Save"));
         save_button.get_style_context ().add_class ("suggested-action");
 
-        headerbar = new Adw.HeaderBar () {
-            // Create a dummy Gtk.Label for the blank title.
-            title_widget = new Gtk.Label ("")
-        };
+        headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
@@ -345,14 +342,12 @@ public class EditView : Gtk.Box {
         stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
-        if (desktop_file.file_name != "") {
-            if (desktop_file.app_name != "") {
-                ((Gtk.Label) headerbar.title_widget).label = _("Editing “%s”").printf (desktop_file.app_name);
-            } else {
-                ((Gtk.Label) headerbar.title_widget).label = _("Editing Entry");
-            }
+        if (desktop_file.file_name == "") {
+            set_header_title_label (_("New Entry"));
+        } else if (desktop_file.app_name == "") {
+            set_header_title_label (_("Editing Entry"));
         } else {
-            ((Gtk.Label) headerbar.title_widget).label = _("New Entry");
+            set_header_title_label (_("Editing “%s”").printf (desktop_file.app_name));
         }
 
         cancel_button.visible = true;
@@ -363,9 +358,18 @@ public class EditView : Gtk.Box {
     public void hide_all () {
         stack.visible_child_name = "no_selection_page";
 
-        ((Gtk.Label) headerbar.title_widget).label = "";
+        set_header_title_label ();
         cancel_button.visible = false;
         save_button.visible = false;
+    }
+
+    private void set_header_title_label (string label = "") {
+        var header_title_widget = ((Gtk.Label) headerbar.title_widget);
+        if (header_title_widget == null) {
+            headerbar.title_widget = new Gtk.Label (label);
+        } else {
+            header_title_widget.label = label;
+        }
     }
 
     public void set_header_buttons_form (bool folded) {
