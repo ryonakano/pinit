@@ -290,12 +290,12 @@ public class EditView : Gtk.Box {
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_released.connect ((keyval, keycode, state) => {
-            save_button.sensitive = get_save_button_sensitivity ();
+            set_save_button_sensitivity ();
         });
         add_controller (event_controller);
 
         category_chooser.toggled.connect (() => {
-            save_button.sensitive = get_save_button_sensitivity ();
+            set_save_button_sensitivity ();
         });
     }
 
@@ -324,7 +324,7 @@ public class EditView : Gtk.Box {
 
         cancel_button.visible = true;
         save_button.visible = true;
-        save_button.sensitive = get_save_button_sensitivity ();
+        set_save_button_sensitivity ();
     }
 
     public void hide_all () {
@@ -348,8 +348,8 @@ public class EditView : Gtk.Box {
         }
     }
 
-    private bool get_save_button_sensitivity () {
-        return (
+    private void set_save_button_sensitivity () {
+        save_button.sensitive = (
             file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
             exec_entry.text.length > 0 && category_chooser.selected != ""
         );
