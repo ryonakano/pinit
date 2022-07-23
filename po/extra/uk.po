@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 00:58+0900\n"
+"POT-Creation-Date: 2022-07-23 10:24+0900\n"
 "PO-Revision-Date: 2022-06-30 23:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
-"pinit-extra/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
+"extra/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,7 +158,8 @@ msgstr "Повідомлення про прийняті формати файл
 
 #: data/pinit.appdata.xml.in:101
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr "Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
+msgstr ""
+"Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
 
 #: data/pinit.appdata.xml.in:109
 msgid "EditView: Focus on file name entry by default"
@@ -235,5 +236,5 @@ msgstr "Створення файлів робочого столу"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
-"Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;File"
-";Create;Edit;Info;Icon;AppImage;"
+"Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
+"File;Create;Edit;Info;Icon;AppImage;"
