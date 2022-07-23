@@ -4,13 +4,27 @@
  */
 
 public class Application : Adw.Application {
+    /*
+     * The app launches from this class.
+     */
+
+    /*
+     * Returns if the current desktop environment is Pantheon or not.
+     * We'll use this later to provide more appropriate functions or design
+     * both on Pantheon and on another desktop environment.
+     */
     public static bool IS_ON_PANTHEON {
         get {
             return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
         }
     }
 
+    // A global variable storing GSettings for this app.
     public static Settings settings;
+
+    /*
+     * Private properties and variables
+     */
     private MainWindow main_window;
 
     public Application () {
@@ -21,11 +35,13 @@ public class Application : Adw.Application {
     }
 
     construct {
+        // Make sure the app is shown in the user's language.
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (Constants.PROJECT_NAME, Constants.LOCALEDIR);
         Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
         Intl.textdomain (Constants.PROJECT_NAME);
 
+        // Setup theme things
         var style_manager = Adw.StyleManager.get_default ();
         style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
 
@@ -55,6 +71,7 @@ public class Application : Adw.Application {
             return;
         }
 
+        // Setup About dialog (only on non-Pantheon desktop environment)
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
             var about_dialog = new Gtk.AboutDialog () {
@@ -82,27 +99,34 @@ public class Application : Adw.Application {
         settings = new Settings (Constants.PROJECT_NAME);
     }
 
+    /*
+     * Called when user switches the theme setting in the popover.
+     * Save that selection into GSettings and reflect that change into the app now
+     */
     private void set_app_style (Adw.ColorScheme color_scheme) {
         Application.settings.set_enum ("color-scheme", color_scheme);
         style_manager.color_scheme = color_scheme;
     }
 
     protected override void activate () {
-        if (main_window != null) { // The app is already launched
+        if (main_window != null) {
+            // The app is already launched; show that window and do nothing else
             main_window.present ();
             return;
         }
 
+        // The app isn't launched yet, so construct and show it
         main_window = new MainWindow ();
         main_window.set_application (this);
-        // The main_window seems to need showing before restoring its size in Gtk4
+        // The window seems to need showing before restoring its size in Gtk4
         main_window.present ();
 
+        // Make sure the window size syncs to GSettings
         settings.bind ("window-height", main_window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", main_window, "default-width", SettingsBindFlags.DEFAULT);
 
         /*
-         * Binding of main_window maximization with "SettingsBindFlags.DEFAULT" results the main_window getting bigger and bigger on open.
+         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
          * So we use the prepared binding only for setting
          */
         if (Application.settings.get_boolean ("window-maximized")) {

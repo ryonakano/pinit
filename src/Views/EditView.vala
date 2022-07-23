@@ -4,7 +4,13 @@
  */
 
 public class EditView : Gtk.Box {
-    public MainWindow window { private get; construct; }
+    /*
+     * The view where you can edit the content of a desktop file.
+     * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
+     * Otherwise it's shown when you click a desktop file in FilesView.
+     */
+
+    /* When at least one input widget in this view is changed, we consider the currently open desktop file as unsaved. */
     public bool is_unsaved {
         get {
             return (
@@ -15,6 +21,11 @@ public class EditView : Gtk.Box {
             );
         }
     }
+
+    /*
+     * Private properties and variables
+     */
+    public MainWindow window { private get; construct; }
 
     private Gtk.Button cancel_button;
     private Gtk.Button save_button;
@@ -36,7 +47,11 @@ public class EditView : Gtk.Box {
     }
 
     construct {
-        // Headerbar part
+        /*
+         * Headerbar part
+         */
+
+        // Note that we'll determine the form of this button later in the set_header_buttons_form() method.
         cancel_button = new Gtk.Button ();
 
         save_button = new Gtk.Button.with_label (_("Save"));
@@ -46,7 +61,11 @@ public class EditView : Gtk.Box {
         headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
-        // Main part
+        /*
+         * Main part
+         */
+
+        // EditPage: The main page that shows input widges.
         var file_name_label = new Gtk.Label (_("File Name")) {
             halign = Gtk.Align.START
         };
@@ -219,18 +238,22 @@ public class EditView : Gtk.Box {
         edit_page.append (terminal_checkbox);
         edit_page.append (terminal_desc_label);
 
+        // NoSelectionPage: This blank page is shown when no desktop file open.
         var no_selection_page = new Adw.StatusPage ();
 
         stack = new Gtk.Stack ();
         stack.add_named (edit_page, "edit_page");
         stack.add_named (no_selection_page, "no_selection_page");
 
+        // No desktop file open when the app launches, so hide all widgets in the view.
         hide_all ();
+
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
         append (stack);
 
         cancel_button.clicked.connect (() => {
+            // When the cancel button is clicked, go back to FilesView.
             hide_all ();
             window.show_files_view ();
         });
@@ -239,6 +262,7 @@ public class EditView : Gtk.Box {
             save_file ();
         });
 
+        // Show FileChooser for selecting an executable file when the folder icon in the entry is clicked.
         exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
@@ -258,12 +282,20 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
+        // Show FileChooser for selecting an icon file when the folder icon in the entry is clicked.
         icon_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
             }
 
-            // See https://specifications.freedesktop.org/icon-theme-spec/latest/ar01s02.html
+            /*
+             * Acceptable file formats in this FileChooser are: PNG, XPM, SVG, and plus ICO.
+             * The first three formats are defined as supported in the fd.o specification,
+             * see https://specifications.freedesktop.org/icon-theme-spec/latest/ar01s02.html.
+             *
+             * ICO, the last one, is not in the supported formats list above, but it should work as expected
+             * in the modern desktop environment.
+             */
             var filefilter = new Gtk.FileFilter ();
             filefilter.add_mime_type ("image/png");
             filefilter.add_mime_type ("image/svg+xml");
@@ -286,6 +318,10 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
+        /* 
+         * When there are some changes in the input widgets (entries, buttons, category chooser, etc.),
+         * update the sensitivity of the save button.
+         */
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_released.connect ((keyval, keycode, state) => {
             set_save_button_sensitivity ();
@@ -297,6 +333,9 @@ public class EditView : Gtk.Box {
         });
     }
 
+    /*
+     * Fill in the all input widgets in the EditView from the loaded desktp file.
+     */
     public void set_desktop_file (DesktopFile desktop_file) {
         file_name_entry.text = desktop_file.file_name;
         name_entry.text = desktop_file.app_name;
@@ -307,22 +346,50 @@ public class EditView : Gtk.Box {
         startup_wm_class_entry.text = desktop_file.startup_wm_class;
         terminal_checkbox.active = desktop_file.is_cli;
 
+        /*
+         * Show the page that filled in just now and set forcus at the first input widget.
+         */
         stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
+        /*
+         * Set title label of the header depends on the status of the opened desktop file
+         */
         if (desktop_file.file_name == "") {
+            /*
+             * This is the case when creating a new file.
+             * The opened desktop file has no filename.
+             */
             set_header_title_label (_("New Entry"));
         } else if (desktop_file.app_name == "") {
+            /*
+             * The opened desktop file has a filename but has no app name.
+             * This is a rare case because the app forces setting the app name to save desktop files,
+             * but since we'll use the app name normally for existing files (that code appears soon later),
+             * we may want to think about the case app_name is blank to avoid the strange label "Editing “”"
+             * shown in the header label.
+             */
             set_header_title_label (_("Editing Entry"));
         } else {
+            /*
+             * This is the normal case when editing an existing file.
+             * Show the app name which is the value of the "Name" key in desktop files.
+             */
             set_header_title_label (_("Editing “%s”").printf (desktop_file.app_name));
         }
 
+        /*
+         * Set the state of buttons in the headerbar.
+         */
         cancel_button.visible = true;
         save_button.visible = true;
         set_save_button_sensitivity ();
     }
 
+    /*
+     * This is called when no desktop file is selected in FilesView.
+     * Clear everything in the EditView!
+     */
     public void hide_all () {
         stack.visible_child_name = "no_selection_page";
 
@@ -331,11 +398,21 @@ public class EditView : Gtk.Box {
         save_button.visible = false;
     }
 
+    /*
+     * Set the given `label` as the title label of the headerbar.
+     */
     private void set_header_title_label (string label = "") {
         var header_title_widget = ((Gtk.Label) headerbar.title_widget);
         if (header_title_widget == null) {
+            /*
+             * When the label widget don't existing (e.g. when calling this method for the first time),
+             * create a new label widget with the given label text.
+             */
             headerbar.title_widget = new Gtk.Label (label);
         } else {
+            /*
+             * The label widget exists, so change that label to the given label text.
+             */
             header_title_widget.label = label;
         }
     }
@@ -347,12 +424,18 @@ public class EditView : Gtk.Box {
         // Clear the current form of the cancel button and then reconstruct it
         cancel_button.child = null;
         if (folded) {
+            // If the leaflet is holded, show the cancel button as an icon button
             cancel_button.icon_name = "go-previous-symbolic";
         } else {
+            // If the leaflet is not holded, show the cancel button as a normal button with the "Cancel" label
             cancel_button.label = _("Cancel");
         }
     }
 
+    /*
+     * Allow clicking the save button only when the specified input widgets in the view
+     * has (valid) values.
+     */
     private void set_save_button_sensitivity () {
         save_button.sensitive = (
             file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
@@ -360,6 +443,9 @@ public class EditView : Gtk.Box {
         );
     }
 
+    /*
+     * Get values from the input widgets in the view and save them to a desktop file.
+     */
     public void save_file (bool is_backup = false) {
         var desktop_file = new DesktopFile (
             file_name_entry.text,
@@ -375,6 +461,9 @@ public class EditView : Gtk.Box {
         DesktopFileOperator.get_default ().write_to_file (desktop_file);
     }
 
+    /*
+     * Create the hint popover of naming.
+     */
     private Gtk.MenuButton create_info_button () {
         var title_label = new Gtk.Label (_("Recommendations for naming")) {
             halign = Gtk.Align.START
@@ -390,6 +479,8 @@ public class EditView : Gtk.Box {
         desc_label.get_style_context ().add_class ("body");
 
         var example_label = new Gtk.Label (
+            ///TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
+            ///the desktop file name of SuperTux.
             _("For example, you should use \"%s\" for the 2D game, SuperTux.").printf ("<b>org.supertuxproject.SuperTux</b>")
         ) {
             use_markup = true,
@@ -398,6 +489,7 @@ public class EditView : Gtk.Box {
         example_label.get_style_context ().add_class ("body");
 
         var detailed_label = new Gtk.Label (
+            ///TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
             _("For more info, see %s.").printf (
             "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
             _("the file naming specification by freedesktop.org")

@@ -4,6 +4,15 @@
  */
 
 public class FilesView : Gtk.Box {
+    /*
+     * The view where you can select a desktop file to open and edit in the EditView.
+     * If the `leaflet` in MainWindow isn't folded, this is shown in the left pane.
+     * Otherwise it's shown when you save or cancel editing desktop files in FilesView.
+     */
+
+    /*
+     * Private properties and variables
+     */
     public MainWindow window { private get; construct; }
     public Adw.HeaderBar headerbar { get; private set; }
 
@@ -15,11 +24,15 @@ public class FilesView : Gtk.Box {
     }
 
     construct {
-        // HeaderBar part
+        /*
+         * Headerbar part
+         */
+
         var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
             tooltip_text = _("Create a new entry")
         };
 
+        // Construct the settings menu
         var theme_submenu = new GLib.Menu ();
         theme_submenu.append (_("Light"), "app.style-light");
         theme_submenu.append (_("Dark"), "app.style-dark");
@@ -46,7 +59,11 @@ public class FilesView : Gtk.Box {
         headerbar.pack_start (create_button);
         headerbar.pack_end (preferences_button);
 
-        // Main part
+        /*
+         * Main part
+         */
+
+        // FilesListPage: The page to list available desktop files.
         files_list = new Gtk.ListBox () {
             vexpand = true,
             hexpand = true
@@ -55,6 +72,7 @@ public class FilesView : Gtk.Box {
         var files_list_page = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         files_list_page.append (files_list);
 
+        // NoFilesPage: Shown when no desktop files available.
         var no_files_page = new Adw.StatusPage () {
             title = _("No valid app entries found"),
             description = _("If you've never created one, click the + button on the top."),
@@ -65,6 +83,7 @@ public class FilesView : Gtk.Box {
         stack.add_named (files_list_page, "files_list_page");
         stack.add_named (no_files_page, "no_files_page");
 
+        // Pack the pages into a scrolled window in case there are many desktop files in the files list
         var scrolled = new Gtk.ScrolledWindow () {
             child = stack,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
@@ -85,7 +104,11 @@ public class FilesView : Gtk.Box {
         append (scrolled);
     }
 
+    /*
+     * Update the files list.
+     */
     public void update_list () {
+        // Clear all of the currently added entries
         while (true) {
             var child = (Gtk.ListBoxRow) files_list.get_last_child ();
             if (child == null) {
@@ -96,6 +119,8 @@ public class FilesView : Gtk.Box {
         }
 
         var files = DesktopFileOperator.get_default ().files;
+
+        // Create a listbox per each entry
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
@@ -150,9 +175,11 @@ public class FilesView : Gtk.Box {
             files_list.append (list_item);
         }
 
+        // Set visible page
         if (files_list.get_last_child () != null) {
             stack.visible_child_name = "files_list_page";
         } else {
+            // There are no listboxes, that means we have no valid desktop files
             stack.visible_child_name = "no_files_page";
         }
     }
