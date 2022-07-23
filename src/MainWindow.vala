@@ -163,7 +163,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /*
-     * Returns which view is open now in the `Views` enum type.
+     * Returns which view is open now in the Views enum type.
      */
     private Views get_visible_view () {
         if (leaflet.visible_child == files_view) {

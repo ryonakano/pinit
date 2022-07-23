@@ -10,7 +10,9 @@ public class FilesView : Gtk.Box {
      * Otherwise it's shown when you save or cancel editing desktop files in FilesView.
      */
 
-    /* Private properties and variables */
+    /*
+     * Private properties and variables
+     */
     public MainWindow window { private get; construct; }
     public Adw.HeaderBar headerbar { get; private set; }
 

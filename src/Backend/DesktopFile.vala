@@ -8,7 +8,7 @@ public class DesktopFile : GLib.Object {
      * A class to store data in a single desktop file.
      *
      * The properties in this class correspond the key names in a desktop file.
-     * A typical example of a desktop file look like this:
+     * A typical example of a desktop file expecting in this app looks like this:
      *
      * ```
      * [Desktop Entry]

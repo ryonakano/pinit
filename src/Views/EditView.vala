@@ -22,7 +22,9 @@ public class EditView : Gtk.Box {
         }
     }
 
-    /* Private properties and variables */
+    /*
+     * Private properties and variables
+     */
     public MainWindow window { private get; construct; }
 
     private Gtk.Button cancel_button;

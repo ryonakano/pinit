@@ -11,7 +11,7 @@ public class Application : Adw.Application {
     /*
      * Returns if the current desktop environment is Pantheon or not.
      * We'll use this later to provide more appropriate functions or design
-     * both on Pantheon or on another desktop environment.
+     * both on Pantheon and on another desktop environment.
      */
     public static bool IS_ON_PANTHEON {
         get {
@@ -21,7 +21,10 @@ public class Application : Adw.Application {
 
     // A global variable storing GSettings for this app.
     public static Settings settings;
-    // The app window itself.
+
+    /*
+     * Private properties and variables
+     */
     private MainWindow main_window;
 
     public Application () {
@@ -68,7 +71,7 @@ public class Application : Adw.Application {
             return;
         }
 
-        // Setup About dialog
+        // Setup About dialog (only on non-Pantheon desktop environment)
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
             var about_dialog = new Gtk.AboutDialog () {
@@ -98,7 +101,7 @@ public class Application : Adw.Application {
 
     /*
      * Called when user switches the theme setting in the popover.
-     * Save that selection into GSettings and reflect that change in the app now
+     * Save that selection into GSettings and reflect that change into the app now
      */
     private void set_app_style (Adw.ColorScheme color_scheme) {
         Application.settings.set_enum ("color-scheme", color_scheme);
@@ -133,7 +136,6 @@ public class Application : Adw.Application {
         settings.bind ("window-maximized", main_window, "maximized", SettingsBindFlags.SET);
     }
 
-    // The spown point
     public static int main (string[] args) {
         return new Application ().run ();
     }

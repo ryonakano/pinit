@@ -9,7 +9,7 @@
 
 public class DesktopFileOperator : GLib.Object {
     /*
-     * A singleton class to handle desktop files in `DesktopFile` type.
+     * A singleton class to handle desktop files in the DesktopFile type.
      */
 
     /*
