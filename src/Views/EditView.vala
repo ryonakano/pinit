@@ -62,6 +62,8 @@ public class EditView : Gtk.Box {
         /*
          * Main part
          */
+
+        // EditPage: The main page that shows input widges.
         var file_name_label = new Gtk.Label (_("File Name")) {
             halign = Gtk.Align.START
         };
@@ -234,7 +236,7 @@ public class EditView : Gtk.Box {
         edit_page.append (terminal_checkbox);
         edit_page.append (terminal_desc_label);
 
-        // This blank page is shown when no desktop file open.
+        // NoSelectionPage: This blank page is shown when no desktop file open.
         var no_selection_page = new Adw.StatusPage ();
 
         stack = new Gtk.Stack ();
