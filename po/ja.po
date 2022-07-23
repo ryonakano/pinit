@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-23 10:24+0900\n"
-"PO-Revision-Date: 2022-06-18 04:56+0000\n"
+"PO-Revision-Date: 2022-07-24 08:18+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "ja/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: src/Views/EditView.vala:57
 msgid "Save"
@@ -82,13 +82,15 @@ msgstr "アプリの種類です。複数選択できます。"
 
 #: src/Views/EditView.vala:195
 msgid "Startup WM Class"
-msgstr ""
+msgstr "起動時の WM クラス"
 
 #: src/Views/EditView.vala:200
 msgid ""
 "Associate the app with a window that has this ID. Fill in this if a "
 "different or duplicated icon comes up to the dock when the app launches."
 msgstr ""
+"アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つのア"
+"イコンがドックに表示される場合は、この項目を記入してください。"
 
 #: src/Views/EditView.vala:216
 msgid "Run in Terminal"
