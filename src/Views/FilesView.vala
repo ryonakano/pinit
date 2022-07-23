@@ -107,8 +107,13 @@ public class FilesView : Gtk.Box {
      */
     public void update_list () {
         // Clear all of the currently added entries
-        while ((Gtk.ListBoxRow) files_list.get_last_child () != null) {
-            files_list.remove ((Gtk.ListBoxRow) files_list.get_last_child ());
+        while (true) {
+            var child = (Gtk.ListBoxRow) files_list.get_last_child ();
+            if (child == null) {
+                break;
+            }
+
+            files_list.remove (child);
         }
 
         var files = DesktopFileOperator.get_default ().files;
