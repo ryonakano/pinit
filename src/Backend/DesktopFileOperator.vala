@@ -30,9 +30,9 @@ public class DesktopFileOperator : GLib.Object {
 
                 // Check and address the files in the DESTINATION_PATH directory one by one
                 while ((file_info = emumerator.next_file ()) != null) {
-                    // We handle only the desktop file in this app, so ignore any files without the suffix ".desktop"
+                    // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
                     string name = file_info.get_name ();
-                    if (!name.has_suffix (".desktop")) {
+                    if (!name.has_suffix (DESKTOP_SUFFIX)) {
                         continue;
                     }
 
@@ -65,6 +65,9 @@ public class DesktopFileOperator : GLib.Object {
         private get;
         default = Environment.get_user_cache_dir ();
     }
+
+    // The suffix of desktop files
+    private const string DESKTOP_SUFFIX = ".desktop";
 
     // The representation of the destination path in GLib.File type
     private File desktop_dir;
@@ -189,11 +192,11 @@ public class DesktopFileOperator : GLib.Object {
          */
         string path;
         if (desktop_file.is_backup) {
-            path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + ".desktop");
+            path = Path.build_filename (UNSAVED_FILE_PATH, desktop_file.file_name + DESKTOP_SUFFIX);
             // Get the app remember that it should automatically show this file in the next time app launched
             Application.settings.set_string ("last-edited-file", path);
         } else {
-            path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop");
+            path = Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX);
             // Delete the backup because unsaved work is now saved
             delete_backup ();
         }
@@ -232,8 +235,8 @@ public class DesktopFileOperator : GLib.Object {
             string[] splited_path = path.split ("/");
             // Get the basename of the desktop file, which is in the last element of the array
             string basename = splited_path[splited_path.length - 1];
-            // Get the filename without the ".desktop" suffix
-            file_name = basename.slice (0, basename.length - ".desktop".length);
+            // Get the filename without the .desktop suffix
+            file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
 
             // Load the content from the keyfile
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
@@ -304,7 +307,7 @@ public class DesktopFileOperator : GLib.Object {
      * Delete the given desktop file from the storage.
      */
     public void delete_file (DesktopFile desktop_file) {
-        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + ".desktop"));
+        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX));
         // Emit the signal for the front end
         file_deleted ();
     }
