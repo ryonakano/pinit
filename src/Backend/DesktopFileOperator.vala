@@ -225,10 +225,8 @@ public class DesktopFileOperator : GLib.Object {
             var keyfile = new KeyFile ();
             keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
 
-            // Split the full path to the desktop file into an array
-            string[] splited_path = path.split ("/");
-            // Get the basename of the desktop file, which is in the last element of the array
-            string basename = splited_path[splited_path.length - 1];
+            string basename = Path.get_basename (path);
+
             // Get the filename without the .desktop suffix
             file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
 
