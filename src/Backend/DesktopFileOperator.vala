@@ -112,9 +112,6 @@ public class DesktopFileOperator : GLib.Object {
      * Write the content of `desktop_file@ into the desktop file at `desktop_file.file_name` through KeyFile object.
      */
     public void write_to_file (DesktopFile desktop_file) {
-        // Add exec permission to the given exec file
-        Posix.chmod (desktop_file.exec_file, 0700);
-
         var keyfile = new KeyFile ();
 
         keyfile.set_locale_string (
@@ -270,6 +267,26 @@ public class DesktopFileOperator : GLib.Object {
         );
 
         return desktop_file;
+    }
+
+    /*
+     * Add executable permission to the given file at `path`.
+     */
+    public void add_exec_permission (string path) {
+        Posix.Stat sbuf;
+
+        int ret_stat = Posix.stat (path, out sbuf);
+        if (ret_stat != 0) {
+            warning ("Failed to get the current mode of '%s': %s",
+                    path, Posix.strerror (Posix.errno));
+            return;
+        }
+
+        int ret_chmod = Posix.chmod (path, (sbuf.st_mode & 0777) | 0100);
+        if (ret_chmod != 0) {
+            warning ("Failed to give exec permission to '%s': %s",
+                    path, Posix.strerror (Posix.errno));
+        }
     }
 
     /*

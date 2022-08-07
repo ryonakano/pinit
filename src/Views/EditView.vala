@@ -452,6 +452,7 @@ public class EditView : Gtk.Box {
             is_backup
         );
         DesktopFileOperator.get_default ().write_to_file (desktop_file);
+        DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
     }
 
     /*
