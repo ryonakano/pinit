@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 12:38+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
+"PO-Revision-Date: 2022-08-07 05:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
-"extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"pinit-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -70,13 +70,14 @@ msgstr "編集画面"
 
 #: data/pinit.appdata.xml.in:40
 msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr ""
+msgstr "過去最大かつ最高のアップデートがやってきました。"
 
 #: data/pinit.appdata.xml.in:44
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
-msgstr ""
+msgstr "最近のデスクトップ環境に合うように、デザインを変更しました。これにはレスポン"
+"シブデザインへの対応も含まれます"
 
 #: data/pinit.appdata.xml.in:45
 msgid "Migrate to GTK 4, the latest version of GTK"
