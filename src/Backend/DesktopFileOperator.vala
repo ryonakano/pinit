@@ -277,13 +277,15 @@ public class DesktopFileOperator : GLib.Object {
 
         int ret_stat = Posix.stat (path, out sbuf);
         if (ret_stat != 0) {
-            warning ("Failed to get the current mode of the file specified as a exec file.");
+            warning ("Failed to get the current mode of '%s': %s",
+                    path, Posix.strerror (Posix.errno));
             return;
         }
 
-        int ret_chmod = Posix.chmod (path, sbuf.st_mode & 0100);
+        int ret_chmod = Posix.chmod (path, (sbuf.st_mode & 0777) | 0100);
         if (ret_chmod != 0) {
-            warning ("Failed to give exec permission to the file specified as a exec file.");
+            warning ("Failed to give exec permission to '%s': %s",
+                    path, Posix.strerror (Posix.errno));
         }
     }
 
