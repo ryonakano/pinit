@@ -59,6 +59,8 @@
           <li>Support setting ".ico" files as the app icon</li>
           <li>Support setting "StartupWMClass" key</li>
           <li>Make sure not to add blank elements in generated desktop files</li>
+          <li>Don't overwrite the entire permission of the selected executable files</li>
+          <li>Give executable permission for the user only when they don't have it</li>
           <li>Update translations</li>
         </ul>
       </description>
