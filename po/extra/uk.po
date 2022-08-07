@@ -7,17 +7,17 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 12:38+0900\n"
-"PO-Revision-Date: 2022-06-30 23:17+0000\n"
+"PO-Revision-Date: 2022-08-07 13:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
-"extra/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
+"pinit-extra/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -75,39 +75,39 @@ msgstr "Редагування перегляду"
 
 #: data/pinit.appdata.xml.in:40
 msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr ""
+msgstr "Найбільші та найкращі оновлення приходять до «Pin It!»:"
 
 #: data/pinit.appdata.xml.in:44
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
 msgstr ""
+"Редизайн під сучасні стільничні середовища, включаючи підтримку адаптивного "
+"дизайну"
 
 #: data/pinit.appdata.xml.in:45
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Перехід на GTK 4, найновішу версію GTK"
 
 #: data/pinit.appdata.xml.in:47
 msgid "Other changes:"
-msgstr ""
+msgstr "Інші зміни:"
 
 #: data/pinit.appdata.xml.in:51
 msgid "Support setting \".ico\" files as the app icon"
-msgstr ""
+msgstr "Підтримка налаштування файлів піктограм застосунку «.ico»"
 
 #: data/pinit.appdata.xml.in:52
 msgid "Support setting \"StartupWMClass\" key"
-msgstr ""
+msgstr "Підтримка налаштування ключа «StartupWMClass»"
 
 #: data/pinit.appdata.xml.in:53
 msgid "Make sure not to add blank elements in generated desktop files"
-msgstr ""
+msgstr "Порожні елементи більше не додаються у створені файли робочого столу"
 
 #: data/pinit.appdata.xml.in:54
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "Оновлення перекладу японською мовою"
+msgstr "Оновлення перекладів"
 
 #: data/pinit.appdata.xml.in:61
 msgid "AppData: Fix release year"
