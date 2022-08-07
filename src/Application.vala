@@ -115,13 +115,11 @@ public class Application : Adw.Application {
             return;
         }
 
-        // The app isn't launched yet, so construct and show it
         main_window = new MainWindow ();
         main_window.set_application (this);
         // The window seems to need showing before restoring its size in Gtk4
         main_window.present ();
 
-        // Make sure the window size syncs to GSettings
         settings.bind ("window-height", main_window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", main_window, "default-width", SettingsBindFlags.DEFAULT);
 

@@ -66,7 +66,6 @@ public class DesktopFileOperator : GLib.Object {
         default = Environment.get_user_cache_dir ();
     }
 
-    // The suffix of desktop files
     private const string DESKTOP_SUFFIX = ".desktop";
 
     // The representation of the destination path in GLib.File type
@@ -110,15 +109,12 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     /*
-     * Write all changes made in the app into the desktop file.
+     * Write the content of `desktop_file@ into the desktop file at `desktop_file.file_name` through KeyFile object.
      */
     public void write_to_file (DesktopFile desktop_file) {
         // Add exec permission to the given exec file
         Posix.chmod (desktop_file.exec_file, 0700);
 
-        /*
-         * Setup the content of the file
-         */
         var keyfile = new KeyFile ();
 
         keyfile.set_locale_string (
@@ -201,19 +197,18 @@ public class DesktopFileOperator : GLib.Object {
             delete_backup ();
         }
 
-        // Write down the content into the designated path
         try {
             keyfile.save_to_file (path);
         } catch (Error e) {
             warning ("Could not write to file %s: %s", path, e.message);
         }
 
-        // Emit the signal for the front end
         file_updated ();
     }
 
+
     /*
-     * Load the desktop file specified in `path`
+     * Load the content of the desktop file at `path` and construct new DesktopFile through KeyFile object.
      */
     public DesktopFile? load_from_file (string path) {
         string file_name = "";
@@ -227,7 +222,6 @@ public class DesktopFileOperator : GLib.Object {
         bool is_backup = false;
 
         try {
-            // Load the content as a keyfile
             var keyfile = new KeyFile ();
             keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
 
@@ -238,7 +232,6 @@ public class DesktopFileOperator : GLib.Object {
             // Get the filename without the .desktop suffix
             file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
 
-            // Load the content from the keyfile
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
 
             comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
@@ -266,7 +259,6 @@ public class DesktopFileOperator : GLib.Object {
             return null;
         }
 
-        // Create the DesktopFile object from these info above
         var desktop_file = new DesktopFile (
             file_name,
             app_name,
@@ -308,7 +300,6 @@ public class DesktopFileOperator : GLib.Object {
      */
     public void delete_file (DesktopFile desktop_file) {
         delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX));
-        // Emit the signal for the front end
         file_deleted ();
     }
 

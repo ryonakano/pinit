@@ -24,9 +24,7 @@ public class FilesView : Gtk.Box {
     }
 
     construct {
-        /*
-         * Headerbar part
-         */
+        // Headerbar part
 
         var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
             tooltip_text = _("Create a new entry")
@@ -59,9 +57,7 @@ public class FilesView : Gtk.Box {
         headerbar.pack_start (create_button);
         headerbar.pack_end (preferences_button);
 
-        /*
-         * Main part
-         */
+        // Main part
 
         // FilesListPage: The page to list available desktop files.
         files_list = new Gtk.ListBox () {

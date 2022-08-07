@@ -9,7 +9,7 @@ public class RegexEntry : Gtk.Entry {
      * Syntax errors are told 
      */
 
-    /* The pattern used to detect syntax errors */
+    // The pattern used to detect syntax errors
     public GLib.Regex pattern { get; construct; }
 
     /*

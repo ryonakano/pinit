@@ -43,9 +43,6 @@ public class MainWindow : Adw.ApplicationWindow {
         leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         leaflet.append (edit_view);
 
-        /*
-         * Add the leaflet and toasts for notification into ToastOverlay.
-         */
         var overlay = new Adw.ToastOverlay () {
             child = leaflet
         };
@@ -58,7 +55,6 @@ public class MainWindow : Adw.ApplicationWindow {
             timeout = 5
         };
 
-        // Set ToastOverlay as the content of this window
         content = overlay;
 
         /*
@@ -68,9 +64,6 @@ public class MainWindow : Adw.ApplicationWindow {
         set_header_buttons_form ();
         set_visible_view ();
 
-        /*
-         * Handle key events
-         */
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
             // Ctrl + Q: Save the last state and quit the app
@@ -125,40 +118,30 @@ public class MainWindow : Adw.ApplicationWindow {
                 }
             }
 
-            /*
-             * All operations to restore the app for the next launch has done,
-             * now close the app window.
-             */
             destroy ();
         });
     }
 
+    // Show or hide the close button, maximize button, etc. depending on if the leaflet is folded
     private void set_header_buttons_form () {
-        // Show or hide the close button, maximize button, etc. depending on if the leaflet is folded
         edit_view.set_header_buttons_form (leaflet.folded);
-
-        // We can use the end title buttons in the edit view when the leaflet is folded
         files_view.headerbar.show_end_title_buttons = leaflet.folded;
     }
 
+    /*
+     * Update the files list and show the files view
+     */
     public void show_files_view () {
-        /*
-         * Update the files list every time when opening FilesView,
-         * in case the icon, name, or comment of desktop file(s) changed.
-         */
         files_view.update_list ();
-
-        // FilesView gets ready for display.
         leaflet.visible_child = files_view;
     }
 
+    /*
+     * Show the edit view with entries, buttons, etc filled
+     * with the content in the specified desktop file,
+     */
     public void show_edit_view (DesktopFile desktop_file) {
-        /*
-         * Fill in the entries, buttons, etc. in EditView with the content in the specified desktop file.
-         */
         edit_view.set_desktop_file (desktop_file);
-
-        // EditView gets ready for display.
         leaflet.visible_child = edit_view;
     }
 
@@ -173,14 +156,14 @@ public class MainWindow : Adw.ApplicationWindow {
         }
     }
 
+    /*
+     * Get the last opened view and show it.
+     * If there were unsaved work in the last session, restore it too.
+     */
     private void set_visible_view () {
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
         var last_edited_file = DesktopFileOperator.get_default ().get_unsaved_file ();
 
-        /*
-         * Get the last opened view and show it.
-         * If there were unsaved work in the last session, restore it too.
-         */
         if (last_view == Views.FILES_VIEW || last_edited_file == null) {
             show_files_view ();
         } else {

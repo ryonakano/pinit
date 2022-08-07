@@ -52,7 +52,8 @@ public class CategoryChooser : Gtk.Grid {
                 foreach (var category in categories) {
                     if (toggle.category == category) {
                         /*
-                         * Detected the key name of the toggle button listed in the Categories section of the desktop file!
+                         * Detected the key name of the toggle button listed
+                         * in the Categories section of the desktop file!
                          */
                         toggle.active = true;
 
@@ -107,12 +108,12 @@ public class CategoryChooser : Gtk.Grid {
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
 
+        /*
+         * Create and append a button for each category
+         */
         int i = 0;
         int j = 0;
         foreach (var entry in categories.entries) {
-            /*
-             * Create and append a button for each category
-             */
             var toggle = new ToggleButton (entry.key, entry.value);
             toggle.toggled.connect (() => {
                 /*
@@ -125,16 +126,10 @@ public class CategoryChooser : Gtk.Grid {
                     toggle.get_style_context ().remove_class ("accent");
                 }
 
-                /*
-                 * The selected buttons are changed, so emit the signal.
-                 */
                 toggled ();
             });
             toggles.add (toggle);
 
-            /*
-             * Tweak which row to append the button
-             */
             if (i % 7 == 0) {
                 // attach in the next row
                 j++;

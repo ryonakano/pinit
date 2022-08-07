@@ -10,7 +10,10 @@ public class EditView : Gtk.Box {
      * Otherwise it's shown when you click a desktop file in FilesView.
      */
 
-    /* When at least one input widget in this view is changed, we consider the currently open desktop file as unsaved. */
+    /*
+     * When at least one input widget in this view is changed,
+     * we consider the currently open desktop file as unsaved.
+     */
     public bool is_unsaved {
         get {
             return (
@@ -47,9 +50,7 @@ public class EditView : Gtk.Box {
     }
 
     construct {
-        /*
-         * Headerbar part
-         */
+        // Headerbar part
 
         // Note that we'll determine the form of this button later in the set_header_buttons_form() method.
         cancel_button = new Gtk.Button ();
@@ -61,9 +62,7 @@ public class EditView : Gtk.Box {
         headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
-        /*
-         * Main part
-         */
+        // Main part
 
         // EditPage: The main page that shows input widges.
         var file_name_label = new Gtk.Label (_("File Name")) {
@@ -262,7 +261,6 @@ public class EditView : Gtk.Box {
             save_file ();
         });
 
-        // Show FileChooser for selecting an executable file when the folder icon in the entry is clicked.
         exec_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
@@ -282,7 +280,6 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
-        // Show FileChooser for selecting an icon file when the folder icon in the entry is clicked.
         icon_entry.icon_press.connect ((icon_pos) => {
             if (icon_pos != Gtk.EntryIconPosition.SECONDARY) {
                 return;
@@ -346,15 +343,11 @@ public class EditView : Gtk.Box {
         startup_wm_class_entry.text = desktop_file.startup_wm_class;
         terminal_checkbox.active = desktop_file.is_cli;
 
-        /*
-         * Show the page that filled in just now and set forcus at the first input widget.
-         */
+        // Show the page that filled in just now and set forcus at the first input widget.
         stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
-        /*
-         * Set title label of the header depends on the status of the opened desktop file
-         */
+        // Set title label of the header depending on the status of the opened desktop file
         if (desktop_file.file_name == "") {
             /*
              * This is the case when creating a new file.
@@ -366,7 +359,7 @@ public class EditView : Gtk.Box {
              * The opened desktop file has a filename but has no app name.
              * This is a rare case because the app forces setting the app name to save desktop files,
              * but since we'll use the app name normally for existing files (that code appears soon later),
-             * we may want to think about the case app_name is blank to avoid the strange label "Editing “”"
+             * we may want to think about the case app_name is blank to avoid the strange label `Editing “”`
              * shown in the header label.
              */
             set_header_title_label (_("Editing Entry"));
@@ -378,9 +371,6 @@ public class EditView : Gtk.Box {
             set_header_title_label (_("Editing “%s”").printf (desktop_file.app_name));
         }
 
-        /*
-         * Set the state of buttons in the headerbar.
-         */
         cancel_button.visible = true;
         save_button.visible = true;
         set_save_button_sensitivity ();
@@ -417,6 +407,9 @@ public class EditView : Gtk.Box {
         }
     }
 
+    /*
+     * Set the buttons visibility and appearance depending on whether the leaflet is folded
+     */
     public void set_header_buttons_form (bool folded) {
         // We can use the start title buttons in the files view when the leaflet is folded
         headerbar.show_start_title_buttons = folded;
@@ -424,10 +417,10 @@ public class EditView : Gtk.Box {
         // Clear the current form of the cancel button and then reconstruct it
         cancel_button.child = null;
         if (folded) {
-            // If the leaflet is holded, show the cancel button as an icon button
+            // Show as an icon button
             cancel_button.icon_name = "go-previous-symbolic";
         } else {
-            // If the leaflet is not holded, show the cancel button as a normal button with the "Cancel" label
+            // Show as a normal button with the label
             cancel_button.label = _("Cancel");
         }
     }
