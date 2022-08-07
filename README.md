@@ -28,7 +28,7 @@ You can also download the app from Flathub, in case you're using another distrib
 You'll need the following dependencies to build:
 
 * libgee-0.8-dev
-* libgtk4-dev
+* libgtk-4-dev
 * libadwaita-1-dev
 * meson (>= 0.57.0)
 * valac
