@@ -23,12 +23,20 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>Files View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/screenshot-files-view.png</image>
+      <caption>Files view in the light mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-files-view-light.png</image>
     </screenshot>
     <screenshot>
-      <caption>Edit View</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/screenshot-edit-view.png</image>
+      <caption>Edit view in the light mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-edit-view-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Files view in the dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-files-view-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Edit view in the dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-edit-view-dark.png</image>
     </screenshot>
   </screenshots>
 

@@ -1,9 +1,9 @@
 # Pin It!
 Create the shortcut to portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
 
-![Files View](data/screenshots/screenshot-files-view.png)
+![Files view in the light mode](data/screenshots/pantheon/screenshot-files-view-light.png)
 
-![Edit View](data/screenshots/screenshot-edit-view.png)
+![Edit view in the light mode](data/screenshots/pantheon/screenshot-edit-view-light.png)
 
 Other features include:
 
