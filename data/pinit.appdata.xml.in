@@ -35,15 +35,23 @@
   <content_rating type="oars-1.1" />
 
   <releases>
-    <release version="2.0.0" date="2022-04-09" urgency="high">
+    <release version="2.0.0" date="2022-08-07" urgency="high">
       <description>
+        <p>
+          The biggest and greatest updates come to "Pin It!":
+        </p>
         <ul>
-          <li>The app now fully redesigned for modern desktop environments!</li>
+          <li>Redesign to fit modern desktop environments, including support for responsive design</li>
+          <li>Migrate to GTK 4, the latest version of GTK</li>
         </ul>
-        <p>Translation updates:</p>
+        <p>
+          Other changes:
+        </p>
         <ul>
-          <li>Update Italian translation (thanks to @albanobattistella)</li>
-          <li>Update Japanese translation</li>
+          <li>Support setting ".ico" files as the app icon</li>
+          <li>Support setting "StartupWMClass" key</li>
+          <li>Make sure not to add blank elements in generated desktop files</li>
+          <li>Update translations</li>
         </ul>
       </description>
     </release>
