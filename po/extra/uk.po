@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-23 10:24+0900\n"
+"POT-Creation-Date: 2022-08-07 12:38+0900\n"
 "PO-Revision-Date: 2022-06-30 23:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -73,159 +73,190 @@ msgstr "Перегляд файлів"
 msgid "Edit View"
 msgstr "Редагування перегляду"
 
-#: data/pinit.appdata.xml.in:41
-msgid "The app now fully redesigned for modern desktop environments!"
-msgstr "Застосунок повністю перероблений для сучасних стільничних середовищ!"
+#: data/pinit.appdata.xml.in:40
+msgid "The biggest and greatest updates come to \"Pin It!\":"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:43 data/pinit.appdata.xml.in:55
-#: data/pinit.appdata.xml.in:69 data/pinit.appdata.xml.in:87
-#: data/pinit.appdata.xml.in:99 data/pinit.appdata.xml.in:112
-#: data/pinit.appdata.xml.in:125 data/pinit.appdata.xml.in:138
-#: data/pinit.appdata.xml.in:153
-msgid "Translation updates:"
-msgstr "Оновлення перекладів:"
+#: data/pinit.appdata.xml.in:44
+msgid ""
+"Redesign to fit modern desktop environments, including support for "
+"responsive design"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:57
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Оновлення перекладу італійською мовою (завдяки @albanobattistella)"
+#: data/pinit.appdata.xml.in:45
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:46 data/pinit.appdata.xml.in:73
-#: data/pinit.appdata.xml.in:89 data/pinit.appdata.xml.in:102
-#: data/pinit.appdata.xml.in:115 data/pinit.appdata.xml.in:127
-#: data/pinit.appdata.xml.in:140 data/pinit.appdata.xml.in:156
-msgid "Update Japanese translation"
-msgstr "Оновлення перекладу японською мовою"
+#: data/pinit.appdata.xml.in:47
+msgid "Other changes:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:51
+msgid "Support setting \".ico\" files as the app icon"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:52
+msgid "Support setting \"StartupWMClass\" key"
+msgstr ""
 
 #: data/pinit.appdata.xml.in:53
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:54
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update translations"
+msgstr "Оновлення перекладу японською мовою"
+
+#: data/pinit.appdata.xml.in:61
 msgid "AppData: Fix release year"
 msgstr "AppData: виправлено рік випуску"
 
-#: data/pinit.appdata.xml.in:64
+#: data/pinit.appdata.xml.in:63 data/pinit.appdata.xml.in:77
+#: data/pinit.appdata.xml.in:95 data/pinit.appdata.xml.in:107
+#: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
+#: data/pinit.appdata.xml.in:146 data/pinit.appdata.xml.in:161
+msgid "Translation updates:"
+msgstr "Оновлення перекладів:"
+
+#: data/pinit.appdata.xml.in:65
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "Оновлення перекладу італійською мовою (завдяки @albanobattistella)"
+
+#: data/pinit.appdata.xml.in:72
 msgid "Check desktop environment on runtime"
 msgstr "Перевірка стільничного середовища під час роботи"
 
-#: data/pinit.appdata.xml.in:65
+#: data/pinit.appdata.xml.in:73
 msgid "Lessen scope of file access"
 msgstr "Зменшення зони доступу до файлів"
 
-#: data/pinit.appdata.xml.in:66
+#: data/pinit.appdata.xml.in:74
 msgid "Make window resizable"
 msgstr "Вікно зі змінюваним розміром"
 
-#: data/pinit.appdata.xml.in:67
+#: data/pinit.appdata.xml.in:75
 msgid "EditView: Less strict on file names"
 msgstr "EditView: менш вимогливий до назв файлів"
 
-#: data/pinit.appdata.xml.in:71
+#: data/pinit.appdata.xml.in:79
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Додано переклад італійською мовою (спасибі @albanobattistella)"
 
-#: data/pinit.appdata.xml.in:72
+#: data/pinit.appdata.xml.in:80
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Додано переклад нідерландською (завдяки @Vistaus)"
 
-#: data/pinit.appdata.xml.in:80
+#: data/pinit.appdata.xml.in:81 data/pinit.appdata.xml.in:97
+#: data/pinit.appdata.xml.in:110 data/pinit.appdata.xml.in:123
+#: data/pinit.appdata.xml.in:135 data/pinit.appdata.xml.in:148
+#: data/pinit.appdata.xml.in:164
+msgid "Update Japanese translation"
+msgstr "Оновлення перекладу японською мовою"
+
+#: data/pinit.appdata.xml.in:88
 msgid "Fix build error on other distros"
 msgstr "Виправлення помилки збирання на інших дистрибутивах"
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:89
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr "FilesView: правильне центрування діалогового вікна до вікна застосунку"
 
-#: data/pinit.appdata.xml.in:82
+#: data/pinit.appdata.xml.in:90
 msgid "Restore last opened view and its state"
 msgstr "Відновлення останнього відкритого подання та його стану"
 
-#: data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:91
 msgid "Add new style switcher"
 msgstr "Доданий новий перемикач стилів"
 
-#: data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:92
 msgid "Correct titlebar label when no app name specified"
 msgstr "Правильна мітка панелі заголовка, якщо не вказано назву застосунку"
 
-#: data/pinit.appdata.xml.in:85
+#: data/pinit.appdata.xml.in:93
 msgid "Readable copies"
 msgstr "Читабельні копії"
 
-#: data/pinit.appdata.xml.in:96
+#: data/pinit.appdata.xml.in:104
 msgid "FilesView: Ellipsize if label texts are too long"
 msgstr "FilesView: Еліпсис, якщо текст міток задовгий"
 
-#: data/pinit.appdata.xml.in:97
+#: data/pinit.appdata.xml.in:105
 msgid "Tell accepted file formats in FileChooser"
 msgstr "Повідомлення про прийняті формати файлів у FileChooser"
 
-#: data/pinit.appdata.xml.in:101
+#: data/pinit.appdata.xml.in:109
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
 msgstr ""
 "Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
 
-#: data/pinit.appdata.xml.in:109
+#: data/pinit.appdata.xml.in:117
 msgid "EditView: Focus on file name entry by default"
 msgstr "EditView: Фокусування на записі назви файлу після відкриття"
 
-#: data/pinit.appdata.xml.in:110
+#: data/pinit.appdata.xml.in:118
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
 "FilesView: вікно стало прокручуваним і виправлено можливість збільшення, "
 "якщо багато записів"
 
-#: data/pinit.appdata.xml.in:114
+#: data/pinit.appdata.xml.in:122
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
 
-#: data/pinit.appdata.xml.in:122
+#: data/pinit.appdata.xml.in:130
 msgid "Improved support for other desktop environments"
 msgstr "Поліпшена підтримка інших стільничних середовищ"
 
-#: data/pinit.appdata.xml.in:123
+#: data/pinit.appdata.xml.in:131
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgstr "Додавання дозволу на виконання натисканням кнопки «Pin It!»"
 
-#: data/pinit.appdata.xml.in:134
+#: data/pinit.appdata.xml.in:142
 msgid "Add CategoryChooser"
 msgstr "Доданий вибір категорій"
 
-#: data/pinit.appdata.xml.in:135
+#: data/pinit.appdata.xml.in:143
 msgid "Support Alt+Home to show welcome"
 msgstr "Підтримка Alt+Home, щоб перейти на сторінку привітання"
 
-#: data/pinit.appdata.xml.in:136
+#: data/pinit.appdata.xml.in:144
 msgid "Allow GPU acceralation by default"
 msgstr "Додано GPU-прискорення з коробки"
 
-#: data/pinit.appdata.xml.in:147
+#: data/pinit.appdata.xml.in:155
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr "Додана піктограма застосунку 128px (завдяки @hanaral)"
 
-#: data/pinit.appdata.xml.in:148
+#: data/pinit.appdata.xml.in:156
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 "Закруглені кути вікон на будь-якій таблиці стилів (завдяки @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:149
+#: data/pinit.appdata.xml.in:157
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr "Підтримка мультитач жестів (завдяки @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:150
+#: data/pinit.appdata.xml.in:158
 msgid "Fix unreadable description text in AppCenter"
 msgstr "Виправлено нечитабельний текст опису у Центрі застосунків"
 
-#: data/pinit.appdata.xml.in:151
+#: data/pinit.appdata.xml.in:159
 msgid "Save and restore window position"
 msgstr "Збереження та відновлення розташування вікна"
 
-#: data/pinit.appdata.xml.in:155
+#: data/pinit.appdata.xml.in:163
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr "Доданий переклад іспанською мовою (спасибі @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:163
+#: data/pinit.appdata.xml.in:171
 msgid "Initial release"
 msgstr "Початковий випуск"
 
-#: data/pinit.appdata.xml.in:169
+#: data/pinit.appdata.xml.in:177
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -238,3 +269,7 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
 "File;Create;Edit;Info;Icon;AppImage;"
+
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr ""
+#~ "Застосунок повністю перероблений для сучасних стільничних середовищ!"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-23 10:24+0900\n"
+"POT-Creation-Date: 2022-08-07 12:38+0900\n"
 "PO-Revision-Date: 2022-04-24 13:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-extra/"
@@ -72,162 +72,192 @@ msgstr "Zobrazenie súborov"
 msgid "Edit View"
 msgstr "Zobrazenie úprav"
 
-#: data/pinit.appdata.xml.in:41
-msgid "The app now fully redesigned for modern desktop environments!"
+#: data/pinit.appdata.xml.in:40
+msgid "The biggest and greatest updates come to \"Pin It!\":"
 msgstr ""
-"Aplikácia má po novom úplne nový vzhľad pre moderné pracovné prostredia!"
 
-#: data/pinit.appdata.xml.in:43 data/pinit.appdata.xml.in:55
-#: data/pinit.appdata.xml.in:69 data/pinit.appdata.xml.in:87
-#: data/pinit.appdata.xml.in:99 data/pinit.appdata.xml.in:112
-#: data/pinit.appdata.xml.in:125 data/pinit.appdata.xml.in:138
-#: data/pinit.appdata.xml.in:153
-msgid "Translation updates:"
-msgstr "Aktualizácie prekladov:"
+#: data/pinit.appdata.xml.in:44
+msgid ""
+"Redesign to fit modern desktop environments, including support for "
+"responsive design"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:45 data/pinit.appdata.xml.in:57
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Aktualizácia prekladu do taliančiny (vďaka @albanobattistella)"
+#: data/pinit.appdata.xml.in:45
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
 
-#: data/pinit.appdata.xml.in:46 data/pinit.appdata.xml.in:73
-#: data/pinit.appdata.xml.in:89 data/pinit.appdata.xml.in:102
-#: data/pinit.appdata.xml.in:115 data/pinit.appdata.xml.in:127
-#: data/pinit.appdata.xml.in:140 data/pinit.appdata.xml.in:156
-msgid "Update Japanese translation"
-msgstr "Aktualizácia prekladu do japončiny"
+#: data/pinit.appdata.xml.in:47
+msgid "Other changes:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:51
+msgid "Support setting \".ico\" files as the app icon"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:52
+msgid "Support setting \"StartupWMClass\" key"
+msgstr ""
 
 #: data/pinit.appdata.xml.in:53
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:54
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update translations"
+msgstr "Aktualizácia prekladu do japončiny"
+
+#: data/pinit.appdata.xml.in:61
 msgid "AppData: Fix release year"
 msgstr "Údaje aplikácie: Opravený rok vydania"
 
-#: data/pinit.appdata.xml.in:64
+#: data/pinit.appdata.xml.in:63 data/pinit.appdata.xml.in:77
+#: data/pinit.appdata.xml.in:95 data/pinit.appdata.xml.in:107
+#: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
+#: data/pinit.appdata.xml.in:146 data/pinit.appdata.xml.in:161
+msgid "Translation updates:"
+msgstr "Aktualizácie prekladov:"
+
+#: data/pinit.appdata.xml.in:65
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "Aktualizácia prekladu do taliančiny (vďaka @albanobattistella)"
+
+#: data/pinit.appdata.xml.in:72
 msgid "Check desktop environment on runtime"
 msgstr "Zistiť pracovné prostredie pri spustení aplikácie"
 
-#: data/pinit.appdata.xml.in:65
+#: data/pinit.appdata.xml.in:73
 msgid "Lessen scope of file access"
 msgstr "Znížený rozsah prístupu k súborom"
 
-#: data/pinit.appdata.xml.in:66
+#: data/pinit.appdata.xml.in:74
 msgid "Make window resizable"
 msgstr "Umožnenie zmeny veľkosti okna"
 
-#: data/pinit.appdata.xml.in:67
+#: data/pinit.appdata.xml.in:75
 msgid "EditView: Less strict on file names"
 msgstr "Zobrazenie úprav: Menej obmedzení na pomenovanie súborov"
 
-#: data/pinit.appdata.xml.in:71
+#: data/pinit.appdata.xml.in:79
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Pridaný preklad do taliančiny (vďaka @albanobattistella)"
 
-#: data/pinit.appdata.xml.in:72
+#: data/pinit.appdata.xml.in:80
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Pridaný preklad do holandčiny (vďaka @Vistaus)"
 
-#: data/pinit.appdata.xml.in:80
+#: data/pinit.appdata.xml.in:81 data/pinit.appdata.xml.in:97
+#: data/pinit.appdata.xml.in:110 data/pinit.appdata.xml.in:123
+#: data/pinit.appdata.xml.in:135 data/pinit.appdata.xml.in:148
+#: data/pinit.appdata.xml.in:164
+msgid "Update Japanese translation"
+msgstr "Aktualizácia prekladu do japončiny"
+
+#: data/pinit.appdata.xml.in:88
 msgid "Fix build error on other distros"
 msgstr "Opravené chyby kompilácie na ostatných distribúciách"
 
-#: data/pinit.appdata.xml.in:81
+#: data/pinit.appdata.xml.in:89
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr "Zobrazenie súborov: Správne vycentrovať dialóg pred oknom aplikácie"
 
-#: data/pinit.appdata.xml.in:82
+#: data/pinit.appdata.xml.in:90
 msgid "Restore last opened view and its state"
 msgstr "Obnoviť naposledy otvorené zobrazenie a jeho stav"
 
-#: data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:91
 msgid "Add new style switcher"
 msgstr "Pridaný nový prepínač štýlov"
 
-#: data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:92
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
 "Opravený štítok vrchnej lišty, keď nie je špecifikovaný názov aplikácie"
 
-#: data/pinit.appdata.xml.in:85
+#: data/pinit.appdata.xml.in:93
 msgid "Readable copies"
 msgstr "Čitateľné kópie"
 
-#: data/pinit.appdata.xml.in:96
+#: data/pinit.appdata.xml.in:104
 msgid "FilesView: Ellipsize if label texts are too long"
 msgstr "Zobrazenie súborov: Skrátiť štítok, ak je text príliš dlhý"
 
-#: data/pinit.appdata.xml.in:97
+#: data/pinit.appdata.xml.in:105
 msgid "Tell accepted file formats in FileChooser"
 msgstr "Zobraziť podporované formáty súborov v okne voľby súborov FileChooser"
 
-#: data/pinit.appdata.xml.in:101
+#: data/pinit.appdata.xml.in:109
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
 msgstr "Pridaný preklad do brazílskej portugalčiny (vďaka @DanielTolentino)"
 
-#: data/pinit.appdata.xml.in:109
+#: data/pinit.appdata.xml.in:117
 msgid "EditView: Focus on file name entry by default"
 msgstr "Zobrazenie úprav: Predvolene označiť políčko na vkladanie názvu"
 
-#: data/pinit.appdata.xml.in:110
+#: data/pinit.appdata.xml.in:118
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
 "Zobrazenie súborov: Umožnené posúvanie a opravená chyba, keď sa okno "
 "zväčšovalo pri veľkom množstve položiek"
 
-#: data/pinit.appdata.xml.in:114
+#: data/pinit.appdata.xml.in:122
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/pinit.appdata.xml.in:122
+#: data/pinit.appdata.xml.in:130
 msgid "Improved support for other desktop environments"
 msgstr "Zlepšenie podpory pre ostatné pracovné prostredia"
 
-#: data/pinit.appdata.xml.in:123
+#: data/pinit.appdata.xml.in:131
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgstr ""
 "Pridané povolenie spustenia po kliknutí na tlačidlo „Pin It!“ (Pripnúť!)"
 
-#: data/pinit.appdata.xml.in:134
+#: data/pinit.appdata.xml.in:142
 msgid "Add CategoryChooser"
 msgstr "Pridaná voľba kategórií CategoryChooser"
 
-#: data/pinit.appdata.xml.in:135
+#: data/pinit.appdata.xml.in:143
 msgid "Support Alt+Home to show welcome"
 msgstr "Podpora Alt+Home pre zobrazenie privítania"
 
-#: data/pinit.appdata.xml.in:136
+#: data/pinit.appdata.xml.in:144
 msgid "Allow GPU acceralation by default"
 msgstr "Predvolene zapnúť akceleráciu pomocou grafickej karty"
 
-#: data/pinit.appdata.xml.in:147
+#: data/pinit.appdata.xml.in:155
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr "Pridaná ikonka veľkosti 128 pixelov (vďaka @hanaral)"
 
-#: data/pinit.appdata.xml.in:148
+#: data/pinit.appdata.xml.in:156
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 "Zaoblené rohy okna pri použití akéhokoľvek zoznamu štýlov (stylesheet) "
 "(vďaka @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:149
+#: data/pinit.appdata.xml.in:157
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr "Podpora viacdotykových gest (vďaka @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:150
+#: data/pinit.appdata.xml.in:158
 msgid "Fix unreadable description text in AppCenter"
 msgstr "Opravený nečitateľný text popisu v AppCentre"
 
-#: data/pinit.appdata.xml.in:151
+#: data/pinit.appdata.xml.in:159
 msgid "Save and restore window position"
 msgstr "Uložiť a obnoviť pozíciu okna"
 
-#: data/pinit.appdata.xml.in:155
+#: data/pinit.appdata.xml.in:163
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr "Pridaný preklad do španielčiny (vďaka @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:163
+#: data/pinit.appdata.xml.in:171
 msgid "Initial release"
 msgstr "Prvé vydanie"
 
-#: data/pinit.appdata.xml.in:169
+#: data/pinit.appdata.xml.in:177
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -239,3 +269,7 @@ msgstr "Tvorba súborov pracovnej plochy"
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Pracovná plocha;Súbor;Vytvoriť;Upraviť;Info;Informácie;Ikonka;AppImage;"
+
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr ""
+#~ "Aplikácia má po novom úplne nový vzhľad pre moderné pracovné prostredia!"
