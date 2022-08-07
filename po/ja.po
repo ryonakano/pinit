@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-07 12:38+0900\n"
+"POT-Creation-Date: 2022-08-07 22:15+0900\n"
 "PO-Revision-Date: 2022-07-24 08:18+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -134,11 +134,11 @@ msgstr "エントリーを編集しています"
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/Views/EditView.vala:461
+#: src/Views/EditView.vala:462
 msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 
-#: src/Views/EditView.vala:467
+#: src/Views/EditView.vala:468
 msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
@@ -146,7 +146,7 @@ msgstr ""
 "英数字とアンダースコアのみの使用を推奨します。また、最初の文字は数字以外にし"
 "てください。"
 
-#: src/Views/EditView.vala:468
+#: src/Views/EditView.vala:469
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
@@ -154,18 +154,18 @@ msgstr "また、最低でも1回はピリオドを使って、2つ以上の要�
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:477
+#: src/Views/EditView.vala:478
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:486
+#: src/Views/EditView.vala:487
 #, c-format
 msgid "For more info, see %s."
 msgstr "詳細情報は %sを参照してください。"
 
-#: src/Views/EditView.vala:488
+#: src/Views/EditView.vala:489
 msgid "the file naming specification by freedesktop.org"
 msgstr "freedesktop.org が策定するファイル命名仕様"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-07 12:38+0900\n"
+"POT-Creation-Date: 2022-08-07 22:15+0900\n"
 "PO-Revision-Date: 2022-04-19 00:07+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -139,11 +139,11 @@ msgstr "Eintrag wird bearbeitet"
 msgid "Editing “%s”"
 msgstr "Bearbeitung von „%s“"
 
-#: src/Views/EditView.vala:461
+#: src/Views/EditView.vala:462
 msgid "Recommendations for naming"
 msgstr "Empfehlungen für die Namensgebung"
 
-#: src/Views/EditView.vala:467
+#: src/Views/EditView.vala:468
 #, fuzzy
 #| msgid ""
 #| "Only use alphabets, numbers, and underscores, and none begins with "
@@ -155,7 +155,7 @@ msgstr ""
 "Verwenden Sie nur Buchstaben, Zahlen und Unterstriche, und beginnen Sie "
 "nicht mit Zahlen."
 
-#: src/Views/EditView.vala:468
+#: src/Views/EditView.vala:469
 #, fuzzy
 #| msgid ""
 #| "Use at least one period to make sure to be separated into at least two "
@@ -169,18 +169,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:477
+#: src/Views/EditView.vala:478
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:486
+#: src/Views/EditView.vala:487
 #, c-format
 msgid "For more info, see %s."
 msgstr "Weitere Informationen finden Sie unter %s."
 
-#: src/Views/EditView.vala:488
+#: src/Views/EditView.vala:489
 msgid "the file naming specification by freedesktop.org"
 msgstr "die Dateibenennungsspezifikation von freedesktop.org"
 
