@@ -67,6 +67,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     private const string DESKTOP_SUFFIX = ".desktop";
+    private const Posix.mode_t PERMISSION_BIT = Posix.S_IRWXU | Posix.S_IRWXG | Posix.S_IRWXO;
 
     // The representation of the destination path in GLib.File type
     private File desktop_dir;
@@ -282,7 +283,17 @@ public class DesktopFileOperator : GLib.Object {
             return;
         }
 
-        int ret_chmod = Posix.chmod (path, (sbuf.st_mode & 0777) | 0100);
+        Posix.mode_t cur_perm = sbuf.st_mode & PERMISSION_BIT;
+
+        /*
+         * If the current user already has exec permission to the specified file,
+         * do nothing.
+         */
+        if ((cur_perm & Posix.S_IXUSR) == Posix.S_IXUSR) {
+            return;
+        }
+
+        int ret_chmod = Posix.chmod (path, cur_perm | Posix.S_IXUSR);
         if (ret_chmod != 0) {
             warning ("Failed to give exec permission to '%s': %s",
                     path, Posix.strerror (Posix.errno));
