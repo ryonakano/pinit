@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 12:38+0900\n"
-"PO-Revision-Date: 2022-08-07 05:19+0000\n"
+"PO-Revision-Date: 2022-08-07 13:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
 "pinit-extra/ja/>\n"
@@ -81,29 +81,27 @@ msgstr "最近のデスクトップ環境に合うように、デザインを変
 
 #: data/pinit.appdata.xml.in:45
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "GTK の最新バージョンである、GTK 4 に移行"
 
 #: data/pinit.appdata.xml.in:47
 msgid "Other changes:"
-msgstr ""
+msgstr "そのほかの変更:"
 
 #: data/pinit.appdata.xml.in:51
 msgid "Support setting \".ico\" files as the app icon"
-msgstr ""
+msgstr "アプリのアイコンとして \".ico\" ファイルを指定可能に"
 
 #: data/pinit.appdata.xml.in:52
 msgid "Support setting \"StartupWMClass\" key"
-msgstr ""
+msgstr "\"StartupWMClass\" キーを設定可能に"
 
 #: data/pinit.appdata.xml.in:53
 msgid "Make sure not to add blank elements in generated desktop files"
-msgstr ""
+msgstr "生成したデスクトップファイルに空の要素がないように修正"
 
 #: data/pinit.appdata.xml.in:54
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "日本語翻訳を更新"
+msgstr "翻訳を更新"
 
 #: data/pinit.appdata.xml.in:61
 msgid "AppData: Fix release year"
