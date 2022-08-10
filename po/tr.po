@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:15+0900\n"
-"PO-Revision-Date: 2022-08-10 22:15+0000\n"
+"PO-Revision-Date: 2022-08-11 23:18+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "tr/>\n"
@@ -28,258 +28,271 @@ msgstr "Dosya Adı"
 
 #: src/Views/EditView.vala:73
 msgid "Name of the file where these app info is saved."
-msgstr ""
+msgstr "Bu uygulama bilgilerinin kaydedildiği dosyanın adı."
 
 #: src/Views/EditView.vala:83
 msgid "Suffix of the file"
-msgstr ""
+msgstr "Dosyanın son eki"
 
 #: src/Views/EditView.vala:95
 msgid "App Name"
-msgstr ""
+msgstr "Uygulama Adı"
 
 #: src/Views/EditView.vala:99
 msgid "Shown in the launcher or Dock."
-msgstr ""
+msgstr "Başlatıcıda yada Rıhtımda gösterilir."
 
 #: src/Views/EditView.vala:114
 msgid "Comment"
-msgstr ""
+msgstr "Yorum"
 
 #: src/Views/EditView.vala:118
 msgid "A tooltip text to describe what the app helps you to do."
-msgstr ""
+msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
 
 #: src/Views/EditView.vala:133
 msgid "Exec File"
-msgstr ""
+msgstr "Yürütme Dosyası"
 
 #: src/Views/EditView.vala:138
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"Başlatıcıda uygulama girdisine tıkladığınızda başlatılacak komut/uygulama. "
+"Mutlak bir yol veya bir uygulamanın takma adını belirtin."
 
 #: src/Views/EditView.vala:155
 msgid "Icon File"
-msgstr ""
+msgstr "Simge Dosyası"
 
 #: src/Views/EditView.vala:160
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
+"Uygulamanın marka simgesi. Mutlak bir yol ya da bir simgenin takma adını "
+"belirtin."
 
 #: src/Views/EditView.vala:177
 msgid "App Categories"
-msgstr ""
+msgstr "Uygulama Kategorileri"
 
 #: src/Views/EditView.vala:181
 msgid "Type of the app, multiply selectable."
-msgstr ""
+msgstr "Uygulamanın türü, çoklu seçilebilir."
 
 #: src/Views/EditView.vala:194
 msgid "Startup WM Class"
-msgstr ""
+msgstr "Başlangıç WM Sınıfı"
 
 #: src/Views/EditView.vala:199
 msgid ""
 "Associate the app with a window that has this ID. Fill in this if a "
 "different or duplicated icon comes up to the dock when the app launches."
 msgstr ""
+"Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
+"başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge gelirse bunu "
+"doldurun."
 
 #: src/Views/EditView.vala:215
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Uçbirim'de Çalıştır"
 
 #: src/Views/EditView.vala:218
 msgid "Check this in if you want to register a CUI app."
-msgstr ""
+msgstr "Bir komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
 
 #: src/Views/EditView.vala:270
 msgid "Select an executable file"
-msgstr ""
+msgstr "Yürütülebilir bir dosya seçin"
 
 #: src/Views/EditView.vala:271 src/Views/EditView.vala:305
 msgid "Open"
-msgstr ""
+msgstr "Aç"
 
 #: src/Views/EditView.vala:271 src/Views/EditView.vala:305
 #: src/Views/EditView.vala:424
 msgid "Cancel"
-msgstr ""
+msgstr "İptal Et"
 
 #: src/Views/EditView.vala:301
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "ICO, PNG, SVG veya XMP dosyaları"
 
 #: src/Views/EditView.vala:304
 msgid "Select an icon file"
-msgstr ""
+msgstr "Bir simge dosyası seçin"
 
 #: src/Views/EditView.vala:356
 msgid "New Entry"
-msgstr ""
+msgstr "Yeni Girdi"
 
 #: src/Views/EditView.vala:365
 msgid "Editing Entry"
-msgstr ""
+msgstr "Girdi Düzenleme"
 
 #: src/Views/EditView.vala:371
 #, c-format
 msgid "Editing “%s”"
-msgstr ""
+msgstr "“%s” düzenleniyor"
 
 #: src/Views/EditView.vala:462
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "Adlandırma önerileri"
 
 #: src/Views/EditView.vala:468
 msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
 msgstr ""
+"Yalnızca alfabetik karakterler, rakam ve alt çizgi kullanılması ve "
+"hiçbirinin rakamla başlamaması önerilir."
 
 #: src/Views/EditView.vala:469
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
 msgstr ""
+"Ayrıca, en az iki ögeye ayrıldığından emin olmak için en az bir nokta "
+"kullanın."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
 #: src/Views/EditView.vala:478
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr ""
+msgstr "Örneğin, 2D oyun SuperTux için \"%s\" kullanmalısınız."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
 #: src/Views/EditView.vala:487
 #, c-format
 msgid "For more info, see %s."
-msgstr ""
+msgstr "Daha fazla bilgi için bkz. %s."
 
 #: src/Views/EditView.vala:489
 msgid "the file naming specification by freedesktop.org"
-msgstr ""
+msgstr "freedesktop.org tarafından önerilen dosya adlandırma özellikleri"
 
 #: src/Views/FilesView.vala:30
 msgid "Create a new entry"
-msgstr ""
+msgstr "Yeni girdi oluştur"
 
 #: src/Views/FilesView.vala:35
 msgid "Light"
-msgstr ""
+msgstr "Açık"
 
 #: src/Views/FilesView.vala:36
 msgid "Dark"
-msgstr ""
+msgstr "Koyu"
 
 #: src/Views/FilesView.vala:37 src/CategoryChooser.vala:108
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 #: src/Views/FilesView.vala:40
 msgid "Style"
-msgstr ""
+msgstr "Biçim"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:45
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "%s Hakkında…"
 
 #: src/Views/FilesView.vala:49
 msgid "Preferences"
-msgstr ""
+msgstr "Tercihler"
 
 #: src/Views/FilesView.vala:73
 msgid "No valid app entries found"
-msgstr ""
+msgstr "Geçerli uygulama girdisi bulunamadı"
 
 #: src/Views/FilesView.vala:74
 msgid "If you've never created one, click the + button on the top."
-msgstr ""
+msgstr "Daha önce oluşturmadıysanız, üstteki + düğmesine tıklayın."
 
 #: src/Views/FilesView.vala:135
 msgid "Delete…"
-msgstr ""
+msgstr "Sil…"
 
 #: src/Views/FilesView.vala:142
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr ""
+msgstr "\"%s\" i silmek istediğinizden emin misiniz?"
 
 #: src/Views/FilesView.vala:143
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "Bu, uygulamayı başlatıcıdan kaldırır."
 
 #: src/Views/FilesView.vala:146
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: src/CategoryChooser.vala:97
 msgid "Audio & Video"
-msgstr ""
+msgstr "Ses ve Video"
 
 #: src/CategoryChooser.vala:98
 msgid "Audio"
-msgstr ""
+msgstr "Ses"
 
 #: src/CategoryChooser.vala:99
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/CategoryChooser.vala:100
 msgid "Development"
-msgstr ""
+msgstr "Geliştirme"
 
 #: src/CategoryChooser.vala:101
 msgid "Education"
-msgstr ""
+msgstr "Eğitim"
 
 #: src/CategoryChooser.vala:102
 msgid "Game"
-msgstr ""
+msgstr "Oyun"
 
 #: src/CategoryChooser.vala:103
 msgid "Graphics"
-msgstr ""
+msgstr "Grafik"
 
 #: src/CategoryChooser.vala:104
 msgid "Network"
-msgstr ""
+msgstr "Ağ"
 
 #: src/CategoryChooser.vala:105
 msgid "Office"
-msgstr ""
+msgstr "Ofis"
 
 #: src/CategoryChooser.vala:106
 msgid "Science"
-msgstr ""
+msgstr "Bilim"
 
 #: src/CategoryChooser.vala:107
 msgid "Settings"
-msgstr ""
+msgstr "Ayarlar"
 
 #: src/CategoryChooser.vala:109
 msgid "Utility"
-msgstr ""
+msgstr "Araç"
 
 #: src/Application.vala:83
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
+"oluşturun"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/Application.vala:90
 msgid "translator-credits"
-msgstr ""
+msgstr "Sabri Ünal <libreajans@gmail.com>"
 
 #: src/MainWindow.vala:50
 msgid "Updated entry."
-msgstr ""
+msgstr "Girdi güncellendi."
 
 #: src/MainWindow.vala:54
 msgid "Deleted entry."
-msgstr ""
+msgstr "Girdi silindi."
