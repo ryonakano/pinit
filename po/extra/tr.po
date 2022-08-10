@@ -7,66 +7,78 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:16+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-08-11 23:18+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-extra/"
+"tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
-msgstr ""
+msgstr "Pin It!"
 
 #: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
+"oluşturun"
 
 #: data/pinit.appdata.xml.in:11
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
+"Ham yürütülebilir dosyalar, AppImage dosyaları vb. gibi taşınabilir "
+"uygulamaların kısayolunu masaüstü ortamınızın uygulama başlatıcısında "
+"oluşturun."
 
 #: data/pinit.appdata.xml.in:14
 msgid "Other features include:"
-msgstr ""
+msgstr "Diğer özellikler şunlardır:"
 
 #: data/pinit.appdata.xml.in:18
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"Dosya yöneticisini açmadan oluşturulan uygulama girdilerini düzenleyin ya da "
+"silin"
 
 #: data/pinit.appdata.xml.in:19
 msgid "Automatically add execution permission to the file you select"
-msgstr ""
+msgstr "Seçtiğiniz dosyaya kendiliğinden yürütme izni ekleyin"
 
 #: data/pinit.appdata.xml.in:20
 msgid "Syntax error detection"
-msgstr ""
+msgstr "Sözdizimi hatası algılama"
 
 #: data/pinit.appdata.xml.in:21
 msgid ""
 "Automatically save everything―your data in editing, last open view, and "
 "preferences"
 msgstr ""
+"Her şeyi kendiliğinden kaydedin - düzenleme sırasındaki verileriniz, son "
+"açık görünüm ve tercihler"
 
 #: data/pinit.appdata.xml.in:26
 msgid "Files view in the light mode"
-msgstr ""
+msgstr "Açık kipte dosya görünümü"
 
 #: data/pinit.appdata.xml.in:30
 msgid "Edit view in the light mode"
-msgstr ""
+msgstr "Açık kipte görünümü düzenle"
 
 #: data/pinit.appdata.xml.in:34
 msgid "Files view in the dark mode"
-msgstr ""
+msgstr "Koyu kipte dosya görünümü"
 
 #: data/pinit.appdata.xml.in:38
 msgid "Edit view in the dark mode"
-msgstr ""
+msgstr "Koyu kipte görünümü düzenle"
 
 #: data/pinit.appdata.xml.in:48
 msgid "The biggest and greatest updates come to \"Pin It!\":"
@@ -108,7 +120,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:64
 msgid "Update translations"
-msgstr ""
+msgstr "Çeviri güncellemeleri"
 
 #: data/pinit.appdata.xml.in:71
 msgid "AppData: Fix release year"
@@ -119,15 +131,15 @@ msgstr ""
 #: data/pinit.appdata.xml.in:130 data/pinit.appdata.xml.in:143
 #: data/pinit.appdata.xml.in:156 data/pinit.appdata.xml.in:171
 msgid "Translation updates:"
-msgstr ""
+msgstr "Çeviri güncellemeleri:"
 
 #: data/pinit.appdata.xml.in:75
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "İtalyanca çeviri güncellendi (@albanobattistella'ya teşekkürler)"
 
 #: data/pinit.appdata.xml.in:82
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "Çalışma zamanında masaüstü ortamını denetle"
 
 #: data/pinit.appdata.xml.in:83
 msgid "Lessen scope of file access"
@@ -147,14 +159,14 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:90
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr ""
+msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
 
 #: data/pinit.appdata.xml.in:91 data/pinit.appdata.xml.in:107
 #: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
 #: data/pinit.appdata.xml.in:145 data/pinit.appdata.xml.in:158
 #: data/pinit.appdata.xml.in:174
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Japonca çeviri güncellendi"
 
 #: data/pinit.appdata.xml.in:98
 msgid "Fix build error on other distros"
@@ -203,7 +215,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:132
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Fransızca çeviri güncellendi (@NathanBnm'ye teşekkürler)"
 
 #: data/pinit.appdata.xml.in:140
 msgid "Improved support for other desktop environments"
@@ -251,16 +263,16 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:181
 msgid "Initial release"
-msgstr ""
+msgstr "İlk sürüm"
 
 #: data/pinit.appdata.xml.in:187
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Masaüstü Dosya Oluşturucu"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
+msgstr "Masaüstü;Dosya;Oluştur;Düzenle;Simge;Bilgi;AppImage;"
