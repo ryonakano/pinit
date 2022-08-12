@@ -272,15 +272,17 @@ public class DesktopFileOperator : GLib.Object {
 
     /*
      * Add executable permission to the given file at `path`.
+     * @return: 0 when succeed and 1 when failed.
      */
-    public void add_exec_permission (string path) {
+    public int add_exec_permission (string path) {
+        int ret;
         Posix.Stat sbuf;
 
-        int ret_stat = Posix.stat (path, out sbuf);
-        if (ret_stat != 0) {
+        ret = Posix.stat (path, out sbuf);
+        if (ret != 0) {
             warning ("Failed to get the current mode of '%s': %s",
                     path, Posix.strerror (Posix.errno));
-            return;
+            return 1;
         }
 
         Posix.mode_t cur_perm = sbuf.st_mode & PERMISSION_BIT;
@@ -290,14 +292,17 @@ public class DesktopFileOperator : GLib.Object {
          * do nothing.
          */
         if ((cur_perm & Posix.S_IXUSR) == Posix.S_IXUSR) {
-            return;
+            return 0;
         }
 
-        int ret_chmod = Posix.chmod (path, cur_perm | Posix.S_IXUSR);
-        if (ret_chmod != 0) {
+        ret = Posix.chmod (path, cur_perm | Posix.S_IXUSR);
+        if (ret != 0) {
             warning ("Failed to give exec permission to '%s': %s",
                     path, Posix.strerror (Posix.errno));
+            return 1;
         }
+
+        return 0;
     }
 
     /*
