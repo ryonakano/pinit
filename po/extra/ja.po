@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:16+0900\n"
-"PO-Revision-Date: 2022-08-07 13:16+0000\n"
+"PO-Revision-Date: 2022-08-13 01:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
-"extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"pinit-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,19 +62,19 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:26
 msgid "Files view in the light mode"
-msgstr ""
+msgstr "ファイル一覧画面 (ライトモード)"
 
 #: data/pinit.appdata.xml.in:30
 msgid "Edit view in the light mode"
-msgstr ""
+msgstr "編集画面 (ライトモード)"
 
 #: data/pinit.appdata.xml.in:34
 msgid "Files view in the dark mode"
-msgstr ""
+msgstr "ファイル一覧画面 (ダークモード)"
 
 #: data/pinit.appdata.xml.in:38
 msgid "Edit view in the dark mode"
-msgstr ""
+msgstr "編集画面 (ダークモード)"
 
 #: data/pinit.appdata.xml.in:48
 msgid "The biggest and greatest updates come to \"Pin It!\":"
@@ -110,11 +110,11 @@ msgstr "生成したデスクトップファイルに空の要素がないよう
 
 #: data/pinit.appdata.xml.in:62
 msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr ""
+msgstr "選択した実行可能ファイルのパーミッション全体を書き換えないように修正"
 
 #: data/pinit.appdata.xml.in:63
 msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
+msgstr "ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修正"
 
 #: data/pinit.appdata.xml.in:64
 msgid "Update translations"
