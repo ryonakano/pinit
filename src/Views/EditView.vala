@@ -221,35 +221,46 @@ public class EditView : Gtk.Box {
         };
         terminal_desc_label.get_style_context ().add_class ("dim-label");
 
-        var edit_page = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
+        var edit_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
             margin_top = 12,
             margin_bottom = 24,
             margin_start = 24,
             margin_end = 24
         };
-        edit_page.append (file_name_grid);
-        edit_page.append (name_grid);
-        edit_page.append (comment_grid);
-        edit_page.append (exec_grid);
-        edit_page.append (icon_grid);
-        edit_page.append (categories_grid);
-        edit_page.append (startup_wm_class_grid);
-        edit_page.append (terminal_checkbox);
-        edit_page.append (terminal_desc_label);
+        edit_box.append (file_name_grid);
+        edit_box.append (name_grid);
+        edit_box.append (comment_grid);
+        edit_box.append (exec_grid);
+        edit_box.append (icon_grid);
+        edit_box.append (categories_grid);
+        edit_box.append (startup_wm_class_grid);
+        edit_box.append (terminal_checkbox);
+        edit_box.append (terminal_desc_label);
+
+        // Pack into a scrolled window for small height display
+        var edit_page = new Gtk.ScrolledWindow () {
+            child = edit_box,
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            vexpand = true,
+            hexpand = true
+        };
 
         // NoSelectionPage: This blank page is shown when no desktop file open.
-        var no_selection_page = new Adw.StatusPage ();
+        var no_selection_page = new Adw.StatusPage () {
+            vexpand = true,
+            hexpand = true
+        };
 
         stack = new Gtk.Stack ();
         stack.add_named (edit_page, "edit_page");
         stack.add_named (no_selection_page, "no_selection_page");
 
-        // No desktop file open when the app launches, so hide all widgets in the view.
-        hide_all ();
-
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
         append (stack);
+
+        // No desktop file open when the app launches, so hide all widgets in the view.
+        hide_all ();
 
         cancel_button.clicked.connect (() => {
             // When the cancel button is clicked, go back to FilesView.

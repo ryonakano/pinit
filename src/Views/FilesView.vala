@@ -61,43 +61,42 @@ public class FilesView : Gtk.Box {
 
         // FilesListPage: The page to list available desktop files.
         files_list = new Gtk.ListBox () {
-            vexpand = true,
-            hexpand = true
-        };
-
-        var files_list_page = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        files_list_page.append (files_list);
-
-        // NoFilesPage: Shown when no desktop files available.
-        var no_files_page = new Adw.StatusPage () {
-            title = _("No valid app entries found"),
-            description = _("If you've never created one, click the + button on the top."),
-            icon_name = "dialog-information"
-        };
-
-        stack = new Gtk.Stack ();
-        stack.add_named (files_list_page, "files_list_page");
-        stack.add_named (no_files_page, "no_files_page");
-
-        // Pack the pages into a scrolled window in case there are many desktop files in the files list
-        var scrolled = new Gtk.ScrolledWindow () {
-            child = stack,
-            hscrollbar_policy = Gtk.PolicyType.NEVER,
             margin_top = 12,
             margin_bottom = 24,
             margin_start = 24,
             margin_end = 24
         };
 
-        create_button.clicked.connect (() => {
-            window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
-        });
+        // Pack into a scrolled window in case there are many desktop files in the files list
+        var files_list_page = new Gtk.ScrolledWindow () {
+            child = files_list,
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            vexpand = true,
+            hexpand = true
+        };
 
-        update_list ();
+        // NoFilesPage: Shown when no desktop files available.
+        var no_files_page = new Adw.StatusPage () {
+            title = _("No valid app entries found"),
+            description = _("If you've never created one, click the + button on the top."),
+            icon_name = "dialog-information",
+            vexpand = true,
+            hexpand = true
+        };
+
+        stack = new Gtk.Stack ();
+        stack.add_named (files_list_page, "files_list_page");
+        stack.add_named (no_files_page, "no_files_page");
 
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
-        append (scrolled);
+        append (stack);
+
+        update_list ();
+
+        create_button.clicked.connect (() => {
+            window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
+        });
     }
 
     /*
