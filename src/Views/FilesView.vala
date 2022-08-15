@@ -99,12 +99,11 @@ public class FilesView : Gtk.Box {
      */
     public void update_list () {
         // Clear all of the currently added entries
-        while (true) {
+        for (
             var child = (Gtk.ListBoxRow) files_list.get_last_child ();
-            if (child == null) {
-                break;
-            }
-
+                child != null;
+                child = (Gtk.ListBoxRow) files_list.get_last_child ()
+        ) {
             files_list.remove (child);
         }
 
