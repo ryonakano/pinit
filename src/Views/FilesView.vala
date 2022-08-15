@@ -60,12 +60,7 @@ public class FilesView : Gtk.Box {
         // Main part
 
         // FilesListPage: The page to list available desktop files.
-        files_list = new Gtk.ListBox () {
-            margin_top = 12,
-            margin_bottom = 24,
-            margin_start = 24,
-            margin_end = 24
-        };
+        files_list = new Gtk.ListBox ();
 
         // Pack into a scrolled window in case there are many desktop files in the files list
         var files_list_page = new Gtk.ScrolledWindow () {
