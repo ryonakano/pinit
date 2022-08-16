@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:16+0900\n"
-"PO-Revision-Date: 2022-08-09 12:19+0000\n"
+"PO-Revision-Date: 2022-08-17 13:19+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "pinit-extra/uk/>\n"
@@ -123,7 +123,7 @@ msgstr "Надавати дозвіл виконання користувачу,
 
 #: data/pinit.appdata.xml.in:64
 msgid "Update translations"
-msgstr "Оновлення перекладів"
+msgstr "Оновлені переклади"
 
 #: data/pinit.appdata.xml.in:71
 msgid "AppData: Fix release year"
