@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:16+0900\n"
-"PO-Revision-Date: 2022-05-27 18:15+0000\n"
+"PO-Revision-Date: 2022-09-03 10:21+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "it/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -67,63 +67,65 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:26
 msgid "Files view in the light mode"
-msgstr ""
+msgstr "Visualizzazione dei file in modalità chiara"
 
 #: data/pinit.appdata.xml.in:30
 msgid "Edit view in the light mode"
-msgstr ""
+msgstr "Modifica vista in modalità chiara"
 
 #: data/pinit.appdata.xml.in:34
 msgid "Files view in the dark mode"
-msgstr ""
+msgstr "Visualizzazione dei file in modalità scura"
 
 #: data/pinit.appdata.xml.in:38
 msgid "Edit view in the dark mode"
-msgstr ""
+msgstr "Modifica vista in modalità scura"
 
 #: data/pinit.appdata.xml.in:48
 msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr ""
+msgstr "Gli aggiornamenti più grandi e più importanti arrivano su \"Pin It!\":"
 
 #: data/pinit.appdata.xml.in:52
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
 msgstr ""
+"Riprogettato per adattarsi ai moderni ambienti desktop, incluso il supporto "
+"per il design reattivo"
 
 #: data/pinit.appdata.xml.in:53
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migrato a GTK 4, l'ultima versione di GTK"
 
 #: data/pinit.appdata.xml.in:55
 msgid "Other changes:"
-msgstr ""
+msgstr "Altre modifiche:"
 
 #: data/pinit.appdata.xml.in:59
 msgid "Support setting \".ico\" files as the app icon"
-msgstr ""
+msgstr "Supporta l'impostazione di file \".ico\" come icona dell'app"
 
 #: data/pinit.appdata.xml.in:60
 msgid "Support setting \"StartupWMClass\" key"
-msgstr ""
+msgstr "Supporto per l'impostazione della chiave \"StartupWMClass\""
 
 #: data/pinit.appdata.xml.in:61
 msgid "Make sure not to add blank elements in generated desktop files"
-msgstr ""
+msgstr "Assicurati di non aggiungere elementi vuoti nei file desktop generati"
 
 #: data/pinit.appdata.xml.in:62
 msgid "Don't overwrite the entire permission of the selected executable files"
 msgstr ""
+"Non sovrascrivere l'intera autorizzazione dei file eseguibili selezionati"
 
 #: data/pinit.appdata.xml.in:63
 msgid "Give executable permission for the user only when they don't have it"
 msgstr ""
+"Concedi l'autorizzazione eseguibile per l'utente solo quando non ce l'ha"
 
 #: data/pinit.appdata.xml.in:64
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "Aggiornata traduzione giapponese"
+msgstr "Aggiornate le traduzioni"
 
 #: data/pinit.appdata.xml.in:71
 msgid "AppData: Fix release year"
