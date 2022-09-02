@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# lenemter <lenemter@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-07 22:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:11
+msgid ""
+"Create the shortcut to portable apps like raw executable files, AppImage "
+"files, etc. into the app launcher of your desktop environment."
+msgstr ""
+
+#: data/pinit.appdata.xml.in:14
+msgid "Other features include:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:18
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:19
+msgid "Automatically add execution permission to the file you select"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:20
+msgid "Syntax error detection"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:21
+msgid ""
+"Automatically save everything―your data in editing, last open view, and "
+"preferences"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:26
+msgid "Files view in the light mode"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:30
+msgid "Edit view in the light mode"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:34
+msgid "Files view in the dark mode"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:38
+msgid "Edit view in the dark mode"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:48
+msgid "The biggest and greatest updates come to \"Pin It!\":"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:52
+msgid ""
+"Redesign to fit modern desktop environments, including support for "
+"responsive design"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:53
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:55
+msgid "Other changes:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:59
+msgid "Support setting \".ico\" files as the app icon"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:60
+msgid "Support setting \"StartupWMClass\" key"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:61
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:62
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:63
+msgid "Give executable permission for the user only when they don't have it"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:64
+msgid "Update translations"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:71
+msgid "AppData: Fix release year"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:73 data/pinit.appdata.xml.in:87
+#: data/pinit.appdata.xml.in:105 data/pinit.appdata.xml.in:117
+#: data/pinit.appdata.xml.in:130 data/pinit.appdata.xml.in:143
+#: data/pinit.appdata.xml.in:156 data/pinit.appdata.xml.in:171
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:75
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:82
+msgid "Check desktop environment on runtime"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:83
+msgid "Lessen scope of file access"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:84
+msgid "Make window resizable"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:85
+msgid "EditView: Less strict on file names"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:89
+msgid "Add Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:90
+msgid "Add Dutch translation (thanks to @Vistaus)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:91 data/pinit.appdata.xml.in:107
+#: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
+#: data/pinit.appdata.xml.in:145 data/pinit.appdata.xml.in:158
+#: data/pinit.appdata.xml.in:174
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:98
+msgid "Fix build error on other distros"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:99
+msgid "FilesView: Properly center the dialog against the app window"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:100
+msgid "Restore last opened view and its state"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:101
+msgid "Add new style switcher"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:102
+msgid "Correct titlebar label when no app name specified"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:103
+msgid "Readable copies"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:114
+msgid "FilesView: Ellipsize if label texts are too long"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:115
+msgid "Tell accepted file formats in FileChooser"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:119
+msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:127
+msgid "EditView: Focus on file name entry by default"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:128
+msgid ""
+"FilesView: Make scrollable and fix the window get bigger if many entries"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:132
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:140
+msgid "Improved support for other desktop environments"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:141
+msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:152
+msgid "Add CategoryChooser"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:153
+msgid "Support Alt+Home to show welcome"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:154
+msgid "Allow GPU acceralation by default"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:165
+msgid "Add 128px app icon (thanks to @hanaral)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:166
+msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:167
+msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:168
+msgid "Fix unreadable description text in AppCenter"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:169
+msgid "Save and restore window position"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:173
+msgid "Add Spanish translation (thanks to @JeysonFlores)"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:181
+msgid "Initial release"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:187
+msgid "Ryo Nakano"
+msgstr ""
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr ""
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr ""
