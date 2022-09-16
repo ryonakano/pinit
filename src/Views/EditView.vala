@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class EditView : Gtk.Box {
+ public class EditView : Gtk.Box {
     /*
      * The view where you can edit the content of a desktop file.
      * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
@@ -19,7 +19,8 @@ public class EditView : Gtk.Box {
             return (
                 file_name_entry.text.length > 0 || name_entry.text.length > 0 ||
                 comment_entry.text.length > 0 || exec_entry.text.length > 0 ||
-                icon_entry.text.length > 0 || category_chooser.selected != "" || terminal_checkbox.active
+                icon_entry.text.length > 0 || category_chooser.selected != "" ||
+                terminal_checkbox.active
             );
         }
     }
@@ -189,6 +190,27 @@ public class EditView : Gtk.Box {
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
         categories_grid.attach (category_chooser, 0, 2, 1, 1);
 
+        var advanced_label = new Gtk.Label (_("Advanced configuration")) {
+            halign = Gtk.Align.START
+        };
+        advanced_label.get_style_context ().add_class ("heading");
+        var advanced_desc_label = new Gtk.Label (
+            _("You can create an app entry by filling the sections above in most cases. In case it doesn't work, however, you can edit its desktop file using your text editor from the button below.")
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        advanced_desc_label.get_style_context ().add_class ("dim-label");
+        var advanced_button = new Gtk.Button.with_label (_("Open with the text editor")) {
+            halign = Gtk.Align.START
+        };
+        var advanced_grid = new Gtk.Grid () {
+            margin_bottom = 12
+        };
+        advanced_grid.attach (advanced_label, 0, 0, 1, 1);
+        advanced_grid.attach (advanced_desc_label, 0, 1, 1, 1);
+        advanced_grid.attach (advanced_button, 0, 2, 1, 1);
+
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
@@ -210,6 +232,7 @@ public class EditView : Gtk.Box {
         edit_box.append (exec_grid);
         edit_box.append (icon_grid);
         edit_box.append (categories_grid);
+        edit_box.append (advanced_grid);
         edit_box.append (terminal_checkbox);
         edit_box.append (terminal_desc_label);
 
@@ -300,6 +323,15 @@ public class EditView : Gtk.Box {
                 }
             });
             filechooser.show ();
+        });
+
+        advanced_button.clicked.connect (() => {
+            try {
+                // TODO: Open the current desktop file
+//                GLib.AppInfo.launch_default_for_uri ("file://", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
         });
 
         /* 
