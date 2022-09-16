@@ -19,8 +19,7 @@ public class EditView : Gtk.Box {
             return (
                 file_name_entry.text.length > 0 || name_entry.text.length > 0 ||
                 comment_entry.text.length > 0 || exec_entry.text.length > 0 ||
-                icon_entry.text.length > 0 || category_chooser.selected != "" ||
-                startup_wm_class_entry.text.length > 0 || terminal_checkbox.active
+                icon_entry.text.length > 0 || category_chooser.selected != "" || terminal_checkbox.active
             );
         }
     }
@@ -40,7 +39,6 @@ public class EditView : Gtk.Box {
     private Gtk.Entry exec_entry;
     private Gtk.Entry icon_entry;
     private CategoryChooser category_chooser;
-    private Gtk.Entry startup_wm_class_entry;
     private Gtk.CheckButton terminal_checkbox;
 
     private Gtk.Stack stack;
@@ -191,27 +189,6 @@ public class EditView : Gtk.Box {
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
         categories_grid.attach (category_chooser, 0, 2, 1, 1);
 
-        var startup_wm_class_label = new Gtk.Label (_("Startup WM Class")) {
-            halign = Gtk.Align.START
-        };
-        startup_wm_class_label.get_style_context ().add_class ("heading");
-        var startup_wm_class_desc_label = new Gtk.Label (
-            _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon comes up to the dock when the app launches.")
-        ) {
-            halign = Gtk.Align.START,
-            margin_bottom = 6
-        };
-        startup_wm_class_desc_label.get_style_context ().add_class ("dim-label");
-        startup_wm_class_entry = new Gtk.Entry () {
-            hexpand = true
-        };
-        var startup_wm_class_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        startup_wm_class_grid.attach (startup_wm_class_label, 0, 0, 1, 1);
-        startup_wm_class_grid.attach (startup_wm_class_desc_label, 0, 1, 1, 1);
-        startup_wm_class_grid.attach (startup_wm_class_entry, 0, 2, 1, 1);
-
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 6
         };
@@ -233,7 +210,6 @@ public class EditView : Gtk.Box {
         edit_box.append (exec_grid);
         edit_box.append (icon_grid);
         edit_box.append (categories_grid);
-        edit_box.append (startup_wm_class_grid);
         edit_box.append (terminal_checkbox);
         edit_box.append (terminal_desc_label);
 
@@ -351,7 +327,6 @@ public class EditView : Gtk.Box {
         exec_entry.text = desktop_file.exec_file;
         icon_entry.text = desktop_file.icon_file;
         category_chooser.selected = desktop_file.categories;
-        startup_wm_class_entry.text = desktop_file.startup_wm_class;
         terminal_checkbox.active = desktop_file.is_cli;
 
         // Show the page that filled in just now and set forcus at the first input widget.
@@ -458,7 +433,6 @@ public class EditView : Gtk.Box {
             exec_entry.text,
             icon_entry.text,
             category_chooser.selected,
-            startup_wm_class_entry.text,
             terminal_checkbox.active,
             is_backup
         );
