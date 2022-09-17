@@ -344,28 +344,33 @@ public class EditView : Gtk.Box {
     /*
      * Fill in the all input widgets in the EditView from the loaded desktp file.
      */
-    public void set_desktop_file (DesktopFile desktop_file) {
-        file_name_entry.text = desktop_file.file_name;
-        name_entry.text = desktop_file.app_name;
-        comment_entry.text = desktop_file.comment;
-        exec_entry.text = desktop_file.exec_file;
-        icon_entry.text = desktop_file.icon_file;
-        category_chooser.selected = desktop_file.categories;
-        startup_wm_class_entry.text = desktop_file.startup_wm_class;
-        terminal_checkbox.active = desktop_file.is_cli;
+    public void set_desktop_file (GLib.DesktopAppInfo desktop_file) {
+        file_name_entry.text = desktop_file.get_id ();
+        name_entry.text = desktop_file.get_display_name ();
+        comment_entry.text = desktop_file.get_description ();
+        exec_entry.text = desktop_file.get_executable ();
+
+        var gicon = desktop_file.get_icon ();
+        if (gicon != null) {
+            icon_entry.text = gicon.to_string ();
+        }
+
+        category_chooser.selected = desktop_file.get_categories ();
+        startup_wm_class_entry.text = desktop_file.get_startup_wm_class ();
+        terminal_checkbox.active = desktop_file.get_boolean ("Terminal");
 
         // Show the page that filled in just now and set forcus at the first input widget.
         stack.visible_child_name = "edit_page";
         file_name_entry.grab_focus ();
 
         // Set title label of the header depending on the status of the opened desktop file
-        if (desktop_file.file_name == "") {
+        if (desktop_file.filename == "") {
             /*
              * This is the case when creating a new file.
              * The opened desktop file has no filename.
              */
             set_header_title_label (_("New Entry"));
-        } else if (desktop_file.app_name == "") {
+        } else if (desktop_file.get_name () == "") {
             /*
              * The opened desktop file has a filename but has no app name.
              * This is a rare case because the app forces setting the app name to save desktop files,
@@ -379,7 +384,7 @@ public class EditView : Gtk.Box {
              * This is the normal case when editing an existing file.
              * Show the app name which is the value of the "Name" key in desktop files.
              */
-            set_header_title_label (_("Editing “%s”").printf (desktop_file.app_name));
+            set_header_title_label (_("Editing “%s”").printf (desktop_file.get_display_name ()));
         }
 
         cancel_button.visible = true;

@@ -44,6 +44,7 @@ executable(
     sources,
     dependencies: [
         dependency('gee-0.8'),
+        dependency('gio-unix-2.0'),
         dependency('gtk4'),
         dependency('libadwaita-1'),
         dependency('pango'),

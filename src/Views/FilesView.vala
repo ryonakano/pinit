@@ -113,15 +113,11 @@ public class FilesView : Gtk.Box {
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
-            // Fallback icon
-            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
-            if (file.icon_file != "") {
-                // Check if icon_file represents a path to the icon or just the alias
-                if (File.new_for_path (file.icon_file).query_exists ()) {
-                    app_icon.file = file.icon_file;
-                } else {
-                    app_icon.icon_name = file.icon_file;
-                }
+            var app_icon = new Gtk.Image.from_icon_name ("image-missing"); // Fallback
+
+            var gicon = file.get_icon ();
+            if (gicon != null) {
+                app_icon.gicon = gicon;
             }
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
@@ -132,7 +128,7 @@ public class FilesView : Gtk.Box {
                 var delete_dialog = new Gtk.MessageDialog (
                     window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
                 ) {
-                    text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    text = _("Are you sure you want to delete “%s”?").printf (file.get_display_name ()),
                     secondary_text = _("This removes the app from the launcher.")
                 };
 
@@ -151,8 +147,8 @@ public class FilesView : Gtk.Box {
             });
 
             var list_item = new Adw.ActionRow () {
-                title = file.app_name,
-                subtitle = file.comment,
+                title = file.get_display_name (),
+                subtitle = file.get_description (),
                 activatable = true
             };
             list_item.add_prefix (app_icon);

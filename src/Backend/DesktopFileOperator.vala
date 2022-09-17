@@ -19,8 +19,8 @@ public class DesktopFileOperator : GLib.Object {
     public signal void file_updated ();
     public signal void file_deleted ();
 
-    // The list of desktop files in the DesktopFile data type.
-    public Gee.ArrayList<DesktopFile> files {
+    // The list of desktop files in the GLib.DesktopAppInfo data type.
+    public Gee.ArrayList<GLib.DesktopAppInfo> files {
         get {
             _files.clear ();
 
@@ -37,7 +37,7 @@ public class DesktopFileOperator : GLib.Object {
                     }
 
                     // Add the desktop file found just now to the list
-                    var desktop_file = load_from_file (Path.build_filename (DESTINATION_PATH, name));
+                    var desktop_file = new GLib.DesktopAppInfo.from_filename (Path.build_filename (DESTINATION_PATH, name));
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
@@ -47,7 +47,7 @@ public class DesktopFileOperator : GLib.Object {
             return _files;
         }
     }
-    private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
+    private Gee.ArrayList<GLib.DesktopAppInfo> _files = new Gee.ArrayList<GLib.DesktopAppInfo> ();
 
     /*
      * We don't want to override these two strings so it's desired to declare as `const`,
@@ -104,9 +104,10 @@ public class DesktopFileOperator : GLib.Object {
     /*
      * Create the new and blank desktop file.
      */
-    public DesktopFile create_new () {
+    public GLib.DesktopAppInfo? create_new () {
         DesktopFileOperator.get_default ().delete_backup ();
-        return new DesktopFile ();
+        //  return new DesktopFile ();
+        return new GLib.DesktopAppInfo ("com.github.ryonakano.test.desktop");
     }
 
     /*
@@ -204,72 +205,6 @@ public class DesktopFileOperator : GLib.Object {
         file_updated ();
     }
 
-
-    /*
-     * Load the content of the desktop file at `path` and construct new DesktopFile through KeyFile object.
-     */
-    public DesktopFile? load_from_file (string path) {
-        string file_name = "";
-        string app_name = "";
-        string comment = "";
-        string exec_file = "";
-        string icon_file = "";
-        string categories = "";
-        string startup_wm_class = "";
-        bool is_cli = false;
-        bool is_backup = false;
-
-        try {
-            var keyfile = new KeyFile ();
-            keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
-
-            string basename = Path.get_basename (path);
-
-            // Get the filename without the .desktop suffix
-            file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
-
-            app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
-
-            comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
-
-            exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
-
-            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON)) {
-                icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
-            }
-
-            categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
-
-            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
-                startup_wm_class = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
-            }
-
-            is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
-
-            is_backup = UNSAVED_FILE_PATH in path;
-        } catch (KeyFileError e) {
-            warning (e.message);
-            return null;
-        } catch (FileError e) {
-            warning (e.message);
-            return null;
-        }
-
-        var desktop_file = new DesktopFile (
-            file_name,
-            app_name,
-            comment,
-            exec_file,
-            icon_file,
-            categories,
-            startup_wm_class,
-            is_cli,
-            is_backup
-        );
-
-        return desktop_file;
-    }
-
     /*
      * Add executable permission to the given file at `path`.
      * @return: 0 when succeed and 1 when failed.
@@ -309,9 +244,14 @@ public class DesktopFileOperator : GLib.Object {
      * Get an unsaved file if exists.
      * @return: The unsaved file in the DesktopFile type. `null` when none exists
      */
-    public DesktopFile? get_unsaved_file () {
+    public GLib.DesktopAppInfo? get_unsaved_file () {
         string last_edited_file = Application.settings.get_string ("last-edited-file");
-        return last_edited_file != "" ? load_from_file (last_edited_file) : null;
+
+        if (last_edited_file != "") {
+            return new GLib.DesktopAppInfo.from_filename (last_edited_file);
+        } else {
+            return null;
+        }
     }
 
     /*
@@ -329,8 +269,8 @@ public class DesktopFileOperator : GLib.Object {
     /*
      * Delete the given desktop file from the storage.
      */
-    public void delete_file (DesktopFile desktop_file) {
-        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX));
+    public void delete_file (GLib.DesktopAppInfo desktop_file) {
+        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.filename + DESKTOP_SUFFIX));
         file_deleted ();
     }
 

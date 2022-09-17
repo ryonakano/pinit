@@ -140,7 +140,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Show the edit view with entries, buttons, etc filled
      * with the content in the specified desktop file,
      */
-    public void show_edit_view (DesktopFile desktop_file) {
+    public void show_edit_view (GLib.DesktopAppInfo desktop_file) {
         edit_view.set_desktop_file (desktop_file);
         leaflet.visible_child = edit_view;
     }
