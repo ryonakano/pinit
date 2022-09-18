@@ -270,7 +270,7 @@ public class DesktopFileOperator : GLib.Object {
      * Delete the given desktop file from the storage.
      */
     public void delete_file (GLib.DesktopAppInfo desktop_file) {
-        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.filename + DESKTOP_SUFFIX));
+        desktop_file.delete ();
         file_deleted ();
     }
 
