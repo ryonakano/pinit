@@ -4,13 +4,14 @@
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# rene-coty <irenee.thirion@e.email>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-07 22:16+0900\n"
-"PO-Revision-Date: 2022-04-19 00:07+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "fr/>\n"
 "Language: fr\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -94,7 +95,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:53
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migration vers GTK 4, la dernière version de GTK"
 
 #: data/pinit.appdata.xml.in:55
 msgid "Other changes:"
@@ -121,10 +122,8 @@ msgid "Give executable permission for the user only when they don't have it"
 msgstr ""
 
 #: data/pinit.appdata.xml.in:64
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "Mise à jour des traductions en Japonais"
+msgstr "Mise à jour des traductions"
 
 #: data/pinit.appdata.xml.in:71
 msgid "AppData: Fix release year"
@@ -135,16 +134,16 @@ msgstr ""
 #: data/pinit.appdata.xml.in:130 data/pinit.appdata.xml.in:143
 #: data/pinit.appdata.xml.in:156 data/pinit.appdata.xml.in:171
 msgid "Translation updates:"
-msgstr "Mise à jour des traductions :"
+msgstr "Mise à jour des traductions :"
 
 #: data/pinit.appdata.xml.in:75
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+msgstr "Mise à jour des traductions italiennes (grâce à @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:82
 msgid "Check desktop environment on runtime"
 msgstr ""
+"Vérification de l’environnement de bureau dans l’environnement d’exécution"
 
 #: data/pinit.appdata.xml.in:83
 msgid "Lessen scope of file access"
@@ -164,16 +163,15 @@ msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
 
 #: data/pinit.appdata.xml.in:90
-#, fuzzy
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+msgstr "Ajout d’une traduction néerlandaise (grâce à @Vistaus)"
 
 #: data/pinit.appdata.xml.in:91 data/pinit.appdata.xml.in:107
 #: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
 #: data/pinit.appdata.xml.in:145 data/pinit.appdata.xml.in:158
 #: data/pinit.appdata.xml.in:174
 msgid "Update Japanese translation"
-msgstr "Mise à jour des traductions en Japonais"
+msgstr "Mise à jour de la traduction japonaise"
 
 #: data/pinit.appdata.xml.in:98
 msgid "Fix build error on other distros"
@@ -222,9 +220,8 @@ msgid ""
 msgstr ""
 
 #: data/pinit.appdata.xml.in:132
-#, fuzzy
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
 #: data/pinit.appdata.xml.in:140
 msgid "Improved support for other desktop environments"
