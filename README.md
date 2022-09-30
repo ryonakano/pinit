@@ -29,7 +29,7 @@ You'll need the following dependencies to build:
 
 * libgee-0.8-dev
 * libgtk-4-dev
-* libadwaita-1-dev
+* libadwaita-1-dev (>= 1.2.0)
 * meson (>= 0.57.0)
 * valac
 

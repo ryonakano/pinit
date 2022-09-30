@@ -71,25 +71,28 @@ public class Application : Adw.Application {
             return;
         }
 
-        // Setup About dialog (only on non-Pantheon desktop environment)
+        // Setup "About" window (only on non-Pantheon desktop environment)
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
-            var about_dialog = new Gtk.AboutDialog () {
+            var about_window = new Adw.AboutWindow () {
                 transient_for = main_window,
                 modal = true,
-                logo_icon_name = Constants.PROJECT_NAME,
-                program_name = Constants.APP_NAME,
+                application_icon = Constants.PROJECT_NAME,
+                application_name = Constants.APP_NAME,
                 version = Constants.PROJECT_VERSION,
                 comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
                 website = "https://github.com/ryonakano/pinit",
+                support_url = "https://github.com/ryonakano/pinit/discussions",
+                issue_url = "https://github.com/ryonakano/pinit/issues",
                 copyright = "© 2021-2022 Ryo Nakano",
                 license_type = Gtk.License.GPL_3_0,
-                authors = { "Ryo Nakano" },
-                artists = { "hanaral" },
+                developer_name = "Ryo Nakano",
+                developers = { "Ryo Nakano https://github.com/ryonakano", "Jeyson Flores https://github.com/JeysonFlores", null },
+                artists = { "hanaral https://github.com/hanaral", null },
                 ///TRANSLATORS: Replace with your name; don't translate literally
                 translator_credits = _("translator-credits")
             };
-            about_dialog.present ();
+            about_window.present ();
         });
         set_accels_for_action ("app.about", {"F1"});
         add_action (about_action);
