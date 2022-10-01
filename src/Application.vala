@@ -5,25 +5,30 @@
 
 public class Application : Adw.Application {
     /*
-     * The app launches from this class.
+     * Data structures
      */
+    struct Style {
+        string name;
+        Adw.ColorScheme color_scheme;
+    }
 
     /*
-     * Returns if the current desktop environment is Pantheon or not.
-     * We'll use this later to provide more appropriate functions or design
-     * both on Pantheon and on another desktop environment.
+     * Global variables
      */
+    // Returns if the current desktop environment is Pantheon or not.
+    // We'll use this later to provide more appropriate functions or design
+    // both on Pantheon and on another desktop environment.
     public static bool IS_ON_PANTHEON {
         get {
             return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
         }
     }
 
-    // A global variable storing GSettings for this app.
-    public static Settings settings;
+    // Store GSettings for this app
+    public static Settings settings { get; private set; }
 
     /*
-     * Private properties and variables
+     * Private variables
      */
     private MainWindow main_window;
 
@@ -34,39 +39,25 @@ public class Application : Adw.Application {
         );
     }
 
-    construct {
-        // Make sure the app is shown in the user's language.
+    static construct {
+        settings = new Settings (Constants.PROJECT_NAME);
+    }
+
+    protected override void startup () {
+        base.startup ();
+
+        /*
+         * Make sure the app is shown in the user's language.
+         * https://docs.gtk.org/glib/i18n.html#internationalization
+         */
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (Constants.PROJECT_NAME, Constants.LOCALEDIR);
         Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
         Intl.textdomain (Constants.PROJECT_NAME);
 
-        // Setup theme things
-        var style_manager = Adw.StyleManager.get_default ();
-        style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
+        setup_style ();
 
-        var style_light_action = new SimpleAction ("style-light", null);
-        style_light_action.activate.connect (() => {
-            set_app_style (Adw.ColorScheme.FORCE_LIGHT);
-        });
-        set_accels_for_action ("app.style-light", {""});
-        add_action (style_light_action);
-
-        var style_dark_action = new SimpleAction ("style-dark", null);
-        style_dark_action.activate.connect (() => {
-            set_app_style (Adw.ColorScheme.FORCE_DARK);
-        });
-        set_accels_for_action ("app.style-dark", {""});
-        add_action (style_dark_action);
-
-        var style_system_action = new SimpleAction ("style-system", null);
-        style_system_action.activate.connect (() => {
-            set_app_style (Adw.ColorScheme.PREFER_LIGHT);
-        });
-        set_accels_for_action ("app.style-system", {""});
-        add_action (style_system_action);
-
-        // elementary prefers AppData for showcasing the app info, so don't construct useless AboutDialog on Pantheon
+        // elementary prefers AppData for showcasing the app info, so don't construct useless "About" window on Pantheon
         if (IS_ON_PANTHEON) {
             return;
         }
@@ -74,32 +65,32 @@ public class Application : Adw.Application {
         // Setup "About" window (only on non-Pantheon desktop environment)
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
-            var about_window = new Adw.AboutWindow () {
-                transient_for = main_window,
-                modal = true,
-                application_icon = Constants.PROJECT_NAME,
-                application_name = Constants.APP_NAME,
-                version = Constants.PROJECT_VERSION,
-                comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
-                website = "https://github.com/ryonakano/pinit",
-                support_url = "https://github.com/ryonakano/pinit/discussions",
-                issue_url = "https://github.com/ryonakano/pinit/issues",
-                copyright = "© 2021-2022 Ryo Nakano",
-                license_type = Gtk.License.GPL_3_0,
-                developer_name = "Ryo Nakano",
-                developers = { "Ryo Nakano https://github.com/ryonakano", "Jeyson Flores https://github.com/JeysonFlores", null },
-                artists = { "hanaral https://github.com/hanaral", null },
-                ///TRANSLATORS: Replace with your name; don't translate literally
-                translator_credits = _("translator-credits")
-            };
+            var about_window = new AboutWindow (main_window);
             about_window.present ();
         });
         set_accels_for_action ("app.about", {"F1"});
         add_action (about_action);
     }
 
-    static construct {
-        settings = new Settings (Constants.PROJECT_NAME);
+    // Setup theme things
+    private void setup_style () {
+        const Style[] styles = {
+            { "style-light", Adw.ColorScheme.FORCE_LIGHT },
+            { "style-dark", Adw.ColorScheme.FORCE_DARK },
+            { "style-system", Adw.ColorScheme.PREFER_LIGHT }
+        };
+
+        var style_manager = Adw.StyleManager.get_default ();
+        style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
+
+        foreach (unowned var style in styles) {
+            var style_light_action = new SimpleAction (style.name, null);
+            style_light_action.activate.connect (() => {
+                set_app_style (style.color_scheme);
+            });
+            set_accels_for_action ("app." + style.name, {""});
+            add_action (style_light_action);
+        }
     }
 
     /*
@@ -113,7 +104,6 @@ public class Application : Adw.Application {
 
     protected override void activate () {
         if (main_window != null) {
-            // The app is already launched; show that window and do nothing else
             main_window.present ();
             return;
         }
@@ -130,7 +120,8 @@ public class Application : Adw.Application {
          * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
          * So we use the prepared binding only for setting
          */
-        if (Application.settings.get_boolean ("window-maximized")) {
+        bool is_maximized = Application.settings.get_boolean ("window-maximized");
+        if (is_maximized) {
             main_window.maximize ();
         }
 
@@ -138,6 +129,7 @@ public class Application : Adw.Application {
     }
 
     public static int main (string[] args) {
-        return new Application ().run ();
+        var app = new Application ();
+        return app.run ();
     }
 }
