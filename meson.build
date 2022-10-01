@@ -35,6 +35,7 @@ sources = files(
     'src' / 'AboutWindow.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
+    'src' / 'DialogResponse.vala',
     'src' / 'MainWindow.vala',
     'src' / 'RegexEntry.vala'
 )
