@@ -10,6 +10,8 @@ public class FilesView : Gtk.Box {
      * Otherwise it's shown when you save or cancel editing desktop files in FilesView.
      */
 
+    public signal void file_deleted ();
+
     /*
      * Private properties and variables
      */
@@ -141,7 +143,25 @@ public class FilesView : Gtk.Box {
 
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.OK) {
-                        DesktopFileOperator.get_default ().delete_file (file);
+                        try {
+                            DesktopFileOperator.get_default ().delete_file (file);
+                            file_deleted ();
+                        } catch (Error e) {
+                            var error_dialog = new Adw.MessageDialog (
+                                window,
+                                _("Could not delete file “%s”").printf (file.app_name),
+                                e.message
+                            );
+                            error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+                            error_dialog.default_response = DialogResponse.CLOSE;
+                            error_dialog.close_response = DialogResponse.CLOSE;
+                            error_dialog.response.connect ((response_id) => {
+                                if (response_id == DialogResponse.CLOSE) {
+                                    error_dialog.destroy ();
+                                }
+                            });
+                            error_dialog.present ();
+                        }
                     }
 
                     delete_dialog.destroy ();
