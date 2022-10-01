@@ -131,18 +131,18 @@ public class FilesView : Gtk.Box {
                 valign = Gtk.Align.CENTER
             };
             delete_button.clicked.connect (() => {
-                var delete_dialog = new Gtk.MessageDialog (
-                    window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
-                ) {
-                    text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                    secondary_text = _("This removes the app from the launcher.")
-                };
-
-                var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
-                confirm_button.get_style_context ().add_class ("destructive-action");
-
+                var delete_dialog = new Adw.MessageDialog (
+                    window,
+                    _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    _("This removes the app from the launcher.")
+                );
+                delete_dialog.add_response (DialogResponse.CANCEL, _("Cancel"));
+                delete_dialog.add_response (DialogResponse.OK, _("Delete"));
+                delete_dialog.set_response_appearance (DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
+                delete_dialog.default_response = DialogResponse.CANCEL;
+                delete_dialog.close_response = DialogResponse.CANCEL;
                 delete_dialog.response.connect ((response_id) => {
-                    if (response_id == Gtk.ResponseType.OK) {
+                    if (response_id == DialogResponse.OK) {
                         try {
                             DesktopFileOperator.get_default ().delete_file (file);
                             file_deleted ();

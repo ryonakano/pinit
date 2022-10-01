@@ -9,4 +9,16 @@ public class DialogResponse {
             return "close";
         }
     }
+
+    public static string CANCEL {
+        get {
+            return "cancel";
+        }
+    }
+
+    public static string OK {
+        get {
+            return "ok";
+        }
+    }
 }
