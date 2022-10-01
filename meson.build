@@ -32,6 +32,7 @@ sources = files(
     'src' / 'Backend' / 'DesktopFileOperator.vala',
     'src' / 'Views' / 'EditView.vala',
     'src' / 'Views' / 'FilesView.vala',
+    'src' / 'AboutWindow.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'MainWindow.vala',
@@ -45,7 +46,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('gtk4'),
-        dependency('libadwaita-1'),
+        dependency('libadwaita-1', version: '>= 1.2.0'),
         dependency('pango'),
         meson.get_compiler('vala').find_library('posix')
     ],
