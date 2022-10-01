@@ -86,13 +86,13 @@ public class MainWindow : Adw.ApplicationWindow {
         ((Gtk.Widget) this).add_controller (event_controller);
 
         // When the desktop file updated, go back to the files list and show the toast "Updated entry."
-        DesktopFileOperator.get_default ().file_updated.connect (() => {
+        edit_view.file_updated.connect (() => {
             show_files_view ();
             overlay.add_toast (updated_toast);
         });
 
         // When the desktop file deleted, clear the edit view, update the files list, and show the toast "Deleted entry."
-        DesktopFileOperator.get_default ().file_deleted.connect (() => {
+        files_view.file_deleted.connect (() => {
             edit_view.hide_all ();
             files_view.update_list ();
             overlay.add_toast (deleted_toast);

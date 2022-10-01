@@ -12,13 +12,6 @@ public class DesktopFileOperator : GLib.Object {
      * A singleton class to handle desktop files in the DesktopFile type.
      */
 
-    /*
-     * These signals are emitted when some desktop file is created/updated or deleted.
-     * We catch this signal in the front end and tell users these changes using the toast.
-     */
-    public signal void file_updated ();
-    public signal void file_deleted ();
-
     // The list of desktop files in the DesktopFile data type.
     public Gee.ArrayList<DesktopFile> files {
         get {
@@ -112,7 +105,7 @@ public class DesktopFileOperator : GLib.Object {
     /*
      * Write the content of `desktop_file@ into the desktop file at `desktop_file.file_name` through KeyFile object.
      */
-    public void write_to_file (DesktopFile desktop_file) {
+    public void write_to_file (DesktopFile desktop_file) throws Error {
         var keyfile = new KeyFile ();
 
         keyfile.set_locale_string (
@@ -198,12 +191,9 @@ public class DesktopFileOperator : GLib.Object {
         try {
             keyfile.save_to_file (path);
         } catch (Error e) {
-            warning ("Could not write to file %s: %s", path, e.message);
+            throw e;
         }
-
-        file_updated ();
     }
-
 
     /*
      * Load the content of the desktop file at `path` and construct new DesktopFile through KeyFile object.
@@ -321,29 +311,36 @@ public class DesktopFileOperator : GLib.Object {
         string unsaved_file_path = Application.settings.get_string ("last-edited-file");
         if (unsaved_file_path != "") {
             // It tells unsaved work exists, so try deleting it and clearing that info
-            delete_from_path (unsaved_file_path);
-            Application.settings.set_string ("last-edited-file", "");
+            try {
+                delete_from_path (unsaved_file_path);
+                Application.settings.set_string ("last-edited-file", "");
+            } catch (Error e) {
+                warning ("Failed to delete the backup: %s", e.message);
+            }
         }
     }
 
     /*
      * Delete the given desktop file from the storage.
      */
-    public void delete_file (DesktopFile desktop_file) {
-        delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX));
-        file_deleted ();
+    public void delete_file (DesktopFile desktop_file) throws Error {
+        try {
+            delete_from_path (Path.build_filename (DESTINATION_PATH, desktop_file.file_name + DESKTOP_SUFFIX));
+        } catch (Error e) {
+            throw e;
+        }
     }
 
     /*
      * Delete the given file from the storage if it really exists.
      */
-    private void delete_from_path (string path) {
+    private void delete_from_path (string path) throws Error {
         var file = File.new_for_path (path);
         if (file.query_exists ()) {
             try {
                 file.delete ();
             } catch (Error e) {
-                warning ("Could not delete file %s: %s", path, e.message);
+                throw e;
             }
         }
     }
