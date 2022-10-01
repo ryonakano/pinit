@@ -61,6 +61,8 @@
           <li>Make sure not to add blank elements in generated desktop files</li>
           <li>Don't overwrite the entire permission of the selected executable files</li>
           <li>Give executable permission for the user only when they don't have it</li>
+          <li>Fix window size cannot be resized on small displays</li>
+          <li>Show error dialogs when saving/deleting failed</li>
           <li>Update translations</li>
         </ul>
       </description>
