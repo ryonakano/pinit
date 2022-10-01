@@ -74,7 +74,7 @@ public class Application : Adw.Application {
 
     // Setup theme things
     private void setup_style () {
-        const Style[] styles = {
+        const Style[] STYLES = {
             { "style-light", Adw.ColorScheme.FORCE_LIGHT },
             { "style-dark", Adw.ColorScheme.FORCE_DARK },
             { "style-system", Adw.ColorScheme.PREFER_LIGHT }
@@ -83,12 +83,12 @@ public class Application : Adw.Application {
         var style_manager = Adw.StyleManager.get_default ();
         style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
 
-        foreach (unowned var style in styles) {
-            var style_light_action = new SimpleAction (style.name, null);
+        foreach (var STYLE in STYLES) {
+            var style_light_action = new SimpleAction (STYLE.name, null);
             style_light_action.activate.connect (() => {
-                set_app_style (style.color_scheme);
+                set_app_style (STYLE.color_scheme);
             });
-            set_accels_for_action ("app." + style.name, {""});
+            set_accels_for_action ("app." + STYLE.name, {""});
             add_action (style_light_action);
         }
     }
