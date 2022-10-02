@@ -6,7 +6,7 @@
 public class AboutWindow : GLib.Object {
     public MainWindow parent { get; construct; }
 
-    private Adw.AboutWindow about_window;
+    private Adw.AboutWindow instance;
 
     private const string[] DEVELOPERS = {
         "Ryo Nakano https://github.com/ryonakano",
@@ -23,7 +23,7 @@ public class AboutWindow : GLib.Object {
     }
 
     construct {
-        about_window = new Adw.AboutWindow () {
+        instance = new Adw.AboutWindow () {
             transient_for = parent,
             modal = true,
             application_icon = Constants.PROJECT_NAME,
@@ -44,8 +44,8 @@ public class AboutWindow : GLib.Object {
     }
 
     public void present () {
-        if (about_window != null) {
-            about_window.present ();
+        if (instance != null) {
+            instance.present ();
         }
     }
 }
