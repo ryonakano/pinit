@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-09-26 16:21+0000\n"
+"PO-Revision-Date: 2022-10-06 18:17+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-main/nl/"
 ">\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:60
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 #: src/Views/EditView.vala:70
 msgid "File Name"
@@ -79,28 +79,26 @@ msgid "App Categories"
 msgstr "Categorieën"
 
 #: src/Views/EditView.vala:183
-#, fuzzy
-#| msgid "Type of the app, multiplly selectable."
 msgid "Type of the app, multiply selectable."
 msgstr "Het soort toepassing (meerdere categorieën mogelijk)."
 
 #: src/Views/EditView.vala:196
 msgid "Startup WM Class"
-msgstr ""
+msgstr "Opstartvensterklasse"
 
 #: src/Views/EditView.vala:201
 msgid ""
 "Associate the app with a window that has this ID. Fill in this if a "
 "different or duplicated icon comes up to the dock when the app launches."
 msgstr ""
+"Koppel de toepassing aan een venster met deze id. Voer een klasse in als er "
+"een onjuist of meerdere pictogrammen op het dock verschijnen."
 
 #: src/Views/EditView.vala:217
 msgid "Run in Terminal"
 msgstr "Uitvoeren in terminalvenster"
 
 #: src/Views/EditView.vala:220
-#, fuzzy
-#| msgid "Check this in if you want to registar a CUI app."
 msgid "Check this in if you want to register a CUI app."
 msgstr "Kruis als je een cli-toepassing wilt uitvoeren."
 
@@ -118,10 +116,8 @@ msgid "Cancel"
 msgstr "Annuleren"
 
 #: src/Views/EditView.vala:314
-#, fuzzy
-#| msgid "PNG, SVG, or XMP files"
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr "PNG-, SVG of XMP-bestand"
+msgstr "ICO-, PNG-, SVG of XMP-bestand"
 
 #: src/Views/EditView.vala:317
 msgid "Select an icon file"
@@ -141,36 +137,27 @@ msgid "Editing “%s”"
 msgstr "‘%s’ bewerken"
 
 #: src/Views/EditView.vala:475
-#, fuzzy, c-format
-#| msgid "Are you sure you want to delete “%s”?"
+#, c-format
 msgid "Could not write to file “%s”"
-msgstr "Weet je zeker dat je ‘%s’ wilt verwijderen?"
+msgstr "Er kan niet worden weggeschreven naar ‘%s’"
 
 #: src/Views/EditView.vala:478 src/Views/FilesView.vala:155
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: src/Views/EditView.vala:494
 msgid "Recommendations for naming"
 msgstr "Tips omtrent namen"
 
 #: src/Views/EditView.vala:500
-#, fuzzy
-#| msgid ""
-#| "Only use alphabets, numbers, and underscores, and none begins with "
-#| "numbers."
 msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
 msgstr ""
-"Gebruik alleen letters, cijfers en onderliggende streepjes, en begin geen "
-"enkele itemnaam met een cijfer."
+"Aanbeveling: gebruik alleen letters, cijfers en onderliggende streepjes, en "
+"begin geen enkele itemnaam met een cijfer."
 
 #: src/Views/EditView.vala:501
-#, fuzzy
-#| msgid ""
-#| "Use at least one period to make sure to be separated into at least two "
-#| "elements."
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
@@ -181,7 +168,7 @@ msgstr "Gebruik minimaal één punt als je twee naamdelen wilt scheiden."
 #: src/Views/EditView.vala:510
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr ""
+msgstr "Voorbeeld: gebruik ‘%s’ voor de 2D-game SuperTux."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
 #: src/Views/EditView.vala:519
@@ -194,9 +181,8 @@ msgid "the file naming specification by freedesktop.org"
 msgstr "de bestandsnaamspecificaties op freedesktop.org"
 
 #: src/Views/FilesView.vala:32
-#, fuzzy
 msgid "Create a new entry"
-msgstr "Maak een nieuw item aan."
+msgstr "Nieuw item aanmaken"
 
 #: src/Views/FilesView.vala:37
 msgid "Light"
@@ -211,15 +197,14 @@ msgid "System"
 msgstr "Systeemthema"
 
 #: src/Views/FilesView.vala:42
-#, fuzzy
 msgid "Style"
-msgstr "Thema:"
+msgstr "Thema"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:47
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "Over %s…"
 
 #: src/Views/FilesView.vala:51
 msgid "Preferences"
@@ -230,11 +215,9 @@ msgid "No valid app entries found"
 msgstr "Geen geldige toepassingen aangetroffen"
 
 #: src/Views/FilesView.vala:78
-#, fuzzy
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
-"Als je nog nooit een item hebt aangemaakt, ga dan terug naar het "
-"welkomstscherm en klik op ‘Nieuw item’."
+"Als je nog nooit een item hebt aangemaakt, klik dan op de plusknop bovenaan."
 
 #: src/Views/FilesView.vala:130
 msgid "Delete…"
@@ -256,7 +239,7 @@ msgstr "Verwijderen"
 #: src/Views/FilesView.vala:152
 #, c-format
 msgid "Could not delete file “%s”"
-msgstr ""
+msgstr "‘%s’ kan niet worden verwijderd"
 
 #: src/CategoryChooser.vala:97
 msgid "Audio & Video"
@@ -309,22 +292,20 @@ msgstr "Hulpmiddelen"
 #: src/AboutWindow.vala:32
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
+msgstr "Maak snelkoppelingen naar je favoriete toepassingen"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
 msgid "translator-credits"
-msgstr ""
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
 #: src/MainWindow.vala:50
-#, fuzzy
 msgid "Updated entry."
-msgstr "Item opslaan"
+msgstr "Het item is bijgewerkt."
 
 #: src/MainWindow.vala:54
-#, fuzzy
 msgid "Deleted entry."
-msgstr "Verwijderen"
+msgstr "Het item is verwijderd."
 
 #~ msgid "Edit…"
 #~ msgstr "Bewerken…"
