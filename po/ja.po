@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-07 22:15+0900\n"
+"POT-Creation-Date: 2022-10-05 21:43+0900\n"
 "PO-Revision-Date: 2022-07-24 08:18+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -18,43 +18,43 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.14-dev\n"
 
-#: src/Views/EditView.vala:58
+#: src/Views/EditView.vala:60
 msgid "Save"
 msgstr "保存"
 
-#: src/Views/EditView.vala:68
+#: src/Views/EditView.vala:70
 msgid "File Name"
 msgstr "ファイル名"
 
-#: src/Views/EditView.vala:73
+#: src/Views/EditView.vala:75
 msgid "Name of the file where these app info is saved."
 msgstr "以下のアプリ情報の保存先となるファイルの前です。"
 
-#: src/Views/EditView.vala:83
+#: src/Views/EditView.vala:85
 msgid "Suffix of the file"
 msgstr "ファイル拡張子"
 
-#: src/Views/EditView.vala:95
+#: src/Views/EditView.vala:97
 msgid "App Name"
 msgstr "アプリ名"
 
-#: src/Views/EditView.vala:99
+#: src/Views/EditView.vala:101
 msgid "Shown in the launcher or Dock."
 msgstr "ランチャーやドックに表示されます。"
 
-#: src/Views/EditView.vala:114
+#: src/Views/EditView.vala:116
 msgid "Comment"
 msgstr "コメント"
 
-#: src/Views/EditView.vala:118
+#: src/Views/EditView.vala:120
 msgid "A tooltip text to describe what the app helps you to do."
 msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
 
-#: src/Views/EditView.vala:133
+#: src/Views/EditView.vala:135
 msgid "Exec File"
 msgstr "実行ファイル"
 
-#: src/Views/EditView.vala:138
+#: src/Views/EditView.vala:140
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
@@ -62,29 +62,29 @@ msgstr ""
 "ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
 "を、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:155
+#: src/Views/EditView.vala:157
 msgid "Icon File"
 msgstr "アイコンファイル"
 
-#: src/Views/EditView.vala:160
+#: src/Views/EditView.vala:162
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
 
-#: src/Views/EditView.vala:177
+#: src/Views/EditView.vala:179
 msgid "App Categories"
 msgstr "アプリのカテゴリー"
 
-#: src/Views/EditView.vala:181
+#: src/Views/EditView.vala:183
 msgid "Type of the app, multiply selectable."
 msgstr "アプリの種類です。複数選択できます。"
 
-#: src/Views/EditView.vala:194
+#: src/Views/EditView.vala:196
 msgid "Startup WM Class"
 msgstr "起動時の WM クラス"
 
-#: src/Views/EditView.vala:199
+#: src/Views/EditView.vala:201
 msgid ""
 "Associate the app with a window that has this ID. Fill in this if a "
 "different or duplicated icon comes up to the dock when the app launches."
@@ -92,53 +92,63 @@ msgstr ""
 "アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つのア"
 "イコンがドックに表示される場合は、この項目を記入してください。"
 
-#: src/Views/EditView.vala:215
+#: src/Views/EditView.vala:217
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
-#: src/Views/EditView.vala:218
+#: src/Views/EditView.vala:220
 msgid "Check this in if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
-#: src/Views/EditView.vala:270
+#: src/Views/EditView.vala:283
 msgid "Select an executable file"
 msgstr "実行ファイルを選択"
 
-#: src/Views/EditView.vala:271 src/Views/EditView.vala:305
+#: src/Views/EditView.vala:284 src/Views/EditView.vala:318
 msgid "Open"
 msgstr "開く"
 
-#: src/Views/EditView.vala:271 src/Views/EditView.vala:305
-#: src/Views/EditView.vala:424
+#: src/Views/EditView.vala:284 src/Views/EditView.vala:318
+#: src/Views/EditView.vala:437 src/Views/FilesView.vala:139
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/EditView.vala:301
+#: src/Views/EditView.vala:314
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO、PNG、SVG、XMP ファイル"
 
-#: src/Views/EditView.vala:304
+#: src/Views/EditView.vala:317
 msgid "Select an icon file"
 msgstr "アイコンファイルを選択"
 
-#: src/Views/EditView.vala:356
+#: src/Views/EditView.vala:369
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/Views/EditView.vala:365
+#: src/Views/EditView.vala:378
 msgid "Editing Entry"
 msgstr "エントリーを編集しています"
 
-#: src/Views/EditView.vala:371
+#: src/Views/EditView.vala:384
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/Views/EditView.vala:462
+#: src/Views/EditView.vala:475
+#, fuzzy, c-format
+#| msgid "Are you sure you want to delete “%s”?"
+msgid "Could not write to file “%s”"
+msgstr "“%s”を削除してもよろしいですか？"
+
+#: src/Views/EditView.vala:478 src/Views/FilesView.vala:155
+msgid "Close"
+msgstr ""
+
+#: src/Views/EditView.vala:494
 msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 
-#: src/Views/EditView.vala:468
+#: src/Views/EditView.vala:500
 msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
@@ -146,7 +156,7 @@ msgstr ""
 "英数字とアンダースコアのみの使用を推奨します。また、最初の文字は数字以外にし"
 "てください。"
 
-#: src/Views/EditView.vala:469
+#: src/Views/EditView.vala:501
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
@@ -154,77 +164,82 @@ msgstr "また、最低でも1回はピリオドを使って、2つ以上の要�
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:478
+#: src/Views/EditView.vala:510
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:487
+#: src/Views/EditView.vala:519
 #, c-format
 msgid "For more info, see %s."
 msgstr "詳細情報は %sを参照してください。"
 
-#: src/Views/EditView.vala:489
+#: src/Views/EditView.vala:521
 msgid "the file naming specification by freedesktop.org"
 msgstr "freedesktop.org が策定するファイル命名仕様"
 
-#: src/Views/FilesView.vala:30
+#: src/Views/FilesView.vala:32
 msgid "Create a new entry"
 msgstr "新しいエントリーを作成"
 
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:37
 msgid "Light"
 msgstr "ライト"
 
-#: src/Views/FilesView.vala:36
+#: src/Views/FilesView.vala:38
 msgid "Dark"
 msgstr "ダーク"
 
-#: src/Views/FilesView.vala:37 src/CategoryChooser.vala:108
+#: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
 msgid "System"
 msgstr "システム"
 
-#: src/Views/FilesView.vala:40
+#: src/Views/FilesView.vala:42
 msgid "Style"
 msgstr "スタイル"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:45
+#: src/Views/FilesView.vala:47
 #, c-format
 msgid "About %s…"
 msgstr "%s について…"
 
-#: src/Views/FilesView.vala:49
+#: src/Views/FilesView.vala:51
 msgid "Preferences"
 msgstr "設定"
 
-#: src/Views/FilesView.vala:73
+#: src/Views/FilesView.vala:77
 msgid "No valid app entries found"
 msgstr "有効なアプリのエントリーが見つかりません"
 
-#: src/Views/FilesView.vala:74
+#: src/Views/FilesView.vala:78
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
 "アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックしてく"
 "ださい。"
 
-#: src/Views/FilesView.vala:135
+#: src/Views/FilesView.vala:130
 msgid "Delete…"
 msgstr "削除…"
 
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:136
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "“%s”を削除してもよろしいですか？"
 
-#: src/Views/FilesView.vala:143
+#: src/Views/FilesView.vala:137
 msgid "This removes the app from the launcher."
 msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
-#: src/Views/FilesView.vala:146
+#: src/Views/FilesView.vala:140
 msgid "Delete"
 msgstr "削除"
+
+#: src/Views/FilesView.vala:152
+#, c-format
+msgid "Could not delete file “%s”"
+msgstr ""
 
 #: src/CategoryChooser.vala:97
 msgid "Audio & Video"
@@ -274,13 +289,13 @@ msgstr "設定"
 msgid "Utility"
 msgstr "ユーティリティー"
 
-#: src/Application.vala:83
+#: src/AboutWindow.vala:32
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr "ポータブルアプリのショートカットをアプリランチャーに作成します"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
-#: src/Application.vala:90
+#: src/AboutWindow.vala:42
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
