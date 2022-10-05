@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-07-24 08:18+0000\n"
+"PO-Revision-Date: 2022-10-06 18:17+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "ja/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: src/Views/EditView.vala:60
 msgid "Save"
@@ -135,14 +135,13 @@ msgid "Editing “%s”"
 msgstr "“%s”を編集しています"
 
 #: src/Views/EditView.vala:475
-#, fuzzy, c-format
-#| msgid "Are you sure you want to delete “%s”?"
+#, c-format
 msgid "Could not write to file “%s”"
-msgstr "“%s”を削除してもよろしいですか？"
+msgstr "ファイル“%s”に書き込めませんでした"
 
 #: src/Views/EditView.vala:478 src/Views/FilesView.vala:155
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: src/Views/EditView.vala:494
 msgid "Recommendations for naming"
@@ -239,7 +238,7 @@ msgstr "削除"
 #: src/Views/FilesView.vala:152
 #, c-format
 msgid "Could not delete file “%s”"
-msgstr ""
+msgstr "ファイル“%s”を削除できませんでした"
 
 #: src/CategoryChooser.vala:97
 msgid "Audio & Video"
