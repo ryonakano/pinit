@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-07 22:16+0900\n"
+"POT-Creation-Date: 2022-10-05 21:43+0900\n"
 "PO-Revision-Date: 2022-08-13 01:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
-"pinit-extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
+"extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,163 +114,172 @@ msgstr "選択した実行可能ファイルのパーミッション全体を書
 
 #: data/pinit.appdata.xml.in:63
 msgid "Give executable permission for the user only when they don't have it"
-msgstr "ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修正"
+msgstr ""
+"ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修正"
 
 #: data/pinit.appdata.xml.in:64
+msgid "Fix window size cannot be resized on small displays"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:65
+msgid "Show error dialogs when saving/deleting failed"
+msgstr ""
+
+#: data/pinit.appdata.xml.in:66
 msgid "Update translations"
 msgstr "翻訳を更新"
 
-#: data/pinit.appdata.xml.in:71
+#: data/pinit.appdata.xml.in:73
 msgid "AppData: Fix release year"
 msgstr "アプリデータ: リリース年を修正"
 
-#: data/pinit.appdata.xml.in:73 data/pinit.appdata.xml.in:87
-#: data/pinit.appdata.xml.in:105 data/pinit.appdata.xml.in:117
-#: data/pinit.appdata.xml.in:130 data/pinit.appdata.xml.in:143
-#: data/pinit.appdata.xml.in:156 data/pinit.appdata.xml.in:171
+#: data/pinit.appdata.xml.in:75 data/pinit.appdata.xml.in:89
+#: data/pinit.appdata.xml.in:107 data/pinit.appdata.xml.in:119
+#: data/pinit.appdata.xml.in:132 data/pinit.appdata.xml.in:145
+#: data/pinit.appdata.xml.in:158 data/pinit.appdata.xml.in:173
 msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
-#: data/pinit.appdata.xml.in:75
+#: data/pinit.appdata.xml.in:77
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr "イタリア語翻訳を更新 (貢献者: @albanobattistella)"
 
-#: data/pinit.appdata.xml.in:82
+#: data/pinit.appdata.xml.in:84
 msgid "Check desktop environment on runtime"
 msgstr "実行時にデスクトップ環境を確認するように修正"
 
-#: data/pinit.appdata.xml.in:83
+#: data/pinit.appdata.xml.in:85
 msgid "Lessen scope of file access"
 msgstr "ファイルアクセス権の見直し"
 
-#: data/pinit.appdata.xml.in:84
+#: data/pinit.appdata.xml.in:86
 msgid "Make window resizable"
 msgstr "ウィンドウサイズを変更可能に修正"
 
-#: data/pinit.appdata.xml.in:85
+#: data/pinit.appdata.xml.in:87
 msgid "EditView: Less strict on file names"
 msgstr "編集画面: ファイル命名規則の寛容化"
 
-#: data/pinit.appdata.xml.in:89
+#: data/pinit.appdata.xml.in:91
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
 
-#: data/pinit.appdata.xml.in:90
+#: data/pinit.appdata.xml.in:92
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "ドイツ語翻訳を追加 (貢献者: @Vistaus)"
 
-#: data/pinit.appdata.xml.in:91 data/pinit.appdata.xml.in:107
-#: data/pinit.appdata.xml.in:120 data/pinit.appdata.xml.in:133
-#: data/pinit.appdata.xml.in:145 data/pinit.appdata.xml.in:158
-#: data/pinit.appdata.xml.in:174
+#: data/pinit.appdata.xml.in:93 data/pinit.appdata.xml.in:109
+#: data/pinit.appdata.xml.in:122 data/pinit.appdata.xml.in:135
+#: data/pinit.appdata.xml.in:147 data/pinit.appdata.xml.in:160
+#: data/pinit.appdata.xml.in:176
 msgid "Update Japanese translation"
 msgstr "日本語翻訳を更新"
 
-#: data/pinit.appdata.xml.in:98
+#: data/pinit.appdata.xml.in:100
 msgid "Fix build error on other distros"
 msgstr "ほかのディストリビューションにおけるビルドエラーを修正"
 
-#: data/pinit.appdata.xml.in:99
+#: data/pinit.appdata.xml.in:101
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr ""
 "ファイル画面: アプリのウィンドウに対して中央にダイアログを表示するように修正"
 
-#: data/pinit.appdata.xml.in:100
+#: data/pinit.appdata.xml.in:102
 msgid "Restore last opened view and its state"
 msgstr "最後に開いた画面とその状態を復元するように修正"
 
-#: data/pinit.appdata.xml.in:101
+#: data/pinit.appdata.xml.in:103
 msgid "Add new style switcher"
 msgstr "新しいスタイルスイッチャーを追加"
 
-#: data/pinit.appdata.xml.in:102
+#: data/pinit.appdata.xml.in:104
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
 "アプリ名が設定されていなくてもタイトルバーに適切なラベルが表示されるように修"
 "正"
 
-#: data/pinit.appdata.xml.in:103
+#: data/pinit.appdata.xml.in:105
 msgid "Readable copies"
 msgstr "画面上のテキストの意味がわかりやすくなるように修正"
 
-#: data/pinit.appdata.xml.in:114
+#: data/pinit.appdata.xml.in:116
 msgid "FilesView: Ellipsize if label texts are too long"
 msgstr "ファイル画面: ラベルのテキストが長すぎる場合は省略するように修正"
 
-#: data/pinit.appdata.xml.in:115
+#: data/pinit.appdata.xml.in:117
 msgid "Tell accepted file formats in FileChooser"
 msgstr "使用可能なファイル形式をファイル選択ダイアログに表示するように修正"
 
-#: data/pinit.appdata.xml.in:119
+#: data/pinit.appdata.xml.in:121
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
 msgstr "ブラジルポルトガル語翻訳を追加 (貢献者: @DanielTolentino)"
 
-#: data/pinit.appdata.xml.in:127
+#: data/pinit.appdata.xml.in:129
 msgid "EditView: Focus on file name entry by default"
 msgstr "編集画面: デフォルトでファイル名の欄にフォーカスするように修正"
 
-#: data/pinit.appdata.xml.in:128
+#: data/pinit.appdata.xml.in:130
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
 "ファイル一覧画面: スクロール可能にし、エントリーが多い場合にウィンドウが大き"
 "くなる不具合を修正"
 
-#: data/pinit.appdata.xml.in:132
+#: data/pinit.appdata.xml.in:134
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "フランス語翻訳を追加 (貢献者: @NathanBnm)"
 
-#: data/pinit.appdata.xml.in:140
+#: data/pinit.appdata.xml.in:142
 msgid "Improved support for other desktop environments"
 msgstr "ほかのデスクトップ環境への対応を改善"
 
-#: data/pinit.appdata.xml.in:141
+#: data/pinit.appdata.xml.in:143
 msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgstr "\"Pin It!\" ボタンをクリックすると実行権限を付与するように修正"
 
-#: data/pinit.appdata.xml.in:152
+#: data/pinit.appdata.xml.in:154
 msgid "Add CategoryChooser"
 msgstr "カテゴリーを選べるウィジェットを追加"
 
-#: data/pinit.appdata.xml.in:153
+#: data/pinit.appdata.xml.in:155
 msgid "Support Alt+Home to show welcome"
 msgstr "Alt+Home キーでようこそ画面を表示できる機能を追加"
 
-#: data/pinit.appdata.xml.in:154
+#: data/pinit.appdata.xml.in:156
 msgid "Allow GPU acceralation by default"
 msgstr "GPU アクセラレーションをデフォルトで有効化"
 
-#: data/pinit.appdata.xml.in:165
+#: data/pinit.appdata.xml.in:167
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr "128px のアプリアイコンを追加 (貢献者: @hanaral)"
 
-#: data/pinit.appdata.xml.in:166
+#: data/pinit.appdata.xml.in:168
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 "スタイルシートの種類によらずウィンドウが角丸になるように修正 (貢献者: "
 "@JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:167
+#: data/pinit.appdata.xml.in:169
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr "マルチタッチジェスチャーに対応 (貢献者: @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:168
+#: data/pinit.appdata.xml.in:170
 msgid "Fix unreadable description text in AppCenter"
 msgstr "AppCenter で表示される説明テキストが見にくい不具合を修正"
 
-#: data/pinit.appdata.xml.in:169
+#: data/pinit.appdata.xml.in:171
 msgid "Save and restore window position"
 msgstr "ウィンドウの位置を保存し復元するように修正"
 
-#: data/pinit.appdata.xml.in:173
+#: data/pinit.appdata.xml.in:175
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr "スペイン語翻訳を追加 (貢献者: @JeysonFlores)"
 
-#: data/pinit.appdata.xml.in:181
+#: data/pinit.appdata.xml.in:183
 msgid "Initial release"
 msgstr "最初のリリース"
 
-#: data/pinit.appdata.xml.in:187
+#: data/pinit.appdata.xml.in:189
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
