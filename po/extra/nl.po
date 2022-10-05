@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-09-26 16:21+0000\n"
+"PO-Revision-Date: 2022-10-06 18:17+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "nl/>\n"
@@ -25,7 +25,7 @@ msgstr "Pin It!"
 #: data/pinit.appdata.xml.in:9 data/pinit.desktop.in:5
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
+msgstr "Maak snelkoppelingen naar je favoriete toepassingen"
 
 #: data/pinit.appdata.xml.in:11
 #, fuzzy
