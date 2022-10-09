@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Sabri Ünal <libreajans@gmail.com>, 2022.
+# Oğuz Ersen <oguz@ersen.moe>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-08-21 10:20+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"PO-Revision-Date: 2022-10-10 17:59+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "tr/>\n"
 "Language: tr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -124,14 +125,15 @@ msgstr "Kullanıcıya yalnızca sahip olmadığında çalıştırılabilir izni 
 #: data/pinit.appdata.xml.in:64
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
+"Küçük ekranlarda pencere boyutunun yeniden boyutlandırılamaması düzeltildi"
 
 #: data/pinit.appdata.xml.in:65
 msgid "Show error dialogs when saving/deleting failed"
-msgstr ""
+msgstr "Kaydetme/silme başarısız olduğunda hata iletişim kutularını göster"
 
 #: data/pinit.appdata.xml.in:66
 msgid "Update translations"
-msgstr "Çeviri güncellemeleri"
+msgstr "Çeviriler güncellendi"
 
 #: data/pinit.appdata.xml.in:73
 msgid "AppData: Fix release year"
@@ -229,7 +231,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:134
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Fransızca çeviri güncellendi (@NathanBnm'ye teşekkürler)"
+msgstr "Fransızca çeviri eklendi (teşekkürler @NathanBnm)"
 
 #: data/pinit.appdata.xml.in:142
 msgid "Improved support for other desktop environments"
