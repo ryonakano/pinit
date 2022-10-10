@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"PO-Revision-Date: 2022-10-10 17:59+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "fr/>\n"
@@ -166,9 +166,8 @@ msgid "EditView: Less strict on file names"
 msgstr ""
 
 #: data/pinit.appdata.xml.in:91
-#, fuzzy
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+msgstr "Ajout des traductions en italien (grâce à @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:92
 msgid "Add Dutch translation (thanks to @Vistaus)"
@@ -195,7 +194,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:103
 msgid "Add new style switcher"
-msgstr ""
+msgstr "Ajout d’un nouveau bouton de sélection du thème"
 
 #: data/pinit.appdata.xml.in:104
 msgid "Correct titlebar label when no app name specified"
