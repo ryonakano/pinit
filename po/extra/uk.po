@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-10-06 18:17+0000\n"
+"PO-Revision-Date: 2022-10-10 17:59+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "pinit-extra/uk/>\n"
@@ -95,7 +95,7 @@ msgstr ""
 
 #: data/pinit.appdata.xml.in:53
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr "Перехід на GTK 4, найновішу версію GTK"
+msgstr "Перехід на GTK 4, останню версію GTK"
 
 #: data/pinit.appdata.xml.in:55
 msgid "Other changes:"
