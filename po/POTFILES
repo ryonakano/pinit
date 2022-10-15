@@ -1,5 +1,5 @@
+src/AboutWindow.vala
+src/CategoryChooser.vala
+src/MainWindow.vala
 src/Views/EditView.vala
 src/Views/FilesView.vala
-src/CategoryChooser.vala
-src/AboutWindow.vala
-src/MainWindow.vala
