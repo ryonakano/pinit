@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-09-03 10:21+0000\n"
+"PO-Revision-Date: 2022-10-17 12:57+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "it/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -126,10 +126,14 @@ msgstr ""
 #: data/pinit.appdata.xml.in:64
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
+"La dimensione della finestra fissa non può essere ridimensionata su schermi "
+"piccoli"
 
 #: data/pinit.appdata.xml.in:65
 msgid "Show error dialogs when saving/deleting failed"
 msgstr ""
+"Mostra le finestre di dialogo di errore quando il salvataggio/l'eliminazione "
+"non è riuscito"
 
 #: data/pinit.appdata.xml.in:66
 msgid "Update translations"
