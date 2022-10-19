@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"PO-Revision-Date: 2022-10-20 18:04+0000\n"
 "Last-Translator: Maite Guix <maite.guix@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/rosp/pinit-main/"
 "ca/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: src/Views/EditView.vala:60
 msgid "Save"
@@ -181,15 +181,15 @@ msgstr ""
 
 #: src/Views/FilesView.vala:37
 msgid "Light"
-msgstr ""
+msgstr "Clar"
 
 #: src/Views/FilesView.vala:38
 msgid "Dark"
-msgstr ""
+msgstr "Fosc"
 
 #: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/Views/FilesView.vala:42
 msgid "Style"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: src/Views/FilesView.vala:51
 msgid "Preferences"
-msgstr ""
+msgstr "Preferències"
 
 #: src/Views/FilesView.vala:77
 msgid "No valid app entries found"
