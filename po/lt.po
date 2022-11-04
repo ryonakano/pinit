@@ -303,7 +303,7 @@ msgstr ""
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
 msgid "translator-credits"
-msgstr "išvertimo-įnašas"
+msgstr "PolPolyLingo"
 
 #: src/MainWindow.vala:50
 msgid "Updated entry."
