@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-05 21:43+0900\n"
-"PO-Revision-Date: 2022-10-10 17:59+0000\n"
+"PO-Revision-Date: 2022-11-17 18:48+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-extra/"
 "tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/pinit.appdata.xml.in:8 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -172,7 +172,7 @@ msgstr "İtalyanca çeviri eklendi (Teşekkürler @albanobattistella)"
 
 #: data/pinit.appdata.xml.in:92
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
+msgstr "Felemenkçe çeviri eklendi (@Vistaus'a teşekkürler)"
 
 #: data/pinit.appdata.xml.in:93 data/pinit.appdata.xml.in:109
 #: data/pinit.appdata.xml.in:122 data/pinit.appdata.xml.in:135
