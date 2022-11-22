@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-22 22:52+0900\n"
-"PO-Revision-Date: 2022-11-21 23:51+0000\n"
+"PO-Revision-Date: 2022-11-23 18:48+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-"
-"metadata/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
+"pinit-metadata/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
-msgstr ""
+msgstr "Bijgewerkt: vertalingen"
 
 #: data/pinit.metainfo.xml.in:97
 msgid "AppData: Fix release year"
@@ -138,7 +138,7 @@ msgstr ""
 #: data/pinit.metainfo.xml.in:160 data/pinit.metainfo.xml.in:174
 #: data/pinit.metainfo.xml.in:188 data/pinit.metainfo.xml.in:204
 msgid "Translation updates:"
-msgstr "Bijgewerkte vertalingen:"
+msgstr "Vertaalupdates:"
 
 #: data/pinit.metainfo.xml.in:101
 msgid "Update Italian translation (thanks to @albanobattistella)"
@@ -163,7 +163,7 @@ msgstr "Minder streng bij bestandsnamen"
 
 #: data/pinit.metainfo.xml.in:116
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
 
 #: data/pinit.metainfo.xml.in:117
 msgid "Add Dutch translation (thanks to @Vistaus)"
@@ -174,7 +174,7 @@ msgstr ""
 #: data/pinit.metainfo.xml.in:176 data/pinit.metainfo.xml.in:190
 #: data/pinit.metainfo.xml.in:207
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Bijgewerkt: Japanse vertaling"
 
 #: data/pinit.metainfo.xml.in:126
 msgid "Fix build error on other distros"
@@ -223,7 +223,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:162
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
 
 #: data/pinit.metainfo.xml.in:171
 msgid "Improved support for other desktop environments"
@@ -271,7 +271,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:215
 msgid "Initial release"
-msgstr "Eerste uitgave"
+msgstr "Eerste versie"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
