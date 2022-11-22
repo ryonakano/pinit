@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"POT-Creation-Date: 2022-11-22 22:52+0900\n"
 "PO-Revision-Date: 2022-10-06 18:17+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-main/nl/"
@@ -17,6 +17,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.1\n"
+
+#: src/AboutWindow.vala:32
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr "Maak snelkoppelingen naar je favoriete toepassingen"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
+
+#: src/CategoryChooser.vala:93
+msgid "Audio & Video"
+msgstr "Audio en video"
+
+#: src/CategoryChooser.vala:94
+msgid "Audio"
+msgstr "Audio"
+
+#: src/CategoryChooser.vala:95
+msgid "Video"
+msgstr "Video"
+
+#: src/CategoryChooser.vala:96
+msgid "Development"
+msgstr "Ontwikkeling"
+
+#: src/CategoryChooser.vala:97
+msgid "Education"
+msgstr "Educatie"
+
+#: src/CategoryChooser.vala:98
+msgid "Game"
+msgstr "Games"
+
+#: src/CategoryChooser.vala:99
+msgid "Graphics"
+msgstr "Grafisch"
+
+#: src/CategoryChooser.vala:100
+msgid "Network"
+msgstr "Netwerk"
+
+#: src/CategoryChooser.vala:101
+msgid "Office"
+msgstr "Kantoor"
+
+#: src/CategoryChooser.vala:102
+msgid "Science"
+msgstr "Wetenschap"
+
+#: src/CategoryChooser.vala:103
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/CategoryChooser.vala:104 src/Views/FilesView.vala:39
+msgid "System"
+msgstr "Systeemthema"
+
+#: src/CategoryChooser.vala:105
+msgid "Utility"
+msgstr "Hulpmiddelen"
+
+#: src/MainWindow.vala:50
+msgid "Updated entry."
+msgstr "Het item is bijgewerkt."
+
+#: src/MainWindow.vala:54
+msgid "Deleted entry."
+msgstr "Het item is verwijderd."
 
 #: src/Views/EditView.vala:60
 msgid "Save"
@@ -192,10 +262,6 @@ msgstr "Licht"
 msgid "Dark"
 msgstr "Donker"
 
-#: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
-msgid "System"
-msgstr "Systeemthema"
-
 #: src/Views/FilesView.vala:42
 msgid "Style"
 msgstr "Thema"
@@ -240,72 +306,6 @@ msgstr "Verwijderen"
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "‘%s’ kan niet worden verwijderd"
-
-#: src/CategoryChooser.vala:97
-msgid "Audio & Video"
-msgstr "Audio en video"
-
-#: src/CategoryChooser.vala:98
-msgid "Audio"
-msgstr "Audio"
-
-#: src/CategoryChooser.vala:99
-msgid "Video"
-msgstr "Video"
-
-#: src/CategoryChooser.vala:100
-msgid "Development"
-msgstr "Ontwikkeling"
-
-#: src/CategoryChooser.vala:101
-msgid "Education"
-msgstr "Educatie"
-
-#: src/CategoryChooser.vala:102
-msgid "Game"
-msgstr "Games"
-
-#: src/CategoryChooser.vala:103
-msgid "Graphics"
-msgstr "Grafisch"
-
-#: src/CategoryChooser.vala:104
-msgid "Network"
-msgstr "Netwerk"
-
-#: src/CategoryChooser.vala:105
-msgid "Office"
-msgstr "Kantoor"
-
-#: src/CategoryChooser.vala:106
-msgid "Science"
-msgstr "Wetenschap"
-
-#: src/CategoryChooser.vala:107
-msgid "Settings"
-msgstr "Instellingen"
-
-#: src/CategoryChooser.vala:109
-msgid "Utility"
-msgstr "Hulpmiddelen"
-
-#: src/AboutWindow.vala:32
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
-msgstr "Maak snelkoppelingen naar je favoriete toepassingen"
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr "Heimen Stoffels <vistausss@fastmail.com>"
-
-#: src/MainWindow.vala:50
-msgid "Updated entry."
-msgstr "Het item is bijgewerkt."
-
-#: src/MainWindow.vala:54
-msgid "Deleted entry."
-msgstr "Het item is verwijderd."
 
 #~ msgid "Edit…"
 #~ msgstr "Bewerken…"
