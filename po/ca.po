@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"POT-Creation-Date: 2022-11-22 22:52+0900\n"
 "PO-Revision-Date: 2022-10-20 18:04+0000\n"
 "Last-Translator: Maite Guix <maite.guix@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/rosp/pinit-main/"
@@ -17,6 +17,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.2-dev\n"
+
+#: src/AboutWindow.vala:32
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr ""
+
+#: src/CategoryChooser.vala:93
+msgid "Audio & Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:94
+msgid "Audio"
+msgstr ""
+
+#: src/CategoryChooser.vala:95
+msgid "Video"
+msgstr ""
+
+#: src/CategoryChooser.vala:96
+msgid "Development"
+msgstr ""
+
+#: src/CategoryChooser.vala:97
+msgid "Education"
+msgstr ""
+
+#: src/CategoryChooser.vala:98
+msgid "Game"
+msgstr ""
+
+#: src/CategoryChooser.vala:99
+msgid "Graphics"
+msgstr ""
+
+#: src/CategoryChooser.vala:100
+msgid "Network"
+msgstr ""
+
+#: src/CategoryChooser.vala:101
+msgid "Office"
+msgstr ""
+
+#: src/CategoryChooser.vala:102
+msgid "Science"
+msgstr ""
+
+#: src/CategoryChooser.vala:103
+msgid "Settings"
+msgstr ""
+
+#: src/CategoryChooser.vala:104 src/Views/FilesView.vala:39
+msgid "System"
+msgstr "Sistema"
+
+#: src/CategoryChooser.vala:105
+msgid "Utility"
+msgstr ""
+
+#: src/MainWindow.vala:50
+msgid "Updated entry."
+msgstr ""
+
+#: src/MainWindow.vala:54
+msgid "Deleted entry."
+msgstr ""
 
 #: src/Views/EditView.vala:60
 msgid "Save"
@@ -187,10 +257,6 @@ msgstr "Clar"
 msgid "Dark"
 msgstr "Fosc"
 
-#: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
-msgid "System"
-msgstr "Sistema"
-
 #: src/Views/FilesView.vala:42
 msgid "Style"
 msgstr ""
@@ -233,70 +299,4 @@ msgstr ""
 #: src/Views/FilesView.vala:152
 #, c-format
 msgid "Could not delete file “%s”"
-msgstr ""
-
-#: src/CategoryChooser.vala:97
-msgid "Audio & Video"
-msgstr ""
-
-#: src/CategoryChooser.vala:98
-msgid "Audio"
-msgstr ""
-
-#: src/CategoryChooser.vala:99
-msgid "Video"
-msgstr ""
-
-#: src/CategoryChooser.vala:100
-msgid "Development"
-msgstr ""
-
-#: src/CategoryChooser.vala:101
-msgid "Education"
-msgstr ""
-
-#: src/CategoryChooser.vala:102
-msgid "Game"
-msgstr ""
-
-#: src/CategoryChooser.vala:103
-msgid "Graphics"
-msgstr ""
-
-#: src/CategoryChooser.vala:104
-msgid "Network"
-msgstr ""
-
-#: src/CategoryChooser.vala:105
-msgid "Office"
-msgstr ""
-
-#: src/CategoryChooser.vala:106
-msgid "Science"
-msgstr ""
-
-#: src/CategoryChooser.vala:107
-msgid "Settings"
-msgstr ""
-
-#: src/CategoryChooser.vala:109
-msgid "Utility"
-msgstr ""
-
-#: src/AboutWindow.vala:32
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr ""
-
-#: src/MainWindow.vala:50
-msgid "Updated entry."
-msgstr ""
-
-#: src/MainWindow.vala:54
-msgid "Deleted entry."
 msgstr ""

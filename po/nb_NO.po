@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"POT-Creation-Date: 2022-11-22 22:52+0900\n"
 "PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -17,6 +17,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13-dev\n"
+
+#: src/AboutWindow.vala:32
+#, fuzzy
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+"Opprett snarveien til dine flyttbare favorittprogrammer i oppstarteren din"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr "Allan Nordhøy, <epost@anotheragency.no>"
+
+#: src/CategoryChooser.vala:93
+msgid "Audio & Video"
+msgstr "Lyd og video"
+
+#: src/CategoryChooser.vala:94
+msgid "Audio"
+msgstr "Lyd"
+
+#: src/CategoryChooser.vala:95
+msgid "Video"
+msgstr "Video"
+
+#: src/CategoryChooser.vala:96
+msgid "Development"
+msgstr "Utvikling"
+
+#: src/CategoryChooser.vala:97
+msgid "Education"
+msgstr "Utdanning"
+
+#: src/CategoryChooser.vala:98
+msgid "Game"
+msgstr "Spill"
+
+#: src/CategoryChooser.vala:99
+msgid "Graphics"
+msgstr "Grafikk"
+
+#: src/CategoryChooser.vala:100
+msgid "Network"
+msgstr "Nettverk"
+
+#: src/CategoryChooser.vala:101
+msgid "Office"
+msgstr "Kontor"
+
+#: src/CategoryChooser.vala:102
+msgid "Science"
+msgstr "Vitenskap"
+
+#: src/CategoryChooser.vala:103
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: src/CategoryChooser.vala:104 src/Views/FilesView.vala:39
+msgid "System"
+msgstr "Systemet"
+
+#: src/CategoryChooser.vala:105
+msgid "Utility"
+msgstr "Verktøy"
+
+#: src/MainWindow.vala:50
+#, fuzzy
+msgid "Updated entry."
+msgstr "Oppføring oppdatert."
+
+#: src/MainWindow.vala:54
+#, fuzzy
+msgid "Deleted entry."
+msgstr "Oppføring slettet."
 
 #: src/Views/EditView.vala:60
 msgid "Save"
@@ -196,10 +270,6 @@ msgstr "Lys"
 msgid "Dark"
 msgstr "Mørk"
 
-#: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
-msgid "System"
-msgstr "Systemet"
-
 #: src/Views/FilesView.vala:42
 msgid "Style"
 msgstr "Stil"
@@ -244,73 +314,3 @@ msgstr "Slett"
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr ""
-
-#: src/CategoryChooser.vala:97
-msgid "Audio & Video"
-msgstr "Lyd og video"
-
-#: src/CategoryChooser.vala:98
-msgid "Audio"
-msgstr "Lyd"
-
-#: src/CategoryChooser.vala:99
-msgid "Video"
-msgstr "Video"
-
-#: src/CategoryChooser.vala:100
-msgid "Development"
-msgstr "Utvikling"
-
-#: src/CategoryChooser.vala:101
-msgid "Education"
-msgstr "Utdanning"
-
-#: src/CategoryChooser.vala:102
-msgid "Game"
-msgstr "Spill"
-
-#: src/CategoryChooser.vala:103
-msgid "Graphics"
-msgstr "Grafikk"
-
-#: src/CategoryChooser.vala:104
-msgid "Network"
-msgstr "Nettverk"
-
-#: src/CategoryChooser.vala:105
-msgid "Office"
-msgstr "Kontor"
-
-#: src/CategoryChooser.vala:106
-msgid "Science"
-msgstr "Vitenskap"
-
-#: src/CategoryChooser.vala:107
-msgid "Settings"
-msgstr "Innstillinger"
-
-#: src/CategoryChooser.vala:109
-msgid "Utility"
-msgstr "Verktøy"
-
-#: src/AboutWindow.vala:32
-#, fuzzy
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
-msgstr ""
-"Opprett snarveien til dine flyttbare favorittprogrammer i oppstarteren din"
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr "Allan Nordhøy, <epost@anotheragency.no>"
-
-#: src/MainWindow.vala:50
-#, fuzzy
-msgid "Updated entry."
-msgstr "Oppføring oppdatert."
-
-#: src/MainWindow.vala:54
-#, fuzzy
-msgid "Deleted entry."
-msgstr "Oppføring slettet."
