@@ -312,7 +312,7 @@ public class DesktopFileOperator : GLib.Object {
         try {
             ExternalAppLauncher.open_default_handler (Path.build_filename (DESTINATION_PATH, file_name + DESKTOP_SUFFIX));
         } catch (Error e) {
-            throw e; 
+            throw e;
         }
     }
 }
