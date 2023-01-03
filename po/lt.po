@@ -1,0 +1,314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"PO-Revision-Date: 2022-11-01 20:34+0200\n"
+"Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n"
+"%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: src/Views/EditView.vala:60
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: src/Views/EditView.vala:70
+msgid "File Name"
+msgstr "Rinkmenos pavadinimas"
+
+#: src/Views/EditView.vala:75
+msgid "Name of the file where these app info is saved."
+msgstr "Rinkmenos pavadinimas, kurioje kaupiama informacija apie programą."
+
+#: src/Views/EditView.vala:85
+msgid "Suffix of the file"
+msgstr "Rinkmenos pavadinimo praplėtinys"
+
+#: src/Views/EditView.vala:97
+msgid "App Name"
+msgstr "Programos pavadinimas"
+
+#: src/Views/EditView.vala:101
+msgid "Shown in the launcher or Dock."
+msgstr "Pateikti paleidiklyje arba Prikabiklyje."
+
+#: src/Views/EditView.vala:116
+msgid "Comment"
+msgstr "Komentaras"
+
+#: src/Views/EditView.vala:120
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr ""
+"Instrumento veikimą aprašantis įrašas nusakantis tai kokią tau pagalbą "
+"suteikia programa."
+
+#: src/Views/EditView.vala:135
+msgid "Exec File"
+msgstr "Vykdomoji rinkmena"
+
+#: src/Views/EditView.vala:140
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Paleidiklyje paspaudus ant programėlės įvesties yra įgyvendinama komanda/"
+"paleidžiama programa. Nustatyti visą kelią arba pateikti šios programėlės "
+"alternatyvų vardą."
+
+#: src/Views/EditView.vala:157
+msgid "Icon File"
+msgstr "Rinkmenos ikonėlė"
+
+#: src/Views/EditView.vala:162
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"Ikonėlė naudojama kaip oficialus programos logotipas. Nustatyti visą kelią "
+"arba pateikti šios ikonėlės alternatyvų vardą."
+
+#: src/Views/EditView.vala:179
+msgid "App Categories"
+msgstr "Programos kategorija"
+
+#: src/Views/EditView.vala:183
+msgid "Type of the app, multiply selectable."
+msgstr "Programos išskirtiniai bruožai, keleta pasirenkamų variantų."
+
+#: src/Views/EditView.vala:196
+msgid "Startup WM Class"
+msgstr "WM klasė paleidimo metu"
+
+#: src/Views/EditView.vala:201
+msgid ""
+"Associate the app with a window that has this ID. Fill in this if a "
+"different or duplicated icon comes up to the dock when the app launches."
+msgstr ""
+"Susiekite programėlę su šį ID naudojančiu langeliu. Užpildykite tai, jei "
+"skirtinga ar kopijos ikonėlė prisikabina programėlės paleidimo metu."
+
+#: src/Views/EditView.vala:217
+msgid "Run in Terminal"
+msgstr "Paleidžiama terminalinėje eilutėje"
+
+#: src/Views/EditView.vala:220
+msgid "Check this in if you want to register a CUI app."
+msgstr "Pasirinkti šią parinktį pageidaujant CUI programos registracijos."
+
+#: src/Views/EditView.vala:283
+msgid "Select an executable file"
+msgstr "Pasirinkti vykdomąją rinkmeną"
+
+#: src/Views/EditView.vala:284 src/Views/EditView.vala:318
+msgid "Open"
+msgstr "Atidaryti"
+
+#: src/Views/EditView.vala:284 src/Views/EditView.vala:318
+#: src/Views/EditView.vala:437 src/Views/FilesView.vala:139
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: src/Views/EditView.vala:314
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO, PNG, SVG, arba XMP rinkmenos"
+
+#: src/Views/EditView.vala:317
+msgid "Select an icon file"
+msgstr "Pasirinkti ikonėlės rinkmeną"
+
+#: src/Views/EditView.vala:369
+msgid "New Entry"
+msgstr "Nauja įvestis"
+
+#: src/Views/EditView.vala:378
+msgid "Editing Entry"
+msgstr "Keisti įvestį"
+
+#: src/Views/EditView.vala:384
+#, c-format
+msgid "Editing “%s”"
+msgstr "Keisti “%s”"
+
+#: src/Views/EditView.vala:475
+#, c-format
+msgid "Could not write to file “%s”"
+msgstr "Neišeina įrašyti į rinkmeną “%s”"
+
+#: src/Views/EditView.vala:478 src/Views/FilesView.vala:155
+msgid "Close"
+msgstr "Uždaryti"
+
+#: src/Views/EditView.vala:494
+msgid "Recommendations for naming"
+msgstr "Įvardinimo rekomendacijos"
+
+#: src/Views/EditView.vala:500
+msgid ""
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
+msgstr ""
+"Yra patartina naudoti tik raidynus, skaičius, ir pabraukimo brūkšnius, ir "
+"nei vienas nėra pradedamas skaičiumi."
+
+#: src/Views/EditView.vala:501
+msgid ""
+"Also, use at least one period to make sure to be separated into at least two "
+"elements."
+msgstr ""
+"Taip pat, naudok bent vieną tašką, kad būtų padalinta bent į du elementus."
+
+#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
+#. the desktop file name of SuperTux.
+#: src/Views/EditView.vala:510
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr "Pavyzdžiui, tau reikia naudoti \"%s\" 2D žaidimui, \"SuperTux\"."
+
+#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
+#: src/Views/EditView.vala:519
+#, c-format
+msgid "For more info, see %s."
+msgstr "Daugiau, žiū. %s."
+
+#: src/Views/EditView.vala:521
+msgid "the file naming specification by freedesktop.org"
+msgstr "rinkmenos užvadinimo specifikacija pagal freedesktop.org"
+
+#: src/Views/FilesView.vala:32
+msgid "Create a new entry"
+msgstr "Kurti naują įvestį"
+
+#: src/Views/FilesView.vala:37
+msgid "Light"
+msgstr "Šviesus"
+
+#: src/Views/FilesView.vala:38
+msgid "Dark"
+msgstr "Tamsus"
+
+#: src/Views/FilesView.vala:39 src/CategoryChooser.vala:108
+msgid "System"
+msgstr "Sistema"
+
+#: src/Views/FilesView.vala:42
+msgid "Style"
+msgstr "Stilius"
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/Views/FilesView.vala:47
+#, c-format
+msgid "About %s…"
+msgstr "Apie %s…"
+
+#: src/Views/FilesView.vala:51
+msgid "Preferences"
+msgstr "Nustatymai"
+
+#: src/Views/FilesView.vala:77
+msgid "No valid app entries found"
+msgstr "Nebuvo rasta tinkamos programėlės įvesties"
+
+#: src/Views/FilesView.vala:78
+msgid "If you've never created one, click the + button on the top."
+msgstr "Jeigu nemėginai įgyvendinti spausk Plius mygtuką viršuje."
+
+#: src/Views/FilesView.vala:130
+msgid "Delete…"
+msgstr "Ištrinti... ."
+
+#: src/Views/FilesView.vala:136
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "Ar esi tikras, kad nori ištrinti “%s”?"
+
+#: src/Views/FilesView.vala:137
+msgid "This removes the app from the launcher."
+msgstr "Tai pašalina programėlę iš paleidiklio."
+
+#: src/Views/FilesView.vala:140
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: src/Views/FilesView.vala:152
+#, c-format
+msgid "Could not delete file “%s”"
+msgstr "Neišeina ištrinti rinkmenos “%s”"
+
+#: src/CategoryChooser.vala:97
+msgid "Audio & Video"
+msgstr "Audiovizualinių įrašų programa"
+
+#: src/CategoryChooser.vala:98
+msgid "Audio"
+msgstr "Audio įrašų programa"
+
+#: src/CategoryChooser.vala:99
+msgid "Video"
+msgstr "Vaizdo įrašų programa"
+
+#: src/CategoryChooser.vala:100
+msgid "Development"
+msgstr "Kūrėjo ir plėtros programa"
+
+#: src/CategoryChooser.vala:101
+msgid "Education"
+msgstr "Programa mokinimuisi"
+
+#: src/CategoryChooser.vala:102
+msgid "Game"
+msgstr "Žaidybinė programa"
+
+#: src/CategoryChooser.vala:103
+msgid "Graphics"
+msgstr "Grafikos programa"
+
+#: src/CategoryChooser.vala:104
+msgid "Network"
+msgstr "Ryšių ir tinklo programa"
+
+#: src/CategoryChooser.vala:105
+msgid "Office"
+msgstr "Biuro programa"
+
+#: src/CategoryChooser.vala:106
+msgid "Science"
+msgstr "Mokslinių tyrimų programa"
+
+#: src/CategoryChooser.vala:107
+msgid "Settings"
+msgstr "Nustatymų programa"
+
+#: src/CategoryChooser.vala:109
+msgid "Utility"
+msgstr "Paslaugų programa"
+
+#: src/AboutWindow.vala:32
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+"Sukurti po greitąją nuorodą mėgstamiausioms perkeliamoms programėlėms jūsų "
+"programų paleidiklyje"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr "PolPolyLingo"
+
+#: src/MainWindow.vala:50
+msgid "Updated entry."
+msgstr "Atnaujinta įvestis."
+
+#: src/MainWindow.vala:54
+msgid "Deleted entry."
+msgstr "Ištrinta įvestis."
