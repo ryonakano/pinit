@@ -36,8 +36,6 @@ jobs:
           bundle: pinit.flatpak
           manifest-path: com.github.ryonakano.pinit.yml
           run-tests: true
-          repository-name: flathub
-          repository-url: https://flathub.org/repo/flathub.flatpakrepo
           cache-key: "flatpak-builder-${{ github.sha }}"
           arch: ${{ matrix.arch }}
 
