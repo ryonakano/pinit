@@ -1,4 +1,5 @@
 src/AboutWindow.vala
+src/Backend/ExternalAppLauncher.vala
 src/CategoryChooser.vala
 src/MainWindow.vala
 src/Views/EditView.vala

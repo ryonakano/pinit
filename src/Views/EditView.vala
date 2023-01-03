@@ -320,10 +320,22 @@ public class EditView : Gtk.Box {
 
         advanced_button.clicked.connect (() => {
             try {
-                // TODO: Open the current desktop file
-//                GLib.AppInfo.launch_default_for_uri ("file://", null);
+                DesktopFileOperator.get_default ().open_external (file_name_entry.text);
             } catch (Error e) {
-                warning (e.message);
+                var error_dialog = new Adw.MessageDialog (
+                    window,
+                    _("Could not open with external app"),
+                    e.message
+                );
+                error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+                error_dialog.default_response = DialogResponse.CLOSE;
+                error_dialog.close_response = DialogResponse.CLOSE;
+                error_dialog.response.connect ((response_id) => {
+                    if (response_id == DialogResponse.CLOSE) {
+                        error_dialog.destroy ();
+                    }
+                });
+                error_dialog.present ();
             }
         });
 

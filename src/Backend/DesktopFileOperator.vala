@@ -307,4 +307,12 @@ public class DesktopFileOperator : GLib.Object {
             }
         }
     }
+
+    public void open_external (string file_name) throws Error {
+        try {
+            ExternalAppLauncher.open_default_handler (Path.build_filename (DESTINATION_PATH, file_name + DESKTOP_SUFFIX));
+        } catch (Error e) {
+            throw e; 
+        }
+    }
 }
