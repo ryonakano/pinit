@@ -1,22 +1,22 @@
 # Japanese translations for extra package.
 # Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-03 17:20+0900\n"
-"PO-Revision-Date: 2022-10-06 18:17+0000\n"
+"PO-Revision-Date: 2023-01-03 08:26+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
-"extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"pinit-metadata/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/pinit.metainfo.xml.in:9 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -106,7 +106,7 @@ msgstr "アプリのアイコンとして \".ico\" ファイルを指定可能�
 
 #: data/pinit.metainfo.xml.in:83
 msgid "Support opening in a text editor"
-msgstr ""
+msgstr "テキストエディターでの編集に対応"
 
 #: data/pinit.metainfo.xml.in:84
 msgid "Fix window size cannot be resized on small displays"
