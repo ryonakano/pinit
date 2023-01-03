@@ -30,6 +30,7 @@ config_file = configure_file(
 sources = files(
     'src' / 'Backend' / 'DesktopFile.vala',
     'src' / 'Backend' / 'DesktopFileOperator.vala',
+    'src' / 'Backend' / 'ExternalAppLauncher.vala',
     'src' / 'Views' / 'EditView.vala',
     'src' / 'Views' / 'FilesView.vala',
     'src' / 'AboutWindow.vala',
@@ -46,6 +47,7 @@ executable(
     sources,
     dependencies: [
         dependency('gee-0.8'),
+        dependency('gio-unix-2.0'),
         dependency('gtk4'),
         dependency('libadwaita-1', version: '>= 1.2.0'),
         dependency('pango'),
