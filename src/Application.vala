@@ -47,12 +47,6 @@ public class Application : Adw.Application {
 
         setup_style ();
 
-        // elementary prefers AppData for showcasing the app info, so don't construct useless "About" window on Pantheon
-        if (IS_ON_PANTHEON) {
-            return;
-        }
-
-        // Setup "About" window (only on non-Pantheon desktop environment)
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => {
             var about_window = new AboutWindow (main_window);

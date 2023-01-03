@@ -1,9 +1,9 @@
 # Pin It!
 Create the shortcut to portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
 
-![Files view in the light mode](data/screenshots/pantheon/screenshot-files-view-light.png)
+![Files view in the light mode](data/screenshots/gnome/screenshot-files-view-light.png)
 
-![Edit view in the light mode](data/screenshots/pantheon/screenshot-edit-view-light.png)
+![Edit view in the light mode](data/screenshots/gnome/screenshot-edit-view-light.png)
 
 Other features include:
 
@@ -16,13 +16,13 @@ The original idea of the app is inspired from https://github.com/alexkdeveloper/
 
 ## Installation
 ### For Users
-On elementary OS? Click the button to get Pin It! on AppCenter:
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pinit)
-
-You can also download the app from Flathub, in case you're using another distribution. This version is tweaked to work well and look good on other desktop environment.
+You can download the app from Flathub, which should make this app available for all Linux distribution:
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/details/com.github.ryonakano.pinit)
+
+We originally targeted this app for elementary OS and also released it on Flathub after some time, but **we decided to publish the app only on Flathub since version `2.0.0`. We no longer publish new features or bug fixes to the elementary-curated version of the app.**
+
+This does not mean the app no longer available on elementary OS. You can simply switch to the Flathub version of the app; please uninstall the current installation and then re-install the app from Flathub.
 
 ### For Developers
 You'll need the following dependencies to build:
@@ -49,6 +49,6 @@ We accept translations of this project through [Weblate](https://weblate.org/). 
 
 Click the following graphs to get started:
 
-| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
+| Main: Texts in the app itself | Metadata: Texts in the desktop entry and the software center |
 | --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-extra) |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-metadata/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-metadata) |
