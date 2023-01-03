@@ -194,7 +194,7 @@ public class EditView : Gtk.Box {
             margin_bottom = 6
         };
         advanced_desc_label.get_style_context ().add_class ("dim-label");
-        var advanced_button = new Gtk.Button.with_label (_("Open with the text editor")) {
+        var advanced_button = new Gtk.Button.with_label (_("Open with…")) {
             halign = Gtk.Align.START
         };
         var advanced_grid = new Gtk.Grid () {
