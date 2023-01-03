@@ -31,12 +31,14 @@ public class ExternalAppLauncher : Object {
         return desktop_portal;
     }
 
-    public static void open_default_handler (string filename) throws Error {
+    public static void open_default_handler (string path) throws Error {
         // Gtk.show_uri_on_window does not seem to fully work in a Flatpak environment
         // so instead we directly call the freedesktop OpenURI DBus interface instead.
-        int fd = Posix.open (filename, Posix.O_RDONLY);
+        int fd = Posix.open (path, Posix.O_RDONLY);
         if (fd == -1) {
-            throw new FileError.NOENT (_("Cannot open %s: %s").printf (filename, Posix.strerror (Posix.ENOENT)));
+            ///TRANSLATORS: The first "%s" represents path to the file that just tried to open.
+            ///The second "%s" represents the detailed error message.
+            throw new FileError.NOENT (_("Cannot open %s: %s").printf (path, Posix.strerror (Posix.ENOENT)));
         }
 
         try {
