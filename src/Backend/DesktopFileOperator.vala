@@ -139,7 +139,33 @@ public class DesktopFileOperator : GLib.Object {
         }
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
+
+        if (desktop_file.startup_wm_class != "") {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
+        } else {
+            bool has_startup_wm_class_key = false;
+            try {
+                has_startup_wm_class_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            } catch (KeyFileError e) {
+                warning ("Failed to check if the key \"StartupWMClass\" exists: %s", e.message);
+            }
+
+            /*
+             * Section "StartupWMClass" is not required.
+             * Remove the key when it exists and the corresponding entry has no value.
+             */
+            if (has_startup_wm_class_key) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+                } catch (KeyFileError e) {
+                    warning ("Failed to remove the blank key \"StartupWMClass\": %s", e.message);
+                }
+            }
+        }
+
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
+
         keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
         /*
@@ -175,6 +201,7 @@ public class DesktopFileOperator : GLib.Object {
         string exec_file = "";
         string icon_file = "";
         string categories = "";
+        string startup_wm_class = "";
         bool is_cli = false;
         bool is_backup = false;
 
@@ -198,6 +225,11 @@ public class DesktopFileOperator : GLib.Object {
             }
 
             categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+
+            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
+                startup_wm_class = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            }
+
             is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
 
             is_backup = UNSAVED_FILE_PATH in path;
@@ -216,6 +248,7 @@ public class DesktopFileOperator : GLib.Object {
             exec_file,
             icon_file,
             categories,
+            startup_wm_class,
             is_cli,
             is_backup
         );
