@@ -184,10 +184,22 @@ public class EditView : Gtk.Box {
         categories_grid.attach (categories_desc_label, 0, 1, 1, 1);
         categories_grid.attach (category_chooser, 0, 2, 1, 1);
 
+        var advanced_label = new Gtk.Label (_("Advanced configuration")) {
+            halign = Gtk.Align.START
+        };
+        advanced_label.get_style_context ().add_class ("heading");
+        var advanced_desc_label = new Gtk.Label (
+            _("You can create an app entry by filling the sections above in most cases. You can use the following section in case they don't work.")
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 12
+        };
+        advanced_desc_label.get_style_context ().add_class ("dim-label");
+
         var startup_wm_class_label = new Gtk.Label (_("Startup WM Class")) {
             halign = Gtk.Align.START
         };
-        startup_wm_class_label.get_style_context ().add_class ("heading");
+        startup_wm_class_label.get_style_context ().add_class ("caption-heading");
         var startup_wm_class_desc_label = new Gtk.Label (
             _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon comes up to the dock when the app launches.")
         ) {
@@ -196,44 +208,53 @@ public class EditView : Gtk.Box {
         };
         startup_wm_class_desc_label.get_style_context ().add_class ("dim-label");
         startup_wm_class_entry = new Gtk.Entry () {
-            hexpand = true
-        };
-        var startup_wm_class_grid = new Gtk.Grid () {
+            hexpand = true,
             margin_bottom = 12
         };
-        startup_wm_class_grid.attach (startup_wm_class_label, 0, 0, 1, 1);
-        startup_wm_class_grid.attach (startup_wm_class_desc_label, 0, 1, 1, 1);
-        startup_wm_class_grid.attach (startup_wm_class_entry, 0, 2, 1, 1);
 
-        var advanced_label = new Gtk.Label (_("Advanced configuration")) {
+        var terminal_label = new Gtk.Label (_("Run in Terminal")) {
             halign = Gtk.Align.START
         };
-        advanced_label.get_style_context ().add_class ("heading");
-        var advanced_desc_label = new Gtk.Label (
-            _("You can create an app entry by filling the sections above in most cases. In case it doesn't work, however, you can edit its desktop file using your text editor from the button below.")
-        ) {
-            halign = Gtk.Align.START,
-            margin_bottom = 6
-        };
-        advanced_desc_label.get_style_context ().add_class ("dim-label");
-        var advanced_button = new Gtk.Button.with_label (_("Open in text editor")) {
-            halign = Gtk.Align.START
-        };
-        var advanced_grid = new Gtk.Grid () {
-            margin_bottom = 12
-        };
-        advanced_grid.attach (advanced_label, 0, 0, 1, 1);
-        advanced_grid.attach (advanced_desc_label, 0, 1, 1, 1);
-        advanced_grid.attach (advanced_button, 0, 2, 1, 1);
-
-        terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
-            margin_bottom = 6
-        };
+        terminal_label.get_style_context ().add_class ("caption-heading");
         var terminal_desc_label = new Gtk.Label (_("Check this in if you want to register a CUI app.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
         terminal_desc_label.get_style_context ().add_class ("dim-label");
+        terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
+            margin_bottom = 12
+        };
+
+        var open_text_editor_label = new Gtk.Label (_("Open in text editor")) {
+            halign = Gtk.Align.START
+        };
+        open_text_editor_label.get_style_context ().add_class ("caption-heading");
+        var open_text_editor_desc_label = new Gtk.Label (
+            _("You can also edit more options by opening in a text editor.")
+        ) {
+            halign = Gtk.Align.START,
+            margin_bottom = 6
+        };
+        open_text_editor_desc_label.get_style_context ().add_class ("dim-label");
+        var open_text_editor_button = new Gtk.Button.with_label (_("Open in text editor")) {
+            halign = Gtk.Align.START,
+            margin_bottom = 12
+        };
+
+        var advanced_grid = new Gtk.Grid () {
+            margin_bottom = 24
+        };
+        advanced_grid.attach (advanced_label, 0, 0, 1, 1);
+        advanced_grid.attach (advanced_desc_label, 0, 1, 1, 1);
+        advanced_grid.attach (startup_wm_class_label, 0, 2, 1, 1);
+        advanced_grid.attach (startup_wm_class_desc_label, 0, 3, 1, 1);
+        advanced_grid.attach (startup_wm_class_entry, 0, 4, 1, 1);
+        advanced_grid.attach (terminal_label, 0, 5, 1, 1);
+        advanced_grid.attach (terminal_desc_label, 0, 6, 1, 1);
+        advanced_grid.attach (terminal_checkbox, 0, 7, 1, 1);
+        advanced_grid.attach (open_text_editor_label, 0, 8, 1, 1);
+        advanced_grid.attach (open_text_editor_desc_label, 0, 9, 1, 1);
+        advanced_grid.attach (open_text_editor_button, 0, 10, 1, 1);
 
         var edit_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
             margin_top = 12,
@@ -247,10 +268,7 @@ public class EditView : Gtk.Box {
         edit_box.append (exec_grid);
         edit_box.append (icon_grid);
         edit_box.append (categories_grid);
-        edit_box.append (startup_wm_class_grid);
         edit_box.append (advanced_grid);
-        edit_box.append (terminal_checkbox);
-        edit_box.append (terminal_desc_label);
 
         // Pack into a scrolled window for small height display
         var edit_page = new Gtk.ScrolledWindow () {
@@ -341,7 +359,7 @@ public class EditView : Gtk.Box {
             filechooser.show ();
         });
 
-        advanced_button.clicked.connect (() => {
+        open_text_editor_button.clicked.connect (() => {
             try {
                 DesktopFileOperator.get_default ().open_external (file_name_entry.text);
             } catch (Error e) {
