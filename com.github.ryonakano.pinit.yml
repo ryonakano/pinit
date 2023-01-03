@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.pinit
-runtime: io.elementary.Platform
-runtime-version: '7.1'
+runtime: org.gnome.Platform
+runtime-version: '43'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.pinit
 finish-args:
