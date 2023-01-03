@@ -34,7 +34,7 @@ public class ExternalAppLauncher : Object {
     public static void open_default_handler (string filename) throws Error {
         // Gtk.show_uri_on_window does not seem to fully work in a Flatpak environment
         // so instead we directly call the freedesktop OpenURI DBus interface instead.
-        int fd = Posix.open (filename, Posix.O_RDWR);
+        int fd = Posix.open (filename, Posix.O_RDONLY);
         if (fd == -1) {
             throw new FileError.NOENT (_("Cannot open %s: %s").printf (filename, Posix.strerror (Posix.ENOENT)));
         }
