@@ -1,27 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+# Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-03 17:20+0900\n"
-"PO-Revision-Date: 2022-10-06 18:17+0000\n"
+"PO-Revision-Date: 2023-01-05 06:51+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-main/nl/"
-">\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-app/nl/>"
+"\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: src/AboutWindow.vala:32
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr "Maak snelkoppelingen naar je favoriete toepassingen"
+msgstr "Maak snelkoppelingen naar uw favoriete toepassingen"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -33,7 +33,7 @@ msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 #: src/Backend/ExternalAppLauncher.vala:41
 #, c-format
 msgid "Cannot open %s: %s"
-msgstr ""
+msgstr "%s kan niet worden geopend: %s"
 
 #: src/CategoryChooser.vala:90
 msgid "Audio & Video"
@@ -136,7 +136,7 @@ msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
-"De opdracht/toepassing die wordt uitgevoerd als je de toepassing aanklikt in "
+"De opdracht/toepassing die wordt uitgevoerd als u de toepassing aanklikt in "
 "de starter. Geef een directe locatie of toepassingsalias op."
 
 #: src/Views/EditView.vala:148
@@ -161,13 +161,15 @@ msgstr "Het soort toepassing (meerdere categorieën mogelijk)."
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
-msgstr ""
+msgstr "Geavanceerde voorkeuren"
 
 #: src/Views/EditView.vala:192
 msgid ""
 "You can create an app entry by filling the sections above in most cases. You "
 "can use the following section in case they don't work."
 msgstr ""
+"U kunt een toepassingsitem aanmaken door onderstaande secties in te vullen. "
+"Als dat niet werkt, dan kunt u de volgende sectie gebruiken."
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
@@ -187,15 +189,17 @@ msgstr "Uitvoeren in terminalvenster"
 
 #: src/Views/EditView.vala:219
 msgid "Check this in if you want to register a CUI app."
-msgstr "Kruis als je een cli-toepassing wilt uitvoeren."
+msgstr "Kruis aan als u een cli-toepassing wilt uitvoeren."
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
 msgid "Open in text editor"
-msgstr ""
+msgstr "Bewerken met tekstbewerker"
 
 #: src/Views/EditView.vala:233
 msgid "You can also edit more options by opening in a text editor."
 msgstr ""
+"U kunt meer opties aanpassen door het bestand te bewerken met een "
+"tekstbewerker."
 
 #: src/Views/EditView.vala:314
 msgid "Select an executable file"
@@ -220,7 +224,7 @@ msgstr "Kies een pictogrambestand"
 
 #: src/Views/EditView.vala:368
 msgid "Could not open with external app"
-msgstr ""
+msgstr "De externe toepassing kan niet worden geopend"
 
 #: src/Views/EditView.vala:371 src/Views/EditView.vala:530
 #: src/Views/FilesView.vala:142
@@ -261,7 +265,7 @@ msgstr ""
 msgid ""
 "Also, use at least one period to make sure to be separated into at least two "
 "elements."
-msgstr "Gebruik minimaal één punt als je twee naamdelen wilt scheiden."
+msgstr "Gebruik minimaal één punt als u twee naamdelen wilt scheiden."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
@@ -313,7 +317,7 @@ msgstr "Geen geldige toepassingen aangetroffen"
 #: src/Views/FilesView.vala:65
 msgid "If you've never created one, click the + button on the top."
 msgstr ""
-"Als je nog nooit een item hebt aangemaakt, klik dan op de plusknop bovenaan."
+"Als u nog nooit een item hebt aangemaakt, klik dan op de plusknop bovenaan."
 
 #: src/Views/FilesView.vala:117
 msgid "Delete…"
@@ -322,11 +326,11 @@ msgstr "Verwijderen…"
 #: src/Views/FilesView.vala:123
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr "Weet je zeker dat je ‘%s’ wilt verwijderen?"
+msgstr "Weet u zeker dat u ‘%s’ wilt verwijderen?"
 
 #: src/Views/FilesView.vala:124
 msgid "This removes the app from the launcher."
-msgstr "Hiermee verwijder je de toepassing uit de starter."
+msgstr "Hiermee verwijdert u de toepassing uit de starter."
 
 #: src/Views/FilesView.vala:127
 msgid "Delete"
