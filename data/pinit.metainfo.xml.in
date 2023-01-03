@@ -27,22 +27,22 @@
     <screenshot type="default">
       <caption>Files view in the light mode</caption>
       <!-- TODO: Use fixed screenshots path when releasing 2.0.0 -->
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-files-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-files-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-edit-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-edit-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Files view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-files-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-files-view-dark.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/pantheon/screenshot-edit-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
     </screenshot>
   </screenshots>
 
