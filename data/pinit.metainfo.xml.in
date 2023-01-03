@@ -66,7 +66,7 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.0.0" date="2022-08-07" urgency="high">
+    <release version="2.0.0" date="2023-01-07" urgency="high">
       <description>
         <p>
           The biggest and greatest updates come to "Pin It!":
@@ -80,12 +80,12 @@
         </p>
         <ul>
           <li>Support setting ".ico" files as the app icon</li>
-          <li>Support setting "StartupWMClass" key</li>
+          <li>Support opening in a text editor</li>
+          <li>Fix window size cannot be resized on small displays</li>
+          <li>Show error dialogs when saving/deleting failed</li>
           <li>Make sure not to add blank elements in generated desktop files</li>
           <li>Don't overwrite the entire permission of the selected executable files</li>
           <li>Give executable permission for the user only when they don't have it</li>
-          <li>Fix window size cannot be resized on small displays</li>
-          <li>Show error dialogs when saving/deleting failed</li>
           <li>Update translations</li>
         </ul>
       </description>
