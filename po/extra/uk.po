@@ -6,17 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 22:52+0900\n"
+"POT-Creation-Date: 2023-01-03 17:20+0900\n"
 "PO-Revision-Date: 2022-12-24 15:51+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
-"pinit-metadata/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
+"metadata/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/pinit.metainfo.xml.in:9 data/pinit.desktop.in:3
@@ -110,28 +110,28 @@ msgid "Support setting \".ico\" files as the app icon"
 msgstr "Підтримка налаштування файлів піктограм застосунку «.ico»"
 
 #: data/pinit.metainfo.xml.in:83
-msgid "Support setting \"StartupWMClass\" key"
-msgstr "Підтримка налаштування ключа «StartupWMClass»"
+msgid "Support opening in a text editor"
+msgstr ""
 
 #: data/pinit.metainfo.xml.in:84
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "Порожні елементи більше не додаються у створені файли робочого столу"
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr "Не перезаписувати весь дозвіл вибраних виконуваних файлів"
-
-#: data/pinit.metainfo.xml.in:86
-msgid "Give executable permission for the user only when they don't have it"
-msgstr "Надавати дозвіл виконання користувачу, лише якщо він його не має"
-
-#: data/pinit.metainfo.xml.in:87
 msgid "Fix window size cannot be resized on small displays"
 msgstr "Усунено неможливість зміни розміру вікна на маленьких дисплеях"
 
-#: data/pinit.metainfo.xml.in:88
+#: data/pinit.metainfo.xml.in:85
 msgid "Show error dialogs when saving/deleting failed"
 msgstr "Показ діалогових вікон помилок, коли зберегти/видалити не вдалося"
+
+#: data/pinit.metainfo.xml.in:86
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr "Порожні елементи більше не додаються у створені файли робочого столу"
+
+#: data/pinit.metainfo.xml.in:87
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr "Не перезаписувати весь дозвіл вибраних виконуваних файлів"
+
+#: data/pinit.metainfo.xml.in:88
+msgid "Give executable permission for the user only when they don't have it"
+msgstr "Надавати дозвіл виконання користувачу, лише якщо він його не має"
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
@@ -293,6 +293,9 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
 "File;Create;Edit;Info;Icon;AppImage;"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "Підтримка налаштування ключа «StartupWMClass»"
 
 #~ msgid "Files View"
 #~ msgstr "Перегляд файлів"

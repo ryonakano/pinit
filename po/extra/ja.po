@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 22:52+0900\n"
+"POT-Creation-Date: 2023-01-03 17:20+0900\n"
 "PO-Revision-Date: 2022-10-06 18:17+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -105,29 +105,29 @@ msgid "Support setting \".ico\" files as the app icon"
 msgstr "アプリのアイコンとして \".ico\" ファイルを指定可能に"
 
 #: data/pinit.metainfo.xml.in:83
-msgid "Support setting \"StartupWMClass\" key"
-msgstr "\"StartupWMClass\" キーを設定可能に"
+msgid "Support opening in a text editor"
+msgstr ""
 
 #: data/pinit.metainfo.xml.in:84
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "生成したデスクトップファイルに空の要素がないように修正"
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr "選択した実行可能ファイルのパーミッション全体を書き換えないように修正"
-
-#: data/pinit.metainfo.xml.in:86
-msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
-"ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修正"
-
-#: data/pinit.metainfo.xml.in:87
 msgid "Fix window size cannot be resized on small displays"
 msgstr "画面が狭い環境において、ウィンドウをリサイズできない不具合を修正"
 
-#: data/pinit.metainfo.xml.in:88
+#: data/pinit.metainfo.xml.in:85
 msgid "Show error dialogs when saving/deleting failed"
 msgstr "保存／削除に失敗した際にエラーダイアログを表示するように修正"
+
+#: data/pinit.metainfo.xml.in:86
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr "生成したデスクトップファイルに空の要素がないように修正"
+
+#: data/pinit.metainfo.xml.in:87
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr "選択した実行可能ファイルのパーミッション全体を書き換えないように修正"
+
+#: data/pinit.metainfo.xml.in:88
+msgid "Give executable permission for the user only when they don't have it"
+msgstr ""
+"ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修正"
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
@@ -292,6 +292,9 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
 "情報;アイコン;"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "\"StartupWMClass\" キーを設定可能に"
 
 #~ msgid "Files View"
 #~ msgstr "ファイル画面"

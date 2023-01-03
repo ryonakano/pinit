@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 22:52+0900\n"
+"POT-Creation-Date: 2023-01-03 17:20+0900\n"
 "PO-Revision-Date: 2022-10-17 12:57+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-extra/"
@@ -110,34 +110,34 @@ msgid "Support setting \".ico\" files as the app icon"
 msgstr "Supporta l'impostazione di file \".ico\" come icona dell'app"
 
 #: data/pinit.metainfo.xml.in:83
-msgid "Support setting \"StartupWMClass\" key"
-msgstr "Supporto per l'impostazione della chiave \"StartupWMClass\""
+msgid "Support opening in a text editor"
+msgstr ""
 
 #: data/pinit.metainfo.xml.in:84
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "Assicurati di non aggiungere elementi vuoti nei file desktop generati"
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr ""
-"Non sovrascrivere l'intera autorizzazione dei file eseguibili selezionati"
-
-#: data/pinit.metainfo.xml.in:86
-msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
-"Concedi l'autorizzazione eseguibile per l'utente solo quando non ce l'ha"
-
-#: data/pinit.metainfo.xml.in:87
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
 "La dimensione della finestra fissa non può essere ridimensionata su schermi "
 "piccoli"
 
-#: data/pinit.metainfo.xml.in:88
+#: data/pinit.metainfo.xml.in:85
 msgid "Show error dialogs when saving/deleting failed"
 msgstr ""
 "Mostra le finestre di dialogo di errore quando il salvataggio/l'eliminazione "
 "non è riuscito"
+
+#: data/pinit.metainfo.xml.in:86
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr "Assicurati di non aggiungere elementi vuoti nei file desktop generati"
+
+#: data/pinit.metainfo.xml.in:87
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr ""
+"Non sovrascrivere l'intera autorizzazione dei file eseguibili selezionati"
+
+#: data/pinit.metainfo.xml.in:88
+msgid "Give executable permission for the user only when they don't have it"
+msgstr ""
+"Concedi l'autorizzazione eseguibile per l'utente solo quando non ce l'ha"
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
@@ -306,6 +306,9 @@ msgstr "Creatore di File Desktop"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "Supporto per l'impostazione della chiave \"StartupWMClass\""
 
 #~ msgid "Files View"
 #~ msgstr "Visualizzazione File"

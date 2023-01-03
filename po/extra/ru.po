@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 22:52+0900\n"
+"POT-Creation-Date: 2023-01-03 17:20+0900\n"
 "PO-Revision-Date: 2022-11-21 23:51+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -105,32 +105,32 @@ msgid "Support setting \".ico\" files as the app icon"
 msgstr "Поддержка «.ico» файлов для иконок приложений"
 
 #: data/pinit.metainfo.xml.in:83
-msgid "Support setting \"StartupWMClass\" key"
-msgstr "Поддержка параметра «StartupWMClass»"
+msgid "Support opening in a text editor"
+msgstr ""
 
 #: data/pinit.metainfo.xml.in:84
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "Пустые пункты теперь не добавляются в созданный файл"
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr "Теперь разрешения файла не перезаписываются"
-
-#: data/pinit.metainfo.xml.in:86
-msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
-"Предоставлять разрешение на выполнение пользователю, только если он его не "
-"имеет"
-
-#: data/pinit.metainfo.xml.in:87
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
 "Исправлена ошибка, из-за которой невозможно было изменить размер окна на "
 "маленьких экранах"
 
-#: data/pinit.metainfo.xml.in:88
+#: data/pinit.metainfo.xml.in:85
 msgid "Show error dialogs when saving/deleting failed"
 msgstr "Теперь показывается ошибка если сохранение или удаление не удалось"
+
+#: data/pinit.metainfo.xml.in:86
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr "Пустые пункты теперь не добавляются в созданный файл"
+
+#: data/pinit.metainfo.xml.in:87
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr "Теперь разрешения файла не перезаписываются"
+
+#: data/pinit.metainfo.xml.in:88
+msgid "Give executable permission for the user only when they don't have it"
+msgstr ""
+"Предоставлять разрешение на выполнение пользователю, только если он его не "
+"имеет"
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
@@ -292,3 +292,6 @@ msgstr "Создатель файлов рабочего стола"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Рабочий стол;Файл;Создать;Редактировать;Информация;Иконка;AppImage;"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "Поддержка параметра «StartupWMClass»"
