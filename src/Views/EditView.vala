@@ -4,11 +4,7 @@
  */
 
 public class EditView : Gtk.Box {
-    /*
-     * The view where you can edit the content of a desktop file.
-     * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
-     * Otherwise it's shown when you click a desktop file in FilesView.
-     */
+    public signal void file_updated ();
 
     /*
      * When at least one input widget in this view is changed,
@@ -25,9 +21,6 @@ public class EditView : Gtk.Box {
         }
     }
 
-    /*
-     * Private properties and variables
-     */
     public MainWindow window { private get; construct; }
 
     private Gtk.Button cancel_button;
@@ -468,8 +461,27 @@ public class EditView : Gtk.Box {
             terminal_checkbox.active,
             is_backup
         );
-        DesktopFileOperator.get_default ().write_to_file (desktop_file);
-        DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
+
+        try {
+            DesktopFileOperator.get_default ().write_to_file (desktop_file);
+            DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
+            file_updated ();
+        } catch (Error e) {
+            var error_dialog = new Adw.MessageDialog (
+                window,
+                _("Could not write to file “%s”").printf (desktop_file.app_name),
+                e.message
+            );
+            error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+            error_dialog.default_response = DialogResponse.CLOSE;
+            error_dialog.close_response = DialogResponse.CLOSE;
+            error_dialog.response.connect ((response_id) => {
+                if (response_id == DialogResponse.CLOSE) {
+                    error_dialog.destroy ();
+                }
+            });
+            error_dialog.present ();
+        }
     }
 
     /*

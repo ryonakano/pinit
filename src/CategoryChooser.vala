@@ -3,11 +3,8 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+// List Categories of the app and highlight ones listed in the desktop file.
 public class CategoryChooser : Gtk.Grid {
-    /*
-     * List Categories of the app and highlight ones listed in the desktop file.
-     */
-
     /*
      * A signal emitted when selected categories are changed.
      */
@@ -73,8 +70,8 @@ public class CategoryChooser : Gtk.Grid {
     private Gee.ArrayList<ToggleButton> toggles;
 
     /*
-     * Store translatable label texts of the toggle buttons, whose keys are
-     * the category name listed in the Categories section of the desktop file.
+     * Key: Category name in dekstop files
+     * Value: Translatable button labels for each key
      */
     private Gee.HashMap<string, string> categories;
 
@@ -89,11 +86,7 @@ public class CategoryChooser : Gtk.Grid {
         toggles = new Gee.ArrayList<ToggleButton> ();
         categories = new Gee.HashMap<string, string> ();
 
-        /*
-         * Set translatable label texts of the toggle buttons
-         * where the key name is the one used in the desktop file
-         * as the category name.
-         */
+        // See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
         categories.set ("AudioVideo", _("Audio & Video"));
         categories.set ("Audio", _("Audio"));
         categories.set ("Video", _("Video"));

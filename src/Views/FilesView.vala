@@ -4,15 +4,8 @@
  */
 
 public class FilesView : Gtk.Box {
-    /*
-     * The view where you can select a desktop file to open and edit in the EditView.
-     * If the `leaflet` in MainWindow isn't folded, this is shown in the left pane.
-     * Otherwise it's shown when you save or cancel editing desktop files in FilesView.
-     */
+    public signal void file_deleted ();
 
-    /*
-     * Private properties and variables
-     */
     public MainWindow window { private get; construct; }
     public Adw.HeaderBar headerbar { get; private set; }
 
@@ -38,12 +31,8 @@ public class FilesView : Gtk.Box {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("Style"), theme_submenu);
-
-        // elementary prefers AppData for showcasing the app info, so don't construct useless AboutDialog on Pantheon
-        if (!Application.IS_ON_PANTHEON) {
-            ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-            menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
-        }
+        ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
+        menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),
@@ -129,19 +118,37 @@ public class FilesView : Gtk.Box {
                 valign = Gtk.Align.CENTER
             };
             delete_button.clicked.connect (() => {
-                var delete_dialog = new Gtk.MessageDialog (
-                    window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.CANCEL, null
-                ) {
-                    text = _("Are you sure you want to delete “%s”?").printf (file.app_name),
-                    secondary_text = _("This removes the app from the launcher.")
-                };
-
-                var confirm_button = delete_dialog.add_button (_("Delete"), Gtk.ResponseType.OK);
-                confirm_button.get_style_context ().add_class ("destructive-action");
-
+                var delete_dialog = new Adw.MessageDialog (
+                    window,
+                    _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    _("This removes the app from the launcher.")
+                );
+                delete_dialog.add_response (DialogResponse.CANCEL, _("Cancel"));
+                delete_dialog.add_response (DialogResponse.OK, _("Delete"));
+                delete_dialog.set_response_appearance (DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
+                delete_dialog.default_response = DialogResponse.CANCEL;
+                delete_dialog.close_response = DialogResponse.CANCEL;
                 delete_dialog.response.connect ((response_id) => {
-                    if (response_id == Gtk.ResponseType.OK) {
-                        DesktopFileOperator.get_default ().delete_file (file);
+                    if (response_id == DialogResponse.OK) {
+                        try {
+                            DesktopFileOperator.get_default ().delete_file (file);
+                            file_deleted ();
+                        } catch (Error e) {
+                            var error_dialog = new Adw.MessageDialog (
+                                window,
+                                _("Could not delete file “%s”").printf (file.app_name),
+                                e.message
+                            );
+                            error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+                            error_dialog.default_response = DialogResponse.CLOSE;
+                            error_dialog.close_response = DialogResponse.CLOSE;
+                            error_dialog.response.connect ((response_id) => {
+                                if (response_id == DialogResponse.CLOSE) {
+                                    error_dialog.destroy ();
+                                }
+                            });
+                            error_dialog.present ();
+                        }
                     }
 
                     delete_dialog.destroy ();
