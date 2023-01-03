@@ -8,10 +8,6 @@
  */
 
 public class DesktopFileOperator : GLib.Object {
-    /*
-     * A singleton class to handle desktop files in the DesktopFile type.
-     */
-
     // The list of desktop files in the DesktopFile data type.
     public Gee.ArrayList<DesktopFile> files {
         get {

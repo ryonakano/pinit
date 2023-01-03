@@ -43,10 +43,6 @@ public class DesktopFile : GLib.Object {
     // This property don't appear in the desktop file; used internally in this app
     public bool is_backup { get; construct; }
 
-    /*
-     * Set values of the properties from the passed args and it's ready;
-     * we can read these properties or perform related operations through DesktopFileOperator.
-     */
     public DesktopFile (
         string file_name = "",
         string app_name = "",

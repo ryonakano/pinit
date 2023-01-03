@@ -3,11 +3,8 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+// List Categories of the app and highlight ones listed in the desktop file.
 public class CategoryChooser : Gtk.Grid {
-    /*
-     * List Categories of the app and highlight ones listed in the desktop file.
-     */
-
     /*
      * A signal emitted when selected categories are changed.
      */

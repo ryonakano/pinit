@@ -4,17 +4,11 @@
  */
 
 public class Application : Adw.Application {
-    /*
-     * Data structures
-     */
     struct Style {
         string name;
         Adw.ColorScheme color_scheme;
     }
 
-    /*
-     * Global variables
-     */
     // Returns if the current desktop environment is Pantheon or not.
     // We'll use this later to provide more appropriate functions or design
     // both on Pantheon and on another desktop environment.
@@ -24,12 +18,8 @@ public class Application : Adw.Application {
         }
     }
 
-    // Store GSettings for this app
     public static Settings settings { get; private set; }
 
-    /*
-     * Private variables
-     */
     private MainWindow main_window;
 
     public Application () {
@@ -72,7 +62,6 @@ public class Application : Adw.Application {
         add_action (about_action);
     }
 
-    // Setup theme things
     private void setup_style () {
         const Style[] STYLES = {
             { "style-light", Adw.ColorScheme.FORCE_LIGHT },
@@ -93,10 +82,6 @@ public class Application : Adw.Application {
         }
     }
 
-    /*
-     * Called when user switches the theme setting in the popover.
-     * Save that selection into GSettings and reflect that change into the app now
-     */
     private void set_app_style (Adw.ColorScheme color_scheme) {
         Application.settings.set_enum ("color-scheme", color_scheme);
         style_manager.color_scheme = color_scheme;

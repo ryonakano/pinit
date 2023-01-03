@@ -4,17 +4,8 @@
  */
 
 public class FilesView : Gtk.Box {
-    /*
-     * The view where you can select a desktop file to open and edit in the EditView.
-     * If the `leaflet` in MainWindow isn't folded, this is shown in the left pane.
-     * Otherwise it's shown when you save or cancel editing desktop files in FilesView.
-     */
-
     public signal void file_deleted ();
 
-    /*
-     * Private properties and variables
-     */
     public MainWindow window { private get; construct; }
     public Adw.HeaderBar headerbar { get; private set; }
 

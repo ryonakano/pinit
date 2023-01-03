@@ -4,12 +4,6 @@
  */
 
 public class EditView : Gtk.Box {
-    /*
-     * The view where you can edit the content of a desktop file.
-     * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
-     * Otherwise it's shown when you click a desktop file in FilesView.
-     */
-
     public signal void file_updated ();
 
     /*
@@ -27,9 +21,6 @@ public class EditView : Gtk.Box {
         }
     }
 
-    /*
-     * Private properties and variables
-     */
     public MainWindow window { private get; construct; }
 
     private Gtk.Button cancel_button;
