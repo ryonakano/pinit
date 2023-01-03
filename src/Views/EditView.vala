@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
- public class EditView : Gtk.Box {
+public class EditView : Gtk.Box {
     /*
      * The view where you can edit the content of a desktop file.
      * If the `leaflet` in MainWindow isn't folded, this is shown in the right pane.
