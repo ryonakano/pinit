@@ -1,22 +1,22 @@
 # Japanese translations for com.github.ryonakano.pinit package.
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-03 17:20+0900\n"
-"PO-Revision-Date: 2022-10-06 18:17+0000\n"
+"PO-Revision-Date: 2023-01-03 08:26+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-main/"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: src/AboutWindow.vala:32
 msgid ""
@@ -33,7 +33,7 @@ msgstr "Ryo Nakano"
 #: src/Backend/ExternalAppLauncher.vala:41
 #, c-format
 msgid "Cannot open %s: %s"
-msgstr ""
+msgstr "%s を開けません: %s"
 
 #: src/CategoryChooser.vala:90
 msgid "Audio & Video"
@@ -159,13 +159,14 @@ msgstr "アプリの種類です。複数選択できます。"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
-msgstr ""
+msgstr "高度な設定"
 
 #: src/Views/EditView.vala:192
 msgid ""
 "You can create an app entry by filling the sections above in most cases. You "
 "can use the following section in case they don't work."
-msgstr ""
+msgstr "ほとんどの場合、上記セクションを埋めることでアプリのエントリーを作成可能です"
+"。動作しない場合は、以下のセクションを使用できます。"
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
@@ -189,11 +190,11 @@ msgstr "CUI アプリを登録したい場合、チェックを入れてくだ�
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
 msgid "Open in text editor"
-msgstr ""
+msgstr "テキストエディターで開く"
 
 #: src/Views/EditView.vala:233
 msgid "You can also edit more options by opening in a text editor."
-msgstr ""
+msgstr "テキストエディターで開くことで、さらに多くのオプションを編集可能です。"
 
 #: src/Views/EditView.vala:314
 msgid "Select an executable file"
@@ -218,7 +219,7 @@ msgstr "アイコンファイルを選択"
 
 #: src/Views/EditView.vala:368
 msgid "Could not open with external app"
-msgstr ""
+msgstr "外部アプリで開けませんでした"
 
 #: src/Views/EditView.vala:371 src/Views/EditView.vala:530
 #: src/Views/FilesView.vala:142
