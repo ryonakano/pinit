@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2022 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class AboutWindow : GLib.Object {
@@ -33,7 +33,7 @@ public class AboutWindow : GLib.Object {
             website = "https://github.com/ryonakano/pinit",
             support_url = "https://github.com/ryonakano/pinit/discussions",
             issue_url = "https://github.com/ryonakano/pinit/issues",
-            copyright = "© 2021-2022 Ryo Nakano",
+            copyright = "© 2021-2023 Ryo Nakano",
             license_type = Gtk.License.GPL_3_0,
             developer_name = "Ryo Nakano",
             developers = DEVELOPERS,
