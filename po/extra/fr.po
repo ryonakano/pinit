@@ -4,22 +4,22 @@
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
-# rene-coty <irenee.thirion@e.email>, 2022.
+# rene-coty <irenee.thirion@e.email>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-03 17:20+0900\n"
-"PO-Revision-Date: 2022-10-10 17:59+0000\n"
+"PO-Revision-Date: 2023-01-13 17:48+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-extra/"
-"fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
+"pinit-metadata/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/pinit.metainfo.xml.in:9 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -29,59 +29,60 @@ msgstr "Pin It!"
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
-"Créez un raccourci vers vos applications portables préférées dans votre "
-"lanceur d'applications"
+"Créez des raccourcis vers vos applications portables préférées dans votre "
+"lanceur d’applications"
 
 #: data/pinit.metainfo.xml.in:12
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
-"Créez un raccourci vers les applications portables (fichiers exécutables "
-"bruts, fichiers AppImage, etc.) dans le lanceur d'applications de votre "
+"Créez des raccourcis vers vos applications portables (fichiers exécutables "
+"bruts, fichiers AppImage, etc.) pour le lanceur d’applications de votre "
 "environnement de bureau."
 
 #: data/pinit.metainfo.xml.in:15
 msgid "Other features include:"
-msgstr "Les autres caractéristiques sont les suivantes :"
+msgstr "Les autres fonctionnalités incluent :"
 
 #: data/pinit.metainfo.xml.in:19
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
-"Modifier ou supprimer des entrées d'applications créées sans ouvrir le "
+"Modification ou suppression des entrées d’applications créées sans ouvrir le "
 "gestionnaire de fichiers"
 
 #: data/pinit.metainfo.xml.in:20
 msgid "Automatically add execution permission to the file you select"
 msgstr ""
-"Ajouter automatiquement l'autorisation d'exécution au fichier que vous "
-"sélectionnez"
+"Ajout automatique de l’autorisation d’exécution pour le fichier sélectionné"
 
 #: data/pinit.metainfo.xml.in:21
 msgid "Syntax error detection"
-msgstr ""
+msgstr "Détection d’erreurs de syntaxe"
 
 #: data/pinit.metainfo.xml.in:22
 msgid ""
 "Automatically save everything―your data in editing, last open view, and "
 "preferences"
 msgstr ""
+"Sauvegarde automatique de vos données en cours d’édition, de la dernière vue "
+"ouverte et des préférences"
 
 #: data/pinit.metainfo.xml.in:28
 msgid "Files view in the light mode"
-msgstr ""
+msgstr "Vue des fichiers dans le mode clair"
 
 #: data/pinit.metainfo.xml.in:34
 msgid "Edit view in the light mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode clair"
 
 #: data/pinit.metainfo.xml.in:39
 msgid "Files view in the dark mode"
-msgstr ""
+msgstr "Vue des fichiers dans le mode sombre"
 
 #: data/pinit.metainfo.xml.in:44
 msgid "Edit view in the dark mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode sombre"
 
 #: data/pinit.metainfo.xml.in:62
 msgid "Ryo Nakano"
@@ -90,12 +91,15 @@ msgstr "Ryo Nakano"
 #: data/pinit.metainfo.xml.in:71
 msgid "The biggest and greatest updates come to \"Pin It!\":"
 msgstr ""
+"La mise à jour la plus grande et la plus importante concerne « Pin It » :"
 
 #: data/pinit.metainfo.xml.in:75
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
 msgstr ""
+"Nouveau design pour s’adapter aux environnements de bureau modernes, "
+"comprenant la prise en charge de la conception réactive"
 
 #: data/pinit.metainfo.xml.in:76
 msgid "Migrate to GTK 4, the latest version of GTK"
@@ -103,35 +107,46 @@ msgstr "Migration vers GTK 4, la dernière version de GTK"
 
 #: data/pinit.metainfo.xml.in:78
 msgid "Other changes:"
-msgstr ""
+msgstr "Autres changements :"
 
 #: data/pinit.metainfo.xml.in:82
 msgid "Support setting \".ico\" files as the app icon"
 msgstr ""
+"Possibilité de définir des fichiers « .ico » comme icônes d’applications"
 
 #: data/pinit.metainfo.xml.in:83
 msgid "Support opening in a text editor"
-msgstr ""
+msgstr "Possibilité d’édition dans un éditeur de texte"
 
 #: data/pinit.metainfo.xml.in:84
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
+"Résolution de l’impossibilité de changer la taille de la fenêtre sur écrans "
+"de petite taille"
 
 #: data/pinit.metainfo.xml.in:85
 msgid "Show error dialogs when saving/deleting failed"
 msgstr ""
+"Affichage d’une fenêtre de dialogue pour les erreurs lors d’un échec de l’"
+"enregistrement / la sauvegarde"
 
 #: data/pinit.metainfo.xml.in:86
 msgid "Make sure not to add blank elements in generated desktop files"
 msgstr ""
+"Vérification qu’aucun élément vide n’a été laissé dans les fichiers de "
+"bureau générés"
 
 #: data/pinit.metainfo.xml.in:87
 msgid "Don't overwrite the entire permission of the selected executable files"
 msgstr ""
+"Vérification que l’ensemble des autorisations des fichiers exécutables "
+"sélectionnés n’est pas écrasé"
 
 #: data/pinit.metainfo.xml.in:88
 msgid "Give executable permission for the user only when they don't have it"
 msgstr ""
+"Accord des permissions d’exécution à l’utilisateur, uniquement quand il ne "
+"les a pas"
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
@@ -139,7 +154,7 @@ msgstr "Mise à jour des traductions"
 
 #: data/pinit.metainfo.xml.in:97
 msgid "AppData: Fix release year"
-msgstr ""
+msgstr "Métadonnées de l’application : correction de l’année de sortie"
 
 #: data/pinit.metainfo.xml.in:99 data/pinit.metainfo.xml.in:114
 #: data/pinit.metainfo.xml.in:133 data/pinit.metainfo.xml.in:146
@@ -159,15 +174,15 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:110
 msgid "Lessen scope of file access"
-msgstr ""
+msgstr "Réduction de la portée de l’accès aux fichiers"
 
 #: data/pinit.metainfo.xml.in:111
 msgid "Make window resizable"
-msgstr ""
+msgstr "La fenêtre est désormais redimensionnable"
 
 #: data/pinit.metainfo.xml.in:112
 msgid "EditView: Less strict on file names"
-msgstr ""
+msgstr "Volet d’édition : moins strict sur les noms de fichiers"
 
 #: data/pinit.metainfo.xml.in:116
 msgid "Add Italian translation (thanks to @albanobattistella)"
@@ -186,15 +201,17 @@ msgstr "Mise à jour de la traduction japonaise"
 
 #: data/pinit.metainfo.xml.in:126
 msgid "Fix build error on other distros"
-msgstr ""
+msgstr "Correction d’une erreur de build sur d’autres distributions"
 
 #: data/pinit.metainfo.xml.in:127
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr ""
+"Vue des fichiers : boîte de dialogue correctement centrée par rapport à la "
+"fenêtre de l’application"
 
 #: data/pinit.metainfo.xml.in:128
 msgid "Restore last opened view and its state"
-msgstr ""
+msgstr "Restauration de la dernière vue ouverte et de son dernier état"
 
 #: data/pinit.metainfo.xml.in:129
 msgid "Add new style switcher"
@@ -203,32 +220,37 @@ msgstr "Ajout d’un nouveau bouton de sélection du thème"
 #: data/pinit.metainfo.xml.in:130
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
+"Correction de l’étiquette de la barre de titre lorsqu’aucun nom d’"
+"application n’a été spécifié"
 
 #: data/pinit.metainfo.xml.in:131
 msgid "Readable copies"
-msgstr ""
+msgstr "Copies lisibles"
 
 #: data/pinit.metainfo.xml.in:143
 msgid "FilesView: Ellipsize if label texts are too long"
-msgstr ""
+msgstr "Vue des fichiers : ellipse si les textes d’étiquette sont trop longs"
 
 #: data/pinit.metainfo.xml.in:144
 msgid "Tell accepted file formats in FileChooser"
 msgstr ""
+"Précision des formats de fichiers acceptés dans le sélectionneur de fichiers"
 
 #: data/pinit.metainfo.xml.in:148
-#, fuzzy
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+msgstr ""
+"Ajout d’une traduction en portugais brésilien (grâce à @DanielTolentino)"
 
 #: data/pinit.metainfo.xml.in:157
 msgid "EditView: Focus on file name entry by default"
-msgstr ""
+msgstr "Vue d’édition : focalisation sur l’entrée du nom du fichier par défaut"
 
 #: data/pinit.metainfo.xml.in:158
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
+"Vue des fichiers : défilement possible du contenu de la fenêtre, laquelle "
+"garde une taille raisonnable lorsqu’il y a beaucoup de champs de saisie"
 
 #: data/pinit.metainfo.xml.in:162
 msgid "Add French translation (thanks to @NathanBnm)"
@@ -293,7 +315,7 @@ msgstr "Créateur de fichiers desktop"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr "Desktop;Fichier;Créer;Modifier;Info;Icône;AppImage;"
+msgstr "Bureau;Fichier;Créer;Modifier;Info;Icône;AppImage;"
 
 #~ msgid "Files View"
 #~ msgstr "Page des fichiers"
