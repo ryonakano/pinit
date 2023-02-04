@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"PO-Revision-Date: 2023-02-04 21:08+0200\n"
+"Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n%10>=2 "
+"&& n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: src/AboutWindow.vala:32
+msgid "Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+"Sukurti po greitąją nuorodą mėgstamiausioms perkeliamoms programėlėms jūsų "
+"programų paleidiklyje"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr "polpolylingo"
+
+#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
+#. The second "%s" represents the detailed error message.
+#: src/Backend/ExternalAppLauncher.vala:41
+#, c-format
+msgid "Cannot open %s: %s"
+msgstr "Neįmanoma atverti %s: %s"
+
+#: src/CategoryChooser.vala:90
+msgid "Audio & Video"
+msgstr "Audiovizualinių įrašų programa"
+
+#: src/CategoryChooser.vala:91
+msgid "Audio"
+msgstr "Audio įrašų programa"
+
+#: src/CategoryChooser.vala:92
+msgid "Video"
+msgstr "Vaizdo įrašų programa"
+
+#: src/CategoryChooser.vala:93
+msgid "Development"
+msgstr "Kūrėjo ir plėtros programa"
+
+#: src/CategoryChooser.vala:94
+msgid "Education"
+msgstr "Programa mokinimuisi"
+
+#: src/CategoryChooser.vala:95
+msgid "Game"
+msgstr "Žaidybinė programa"
+
+#: src/CategoryChooser.vala:96
+msgid "Graphics"
+msgstr "Grafikos programa"
+
+#: src/CategoryChooser.vala:97
+msgid "Network"
+msgstr "Ryšių ir tinklo programa"
+
+#: src/CategoryChooser.vala:98
+msgid "Office"
+msgstr "Biuro programa"
+
+#: src/CategoryChooser.vala:99
+msgid "Science"
+msgstr "Mokslinių tyrimų programa"
+
+#: src/CategoryChooser.vala:100
+msgid "Settings"
+msgstr "Nustatymų programa"
+
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+msgid "System"
+msgstr "Sistema"
+
+#: src/CategoryChooser.vala:102
+msgid "Utility"
+msgstr "Paslaugų programa"
+
+#: src/MainWindow.vala:45
+msgid "Updated entry."
+msgstr "Atnaujinta įvestis."
+
+#: src/MainWindow.vala:49
+msgid "Deleted entry."
+msgstr "Ištrinta įvestis."
+
+#: src/Views/EditView.vala:51
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: src/Views/EditView.vala:61
+msgid "File Name"
+msgstr "Rinkmenos pavadinimas"
+
+#: src/Views/EditView.vala:66
+msgid "Name of the file where these app info is saved."
+msgstr "Rinkmenos pavadinimas, kurioje kaupiama informacija apie programą."
+
+#: src/Views/EditView.vala:76
+msgid "Suffix of the file"
+msgstr "Rinkmenos pavadinimo praplėtinys"
+
+#: src/Views/EditView.vala:88
+msgid "App Name"
+msgstr "Programos pavadinimas"
+
+#: src/Views/EditView.vala:92
+msgid "Shown in the launcher or Dock."
+msgstr "Pateikti paleidiklyje arba Prikabiklyje."
+
+#: src/Views/EditView.vala:107
+msgid "Comment"
+msgstr "Komentaras"
+
+#: src/Views/EditView.vala:111
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr ""
+"Instrumento veikimą aprašantis įrašas nusakantis tai kokią tau pagalbą suteikia "
+"programa."
+
+#: src/Views/EditView.vala:126
+msgid "Exec File"
+msgstr "Vykdomoji rinkmena"
+
+#: src/Views/EditView.vala:131
+msgid ""
+"The command/app launched when you click the app entry in the launcher. Specify in "
+"an absolute path or an app's alias name."
+msgstr ""
+"Paleidiklyje paspaudus ant programėlės įvesties yra įgyvendinama komanda/"
+"paleidžiama programa. Nustatyti visą kelią arba pateikti šios programėlės "
+"alternatyvų vardą."
+
+#: src/Views/EditView.vala:148
+msgid "Icon File"
+msgstr "Rinkmenos ikonėlė"
+
+#: src/Views/EditView.vala:153
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias name."
+msgstr ""
+"Ikonėlė naudojama kaip oficialus programos logotipas. Nustatyti visą kelią arba "
+"pateikti šios ikonėlės alternatyvų vardą."
+
+#: src/Views/EditView.vala:170
+msgid "App Categories"
+msgstr "Programos kategorija"
+
+#: src/Views/EditView.vala:174
+msgid "Type of the app, multiply selectable."
+msgstr "Programos išskirtiniai bruožai, keleta pasirenkamų variantų."
+
+#: src/Views/EditView.vala:187
+msgid "Advanced configuration"
+msgstr "Išplėstiniai nustatymai"
+
+#: src/Views/EditView.vala:192
+msgid ""
+"You can create an app entry by filling the sections above in most cases. You can "
+"use the following section in case they don't work."
+msgstr ""
+"Jūs galite įgalinti programėlės įrašą daugumoje atvejų užpildę viršutines sekcijas."
+"Jeigu šios sekcijos neveiktų, tuomet Jūs galite panaudoti tolesniąsias."
+
+#: src/Views/EditView.vala:199
+msgid "Startup WM Class"
+msgstr "WM klasė paleidimo metu"
+
+#: src/Views/EditView.vala:204
+msgid ""
+"Associate the app with a window that has this ID. Fill in this if a different or "
+"duplicated icon comes up to the dock when the app launches."
+msgstr ""
+"Susiekite programėlę su šį ID naudojančiu langeliu. Užpildykite tai, jei skirtinga "
+"ar kopijos ikonėlė prisikabina programėlės paleidimo metu."
+
+#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+msgid "Run in Terminal"
+msgstr "Paleisti terminalinėje eilutėje"
+
+#: src/Views/EditView.vala:219
+msgid "Check this in if you want to register a CUI app."
+msgstr "Pasirinkti šią parinktį pageidaujant registruoti CUI programėlę."
+
+#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
+msgid "Open in text editor"
+msgstr "Atverti teksto redaktoriuje"
+
+#: src/Views/EditView.vala:233
+msgid "You can also edit more options by opening in a text editor."
+msgstr "Atvėrus teksto redaktorių yra daugiau redagavimo parinkčių."
+
+#: src/Views/EditView.vala:314
+msgid "Select an executable file"
+msgstr "Pasirinkti vykdomąją rinkmeną"
+
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
+msgid "Open"
+msgstr "Atidaryti"
+
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
+#: src/Views/EditView.vala:489 src/Views/FilesView.vala:126
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: src/Views/EditView.vala:345
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO, PNG, SVG, arba XMP rinkmenos"
+
+#: src/Views/EditView.vala:348
+msgid "Select an icon file"
+msgstr "Pasirinkti ikonėlės rinkmeną"
+
+#: src/Views/EditView.vala:368
+msgid "Could not open with external app"
+msgstr "Neįmanoma atverti naudojant išorinę programėlę"
+
+#: src/Views/EditView.vala:371 src/Views/EditView.vala:530
+#: src/Views/FilesView.vala:142
+msgid "Close"
+msgstr "Uždaryti"
+
+#: src/Views/EditView.vala:421
+msgid "New Entry"
+msgstr "Nauja įvestis"
+
+#: src/Views/EditView.vala:430
+msgid "Editing Entry"
+msgstr "Keisti įvestį"
+
+#: src/Views/EditView.vala:436
+#, c-format
+msgid "Editing “%s”"
+msgstr "Keisti „%s“"
+
+#: src/Views/EditView.vala:527
+#, c-format
+msgid "Could not write to file “%s”"
+msgstr "Neišeina įrašyti į rinkmeną „%s“"
+
+#: src/Views/EditView.vala:546
+msgid "Recommendations for naming"
+msgstr "Įvardinimo rekomendacijos"
+
+#: src/Views/EditView.vala:552
+msgid ""
+"It is recommended to use only alphabets, numbers, and underscores, and none begins "
+"with numbers."
+msgstr ""
+"Yra patartina naudoti tik raidynus, skaičius, ir pabraukimo brūkšnius, ir nei "
+"vienas nėra pradedamas skaičiumi."
+
+#: src/Views/EditView.vala:553
+msgid ""
+"Also, use at least one period to make sure to be separated into at least two "
+"elements."
+msgstr "Taip pat, naudok bent vieną tašką, kad būtų padalinta bent į du elementus."
+
+#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
+#. the desktop file name of SuperTux.
+#: src/Views/EditView.vala:562
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr "Pavyzdžiui, tau reikia naudoti \"%s\" 2D žaidimui, „SuperTux“."
+
+#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
+#: src/Views/EditView.vala:571
+#, c-format
+msgid "For more info, see %s."
+msgstr "Daugiau, žiū. %s."
+
+#: src/Views/EditView.vala:573
+msgid "the file naming specification by freedesktop.org"
+msgstr "rinkmenos užvadinimo specifikacija pagal freedesktop.org"
+
+#: src/Views/FilesView.vala:23
+msgid "Create a new entry"
+msgstr "Kurti naują įvestį"
+
+#: src/Views/FilesView.vala:28
+msgid "Light"
+msgstr "Šviesus"
+
+#: src/Views/FilesView.vala:29
+msgid "Dark"
+msgstr "Tamsus"
+
+#: src/Views/FilesView.vala:33
+msgid "Style"
+msgstr "Stilius"
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/Views/FilesView.vala:35
+#, c-format
+msgid "About %s…"
+msgstr "Apie %s…"
+
+#: src/Views/FilesView.vala:38
+msgid "Preferences"
+msgstr "Nustatymai"
+
+#: src/Views/FilesView.vala:64
+msgid "No valid app entries found"
+msgstr "Nebuvo rasta tinkamos programėlės įvesties"
+
+#: src/Views/FilesView.vala:65
+msgid "If you've never created one, click the + button on the top."
+msgstr "Jeigu nemėginai įgyvendinti spausk Plius mygtuką viršuje."
+
+#: src/Views/FilesView.vala:117
+msgid "Delete…"
+msgstr "Ištrinti…"
+
+#: src/Views/FilesView.vala:123
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "Ar esi tikras, kad nori ištrinti „%s“?"
+
+#: src/Views/FilesView.vala:124
+msgid "This removes the app from the launcher."
+msgstr "Tai pašalina programėlę iš paleidiklio."
+
+#: src/Views/FilesView.vala:127
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: src/Views/FilesView.vala:139
+#, c-format
+msgid "Could not delete file “%s”"
+msgstr "Neįmanoma ištrinti rinkmenos „%s“"
