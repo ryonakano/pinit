@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
 #
 msgid ""
 msgstr ""
@@ -17,7 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n"
 "%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
 
 #: src/AboutWindow.vala:32
 msgid "Create the shortcut to your favorite portable apps into your app launcher"
