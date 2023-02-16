@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"PO-Revision-Date: 2023-02-04 21:08+0200\n"
+"Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n"
+"%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+
+#: data/pinit.metainfo.xml.in:9 data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr "Pakišk tai!"
+
+#: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:5
+msgid "Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+"Pateikti greičiausią nuorodą iki mėgstamiausių perkeliamų programėlių tavo "
+"programų paleidiklyje"
+
+#: data/pinit.metainfo.xml.in:12
+msgid ""
+"Create the shortcut to portable apps like raw executable files, AppImage "
+"files, etc. into the app launcher of your desktop environment."
+msgstr ""
+"Pateikti greičiausią nuorodą perkeliamoms programėlėms (kaip neapdorota "
+"vykdomoji rinkmena, ProgramėlėsVaizdinio rinkmena, t. t.) tiesiogiai "
+"programėlės paleidikliui tavo darbalaukio aplinkoje."
+
+#: data/pinit.metainfo.xml.in:15
+msgid "Other features include:"
+msgstr "Kitos savybės įtraukia:"
+
+#: data/pinit.metainfo.xml.in:19
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+"Keisti arba trinti sukurtas programėlės įvestis neatidarant rinkmenų "
+"tvarkytuvės"
+
+#: data/pinit.metainfo.xml.in:20
+msgid "Automatically add execution permission to the file you select"
+msgstr ""
+"Pagal nutylėjimą įtraukti vykdomąsias teises tavo pasirenkamoms rinkmenoms"
+
+#: data/pinit.metainfo.xml.in:21
+msgid "Syntax error detection"
+msgstr "Sintaksės klaidos paieška"
+
+#: data/pinit.metainfo.xml.in:22
+msgid ""
+"Automatically save everything―your data in editing, last open view, and "
+"preferences"
+msgstr ""
+"Pagal nutylėjimą viską išsaugoti ― tavo įvesties duomenis keitimo metu, "
+"paskutinio atidaryto rodinio metu, ir nustatymus"
+
+#: data/pinit.metainfo.xml.in:28
+msgid "Files view in the light mode"
+msgstr "Rinkmenos rodinys šviesioje veiksenoje"
+
+#: data/pinit.metainfo.xml.in:34
+msgid "Edit view in the light mode"
+msgstr "Keitimo rodinys šviesioje veiksenoje"
+
+#: data/pinit.metainfo.xml.in:39
+msgid "Files view in the dark mode"
+msgstr "Rinkmenos rodinys tamsioje veiksenoje"
+
+#: data/pinit.metainfo.xml.in:44
+msgid "Edit view in the dark mode"
+msgstr "Keitimo rodinys tamsioje veiksenoje"
+
+#: data/pinit.metainfo.xml.in:62
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/pinit.metainfo.xml.in:71
+msgid "The biggest and greatest updates come to \"Pin It!\":"
+msgstr "Didžiausi ir geriausi atnaujinimai kartu su \"Pakišk tai!\":"
+
+#: data/pinit.metainfo.xml.in:75
+msgid ""
+"Redesign to fit modern desktop environments, including support for responsive "
+"design"
+msgstr ""
+"Permodeliuota, kad tiktų naujoviškoms darbalaukio aplinkoms įskaitant ir "
+"grįžtamojo dizaino palaikymą"
+
+#: data/pinit.metainfo.xml.in:76
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr "Pokytis iki GTK 4 versijos, naujausia GTK versija"
+
+#: data/pinit.metainfo.xml.in:78
+msgid "Other changes:"
+msgstr "Kiti pokyčiai:"
+
+#: data/pinit.metainfo.xml.in:82
+msgid "Support setting \".ico\" files as the app icon"
+msgstr "Įgyvendintas \".ico\" rinkmenų nustatymas kaip programėlės ikonėlė"
+
+#: data/pinit.metainfo.xml.in:83
+msgid "Support opening in a text editor"
+msgstr "Įgyvendintas atvėrimas naudojant teksto redaktorių"
+
+#: data/pinit.metainfo.xml.in:84
+msgid "Fix window size cannot be resized on small displays"
+msgstr ""
+"Ištaisyta mažo dydžio vaizduokliuose kuomet neįmanoma keisti langelio dydį"
+
+#: data/pinit.metainfo.xml.in:85
+msgid "Show error dialogs when saving/deleting failed"
+msgstr "Vaizduoti klaidų dialogo langus kuomet nepavyksta išsaugoti/ištrinti"
+
+#: data/pinit.metainfo.xml.in:86
+msgid "Make sure not to add blank elements in generated desktop files"
+msgstr ""
+"Pasitikrinti nepridėtų tuščių elementų formuojamuose darbalaukio rinkmenose"
+
+#: data/pinit.metainfo.xml.in:87
+msgid "Don't overwrite the entire permission of the selected executable files"
+msgstr "Nepakeiskite pasirinktų paleidžiamųjų dokumentų programinių teisių"
+
+#: data/pinit.metainfo.xml.in:88
+msgid "Give executable permission for the user only when they don't have it"
+msgstr "Paleidimo teises naudotojui teikti tik kuomet jis šių teisių neturi"
+
+#: data/pinit.metainfo.xml.in:89
+msgid "Update translations"
+msgstr "Vertimo naujinimas"
+
+#: data/pinit.metainfo.xml.in:97
+msgid "AppData: Fix release year"
+msgstr "ProgramėlėsDuomenys: Ištaisyti leidinio metai"
+
+#: data/pinit.metainfo.xml.in:99 data/pinit.metainfo.xml.in:114
+#: data/pinit.metainfo.xml.in:133 data/pinit.metainfo.xml.in:146
+#: data/pinit.metainfo.xml.in:160 data/pinit.metainfo.xml.in:174
+#: data/pinit.metainfo.xml.in:188 data/pinit.metainfo.xml.in:204
+msgid "Translation updates:"
+msgstr "Vertimo naujiniai:"
+
+#: data/pinit.metainfo.xml.in:101
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "Update Italian translation (thanks to @albanobattistella)"
+
+#: data/pinit.metainfo.xml.in:109
+msgid "Check desktop environment on runtime"
+msgstr "Darbalaukio aplinkos patikra paleisties metu"
+
+#: data/pinit.metainfo.xml.in:110
+msgid "Lessen scope of file access"
+msgstr "Apriboti rinkmenos prieigą"
+
+#: data/pinit.metainfo.xml.in:111
+msgid "Make window resizable"
+msgstr "Leisti keisti langelio dydį"
+
+#: data/pinit.metainfo.xml.in:112
+msgid "EditView: Less strict on file names"
+msgstr "KeitimoRodinys: Ne toks griežtas rinkmenų užvardinimui"
+
+#: data/pinit.metainfo.xml.in:116
+msgid "Add Italian translation (thanks to @albanobattistella)"
+msgstr "Add Italian translation (thanks to @albanobattistella)"
+
+#: data/pinit.metainfo.xml.in:117
+msgid "Add Dutch translation (thanks to @Vistaus)"
+msgstr "Add Dutch translation (thanks to @Vistaus)"
+
+#: data/pinit.metainfo.xml.in:118 data/pinit.metainfo.xml.in:135
+#: data/pinit.metainfo.xml.in:149 data/pinit.metainfo.xml.in:163
+#: data/pinit.metainfo.xml.in:176 data/pinit.metainfo.xml.in:190
+#: data/pinit.metainfo.xml.in:207
+msgid "Update Japanese translation"
+msgstr "Atnaujinti japonų išvertimą"
+
+#: data/pinit.metainfo.xml.in:126
+msgid "Fix build error on other distros"
+msgstr "Ištaisyta darinio klaida kitose distribucijose"
+
+#: data/pinit.metainfo.xml.in:127
+msgid "FilesView: Properly center the dialog against the app window"
+msgstr ""
+"RinkmenosRodinys: Tinkamai centruoti dialogo langą priešais programos langelį"
+
+#: data/pinit.metainfo.xml.in:128
+msgid "Restore last opened view and its state"
+msgstr "Grąžinti paskutinį naudotą rodinį ir jo būseną"
+
+#: data/pinit.metainfo.xml.in:129
+msgid "Add new style switcher"
+msgstr "Pridėti naują stilių perjungiklį"
+
+#: data/pinit.metainfo.xml.in:130
+msgid "Correct titlebar label when no app name specified"
+msgstr ""
+"Ištaisyti pavadinimo juostos labelį kuomet nepateikiamas programėlės vardas"
+
+#: data/pinit.metainfo.xml.in:131
+msgid "Readable copies"
+msgstr "Perskaitomos kopijos"
+
+#: data/pinit.metainfo.xml.in:143
+msgid "FilesView: Ellipsize if label texts are too long"
+msgstr "RinkmenosRodinys: Tritaškis jei labelis per ilgas"
+
+#: data/pinit.metainfo.xml.in:144
+msgid "Tell accepted file formats in FileChooser"
+msgstr "Nusakyti priimtinus rinkmenų formatus Rinkmenų parinkėjui"
+
+#: data/pinit.metainfo.xml.in:148
+msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+msgstr "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+
+#: data/pinit.metainfo.xml.in:157
+msgid "EditView: Focus on file name entry by default"
+msgstr ""
+"KeitimoRodinys: pagal nutylėjimą susikoncentruoti ties rinkmenos įrašo įvestimi"
+
+#: data/pinit.metainfo.xml.in:158
+msgid "FilesView: Make scrollable and fix the window get bigger if many entries"
+msgstr ""
+"RinkmenosRodinys: Įgyvendinta slankjuostė ir tvarkingas langelio dydis "
+"perpildant daugybe įvesčių"
+
+#: data/pinit.metainfo.xml.in:162
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Add French translation (thanks to @NathanBnm)"
+
+#: data/pinit.metainfo.xml.in:171
+msgid "Improved support for other desktop environments"
+msgstr "Patobulintas kitų darbalaukio aplinkų palaikymas"
+
+#: data/pinit.metainfo.xml.in:172
+msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgstr "Pridėti vykdomąsias teises \"Pakišk tai!\" mygtuko paspaudimui"
+
+#: data/pinit.metainfo.xml.in:184
+msgid "Add CategoryChooser"
+msgstr "Pridėti kategorijos parinkėją"
+
+#: data/pinit.metainfo.xml.in:185
+msgid "Support Alt+Home to show welcome"
+msgstr "Palaikoma ALT+Home pasisveikinimo vaizdavimui"
+
+#: data/pinit.metainfo.xml.in:186
+msgid "Allow GPU acceralation by default"
+msgstr "Pagal nutylėjimą palaikomas Grafinio Procesorinio Vieneto akceleracija"
+
+#: data/pinit.metainfo.xml.in:198
+msgid "Add 128px app icon (thanks to @hanaral)"
+msgstr "Add 128px app icon (thanks to @hanaral)"
+
+#: data/pinit.metainfo.xml.in:199
+msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+msgstr "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+
+#: data/pinit.metainfo.xml.in:200
+msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+msgstr "Support multitouch gestures (thanks to @JeysonFlores)"
+
+#: data/pinit.metainfo.xml.in:201
+msgid "Fix unreadable description text in AppCenter"
+msgstr "Sutvarkyti neperskaitomą \"AppCenter\" informacinį pranešimą"
+
+#: data/pinit.metainfo.xml.in:202
+msgid "Save and restore window position"
+msgstr "Išsaugoti ir sugrąžinti langelio vietą"
+
+#: data/pinit.metainfo.xml.in:206
+msgid "Add Spanish translation (thanks to @JeysonFlores)"
+msgstr "Add Spanish translation (thanks to @JeysonFlores)"
+
+#: data/pinit.metainfo.xml.in:215
+msgid "Initial release"
+msgstr "Pradinis leidimas"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "Darbalaukio rinkmenų savininkas"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr ""
+"Darbalaukis;Rinkmena;Sukurti;Keisti;Informacija;Ikonėlė;Programos atvaizdas;"
