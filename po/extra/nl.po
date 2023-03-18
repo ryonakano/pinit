@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
+# Philip Goto <philip.goto@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-03 17:20+0900\n"
-"PO-Revision-Date: 2023-01-05 06:52+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"PO-Revision-Date: 2023-03-19 14:38+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
 "pinit-metadata/nl/>\n"
 "Language: nl\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: data/pinit.metainfo.xml.in:9 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -25,17 +26,15 @@ msgstr "Pin It!"
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:5
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
-msgstr "Maak snelkoppelingen naar uw favoriete toepassingen"
+msgstr "Maak snelkoppelingen naar uw favoriete portable-apps"
 
 #: data/pinit.metainfo.xml.in:12
-#, fuzzy
 msgid ""
 "Create the shortcut to portable apps like raw executable files, AppImage "
 "files, etc. into the app launcher of your desktop environment."
 msgstr ""
-"Voeg eenvoudig toepassingen toe aan de starter, zoals uitvoerbare bestanden, "
-"AppImage-bestanden, etc. Bewerk of verwijder reeds aanwezige items zonder "
-"een bestandsbeheerder te hoeven openen."
+"Voeg eenvoudig portable-apps zoals uitvoerbare bestanden, AppImage-"
+"bestanden, etc. toe aan uw app-launcher."
 
 #: data/pinit.metainfo.xml.in:15
 msgid "Other features include:"
@@ -95,7 +94,7 @@ msgstr "Migratie naar GTK4, de nieuwste GTK-versie"
 
 #: data/pinit.metainfo.xml.in:78
 msgid "Other changes:"
-msgstr ""
+msgstr "Andere wijzigingen:"
 
 #: data/pinit.metainfo.xml.in:82
 msgid "Support setting \".ico\" files as the app icon"
@@ -127,7 +126,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:89
 msgid "Update translations"
-msgstr "Bijgewerkt: vertalingen"
+msgstr "Vertalingen bijgewerkt"
 
 #: data/pinit.metainfo.xml.in:97
 msgid "AppData: Fix release year"
