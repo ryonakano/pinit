@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 21:43+0900\n"
+"POT-Creation-Date: 2023-04-09 09:32+0000\n"
 "PO-Revision-Date: 2023-02-04 21:07+0200\n"
 "Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
 "Language-Team: \n"
@@ -15,11 +15,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n"
-"%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 
 #: src/AboutWindow.vala:32
-msgid "Create the shortcut to your favorite portable apps into your app launcher"
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
 msgstr "Utwórz skrót do ulubionych aplikacji przenośnych w wyrzutni aplikacji"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
@@ -132,11 +133,11 @@ msgstr "Plik wykonywalny"
 
 #: src/Views/EditView.vala:131
 msgid ""
-"The command/app launched when you click the app entry in the launcher. Specify in "
-"an absolute path or an app's alias name."
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
 msgstr ""
-"Polecenie/aplikacja została uruchomione po kliknięciu wpisu aplikacji w wyrzutni. "
-"Określ w ścieżce bezwzględnej lub nazwie aliasu aplikacji."
+"Polecenie/aplikacja została uruchomione po kliknięciu wpisu aplikacji w "
+"wyrzutni. Określ w ścieżce bezwzględnej lub nazwie aliasu aplikacji."
 
 #: src/Views/EditView.vala:148
 msgid "Icon File"
@@ -144,9 +145,11 @@ msgstr "Plik ikony"
 
 #: src/Views/EditView.vala:153
 msgid ""
-"The icon branding the app. Specify in an absolute path or an icon's alias name."
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
 msgstr ""
-"Ikona promująca aplikację. Określ w ścieżce bezwzględnej lub nazwie aliasu ikony."
+"Ikona promująca aplikację. Określ w ścieżce bezwzględnej lub nazwie aliasu "
+"ikony."
 
 #: src/Views/EditView.vala:170
 msgid "App Categories"
@@ -162,11 +165,11 @@ msgstr "Konfiguracja zaawansowana"
 
 #: src/Views/EditView.vala:192
 msgid ""
-"You can create an app entry by filling the sections above in most cases. You can "
-"use the following section in case they don't work."
+"You can create an app entry by filling the sections above in most cases. You "
+"can use the following section in case they don't work."
 msgstr ""
-"W większości przypadków można utworzyć wpis aplikacji wypełniając powyższe sekcje."
-"Możesz użyć poniższej sekcji, jeśli nie działają."
+"W większości przypadków można utworzyć wpis aplikacji wypełniając powyższe "
+"sekcje.Możesz użyć poniższej sekcji, jeśli nie działają."
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
@@ -174,8 +177,8 @@ msgstr "Startup WM Class"
 
 #: src/Views/EditView.vala:204
 msgid ""
-"Associate the app with a window that has this ID. Fill in this if a different or "
-"duplicated icon comes up to the dock when the app launches."
+"Associate the app with a window that has this ID. Fill in this if a "
+"different or duplicated icon comes up to the dock when the app launches."
 msgstr ""
 "Skojarz aplikację z oknem o tym identyfikatorze. Wypełnij to, jeśli po "
 "uruchomieniu aplikacji do doku pojawi się inna lub zduplikowana ikona."
@@ -253,8 +256,8 @@ msgid ""
 "It is recommended to use only alphabets, numbers, and underscores, and none "
 "begins with numbers."
 msgstr ""
-"Zaleca się używanie tylko alfabetów, liczb całkowitych i podkreśleń, a żadna nie "
-"zaczyna się od liczb."
+"Zaleca się używanie tylko alfabetów, liczb całkowitych i podkreśleń, a żadna "
+"nie zaczyna się od liczb."
 
 #: src/Views/EditView.vala:553
 msgid ""
