@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:32+0000\n"
-"PO-Revision-Date: 2023-04-09 09:35+0000\n"
+"PO-Revision-Date: 2023-04-11 08:52+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
 "pinit-app/pt_BR/>\n"
@@ -27,14 +27,14 @@ msgstr ""
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
 msgid "translator-credits"
-msgstr ""
+msgstr "Felipe Nogueira <contato.fnog@gmail.com>"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
 #: src/Backend/ExternalAppLauncher.vala:41
 #, c-format
 msgid "Cannot open %s: %s"
-msgstr ""
+msgstr "Não é possível abrir %s: %s"
 
 #: src/CategoryChooser.vala:90
 msgid "Audio & Video"
@@ -161,8 +161,6 @@ msgid "App Categories"
 msgstr "Categorias do Aplicativo"
 
 #: src/Views/EditView.vala:174
-#, fuzzy
-#| msgid "Type of the app, multiplly selectable."
 msgid "Type of the app, multiply selectable."
 msgstr "Tipo do aplicativo, múltipla escolha."
 
@@ -191,8 +189,6 @@ msgid "Run in Terminal"
 msgstr "Executar no Terminal"
 
 #: src/Views/EditView.vala:219
-#, fuzzy
-#| msgid "Check this in if you want to registar a CUI app."
 msgid "Check this in if you want to register a CUI app."
 msgstr "Marque aqui se você quiser registar uma aplicativo CUI"
 
@@ -219,7 +215,7 @@ msgstr "Cancelar"
 
 #: src/Views/EditView.vala:345
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "Arquivos ICO, PNG, SVG, ou XMP"
 
 #: src/Views/EditView.vala:348
 msgid "Select an icon file"
@@ -232,7 +228,7 @@ msgstr ""
 #: src/Views/EditView.vala:371 src/Views/EditView.vala:530
 #: src/Views/FilesView.vala:142
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: src/Views/EditView.vala:421
 msgid "New Entry"
@@ -293,15 +289,15 @@ msgstr "Criar um novo arquivo de desktop."
 
 #: src/Views/FilesView.vala:28
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: src/Views/FilesView.vala:29
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #: src/Views/FilesView.vala:33
 msgid "Style"
-msgstr ""
+msgstr "Tema"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:35
@@ -311,7 +307,7 @@ msgstr ""
 
 #: src/Views/FilesView.vala:38
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: src/Views/FilesView.vala:64
 #, fuzzy
@@ -344,7 +340,7 @@ msgstr "Deletar"
 #: src/Views/FilesView.vala:139
 #, c-format
 msgid "Could not delete file “%s”"
-msgstr ""
+msgstr "Não foi possível apagar o arquivo \"%s\""
 
 #~ msgid "Edit…"
 #~ msgstr "Editar…"
