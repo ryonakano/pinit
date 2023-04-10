@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:32+0000\n"
-"PO-Revision-Date: 2023-01-08 15:49+0000\n"
+"PO-Revision-Date: 2023-04-11 08:52+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-"
-"metadata/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
+"pinit-metadata/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -86,10 +86,8 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/pinit.metainfo.xml.in:72
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Aggiornata traduzione giapponese"
+msgstr "Aggiorna la versione runtime di Flatpak"
 
 #: data/pinit.metainfo.xml.in:73 data/pinit.metainfo.xml.in:98
 msgid "Update translations"
