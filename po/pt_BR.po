@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:32+0000\n"
-"PO-Revision-Date: 2023-04-11 08:52+0000\n"
+"PO-Revision-Date: 2023-04-13 05:51+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
 "pinit-app/pt_BR/>\n"
@@ -283,9 +283,8 @@ msgid "the file naming specification by freedesktop.org"
 msgstr ""
 
 #: src/Views/FilesView.vala:23
-#, fuzzy
 msgid "Create a new entry"
-msgstr "Criar um novo arquivo de desktop."
+msgstr "Criar uma nova entrada"
 
 #: src/Views/FilesView.vala:28
 msgid "Light"
@@ -303,7 +302,7 @@ msgstr "Tema"
 #: src/Views/FilesView.vala:35
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "Sobre %s…"
 
 #: src/Views/FilesView.vala:38
 msgid "Preferences"
