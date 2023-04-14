@@ -1,7 +1,7 @@
 project(
     'com.github.ryonakano.pinit',
     'vala', 'c',
-    version: '2.0.0',
+    version: '2.0.1',
     meson_version: '>=0.57.0'
 )
 
