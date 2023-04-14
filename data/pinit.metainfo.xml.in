@@ -27,22 +27,22 @@
   <screenshots>
     <screenshot type="default">
       <caption>Files view in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.0/data/screenshots/gnome/screenshot-files-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.1/data/screenshots/gnome/screenshot-files-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.0/data/screenshots/gnome/screenshot-edit-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.1/data/screenshots/gnome/screenshot-edit-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Files view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.0/data/screenshots/gnome/screenshot-files-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.1/data/screenshots/gnome/screenshot-files-view-dark.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.0/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.1/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -66,7 +66,7 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.0.1" date="2023-04-16" urgency="low">
+    <release version="2.0.1" date="2023-04-15" urgency="low">
       <description>
         <ul>
           <li>Update Flatpak runtime version</li>
