@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# FIRST AUTHOR Amerey.eu <info@amerey.eu>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"PO-Revision-Date: 2023-04-17 18:46+0200\n"
+"Last-Translator: Amerey.eu <info@amerey.eu>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: src/AboutWindow.vala:32
+msgid ""
+"Create the shortcut to your favorite portable apps into your app launcher"
+msgstr ""
+"Vytvořte si zástupce svých oblíbených přenosných aplikací ve spouštěči "
+"aplikací"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/AboutWindow.vala:42
+msgid "translator-credits"
+msgstr "Amerey.eu"
+
+#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
+#. The second "%s" represents the detailed error message.
+#: src/Backend/ExternalAppLauncher.vala:41
+#, c-format
+msgid "Cannot open %s: %s"
+msgstr "Nelze otevřít %s: %s"
+
+#: src/CategoryChooser.vala:90
+msgid "Audio & Video"
+msgstr "Audio a Video"
+
+#: src/CategoryChooser.vala:91
+msgid "Audio"
+msgstr "Audio"
+
+#: src/CategoryChooser.vala:92
+msgid "Video"
+msgstr "Video"
+
+#: src/CategoryChooser.vala:93
+msgid "Development"
+msgstr "Vývoj"
+
+#: src/CategoryChooser.vala:94
+msgid "Education"
+msgstr "Vzdělávání"
+
+#: src/CategoryChooser.vala:95
+msgid "Game"
+msgstr "Hry"
+
+#: src/CategoryChooser.vala:96
+msgid "Graphics"
+msgstr "Grafika"
+
+#: src/CategoryChooser.vala:97
+msgid "Network"
+msgstr "Síť"
+
+#: src/CategoryChooser.vala:98
+msgid "Office"
+msgstr "Kancelář"
+
+#: src/CategoryChooser.vala:99
+msgid "Science"
+msgstr "Věda"
+
+#: src/CategoryChooser.vala:100
+msgid "Settings"
+msgstr "Nastavení"
+
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+msgid "System"
+msgstr "Systém"
+
+#: src/CategoryChooser.vala:102
+msgid "Utility"
+msgstr "Služby"
+
+#: src/MainWindow.vala:45
+msgid "Updated entry."
+msgstr "Aktualizovaná položka."
+
+#: src/MainWindow.vala:49
+msgid "Deleted entry."
+msgstr "Smazaná položka."
+
+#: src/Views/EditView.vala:51
+msgid "Save"
+msgstr "Uložit"
+
+#: src/Views/EditView.vala:61
+msgid "File Name"
+msgstr "Název souboru"
+
+#: src/Views/EditView.vala:66
+msgid "Name of the file where these app info is saved."
+msgstr "Název souboru, kde jsou tyto informace o aplikaci uloženy."
+
+#: src/Views/EditView.vala:76
+msgid "Suffix of the file"
+msgstr "Přípona souboru"
+
+#: src/Views/EditView.vala:88
+msgid "App Name"
+msgstr "Jméno aplikace"
+
+#: src/Views/EditView.vala:92
+msgid "Shown in the launcher or Dock."
+msgstr "Zobrazuje se ve spouštěči aplikací nebo doku."
+
+#: src/Views/EditView.vala:107
+msgid "Comment"
+msgstr "Popis aplikace"
+
+#: src/Views/EditView.vala:111
+msgid "A tooltip text to describe what the app helps you to do."
+msgstr "Text popisující, s čím vám aplikace pomáhá."
+
+#: src/Views/EditView.vala:126
+msgid "Exec File"
+msgstr "Spustitelný soubor"
+
+#: src/Views/EditView.vala:131
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Příkaz/aplikace se spustí po kliknutí na položku aplikace ve spouštěči. "
+"Zadejte absolutní cestu nebo název aliasu aplikace."
+
+#: src/Views/EditView.vala:148
+msgid "Icon File"
+msgstr "Ikona"
+
+#: src/Views/EditView.vala:153
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr "Ikona aplikace. Zadejte absolutní cestu nebo název aliasu ikony."
+
+#: src/Views/EditView.vala:170
+msgid "App Categories"
+msgstr "Kategorie aplikací"
+
+#: src/Views/EditView.vala:174
+msgid "Type of the app, multiply selectable."
+msgstr "Typ aplikace, vícenásobný výběr."
+
+#: src/Views/EditView.vala:187
+msgid "Advanced configuration"
+msgstr "Pokročilá konfigurace"
+
+#: src/Views/EditView.vala:192
+msgid ""
+"You can create an app entry by filling the sections above in most cases. You "
+"can use the following section in case they don't work."
+msgstr ""
+"Ve většině případů můžete vytvořit položku aplikace vyplněním sekcí výše. V "
+"případě, že nebudou fungovat, můžete použít následující sekci."
+
+#: src/Views/EditView.vala:199
+msgid "Startup WM Class"
+msgstr "Třída spuštění WM"
+
+#: src/Views/EditView.vala:204
+msgid ""
+"Associate the app with a window that has this ID. Fill in this if a "
+"different or duplicated icon comes up to the dock when the app launches."
+msgstr ""
+"Přidružte aplikaci k oknu, které má toto ID. Vyplňte, pokud se při spuštění "
+"aplikace objeví v doku jiná nebo duplicitní ikona."
+
+#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+msgid "Run in Terminal"
+msgstr "Spustit v Terminálu"
+
+#: src/Views/EditView.vala:219
+msgid "Check this in if you want to register a CUI app."
+msgstr "Zaškrtněte, pokud chcete zaregistrovat aplikaci CUI."
+
+#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
+msgid "Open in text editor"
+msgstr "Otevřít v textovém editoru"
+
+#: src/Views/EditView.vala:233
+msgid "You can also edit more options by opening in a text editor."
+msgstr "Další možnosti můžete upravit otevřením v textovém editoru."
+
+#: src/Views/EditView.vala:314
+msgid "Select an executable file"
+msgstr "Vybrat spustitelný soubor"
+
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
+msgid "Open"
+msgstr "Otevřít"
+
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
+#: src/Views/EditView.vala:489 src/Views/FilesView.vala:126
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: src/Views/EditView.vala:345
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO, PNG, SVG, nebo XMP soubory"
+
+#: src/Views/EditView.vala:348
+msgid "Select an icon file"
+msgstr "Vybrat ikonu"
+
+#: src/Views/EditView.vala:368
+msgid "Could not open with external app"
+msgstr "Nelze otevřít pomocí externí aplikace"
+
+#: src/Views/EditView.vala:371 src/Views/EditView.vala:530
+#: src/Views/FilesView.vala:142
+msgid "Close"
+msgstr "Zavřít"
+
+#: src/Views/EditView.vala:421
+msgid "New Entry"
+msgstr "Nová položka"
+
+#: src/Views/EditView.vala:430
+msgid "Editing Entry"
+msgstr "Editace položky"
+
+#: src/Views/EditView.vala:436
+#, c-format
+msgid "Editing “%s”"
+msgstr "Editace “%s”"
+
+#: src/Views/EditView.vala:527
+#, c-format
+msgid "Could not write to file “%s”"
+msgstr "Nelze zapisovat do souboru \"%s\""
+
+#: src/Views/EditView.vala:546
+msgid "Recommendations for naming"
+msgstr "Doporučení k pojmenovávání"
+
+#: src/Views/EditView.vala:552
+msgid ""
+"It is recommended to use only alphabets, numbers, and underscores, and none "
+"begins with numbers."
+msgstr ""
+"Doporučuje se používat pouze písmena, čísla a podtržítka a nezačínat čísly."
+
+#: src/Views/EditView.vala:553
+msgid ""
+"Also, use at least one period to make sure to be separated into at least two "
+"elements."
+msgstr ""
+"Použijte také alespoň jednu tečku, abyste se ujistili, že je název rozdělen "
+"alespoň na dva prvky."
+
+#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
+#. the desktop file name of SuperTux.
+#: src/Views/EditView.vala:562
+#, c-format
+msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgstr "Například byste měli použít \"%s\" pro 2D hru SuperTux."
+
+#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
+#: src/Views/EditView.vala:571
+#, c-format
+msgid "For more info, see %s."
+msgstr "Další informace naleznete na %s."
+
+#: src/Views/EditView.vala:573
+msgid "the file naming specification by freedesktop.org"
+msgstr "specifikace pojmenování souborů od freedesktop.org"
+
+#: src/Views/FilesView.vala:23
+msgid "Create a new entry"
+msgstr "Vytvořit novou položku"
+
+#: src/Views/FilesView.vala:28
+msgid "Light"
+msgstr "Světlý"
+
+#: src/Views/FilesView.vala:29
+msgid "Dark"
+msgstr "Tmavý"
+
+#: src/Views/FilesView.vala:33
+msgid "Style"
+msgstr "Motiv"
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/Views/FilesView.vala:35
+#, c-format
+msgid "About %s…"
+msgstr "O aplikaci %s…"
+
+#: src/Views/FilesView.vala:38
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: src/Views/FilesView.vala:64
+msgid "No valid app entries found"
+msgstr "Nebyly nalezeny žádné platné položky aplikací"
+
+#: src/Views/FilesView.vala:65
+msgid "If you've never created one, click the + button on the top."
+msgstr "Pro vytvoření klikněte na tlačítko + v horní části."
+
+#: src/Views/FilesView.vala:117
+msgid "Delete…"
+msgstr "Smazat…"
+
+#: src/Views/FilesView.vala:123
+#, c-format
+msgid "Are you sure you want to delete “%s”?"
+msgstr "Opravdu chcete smazat „%s“?"
+
+#: src/Views/FilesView.vala:124
+msgid "This removes the app from the launcher."
+msgstr "Tím se aplikace odstraní ze spouštěče aplikací."
+
+#: src/Views/FilesView.vala:127
+msgid "Delete"
+msgstr "Smazat"
+
+#: src/Views/FilesView.vala:139
+#, c-format
+msgid "Could not delete file “%s”"
+msgstr "Nelze smazat soubor „%s“"
