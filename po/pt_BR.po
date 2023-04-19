@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:32+0000\n"
-"PO-Revision-Date: 2023-04-13 05:51+0000\n"
+"PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
 "pinit-app/pt_BR/>\n"
@@ -17,12 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: src/AboutWindow.vala:32
 msgid ""
 "Create the shortcut to your favorite portable apps into your app launcher"
 msgstr ""
+"Crie o atalho para seus aplicativos portáteis favoritos em seu lançador de "
+"aplicativos"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -105,11 +107,8 @@ msgid "File Name"
 msgstr "Nome do Arquivo"
 
 #: src/Views/EditView.vala:66
-#, fuzzy
 msgid "Name of the file where these app info is saved."
-msgstr ""
-"Nome do arquivo de desktop. Apenas letras minúsculas e números são "
-"permitidos."
+msgstr "Nome do arquivo onde essas informações do aplicativo são salvas."
 
 #: src/Views/EditView.vala:76
 msgid "Suffix of the file"
