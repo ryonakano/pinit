@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"POT-Creation-Date: 2023-05-16 20:01+0900\n"
 "PO-Revision-Date: 2022-09-24 01:20+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -229,7 +229,7 @@ msgid "Improved support for other desktop environments"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in:181
-msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in:193

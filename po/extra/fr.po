@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"POT-Creation-Date: 2023-05-16 20:01+0900\n"
 "PO-Revision-Date: 2023-01-13 17:48+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -267,7 +267,9 @@ msgid "Improved support for other desktop environments"
 msgstr "Amélioration de la prise en charge des autres environnements de bureau"
 
 #: data/pinit.metainfo.xml.in:181
-msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#, fuzzy
+#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr ""
 "Ajout d'une permission d'exécution au clic sur le bouton « Épingler ! »"
 

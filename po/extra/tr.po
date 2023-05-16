@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"POT-Creation-Date: 2023-05-16 20:01+0900\n"
 "PO-Revision-Date: 2023-05-01 02:53+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
-"pinit-metadata/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-"
+"metadata/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -246,7 +246,9 @@ msgid "Improved support for other desktop environments"
 msgstr "Diğer masaüstü ortamları için geliştirilmiş destek"
 
 #: data/pinit.metainfo.xml.in:181
-msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#, fuzzy
+#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr "\"Pin It!\" düğmesine tıklandığında yürütme izni eklendi"
 
 #: data/pinit.metainfo.xml.in:193

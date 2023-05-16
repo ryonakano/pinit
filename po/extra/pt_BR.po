@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"POT-Creation-Date: 2023-05-16 20:01+0900\n"
 "PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -247,7 +247,9 @@ msgid "Improved support for other desktop environments"
 msgstr "Melhorias no suporte para outros ambientes de trabalho"
 
 #: data/pinit.metainfo.xml.in:181
-msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#, fuzzy
+#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
 
 #: data/pinit.metainfo.xml.in:193

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:32+0000\n"
+"POT-Creation-Date: 2023-05-16 20:01+0900\n"
 "PO-Revision-Date: 2023-02-04 21:09+0200\n"
 "Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
 "Language-Team: \n"
@@ -245,7 +245,9 @@ msgid "Improved support for other desktop environments"
 msgstr "Lepsza obsługa innych środowisk stacjonarnych"
 
 #: data/pinit.metainfo.xml.in:181
-msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#, fuzzy
+#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr "Dodaj permisson wykonywania po kliknięciu przycisku \"Przypnij go!\""
 
 #: data/pinit.metainfo.xml.in:193
