@@ -70,7 +70,7 @@ public class CategoryChooser : Gtk.Grid {
     private Gee.ArrayList<ToggleButton> toggles;
 
     /*
-     * Key: Category name in dekstop files
+     * Key: Category name in desktop files
      * Value: Translatable button labels for each key
      */
     private Gee.HashMap<string, string> categories;
