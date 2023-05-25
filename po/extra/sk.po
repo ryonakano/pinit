@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-16 20:01+0900\n"
-"PO-Revision-Date: 2023-05-25 11:53+0000\n"
+"PO-Revision-Date: 2023-05-26 12:52+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
 "pinit-metadata/sk/>\n"
@@ -66,19 +66,19 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:29
 msgid "Files view in the light mode"
-msgstr ""
+msgstr "Zobrazenie súborov v svetlom režime"
 
 #: data/pinit.metainfo.xml.in:34
 msgid "Edit view in the light mode"
-msgstr ""
+msgstr "Zobrazenie úprav v svetlom režime"
 
 #: data/pinit.metainfo.xml.in:39
 msgid "Files view in the dark mode"
-msgstr ""
+msgstr "Zobrazenie súborov v tmavom režime"
 
 #: data/pinit.metainfo.xml.in:44
 msgid "Edit view in the dark mode"
-msgstr ""
+msgstr "Zobrazenie úprav v tmavom režime"
 
 #: data/pinit.metainfo.xml.in:62
 msgid "Ryo Nakano"
@@ -95,48 +95,53 @@ msgstr "Aktualizované preklady"
 #: data/pinit.metainfo.xml.in:80
 msgid "The biggest and greatest updates come to \"Pin It!\":"
 msgstr ""
+"Najväčšie a najúžasnejšie aktualizácie prichádzajú do aplikácie „Pin It!“:"
 
 #: data/pinit.metainfo.xml.in:84
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
 msgstr ""
+"Prepracovanie vzhľadu tak, aby vyhovoval moderným prostrediam, vrátane "
+"podpory adaptívneho dizajnu"
 
 #: data/pinit.metainfo.xml.in:85
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migrácia na GTK 4, čo je najnovšia verzia GTK"
 
 #: data/pinit.metainfo.xml.in:87
 msgid "Other changes:"
-msgstr ""
+msgstr "Ďalšie zmeny:"
 
 #: data/pinit.metainfo.xml.in:91
 msgid "Support setting \".ico\" files as the app icon"
-msgstr ""
+msgstr "Podpora nastavenia súborov „.ico“ ako ikonky aplikácií"
 
 #: data/pinit.metainfo.xml.in:92
 msgid "Support opening in a text editor"
-msgstr ""
+msgstr "Podpora otvárania v textovom editore"
 
 #: data/pinit.metainfo.xml.in:93
 msgid "Fix window size cannot be resized on small displays"
-msgstr ""
+msgstr "Oprava nemožnosti zmeniť veľkosť okna na malých obrazovkách"
 
 #: data/pinit.metainfo.xml.in:94
 msgid "Show error dialogs when saving/deleting failed"
-msgstr ""
+msgstr "Zobraziť dialógové okná chýb pri zlyhaní ukladania/odstránenia"
 
 #: data/pinit.metainfo.xml.in:95
 msgid "Make sure not to add blank elements in generated desktop files"
 msgstr ""
+"Uistiť sa, aby neboli pridávané prázdne prvky do vygenerovaných súborov "
+"pracovnej plochy"
 
 #: data/pinit.metainfo.xml.in:96
 msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr ""
+msgstr "Neprepisovať celé oprávnenie vybraných spustiteľných súborov"
 
 #: data/pinit.metainfo.xml.in:97
 msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
+msgstr "Udeliť používateľovi oprávnenie na spustenie, len ak ho nemá"
 
 #: data/pinit.metainfo.xml.in:106
 msgid "AppData: Fix release year"
@@ -151,7 +156,7 @@ msgstr "Aktualizácie prekladov:"
 
 #: data/pinit.metainfo.xml.in:110
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Aktualizácia prekladu do taliančiny (vďaka @albanobattistella)"
+msgstr "Aktualizovaný preklad do taliančiny (vďaka @albanobattistella)"
 
 #: data/pinit.metainfo.xml.in:118
 msgid "Check desktop environment on runtime"
@@ -241,8 +246,6 @@ msgid "Improved support for other desktop environments"
 msgstr "Zlepšenie podpory pre ostatné pracovné prostredia"
 
 #: data/pinit.metainfo.xml.in:181
-#, fuzzy
-#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr ""
 "Pridané povolenie spustenia po kliknutí na tlačidlo „Pin It!“ (Pripnúť!)"
