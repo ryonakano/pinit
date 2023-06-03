@@ -44,7 +44,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('gio-unix-2.0'),
-        dependency('gtk4'),
+        dependency('gtk4', version: '>= 4.10'),
         dependency('libadwaita-1', version: '>= 1.2.0'),
         dependency('pango'),
         meson.get_compiler('vala').find_library('posix')

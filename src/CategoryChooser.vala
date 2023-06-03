@@ -114,9 +114,9 @@ public class CategoryChooser : Gtk.Grid {
                  * depends on if it's currently highlight or not.
                  */
                 if (toggle.active) {
-                    toggle.get_style_context ().add_class ("accent");
+                    toggle.add_css_class ("accent");
                 } else {
-                    toggle.get_style_context ().remove_class ("accent");
+                    toggle.remove_css_class ("accent");
                 }
 
                 toggled ();

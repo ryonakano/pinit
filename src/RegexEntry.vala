@@ -25,9 +25,9 @@ public class RegexEntry : Gtk.Entry {
         // Check syntax errors and update style when text in the entry changed
         buffer.notify["text"].connect (() => {
             if (buffer.text == "") {
-                get_style_context ().remove_class ("success");
-                get_style_context ().remove_class ("warning");
-                get_style_context ().remove_class ("error");
+                remove_css_class ("success");
+                remove_css_class ("warning");
+                remove_css_class ("error");
                 is_valid = false;
 
                 return;
@@ -35,9 +35,9 @@ public class RegexEntry : Gtk.Entry {
 
             // Text matches, OK
             if (pattern.match (buffer.text)) {
-                get_style_context ().remove_class ("warning");
-                get_style_context ().remove_class ("error");
-                get_style_context ().add_class ("success");
+                remove_css_class ("warning");
+                remove_css_class ("error");
+                add_css_class ("success");
                 is_valid = true;
 
                 return;
@@ -45,18 +45,18 @@ public class RegexEntry : Gtk.Entry {
 
             // Text doesn't match the syntax but not fatal
             if (!is_strict) {
-                get_style_context ().remove_class ("success");
-                get_style_context ().remove_class ("error");
-                get_style_context ().add_class ("warning");
+                remove_css_class ("success");
+                remove_css_class ("error");
+                add_css_class ("warning");
                 is_valid = true;
 
                 return;
             }
 
             // Text doesn't match the syntax, not OK
-            get_style_context ().remove_class ("success");
-            get_style_context ().remove_class ("warning");
-            get_style_context ().add_class ("error");
+            remove_css_class ("success");
+            remove_css_class ("warning");
+            add_css_class ("error");
             is_valid = false;
         });
     }
