@@ -49,7 +49,7 @@ public class EditView : Gtk.Box {
         cancel_button = new Gtk.Button ();
 
         save_button = new Gtk.Button.with_label (_("Save"));
-        save_button.get_style_context ().add_class ("suggested-action");
+        save_button.add_css_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (cancel_button);
@@ -61,14 +61,14 @@ public class EditView : Gtk.Box {
         var file_name_label = new Gtk.Label (_("File Name")) {
             halign = Gtk.Align.START
         };
-        file_name_label.get_style_context ().add_class ("heading");
+        file_name_label.add_css_class ("heading");
         var file_name_desc_label = new Gtk.Label (
             _("Name of the file where these app info is saved.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        file_name_desc_label.get_style_context ().add_class ("dim-label");
+        file_name_desc_label.add_css_class ("dim-label");
         file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
             hexpand = true
         };
@@ -88,12 +88,12 @@ public class EditView : Gtk.Box {
         var name_label = new Gtk.Label (_("App Name")) {
             halign = Gtk.Align.START
         };
-        name_label.get_style_context ().add_class ("heading");
+        name_label.add_css_class ("heading");
         var name_desc_label = new Gtk.Label (_("Shown in the launcher or Dock.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        name_desc_label.get_style_context ().add_class ("dim-label");
+        name_desc_label.add_css_class ("dim-label");
         name_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
@@ -107,12 +107,12 @@ public class EditView : Gtk.Box {
         var comment_label = new Gtk.Label (_("Comment")) {
             halign = Gtk.Align.START
         };
-        comment_label.get_style_context ().add_class ("heading");
+        comment_label.add_css_class ("heading");
         var comment_desc_label = new Gtk.Label (_("A tooltip text to describe what the app helps you to do.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        comment_desc_label.get_style_context ().add_class ("dim-label");
+        comment_desc_label.add_css_class ("dim-label");
         comment_entry = new RegexEntry (/^.+$/) {
             hexpand = true
         };
@@ -126,14 +126,14 @@ public class EditView : Gtk.Box {
         var exec_label = new Gtk.Label (_("Exec File")) {
             halign = Gtk.Align.START
         };
-        exec_label.get_style_context ().add_class ("heading");
+        exec_label.add_css_class ("heading");
         var exec_desc_label = new Gtk.Label (
             _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        exec_desc_label.get_style_context ().add_class ("dim-label");
+        exec_desc_label.add_css_class ("dim-label");
         exec_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -148,14 +148,14 @@ public class EditView : Gtk.Box {
         var icon_label = new Gtk.Label (_("Icon File")) {
             halign = Gtk.Align.START
         };
-        icon_label.get_style_context ().add_class ("heading");
+        icon_label.add_css_class ("heading");
         var icon_desc_label = new Gtk.Label (
             _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        icon_desc_label.get_style_context ().add_class ("dim-label");
+        icon_desc_label.add_css_class ("dim-label");
         icon_entry = new Gtk.Entry () {
             hexpand = true,
             secondary_icon_name = "document-open-symbolic"
@@ -170,12 +170,12 @@ public class EditView : Gtk.Box {
         var categories_label = new Gtk.Label (_("App Categories")) {
             halign = Gtk.Align.START
         };
-        categories_label.get_style_context ().add_class ("heading");
+        categories_label.add_css_class ("heading");
         var categories_desc_label = new Gtk.Label (_("Type of the app, multiply selectable.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        categories_desc_label.get_style_context ().add_class ("dim-label");
+        categories_desc_label.add_css_class ("dim-label");
         category_chooser = new CategoryChooser ();
         var categories_grid = new Gtk.Grid () {
             margin_bottom = 24
@@ -187,26 +187,26 @@ public class EditView : Gtk.Box {
         var advanced_label = new Gtk.Label (_("Advanced configuration")) {
             halign = Gtk.Align.START
         };
-        advanced_label.get_style_context ().add_class ("heading");
+        advanced_label.add_css_class ("heading");
         var advanced_desc_label = new Gtk.Label (
             _("You can create an app entry by filling the sections above in most cases. You can use the following section in case they don't work.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 12
         };
-        advanced_desc_label.get_style_context ().add_class ("dim-label");
+        advanced_desc_label.add_css_class ("dim-label");
 
         var startup_wm_class_label = new Gtk.Label (_("Startup WM Class")) {
             halign = Gtk.Align.START
         };
-        startup_wm_class_label.get_style_context ().add_class ("caption-heading");
+        startup_wm_class_label.add_css_class ("caption-heading");
         var startup_wm_class_desc_label = new Gtk.Label (
             _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon comes up to the dock when the app launches.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        startup_wm_class_desc_label.get_style_context ().add_class ("dim-label");
+        startup_wm_class_desc_label.add_css_class ("dim-label");
         startup_wm_class_entry = new Gtk.Entry () {
             hexpand = true,
             margin_bottom = 12
@@ -215,12 +215,12 @@ public class EditView : Gtk.Box {
         var terminal_label = new Gtk.Label (_("Run in Terminal")) {
             halign = Gtk.Align.START
         };
-        terminal_label.get_style_context ().add_class ("caption-heading");
+        terminal_label.add_css_class ("caption-heading");
         var terminal_desc_label = new Gtk.Label (_("Check this in if you want to register a CUI app.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        terminal_desc_label.get_style_context ().add_class ("dim-label");
+        terminal_desc_label.add_css_class ("dim-label");
         terminal_checkbox = new Gtk.CheckButton.with_label (_("Run in Terminal")) {
             margin_bottom = 12
         };
@@ -228,14 +228,14 @@ public class EditView : Gtk.Box {
         var open_text_editor_label = new Gtk.Label (_("Open in text editor")) {
             halign = Gtk.Align.START
         };
-        open_text_editor_label.get_style_context ().add_class ("caption-heading");
+        open_text_editor_label.add_css_class ("caption-heading");
         var open_text_editor_desc_label = new Gtk.Label (
             _("You can also edit more options by opening in a text editor.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
-        open_text_editor_desc_label.get_style_context ().add_class ("dim-label");
+        open_text_editor_desc_label.add_css_class ("dim-label");
         var open_text_editor_button = new Gtk.Button.with_label (_("Open in text editor")) {
             halign = Gtk.Align.START,
             margin_bottom = 12
@@ -310,18 +310,23 @@ public class EditView : Gtk.Box {
                 return;
             }
 
-            var filechooser = new Gtk.FileChooserNative (
-                _("Select an executable file"), window, Gtk.FileChooserAction.OPEN,
-                _("Open"), _("Cancel")
-            ) {
+            var filechooser = new Gtk.FileDialog () {
+                title = _("Select an executable file"),
+                accept_label = _("Select"),
                 modal = true
             };
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    exec_entry.text = filechooser.get_file ().get_path ();
+            filechooser.open.begin (window, null, (obj, res) => {
+                try {
+                    var file = filechooser.open.end (res);
+                    if (file == null) {
+                        return;
+                    }
+
+                    exec_entry.text = file.get_path ();
+                } catch (Error e) {
+                    warning ("Failed to select executable file: %s", e.message);
                 }
             });
-            filechooser.show ();
         });
 
         icon_entry.icon_press.connect ((icon_pos) => {
@@ -344,19 +349,24 @@ public class EditView : Gtk.Box {
             filefilter.add_mime_type ("image/vnd.microsoft.icon");
             filefilter.set_filter_name (_("ICO, PNG, SVG, or XMP files"));
 
-            var filechooser = new Gtk.FileChooserNative (
-                _("Select an icon file"), window, Gtk.FileChooserAction.OPEN,
-                _("Open"), _("Cancel")
-            ) {
-                modal = true
+            var filechooser = new Gtk.FileDialog () {
+                title = _("Select an icon file"),
+                accept_label = _("Select"),
+                modal = true,
+                default_filter = filefilter
             };
-            filechooser.add_filter (filefilter);
-            filechooser.response.connect ((response_id) => {
-                if (response_id == Gtk.ResponseType.ACCEPT) {
-                    icon_entry.text = filechooser.get_file ().get_path ();
+            filechooser.open.begin (window, null, (obj, res) => {
+                try {
+                    var file = filechooser.open.end (res);
+                    if (file == null) {
+                        return;
+                    }
+
+                    icon_entry.text = file.get_path ();
+                } catch (Error e) {
+                    warning ("Failed to select icon file: %s", e.message);
                 }
             });
-            filechooser.show ();
         });
 
         open_text_editor_button.clicked.connect (() => {
@@ -546,7 +556,7 @@ public class EditView : Gtk.Box {
         var title_label = new Gtk.Label (_("Recommendations for naming")) {
             halign = Gtk.Align.START
         };
-        title_label.get_style_context ().add_class ("heading");
+        title_label.add_css_class ("heading");
 
         var desc_label = new Gtk.Label (
             _("It is recommended to use only alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
@@ -554,7 +564,7 @@ public class EditView : Gtk.Box {
         ) {
             halign = Gtk.Align.START
         };
-        desc_label.get_style_context ().add_class ("body");
+        desc_label.add_css_class ("body");
 
         var example_label = new Gtk.Label (
             ///TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
@@ -564,7 +574,7 @@ public class EditView : Gtk.Box {
             use_markup = true,
             halign = Gtk.Align.START
         };
-        example_label.get_style_context ().add_class ("body");
+        example_label.add_css_class ("body");
 
         var detailed_label = new Gtk.Label (
             ///TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
@@ -575,7 +585,7 @@ public class EditView : Gtk.Box {
             use_markup = true,
             halign = Gtk.Align.START
         };
-        detailed_label.get_style_context ().add_class ("body");
+        detailed_label.add_css_class ("body");
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
