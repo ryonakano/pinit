@@ -29,7 +29,7 @@ public class AboutWindow : GLib.Object {
             application_icon = Constants.PROJECT_NAME,
             application_name = Constants.APP_NAME,
             version = Constants.PROJECT_VERSION,
-            comments = _("Create the shortcut to your favorite portable apps into your app launcher"),
+            comments = _("Pin shortcuts for your favorite portable apps to your app launcher"),
             website = "https://github.com/ryonakano/pinit",
             support_url = "https://github.com/ryonakano/pinit/discussions",
             issue_url = "https://github.com/ryonakano/pinit/issues",
