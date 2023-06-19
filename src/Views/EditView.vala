@@ -63,7 +63,7 @@ public class EditView : Gtk.Box {
         };
         file_name_label.add_css_class ("heading");
         var file_name_desc_label = new Gtk.Label (
-            _("Name of the file where these app info is saved.")
+            _("Name of the .desktop file, where this app's info will be saved.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
@@ -89,7 +89,7 @@ public class EditView : Gtk.Box {
             halign = Gtk.Align.START
         };
         name_label.add_css_class ("heading");
-        var name_desc_label = new Gtk.Label (_("Shown in the launcher or Dock.")) {
+        var name_desc_label = new Gtk.Label (_("Shown in the launcher or dock.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
@@ -108,7 +108,7 @@ public class EditView : Gtk.Box {
             halign = Gtk.Align.START
         };
         comment_label.add_css_class ("heading");
-        var comment_desc_label = new Gtk.Label (_("A tooltip text to describe what the app helps you to do.")) {
+        var comment_desc_label = new Gtk.Label (_("Descibes the app. May appear as a tooltip when you hover over the app entry in the launcher/dock.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
@@ -171,7 +171,7 @@ public class EditView : Gtk.Box {
             halign = Gtk.Align.START
         };
         categories_label.add_css_class ("heading");
-        var categories_desc_label = new Gtk.Label (_("Type of the app, multiply selectable.")) {
+        var categories_desc_label = new Gtk.Label (_("Categories applicable to the app. (You can select more than one.)")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
@@ -189,7 +189,7 @@ public class EditView : Gtk.Box {
         };
         advanced_label.add_css_class ("heading");
         var advanced_desc_label = new Gtk.Label (
-            _("You can create an app entry by filling the sections above in most cases. You can use the following section in case they don't work.")
+            _("You can create most app entries just by filling in the sections above. However, some apps may require the advanced configuration options below.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 12
@@ -201,7 +201,7 @@ public class EditView : Gtk.Box {
         };
         startup_wm_class_label.add_css_class ("caption-heading");
         var startup_wm_class_desc_label = new Gtk.Label (
-            _("Associate the app with a window that has this ID. Fill in this if a different or duplicated icon comes up to the dock when the app launches.")
+            _("Associate the app with a window that has this ID. Use this if a different or duplicated icon appears in the dock when the app launches.")
         ) {
             halign = Gtk.Align.START,
             margin_bottom = 6
@@ -216,7 +216,7 @@ public class EditView : Gtk.Box {
             halign = Gtk.Align.START
         };
         terminal_label.add_css_class ("caption-heading");
-        var terminal_desc_label = new Gtk.Label (_("Check this in if you want to register a CUI app.")) {
+        var terminal_desc_label = new Gtk.Label (_("Check this if you want to register a CUI app.")) {
             halign = Gtk.Align.START,
             margin_bottom = 6
         };
@@ -559,8 +559,8 @@ public class EditView : Gtk.Box {
         title_label.add_css_class ("heading");
 
         var desc_label = new Gtk.Label (
-            _("It is recommended to use only alphabets, numbers, and underscores, and none begins with numbers.") + "\n" +
-            _("Also, use at least one period to make sure to be separated into at least two elements.")
+            _("It is recommended to use only alphanumeric characters and underscores. Don't begin with a number.") + "\n" +
+            _("Include at least two elements (sections of the string seperated by a period). Most apps use three elements.")
         ) {
             halign = Gtk.Align.START
         };
