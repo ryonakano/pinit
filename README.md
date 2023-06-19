@@ -1,5 +1,5 @@
 # Pin It!
-Create the shortcut to portable apps like raw executable files, AppImage files, etc. into the app launcher of your desktop environment.
+Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
 
 ![Files view in the light mode](data/screenshots/gnome/screenshot-files-view-light.png)
 
