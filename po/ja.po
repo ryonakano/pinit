@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-01-03 08:26+0000\n"
+"PO-Revision-Date: 2023-06-22 19:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "ja/>\n"
@@ -16,14 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "ポータブルアプリのショートカットをアプリランチャーに作成します"
+msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -106,10 +103,8 @@ msgid "File Name"
 msgstr "ファイル名"
 
 #: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
 msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "以下のアプリ情報の保存先となるファイルの前です。"
+msgstr "このアプリの情報が保存される .desktop ファイルの名前です。"
 
 #: src/Views/EditView.vala:76
 msgid "Suffix of the file"
@@ -120,8 +115,6 @@ msgid "App Name"
 msgstr "アプリ名"
 
 #: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
 msgstr "ランチャーやドックに表示されます。"
 
@@ -133,7 +126,8 @@ msgstr "コメント"
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
-msgstr ""
+msgstr "アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーした"
+"際に、ツールチップとして表示されることがあります。"
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -163,47 +157,37 @@ msgstr "アプリのカテゴリー"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "アプリが該当するカテゴリーです。 (複数選択可能です。)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
 msgstr "高度な設定"
 
 #: src/Views/EditView.vala:192
-#, fuzzy
-#| msgid ""
-#| "You can create an app entry by filling the sections above in most cases. "
-#| "You can use the following section in case they don't work."
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
-"ほとんどの場合、上記セクションを埋めることでアプリのエントリーを作成可能で"
-"す。動作しない場合は、以下のセクションを使用できます。"
+"ほとんどの場合、ここまでのセクションを埋めるだけでアプリのエントリーを作成可"
+"能です。しかし、一部のアプリでは以下の高度な設定が必要なことがあります。"
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
 msgstr "起動時の WM クラス"
 
 #: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
 "アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つのア"
-"イコンがドックに表示される場合は、この項目を記入してください。"
+"イコンがドックに表示される場合は、この項目を使用してください。"
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
 #: src/Views/EditView.vala:219
-#, fuzzy
-#| msgid "Check this in if you want to register a CUI app."
 msgid "Check this if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
@@ -221,7 +205,7 @@ msgstr "実行ファイルを選択"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "選択"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
@@ -267,22 +251,18 @@ msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 
 #: src/Views/EditView.vala:562
-#, fuzzy
-#| msgid ""
-#| "It is recommended to use only alphabets, numbers, and underscores, and "
-#| "none begins with numbers."
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
-msgstr ""
-"英数字とアンダースコアのみの使用を推奨します。また、最初の文字は数字以外にし"
-"てください。"
+msgstr "英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてくだ"
+"さい。"
 
 #: src/Views/EditView.vala:563
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
-msgstr ""
+msgstr "最低でも、2つ以上の“要素” (ピリオド区切りの文字列) "
+"が必要です。ほとんどのアプリは要素3つを使います。"
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
