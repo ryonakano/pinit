@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-05-07 18:53+0000\n"
+"PO-Revision-Date: 2023-06-22 19:42+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "uk/>\n"
@@ -15,17 +15,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
-"Створіть ярлик до улюблених портативних застосунків у панелі запуску "
+"Прикріплюйте ярлики улюблених портативних застосунків у панелі запуску "
 "застосунків"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
@@ -109,10 +106,9 @@ msgid "File Name"
 msgstr "Назва файлу"
 
 #: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
 msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "Назва файлу, у якому зберігаються ці відомості про застосунок."
+msgstr ""
+"Назва файлу .desktop, у якому зберігаються відомості про цей застосунок."
 
 #: src/Views/EditView.vala:76
 msgid "Suffix of the file"
@@ -123,10 +119,8 @@ msgid "App Name"
 msgstr "Назва застосунку"
 
 #: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
-msgstr "Показується на панелі запуску або в Dock."
+msgstr "Показується на панелі запуску або в док-панелі."
 
 #: src/Views/EditView.vala:107
 msgid "Comment"
@@ -137,6 +131,8 @@ msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Описує застосунок. Може з'являтися у вигляді підказки, коли ви наводите "
+"курсор на запис застосунку у панелі запуску/доці."
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -168,48 +164,39 @@ msgstr "Категорії застосунку"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "Категорії, застосовувані до застосунку. (Можна вибрати більше однієї.)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
 msgstr "Розширена конфігурація"
 
 #: src/Views/EditView.vala:192
-#, fuzzy
-#| msgid ""
-#| "You can create an app entry by filling the sections above in most cases. "
-#| "You can use the following section in case they don't work."
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
-"У більшості випадків ви можете створити запис у застосунку, заповнивши "
-"розділи вище. Ви можете скористатися наступним розділом, якщо вони не "
-"працюють."
+"Ви можете створити більшість записів для застосунків, просто заповнивши "
+"наведені розділи. Однак для деяких застосунків можуть знадобитися додаткові "
+"параметри конфігурації, наведені нижче."
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
 msgstr "Запуск WM Class"
 
 #: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
-"Пов’яжіть застосунок з вікном, яке має цей ID. Заповніть це поле, якщо під "
-"час запуску застосунку на доку з’являється інша або дубльована пвктограма."
+"Пов’яжіть застосунок з вікном, яке має цей ID. Скористайтесь цим полем, якщо "
+"під час запуску застосунку на доку з’являється інша або дубльована "
+"піктограма."
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
 msgid "Run in Terminal"
 msgstr "Запускати у терміналі"
 
 #: src/Views/EditView.vala:219
-#, fuzzy
-#| msgid "Check this in if you want to register a CUI app."
 msgid "Check this if you want to register a CUI app."
 msgstr "Позначте, якщо хочете зареєструвати застосунок CUI."
 
@@ -228,7 +215,7 @@ msgstr "Вибрати виконуваний файл"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "Вибрати"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
@@ -274,22 +261,20 @@ msgid "Recommendations for naming"
 msgstr "Рекомендації щодо іменування"
 
 #: src/Views/EditView.vala:562
-#, fuzzy
-#| msgid ""
-#| "It is recommended to use only alphabets, numbers, and underscores, and "
-#| "none begins with numbers."
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
 msgstr ""
-"Радимо використовувати лише букви, цифри та підкреслення. Не може починатися "
-"з чисел."
+"Радимо використовувати лише буквенно-цифрові символи та підкреслення. Не "
+"може починатися з цифри."
 
 #: src/Views/EditView.vala:563
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
 msgstr ""
+"Включіть щонайменше два елементи (частини рядка, розділені крапкою). "
+"Більшість застосунків використовують три елементи."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
