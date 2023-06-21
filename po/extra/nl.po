@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 20:01+0900\n"
+"POT-Creation-Date: 2023-06-21 19:52+0900\n"
 "PO-Revision-Date: 2023-03-19 14:38+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -24,14 +24,20 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr "Maak snelkoppelingen naar uw favoriete portable-apps"
 
 #: data/pinit.metainfo.xml.in:13
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to portable apps like raw executable files, AppImage "
+#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
-"Create the shortcut to portable apps like raw executable files, AppImage "
-"files, etc. into the app launcher of your desktop environment."
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
 msgstr ""
 "Voeg eenvoudig portable-apps zoals uitvoerbare bestanden, AppImage-"
 "bestanden, etc. toe aan uw app-launcher."

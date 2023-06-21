@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 20:01+0900\n"
+"POT-Creation-Date: 2023-06-21 19:52+0900\n"
 "PO-Revision-Date: 2023-02-04 21:09+0200\n"
 "Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
 "Language-Team: \n"
@@ -23,14 +23,20 @@ msgid "Pin It!"
 msgstr "Przypnij go!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr "Utwórz skrót do ulubionych aplikacji przenośnych w wyrzutni aplikacji"
 
 #: data/pinit.metainfo.xml.in:13
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to portable apps like raw executable files, AppImage "
+#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
-"Create the shortcut to portable apps like raw executable files, AppImage "
-"files, etc. into the app launcher of your desktop environment."
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
 msgstr ""
 "Utwórz skrót do aplikacji przenośnych, takich jak surowe pliki wykonywalne, "
 "pliki AppImage itp., do uruchamiania aplikacji w środowisku pulpitu."
