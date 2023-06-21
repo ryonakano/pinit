@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 20:01+0900\n"
+"POT-Creation-Date: 2023-06-21 19:52+0900\n"
 "PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -20,8 +20,7 @@ msgstr ""
 
 #: src/AboutWindow.vala:32
 #, fuzzy
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
 "Opprett snarveien til dine flyttbare favorittprogrammer i oppstarteren din"
 
@@ -108,7 +107,9 @@ msgid "File Name"
 msgstr "Fornavn"
 
 #: src/Views/EditView.vala:66
-msgid "Name of the file where these app info is saved."
+#, fuzzy
+#| msgid "Name of the file where these app info is saved."
+msgid "Name of the .desktop file, where this app's info will be saved."
 msgstr "Navnet på filen der denne programinfoen lagres."
 
 #: src/Views/EditView.vala:76
@@ -120,7 +121,9 @@ msgid "App Name"
 msgstr "Programnavn"
 
 #: src/Views/EditView.vala:92
-msgid "Shown in the launcher or Dock."
+#, fuzzy
+#| msgid "Shown in the launcher or Dock."
+msgid "Shown in the launcher or dock."
 msgstr "Vis i oppstarteren eller dokken."
 
 #: src/Views/EditView.vala:107
@@ -128,8 +131,10 @@ msgid "Comment"
 msgstr "Kommentar"
 
 #: src/Views/EditView.vala:111
-msgid "A tooltip text to describe what the app helps you to do."
-msgstr "Et verktøytips som beskriver hva programmet hjelper deg å gjøre."
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
 
 #: src/Views/EditView.vala:126
 #, fuzzy
@@ -161,8 +166,8 @@ msgid "App Categories"
 msgstr "Programkategorier"
 
 #: src/Views/EditView.vala:174
-msgid "Type of the app, multiply selectable."
-msgstr "Typen program, der du kan velge flere deler."
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
@@ -170,8 +175,8 @@ msgstr ""
 
 #: src/Views/EditView.vala:192
 msgid ""
-"You can create an app entry by filling the sections above in most cases. You "
-"can use the following section in case they don't work."
+"You can create most app entries just by filling in the sections above. "
+"However, some apps may require the advanced configuration options below."
 msgstr ""
 
 #: src/Views/EditView.vala:199
@@ -180,8 +185,8 @@ msgstr ""
 
 #: src/Views/EditView.vala:204
 msgid ""
-"Associate the app with a window that has this ID. Fill in this if a "
-"different or duplicated icon comes up to the dock when the app launches."
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
 msgstr ""
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
@@ -190,7 +195,7 @@ msgstr "Kjør i terminal"
 
 #: src/Views/EditView.vala:219
 #, fuzzy
-msgid "Check this in if you want to register a CUI app."
+msgid "Check this if you want to register a CUI app."
 msgstr "Velg dette hvis du vil registrere et dialogbasert program."
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
@@ -205,86 +210,82 @@ msgstr ""
 msgid "Select an executable file"
 msgstr "Velg en kjørbar fil"
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-msgid "Open"
-msgstr "Åpne"
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
+msgid "Select"
+msgstr ""
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-#: src/Views/EditView.vala:489 src/Views/FilesView.vala:126
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: src/Views/EditView.vala:345
+#: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG, eller XMP-filer"
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:353
 msgid "Select an icon file"
 msgstr "Velg en ikon-fil"
 
-#: src/Views/EditView.vala:368
+#: src/Views/EditView.vala:378
 msgid "Could not open with external app"
 msgstr ""
 
-#: src/Views/EditView.vala:371 src/Views/EditView.vala:530
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr ""
 
-#: src/Views/EditView.vala:421
+#: src/Views/EditView.vala:431
 msgid "New Entry"
 msgstr "Ny oppføring"
 
-#: src/Views/EditView.vala:430
+#: src/Views/EditView.vala:440
 msgid "Editing Entry"
 msgstr "Redigerer oppføring"
 
-#: src/Views/EditView.vala:436
+#: src/Views/EditView.vala:446
 #, c-format
 msgid "Editing “%s”"
 msgstr "Redigerer «%s»"
 
-#: src/Views/EditView.vala:527
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/Views/EditView.vala:537
 #, fuzzy, c-format
 #| msgid "Are you sure you want to delete “%s”?"
 msgid "Could not write to file “%s”"
 msgstr "Ønsker du å slette «%s»?"
 
-#: src/Views/EditView.vala:546
+#: src/Views/EditView.vala:556
 msgid "Recommendations for naming"
 msgstr "Anbefalt for navngivning"
 
-#: src/Views/EditView.vala:552
+#: src/Views/EditView.vala:562
 #, fuzzy
 msgid ""
-"It is recommended to use only alphabets, numbers, and underscores, and none "
-"begins with numbers."
+"It is recommended to use only alphanumeric characters and underscores. Don't "
+"begin with a number."
 msgstr ""
 "Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
 
-#: src/Views/EditView.vala:553
-#, fuzzy
+#: src/Views/EditView.vala:563
 msgid ""
-"Also, use at least one period to make sure to be separated into at least two "
-"elements."
+"Include at least two elements (sections of the string seperated by a "
+"period). Most apps use three elements."
 msgstr ""
-"Bruk minst ett punktum for å forsikre deg om at du har delt inn i minst to "
-"elementer."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:572
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:571
+#: src/Views/EditView.vala:581
 #, c-format
 msgid "For more info, see %s."
 msgstr "Mer info er å finne i %s."
 
-#: src/Views/EditView.vala:573
+#: src/Views/EditView.vala:583
 msgid "the file naming specification by freedesktop.org"
 msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
 
@@ -344,3 +345,20 @@ msgstr "Slett"
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr ""
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Et verktøytips som beskriver hva programmet hjelper deg å gjøre."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Typen program, der du kan velge flere deler."
+
+#~ msgid "Open"
+#~ msgstr "Åpne"
+
+#, fuzzy
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Bruk minst ett punktum for å forsikre deg om at du har delt inn i minst "
+#~ "to elementer."

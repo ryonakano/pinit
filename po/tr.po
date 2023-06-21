@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 20:01+0900\n"
+"POT-Creation-Date: 2023-06-21 19:52+0900\n"
 "PO-Revision-Date: 2023-01-05 06:52+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -20,8 +20,10 @@ msgstr ""
 "X-Generator: Weblate 4.15.1-dev\n"
 
 #: src/AboutWindow.vala:32
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
 "Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
 "oluşturun"
@@ -107,7 +109,9 @@ msgid "File Name"
 msgstr "Dosya Adı"
 
 #: src/Views/EditView.vala:66
-msgid "Name of the file where these app info is saved."
+#, fuzzy
+#| msgid "Name of the file where these app info is saved."
+msgid "Name of the .desktop file, where this app's info will be saved."
 msgstr "Bu uygulama bilgilerinin kaydedildiği dosyanın adı."
 
 #: src/Views/EditView.vala:76
@@ -119,7 +123,9 @@ msgid "App Name"
 msgstr "Uygulama Adı"
 
 #: src/Views/EditView.vala:92
-msgid "Shown in the launcher or Dock."
+#, fuzzy
+#| msgid "Shown in the launcher or Dock."
+msgid "Shown in the launcher or dock."
 msgstr "Başlatıcıda yada Rıhtımda gösterilir."
 
 #: src/Views/EditView.vala:107
@@ -127,8 +133,10 @@ msgid "Comment"
 msgstr "Yorum"
 
 #: src/Views/EditView.vala:111
-msgid "A tooltip text to describe what the app helps you to do."
-msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -159,17 +167,21 @@ msgid "App Categories"
 msgstr "Uygulama Kategorileri"
 
 #: src/Views/EditView.vala:174
-msgid "Type of the app, multiply selectable."
-msgstr "Uygulamanın türü, çoklu seçilebilir."
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
 msgstr "Gelişmiş yapılandırma"
 
 #: src/Views/EditView.vala:192
+#, fuzzy
+#| msgid ""
+#| "You can create an app entry by filling the sections above in most cases. "
+#| "You can use the following section in case they don't work."
 msgid ""
-"You can create an app entry by filling the sections above in most cases. You "
-"can use the following section in case they don't work."
+"You can create most app entries just by filling in the sections above. "
+"However, some apps may require the advanced configuration options below."
 msgstr ""
 "Çoğu durumda yukarıdaki bölümleri doldurarak bir uygulama girdisi "
 "oluşturabilirsiniz. Bunların çalışmaması durumunda aşağıdaki bölümü "
@@ -180,9 +192,13 @@ msgid "Startup WM Class"
 msgstr "Başlangıç WM Sınıfı"
 
 #: src/Views/EditView.vala:204
+#, fuzzy
+#| msgid ""
+#| "Associate the app with a window that has this ID. Fill in this if a "
+#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
-"Associate the app with a window that has this ID. Fill in this if a "
-"different or duplicated icon comes up to the dock when the app launches."
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
 msgstr ""
 "Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
 "başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge gelirse bunu "
@@ -193,7 +209,9 @@ msgid "Run in Terminal"
 msgstr "Uçbirim'de Çalıştır"
 
 #: src/Views/EditView.vala:219
-msgid "Check this in if you want to register a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to register a CUI app."
+msgid "Check this if you want to register a CUI app."
 msgstr "Bir komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
@@ -209,84 +227,85 @@ msgstr ""
 msgid "Select an executable file"
 msgstr "Yürütülebilir bir dosya seçin"
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-msgid "Open"
-msgstr "Aç"
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
+msgid "Select"
+msgstr ""
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-#: src/Views/EditView.vala:489 src/Views/FilesView.vala:126
-msgid "Cancel"
-msgstr "İptal Et"
-
-#: src/Views/EditView.vala:345
+#: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG veya XMP dosyaları"
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:353
 msgid "Select an icon file"
 msgstr "Bir simge dosyası seçin"
 
-#: src/Views/EditView.vala:368
+#: src/Views/EditView.vala:378
 msgid "Could not open with external app"
 msgstr "Harici uygulama ile açılamadı"
 
-#: src/Views/EditView.vala:371 src/Views/EditView.vala:530
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Kapat"
 
-#: src/Views/EditView.vala:421
+#: src/Views/EditView.vala:431
 msgid "New Entry"
 msgstr "Yeni Girdi"
 
-#: src/Views/EditView.vala:430
+#: src/Views/EditView.vala:440
 msgid "Editing Entry"
 msgstr "Girdi Düzenleme"
 
-#: src/Views/EditView.vala:436
+#: src/Views/EditView.vala:446
 #, c-format
 msgid "Editing “%s”"
 msgstr "“%s” düzenleniyor"
 
-#: src/Views/EditView.vala:527
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+msgid "Cancel"
+msgstr "İptal Et"
+
+#: src/Views/EditView.vala:537
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "“%s” dosyasına yazılamadı"
 
-#: src/Views/EditView.vala:546
+#: src/Views/EditView.vala:556
 msgid "Recommendations for naming"
 msgstr "Adlandırma önerileri"
 
-#: src/Views/EditView.vala:552
+#: src/Views/EditView.vala:562
+#, fuzzy
+#| msgid ""
+#| "It is recommended to use only alphabets, numbers, and underscores, and "
+#| "none begins with numbers."
 msgid ""
-"It is recommended to use only alphabets, numbers, and underscores, and none "
-"begins with numbers."
+"It is recommended to use only alphanumeric characters and underscores. Don't "
+"begin with a number."
 msgstr ""
 "Yalnızca alfabetik karakterler, rakam ve alt çizgi kullanılması ve "
 "hiçbirinin rakamla başlamaması önerilir."
 
-#: src/Views/EditView.vala:553
+#: src/Views/EditView.vala:563
 msgid ""
-"Also, use at least one period to make sure to be separated into at least two "
-"elements."
+"Include at least two elements (sections of the string seperated by a "
+"period). Most apps use three elements."
 msgstr ""
-"Ayrıca, en az iki ögeye ayrıldığından emin olmak için en az bir nokta "
-"kullanın."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:572
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Örneğin, 2D oyun SuperTux için \"%s\" kullanmalısınız."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:571
+#: src/Views/EditView.vala:581
 #, c-format
 msgid "For more info, see %s."
 msgstr "Daha fazla bilgi için bkz. %s."
 
-#: src/Views/EditView.vala:573
+#: src/Views/EditView.vala:583
 msgid "the file naming specification by freedesktop.org"
 msgstr "freedesktop.org tarafından önerilen dosya adlandırma özellikleri"
 
@@ -345,3 +364,19 @@ msgstr "Sil"
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "“%s” dosyası silinemedi"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Uygulamanın türü, çoklu seçilebilir."
+
+#~ msgid "Open"
+#~ msgstr "Aç"
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Ayrıca, en az iki ögeye ayrıldığından emin olmak için en az bir nokta "
+#~ "kullanın."

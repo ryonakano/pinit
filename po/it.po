@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 20:01+0900\n"
+"POT-Creation-Date: 2023-06-21 19:52+0900\n"
 "PO-Revision-Date: 2023-01-08 15:49+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -21,8 +21,10 @@ msgstr ""
 "X-Generator: Weblate 4.15.1-dev\n"
 
 #: src/AboutWindow.vala:32
-msgid ""
-"Create the shortcut to your favorite portable apps into your app launcher"
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
 "Crea il collegamento alle tue app portatili preferite nel tuo programma di "
 "avvio"
@@ -108,7 +110,9 @@ msgid "File Name"
 msgstr "Nome File"
 
 #: src/Views/EditView.vala:66
-msgid "Name of the file where these app info is saved."
+#, fuzzy
+#| msgid "Name of the file where these app info is saved."
+msgid "Name of the .desktop file, where this app's info will be saved."
 msgstr "Nome del file in cui sono salvate queste informazioni sull'app."
 
 #: src/Views/EditView.vala:76
@@ -120,7 +124,9 @@ msgid "App Name"
 msgstr "Nome App"
 
 #: src/Views/EditView.vala:92
-msgid "Shown in the launcher or Dock."
+#, fuzzy
+#| msgid "Shown in the launcher or Dock."
+msgid "Shown in the launcher or dock."
 msgstr "Mostrato nel launcher o Dock."
 
 #: src/Views/EditView.vala:107
@@ -128,8 +134,10 @@ msgid "Comment"
 msgstr "Commento"
 
 #: src/Views/EditView.vala:111
-msgid "A tooltip text to describe what the app helps you to do."
-msgstr "Un testo di descrizione per descrivere cosa ti aiuta a fare l'app."
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -161,17 +169,21 @@ msgid "App Categories"
 msgstr "Categorie di app"
 
 #: src/Views/EditView.vala:174
-msgid "Type of the app, multiply selectable."
-msgstr "Tipo di app, selezione multipla."
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
 msgstr "Configurazione avanzata"
 
 #: src/Views/EditView.vala:192
+#, fuzzy
+#| msgid ""
+#| "You can create an app entry by filling the sections above in most cases. "
+#| "You can use the following section in case they don't work."
 msgid ""
-"You can create an app entry by filling the sections above in most cases. You "
-"can use the following section in case they don't work."
+"You can create most app entries just by filling in the sections above. "
+"However, some apps may require the advanced configuration options below."
 msgstr ""
 "Puoi creare una voce per l'app compilando le sezioni sopra nella maggior "
 "parte dei casi. È possibile utilizzare la sezione seguente nel caso in cui "
@@ -182,9 +194,13 @@ msgid "Startup WM Class"
 msgstr "Classe WM di avvio"
 
 #: src/Views/EditView.vala:204
+#, fuzzy
+#| msgid ""
+#| "Associate the app with a window that has this ID. Fill in this if a "
+#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
-"Associate the app with a window that has this ID. Fill in this if a "
-"different or duplicated icon comes up to the dock when the app launches."
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
 msgstr ""
 "Associa l'app a una finestra con questo ID. Compila questo se un'icona "
 "diversa o duplicata viene visualizzata sulla dock all'avvio dell'app."
@@ -194,7 +210,9 @@ msgid "Run in Terminal"
 msgstr "Esegui nel terminale"
 
 #: src/Views/EditView.vala:219
-msgid "Check this in if you want to register a CUI app."
+#, fuzzy
+#| msgid "Check this in if you want to register a CUI app."
+msgid "Check this if you want to register a CUI app."
 msgstr "Controlla questo se desideri registrare un'app CUI."
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
@@ -209,84 +227,85 @@ msgstr "Puoi anche modificare più opzioni aprendo un editor di testo."
 msgid "Select an executable file"
 msgstr "Seleziona un file eseguibile"
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-msgid "Open"
-msgstr "Apri"
+#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
+msgid "Select"
+msgstr ""
 
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:349
-#: src/Views/EditView.vala:489 src/Views/FilesView.vala:126
-msgid "Cancel"
-msgstr "Cancella"
-
-#: src/Views/EditView.vala:345
+#: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "File ICO, PNG, SVG o XMP"
 
-#: src/Views/EditView.vala:348
+#: src/Views/EditView.vala:353
 msgid "Select an icon file"
 msgstr "Seleziona un file icona"
 
-#: src/Views/EditView.vala:368
+#: src/Views/EditView.vala:378
 msgid "Could not open with external app"
 msgstr "Impossibile aprire con un'app esterna"
 
-#: src/Views/EditView.vala:371 src/Views/EditView.vala:530
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Chiudi"
 
-#: src/Views/EditView.vala:421
+#: src/Views/EditView.vala:431
 msgid "New Entry"
 msgstr "Nuova Voce"
 
-#: src/Views/EditView.vala:430
+#: src/Views/EditView.vala:440
 msgid "Editing Entry"
 msgstr "Modifica Voce"
 
-#: src/Views/EditView.vala:436
+#: src/Views/EditView.vala:446
 #, c-format
 msgid "Editing “%s”"
 msgstr "Modifica di «%s»"
 
-#: src/Views/EditView.vala:527
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+msgid "Cancel"
+msgstr "Cancella"
+
+#: src/Views/EditView.vala:537
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "Impossibile scrivere nel file “%s”"
 
-#: src/Views/EditView.vala:546
+#: src/Views/EditView.vala:556
 msgid "Recommendations for naming"
 msgstr "Raccomandazioni per la denominazione"
 
-#: src/Views/EditView.vala:552
+#: src/Views/EditView.vala:562
+#, fuzzy
+#| msgid ""
+#| "It is recommended to use only alphabets, numbers, and underscores, and "
+#| "none begins with numbers."
 msgid ""
-"It is recommended to use only alphabets, numbers, and underscores, and none "
-"begins with numbers."
+"It is recommended to use only alphanumeric characters and underscores. Don't "
+"begin with a number."
 msgstr ""
 "Si consiglia di utilizzare solo alfabeti, numeri e trattini bassi e nessuno "
 "che inizi con numeri."
 
-#: src/Views/EditView.vala:553
+#: src/Views/EditView.vala:563
 msgid ""
-"Also, use at least one period to make sure to be separated into at least two "
-"elements."
+"Include at least two elements (sections of the string seperated by a "
+"period). Most apps use three elements."
 msgstr ""
-"Inoltre, usa almeno un punto per assicurarti di essere separato in almeno "
-"due elementi."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:572
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Ad esempio, dovresti usare \"%s\" per il gioco 2D, SuperTux."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:571
+#: src/Views/EditView.vala:581
 #, c-format
 msgid "For more info, see %s."
 msgstr "Per maggiori informazioni, vedi %s."
 
-#: src/Views/EditView.vala:573
+#: src/Views/EditView.vala:583
 msgid "the file naming specification by freedesktop.org"
 msgstr "la specifica di denominazione dei file di freedesktop.org"
 
@@ -345,6 +364,22 @@ msgstr "Elimina"
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Impossibile eliminare il file “%s”"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Un testo di descrizione per descrivere cosa ti aiuta a fare l'app."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Tipo di app, selezione multipla."
+
+#~ msgid "Open"
+#~ msgstr "Apri"
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Inoltre, usa almeno un punto per assicurarti di essere separato in almeno "
+#~ "due elementi."
 
 #~ msgid "Edit…"
 #~ msgstr "Modifica…"
