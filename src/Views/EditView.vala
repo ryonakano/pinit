@@ -505,10 +505,7 @@ public class EditView : Gtk.Box {
      * has (valid) values.
      */
     private void set_save_button_sensitivity () {
-        save_button.sensitive = (
-            file_name_entry.is_valid && name_entry.is_valid && comment_entry.is_valid &&
-            exec_entry.text.length > 0 && category_chooser.selected != ""
-        );
+        save_button.sensitive = (file_name_entry.is_valid && name_entry.is_valid && exec_entry.text.length > 0);
     }
 
     /*
