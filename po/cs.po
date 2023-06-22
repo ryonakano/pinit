@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-04-17 18:46+0200\n"
+"PO-Revision-Date: 2023-06-22 16:30+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -16,12 +16,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
 "Vytvořte si zástupce svých oblíbených přenosných aplikací ve spouštěči "
@@ -108,8 +105,6 @@ msgid "File Name"
 msgstr "Název souboru"
 
 #: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
 msgid "Name of the .desktop file, where this app's info will be saved."
 msgstr "Název souboru, kde jsou tyto informace o aplikaci uloženy."
 
@@ -122,8 +117,6 @@ msgid "App Name"
 msgstr "Jméno aplikace"
 
 #: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
 msgstr "Zobrazuje se ve spouštěči aplikací nebo doku."
 
@@ -136,6 +129,8 @@ msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Popisuje aplikaci. Může se zobrazit jako popis, když umístíte ukazatel myši "
+"na položku aplikace ve spouštěči/doku."
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -165,17 +160,13 @@ msgstr "Kategorie aplikací"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "Kategorie platné pro aplikaci. (Můžete vybrat více než jednu.)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
 msgstr "Pokročilá konfigurace"
 
 #: src/Views/EditView.vala:192
-#, fuzzy
-#| msgid ""
-#| "You can create an app entry by filling the sections above in most cases. "
-#| "You can use the following section in case they don't work."
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -188,10 +179,6 @@ msgid "Startup WM Class"
 msgstr "Třída spuštění WM"
 
 #: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
@@ -204,8 +191,6 @@ msgid "Run in Terminal"
 msgstr "Spustit v Terminálu"
 
 #: src/Views/EditView.vala:219
-#, fuzzy
-#| msgid "Check this in if you want to register a CUI app."
 msgid "Check this if you want to register a CUI app."
 msgstr "Zaškrtněte, pokud chcete zaregistrovat aplikaci CUI."
 
@@ -223,7 +208,7 @@ msgstr "Vybrat spustitelný soubor"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "Vybrat"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
@@ -269,10 +254,6 @@ msgid "Recommendations for naming"
 msgstr "Doporučení k pojmenovávání"
 
 #: src/Views/EditView.vala:562
-#, fuzzy
-#| msgid ""
-#| "It is recommended to use only alphabets, numbers, and underscores, and "
-#| "none begins with numbers."
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
@@ -284,6 +265,8 @@ msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
 msgstr ""
+"Zahrňte alespoň dva prvky (části řetězce oddělené tečkou). Většina aplikací "
+"používá tři prvky."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.

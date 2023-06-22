@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-04-17 19:42+0200\n"
+"PO-Revision-Date: 2023-06-22 16:25+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -16,26 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
 "Vytvořte si zástupce svých oblíbených přenosných aplikací ve spouštěči "
 "aplikací"
 
 #: data/pinit.metainfo.xml.in:13
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to portable apps like raw executable files, AppImage "
-#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
@@ -253,8 +246,6 @@ msgid "Improved support for other desktop environments"
 msgstr "Vylepšená podpora pro další desktopová prostředí"
 
 #: data/pinit.metainfo.xml.in:181
-#, fuzzy
-#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr "Přidáno oprávnění při kliknutí na tlačítko \"Pin It!\""
 
