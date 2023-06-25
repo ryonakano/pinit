@@ -7,40 +7,33 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-05-18 20:53+0000\n"
+"PO-Revision-Date: 2023-06-26 20:52+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit-"
-"metadata/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
+"pinit-metadata/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "Создайте ярлыки для ваших любимых портативных приложений"
+msgstr "Закрепляйте ваши любимые портативные приложения"
 
 #: data/pinit.metainfo.xml.in:13
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to portable apps like raw executable files, AppImage "
-#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
-"Создайте ярлыки на портативные программы, такие как исполняемые файлы, "
-"программы AppImage и др. в ваше Меню приложений."
+"Закрепляйте портативные программы, такие как исполняемые файлы, программы "
+"AppImage и др. в ваше меню приложений."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
