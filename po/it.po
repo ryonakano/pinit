@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-07-02 13:52+0000\n"
+"PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "it/>\n"
@@ -21,13 +21,9 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
-"Crea il collegamento alle tue app portatili preferite nel tuo programma di "
-"avvio"
+"Aggiungi scorciatoie per le tue app portatili preferite al tuo app launcher"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -124,10 +120,8 @@ msgid "App Name"
 msgstr "Nome App"
 
 #: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
-msgstr "Mostrato nel launcher o Dock."
+msgstr "Mostrato nel launcher o nella dock."
 
 #: src/Views/EditView.vala:107
 msgid "Comment"
@@ -138,6 +132,8 @@ msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Descrive l'app. Può apparire come suggerimento quando passi con il mouse "
+"sopra la voce dell'app nel launcher/dock."
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -190,16 +186,12 @@ msgid "Startup WM Class"
 msgstr "Classe WM di avvio"
 
 #: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
-"Associa l'app a una finestra con questo ID. Compila questo se un'icona "
-"diversa o duplicata viene visualizzata sulla dock all'avvio dell'app."
+"Associa l'app a una finestra con questo ID. Utilizzare questa opzione se nel "
+"dock viene visualizzata un'icona diversa o duplicata all'avvio dell'app."
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
 msgid "Run in Terminal"
