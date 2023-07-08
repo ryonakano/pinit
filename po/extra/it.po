@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-07-02 13:52+0000\n"
+"PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
 "pinit-metadata/it/>\n"
@@ -25,25 +25,17 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
-"Crea il collegamento alle tue app portatili preferite nel tuo programma di "
-"avvio"
+"Aggiungi scorciatoie per le tue app portatili preferite al tuo app launcher"
 
 #: data/pinit.metainfo.xml.in:13
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to portable apps like raw executable files, AppImage "
-#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
-"Crea il collegamento ad app portatili come file eseguibili, file AppImage, "
-"ecc. nel programma di avvio delle app del tuo ambiente desktop."
+"Aggiungi scorciatoie per app portatili come file eseguibili non elaborati, "
+"file AppImage, ecc. all'avvio delle app sul desktop."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
