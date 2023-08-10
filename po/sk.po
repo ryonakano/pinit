@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
 # JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
+# Milan Šalka <salka.milan@googlemail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-05-26 12:52+0000\n"
-"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"PO-Revision-Date: 2023-08-10 09:48+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-app/sk/"
 ">\n"
 "Language: sk\n"
@@ -17,15 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr ""
-"Vytvorte skratku k vašim obľúbeným prenosným aplikáciám v spúšťači aplikácií"
+msgstr "Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -108,10 +105,8 @@ msgid "File Name"
 msgstr "Názov súboru"
 
 #: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
 msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "Názov súboru, kde sa uložia tieto informácie o aplikácii."
+msgstr "Názov . desktopový súbor, kde budú uložené informácie tejto aplikácie."
 
 #: src/Views/EditView.vala:76
 msgid "Suffix of the file"
@@ -122,10 +117,8 @@ msgid "App Name"
 msgstr "Názov aplikácie"
 
 #: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
-msgstr "Zobrazuje sa v spúšťači alebo v Doku."
+msgstr "Shown v spúšťacom alebo docku."
 
 #: src/Views/EditView.vala:107
 msgid "Comment"
@@ -136,6 +129,8 @@ msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Opíšte aplikáciu. Môže sa objaviť ako nástrojtip, keď ste hover cez vstup "
+"aplikácie v spúšťacom / púčika."
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -168,7 +163,7 @@ msgstr "Kategórie aplikácie"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "Kategórie uplatniteľné na aplikáciu. (Môžete si vybrať viac ako jeden.)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
