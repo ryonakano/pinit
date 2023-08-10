@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 19:52+0900\n"
-"PO-Revision-Date: 2023-08-10 09:48+0000\n"
+"PO-Revision-Date: 2023-08-11 10:48+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-app/sk/"
 ">\n"
@@ -170,42 +170,33 @@ msgid "Advanced configuration"
 msgstr "Pokročilé nastavenie"
 
 #: src/Views/EditView.vala:192
-#, fuzzy
-#| msgid ""
-#| "You can create an app entry by filling the sections above in most cases. "
-#| "You can use the following section in case they don't work."
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
-"Záznam aplikácie môžete vo väčšine prípadov vytvoriť vyplnením vyššie "
-"uvedených častí. V prípade, že nefungujú, môžete použiť nasledujúcu časť."
+"Môžete vytvoriť väčšinu položiek aplikácie len vyplnením sekcií vyššie. "
+"Avšak, niektoré aplikácie môžu vyžadovať pokročilé možnosti konfigurácie "
+"nižšie."
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
 msgstr "Trieda spustenia WM"
 
 #: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
-"Priraďte aplikáciu k oknu, ktoré má toto ID. Vyplňte ho, ak sa pri spustení "
-"aplikácie objaví v doku iná alebo duplicitná ikona."
+"Pripojiť aplikáciu s oknom, ktoré má toto ID. Použite to, ak sa objaví iná "
+"alebo duplicitná ikona v doku, keď aplikácia začne."
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
 msgid "Run in Terminal"
 msgstr "Spustiť v termináli"
 
 #: src/Views/EditView.vala:219
-#, fuzzy
-#| msgid "Check this in if you want to register a CUI app."
 msgid "Check this if you want to register a CUI app."
-msgstr "Začiarknite, ak chcete zaregistrovať CUI aplikáciu."
+msgstr "Skontrolujte, či chcete zaregistrovať aplikáciu CUI."
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
 msgid "Open in text editor"
@@ -221,7 +212,7 @@ msgstr "Vybrať spustiteľný súbor"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "Vybrať"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
@@ -267,22 +258,18 @@ msgid "Recommendations for naming"
 msgstr "Odporúčania na pomenovávanie"
 
 #: src/Views/EditView.vala:562
-#, fuzzy
-#| msgid ""
-#| "It is recommended to use only alphabets, numbers, and underscores, and "
-#| "none begins with numbers."
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
-msgstr ""
-"Je odporúčané použiť iba písmená, číslice a podčiarkovníky. Nemôže sa "
-"začínať číslom."
+msgstr "Odporúča sa používať iba alfa znakov a podčiarkov. Nepoužívajte číslo."
 
 #: src/Views/EditView.vala:563
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
 msgstr ""
+"Zahrňte aspoň dve prvky (sekcia reťazca seperované obdobím). Väčšina "
+"aplikácií používa tri prvky."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
