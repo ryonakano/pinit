@@ -4,7 +4,7 @@
  */
 
 // List Categories of the app and highlight ones listed in the desktop file.
-public class CategoryChooser : Gtk.Grid {
+public class CategoryChooser : Gtk.Box {
     /*
      * A signal emitted when selected categories are changed.
      */
@@ -77,8 +77,8 @@ public class CategoryChooser : Gtk.Grid {
 
     public CategoryChooser () {
         Object (
-            column_spacing: 6,
-            row_spacing: 6
+            orientation: Gtk.Orientation.VERTICAL,
+            spacing: 6
         );
     }
 
@@ -101,11 +101,16 @@ public class CategoryChooser : Gtk.Grid {
         categories.set ("System", _("System"));
         categories.set ("Utility", _("Utility"));
 
+        var flowbox = new Gtk.FlowBox () {
+            vexpand = true,
+            hexpand = true,
+            max_children_per_line = 7,
+            selection_mode = Gtk.SelectionMode.NONE
+        };
+
         /*
          * Create and append a button for each category
          */
-        int i = 0;
-        int j = 0;
         foreach (var entry in categories.entries) {
             var toggle = new ToggleButton (entry.key, entry.value);
             toggle.toggled.connect (() => {
@@ -122,16 +127,10 @@ public class CategoryChooser : Gtk.Grid {
                 toggled ();
             });
             toggles.add (toggle);
-
-            if (i % 7 == 0) {
-                // attach in the next row
-                j++;
-                i = 0;
-            }
-
-            attach (toggle, i, j, 1, 1);
-            i++;
+            flowbox.append (toggle);
         }
+
+        append (flowbox);
     }
 
     public class ToggleButton : Gtk.ToggleButton {
