@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,199 +74,218 @@ msgid "Ryo Nakano"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in:72
+msgid "Fix deprecations in GTK 4.10"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in:73
+msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in:74
+msgid ""
+"EditView: Make keys that is not required by the freedesktop.org "
+"specification optional"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in:75
+msgid "CategoryChooser: Improve layout management"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in:76 data/pinit.metainfo.xml.in:85
 msgid "Update Flatpak runtime version"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:73 data/pinit.metainfo.xml.in:98
+#: data/pinit.metainfo.xml.in:77 data/pinit.metainfo.xml.in:86
+#: data/pinit.metainfo.xml.in:111
 msgid "Update translations"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:80
+#: data/pinit.metainfo.xml.in:93
 msgid "The biggest and greatest updates come to \"Pin It!\":"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:84
+#: data/pinit.metainfo.xml.in:97
 msgid ""
 "Redesign to fit modern desktop environments, including support for "
 "responsive design"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:85
+#: data/pinit.metainfo.xml.in:98
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:87
+#: data/pinit.metainfo.xml.in:100
 msgid "Other changes:"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:91
+#: data/pinit.metainfo.xml.in:104
 msgid "Support setting \".ico\" files as the app icon"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:92
+#: data/pinit.metainfo.xml.in:105
 msgid "Support opening in a text editor"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:93
+#: data/pinit.metainfo.xml.in:106
 msgid "Fix window size cannot be resized on small displays"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:94
+#: data/pinit.metainfo.xml.in:107
 msgid "Show error dialogs when saving/deleting failed"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:95
+#: data/pinit.metainfo.xml.in:108
 msgid "Make sure not to add blank elements in generated desktop files"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:96
+#: data/pinit.metainfo.xml.in:109
 msgid "Don't overwrite the entire permission of the selected executable files"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:97
+#: data/pinit.metainfo.xml.in:110
 msgid "Give executable permission for the user only when they don't have it"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:106
+#: data/pinit.metainfo.xml.in:119
 msgid "AppData: Fix release year"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:108 data/pinit.metainfo.xml.in:123
-#: data/pinit.metainfo.xml.in:142 data/pinit.metainfo.xml.in:155
-#: data/pinit.metainfo.xml.in:169 data/pinit.metainfo.xml.in:183
-#: data/pinit.metainfo.xml.in:197 data/pinit.metainfo.xml.in:213
+#: data/pinit.metainfo.xml.in:121 data/pinit.metainfo.xml.in:136
+#: data/pinit.metainfo.xml.in:155 data/pinit.metainfo.xml.in:168
+#: data/pinit.metainfo.xml.in:182 data/pinit.metainfo.xml.in:196
+#: data/pinit.metainfo.xml.in:210 data/pinit.metainfo.xml.in:226
 msgid "Translation updates:"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:110
+#: data/pinit.metainfo.xml.in:123
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:118
+#: data/pinit.metainfo.xml.in:131
 msgid "Check desktop environment on runtime"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:119
+#: data/pinit.metainfo.xml.in:132
 msgid "Lessen scope of file access"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:120
+#: data/pinit.metainfo.xml.in:133
 msgid "Make window resizable"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:121
+#: data/pinit.metainfo.xml.in:134
 msgid "EditView: Less strict on file names"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:125
+#: data/pinit.metainfo.xml.in:138
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:126
+#: data/pinit.metainfo.xml.in:139
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:127 data/pinit.metainfo.xml.in:144
-#: data/pinit.metainfo.xml.in:158 data/pinit.metainfo.xml.in:172
-#: data/pinit.metainfo.xml.in:185 data/pinit.metainfo.xml.in:199
-#: data/pinit.metainfo.xml.in:216
+#: data/pinit.metainfo.xml.in:140 data/pinit.metainfo.xml.in:157
+#: data/pinit.metainfo.xml.in:171 data/pinit.metainfo.xml.in:185
+#: data/pinit.metainfo.xml.in:198 data/pinit.metainfo.xml.in:212
+#: data/pinit.metainfo.xml.in:229
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:135
+#: data/pinit.metainfo.xml.in:148
 msgid "Fix build error on other distros"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:136
+#: data/pinit.metainfo.xml.in:149
 msgid "FilesView: Properly center the dialog against the app window"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:137
+#: data/pinit.metainfo.xml.in:150
 msgid "Restore last opened view and its state"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:138
+#: data/pinit.metainfo.xml.in:151
 msgid "Add new style switcher"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:139
+#: data/pinit.metainfo.xml.in:152
 msgid "Correct titlebar label when no app name specified"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:140
+#: data/pinit.metainfo.xml.in:153
 msgid "Readable copies"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:152
+#: data/pinit.metainfo.xml.in:165
 msgid "FilesView: Ellipsize if label texts are too long"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:153
+#: data/pinit.metainfo.xml.in:166
 msgid "Tell accepted file formats in FileChooser"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:157
+#: data/pinit.metainfo.xml.in:170
 msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:166
+#: data/pinit.metainfo.xml.in:179
 msgid "EditView: Focus on file name entry by default"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:167
+#: data/pinit.metainfo.xml.in:180
 msgid ""
 "FilesView: Make scrollable and fix the window get bigger if many entries"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:171
+#: data/pinit.metainfo.xml.in:184
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:180
+#: data/pinit.metainfo.xml.in:193
 msgid "Improved support for other desktop environments"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:181
+#: data/pinit.metainfo.xml.in:194
 msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:193
+#: data/pinit.metainfo.xml.in:206
 msgid "Add CategoryChooser"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:194
+#: data/pinit.metainfo.xml.in:207
 msgid "Support Alt+Home to show welcome"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:195
+#: data/pinit.metainfo.xml.in:208
 msgid "Allow GPU acceralation by default"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:207
+#: data/pinit.metainfo.xml.in:220
 msgid "Add 128px app icon (thanks to @hanaral)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:208
+#: data/pinit.metainfo.xml.in:221
 msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:209
+#: data/pinit.metainfo.xml.in:222
 msgid "Support multitouch gestures (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:210
+#: data/pinit.metainfo.xml.in:223
 msgid "Fix unreadable description text in AppCenter"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:211
+#: data/pinit.metainfo.xml.in:224
 msgid "Save and restore window position"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:215
+#: data/pinit.metainfo.xml.in:228
 msgid "Add Spanish translation (thanks to @JeysonFlores)"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:224
+#: data/pinit.metainfo.xml.in:237
 msgid "Initial release"
 msgstr ""
 
