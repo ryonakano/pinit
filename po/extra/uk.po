@@ -7,17 +7,17 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-23 11:12+0900\n"
-"PO-Revision-Date: 2023-06-30 17:52+0000\n"
+"PO-Revision-Date: 2023-09-24 13:59+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
-"metadata/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
+"pinit-metainfo/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -85,21 +85,23 @@ msgstr "Ryo Nakano"
 
 #: data/pinit.metainfo.xml.in:72
 msgid "Fix deprecations in GTK 4.10"
-msgstr ""
+msgstr "Усунено застарілості в GTK 4.10"
 
 #: data/pinit.metainfo.xml.in:73
 msgid "English grammatical changes (thanks to @BraidenPsiuk)"
-msgstr ""
+msgstr "Граматичні зміни у версії англійською (завдяки @BraidenPsiuk)"
 
 #: data/pinit.metainfo.xml.in:74
 msgid ""
 "EditView: Make keys that is not required by the freedesktop.org "
 "specification optional"
 msgstr ""
+"EditView: Ключі, які не вимагаються специфікацією freedesktop.org, стали "
+"необов'язковими"
 
 #: data/pinit.metainfo.xml.in:75
 msgid "CategoryChooser: Improve layout management"
-msgstr ""
+msgstr "CategoryChooser: Удосконалено керування макетами"
 
 #: data/pinit.metainfo.xml.in:76 data/pinit.metainfo.xml.in:85
 msgid "Update Flatpak runtime version"
