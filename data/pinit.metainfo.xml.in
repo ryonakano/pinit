@@ -66,6 +66,19 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
+    <release version="2.0.2" date="2023-09-23" urgency="low">
+      <description>
+        <ul>
+          <li>Fix deprecations in GTK 4.10</li>
+          <li>English grammatical changes (thanks to @BraidenPsiuk)</li>
+          <li>EditView: Make keys that is not required by the freedesktop.org specification optional</li>
+          <li>CategoryChooser: Improve layout management</li>
+          <li>Update Flatpak runtime version</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.0.1" date="2023-04-15" urgency="low">
       <description>
         <ul>
