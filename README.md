@@ -52,6 +52,6 @@ We accept translations of this project through [Weblate](https://weblate.org/). 
 
 Click the following graphs to get started:
 
-| Main: Texts in the app itself | Metadata: Texts in the desktop entry and the software center |
+| Main: Texts in the app itself | Metainfo: Texts in the desktop entry and the software center |
 | --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-metadata/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-metadata) |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-app/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-app) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/pinit-metainfo/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/pinit-metainfo) |
