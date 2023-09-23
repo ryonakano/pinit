@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -209,7 +209,7 @@ msgstr ""
 msgid "Could not open with external app"
 msgstr ""
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr ""
@@ -231,22 +231,22 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr ""
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr ""
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
 msgstr ""
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -254,18 +254,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr ""
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr ""
 

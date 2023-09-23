@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-01-13 17:48+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-app/fr/"
@@ -249,7 +249,7 @@ msgstr "Sélectionnez un fichier d'icône"
 msgid "Could not open with external app"
 msgstr "Ouverture dans une application externe impossible"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Fermer"
@@ -271,16 +271,16 @@ msgstr "Modification de « %s »"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "Impossible d’écrire dans le fichier « %s »"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "Recommandations pour la dénomination"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 #, fuzzy
 #| msgid ""
 #| "It is recommended to use only alphabets, numbers, and underscores, and "
@@ -292,7 +292,7 @@ msgstr ""
 "Il est recommandé de n’utiliser que des lettres, des chiffres et des tirets "
 "bas, et rien qui commence par des chiffres."
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -300,18 +300,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Par exemple, vous devriez utiliser « %s » pour le jeu en 2D SuperTux."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "Pour plus d'informations, voir %s."
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "la spécification du nommage des fichiers par freedesktop.org"
 

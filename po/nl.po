@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-04-05 19:50+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-app/nl/"
@@ -242,7 +242,7 @@ msgstr "Kies een pictogrambestand"
 msgid "Could not open with external app"
 msgstr "De externe app kan niet worden geopend"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Sluiten"
@@ -264,16 +264,16 @@ msgstr "‘%s’ bewerken"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "Er kan niet worden weggeschreven naar ‘%s’"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "Tips omtrent namen"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 #, fuzzy
 #| msgid ""
 #| "It is recommended to use only alphabets, numbers, and underscores, and "
@@ -285,7 +285,7 @@ msgstr ""
 "Aanbeveling: gebruik alleen letters, cijfers en onderliggende streepjes, en "
 "begin geen enkele itemnaam met een cijfer."
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -293,18 +293,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Voorbeeld: gebruik ‘%s’ voor de 2D-game SuperTux."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "Meer informatie: %s."
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "de bestandsnaamspecificaties op freedesktop.org"
 

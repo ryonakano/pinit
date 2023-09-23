@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-06-22 19:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -126,7 +126,8 @@ msgstr "コメント"
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
-msgstr "アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーした"
+msgstr ""
+"アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーした"
 "際に、ツールチップとして表示されることがあります。"
 
 #: src/Views/EditView.vala:126
@@ -219,7 +220,7 @@ msgstr "アイコンファイルを選択"
 msgid "Could not open with external app"
 msgstr "外部アプリで開けませんでした"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "閉じる"
@@ -241,43 +242,45 @@ msgstr "“%s”を編集しています"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "ファイル“%s”に書き込めませんでした"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "ファイル名に関する推奨事項"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
-msgstr "英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてくだ"
+msgstr ""
+"英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてくだ"
 "さい。"
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
-msgstr "最低でも、2つ以上の“要素” (ピリオド区切りの文字列) "
-"が必要です。ほとんどのアプリは要素3つを使います。"
+msgstr ""
+"最低でも、2つ以上の“要素” (ピリオド区切りの文字列) が必要です。ほとんどのアプ"
+"リは要素3つを使います。"
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "詳細情報は %sを参照してください。"
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "freedesktop.org が策定するファイル命名仕様"
 

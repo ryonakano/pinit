@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-08-20 18:51+0000\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate"
-".org>\n"
+"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted."
+"weblate.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "es/>\n"
 "Language: es\n"
@@ -232,7 +232,7 @@ msgstr "Seleccione un archivo de icono"
 msgid "Could not open with external app"
 msgstr "No se puede abrir con una aplicación externa"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Cerrar"
@@ -254,16 +254,16 @@ msgstr "Editando «%s»"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "No se ha podido escribir en el archivo \"%s\""
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "Recomendaciones para los nombres"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
@@ -271,7 +271,7 @@ msgstr ""
 "Se recomienda usar sólo caracteres alfanuméricos y guiones bajos. No empiece "
 "con un número."
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -281,18 +281,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Por ejemplo, debería usar \"%s\" para el juego 2D, SuperTux."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "Para más información, consulte %s."
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "la especificación de nombres de archivos de freedesktop.org"
 

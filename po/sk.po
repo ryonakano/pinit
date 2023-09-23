@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-08-11 10:48+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-app/sk/"
@@ -22,7 +22,8 @@ msgstr ""
 
 #: src/AboutWindow.vala:32
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
+msgstr ""
+"Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
@@ -163,7 +164,8 @@ msgstr "Kategórie aplikácie"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "Kategórie uplatniteľné na aplikáciu. (Môžete si vybrať viac ako jeden.)"
+msgstr ""
+"Kategórie uplatniteľné na aplikáciu. (Môžete si vybrať viac ako jeden.)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
@@ -226,7 +228,7 @@ msgstr "Vybrať súbor ikonky"
 msgid "Could not open with external app"
 msgstr "Nepodarilo sa otvoriť pomocou externej aplikácie"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "Zatvoriť"
@@ -248,22 +250,22 @@ msgstr "Úprava „%s“"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "Nepodarilo sa zapísať do súboru „%s“"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "Odporúčania na pomenovávanie"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
 "begin with a number."
 msgstr "Odporúča sa používať iba alfa znakov a podčiarkov. Nepoužívajte číslo."
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -273,18 +275,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "Napríklad pre 2D hru SuperTux by ste mali použiť \"%s\"."
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "Pre viac informácií viď %s."
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "špecifiká pomenovávania súborov od freedesktop.org"
 

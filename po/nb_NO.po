@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2022-05-21 19:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -226,7 +226,7 @@ msgstr "Velg en ikon-fil"
 msgid "Could not open with external app"
 msgstr ""
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr ""
@@ -248,17 +248,17 @@ msgstr "Redigerer «%s»"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, fuzzy, c-format
 #| msgid "Are you sure you want to delete “%s”?"
 msgid "Could not write to file “%s”"
 msgstr "Ønsker du å slette «%s»?"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "Anbefalt for navngivning"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 #, fuzzy
 msgid ""
 "It is recommended to use only alphanumeric characters and underscores. Don't "
@@ -266,7 +266,7 @@ msgid ""
 msgstr ""
 "Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -274,18 +274,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "Mer info er å finne i %s."
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
 

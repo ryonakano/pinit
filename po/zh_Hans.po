@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 19:52+0900\n"
+"POT-Creation-Date: 2023-09-23 11:12+0900\n"
 "PO-Revision-Date: 2023-01-05 06:52+0000\n"
 "Last-Translator: TSc2end <lianhaoxin2012@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -235,7 +235,7 @@ msgstr "选择一个图标文件"
 msgid "Could not open with external app"
 msgstr "无法使用外部应用打开"
 
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:540
+#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:142
 msgid "Close"
 msgstr "关闭"
@@ -257,16 +257,16 @@ msgstr "编辑“%s”"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/Views/EditView.vala:537
+#: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
 msgstr "无法写入文件“%s”"
 
-#: src/Views/EditView.vala:556
+#: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
 msgstr "命名建议"
 
-#: src/Views/EditView.vala:562
+#: src/Views/EditView.vala:559
 #, fuzzy
 #| msgid ""
 #| "It is recommended to use only alphabets, numbers, and underscores, and "
@@ -276,7 +276,7 @@ msgid ""
 "begin with a number."
 msgstr "建议只使用字母、数字和下划线，且不要以数字开头。"
 
-#: src/Views/EditView.vala:563
+#: src/Views/EditView.vala:560
 msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
@@ -284,18 +284,18 @@ msgstr ""
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:572
+#: src/Views/EditView.vala:569
 #, c-format
 msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
 msgstr "举个例子，你应该为2D游戏- SuperTux使用“%s”。"
 
 #. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:581
+#: src/Views/EditView.vala:578
 #, c-format
 msgid "For more info, see %s."
 msgstr "更多信息参见%s。"
 
-#: src/Views/EditView.vala:583
+#: src/Views/EditView.vala:580
 msgid "the file naming specification by freedesktop.org"
 msgstr "文件命名规范由freedesktop.org制定"
 
