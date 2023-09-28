@@ -66,8 +66,11 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.0.2" date="2023-09-23" urgency="low">
+    <release version="2.0.2" date="2023-10-01" urgency="low">
       <description>
+        <p>
+          The release for celebrating the 2nd anniversary of the app!
+        </p>
         <ul>
           <li>Fix deprecations in GTK 4.10</li>
           <li>English grammatical changes (thanks to @BraidenPsiuk)</li>
