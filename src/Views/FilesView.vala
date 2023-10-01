@@ -11,6 +11,7 @@ public class FilesView : Gtk.Box {
 
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
+    private Gtk.Separator separator;
 
     public FilesView (MainWindow window) {
         Object (window: window);
@@ -72,15 +73,32 @@ public class FilesView : Gtk.Box {
         stack.add_named (files_list_page, "files_list_page");
         stack.add_named (no_files_page, "no_files_page");
 
+        separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box.append (stack);
+        box.append (separator);
+
         orientation = Gtk.Orientation.VERTICAL;
         append (headerbar);
-        append (stack);
+        append (box);
 
         update_list ();
 
         create_button.clicked.connect (() => {
             window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
+    }
+
+    /*
+     * Set the buttons visibility and appearance depending on whether the leaflet is folded
+     */
+    public void set_header_buttons_form (bool folded) {
+        // We can use the end title buttons in the edit view when the leaflet is folded
+        headerbar.show_end_title_buttons = folded;
+
+        // Show the separator between views only when the leaflet is folded
+        separator.visible = !folded;
     }
 
     /*
