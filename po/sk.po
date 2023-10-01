@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-28 23:02+0900\n"
+"POT-Creation-Date: 2023-10-01 09:50+0900\n"
 "PO-Revision-Date: 2023-08-11 10:48+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-app/sk/"
@@ -81,7 +81,7 @@ msgstr "Veda"
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
 msgstr "Systém"
 
@@ -89,11 +89,11 @@ msgstr "Systém"
 msgid "Utility"
 msgstr "Užitočné"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Updated entry."
 msgstr "Položka aktualizovaná."
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:48
 msgid "Deleted entry."
 msgstr "Položka odstránená."
 
@@ -229,7 +229,7 @@ msgid "Could not open with external app"
 msgstr "Nepodarilo sa otvoriť pomocou externej aplikácie"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:160
 msgid "Close"
 msgstr "Zatvoriť"
 
@@ -246,7 +246,7 @@ msgstr "Úprava položky"
 msgid "Editing “%s”"
 msgstr "Úprava „%s“"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -290,58 +290,58 @@ msgstr "Pre viac informácií viď %s."
 msgid "the file naming specification by freedesktop.org"
 msgstr "špecifiká pomenovávania súborov od freedesktop.org"
 
-#: src/Views/FilesView.vala:23
+#: src/Views/FilesView.vala:24
 msgid "Create a new entry"
 msgstr "Vytvoriť novú položku"
 
-#: src/Views/FilesView.vala:28
+#: src/Views/FilesView.vala:29
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/Views/FilesView.vala:29
+#: src/Views/FilesView.vala:30
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/Views/FilesView.vala:33
+#: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Štýl"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:36
 #, c-format
 msgid "About %s…"
 msgstr "O %s…"
 
-#: src/Views/FilesView.vala:38
+#: src/Views/FilesView.vala:39
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/Views/FilesView.vala:64
+#: src/Views/FilesView.vala:65
 msgid "No valid app entries found"
 msgstr "Neboli nájdené žiadne platné položky aplikácií"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "If you've never created one, click the + button on the top."
 msgstr "Ak ste nikdy nijakú nevytvorili, kliknite na tlačidlo + navrchu."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:135
 msgid "Delete…"
 msgstr "Odstrániť…"
 
-#: src/Views/FilesView.vala:123
+#: src/Views/FilesView.vala:141
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Naozaj chcete odstrániť „%s“?"
 
-#: src/Views/FilesView.vala:124
+#: src/Views/FilesView.vala:142
 msgid "This removes the app from the launcher."
 msgstr "Toto odstráni aplikáciu zo spúšťača."
 
-#: src/Views/FilesView.vala:127
+#: src/Views/FilesView.vala:145
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: src/Views/FilesView.vala:139
+#: src/Views/FilesView.vala:157
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Nepodarilo sa odstrániť súbor „%s“"
