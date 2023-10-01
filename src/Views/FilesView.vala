@@ -7,8 +7,8 @@ public class FilesView : Gtk.Box {
     public signal void file_deleted ();
 
     public MainWindow window { private get; construct; }
-    public Adw.HeaderBar headerbar { get; private set; }
 
+    private Adw.HeaderBar headerbar;
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
     private Gtk.Separator separator;
