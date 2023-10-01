@@ -35,7 +35,6 @@ public class MainWindow : Adw.ApplicationWindow {
             set_header_buttons_form ();
         });
         leaflet.append (files_view);
-        leaflet.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         leaflet.append (edit_view);
 
         var overlay = new Adw.ToastOverlay () {
@@ -106,7 +105,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private void set_header_buttons_form () {
         edit_view.set_header_buttons_form (leaflet.folded);
-        files_view.headerbar.show_end_title_buttons = leaflet.folded;
+        files_view.set_header_buttons_form (leaflet.folded);
     }
 
     public void show_files_view () {

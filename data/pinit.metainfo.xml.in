@@ -76,6 +76,7 @@
           <li>English grammatical changes (thanks to @BraidenPsiuk)</li>
           <li>EditView: Make keys that is not required by the freedesktop.org specification optional</li>
           <li>CategoryChooser: Improve layout management</li>
+          <li>Fix navigate back shows empty window</li>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
         </ul>

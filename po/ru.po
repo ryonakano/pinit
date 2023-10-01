@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-28 23:02+0900\n"
+"POT-Creation-Date: 2023-10-01 09:50+0900\n"
 "PO-Revision-Date: 2023-06-26 20:52+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -79,7 +79,7 @@ msgstr "Наука"
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
 msgstr "Система"
 
@@ -87,11 +87,11 @@ msgstr "Система"
 msgid "Utility"
 msgstr "Утилиты"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Updated entry."
 msgstr "Запись обновлена."
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:48
 msgid "Deleted entry."
 msgstr "Запись удалена."
 
@@ -229,7 +229,7 @@ msgid "Could not open with external app"
 msgstr "Ошибка открытия через внешнее приложение"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:160
 msgid "Close"
 msgstr "Закрыть"
 
@@ -246,7 +246,7 @@ msgstr "Редактировать запись"
 msgid "Editing “%s”"
 msgstr "Редактирование «%s»"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
 msgid "Cancel"
 msgstr "Отменить"
 
@@ -294,58 +294,58 @@ msgstr "Для получения дополнительной информац�
 msgid "the file naming specification by freedesktop.org"
 msgstr "спецификация именования файлов от freedesktop.org"
 
-#: src/Views/FilesView.vala:23
+#: src/Views/FilesView.vala:24
 msgid "Create a new entry"
 msgstr "Создать новую запись"
 
-#: src/Views/FilesView.vala:28
+#: src/Views/FilesView.vala:29
 msgid "Light"
 msgstr "Светлый"
 
-#: src/Views/FilesView.vala:29
+#: src/Views/FilesView.vala:30
 msgid "Dark"
 msgstr "Тёмный"
 
-#: src/Views/FilesView.vala:33
+#: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Стиль"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:36
 #, c-format
 msgid "About %s…"
 msgstr "О %s…"
 
-#: src/Views/FilesView.vala:38
+#: src/Views/FilesView.vala:39
 msgid "Preferences"
 msgstr "Параметры"
 
-#: src/Views/FilesView.vala:64
+#: src/Views/FilesView.vala:65
 msgid "No valid app entries found"
 msgstr "Действительные записи приложений не найдены"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "If you've never created one, click the + button on the top."
 msgstr "Если вы никогда не создавали записи, нажмите кнопку + вверху."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:135
 msgid "Delete…"
 msgstr "Удалить…"
 
-#: src/Views/FilesView.vala:123
+#: src/Views/FilesView.vala:141
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Вы уверены, что хотите удалить «%s»?"
 
-#: src/Views/FilesView.vala:124
+#: src/Views/FilesView.vala:142
 msgid "This removes the app from the launcher."
 msgstr "Это удалит приложение из Меню приложений."
 
-#: src/Views/FilesView.vala:127
+#: src/Views/FilesView.vala:145
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/Views/FilesView.vala:139
+#: src/Views/FilesView.vala:157
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Не удалось удалить файл «%s»"

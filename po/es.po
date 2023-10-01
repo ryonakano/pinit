@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-28 23:02+0900\n"
+"POT-Creation-Date: 2023-10-01 09:50+0900\n"
 "PO-Revision-Date: 2023-08-20 18:51+0000\n"
 "Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted."
 "weblate.org>\n"
@@ -83,7 +83,7 @@ msgstr "Ciencia"
 msgid "Settings"
 msgstr "Configuración"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
 msgstr "Sistema"
 
@@ -91,11 +91,11 @@ msgstr "Sistema"
 msgid "Utility"
 msgstr "Utilidad"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Updated entry."
 msgstr "Entrada actualizada."
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:48
 msgid "Deleted entry."
 msgstr "Entrada borrada."
 
@@ -233,7 +233,7 @@ msgid "Could not open with external app"
 msgstr "No se puede abrir con una aplicación externa"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:160
 msgid "Close"
 msgstr "Cerrar"
 
@@ -250,7 +250,7 @@ msgstr "Editando entrada"
 msgid "Editing “%s”"
 msgstr "Editando «%s»"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -296,58 +296,58 @@ msgstr "Para más información, consulte %s."
 msgid "the file naming specification by freedesktop.org"
 msgstr "la especificación de nombres de archivos de freedesktop.org"
 
-#: src/Views/FilesView.vala:23
+#: src/Views/FilesView.vala:24
 msgid "Create a new entry"
 msgstr "Crear una entrada nueva"
 
-#: src/Views/FilesView.vala:28
+#: src/Views/FilesView.vala:29
 msgid "Light"
 msgstr "Claro"
 
-#: src/Views/FilesView.vala:29
+#: src/Views/FilesView.vala:30
 msgid "Dark"
 msgstr "Oscuro"
 
-#: src/Views/FilesView.vala:33
+#: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Estilo"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:36
 #, c-format
 msgid "About %s…"
 msgstr "Acerca de %s…"
 
-#: src/Views/FilesView.vala:38
+#: src/Views/FilesView.vala:39
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: src/Views/FilesView.vala:64
+#: src/Views/FilesView.vala:65
 msgid "No valid app entries found"
 msgstr "No se han encontrado entradas de aplicaciones válidas"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "If you've never created one, click the + button on the top."
 msgstr "Si nunca ha creado una, haga clic en el botón + de la parte superior."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:135
 msgid "Delete…"
 msgstr "Borrar…"
 
-#: src/Views/FilesView.vala:123
+#: src/Views/FilesView.vala:141
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "¿Seguro que quiere borrar \"%s\"?"
 
-#: src/Views/FilesView.vala:124
+#: src/Views/FilesView.vala:142
 msgid "This removes the app from the launcher."
 msgstr "Esto elimina la aplicación del lanzador."
 
-#: src/Views/FilesView.vala:127
+#: src/Views/FilesView.vala:145
 msgid "Delete"
 msgstr "Borrar"
 
-#: src/Views/FilesView.vala:139
+#: src/Views/FilesView.vala:157
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "No se ha podido borrar el archivo \"%s\""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-28 23:02+0900\n"
+"POT-Creation-Date: 2023-10-01 09:50+0900\n"
 "PO-Revision-Date: 2023-06-22 16:30+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -80,7 +80,7 @@ msgstr "Věda"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:30
+#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
 msgstr "Systém"
 
@@ -88,11 +88,11 @@ msgstr "Systém"
 msgid "Utility"
 msgstr "Služby"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Updated entry."
 msgstr "Aktualizovaná položka."
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:48
 msgid "Deleted entry."
 msgstr "Smazaná položka."
 
@@ -223,7 +223,7 @@ msgid "Could not open with external app"
 msgstr "Nelze otevřít pomocí externí aplikace"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:160
 msgid "Close"
 msgstr "Zavřít"
 
@@ -240,7 +240,7 @@ msgstr "Editace položky"
 msgid "Editing “%s”"
 msgstr "Editace “%s”"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:126
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -285,58 +285,58 @@ msgstr "Další informace naleznete na %s."
 msgid "the file naming specification by freedesktop.org"
 msgstr "specifikace pojmenování souborů od freedesktop.org"
 
-#: src/Views/FilesView.vala:23
+#: src/Views/FilesView.vala:24
 msgid "Create a new entry"
 msgstr "Vytvořit novou položku"
 
-#: src/Views/FilesView.vala:28
+#: src/Views/FilesView.vala:29
 msgid "Light"
 msgstr "Světlý"
 
-#: src/Views/FilesView.vala:29
+#: src/Views/FilesView.vala:30
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/Views/FilesView.vala:33
+#: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Motiv"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:35
+#: src/Views/FilesView.vala:36
 #, c-format
 msgid "About %s…"
 msgstr "O aplikaci %s…"
 
-#: src/Views/FilesView.vala:38
+#: src/Views/FilesView.vala:39
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: src/Views/FilesView.vala:64
+#: src/Views/FilesView.vala:65
 msgid "No valid app entries found"
 msgstr "Nebyly nalezeny žádné platné položky aplikací"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "If you've never created one, click the + button on the top."
 msgstr "Pro vytvoření klikněte na tlačítko + v horní části."
 
-#: src/Views/FilesView.vala:117
+#: src/Views/FilesView.vala:135
 msgid "Delete…"
 msgstr "Smazat…"
 
-#: src/Views/FilesView.vala:123
+#: src/Views/FilesView.vala:141
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Opravdu chcete smazat „%s“?"
 
-#: src/Views/FilesView.vala:124
+#: src/Views/FilesView.vala:142
 msgid "This removes the app from the launcher."
 msgstr "Tím se aplikace odstraní ze spouštěče aplikací."
 
-#: src/Views/FilesView.vala:127
+#: src/Views/FilesView.vala:145
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/Views/FilesView.vala:139
+#: src/Views/FilesView.vala:157
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Nelze smazat soubor „%s“"
