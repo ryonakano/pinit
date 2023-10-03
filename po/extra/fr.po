@@ -10,42 +10,35 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:51+0900\n"
-"PO-Revision-Date: 2023-01-13 17:48+0000\n"
+"PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
-"metadata/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
+"pinit-metainfo/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
-"Créez des raccourcis vers vos applications portables préférées dans votre "
+"Épinglez des raccourcis vers vos applications portables préférées dans votre "
 "lanceur d’applications"
 
 #: data/pinit.metainfo.xml.in:13
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to portable apps like raw executable files, AppImage "
-#| "files, etc. into the app launcher of your desktop environment."
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
-"Créez des raccourcis vers vos applications portables (fichiers exécutables "
-"bruts, fichiers AppImage, etc.) pour le lanceur d’applications de votre "
-"environnement de bureau."
+"Épinglez des raccourcis vers vos applications portables (fichiers "
+"exécutables bruts, fichiers AppImage, etc.) dans le lanceur d’applications "
+"de votre environnement de bureau."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
@@ -96,35 +89,35 @@ msgstr "Ryo Nakano"
 
 #: data/pinit.metainfo.xml.in:71
 msgid "The release for celebrating the 2nd anniversary of the app!"
-msgstr ""
+msgstr "La version célébrant le deuxième anniversaire de l’appli !"
 
 #: data/pinit.metainfo.xml.in:75
 msgid "Fix deprecations in GTK 4.10"
-msgstr ""
+msgstr "Correction de régressions dans GTK 4.10"
 
 #: data/pinit.metainfo.xml.in:76
 msgid "English grammatical changes (thanks to @BraidenPsiuk)"
-msgstr ""
+msgstr "Changements grammaticaux en anglais (grâce à @BraidenPsiuk)"
 
 #: data/pinit.metainfo.xml.in:77
 msgid ""
 "EditView: Make keys that is not required by the freedesktop.org "
 "specification optional"
 msgstr ""
+"Vue d’édition : les touches non requises par la spécification "
+"freedesktop.org deviennent optionnelles"
 
 #: data/pinit.metainfo.xml.in:78
 msgid "CategoryChooser: Improve layout management"
-msgstr ""
+msgstr "Sélecteur de catégories : amélioration de la mise en page"
 
 #: data/pinit.metainfo.xml.in:79
 msgid "Fix navigate back shows empty window"
-msgstr ""
+msgstr "Correction du retour en arrière qui affichait une fenêtre vide"
 
 #: data/pinit.metainfo.xml.in:80 data/pinit.metainfo.xml.in:89
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Mise à jour de la traduction japonaise"
+msgstr "Mise à jour de l’environnement d’exécution Flatpak"
 
 #: data/pinit.metainfo.xml.in:81 data/pinit.metainfo.xml.in:90
 #: data/pinit.metainfo.xml.in:115
@@ -300,11 +293,9 @@ msgid "Improved support for other desktop environments"
 msgstr "Amélioration de la prise en charge des autres environnements de bureau"
 
 #: data/pinit.metainfo.xml.in:198
-#, fuzzy
-#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
 msgid "Add execution permission on clicking the \"Pin It!\" button"
 msgstr ""
-"Ajout d'une permission d'exécution au clic sur le bouton « Épingler ! »"
+"Ajout d’une permission d’exécution lors du clic sur le bouton « Épingler ! »"
 
 #: data/pinit.metainfo.xml.in:210
 msgid "Add CategoryChooser"
