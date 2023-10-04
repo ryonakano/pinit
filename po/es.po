@@ -4,14 +4,14 @@
 # Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate.org>, 2023.
+# gallegonovato <fran-carro@hotmail.es>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:50+0900\n"
-"PO-Revision-Date: 2023-08-20 18:51+0000\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted."
-"weblate.org>\n"
+"PO-Revision-Date: 2023-10-05 12:13+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "es/>\n"
 "Language: es\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: src/AboutWindow.vala:32
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgstr ""
-"Fije accesos directos a sus aplicaciones portátiles favoritas en el lanzador "
-"de aplicaciones"
+"Crea accesos directos a tus aplicaciones portátiles favoritas en el "
+"iniciador de las aplicaciones"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/AboutWindow.vala:42
