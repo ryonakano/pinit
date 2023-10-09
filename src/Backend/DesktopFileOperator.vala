@@ -106,13 +106,9 @@ public class DesktopFileOperator : GLib.Object {
     public void write_to_file (DesktopFile desktop_file) throws Error {
         var keyfile = new KeyFile ();
 
-        keyfile.set_locale_string (
-            KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language, desktop_file.app_name
-        );
+        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, desktop_file.app_name);
 
-        keyfile.set_locale_string (
-            KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language, desktop_file.comment
-        );
+        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, desktop_file.comment);
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC, desktop_file.exec_file);
 
@@ -197,6 +193,8 @@ public class DesktopFileOperator : GLib.Object {
      * Load the content of the desktop file at `path` and construct new DesktopFile through KeyFile object.
      */
     public DesktopFile? load_from_file (string path) {
+        string locale;
+
         string file_name = "";
         string app_name = "";
         string comment = "";
@@ -216,9 +214,13 @@ public class DesktopFileOperator : GLib.Object {
             // Get the filename without the .desktop suffix
             file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
 
-            app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
+            locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
+            app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, locale);
 
-            comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT)) {
+                locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+                comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, locale);
+            }
 
             exec_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
 
@@ -226,13 +228,17 @@ public class DesktopFileOperator : GLib.Object {
                 icon_file = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
             }
 
-            categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES)) {
+                categories = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES);
+            }
 
             if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS)) {
                 startup_wm_class = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
             }
 
-            is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL)) {
+                is_cli = keyfile.get_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL);
+            }
 
             is_backup = UNSAVED_FILE_PATH in path;
         } catch (KeyFileError e) {
