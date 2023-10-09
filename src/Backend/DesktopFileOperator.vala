@@ -27,7 +27,9 @@ public class DesktopFileOperator : GLib.Object {
 
                     // Add the desktop file found just now to the list
                     var desktop_file = load_from_file (Path.build_filename (DESTINATION_PATH, name));
-                    _files.add (desktop_file);
+                    if (desktop_file != null) {
+                        _files.add (desktop_file);
+                    }
                 }
             } catch (Error e) {
                 warning (e.message);
@@ -99,7 +101,7 @@ public class DesktopFileOperator : GLib.Object {
     }
 
     /*
-     * Write the content of `desktop_file@ into the desktop file at `desktop_file.file_name` through KeyFile object.
+     * Write the content of `desktop_file` into the desktop file at `desktop_file.file_name` through KeyFile object.
      */
     public void write_to_file (DesktopFile desktop_file) throws Error {
         var keyfile = new KeyFile ();
