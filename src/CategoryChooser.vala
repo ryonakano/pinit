@@ -87,19 +87,19 @@ public class CategoryChooser : Gtk.Box {
         categories = new Gee.HashMap<string, string> ();
 
         // See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
-        categories.set ("AudioVideo", _("Audio & Video"));
+        categories.set ("AudioVideo", _("Sound & Video"));
         categories.set ("Audio", _("Audio"));
         categories.set ("Video", _("Video"));
-        categories.set ("Development", _("Development"));
+        categories.set ("Development", _("Programming"));
         categories.set ("Education", _("Education"));
-        categories.set ("Game", _("Game"));
+        categories.set ("Game", _("Games"));
         categories.set ("Graphics", _("Graphics"));
-        categories.set ("Network", _("Network"));
+        categories.set ("Network", _("Internet"));
         categories.set ("Office", _("Office"));
         categories.set ("Science", _("Science"));
         categories.set ("Settings", _("Settings"));
-        categories.set ("System", _("System"));
-        categories.set ("Utility", _("Utility"));
+        categories.set ("System", _("System Tools"));
+        categories.set ("Utility", _("Accessories"));
 
         var flowbox = new Gtk.FlowBox () {
             vexpand = true,
