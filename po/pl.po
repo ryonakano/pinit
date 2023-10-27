@@ -2,21 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
-#
+# Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:50+0900\n"
-"PO-Revision-Date: 2023-02-04 21:07+0200\n"
-"Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2023-10-29 05:19+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/rosp/pinit-app/pl/"
+">\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
-"|| n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: src/AboutWindow.vala:32
 #, fuzzy
@@ -83,7 +85,7 @@ msgstr "Ustawienia"
 
 #: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
-msgstr "Systema"
+msgstr "System"
 
 #: src/CategoryChooser.vala:102
 msgid "Utility"
@@ -309,11 +311,11 @@ msgstr "Utwórz nowy wpis"
 
 #: src/Views/FilesView.vala:29
 msgid "Light"
-msgstr "Świetlne"
+msgstr "Jasny"
 
 #: src/Views/FilesView.vala:30
 msgid "Dark"
-msgstr "Ciemne"
+msgstr "Ciemny"
 
 #: src/Views/FilesView.vala:34
 msgid "Style"
