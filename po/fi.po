@@ -7,13 +7,16 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:50+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-05 00:46+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/pinit-app/"
+"fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.3-dev\n"
 
 #: src/AboutWindow.vala:32
 msgid "Pin shortcuts for your favorite portable apps to your app launcher"
@@ -29,55 +32,55 @@ msgstr ""
 #: src/Backend/ExternalAppLauncher.vala:41
 #, c-format
 msgid "Cannot open %s: %s"
-msgstr ""
+msgstr "Ei voi avata %s: %s"
 
 #: src/CategoryChooser.vala:90
 msgid "Audio & Video"
-msgstr ""
+msgstr "Ääni ja video"
 
 #: src/CategoryChooser.vala:91
 msgid "Audio"
-msgstr ""
+msgstr "Ääni"
 
 #: src/CategoryChooser.vala:92
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/CategoryChooser.vala:93
 msgid "Development"
-msgstr ""
+msgstr "Kehitys"
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
-msgstr ""
+msgstr "Koulutus"
 
 #: src/CategoryChooser.vala:95
 msgid "Game"
-msgstr ""
+msgstr "Peli"
 
 #: src/CategoryChooser.vala:96
 msgid "Graphics"
-msgstr ""
+msgstr "Grafiikka"
 
 #: src/CategoryChooser.vala:97
 msgid "Network"
-msgstr ""
+msgstr "Verkko"
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
-msgstr ""
+msgstr "Toimisto"
 
 #: src/CategoryChooser.vala:99
 msgid "Science"
-msgstr ""
+msgstr "Tiede"
 
 #: src/CategoryChooser.vala:100
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
 msgid "System"
-msgstr ""
+msgstr "Järjestelmä"
 
 #: src/CategoryChooser.vala:102
 msgid "Utility"
@@ -93,11 +96,11 @@ msgstr ""
 
 #: src/Views/EditView.vala:51
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: src/Views/EditView.vala:61
 msgid "File Name"
-msgstr ""
+msgstr "Tiedostonimi"
 
 #: src/Views/EditView.vala:66
 msgid "Name of the .desktop file, where this app's info will be saved."
@@ -109,15 +112,15 @@ msgstr ""
 
 #: src/Views/EditView.vala:88
 msgid "App Name"
-msgstr ""
+msgstr "Sovelluksen nimi"
 
 #: src/Views/EditView.vala:92
 msgid "Shown in the launcher or dock."
-msgstr ""
+msgstr "Näytetään käynnistimessä tai telakassa."
 
 #: src/Views/EditView.vala:107
 msgid "Comment"
-msgstr ""
+msgstr "Kommentti"
 
 #: src/Views/EditView.vala:111
 msgid ""
@@ -137,7 +140,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:148
 msgid "Icon File"
-msgstr ""
+msgstr "Kuvaketiedosto"
 
 #: src/Views/EditView.vala:153
 msgid ""
@@ -147,7 +150,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:170
 msgid "App Categories"
-msgstr ""
+msgstr "Sovellusluokat"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -155,7 +158,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
-msgstr ""
+msgstr "Lisäasetukset"
 
 #: src/Views/EditView.vala:192
 msgid ""
@@ -175,7 +178,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:215 src/Views/EditView.vala:224
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Suorita päätteessä"
 
 #: src/Views/EditView.vala:219
 msgid "Check this if you want to register a CUI app."
@@ -183,7 +186,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:228 src/Views/EditView.vala:239
 msgid "Open in text editor"
-msgstr ""
+msgstr "Avaa tekstimuokkaimessa"
 
 #: src/Views/EditView.vala:233
 msgid "You can also edit more options by opening in a text editor."
@@ -191,32 +194,32 @@ msgstr ""
 
 #: src/Views/EditView.vala:314
 msgid "Select an executable file"
-msgstr ""
+msgstr "Valitse suoritustiedosto"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "Valitse"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "ICO-, PNG-, SVG- tai XMP-tiedostot"
 
 #: src/Views/EditView.vala:353
 msgid "Select an icon file"
-msgstr ""
+msgstr "Valitse kuvaketiedosto"
 
 #: src/Views/EditView.vala:378
 msgid "Could not open with external app"
-msgstr ""
+msgstr "Ei voitu avata erillisellä sovelluksella"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
 #: src/Views/FilesView.vala:160
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: src/Views/EditView.vala:431
 msgid "New Entry"
-msgstr ""
+msgstr "Uusi tietue"
 
 #: src/Views/EditView.vala:440
 msgid "Editing Entry"
@@ -225,20 +228,20 @@ msgstr ""
 #: src/Views/EditView.vala:446
 #, c-format
 msgid "Editing “%s”"
-msgstr ""
+msgstr "Muokataan “%s”"
 
 #: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: src/Views/EditView.vala:534
 #, c-format
 msgid "Could not write to file “%s”"
-msgstr ""
+msgstr "Tiedostoon “%s” ei voitu kirjoittaa"
 
 #: src/Views/EditView.vala:553
 msgid "Recommendations for naming"
-msgstr ""
+msgstr "Suositukset nimeämiseen"
 
 #: src/Views/EditView.vala:559
 msgid ""
@@ -271,29 +274,29 @@ msgstr ""
 
 #: src/Views/FilesView.vala:24
 msgid "Create a new entry"
-msgstr ""
+msgstr "Luo uusi tietue"
 
 #: src/Views/FilesView.vala:29
 msgid "Light"
-msgstr ""
+msgstr "Vaalea"
 
 #: src/Views/FilesView.vala:30
 msgid "Dark"
-msgstr ""
+msgstr "Tumma"
 
 #: src/Views/FilesView.vala:34
 msgid "Style"
-msgstr ""
+msgstr "Tyyli"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:36
 #, c-format
 msgid "About %s…"
-msgstr ""
+msgstr "Tietoja - %s"
 
 #: src/Views/FilesView.vala:39
 msgid "Preferences"
-msgstr ""
+msgstr "Asetukset"
 
 #: src/Views/FilesView.vala:65
 msgid "No valid app entries found"
@@ -305,22 +308,22 @@ msgstr ""
 
 #: src/Views/FilesView.vala:135
 msgid "Delete…"
-msgstr ""
+msgstr "Poista…"
 
 #: src/Views/FilesView.vala:141
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
-msgstr ""
+msgstr "Haluatko varmasti poistaa “%s”?"
 
 #: src/Views/FilesView.vala:142
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "Tämä poistaa sovelluksen käynnistimestä."
 
 #: src/Views/FilesView.vala:145
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
 #: src/Views/FilesView.vala:157
 #, c-format
 msgid "Could not delete file “%s”"
-msgstr ""
+msgstr "Tiedostoa “%s” ei voitu poistaa"
