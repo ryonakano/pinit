@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:50+0900\n"
-"PO-Revision-Date: 2023-12-05 00:46+0000\n"
+"PO-Revision-Date: 2023-12-08 20:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "fi/>\n"
@@ -84,7 +84,7 @@ msgstr "Järjestelmä"
 
 #: src/CategoryChooser.vala:102
 msgid "Utility"
-msgstr ""
+msgstr "Työkalu"
 
 #: src/MainWindow.vala:44
 msgid "Updated entry."
@@ -104,11 +104,11 @@ msgstr "Tiedostonimi"
 
 #: src/Views/EditView.vala:66
 msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr ""
+msgstr ".desktop-tiedoston nimi, johon tämän sovelluksen tiedot tallennetaan."
 
 #: src/Views/EditView.vala:76
 msgid "Suffix of the file"
-msgstr ""
+msgstr "Tiedostopääte"
 
 #: src/Views/EditView.vala:88
 msgid "App Name"
@@ -154,7 +154,7 @@ msgstr "Sovellusluokat"
 
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "Sovellukseen soveltuvat luokat. (Voit valita enemmän kuin yhden)"
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
@@ -168,7 +168,7 @@ msgstr ""
 
 #: src/Views/EditView.vala:199
 msgid "Startup WM Class"
-msgstr ""
+msgstr "Käynnistyksen WM-luokka"
 
 #: src/Views/EditView.vala:204
 msgid ""
@@ -190,7 +190,7 @@ msgstr "Avaa tekstimuokkaimessa"
 
 #: src/Views/EditView.vala:233
 msgid "You can also edit more options by opening in a text editor."
-msgstr ""
+msgstr "Voit muokata lisää valintoja avaamalla tekstimuokkaimen."
 
 #: src/Views/EditView.vala:314
 msgid "Select an executable file"
@@ -304,7 +304,7 @@ msgstr ""
 
 #: src/Views/FilesView.vala:66
 msgid "If you've never created one, click the + button on the top."
-msgstr ""
+msgstr "Jos et ole luonut yhtäkään, napsauta ylhäältä +."
 
 #: src/Views/FilesView.vala:135
 msgid "Delete…"
