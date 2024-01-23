@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 09:50+0900\n"
-"PO-Revision-Date: 2023-10-29 05:19+0000\n"
+"PO-Revision-Date: 2023-12-27 01:13+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/pinit-app/pl/"
 ">\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/AboutWindow.vala:32
 #, fuzzy
@@ -136,6 +136,8 @@ msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Opisuje aplikację. Może pojawić się jako podpowiedź po najechaniu kursorem "
+"na wpis aplikacji na liście aplikacji/doku."
 
 #: src/Views/EditView.vala:126
 msgid "Exec File"
@@ -168,6 +170,8 @@ msgstr "Kategorie aplikacji"
 #: src/Views/EditView.vala:174
 msgid "Categories applicable to the app. (You can select more than one.)"
 msgstr ""
+"Kategorie które można przypisać do aplikacji. (Możesz wybrać więcej niż "
+"jedną)."
 
 #: src/Views/EditView.vala:187
 msgid "Advanced configuration"
@@ -225,7 +229,7 @@ msgstr "Wybierz plik wykonywalny"
 
 #: src/Views/EditView.vala:315 src/Views/EditView.vala:354
 msgid "Select"
-msgstr ""
+msgstr "Wybierz"
 
 #: src/Views/EditView.vala:350
 msgid "ICO, PNG, SVG, or XMP files"
@@ -287,6 +291,8 @@ msgid ""
 "Include at least two elements (sections of the string seperated by a "
 "period). Most apps use three elements."
 msgstr ""
+"Uwzględnij co najmniej dwa elementy (oddzielonych kropką). Większość "
+"aplikacji korzysta z trzech elementów."
 
 #. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
 #. the desktop file name of SuperTux.
