@@ -52,7 +52,6 @@ public class Application : Adw.Application {
             var about_window = new AboutWindow (main_window);
             about_window.present ();
         });
-        set_accels_for_action ("app.about", {"F1"});
         add_action (about_action);
     }
 
