@@ -46,13 +46,6 @@ public class Application : Adw.Application {
         Intl.textdomain (Constants.PROJECT_NAME);
 
         setup_style ();
-
-        var about_action = new SimpleAction ("about", null);
-        about_action.activate.connect (() => {
-            var about_window = new AboutWindow (main_window);
-            about_window.present ();
-        });
-        add_action (about_action);
     }
 
     private void setup_style () {
