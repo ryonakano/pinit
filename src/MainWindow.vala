@@ -6,6 +6,7 @@
 public class MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
         { "about", on_about_activate },
+        { "new", on_new_activate },
     };
 
     private FilesView files_view;
@@ -59,25 +60,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         set_header_buttons_form ();
         set_visible_view ();
-
-        var event_controller = new Gtk.EventControllerKey ();
-        event_controller.key_pressed.connect ((keyval, keycode, state) => {
-            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.q) {
-                close_request ();
-            }
-
-            if (Gdk.ModifierType.CONTROL_MASK in state && keyval == Gdk.Key.n) {
-                show_edit_view (DesktopFileOperator.get_default ().create_new ());
-            }
-
-            return false;
-        });
-        /*
-         * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
-         * and both of them overloads add_controller methods.
-         * So we need explicitly call the one in Gtk.Widget by casting.
-         */
-        ((Gtk.Widget) this).add_controller (event_controller);
 
         edit_view.file_updated.connect (() => {
             show_files_view ();
@@ -142,6 +124,10 @@ public class MainWindow : Adw.ApplicationWindow {
             // If there were unsaved work in the last session, restore it too.
             show_edit_view (last_edited_file);
         }
+    }
+
+    private void on_new_activate () {
+        show_edit_view (DesktopFileOperator.get_default ().create_new ());
     }
 
     private void on_about_activate () {

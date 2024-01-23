@@ -1,3 +1,4 @@
+data/gtk/help-overlay.ui
 src/Backend/ExternalAppLauncher.vala
 src/CategoryChooser.vala
 src/MainWindow.vala
