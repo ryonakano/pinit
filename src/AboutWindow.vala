@@ -11,11 +11,9 @@ public class AboutWindow : GLib.Object {
     private const string[] DEVELOPERS = {
         "Ryo Nakano https://github.com/ryonakano",
         "Jeyson Flores https://github.com/JeysonFlores",
-        null
     };
     private const string[] ARTISTS = {
         "hanaral https://github.com/hanaral",
-        null
     };
 
     public AboutWindow (MainWindow parent) {
