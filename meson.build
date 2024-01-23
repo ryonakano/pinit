@@ -29,7 +29,6 @@ sources = files(
     'src' / 'Backend' / 'ExternalAppLauncher.vala',
     'src' / 'Views' / 'EditView.vala',
     'src' / 'Views' / 'FilesView.vala',
-    'src' / 'AboutWindow.vala',
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'DialogResponse.vala',

@@ -4,6 +4,10 @@
  */
 
 public class MainWindow : Adw.ApplicationWindow {
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "about", on_about_activate },
+    };
+
     private FilesView files_view;
     private EditView edit_view;
     private Adw.Leaflet leaflet;
@@ -21,6 +25,8 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        add_action_entries (ACTION_ENTRIES, this);
+
         /*
          * The two views are switched/holded using Leaflet
          */
@@ -136,5 +142,36 @@ public class MainWindow : Adw.ApplicationWindow {
             // If there were unsaved work in the last session, restore it too.
             show_edit_view (last_edited_file);
         }
+    }
+
+    private void on_about_activate () {
+        const string[] DEVELOPERS = {
+            "Ryo Nakano https://github.com/ryonakano",
+            "Jeyson Flores https://github.com/JeysonFlores",
+        };
+        const string[] ARTISTS = {
+            "hanaral https://github.com/hanaral",
+        };
+
+        var about_window = new Adw.AboutWindow () {
+            transient_for = this,
+            modal = true,
+            application_icon = Constants.PROJECT_NAME,
+            application_name = Constants.APP_NAME,
+            version = Constants.PROJECT_VERSION,
+            comments = _("Pin shortcuts for your favorite portable apps to your app launcher"),
+            website = "https://github.com/ryonakano/pinit",
+            support_url = "https://github.com/ryonakano/pinit/discussions",
+            issue_url = "https://github.com/ryonakano/pinit/issues",
+            copyright = "© 2021-2024 Ryo Nakano",
+            license_type = Gtk.License.GPL_3_0,
+            developer_name = "Ryo Nakano",
+            developers = DEVELOPERS,
+            artists = ARTISTS,
+            ///TRANSLATORS: Replace with your name; don't translate literally
+            translator_credits = _("translator-credits")
+        };
+
+        about_window.present ();
     }
 }
