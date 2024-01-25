@@ -4,6 +4,10 @@
  */
 
 public class Application : Adw.Application {
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "quit", on_quit_activate },
+    };
+
     struct Style {
         string name;
         Adw.ColorScheme color_scheme;
@@ -46,6 +50,10 @@ public class Application : Adw.Application {
         Intl.textdomain (Constants.PROJECT_NAME);
 
         setup_style ();
+
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", { "<Control>q" });
+        set_accels_for_action ("win.new", { "<Control>n" });
     }
 
     private void setup_style () {
@@ -97,6 +105,15 @@ public class Application : Adw.Application {
         }
 
         settings.bind ("window-maximized", main_window, "maximized", SettingsBindFlags.SET);
+    }
+
+    private void on_quit_activate () {
+        if (main_window != null) {
+            main_window.prep_destroy ();
+            main_window.destroy ();
+        }
+
+        quit ();
     }
 
     public static int main (string[] args) {

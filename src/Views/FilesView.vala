@@ -32,6 +32,7 @@ public class FilesView : Gtk.Box {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("Style"), theme_submenu);
+        menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
         menu.append (_("About %s").printf (Constants.APP_NAME), "win.about");
 
