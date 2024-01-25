@@ -73,22 +73,25 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         close_request.connect (() => {
-            unowned Views visible_view = get_visible_view ();
-
-            Application.settings.set_enum ("last-view", (int) visible_view);
-
-            if (visible_view == Views.EDIT_VIEW) {
-                if (edit_view.is_unsaved) {
-                    // If there are unsaved work, save it as a backup
-                    edit_view.save_file (true);
-                } else {
-                    // If there are no unsaved work, delete the backup (if exists)
-                    DesktopFileOperator.get_default ().delete_backup ();
-                }
-            }
-
+            prep_destroy ();
             destroy ();
         });
+    }
+
+    public void prep_destroy () {
+        unowned Views visible_view = get_visible_view ();
+
+        Application.settings.set_enum ("last-view", (int) visible_view);
+
+        if (visible_view == Views.EDIT_VIEW) {
+            if (edit_view.is_unsaved) {
+                // If there are unsaved work, save it as a backup
+                edit_view.save_file (true);
+            } else {
+                // If there are no unsaved work, delete the backup (if exists)
+                DesktopFileOperator.get_default ().delete_backup ();
+            }
+        }
     }
 
     private void set_header_buttons_form () {

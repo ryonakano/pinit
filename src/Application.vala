@@ -109,6 +109,7 @@ public class Application : Adw.Application {
 
     private void on_quit_activate () {
         if (main_window != null) {
+            main_window.prep_destroy ();
             main_window.destroy ();
         }
 
