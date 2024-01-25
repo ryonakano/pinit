@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class FilesView : Gtk.Box {
@@ -32,8 +32,9 @@ public class FilesView : Gtk.Box {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("Style"), theme_submenu);
+        menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("About %s…").printf (Constants.APP_NAME), "app.about");
+        menu.append (_("About %s").printf (Constants.APP_NAME), "win.about");
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),

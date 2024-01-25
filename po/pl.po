@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 09:50+0900\n"
+"POT-Creation-Date: 2024-01-25 23:11+0900\n"
 "PO-Revision-Date: 2023-12-27 01:13+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/pinit-app/pl/"
@@ -20,17 +20,27 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.4-dev\n"
 
-#: src/AboutWindow.vala:32
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "Utwórz skrót do ulubionych aplikacji przenośnych w wyrzutni aplikacji"
+#: data/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
 
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr "polpolylingo"
+#: data/gtk/help-overlay.ui:15
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:22
+msgctxt "shortcut window"
+msgid "Edit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Exec File"
+msgctxt "shortcut window"
+msgid "New File"
+msgstr "Plik wykonywalny"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -40,7 +50,9 @@ msgid "Cannot open %s: %s"
 msgstr "Nie można otworzyć %s: %s"
 
 #: src/CategoryChooser.vala:90
-msgid "Audio & Video"
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
 msgstr "Audio & Wideo"
 
 #: src/CategoryChooser.vala:91
@@ -52,15 +64,17 @@ msgid "Video"
 msgstr "Wideo"
 
 #: src/CategoryChooser.vala:93
-msgid "Development"
-msgstr "Opracowywanie"
+msgid "Programming"
+msgstr ""
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "Edukacja"
 
 #: src/CategoryChooser.vala:95
-msgid "Game"
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
 msgstr "Gry"
 
 #: src/CategoryChooser.vala:96
@@ -68,8 +82,8 @@ msgid "Graphics"
 msgstr "Grafika"
 
 #: src/CategoryChooser.vala:97
-msgid "Network"
-msgstr "Sieć"
+msgid "Internet"
+msgstr ""
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -83,21 +97,35 @@ msgstr "Nauka"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
-msgid "System"
+#: src/CategoryChooser.vala:101
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
 msgstr "System"
 
 #: src/CategoryChooser.vala:102
-msgid "Utility"
-msgstr "Narzędzie"
+msgid "Accessories"
+msgstr ""
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:51
 msgid "Updated entry."
 msgstr "Zaktualizowany wpis."
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:55
 msgid "Deleted entry."
 msgstr "Usunięty wpis."
+
+#: src/MainWindow.vala:151
+#, fuzzy
+#| msgid ""
+#| "Create the shortcut to your favorite portable apps into your app launcher"
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+msgstr "Utwórz skrót do ulubionych aplikacji przenośnych w wyrzutni aplikacji"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/MainWindow.vala:161
+msgid "translator-credits"
+msgstr "polpolylingo"
 
 #: src/Views/EditView.vala:51
 msgid "Save"
@@ -244,7 +272,7 @@ msgid "Could not open with external app"
 msgstr "Nie można otworzyć za pomocą aplikacji zewnętrznej"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:160
+#: src/Views/FilesView.vala:161
 msgid "Close"
 msgstr "Zamknij"
 
@@ -261,7 +289,7 @@ msgstr "Edytowanie wpisu"
 msgid "Editing “%s”"
 msgstr "Edytowanie “%s”"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -323,49 +351,67 @@ msgstr "Jasny"
 msgid "Dark"
 msgstr "Ciemny"
 
+#: src/Views/FilesView.vala:31
+msgid "System"
+msgstr "System"
+
 #: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Styl"
 
+#: src/Views/FilesView.vala:35
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:36
-#, c-format
-msgid "About %s…"
+#: src/Views/FilesView.vala:37
+#, fuzzy, c-format
+#| msgid "About %s…"
+msgid "About %s"
 msgstr "O %s…"
 
-#: src/Views/FilesView.vala:39
+#: src/Views/FilesView.vala:40
 msgid "Preferences"
 msgstr "Preferencje"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "No valid app entries found"
 msgstr "Nie znaleziono prawidłowych wpisów aplikacji"
 
-#: src/Views/FilesView.vala:66
+#: src/Views/FilesView.vala:67
 msgid "If you've never created one, click the + button on the top."
 msgstr "Jeśli nigdy go nie stworzyłeś, kliknij przycisk plus na górze."
 
-#: src/Views/FilesView.vala:135
+#: src/Views/FilesView.vala:136
 msgid "Delete…"
 msgstr "Usuń…"
 
-#: src/Views/FilesView.vala:141
+#: src/Views/FilesView.vala:142
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Czy na pewno chcesz usunąć “%s”?"
 
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:143
 msgid "This removes the app from the launcher."
 msgstr "Powoduje to usunięcie aplikacji z wyrzutni."
 
-#: src/Views/FilesView.vala:145
+#: src/Views/FilesView.vala:146
 msgid "Delete"
 msgstr "Usunąć"
 
-#: src/Views/FilesView.vala:157
+#: src/Views/FilesView.vala:158
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Nie można usunąć pliku “%s”"
+
+#~ msgid "Development"
+#~ msgstr "Opracowywanie"
+
+#~ msgid "Network"
+#~ msgstr "Sieć"
+
+#~ msgid "Utility"
+#~ msgstr "Narzędzie"
 
 #~ msgid "A tooltip text to describe what the app helps you to do."
 #~ msgstr "Tekst etykietki narzędzia opisujący, w czym pomaga aplikacja."

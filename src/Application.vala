@@ -1,21 +1,16 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class Application : Adw.Application {
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "quit", on_quit_activate },
+    };
+
     struct Style {
         string name;
         Adw.ColorScheme color_scheme;
-    }
-
-    // Returns if the current desktop environment is Pantheon or not.
-    // We'll use this later to provide more appropriate functions or design
-    // both on Pantheon and on another desktop environment.
-    public static bool IS_ON_PANTHEON {
-        get {
-            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
-        }
     }
 
     public static Settings settings { get; private set; }
@@ -47,13 +42,9 @@ public class Application : Adw.Application {
 
         setup_style ();
 
-        var about_action = new SimpleAction ("about", null);
-        about_action.activate.connect (() => {
-            var about_window = new AboutWindow (main_window);
-            about_window.present ();
-        });
-        set_accels_for_action ("app.about", {"F1"});
-        add_action (about_action);
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", { "<Control>q" });
+        set_accels_for_action ("win.new", { "<Control>n" });
     }
 
     private void setup_style () {
@@ -105,6 +96,15 @@ public class Application : Adw.Application {
         }
 
         settings.bind ("window-maximized", main_window, "maximized", SettingsBindFlags.SET);
+    }
+
+    private void on_quit_activate () {
+        if (main_window != null) {
+            main_window.prep_destroy ();
+            main_window.destroy ();
+        }
+
+        quit ();
     }
 
     public static int main (string[] args) {

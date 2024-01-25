@@ -1,10 +1,10 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: 2021 Adam Bieńkowski <donadigos159@gmail.com>
- *                         2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ *                         2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  *
  * Modification of:
- * - donadigo/appeditor, src/DesktopApp.vala
+ * https://github.com/donadigo/appeditor/blob/master/src/DesktopApp.vala
  */
 
 [DBus (name = "org.freedesktop.portal.OpenURI")]

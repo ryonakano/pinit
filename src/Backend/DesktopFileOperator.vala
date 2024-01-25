@@ -1,10 +1,10 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  *
  * Inspired from:
- * - elementary/switchboard-plug-keyboard, #374
- * - pantheon-tweaks/pantheon-tweaks, src/Settings/ThemeSettings.vala
+ * - https://github.com/elementary/switchboard-plug-keyboard/blob/caef4fd900b41c669d48fc1c91eced6a89709f62/src/Views/InputMethod.vala#L369
+ * - https://github.com/pantheon-tweaks/pantheon-tweaks/blob/7d366f5e4774175be2d7177d1b8486e0c97d7bfe/src/Settings/ThemeSettings.vala#L62
  */
 
 public class DesktopFileOperator : GLib.Object {
@@ -48,7 +48,7 @@ public class DesktopFileOperator : GLib.Object {
     // The path all of the user desktop files are saved.
     private string DESTINATION_PATH { //vala-lint=naming-convention
         private get;
-        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
+        default = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
     }
 
     // The path where this app automatically saves the latest state of unsaved changes
