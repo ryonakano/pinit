@@ -1,13 +1,13 @@
 # Japanese translations for com.github.ryonakano.pinit package.
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-25 23:11+0900\n"
-"PO-Revision-Date: 2023-06-22 19:42+0000\n"
+"PO-Revision-Date: 2024-01-25 14:15+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "ja/>\n"
@@ -16,29 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: data/gtk/help-overlay.ui:15
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "終了する"
 
 #: data/gtk/help-overlay.ui:22
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: data/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Exec File"
 msgctxt "shortcut window"
 msgid "New File"
-msgstr "実行ファイル"
+msgstr "新しいファイル"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -48,10 +46,8 @@ msgid "Cannot open %s: %s"
 msgstr "%s を開けません: %s"
 
 #: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
 msgid "Sound & Video"
-msgstr "オーディオとビデオ"
+msgstr "サウンドとビデオ"
 
 #: src/CategoryChooser.vala:91
 msgid "Audio"
@@ -63,15 +59,13 @@ msgstr "ビデオ"
 
 #: src/CategoryChooser.vala:93
 msgid "Programming"
-msgstr ""
+msgstr "プログラミング"
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "教育"
 
 #: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
 msgid "Games"
 msgstr "ゲーム"
 
@@ -81,7 +75,7 @@ msgstr "グラフィックス"
 
 #: src/CategoryChooser.vala:97
 msgid "Internet"
-msgstr ""
+msgstr "インターネット"
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -96,14 +90,12 @@ msgid "Settings"
 msgstr "設定"
 
 #: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
 msgid "System Tools"
-msgstr "システム"
+msgstr "システムツール"
 
 #: src/CategoryChooser.vala:102
 msgid "Accessories"
-msgstr ""
+msgstr "アクセサリー"
 
 #: src/MainWindow.vala:51
 msgid "Updated entry."
@@ -334,14 +326,13 @@ msgstr "スタイル"
 
 #: src/Views/FilesView.vala:35
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:37
-#, fuzzy, c-format
-#| msgid "About %s…"
+#, c-format
 msgid "About %s"
-msgstr "%s について…"
+msgstr "%s について"
 
 #: src/Views/FilesView.vala:40
 msgid "Preferences"
