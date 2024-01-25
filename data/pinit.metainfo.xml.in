@@ -66,13 +66,14 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.0.3" date="2023-11-15" urgency="medium">
+    <release version="2.0.3" date="2024-01-28" urgency="medium">
       <description translatable="no">
         <ul>
           <li>data: Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
           <li>Avoid listing errored entries in FilesView</li>
           <li>Avoid errors when optional keys not found</li>
           <li>Save keyfile without locales</li>
+          <li>Add keyboard shortcuts window</li>
           <li>Update translations</li>
         </ul>
       </description>
