@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 09:50+0900\n"
+"POT-Creation-Date: 2024-01-25 23:11+0900\n"
 "PO-Revision-Date: 2023-06-26 20:52+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -19,14 +19,27 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.18.1\n"
 
-#: src/AboutWindow.vala:32
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "Закрепляйте ваши любимые портативные приложения"
+#: data/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
 
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr "lenemter"
+#: data/gtk/help-overlay.ui:15
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:22
+msgctxt "shortcut window"
+msgid "Edit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Exec File"
+msgctxt "shortcut window"
+msgid "New File"
+msgstr "Исполняемый файл"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -36,7 +49,9 @@ msgid "Cannot open %s: %s"
 msgstr "Невозможно открыть %s: %s"
 
 #: src/CategoryChooser.vala:90
-msgid "Audio & Video"
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
 msgstr "Аудио и видео"
 
 #: src/CategoryChooser.vala:91
@@ -48,15 +63,17 @@ msgid "Video"
 msgstr "Видео"
 
 #: src/CategoryChooser.vala:93
-msgid "Development"
-msgstr "Разработка"
+msgid "Programming"
+msgstr ""
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "Образование"
 
 #: src/CategoryChooser.vala:95
-msgid "Game"
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
 msgstr "Игры"
 
 #: src/CategoryChooser.vala:96
@@ -64,8 +81,8 @@ msgid "Graphics"
 msgstr "Графика"
 
 #: src/CategoryChooser.vala:97
-msgid "Network"
-msgstr "Сеть"
+msgid "Internet"
+msgstr ""
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -79,21 +96,32 @@ msgstr "Наука"
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
-msgid "System"
+#: src/CategoryChooser.vala:101
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
 msgstr "Система"
 
 #: src/CategoryChooser.vala:102
-msgid "Utility"
-msgstr "Утилиты"
+msgid "Accessories"
+msgstr ""
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:51
 msgid "Updated entry."
 msgstr "Запись обновлена."
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:55
 msgid "Deleted entry."
 msgstr "Запись удалена."
+
+#: src/MainWindow.vala:151
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+msgstr "Закрепляйте ваши любимые портативные приложения"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/MainWindow.vala:161
+msgid "translator-credits"
+msgstr "lenemter"
 
 #: src/Views/EditView.vala:51
 msgid "Save"
@@ -229,7 +257,7 @@ msgid "Could not open with external app"
 msgstr "Ошибка открытия через внешнее приложение"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:160
+#: src/Views/FilesView.vala:161
 msgid "Close"
 msgstr "Закрыть"
 
@@ -246,7 +274,7 @@ msgstr "Редактировать запись"
 msgid "Editing “%s”"
 msgstr "Редактирование «%s»"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
 msgid "Cancel"
 msgstr "Отменить"
 
@@ -306,49 +334,67 @@ msgstr "Светлый"
 msgid "Dark"
 msgstr "Тёмный"
 
+#: src/Views/FilesView.vala:31
+msgid "System"
+msgstr "Система"
+
 #: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Стиль"
 
+#: src/Views/FilesView.vala:35
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:36
-#, c-format
-msgid "About %s…"
+#: src/Views/FilesView.vala:37
+#, fuzzy, c-format
+#| msgid "About %s…"
+msgid "About %s"
 msgstr "О %s…"
 
-#: src/Views/FilesView.vala:39
+#: src/Views/FilesView.vala:40
 msgid "Preferences"
 msgstr "Параметры"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "No valid app entries found"
 msgstr "Действительные записи приложений не найдены"
 
-#: src/Views/FilesView.vala:66
+#: src/Views/FilesView.vala:67
 msgid "If you've never created one, click the + button on the top."
 msgstr "Если вы никогда не создавали записи, нажмите кнопку + вверху."
 
-#: src/Views/FilesView.vala:135
+#: src/Views/FilesView.vala:136
 msgid "Delete…"
 msgstr "Удалить…"
 
-#: src/Views/FilesView.vala:141
+#: src/Views/FilesView.vala:142
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "Вы уверены, что хотите удалить «%s»?"
 
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:143
 msgid "This removes the app from the launcher."
 msgstr "Это удалит приложение из Меню приложений."
 
-#: src/Views/FilesView.vala:145
+#: src/Views/FilesView.vala:146
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/Views/FilesView.vala:157
+#: src/Views/FilesView.vala:158
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "Не удалось удалить файл «%s»"
+
+#~ msgid "Development"
+#~ msgstr "Разработка"
+
+#~ msgid "Network"
+#~ msgstr "Сеть"
+
+#~ msgid "Utility"
+#~ msgstr "Утилиты"
 
 #~ msgid "A tooltip text to describe what the app helps you to do."
 #~ msgstr "Всплывающая подсказка, которая описывает ваше приложение."

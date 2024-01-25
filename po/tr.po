@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 09:50+0900\n"
+"POT-Creation-Date: 2024-01-25 23:11+0900\n"
 "PO-Revision-Date: 2023-08-23 14:51+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -19,16 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.0-dev\n"
 
-#: src/AboutWindow.vala:32
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#: data/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
 msgstr ""
-"Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
-"oluşturun"
 
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/AboutWindow.vala:42
-msgid "translator-credits"
-msgstr "Sabri Ünal <libreajans@gmail.com>"
+#: data/gtk/help-overlay.ui:15
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:22
+msgctxt "shortcut window"
+msgid "Edit"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Exec File"
+msgctxt "shortcut window"
+msgid "New File"
+msgstr "Yürütme Dosyası"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -38,7 +49,9 @@ msgid "Cannot open %s: %s"
 msgstr "%s açılamıyor: %s"
 
 #: src/CategoryChooser.vala:90
-msgid "Audio & Video"
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
 msgstr "Ses ve Video"
 
 #: src/CategoryChooser.vala:91
@@ -50,15 +63,17 @@ msgid "Video"
 msgstr "Video"
 
 #: src/CategoryChooser.vala:93
-msgid "Development"
-msgstr "Geliştirme"
+msgid "Programming"
+msgstr ""
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "Eğitim"
 
 #: src/CategoryChooser.vala:95
-msgid "Game"
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
 msgstr "Oyun"
 
 #: src/CategoryChooser.vala:96
@@ -66,8 +81,8 @@ msgid "Graphics"
 msgstr "Grafik"
 
 #: src/CategoryChooser.vala:97
-msgid "Network"
-msgstr "Ağ"
+msgid "Internet"
+msgstr ""
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -81,21 +96,34 @@ msgstr "Bilim"
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/CategoryChooser.vala:101 src/Views/FilesView.vala:31
-msgid "System"
+#: src/CategoryChooser.vala:101
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
 msgstr "Sistem"
 
 #: src/CategoryChooser.vala:102
-msgid "Utility"
-msgstr "Araç"
+msgid "Accessories"
+msgstr ""
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:51
 msgid "Updated entry."
 msgstr "Girdi güncellendi."
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:55
 msgid "Deleted entry."
 msgstr "Girdi silindi."
+
+#: src/MainWindow.vala:151
+msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+msgstr ""
+"Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
+"oluşturun"
+
+#. TRANSLATORS: Replace with your name; don't translate literally
+#: src/MainWindow.vala:161
+msgid "translator-credits"
+msgstr "Sabri Ünal <libreajans@gmail.com>"
 
 #: src/Views/EditView.vala:51
 msgid "Save"
@@ -229,7 +257,7 @@ msgid "Could not open with external app"
 msgstr "Harici uygulama ile açılamadı"
 
 #: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:160
+#: src/Views/FilesView.vala:161
 msgid "Close"
 msgstr "Kapat"
 
@@ -246,7 +274,7 @@ msgstr "Girdi Düzenleme"
 msgid "Editing “%s”"
 msgstr "“%s” düzenleniyor"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:144
+#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
 msgid "Cancel"
 msgstr "İptal Et"
 
@@ -304,49 +332,67 @@ msgstr "Açık"
 msgid "Dark"
 msgstr "Koyu"
 
+#: src/Views/FilesView.vala:31
+msgid "System"
+msgstr "Sistem"
+
 #: src/Views/FilesView.vala:34
 msgid "Style"
 msgstr "Biçim"
 
+#: src/Views/FilesView.vala:35
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:36
-#, c-format
-msgid "About %s…"
+#: src/Views/FilesView.vala:37
+#, fuzzy, c-format
+#| msgid "About %s…"
+msgid "About %s"
 msgstr "%s Hakkında…"
 
-#: src/Views/FilesView.vala:39
+#: src/Views/FilesView.vala:40
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/Views/FilesView.vala:65
+#: src/Views/FilesView.vala:66
 msgid "No valid app entries found"
 msgstr "Geçerli uygulama girdisi bulunamadı"
 
-#: src/Views/FilesView.vala:66
+#: src/Views/FilesView.vala:67
 msgid "If you've never created one, click the + button on the top."
 msgstr "Daha önce oluşturmadıysanız, üstteki + düğmesine tıklayın."
 
-#: src/Views/FilesView.vala:135
+#: src/Views/FilesView.vala:136
 msgid "Delete…"
 msgstr "Sil…"
 
-#: src/Views/FilesView.vala:141
+#: src/Views/FilesView.vala:142
 #, c-format
 msgid "Are you sure you want to delete “%s”?"
 msgstr "\"%s\" i silmek istediğinizden emin misiniz?"
 
-#: src/Views/FilesView.vala:142
+#: src/Views/FilesView.vala:143
 msgid "This removes the app from the launcher."
 msgstr "Bu, uygulamayı başlatıcıdan kaldırır."
 
-#: src/Views/FilesView.vala:145
+#: src/Views/FilesView.vala:146
 msgid "Delete"
 msgstr "Sil"
 
-#: src/Views/FilesView.vala:157
+#: src/Views/FilesView.vala:158
 #, c-format
 msgid "Could not delete file “%s”"
 msgstr "“%s” dosyası silinemedi"
+
+#~ msgid "Development"
+#~ msgstr "Geliştirme"
+
+#~ msgid "Network"
+#~ msgstr "Ağ"
+
+#~ msgid "Utility"
+#~ msgstr "Araç"
 
 #~ msgid "A tooltip text to describe what the app helps you to do."
 #~ msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
