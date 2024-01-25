@@ -48,7 +48,7 @@ public class DesktopFileOperator : GLib.Object {
     // The path all of the user desktop files are saved.
     private string DESTINATION_PATH { //vala-lint=naming-convention
         private get;
-        default = "/home/%s/.local/share/applications".printf (Environment.get_user_name ());
+        default = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
     }
 
     // The path where this app automatically saves the latest state of unsaved changes
