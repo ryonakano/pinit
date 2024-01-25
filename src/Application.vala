@@ -13,15 +13,6 @@ public class Application : Adw.Application {
         Adw.ColorScheme color_scheme;
     }
 
-    // Returns if the current desktop environment is Pantheon or not.
-    // We'll use this later to provide more appropriate functions or design
-    // both on Pantheon and on another desktop environment.
-    public static bool IS_ON_PANTHEON {
-        get {
-            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
-        }
-    }
-
     public static Settings settings { get; private set; }
 
     private MainWindow main_window;
