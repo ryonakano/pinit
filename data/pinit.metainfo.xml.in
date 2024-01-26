@@ -66,13 +66,17 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.0.3" date="2024-01-28" urgency="medium">
+    <release version="2.0.3" date="2024-01-27" urgency="high">
       <description translatable="no">
+        <p>
+          This release fixes some critical issues and plus add some improvements.
+        </p>
         <ul>
-          <li>data: Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
+          <li>Regain access to HOME to fix several issues that pinned apps disappear after reboot/upgrade of OS</li>
+          <li>Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
           <li>Avoid listing errored entries in FilesView</li>
           <li>Avoid errors when optional keys not found</li>
-          <li>Save keyfile without locales</li>
+          <li>Save desktop files without locales</li>
           <li>Add keyboard shortcuts window</li>
           <li>Update translations</li>
         </ul>
