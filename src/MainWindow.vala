@@ -61,16 +61,16 @@ public class MainWindow : Adw.ApplicationWindow {
         set_header_buttons_form ();
         set_visible_view ();
 
-        edit_view.file_updated.connect (() => {
-            show_files_view ();
-            overlay.add_toast (updated_toast);
-        });
+        //edit_view.file_updated.connect (() => {
+        //    show_files_view ();
+        //    overlay.add_toast (updated_toast);
+        //});
 
-        files_view.file_deleted.connect (() => {
-            edit_view.hide_all ();
-            files_view.update_list ();
-            overlay.add_toast (deleted_toast);
-        });
+        //files_view.file_deleted.connect (() => {
+        //    edit_view.hide_all ();
+        //    files_view.update_list ();
+        //    overlay.add_toast (deleted_toast);
+        //});
 
         close_request.connect (() => {
             prep_destroy ();
@@ -83,6 +83,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Application.settings.set_enum ("last-view", (int) visible_view);
 
+        /*
         if (visible_view == Views.EDIT_VIEW) {
             if (edit_view.is_unsaved) {
                 // If there are unsaved work, save it as a backup
@@ -92,10 +93,11 @@ public class MainWindow : Adw.ApplicationWindow {
                 DesktopFileOperator.get_default ().delete_backup ();
             }
         }
+        */
     }
 
     private void set_header_buttons_form () {
-        edit_view.set_header_buttons_form (leaflet.folded);
+        //edit_view.set_header_buttons_form (leaflet.folded);
         files_view.set_header_buttons_form (leaflet.folded);
     }
 
@@ -105,7 +107,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
-        edit_view.set_desktop_file (desktop_file);
+        //edit_view.set_desktop_file (desktop_file);
         leaflet.visible_child = edit_view;
     }
 
