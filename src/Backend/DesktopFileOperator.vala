@@ -195,8 +195,6 @@ public class DesktopFileOperator : GLib.Object {
      * Load the content of the desktop file at `path` and construct new DesktopFile through KeyFile object.
      */
     public DesktopFile? load_from_file (string path) {
-        string locale;
-
         string file_name = "";
         string app_name = "";
         string comment = "";
@@ -216,11 +214,13 @@ public class DesktopFileOperator : GLib.Object {
             // Get the filename without the .desktop suffix
             file_name = basename.slice (0, basename.length - DESKTOP_SUFFIX.length);
 
-            locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
+            string locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, locale);
 
             locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
-            if (locale != null) {
+            bool has_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT);
+            // Either has a localized or unlocalized Comment key
+            if (locale != null || has_key) {
                 comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, locale);
             }
 
