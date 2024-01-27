@@ -3,22 +3,11 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class DialogResponse {
-    public static string CLOSE {
-        get {
-            return "close";
-        }
-    }
-
-    public static string CANCEL {
-        get {
-            return "cancel";
-        }
-    }
-
-    public static string OK {
-        get {
-            return "ok";
-        }
-    }
+/**
+ * Defines response IDs used in Adw.MessageDialog.
+ */
+namespace DialogResponse {
+    const string CLOSE = "close";
+    const string CANCEL = "cancel";
+    const string OK = "ok";
 }
