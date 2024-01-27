@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023.
+# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024.
 # Сергій <sergiy.goncharuk.1@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-25 23:11+0900\n"
-"PO-Revision-Date: 2024-01-27 22:45+0000\n"
-"Last-Translator: Сергій <sergiy.goncharuk.1@gmail.com>\n"
+"PO-Revision-Date: 2024-01-28 00:38+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "uk/>\n"
 "Language: uk\n"
@@ -49,7 +49,7 @@ msgstr "Неможливо відкрити %s: %s"
 
 #: src/CategoryChooser.vala:90
 msgid "Sound & Video"
-msgstr "Звук та відео"
+msgstr "Звук і відео"
 
 #: src/CategoryChooser.vala:91
 msgid "Audio"
