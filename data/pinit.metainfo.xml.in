@@ -27,22 +27,22 @@
   <screenshots>
     <screenshot type="default">
       <caption>Files view in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.2/data/screenshots/gnome/screenshot-files-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.2/data/screenshots/gnome/screenshot-edit-view-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Files view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.2/data/screenshots/gnome/screenshot-files-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-dark.png</image>
     </screenshot>
 
     <screenshot>
       <caption>Edit view in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.2/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -66,6 +66,31 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
+    <release version="2.0.3" date="2024-01-27" urgency="high">
+      <description translatable="no">
+        <p>
+          This release fixes some critical issues and plus add some improvements.
+        </p>
+        <p>
+          Bug fixes:
+        </p>
+        <ul>
+          <li>Regain access to HOME to fix several issues that pinned apps disappear after reboot/upgrade of OS</li>
+          <li>Avoid listing errored entries in FilesView</li>
+          <li>Avoid errors when optional keys not found</li>
+          <li>Save desktop files without locales</li>
+        </ul>
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
+          <li>Add keyboard shortcuts window</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.0.2" date="2023-10-01" urgency="low">
       <description translatable="no">
         <p>
