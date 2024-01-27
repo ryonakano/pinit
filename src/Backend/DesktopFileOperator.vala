@@ -217,8 +217,8 @@ public class DesktopFileOperator : GLib.Object {
             locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, preferred_language);
             app_name = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, locale);
 
-            if (keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT)) {
-                locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+            locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, preferred_language);
+            if (locale != null) {
                 comment = keyfile.get_locale_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, locale);
             }
 
