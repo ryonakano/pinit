@@ -71,12 +71,20 @@
         <p>
           This release fixes some critical issues and plus add some improvements.
         </p>
+        <p>
+          Bug fixes:
+        </p>
         <ul>
           <li>Regain access to HOME to fix several issues that pinned apps disappear after reboot/upgrade of OS</li>
-          <li>Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
           <li>Avoid listing errored entries in FilesView</li>
           <li>Avoid errors when optional keys not found</li>
           <li>Save desktop files without locales</li>
+        </ul>
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Mark release descriptions as untranslatable (thanks to @sabriunal)</li>
           <li>Add keyboard shortcuts window</li>
           <li>Update translations</li>
         </ul>
