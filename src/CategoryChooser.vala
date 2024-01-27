@@ -133,7 +133,7 @@ public class CategoryChooser : Gtk.Box {
         append (flowbox);
     }
 
-    public class ToggleButton : Gtk.ToggleButton {
+    private class ToggleButton : Gtk.ToggleButton {
         /*
          * We want to preserve the category key name in each toggle button,
          * so extends the original Gtk.ToggleButton.
