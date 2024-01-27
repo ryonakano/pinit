@@ -129,7 +129,7 @@ public class DesktopFileOperator : GLib.Object {
      *
      * @param keyfile   Keyfile to update.
      * @param key       Name of the key to update.<<BR>>
-     *                  The key needs to be a optional key. Refer to [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html | Desktop Entry Specification]]
+     *                  The key is expected to be a optional key. Refer to [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html | Desktop Entry Specification]]
      *                  for which key is optional.
      * @param val       Value to set to key, in string.
      */
@@ -161,7 +161,7 @@ public class DesktopFileOperator : GLib.Object {
      *
      * @param keyfile   Keyfile to update.
      * @param key       Name of the key to update.<<BR>>
-     *                  The key needs to be a optional key. Refer to [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html | Desktop Entry Specification]]
+     *                  The key is expected to be a optional key. Refer to [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html | Desktop Entry Specification]]
      *                  for which key is optional.
      * @param val       Value to set to key, in boolean.
      */
