@@ -4,13 +4,13 @@
 # Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate.org>, 2023.
-# gallegonovato <fran-carro@hotmail.es>, 2023.
+# gallegonovato <fran-carro@hotmail.es>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-25 23:11+0900\n"
-"PO-Revision-Date: 2023-10-05 12:13+0000\n"
+"PO-Revision-Date: 2024-01-27 05:50+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "es/>\n"
@@ -19,31 +19,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: data/gtk/help-overlay.ui:15
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Dejar"
 
 #: data/gtk/help-overlay.ui:22
-#, fuzzy
-#| msgid "Edit…"
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr "Editar..."
+msgstr "Editar"
 
 #: data/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "New File"
 msgctxt "shortcut window"
 msgid "New File"
-msgstr "Nuevo Archivo"
+msgstr "Archivo nuevo"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -53,8 +49,6 @@ msgid "Cannot open %s: %s"
 msgstr "No se puede abrir %s: %s"
 
 #: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
 msgid "Sound & Video"
 msgstr "Sonido y vídeo"
 
@@ -68,17 +62,15 @@ msgstr "Vídeo"
 
 #: src/CategoryChooser.vala:93
 msgid "Programming"
-msgstr ""
+msgstr "Programando"
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "Educación"
 
 #: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
 msgid "Games"
-msgstr "Juego"
+msgstr "Juegos"
 
 #: src/CategoryChooser.vala:96
 msgid "Graphics"
@@ -86,7 +78,7 @@ msgstr "Gráficos"
 
 #: src/CategoryChooser.vala:97
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -101,14 +93,12 @@ msgid "Settings"
 msgstr "Configuración"
 
 #: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
 msgid "System Tools"
-msgstr "Sistema"
+msgstr "Herramientas del sistema"
 
 #: src/CategoryChooser.vala:102
 msgid "Accessories"
-msgstr ""
+msgstr "Accesorios"
 
 #: src/MainWindow.vala:51
 msgid "Updated entry."
@@ -348,14 +338,13 @@ msgstr "Estilo"
 
 #: src/Views/FilesView.vala:35
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atajos del teclado"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:37
-#, fuzzy, c-format
-#| msgid "About %s…"
+#, c-format
 msgid "About %s"
-msgstr "Acerca de %s…"
+msgstr "Acerca de %s"
 
 #: src/Views/FilesView.vala:40
 msgid "Preferences"
