@@ -100,6 +100,52 @@ public class DesktopFileOperator : GLib.Object {
         return new DesktopFile ();
     }
 
+    private void update_optkey_with_string (KeyFile keyfile, string key, string val) {
+        if (val != "") {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_string (KeyFileDesktop.GROUP, key, val);
+        } else {
+            bool has_key = false;
+            try {
+                has_key = keyfile.has_key (KeyFileDesktop.GROUP, key);
+            } catch (KeyFileError e) {
+                warning ("Failed to check if the key exists (key: %s): %s", key, e.message);
+            }
+
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError e) {
+                    warning ("Failed to remove the key (key: %s): %s", key, e.message);
+                }
+            }
+        }
+    }
+
+    private void update_optkey_with_boolean (KeyFile keyfile, string key, bool val) {
+        if (val) {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
+        } else {
+            bool has_key = false;
+            try {
+                has_key = keyfile.has_key (KeyFileDesktop.GROUP, key);
+            } catch (KeyFileError e) {
+                warning ("Failed to check if the key exists (key: %s): %s", key, e.message);
+            }
+
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError e) {
+                    warning ("Failed to remove the key (key: %s): %s", key, e.message);
+                }
+            }
+        }
+    }
+
     /*
      * Write the content of `desktop_file` into the desktop file at `desktop_file.file_name` through KeyFile object.
      */
@@ -108,63 +154,19 @@ public class DesktopFileOperator : GLib.Object {
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_NAME, desktop_file.app_name);
 
-        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_COMMENT, desktop_file.comment);
+        update_optkey_with_string (keyfile, KeyFileDesktop.KEY_COMMENT, desktop_file.comment);
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC, desktop_file.exec_file);
 
-        if (desktop_file.icon_file != "") {
-            // Update the value when the corresponding entry has some value.
-            keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
-        } else {
-            bool has_icon_key = false;
-            try {
-                has_icon_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
-            } catch (KeyFileError e) {
-                warning ("Failed to check if the key \"Icon\" exists: %s", e.message);
-            }
+        update_optkey_with_string (keyfile, KeyFileDesktop.KEY_ICON, desktop_file.icon_file);
 
-            /*
-             * Section "Icon" is not required.
-             * Remove the key when it exists and the corresponding entry has no value.
-             */
-            if (has_icon_key) {
-                try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_ICON);
-                } catch (KeyFileError e) {
-                    warning ("Failed to remove the blank key \"Icon\": %s", e.message);
-                }
-            }
-        }
+        update_optkey_with_string (keyfile, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
 
-        keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_CATEGORIES, desktop_file.categories);
-
-        if (desktop_file.startup_wm_class != "") {
-            // Update the value when the corresponding entry has some value.
-            keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
-        } else {
-            bool has_startup_wm_class_key = false;
-            try {
-                has_startup_wm_class_key = keyfile.has_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
-            } catch (KeyFileError e) {
-                warning ("Failed to check if the key \"StartupWMClass\" exists: %s", e.message);
-            }
-
-            /*
-             * Section "StartupWMClass" is not required.
-             * Remove the key when it exists and the corresponding entry has no value.
-             */
-            if (has_startup_wm_class_key) {
-                try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
-                } catch (KeyFileError e) {
-                    warning ("Failed to remove the blank key \"StartupWMClass\": %s", e.message);
-                }
-            }
-        }
+        update_optkey_with_string (keyfile, KeyFileDesktop.KEY_STARTUP_WM_CLASS, desktop_file.startup_wm_class);
 
         keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TYPE, "Application");
 
-        keyfile.set_boolean (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
+        update_optkey_with_boolean (keyfile, KeyFileDesktop.KEY_TERMINAL, desktop_file.is_cli);
 
         /*
          * Setup the filename and saving destination depending on if it's a backup file that
