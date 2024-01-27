@@ -61,7 +61,7 @@ public class DesktopFileOperator : GLib.Object {
      *
      * Not intended to be overwritten after initialization.
      */
-    private string backup_path = Environment.get_user_cache_dir ();
+    private unowned string backup_path = Environment.get_user_cache_dir ();
 
     /**
      * The prefix of the desktop file.
