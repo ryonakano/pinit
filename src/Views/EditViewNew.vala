@@ -220,7 +220,7 @@ public class EditView : Adw.NavigationPage {
         });
 
         save_button.clicked.connect (() => {
-            //save_file ();
+            save_file ();
         });
 
         name_entry.notify["text"].connect (() => {

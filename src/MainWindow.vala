@@ -61,16 +61,16 @@ public class MainWindow : Adw.ApplicationWindow {
         set_header_buttons_form ();
         set_visible_view ();
 
-        //edit_view.file_updated.connect (() => {
-        //    show_files_view ();
-        //    overlay.add_toast (updated_toast);
-        //});
+        edit_view.file_updated.connect (() => {
+            show_files_view ();
+            overlay.add_toast (updated_toast);
+        });
 
-        //files_view.file_deleted.connect (() => {
-        //    edit_view.hide_all ();
-        //    files_view.update_list ();
-        //    overlay.add_toast (deleted_toast);
-        //});
+        files_view.file_deleted.connect (() => {
+            edit_view.hide_all ();
+            files_view.update_list ();
+            overlay.add_toast (deleted_toast);
+        });
 
         close_request.connect (() => {
             prep_destroy ();
