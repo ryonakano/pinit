@@ -3,32 +3,35 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-// List Categories of the app and highlight ones listed in the desktop file.
-public class CategoryChooser : Gtk.Box {
-    /*
+/**
+ * List Categories of the app.
+ *
+ * There are {@link Adw.SwitchRow} for each category and {@link Adw.SwitchRow.active} represents
+ * whether the corresponding category is listed in the desktop file.
+ */
+public class CategoryChooser : Adw.ExpanderRow {
+    /**
      * A signal emitted when selected categories are changed.
      */
     public signal void toggled ();
 
-    /*
+    /**
      * Set/get selected categories.
      */
     public string selected {
-        /*
-         * Reflect the selected categories in the UI into the desktop file.
-         */
+        // Reflect the selected categories in the UI to the desktop file.
         owned get {
             string _selected = "";
 
             /*
-             * Each category has a button as an interface.
-             * If a button is active, that means that category is selected,
+             * Each category has a switch row.
+             * If the switch row is activated, that means that category is selected,
              * so we add the name of that category in the Categories section
              * in the desktop file.
              */
-            foreach (var toggle in toggles) {
-                if (toggle.active) {
-                    _selected += "%s;".printf (toggle.category);
+            foreach (var item in row_items) {
+                if (item.row.active) {
+                    _selected += "%s;".printf (item.category);
                 }
             }
 
@@ -36,27 +39,21 @@ public class CategoryChooser : Gtk.Box {
         }
 
         /*
-         * Read the listed categories the Categories section of the desktop file,
-         * and reflect them in the UI.
+         * Read the listed categories in the Categories section of the desktop file,
+         * and reflect them to the UI.
          */
         set {
             string[] categories = value.split (";");
 
-            foreach (var toggle in toggles) {
+            foreach (var item in row_items) {
                 // Clear the current selection
-                toggle.active = false;
+                item.row.active = false;
 
                 foreach (var category in categories) {
-                    if (toggle.category == category) {
-                        /*
-                         * Detected the key name of the toggle button listed
-                         * in the Categories section of the desktop file!
-                         */
-                        toggle.active = true;
-
-                        /*
-                         * We find the category matching, so no longer need the rest loop.
-                         */
+                    // The category is in the desktop file
+                    if (item.category == category) {
+                        item.row.active = true;
+                        // We find the category matching, so no longer need the rest of the loop.
                         continue;
                     }
                 }
@@ -64,26 +61,25 @@ public class CategoryChooser : Gtk.Box {
         }
     }
 
-    /*
-     * Store all of the toggle buttons in this section.
+    /**
+     * Stores all of the switch rows in this expander row.
      */
-    private Gee.ArrayList<ToggleButton> toggles;
+    private Gee.ArrayList<RowItem> row_items;
 
-    /*
-     * Key: Category name in desktop files
-     * Value: Translatable button labels for each key
+    /**
+     * key: Category name in desktop files
+     * value: Translatable button labels for each key
      */
     private Gee.HashMap<string, string> categories;
 
     public CategoryChooser () {
-        Object (
-            orientation: Gtk.Orientation.VERTICAL,
-            spacing: 6
-        );
     }
 
     construct {
-        toggles = new Gee.ArrayList<ToggleButton> ();
+        title = _("Categories");
+        subtitle = _("Categories applicable to the app. (You can select more than one.)");
+
+        row_items = new Gee.ArrayList<RowItem> ();
         categories = new Gee.HashMap<string, string> ();
 
         // See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
@@ -101,56 +97,39 @@ public class CategoryChooser : Gtk.Box {
         categories.set ("System", _("System Tools"));
         categories.set ("Utility", _("Accessories"));
 
-        var flowbox = new Gtk.FlowBox () {
-            vexpand = true,
-            hexpand = true,
-            max_children_per_line = 7,
-            selection_mode = Gtk.SelectionMode.NONE
-        };
-
-        /*
-         * Create and append a button for each category
-         */
+        // Create and append a switch row for each category
         foreach (var entry in categories.entries) {
-            var toggle = new ToggleButton (entry.key, entry.value);
-            toggle.toggled.connect (() => {
-                /*
-                 * When the button toggled, highlight/unhighlight it
-                 * depends on if it's currently highlight or not.
-                 */
-                if (toggle.active) {
-                    toggle.add_css_class ("accent");
-                } else {
-                    toggle.remove_css_class ("accent");
-                }
-
+            var item = new RowItem (entry.key, entry.value);
+            item.row.activated.connect (() => {
                 toggled ();
             });
-            toggles.add (toggle);
-            flowbox.append (toggle);
+            row_items.add (item);
+            add_row (item.row);
         }
-
-        append (flowbox);
     }
 
-    private class ToggleButton : Gtk.ToggleButton {
+    private class RowItem : Object {
         /*
-         * We want to preserve the category key name in each toggle button,
-         * so extends the original Gtk.ToggleButton.
+         * We want to preserve the category key name in each switch row,
+         * so wrap Adw.SwitchRow.
          */
 
         public string category { get; construct; }
+        public string label { get; construct; }
 
-        /*
-         * `category` is the key name.
-         * `label` is a translatable label text of the toggle button.
-         */
-        public ToggleButton (string category, string label) {
+        public Adw.SwitchRow row { get; construct; }
+
+        public RowItem (string category, string label) {
             Object (
                 category: category,
-                label: label,
-                hexpand: true
+                label: label
             );
+        }
+
+        construct {
+            row = new Adw.SwitchRow () {
+                title = label
+            };
         }
     }
 }

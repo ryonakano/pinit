@@ -30,7 +30,10 @@ public class EditView : Adw.NavigationPage {
             use_fallback = false,
             pixel_size = 128
         };
-        var name_label = new Gtk.Label (null);
+        var name_label = new Gtk.Label (null) {
+            lines = 1,
+            ellipsize = Pango.EllipsizeMode.END
+        };
         name_label.add_css_class ("title-1");
 
         var header_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24) {
@@ -94,10 +97,7 @@ public class EditView : Adw.NavigationPage {
         };
         optional_group.add (comment_entry);
 
-        var categories_row = new Adw.ComboRow () {
-            title = _("Categories"),
-            subtitle = _("Categories applicable to the app. (You can select more than one.)")
-        };
+        var categories_row = new CategoryChooser ();
         optional_group.add (categories_row);
 
         /*
