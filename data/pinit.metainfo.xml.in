@@ -8,7 +8,7 @@
   <project_license>GPL-3.0+</project_license>
 
   <name>Pin It!</name>
-  <summary>Pin shortcuts for your favorite portable apps to your app launcher</summary>
+  <summary>Pin portable apps to the launcher</summary>
   <description>
     <p>
       Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
