@@ -1,13 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023.
+# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024.
+# Сергій <sergiy.goncharuk.1@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-25 23:11+0900\n"
-"PO-Revision-Date: 2023-06-22 19:42+0000\n"
+"PO-Revision-Date: 2024-01-28 00:38+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "uk/>\n"
@@ -15,31 +16,29 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Загальне"
 
 #: data/gtk/help-overlay.ui:15
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Вихід"
 
 #: data/gtk/help-overlay.ui:22
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "Змінити"
 
 #: data/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Exec File"
 msgctxt "shortcut window"
 msgid "New File"
-msgstr "Виконуваний файл"
+msgstr "Новий файл"
 
 #. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
 #. The second "%s" represents the detailed error message.
@@ -49,10 +48,8 @@ msgid "Cannot open %s: %s"
 msgstr "Неможливо відкрити %s: %s"
 
 #: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
 msgid "Sound & Video"
-msgstr "Аудіо та відео"
+msgstr "Звук і відео"
 
 #: src/CategoryChooser.vala:91
 msgid "Audio"
@@ -64,17 +61,15 @@ msgstr "Відео"
 
 #: src/CategoryChooser.vala:93
 msgid "Programming"
-msgstr ""
+msgstr "Програмування"
 
 #: src/CategoryChooser.vala:94
 msgid "Education"
 msgstr "Освіта"
 
 #: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
 msgid "Games"
-msgstr "Гра"
+msgstr "Ігри"
 
 #: src/CategoryChooser.vala:96
 msgid "Graphics"
@@ -82,7 +77,7 @@ msgstr "Графіка"
 
 #: src/CategoryChooser.vala:97
 msgid "Internet"
-msgstr ""
+msgstr "Інтернет"
 
 #: src/CategoryChooser.vala:98
 msgid "Office"
@@ -97,14 +92,12 @@ msgid "Settings"
 msgstr "Налаштування"
 
 #: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
 msgid "System Tools"
-msgstr "Системи"
+msgstr "Системні засоби"
 
 #: src/CategoryChooser.vala:102
 msgid "Accessories"
-msgstr ""
+msgstr "Приналежності"
 
 #: src/MainWindow.vala:51
 msgid "Updated entry."
@@ -343,14 +336,13 @@ msgstr "Стиль"
 
 #: src/Views/FilesView.vala:35
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Комбінації клавіш"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/Views/FilesView.vala:37
-#, fuzzy, c-format
-#| msgid "About %s…"
+#, c-format
 msgid "About %s"
-msgstr "Про %s…"
+msgstr "Про %s"
 
 #: src/Views/FilesView.vala:40
 msgid "Preferences"

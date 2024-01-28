@@ -150,7 +150,7 @@ public class MainWindow : Adw.ApplicationWindow {
             application_icon = Constants.PROJECT_NAME,
             application_name = Constants.APP_NAME,
             version = Constants.PROJECT_VERSION,
-            comments = _("Pin shortcuts for your favorite portable apps to your app launcher"),
+            comments = _("Pin portable apps to the launcher"),
             website = "https://github.com/ryonakano/pinit",
             support_url = "https://github.com/ryonakano/pinit/discussions",
             issue_url = "https://github.com/ryonakano/pinit/issues",
