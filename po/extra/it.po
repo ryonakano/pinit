@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -25,9 +25,10 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr ""
-"Aggiungi scorciatoie per le tue app portatili preferite al tuo app launcher"
+#, fuzzy
+#| msgid "Pin any apps into the launcher"
+msgid "Pin portable apps to the launcher"
+msgstr "Aggiungi qualsiasi app al launcher"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
@@ -90,6 +91,11 @@ msgstr "Creatore di File Desktop"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Aggiungi scorciatoie per le tue app portatili preferite al tuo app "
+#~ "launcher"
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Aggiornato la versione runtime di Flatpak"
@@ -272,9 +278,6 @@ msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
 
 #~ msgid "The app now fully redesigned for modern desktop environments!"
 #~ msgstr "L'app ora completamente ridisegnata per i moderni ambienti desktop!"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "Aggiungi qualsiasi app al launcher"
 
 #~ msgid "Welcome View"
 #~ msgstr "Vista di Benvenuto"

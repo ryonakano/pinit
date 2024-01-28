@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -26,10 +26,10 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr ""
-"Épinglez des raccourcis vers vos applications portables préférées dans votre "
-"lanceur d’applications"
+#, fuzzy
+#| msgid "Pin any apps into the launcher"
+msgid "Pin portable apps to the launcher"
+msgstr "Épinglez n'importe quelle application au lanceur"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
@@ -94,6 +94,11 @@ msgstr "Créateur de fichiers desktop"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Bureau;Fichier;Créer;Modifier;Info;Icône;AppImage;"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Épinglez des raccourcis vers vos applications portables préférées dans "
+#~ "votre lanceur d’applications"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "La version célébrant le deuxième anniversaire de l’appli !"
@@ -306,9 +311,6 @@ msgstr "Bureau;Fichier;Créer;Modifier;Info;Icône;AppImage;"
 #~ msgid "The app now fully redesigned for modern desktop environments!"
 #~ msgstr ""
 #~ "Amélioration de la prise en charge des autres environnements de bureau"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "Épinglez n'importe quelle application au lanceur"
 
 #~ msgid "Welcome View"
 #~ msgstr "Page d'accueil"

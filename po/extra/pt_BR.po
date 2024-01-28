@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -25,12 +25,9 @@ msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
 #, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr ""
-"Crie o atalho para seus aplicativos portáteis favoritos em seu lançador de "
-"aplicativos"
+#| msgid "Pin any apps into the launcher"
+msgid "Pin portable apps to the launcher"
+msgstr "Fixe qualquer aplicativo no lançador"
 
 #: data/pinit.metainfo.xml.in:13
 #, fuzzy
@@ -91,6 +88,14 @@ msgstr "Criador de arquivos de desktop"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;Arquivo;Criar;Editar;Info;Ícone;AppImage;"
+
+#, fuzzy
+#~| msgid ""
+#~| "Create the shortcut to your favorite portable apps into your app launcher"
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Crie o atalho para seus aplicativos portáteis favoritos em seu lançador "
+#~ "de aplicativos"
 
 #, fuzzy
 #~| msgid "Update Japanese translation"
@@ -189,9 +194,6 @@ msgstr "Desktop;Arquivo;Criar;Editar;Info;Ícone;AppImage;"
 #, fuzzy
 #~ msgid "The app now fully redesigned for modern desktop environments!"
 #~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "Fixe qualquer aplicativo no lançador"
 
 #~ msgid "Welcome View"
 #~ msgstr "Página Inicial"
