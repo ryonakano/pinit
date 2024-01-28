@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: 2023-03-19 14:38+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -25,10 +25,9 @@ msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
 #, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "Maak snelkoppelingen naar uw favoriete portable-apps"
+#| msgid "Pin any apps into the launcher"
+msgid "Pin portable apps to the launcher"
+msgstr "Voeg toepassingen toe aan de starter"
 
 #: data/pinit.metainfo.xml.in:13
 #, fuzzy
@@ -93,6 +92,12 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Bestand;Desktop;Items;Maken;Bewerken;Pictogram;AppImage;"
 
 #, fuzzy
+#~| msgid ""
+#~| "Create the shortcut to your favorite portable apps into your app launcher"
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr "Maak snelkoppelingen naar uw favoriete portable-apps"
+
+#, fuzzy
 #~| msgid "Update Japanese translation"
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Bijgewerkt: Japanse vertaling"
@@ -136,9 +141,6 @@ msgstr "Bestand;Desktop;Items;Maken;Bewerken;Pictogram;AppImage;"
 
 #~ msgid "Edit View"
 #~ msgstr "Bewerkscherm"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "Voeg toepassingen toe aan de starter"
 
 #~ msgid "Welcome View"
 #~ msgstr "Welkomstscherm"

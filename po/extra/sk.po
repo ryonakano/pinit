@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -25,7 +25,9 @@ msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#, fuzzy
+#| msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+msgid "Pin portable apps to the launcher"
 msgstr ""
 "Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
 
