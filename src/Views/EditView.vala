@@ -22,9 +22,6 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
-    // TODO Use this if the specified icon is invalid.
-    private Icon fallback_icon = new ThemedIcon ("application-x-executable");
-
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
@@ -61,7 +58,7 @@ public class EditView : Adw.NavigationPage {
         /*
          * Content part - header
          */
-        icon_image = new Gtk.Image.from_gicon (fallback_icon) {
+        icon_image = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
             pixel_size = 128
         };
         name_label = new Gtk.Label (null) {
