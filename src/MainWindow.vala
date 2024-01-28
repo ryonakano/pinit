@@ -83,7 +83,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Application.settings.set_enum ("last-view", (int) visible_view);
 
-        /*
         if (visible_view == Views.EDIT_VIEW) {
             if (edit_view.is_unsaved) {
                 // If there are unsaved work, save it as a backup
@@ -93,11 +92,10 @@ public class MainWindow : Adw.ApplicationWindow {
                 DesktopFileOperator.get_default ().delete_backup ();
             }
         }
-        */
     }
 
     private void set_header_buttons_form () {
-        //edit_view.set_header_buttons_form (leaflet.folded);
+        edit_view.set_header_buttons_form (leaflet.folded);
         files_view.set_header_buttons_form (leaflet.folded);
     }
 

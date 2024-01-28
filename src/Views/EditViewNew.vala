@@ -22,8 +22,10 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
+    // TODO Use this if the specified icon is invalid.
     private Icon fallback_icon = new ThemedIcon ("application-x-executable");
 
+    private Gtk.Button cancel_button;
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
@@ -51,10 +53,13 @@ public class EditView : Adw.NavigationPage {
         /*
          * Headerbar part
          */
+        cancel_button = new Gtk.Button ();
+
         save_button = new Gtk.Button.with_label (_("Save"));
         save_button.add_css_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar ();
+        headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
         /*
@@ -202,7 +207,21 @@ public class EditView : Adw.NavigationPage {
         toolbar_view.add_top_bar (headerbar);
         toolbar_view.set_content (stack);
 
+        title = _("New Entry");
         child = toolbar_view;
+
+        // No desktop file open when the app launches, so hide all widgets in the view.
+        hide_all ();
+
+        cancel_button.clicked.connect (() => {
+            // When the cancel button is clicked, go back to FilesView.
+            hide_all ();
+            window.show_files_view ();
+        });
+
+        save_button.clicked.connect (() => {
+            //save_file ();
+        });
 
         name_entry.notify["text"].connect (() => {
             if (name_entry.text == "") {
@@ -226,7 +245,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     string? path = file.get_path ();
-                    if (path != null) {
+                    if (path == null) {
                         warning ("Invalid executable path");
                         return;
                     }
@@ -242,8 +261,7 @@ public class EditView : Adw.NavigationPage {
             try {
                 icon_image.gicon = Icon.new_for_string (icon_entry.text);
             } catch (Error e) {
-                warning ("Failed to update icon_image, using fallback icon instead: %s", e.message);
-                icon_image.gicon = fallback_icon;
+                warning ("Failed to update icon_image: %s", e.message);
             }
         });
 
@@ -277,7 +295,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     string? path = file.get_path ();
-                    if (path != null) {
+                    if (path == null) {
                         warning ("Invalid icon path");
                         return;
                     }
@@ -334,8 +352,7 @@ public class EditView : Adw.NavigationPage {
         try {
             icon_image.gicon = Icon.new_for_string (desktop_file.icon_file);
         } catch (Error e) {
-            warning ("Failed to update icon_image, using fallback icon instead: %s", e.message);
-            icon_image.gicon = fallback_icon;
+            warning ("Failed to update icon_image: %s", e.message);
         }
 
         if (name_entry.text == "") {
@@ -368,8 +385,48 @@ public class EditView : Adw.NavigationPage {
             title = _("Edit “%s”").printf (desktop_file.app_name);
         }
 
+        headerbar.show_title = true;
+        cancel_button.visible = true;
         save_button.visible = true;
         set_save_button_sensitivity ();
+    }
+
+    /**
+     * Get values from the input widgets in the view and save them to a desktop file.
+     */
+    public void save_file (bool is_backup = false) {
+        var desktop_file = new DesktopFile (
+            file_name_entry.text,
+            name_entry.text,
+            comment_entry.text,
+            exec_entry.text,
+            icon_entry.text,
+            categories_row.selected,
+            startup_wm_class_entry.text,
+            terminal_row.active,
+            is_backup
+        );
+
+        try {
+            DesktopFileOperator.get_default ().write_to_file (desktop_file);
+            DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
+            file_updated ();
+        } catch (Error e) {
+            var error_dialog = new Adw.MessageDialog (
+                window,
+                _("Could not write to file “%s”").printf (desktop_file.app_name),
+                e.message
+            );
+            error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+            error_dialog.default_response = DialogResponse.CLOSE;
+            error_dialog.close_response = DialogResponse.CLOSE;
+            error_dialog.response.connect ((response_id) => {
+                if (response_id == DialogResponse.CLOSE) {
+                    error_dialog.destroy ();
+                }
+            });
+            error_dialog.present ();
+        }
     }
 
     /**
@@ -378,8 +435,27 @@ public class EditView : Adw.NavigationPage {
     public void hide_all () {
         stack.visible_child = blank_page;
 
-        title = "";
+        headerbar.show_title = false;
+        cancel_button.visible = false;
         save_button.visible = false;
+    }
+
+    /**
+     * Set the buttons visibility and appearance in the headerbar depending on whether the leaflet is folded
+     */
+    public void set_header_buttons_form (bool folded) {
+        // We can use the start title buttons in the files view when the leaflet is folded
+        headerbar.show_start_title_buttons = folded;
+
+        // Clear the current form of the cancel button and then reconstruct it
+        cancel_button.child = null;
+        if (folded) {
+            // Show as an icon button
+            cancel_button.icon_name = "go-previous-symbolic";
+        } else {
+            // Show as a normal button with the label
+            cancel_button.label = _("Cancel");
+        }
     }
 
     private Gtk.MenuButton create_hint_button () {
