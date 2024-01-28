@@ -4,10 +4,44 @@
  */
 
 public class EditView : Adw.NavigationPage {
+    public signal void file_updated ();
+
+    /*
+     * When at least one input widget in this view is changed,
+     * we consider the currently open desktop file as unsaved.
+     */
+    public bool is_unsaved {
+        get {
+            return (
+                file_name_entry.text.length > 0 || name_entry.text.length > 0 || exec_entry.text.length > 0 ||
+                icon_entry.text.length > 0 || comment_entry.text.length > 0 || categories_row.selected != "" ||
+                startup_wm_class_entry.text.length > 0 || terminal_row.active
+            );
+        }
+    }
+
     public MainWindow window { private get; construct; }
+
+    private Icon fallback_icon = new ThemedIcon ("application-x-executable");
 
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
+
+    private Gtk.Image icon_image;
+    private Gtk.Label name_label;
+
+    private RegexEntry file_name_entry;
+    private Adw.EntryRow name_entry;
+    private Adw.EntryRow exec_entry;
+    private Adw.EntryRow icon_entry;
+    private Adw.EntryRow comment_entry;
+    private CategoryChooser categories_row;
+    private Adw.EntryRow startup_wm_class_entry;
+    private Adw.SwitchRow terminal_row;
+
+    private Gtk.ScrolledWindow edit_page;
+    private Adw.StatusPage blank_page;
+    private Gtk.Stack stack;
 
     public EditView (MainWindow window) {
         Object (window: window);
@@ -26,11 +60,10 @@ public class EditView : Adw.NavigationPage {
         /*
          * Content part - header
          */
-        var icon_image = new Gtk.Image.from_icon_name ("application-x-executable") {
-            use_fallback = false,
+        icon_image = new Gtk.Image.from_gicon (fallback_icon) {
             pixel_size = 128
         };
-        var name_label = new Gtk.Label (null) {
+        name_label = new Gtk.Label (null) {
             lines = 1,
             ellipsize = Pango.EllipsizeMode.END
         };
@@ -51,18 +84,18 @@ public class EditView : Adw.NavigationPage {
             description = _("The following entries need to be filled to save.")
         };
 
-        var file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
+        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
             title = _("File Name")
         };
         file_name_entry.add_suffix (create_hint_button ());
         required_group.add (file_name_entry);
 
-        var name_entry = new Adw.EntryRow () {
+        name_entry = new Adw.EntryRow () {
             title = _("App Name")
         };
         required_group.add (name_entry);
 
-        var exec_entry = new Adw.EntryRow () {
+        exec_entry = new Adw.EntryRow () {
             title = _("Exec File")
         };
         var exec_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
@@ -81,7 +114,7 @@ public class EditView : Adw.NavigationPage {
             description = _("Filling these entries improves discoverability in the app launcher.")
         };
 
-        var icon_entry = new Adw.EntryRow () {
+        icon_entry = new Adw.EntryRow () {
             title = _("Icon File")
         };
         var icon_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
@@ -92,12 +125,12 @@ public class EditView : Adw.NavigationPage {
         icon_entry.add_suffix (icon_chooser_button);
         optional_group.add (icon_entry);
 
-        var comment_entry = new Adw.EntryRow () {
+        comment_entry = new Adw.EntryRow () {
             title = _("Comment")
         };
         optional_group.add (comment_entry);
 
-        var categories_row = new CategoryChooser ();
+        categories_row = new CategoryChooser ();
         optional_group.add (categories_row);
 
         /*
@@ -108,12 +141,12 @@ public class EditView : Adw.NavigationPage {
             description = _("You can create most app entries just by filling in the sections above. However, some apps may require the advanced configuration options below.")
         };
 
-        var startup_wm_class_entry = new Adw.EntryRow () {
+        startup_wm_class_entry = new Adw.EntryRow () {
             title = _("Startup WM Class")
         };
         advanced_group.add (startup_wm_class_entry);
 
-        var terminal_row = new Adw.SwitchRow () {
+        terminal_row = new Adw.SwitchRow () {
             title = _("Run in Terminal"),
             subtitle = _("Turn on if you want to register a CUI app.")
         };
@@ -148,20 +181,36 @@ public class EditView : Adw.NavigationPage {
         };
 
         // Pack into a scrolled window for small height display
-        var edit_page = new Gtk.ScrolledWindow () {
+        edit_page = new Gtk.ScrolledWindow () {
             child = clamp,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
             vexpand = true,
             hexpand = true
         };
 
+        // The blank page shown when no desktop file open.
+        blank_page = new Adw.StatusPage () {
+            vexpand = true,
+            hexpand = true
+        };
+
+        stack = new Gtk.Stack ();
+        stack.add_child (edit_page);
+        stack.add_child (blank_page);
+
         var toolbar_view = new Adw.ToolbarView ();
         toolbar_view.add_top_bar (headerbar);
-        toolbar_view.set_content (edit_page);
+        toolbar_view.set_content (stack);
 
         child = toolbar_view;
-        // TODO Change title for new file and use file name
-        title = _("Edit Entry");
+
+        name_entry.notify["text"].connect (() => {
+            if (name_entry.text == "") {
+                name_label.label = _("Untitled App");
+            } else {
+                name_label.label = name_entry.text;
+            }
+        });
 
         exec_chooser_button.clicked.connect (() => {
             var filechooser = new Gtk.FileDialog () {
@@ -176,11 +225,26 @@ public class EditView : Adw.NavigationPage {
                         return;
                     }
 
-                    exec_entry.text = file.get_path ();
+                    string? path = file.get_path ();
+                    if (path != null) {
+                        warning ("Invalid executable path");
+                        return;
+                    }
+
+                    exec_entry.text = path;
                 } catch (Error e) {
                     warning ("Failed to select executable file: %s", e.message);
                 }
             });
+        });
+
+        icon_entry.notify["text"].connect (() => {
+            try {
+                icon_image.gicon = Icon.new_for_string (icon_entry.text);
+            } catch (Error e) {
+                warning ("Failed to update icon_image, using fallback icon instead: %s", e.message);
+                icon_image.gicon = fallback_icon;
+            }
         });
 
         icon_chooser_button.clicked.connect (() => {
@@ -212,13 +276,110 @@ public class EditView : Adw.NavigationPage {
                         return;
                     }
 
-                    icon_entry.text = file.get_path ();
+                    string? path = file.get_path ();
+                    if (path != null) {
+                        warning ("Invalid icon path");
+                        return;
+                    }
+
+                    icon_entry.text = path;
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
             });
         });
 
+        open_text_editor_button.clicked.connect (() => {
+            try {
+                DesktopFileOperator.get_default ().open_external (file_name_entry.text);
+            } catch (Error e) {
+                var error_dialog = new Adw.MessageDialog (
+                    window,
+                    _("Could not open with external app"),
+                    e.message
+                );
+                error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+                error_dialog.default_response = DialogResponse.CLOSE;
+                error_dialog.close_response = DialogResponse.CLOSE;
+                error_dialog.response.connect ((response_id) => {
+                    if (response_id == DialogResponse.CLOSE) {
+                        error_dialog.destroy ();
+                    }
+                });
+                error_dialog.present ();
+            }
+        });
+
+        /*
+         * When there are some changes in the input widgets (entries, buttons, category chooser, etc.),
+         * update the sensitivity of the save button.
+         */
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_released.connect ((keyval, keycode, state) => {
+            set_save_button_sensitivity ();
+        });
+        add_controller (event_controller);
+
+        categories_row.toggled.connect (() => {
+            set_save_button_sensitivity ();
+        });
+    }
+
+    /**
+     * Fill in the all input widgets in the EditView from the loaded desktp file.
+     *
+     * @param desktop_file      The desktop file to reflect its content to the widgets.
+     */
+    public void set_desktop_file (DesktopFile desktop_file) {
+        try {
+            icon_image.gicon = Icon.new_for_string (desktop_file.icon_file);
+        } catch (Error e) {
+            warning ("Failed to update icon_image, using fallback icon instead: %s", e.message);
+            icon_image.gicon = fallback_icon;
+        }
+
+        if (name_entry.text == "") {
+            name_label.label = _("Untitled App");
+        } else {
+            name_label.label = name_entry.text;
+        }
+
+        file_name_entry.text = desktop_file.file_name;
+        name_entry.text = desktop_file.app_name;
+        exec_entry.text = desktop_file.exec_file;
+        icon_entry.text = desktop_file.icon_file;
+        comment_entry.text = desktop_file.comment;
+        categories_row.selected = desktop_file.categories;
+        startup_wm_class_entry.text = desktop_file.startup_wm_class;
+        terminal_row.active = desktop_file.is_cli;
+
+        // Show the page that filled in just now.
+        stack.visible_child = edit_page;
+
+        // Set title label of the header depending on the status of the opened desktop file.
+        if (desktop_file.file_name == "") {
+            // No file name means a new file.
+            title = _("New Entry");
+        } else if (desktop_file.app_name == "") {
+            // Editing an existing desktop file with no app name
+            title = _("Edit Entry");
+        } else {
+            // Editing an existing desktop file with app name.
+            title = _("Edit “%s”").printf (desktop_file.app_name);
+        }
+
+        save_button.visible = true;
+        set_save_button_sensitivity ();
+    }
+
+    /**
+     * Hide all widgets in this.
+     */
+    public void hide_all () {
+        stack.visible_child = blank_page;
+
+        title = "";
+        save_button.visible = false;
     }
 
     private Gtk.MenuButton create_hint_button () {
@@ -285,5 +446,12 @@ public class EditView : Adw.NavigationPage {
         });
 
         return menu_button;
+    }
+
+    /**
+     * Allow clicking the save button only when the required entries has (valid) values.
+     */
+    private void set_save_button_sensitivity () {
+        save_button.sensitive = (file_name_entry.is_valid && name_entry.text.length > 0 && exec_entry.text.length > 0);
     }
 }

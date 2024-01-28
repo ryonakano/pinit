@@ -107,7 +107,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
-        //edit_view.set_desktop_file (desktop_file);
+        edit_view.set_desktop_file (desktop_file);
         leaflet.visible_child = edit_view;
     }
 
