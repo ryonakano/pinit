@@ -25,7 +25,6 @@ public class EditView : Adw.NavigationPage {
     // TODO Use this if the specified icon is invalid.
     private Icon fallback_icon = new ThemedIcon ("application-x-executable");
 
-    private Gtk.Button cancel_button;
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
@@ -53,13 +52,10 @@ public class EditView : Adw.NavigationPage {
         /*
          * Headerbar part
          */
-        cancel_button = new Gtk.Button ();
-
         save_button = new Gtk.Button.with_label (_("Save"));
         save_button.add_css_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar ();
-        headerbar.pack_start (cancel_button);
         headerbar.pack_end (save_button);
 
         /*
@@ -213,12 +209,6 @@ public class EditView : Adw.NavigationPage {
         // No desktop file open when the app launches, so hide all widgets in the view.
         hide_all ();
 
-        cancel_button.clicked.connect (() => {
-            // When the cancel button is clicked, go back to FilesView.
-            hide_all ();
-            window.show_files_view ();
-        });
-
         save_button.clicked.connect (() => {
             save_file ();
         });
@@ -251,6 +241,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     exec_entry.text = path;
+                    set_save_button_sensitivity ();
                 } catch (Error e) {
                     warning ("Failed to select executable file: %s", e.message);
                 }
@@ -386,7 +377,6 @@ public class EditView : Adw.NavigationPage {
         }
 
         headerbar.show_title = true;
-        cancel_button.visible = true;
         save_button.visible = true;
         set_save_button_sensitivity ();
     }
@@ -436,26 +426,7 @@ public class EditView : Adw.NavigationPage {
         stack.visible_child = blank_page;
 
         headerbar.show_title = false;
-        cancel_button.visible = false;
         save_button.visible = false;
-    }
-
-    /**
-     * Set the buttons visibility and appearance in the headerbar depending on whether the leaflet is folded
-     */
-    public void set_header_buttons_form (bool folded) {
-        // We can use the start title buttons in the files view when the leaflet is folded
-        headerbar.show_start_title_buttons = folded;
-
-        // Clear the current form of the cancel button and then reconstruct it
-        cancel_button.child = null;
-        if (folded) {
-            // Show as an icon button
-            cancel_button.icon_name = "go-previous-symbolic";
-        } else {
-            // Show as a normal button with the label
-            cancel_button.label = _("Cancel");
-        }
     }
 
     private Gtk.MenuButton create_hint_button () {
