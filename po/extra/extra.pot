@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-01-28 03:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Pin It!"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+msgid "Pin portable apps to the launcher"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in:13
