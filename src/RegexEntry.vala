@@ -4,7 +4,7 @@
  */
 
 // A text entry with syntax detection using regex.
-public class RegexEntry : Gtk.Entry {
+public class RegexEntry : Adw.EntryRow {
     // The syntax pattern that text in the entry should follow
     public GLib.Regex pattern { get; construct; }
 
@@ -23,8 +23,8 @@ public class RegexEntry : Gtk.Entry {
 
     construct {
         // Check syntax errors and update style when text in the entry changed
-        buffer.notify["text"].connect (() => {
-            if (buffer.text == "") {
+        notify["text"].connect (() => {
+            if (text == "") {
                 remove_css_class ("success");
                 remove_css_class ("warning");
                 remove_css_class ("error");
@@ -34,7 +34,7 @@ public class RegexEntry : Gtk.Entry {
             }
 
             // Text matches, OK
-            if (pattern.match (buffer.text)) {
+            if (pattern.match (text)) {
                 remove_css_class ("warning");
                 remove_css_class ("error");
                 add_css_class ("success");

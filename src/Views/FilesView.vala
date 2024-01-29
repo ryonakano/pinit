@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class FilesView : Gtk.Box {
+public class FilesView : Adw.NavigationPage {
     public signal void file_deleted ();
 
     public MainWindow window { private get; construct; }
@@ -11,15 +11,15 @@ public class FilesView : Gtk.Box {
     private Adw.HeaderBar headerbar;
     private Gtk.ListBox files_list;
     private Gtk.Stack stack;
-    private Gtk.Separator separator;
 
     public FilesView (MainWindow window) {
         Object (window: window);
     }
 
     construct {
-        // Headerbar part
-
+        /*
+         * Headerbar part
+         */
         var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
             tooltip_text = _("Create a new entry")
         };
@@ -42,16 +42,16 @@ public class FilesView : Gtk.Box {
             menu_model = menu
         };
 
-        headerbar = new Adw.HeaderBar () {
-            title_widget = new Gtk.Label (Constants.APP_NAME)
-        };
+        headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (create_button);
         headerbar.pack_end (preferences_button);
 
-        // Main part
-
+        /*
+         * Content part
+         */
         // FilesListPage: The page to list available desktop files.
         files_list = new Gtk.ListBox ();
+        files_list.add_css_class ("navigation-sidebar");
 
         // Pack into a scrolled window in case there are many desktop files in the files list
         var files_list_page = new Gtk.ScrolledWindow () {
@@ -74,32 +74,18 @@ public class FilesView : Gtk.Box {
         stack.add_named (files_list_page, "files_list_page");
         stack.add_named (no_files_page, "no_files_page");
 
-        separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+        var toolbar_view = new Adw.ToolbarView ();
+        toolbar_view.add_top_bar (headerbar);
+        toolbar_view.set_content (stack);
 
-        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        box.append (stack);
-        box.append (separator);
-
-        orientation = Gtk.Orientation.VERTICAL;
-        append (headerbar);
-        append (box);
+        title = Constants.APP_NAME;
+        child = toolbar_view;
 
         update_list ();
 
         create_button.clicked.connect (() => {
             window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
         });
-    }
-
-    /*
-     * Set the buttons visibility and appearance depending on whether the leaflet is folded
-     */
-    public void set_header_buttons_form (bool folded) {
-        // We can use the end title buttons in the edit view when the leaflet is folded
-        headerbar.show_end_title_buttons = folded;
-
-        // Show the separator between views only when the leaflet is folded
-        separator.visible = !folded;
     }
 
     /*
@@ -121,21 +107,22 @@ public class FilesView : Gtk.Box {
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
-            // Fallback icon
-            var app_icon = new Gtk.Image.from_icon_name ("image-missing");
-            if (file.icon_file != "") {
-                // Check if icon_file represents a path to the icon or just the alias
-                if (File.new_for_path (file.icon_file).query_exists ()) {
-                    app_icon.file = file.icon_file;
-                } else {
-                    app_icon.icon_name = file.icon_file;
-                }
+            var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
+                pixel_size = 48,
+                margin_top = 6,
+                margin_bottom = 6
+            };
+            try {
+                app_icon.gicon = Icon.new_for_string (file.icon_file);
+            } catch (Error e) {
+                warning ("Failed to update app_icon: %s", e.message);
             }
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                 tooltip_text = _("Delete…"),
                 valign = Gtk.Align.CENTER
             };
+            delete_button.add_css_class ("flat");
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Adw.MessageDialog (
                     window,
@@ -179,8 +166,11 @@ public class FilesView : Gtk.Box {
             var list_item = new Adw.ActionRow () {
                 title = file.app_name,
                 subtitle = file.comment,
+                title_lines = 1,
+                subtitle_lines = 1,
                 activatable = true
             };
+            list_item.width_request = 350;
             list_item.add_prefix (app_icon);
             list_item.add_suffix (delete_button);
             list_item.activated.connect (() => {

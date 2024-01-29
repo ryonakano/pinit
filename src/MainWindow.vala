@@ -11,7 +11,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private FilesView files_view;
     private EditView edit_view;
-    private Adw.Leaflet leaflet;
+    private Adw.NavigationSplitView leaflet;
 
     private enum Views {
         FILES_VIEW,
@@ -28,21 +28,27 @@ public class MainWindow : Adw.ApplicationWindow {
     construct {
         add_action_entries (ACTION_ENTRIES, this);
 
+        width_request = 450;
+        height_request = 400;
+
         /*
          * The two views are switched/holded using Leaflet
          */
         files_view = new FilesView (this);
         edit_view = new EditView (this);
 
-        leaflet = new Adw.Leaflet () {
-            can_navigate_back = true,
-            transition_type = Adw.LeafletTransitionType.SLIDE
+        leaflet = new Adw.NavigationSplitView () {
+            sidebar = files_view,
+            content = edit_view
         };
-        leaflet.notify["folded"].connect (() => {
-            set_header_buttons_form ();
-        });
-        leaflet.append (files_view);
-        leaflet.append (edit_view);
+
+        var breakpoint = new Adw.Breakpoint (
+            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 800, Adw.LengthUnit.SP)
+        );
+        var val = Value (typeof (bool));
+        val.set_boolean (true);
+        breakpoint.add_setter (leaflet, "collapsed", val);
+        add_breakpoint (breakpoint);
 
         var overlay = new Adw.ToastOverlay () {
             child = leaflet
@@ -58,7 +64,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         content = overlay;
 
-        set_header_buttons_form ();
         set_visible_view ();
 
         edit_view.file_updated.connect (() => {
@@ -94,23 +99,18 @@ public class MainWindow : Adw.ApplicationWindow {
         }
     }
 
-    private void set_header_buttons_form () {
-        edit_view.set_header_buttons_form (leaflet.folded);
-        files_view.set_header_buttons_form (leaflet.folded);
-    }
-
     public void show_files_view () {
         files_view.update_list ();
-        leaflet.visible_child = files_view;
+        leaflet.show_content = false;
     }
 
     public void show_edit_view (DesktopFile desktop_file) {
         edit_view.set_desktop_file (desktop_file);
-        leaflet.visible_child = edit_view;
+        leaflet.show_content = true;
     }
 
     private Views get_visible_view () {
-        if (leaflet.visible_child == files_view) {
+        if (!leaflet.show_content) {
             return Views.FILES_VIEW;
         } else {
             return Views.EDIT_VIEW;
