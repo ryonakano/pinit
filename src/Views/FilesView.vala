@@ -107,7 +107,6 @@ public class FilesView : Adw.NavigationPage {
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
 
-            // Fallback icon
             var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
                 pixel_size = 48,
                 margin_top = 6,
