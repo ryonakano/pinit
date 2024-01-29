@@ -25,42 +25,42 @@ public class DesktopFile : GLib.Object {
     /**
      * The filename of a desktop file.
      */
-    public string file_name { get; construct; }
+    public string file_name { get; construct set; }
     /**
      * "Name" section in the desktop file.
      */
-    public string app_name { get; construct; }
+    public string app_name { get; construct set; }
     /**
      * "Comment" section in the desktop file.
      */
-    public string comment { get; construct; }
+    public string comment { get; construct set; }
     /**
      * "Exec" section in the desktop file.
      */
-    public string exec_file { get; construct; }
+    public string exec_file { get; construct set; }
     /**
      * "Icon" section in the desktop file.
      */
-    public string icon_file { get; construct; }
+    public string icon_file { get; construct set; }
     /**
      * "Categories" section in the desktop file.
      */
-    public string categories { get; construct; }
+    public string categories { get; construct set; }
     /**
      * "StartupWMClass" section in the desktop file.
      */
-    public string startup_wm_class { get; construct; }
+    public string startup_wm_class { get; construct set; }
     /**
      * "Terminal" section in the desktop file.
      */
-    public bool is_cli { get; construct; }
+    public bool is_cli { get; construct set; }
 
     /**
      * Whether this is a backup file.
      *
      * This property doesn't appear in the desktop file; used internally in this app.
      */
-    public bool is_backup { get; construct; }
+    public bool is_backup { get; construct set; }
 
     /**
      * The constructor.

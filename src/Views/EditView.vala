@@ -13,7 +13,7 @@ public class EditView : Adw.NavigationPage {
     public bool is_unsaved {
         get {
             return (
-                file_name_entry.text.length > 0 || name_entry.text.length > 0 || exec_entry.text.length > 0 ||
+                name_entry.text.length > 0 || exec_entry.text.length > 0 ||
                 icon_entry.text.length > 0 || comment_entry.text.length > 0 || categories_row.selected != "" ||
                 startup_wm_class_entry.text.length > 0 || terminal_row.active
             );
@@ -22,13 +22,14 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
+    private DesktopFile current_desktop_file;
+
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
     private Gtk.Image icon_image;
     private Gtk.Label name_label;
 
-    private RegexEntry file_name_entry;
     private Adw.EntryRow name_entry;
     private Adw.EntryRow exec_entry;
     private Adw.EntryRow icon_entry;
@@ -81,12 +82,6 @@ public class EditView : Adw.NavigationPage {
             title = _("Required Entries"),
             description = _("The following entries need to be filled to save.")
         };
-
-        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
-            title = _("File Name")
-        };
-        file_name_entry.add_suffix (create_hint_button ());
-        required_group.add (file_name_entry);
 
         name_entry = new Adw.EntryRow () {
             title = _("App Name")
@@ -216,6 +211,14 @@ public class EditView : Adw.NavigationPage {
             } else {
                 name_label.label = name_entry.text;
             }
+
+            current_desktop_file.app_name = name_entry.text;
+            set_save_button_sensitivity ();
+        });
+
+        exec_entry.notify["text"].connect (() => {
+            current_desktop_file.exec_file = exec_entry.text;
+            set_save_button_sensitivity ();
         });
 
         exec_chooser_button.clicked.connect (() => {
@@ -238,6 +241,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     exec_entry.text = path;
+                    current_desktop_file.exec_file = path;
                     set_save_button_sensitivity ();
                 } catch (Error e) {
                     warning ("Failed to select executable file: %s", e.message);
@@ -248,6 +252,7 @@ public class EditView : Adw.NavigationPage {
         icon_entry.notify["text"].connect (() => {
             try {
                 icon_image.gicon = Icon.new_for_string (icon_entry.text);
+                current_desktop_file.icon_file = icon_entry.text;
             } catch (Error e) {
                 warning ("Failed to update icon_image: %s", e.message);
             }
@@ -289,15 +294,32 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     icon_entry.text = path;
+                    current_desktop_file.icon_file = path;
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
             });
         });
 
+        comment_entry.notify["text"].connect (() => {
+            current_desktop_file.comment = comment_entry.text;
+        });
+
+        categories_row.toggled.connect (() => {
+            current_desktop_file.categories = categories_row.selected;
+        });
+
+        startup_wm_class_entry.notify["text"].connect (() => {
+            current_desktop_file.startup_wm_class = startup_wm_class_entry.text;
+        });
+
+        terminal_row.notify["active"].connect (() => {
+            current_desktop_file.is_cli = terminal_row.active;
+        });
+
         open_text_editor_button.clicked.connect (() => {
             try {
-                DesktopFileOperator.get_default ().open_external (file_name_entry.text);
+                DesktopFileOperator.get_default ().open_external (current_desktop_file);
             } catch (Error e) {
                 var error_dialog = new Adw.MessageDialog (
                     window,
@@ -315,20 +337,6 @@ public class EditView : Adw.NavigationPage {
                 error_dialog.present ();
             }
         });
-
-        /*
-         * When there are some changes in the input widgets (entries, buttons, category chooser, etc.),
-         * update the sensitivity of the save button.
-         */
-        var event_controller = new Gtk.EventControllerKey ();
-        event_controller.key_released.connect ((keyval, keycode, state) => {
-            set_save_button_sensitivity ();
-        });
-        add_controller (event_controller);
-
-        categories_row.toggled.connect (() => {
-            set_save_button_sensitivity ();
-        });
     }
 
     /**
@@ -337,8 +345,10 @@ public class EditView : Adw.NavigationPage {
      * @param desktop_file      The desktop file to reflect its content to the widgets.
      */
     public void set_desktop_file (DesktopFile desktop_file) {
+        current_desktop_file = desktop_file;
+
         try {
-            icon_image.gicon = Icon.new_for_string (desktop_file.icon_file);
+            icon_image.gicon = Icon.new_for_string (current_desktop_file.icon_file);
         } catch (Error e) {
             warning ("Failed to update icon_image: %s", e.message);
         }
@@ -349,28 +359,27 @@ public class EditView : Adw.NavigationPage {
             name_label.label = name_entry.text;
         }
 
-        file_name_entry.text = desktop_file.file_name;
-        name_entry.text = desktop_file.app_name;
-        exec_entry.text = desktop_file.exec_file;
-        icon_entry.text = desktop_file.icon_file;
-        comment_entry.text = desktop_file.comment;
-        categories_row.selected = desktop_file.categories;
-        startup_wm_class_entry.text = desktop_file.startup_wm_class;
-        terminal_row.active = desktop_file.is_cli;
+        name_entry.text = current_desktop_file.app_name;
+        exec_entry.text = current_desktop_file.exec_file;
+        icon_entry.text = current_desktop_file.icon_file;
+        comment_entry.text = current_desktop_file.comment;
+        categories_row.selected = current_desktop_file.categories;
+        startup_wm_class_entry.text = current_desktop_file.startup_wm_class;
+        terminal_row.active = current_desktop_file.is_cli;
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;
 
         // Set title label of the header depending on the status of the opened desktop file.
-        if (desktop_file.file_name == "") {
+        if (current_desktop_file.file_name == "") {
             // No file name means a new file.
             title = _("New Entry");
-        } else if (desktop_file.app_name == "") {
+        } else if (current_desktop_file.app_name == "") {
             // Editing an existing desktop file with no app name
             title = _("Edit Entry");
         } else {
             // Editing an existing desktop file with app name.
-            title = _("Edit “%s”").printf (desktop_file.app_name);
+            title = _("Edit “%s”").printf (current_desktop_file.app_name);
         }
 
         headerbar.show_title = true;
@@ -382,26 +391,16 @@ public class EditView : Adw.NavigationPage {
      * Get values from the input widgets in the view and save them to a desktop file.
      */
     public void save_file (bool is_backup = false) {
-        var desktop_file = new DesktopFile (
-            file_name_entry.text,
-            name_entry.text,
-            comment_entry.text,
-            exec_entry.text,
-            icon_entry.text,
-            categories_row.selected,
-            startup_wm_class_entry.text,
-            terminal_row.active,
-            is_backup
-        );
+        current_desktop_file.is_backup = is_backup;
 
         try {
-            DesktopFileOperator.get_default ().write_to_file (desktop_file);
-            DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
+            DesktopFileOperator.get_default ().write_to_file (current_desktop_file);
+            DesktopFileOperator.get_default ().add_exec_permission (current_desktop_file.exec_file);
             file_updated ();
         } catch (Error e) {
             var error_dialog = new Adw.MessageDialog (
                 window,
-                _("Could not write to file “%s”").printf (desktop_file.app_name),
+                _("Could not save entry of “%s”").printf (current_desktop_file.app_name),
                 e.message
             );
             error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
@@ -426,76 +425,10 @@ public class EditView : Adw.NavigationPage {
         save_button.visible = false;
     }
 
-    private Gtk.MenuButton create_hint_button () {
-        var summary_label = new Gtk.Label (_("Name of the .desktop file, where this app's info will be saved.")) {
-            halign = Gtk.Align.START,
-            margin_bottom = 12
-        };
-
-        var desc_label = new Gtk.Label (
-            _("It is recommended to use only alphanumeric characters and underscores. Don't begin with a number.") + "\n" +
-            _("Include at least two elements (sections of the string seperated by a period). Most apps use three elements.")
-        ) {
-            halign = Gtk.Align.START
-        };
-        desc_label.add_css_class ("body");
-
-        var example_label = new Gtk.Label (
-            ///TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-            ///the desktop file name of SuperTux.
-            _("For example, you should use \"%s\" for the 2D game, SuperTux.").printf ("<b>org.supertuxproject.SuperTux</b>")
-        ) {
-            use_markup = true,
-            halign = Gtk.Align.START
-        };
-        example_label.add_css_class ("body");
-
-        var detailed_label = new Gtk.Label (
-            ///TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-            _("For more info, see %s.").printf (
-            "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
-            _("the file naming specification by freedesktop.org")
-        )) {
-            use_markup = true,
-            halign = Gtk.Align.START,
-            margin_top = 12
-        };
-        detailed_label.add_css_class ("body");
-
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
-        box.append (summary_label);
-        box.append (desc_label);
-        box.append (example_label);
-        box.append (detailed_label);
-
-        var popover = new Gtk.Popover () {
-            child = box
-        };
-
-        var menu_button = new Gtk.MenuButton () {
-            icon_name = "help-contents-symbolic",
-            margin_start = 6,
-            popover = popover,
-            valign = Gtk.Align.CENTER
-        };
-        menu_button.add_css_class ("flat");
-
-        menu_button.activate.connect (() => {
-            popover.popup ();
-        });
-
-        return menu_button;
-    }
-
     /**
      * Allow clicking the save button only when the required entries has (valid) values.
      */
     private void set_save_button_sensitivity () {
-        save_button.sensitive = (file_name_entry.is_valid && name_entry.text.length > 0 && exec_entry.text.length > 0);
+        save_button.sensitive = (name_entry.text.length > 0 && exec_entry.text.length > 0);
     }
 }

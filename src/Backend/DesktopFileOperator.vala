@@ -121,7 +121,9 @@ public class DesktopFileOperator : GLib.Object {
      */
     public DesktopFile create_new () {
         DesktopFileOperator.get_default ().delete_backup ();
-        return new DesktopFile ();
+        var desktop_file = new DesktopFile (Uuid.string_random ());
+        write_to_file (desktop_file);
+        return desktop_file;
     }
 
     /**
@@ -409,12 +411,14 @@ public class DesktopFileOperator : GLib.Object {
     /**
      * Open the specified file in an external editor.
      *
-     * @param file_name The path of the file to open.
-     * @throws Error    An error while opening.
+     * @param desktop_file      The {@link DesktopFile} to open.
+     * @throws Error            An error while opening.
      */
-    public void open_external (string file_name) throws Error {
+    public void open_external (DesktopFile desktop_file) throws Error {
         try {
-            ExternalAppLauncher.open_default_handler (Path.build_filename (desktop_files_path, file_name + DESKTOP_SUFFIX));
+            ExternalAppLauncher.open_default_handler (
+                Path.build_filename (desktop_files_path, desktop_file.file_name + DESKTOP_SUFFIX)
+            );
         } catch (Error e) {
             throw e;
         }
