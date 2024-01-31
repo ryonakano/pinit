@@ -4,6 +4,7 @@
  */
 
 public class FilesView : Adw.NavigationPage {
+    public signal void create_new ();
     public signal void file_deleted ();
 
     public MainWindow window { private get; construct; }
@@ -84,7 +85,7 @@ public class FilesView : Adw.NavigationPage {
         update_list ();
 
         create_button.clicked.connect (() => {
-            window.show_edit_view (DesktopFileOperator.get_default ().create_new ());
+            create_new ();
         });
     }
 
@@ -113,9 +114,20 @@ public class FilesView : Adw.NavigationPage {
                 margin_bottom = 6
             };
             try {
-                app_icon.gicon = Icon.new_for_string (file.icon_file);
+                app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON));
             } catch (Error e) {
                 warning ("Failed to update app_icon: %s", e.message);
+            }
+
+            string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+            string app_name = "";
+            string dialog_title = _("Are you sure you want to delete entry?");
+
+            try {
+                app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+                dialog_title = _("Are you sure you want to delete entry of “%s”?").printf (app_name);
+            } catch (KeyFileError e) {
+                warning (e.message);
             }
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
@@ -126,7 +138,7 @@ public class FilesView : Adw.NavigationPage {
             delete_button.clicked.connect (() => {
                 var delete_dialog = new Adw.MessageDialog (
                     window,
-                    _("Are you sure you want to delete “%s”?").printf (file.app_name),
+                    dialog_title,
                     _("This removes the app from the launcher.")
                 );
                 delete_dialog.add_response (DialogResponse.CANCEL, _("Cancel"));
@@ -137,12 +149,12 @@ public class FilesView : Adw.NavigationPage {
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == DialogResponse.OK) {
                         try {
-                            DesktopFileOperator.get_default ().delete_file (file);
+                            file.delete_file ();
                             file_deleted ();
                         } catch (Error e) {
                             var error_dialog = new Adw.MessageDialog (
                                 window,
-                                _("Could not delete file “%s”").printf (file.app_name),
+                                _("Could not delete entry of “%s”").printf (app_name),
                                 e.message
                             );
                             error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
@@ -163,9 +175,17 @@ public class FilesView : Adw.NavigationPage {
                 delete_dialog.show ();
             });
 
+            locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
+            string comment = "";
+            bool has_key = file.has_key (KeyFileDesktop.KEY_COMMENT);
+            // Either has a localized or unlocalized Comment key
+            if (locale != null || has_key) {
+                comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
+            }
+
             var list_item = new Adw.ActionRow () {
-                title = file.app_name,
-                subtitle = file.comment,
+                title = app_name,
+                subtitle = comment,
                 title_lines = 1,
                 subtitle_lines = 1,
                 activatable = true

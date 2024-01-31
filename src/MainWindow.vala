@@ -71,6 +71,10 @@ public class MainWindow : Adw.ApplicationWindow {
             overlay.add_toast (updated_toast);
         });
 
+        files_view.create_new.connect (() => {
+            on_new_activate ();
+        });
+
         files_view.file_deleted.connect (() => {
             edit_view.hide_all ();
             files_view.update_list ();
@@ -88,6 +92,8 @@ public class MainWindow : Adw.ApplicationWindow {
 
         Application.settings.set_enum ("last-view", (int) visible_view);
 
+        // TODO Drop backup function
+        /*
         if (visible_view == Views.EDIT_VIEW) {
             if (edit_view.is_unsaved) {
                 // If there are unsaved work, save it as a backup
@@ -97,6 +103,7 @@ public class MainWindow : Adw.ApplicationWindow {
                 DesktopFileOperator.get_default ().delete_backup ();
             }
         }
+        */
     }
 
     public void show_files_view () {
@@ -118,6 +125,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     private void set_visible_view () {
+        /*
         unowned var last_view = (Views) Application.settings.get_enum ("last-view");
         var last_edited_file = DesktopFileOperator.get_default ().get_unsaved_file ();
 
@@ -127,10 +135,17 @@ public class MainWindow : Adw.ApplicationWindow {
             // If there were unsaved work in the last session, restore it too.
             show_edit_view (last_edited_file);
         }
+        */
     }
 
     private void on_new_activate () {
-        show_edit_view (DesktopFileOperator.get_default ().create_new ());
+        try {
+            var file = new DesktopFile ();
+            show_edit_view (file);
+            files_view.update_list ();
+        } catch (FileError e) {
+            warning (e.message);
+        }
     }
 
     private void on_about_activate () {

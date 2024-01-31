@@ -13,8 +13,8 @@ public class EditView : Adw.NavigationPage {
     public bool is_unsaved {
         get {
             return (
-                file_name_entry.text.length > 0 || name_entry.text.length > 0 || exec_entry.text.length > 0 ||
-                icon_entry.text.length > 0 || comment_entry.text.length > 0 || categories_row.selected != "" ||
+                name_entry.text.length > 0 || exec_entry.text.length > 0 ||
+                icon_entry.text.length > 0 || comment_entry.text.length > 0 || categories_row.selected.length > 0 ||
                 startup_wm_class_entry.text.length > 0 || terminal_row.active
             );
         }
@@ -22,13 +22,14 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
+    private DesktopFile current_desktop_file;
+
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
 
     private Gtk.Image icon_image;
     private Gtk.Label name_label;
 
-    private RegexEntry file_name_entry;
     private Adw.EntryRow name_entry;
     private Adw.EntryRow exec_entry;
     private Adw.EntryRow icon_entry;
@@ -81,12 +82,6 @@ public class EditView : Adw.NavigationPage {
             title = _("Required Entries"),
             description = _("The following entries need to be filled to save.")
         };
-
-        file_name_entry = new RegexEntry (/^[^.0-9]{1}([A-Za-z0-9]*\.)+[A-Za-z0-9]*[^.]$/, false) { //vala-lint=space-before-paren
-            title = _("File Name")
-        };
-        file_name_entry.add_suffix (create_hint_button ());
-        required_group.add (file_name_entry);
 
         name_entry = new Adw.EntryRow () {
             title = _("App Name")
@@ -216,6 +211,14 @@ public class EditView : Adw.NavigationPage {
             } else {
                 name_label.label = name_entry.text;
             }
+
+            current_desktop_file.set_string (KeyFileDesktop.KEY_NAME, name_entry.text);
+            set_save_button_sensitivity ();
+        });
+
+        exec_entry.notify["text"].connect (() => {
+            current_desktop_file.set_string (KeyFileDesktop.KEY_EXEC, name_entry.text);
+            set_save_button_sensitivity ();
         });
 
         exec_chooser_button.clicked.connect (() => {
@@ -238,6 +241,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     exec_entry.text = path;
+                    current_desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
                     set_save_button_sensitivity ();
                 } catch (Error e) {
                     warning ("Failed to select executable file: %s", e.message);
@@ -251,6 +255,8 @@ public class EditView : Adw.NavigationPage {
             } catch (Error e) {
                 warning ("Failed to update icon_image: %s", e.message);
             }
+
+            current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
         });
 
         icon_chooser_button.clicked.connect (() => {
@@ -289,15 +295,32 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     icon_entry.text = path;
+                    current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
             });
         });
 
+        comment_entry.notify["text"].connect (() => {
+            current_desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text);
+        });
+
+        categories_row.toggled.connect (() => {
+            current_desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected);
+        });
+
+        startup_wm_class_entry.notify["text"].connect (() => {
+            current_desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text);
+        });
+
+        terminal_row.notify["active"].connect (() => {
+            current_desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active);
+        });
+
         open_text_editor_button.clicked.connect (() => {
             try {
-                DesktopFileOperator.get_default ().open_external (file_name_entry.text);
+                current_desktop_file.open_external ();
             } catch (Error e) {
                 var error_dialog = new Adw.MessageDialog (
                     window,
@@ -315,62 +338,83 @@ public class EditView : Adw.NavigationPage {
                 error_dialog.present ();
             }
         });
-
-        /*
-         * When there are some changes in the input widgets (entries, buttons, category chooser, etc.),
-         * update the sensitivity of the save button.
-         */
-        var event_controller = new Gtk.EventControllerKey ();
-        event_controller.key_released.connect ((keyval, keycode, state) => {
-            set_save_button_sensitivity ();
-        });
-        add_controller (event_controller);
-
-        categories_row.toggled.connect (() => {
-            set_save_button_sensitivity ();
-        });
     }
 
     /**
      * Fill in the all input widgets in the EditView from the loaded desktp file.
      *
-     * @param desktop_file      The desktop file to reflect its content to the widgets.
+     * @param file The desktop file to reflect its content to the widgets.
      */
-    public void set_desktop_file (DesktopFile desktop_file) {
+    public void set_desktop_file (DesktopFile file) {
+        current_desktop_file = file;
+
+        string icon = "application-x-executable";
         try {
-            icon_image.gicon = Icon.new_for_string (desktop_file.icon_file);
+            icon = file.get_string (KeyFileDesktop.KEY_ICON);
+        } catch (KeyFileError e) {
+            warning (e.message);
+        }
+
+        try {
+            icon_image.gicon = Icon.new_for_string (icon);
         } catch (Error e) {
             warning ("Failed to update icon_image: %s", e.message);
         }
 
-        if (name_entry.text == "") {
-            name_label.label = _("Untitled App");
-        } else {
-            name_label.label = name_entry.text;
+        string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+        string app_name = "";
+
+        try {
+            app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+        } catch (KeyFileError e) {
+            warning (e.message);
         }
 
-        file_name_entry.text = desktop_file.file_name;
-        name_entry.text = desktop_file.app_name;
-        exec_entry.text = desktop_file.exec_file;
-        icon_entry.text = desktop_file.icon_file;
-        comment_entry.text = desktop_file.comment;
-        categories_row.selected = desktop_file.categories;
-        startup_wm_class_entry.text = desktop_file.startup_wm_class;
-        terminal_row.active = desktop_file.is_cli;
+        if (app_name == "") {
+            name_label.label = _("Untitled App");
+        } else {
+            name_label.label = app_name;
+        }
+
+        name_entry.text = app_name;
+
+        try {
+            exec_entry.text = file.get_string (KeyFileDesktop.KEY_EXEC);
+        } catch (KeyFileError e) {
+            warning (e.message);
+        }
+
+        icon_entry.text = icon;
+
+        locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
+        bool has_key = file.has_key (KeyFileDesktop.KEY_COMMENT);
+        // Either has a localized or unlocalized Comment key
+        if (locale != null || has_key) {
+            comment_entry.text = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
+        }
+
+        try {
+            categories_row.selected = file.get_string_list (KeyFileDesktop.KEY_CATEGORIES);
+        } catch (KeyFileError e) {
+            warning (e.message);
+        }
+
+        try {
+            startup_wm_class_entry.text = file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+        } catch (KeyFileError e) {
+            warning (e.message);
+        }
+
+        terminal_row.active = file.get_boolean (KeyFileDesktop.KEY_TERMINAL);
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;
 
         // Set title label of the header depending on the status of the opened desktop file.
-        if (desktop_file.file_name == "") {
-            // No file name means a new file.
-            title = _("New Entry");
-        } else if (desktop_file.app_name == "") {
-            // Editing an existing desktop file with no app name
+        if (app_name == "") {
             title = _("Edit Entry");
         } else {
-            // Editing an existing desktop file with app name.
-            title = _("Edit “%s”").printf (desktop_file.app_name);
+            title = _("Edit “%s”").printf (app_name);
         }
 
         headerbar.show_title = true;
@@ -381,27 +425,28 @@ public class EditView : Adw.NavigationPage {
     /**
      * Get values from the input widgets in the view and save them to a desktop file.
      */
-    public void save_file (bool is_backup = false) {
-        var desktop_file = new DesktopFile (
-            file_name_entry.text,
-            name_entry.text,
-            comment_entry.text,
-            exec_entry.text,
-            icon_entry.text,
-            categories_row.selected,
-            startup_wm_class_entry.text,
-            terminal_row.active,
-            is_backup
-        );
-
+    public void save_file () {
         try {
-            DesktopFileOperator.get_default ().write_to_file (desktop_file);
-            DesktopFileOperator.get_default ().add_exec_permission (desktop_file.exec_file);
+            current_desktop_file.save_file ();
+            DesktopFileOperator.get_default ().add_exec_permission (
+                current_desktop_file.get_string (KeyFileDesktop.KEY_EXEC)
+            );
             file_updated ();
         } catch (Error e) {
+            string app_name = "";
+            string dialog_title = _("Could not save entry");
+
+            try {
+                string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+                app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+                dialog_title = _("Could not save entry of “%s”").printf (app_name);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            }
+
             var error_dialog = new Adw.MessageDialog (
                 window,
-                _("Could not write to file “%s”").printf (desktop_file.app_name),
+                dialog_title,
                 e.message
             );
             error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
@@ -496,6 +541,6 @@ public class EditView : Adw.NavigationPage {
      * Allow clicking the save button only when the required entries has (valid) values.
      */
     private void set_save_button_sensitivity () {
-        save_button.sensitive = (file_name_entry.is_valid && name_entry.text.length > 0 && exec_entry.text.length > 0);
+        save_button.sensitive = (name_entry.text.length > 0 && exec_entry.text.length > 0);
     }
 }
