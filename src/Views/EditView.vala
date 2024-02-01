@@ -256,7 +256,7 @@ public class EditView : Adw.NavigationPage {
                 warning ("Failed to update icon_image: %s", e.message);
             }
 
-            current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
+            current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text, false);
         });
 
         icon_chooser_button.clicked.connect (() => {
@@ -295,7 +295,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     icon_entry.text = path;
-                    current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
+                    current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, path, false);
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
@@ -303,19 +303,19 @@ public class EditView : Adw.NavigationPage {
         });
 
         comment_entry.notify["text"].connect (() => {
-            current_desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text);
+            current_desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text, false);
         });
 
         categories_row.toggled.connect (() => {
-            current_desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected);
+            current_desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected, false);
         });
 
         startup_wm_class_entry.notify["text"].connect (() => {
-            current_desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text);
+            current_desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text, false);
         });
 
         terminal_row.notify["active"].connect (() => {
-            current_desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active);
+            current_desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active, false);
         });
 
         open_text_editor_button.clicked.connect (() => {
@@ -348,12 +348,7 @@ public class EditView : Adw.NavigationPage {
     public void set_desktop_file (DesktopFile file) {
         current_desktop_file = file;
 
-        string icon = "application-x-executable";
-        try {
-            icon = file.get_string (KeyFileDesktop.KEY_ICON);
-        } catch (KeyFileError e) {
-            warning (e.message);
-        }
+        string icon = file.get_string (KeyFileDesktop.KEY_ICON, false);
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
@@ -362,14 +357,7 @@ public class EditView : Adw.NavigationPage {
         }
 
         string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-        string app_name = "";
-
-        try {
-            app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
-        } catch (KeyFileError e) {
-            warning (e.message);
-        }
-
+        string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
         if (app_name == "") {
             name_label.label = _("Untitled App");
         } else {
@@ -377,35 +365,15 @@ public class EditView : Adw.NavigationPage {
         }
 
         name_entry.text = app_name;
-
-        try {
-            exec_entry.text = file.get_string (KeyFileDesktop.KEY_EXEC);
-        } catch (KeyFileError e) {
-            warning (e.message);
-        }
-
+        exec_entry.text = file.get_string (KeyFileDesktop.KEY_EXEC);
         icon_entry.text = icon;
 
         locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
-        bool has_key = file.has_key (KeyFileDesktop.KEY_COMMENT);
-        // Either has a localized or unlocalized Comment key
-        if (locale != null || has_key) {
-            comment_entry.text = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
-        }
+        comment_entry.text = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
 
-        try {
-            categories_row.selected = file.get_string_list (KeyFileDesktop.KEY_CATEGORIES);
-        } catch (KeyFileError e) {
-            warning (e.message);
-        }
-
-        try {
-            startup_wm_class_entry.text = file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS);
-        } catch (KeyFileError e) {
-            warning (e.message);
-        }
-
-        terminal_row.active = file.get_boolean (KeyFileDesktop.KEY_TERMINAL);
+        categories_row.selected = file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
+        startup_wm_class_entry.text = file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
+        terminal_row.active = file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;
@@ -433,15 +401,12 @@ public class EditView : Adw.NavigationPage {
             );
             file_updated ();
         } catch (Error e) {
-            string app_name = "";
-            string dialog_title = _("Could not save entry");
+            string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+            string app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
-            try {
-                string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-                app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+            string dialog_title = _("Could not save entry");
+            if (app_name != "") {
                 dialog_title = _("Could not save entry of “%s”").printf (app_name);
-            } catch (KeyFileError e) {
-                warning (e.message);
             }
 
             var error_dialog = new Adw.MessageDialog (
@@ -469,72 +434,6 @@ public class EditView : Adw.NavigationPage {
 
         headerbar.show_title = false;
         save_button.visible = false;
-    }
-
-    private Gtk.MenuButton create_hint_button () {
-        var summary_label = new Gtk.Label (_("Name of the .desktop file, where this app's info will be saved.")) {
-            halign = Gtk.Align.START,
-            margin_bottom = 12
-        };
-
-        var desc_label = new Gtk.Label (
-            _("It is recommended to use only alphanumeric characters and underscores. Don't begin with a number.") + "\n" +
-            _("Include at least two elements (sections of the string seperated by a period). Most apps use three elements.")
-        ) {
-            halign = Gtk.Align.START
-        };
-        desc_label.add_css_class ("body");
-
-        var example_label = new Gtk.Label (
-            ///TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-            ///the desktop file name of SuperTux.
-            _("For example, you should use \"%s\" for the 2D game, SuperTux.").printf ("<b>org.supertuxproject.SuperTux</b>")
-        ) {
-            use_markup = true,
-            halign = Gtk.Align.START
-        };
-        example_label.add_css_class ("body");
-
-        var detailed_label = new Gtk.Label (
-            ///TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-            _("For more info, see %s.").printf (
-            "<a href=\"https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus\">%s</a>").printf (
-            _("the file naming specification by freedesktop.org")
-        )) {
-            use_markup = true,
-            halign = Gtk.Align.START,
-            margin_top = 12
-        };
-        detailed_label.add_css_class ("body");
-
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
-        box.append (summary_label);
-        box.append (desc_label);
-        box.append (example_label);
-        box.append (detailed_label);
-
-        var popover = new Gtk.Popover () {
-            child = box
-        };
-
-        var menu_button = new Gtk.MenuButton () {
-            icon_name = "help-contents-symbolic",
-            margin_start = 6,
-            popover = popover,
-            valign = Gtk.Align.CENTER
-        };
-        menu_button.add_css_class ("flat");
-
-        menu_button.activate.connect (() => {
-            popover.popup ();
-        });
-
-        return menu_button;
     }
 
     /**

@@ -107,6 +107,15 @@ public class FilesView : Adw.NavigationPage {
         // Create a listbox per each entry
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
+            try {
+                file.load_file ();
+            } catch (FileError e) {
+                warning (e.message);
+                continue;
+            } catch (KeyFileError e) {
+                warning (e.message);
+                continue;
+            }
 
             var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
                 pixel_size = 48,
@@ -114,20 +123,17 @@ public class FilesView : Adw.NavigationPage {
                 margin_bottom = 6
             };
             try {
-                app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON));
+                app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON, false));
             } catch (Error e) {
                 warning ("Failed to update app_icon: %s", e.message);
             }
 
             string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-            string app_name = "";
-            string dialog_title = _("Are you sure you want to delete entry?");
+            string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
-            try {
-                app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+            string dialog_title = _("Are you sure you want to delete entry?");
+            if (app_name != "") {
                 dialog_title = _("Are you sure you want to delete entry of “%s”?").printf (app_name);
-            } catch (KeyFileError e) {
-                warning (e.message);
             }
 
             var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
@@ -176,12 +182,7 @@ public class FilesView : Adw.NavigationPage {
             });
 
             locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
-            string comment = "";
-            bool has_key = file.has_key (KeyFileDesktop.KEY_COMMENT);
-            // Either has a localized or unlocalized Comment key
-            if (locale != null || has_key) {
-                comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
-            }
+            string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
             var list_item = new Adw.ActionRow () {
                 title = app_name,

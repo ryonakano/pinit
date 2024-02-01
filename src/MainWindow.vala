@@ -139,13 +139,16 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     private void on_new_activate () {
+        var file = new DesktopFile ();
+
         try {
-            var file = new DesktopFile ();
-            show_edit_view (file);
-            files_view.update_list ();
+            file.save_file ();
         } catch (FileError e) {
             warning (e.message);
         }
+
+        show_edit_view (file);
+        files_view.update_list ();
     }
 
     private void on_about_activate () {
