@@ -98,7 +98,7 @@ public class CategoryChooser : Adw.ExpanderRow {
         // Create and append a switch row for each category
         foreach (var entry in categories.entries) {
             var item = new RowItem (entry.key, entry.value);
-            item.row.activated.connect (() => {
+            item.row.notify["active"].connect (() => {
                 toggled ();
             });
             row_items.add (item);

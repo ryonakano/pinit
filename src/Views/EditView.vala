@@ -22,7 +22,7 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
-    private DesktopFile current_desktop_file;
+    private unowned DesktopFile current_desktop_file;
 
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
@@ -341,15 +341,15 @@ public class EditView : Adw.NavigationPage {
     }
 
     /**
-     * Fill in the all input widgets in the EditView from the loaded desktp file.
+     * Load and fill in the all input widgets in the EditView from the desktp file.
      *
-     * @param file The desktop file to reflect its content to the widgets.
+     * @param file The desktop file to load.
      */
-    public void set_desktop_file (DesktopFile file) {
+    public void load_file (DesktopFile file) {
         current_desktop_file = file;
 
         try {
-            file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
+            current_desktop_file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (FileError e) {
             warning (e.message);
             return;
@@ -358,7 +358,7 @@ public class EditView : Adw.NavigationPage {
             return;
         }
 
-        string icon = file.get_string (KeyFileDesktop.KEY_ICON, false);
+        string icon = current_desktop_file.get_string (KeyFileDesktop.KEY_ICON, false);
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
@@ -366,8 +366,8 @@ public class EditView : Adw.NavigationPage {
             warning ("Failed to update icon_image: %s", e.message);
         }
 
-        string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-        string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+        string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+        string app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
         if (app_name == "") {
             name_label.label = _("Untitled App");
         } else {
@@ -375,15 +375,15 @@ public class EditView : Adw.NavigationPage {
         }
 
         name_entry.text = app_name;
-        exec_entry.text = file.get_string (KeyFileDesktop.KEY_EXEC);
+        exec_entry.text = current_desktop_file.get_string (KeyFileDesktop.KEY_EXEC);
         icon_entry.text = icon;
 
-        locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
-        comment_entry.text = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
+        locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
+        comment_entry.text = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
 
-        categories_row.selected = file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
-        startup_wm_class_entry.text = file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
-        terminal_row.active = file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
+        categories_row.selected = current_desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
+        startup_wm_class_entry.text = current_desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
+        terminal_row.active = current_desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;

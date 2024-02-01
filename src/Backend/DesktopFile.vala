@@ -16,7 +16,7 @@ public class DesktopFile : GLib.Object {
      */
     public DesktopFile () {
         string filename = "pinit-" + Uuid.string_random ();
-        string path =  (Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
+        string path = (Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
                         filename + DesktopFileDefine.DESKTOP_SUFFIX));
 
         debug ("DesktopFile: path=%s", path);
