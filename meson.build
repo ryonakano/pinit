@@ -40,8 +40,7 @@ sources = files(
     'src' / 'Application.vala',
     'src' / 'CategoryChooser.vala',
     'src' / 'DialogResponse.vala',
-    'src' / 'MainWindow.vala',
-    'src' / 'RegexEntry.vala'
+    'src' / 'MainWindow.vala'
 )
 
 executable(
