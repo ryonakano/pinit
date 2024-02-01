@@ -348,6 +348,16 @@ public class EditView : Adw.NavigationPage {
     public void set_desktop_file (DesktopFile file) {
         current_desktop_file = file;
 
+        try {
+            file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
+        } catch (FileError e) {
+            warning (e.message);
+            return;
+        } catch (KeyFileError e) {
+            warning (e.message);
+            return;
+        }
+
         string icon = file.get_string (KeyFileDesktop.KEY_ICON, false);
 
         try {

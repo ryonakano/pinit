@@ -75,10 +75,13 @@ public class MainWindow : Adw.ApplicationWindow {
             on_new_activate ();
         });
 
-        files_view.file_deleted.connect (() => {
+        files_view.file_deleted.connect ((is_success) => {
             edit_view.hide_all ();
             files_view.update_list ();
-            overlay.add_toast (deleted_toast);
+
+            if (is_success) {
+                overlay.add_toast (deleted_toast);
+            }
         });
 
         close_request.connect (() => {

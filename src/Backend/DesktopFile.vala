@@ -16,10 +16,19 @@ public class DesktopFile : GLib.Object {
      */
     public DesktopFile () {
         string filename = "pinit-" + Uuid.string_random ();
-        this.from_path (Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
+        string path =  (Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
                         filename + DesktopFileDefine.DESKTOP_SUFFIX));
+
+        debug ("DesktopFile: path=%s", path);
+
+        this.from_path (path);
     }
 
+    /**
+     * The overloaded constructor.
+     *
+     * @param path The path to the desktop file.
+     */
     public DesktopFile.from_path (string path) {
         Object (
             path: path
@@ -231,9 +240,9 @@ public class DesktopFile : GLib.Object {
     //
     ////////////////////////////////////////////////////////////////////////////
 
-    public void load_file () throws KeyFileError, FileError {
+    public void load_file (KeyFileFlags flags) throws KeyFileError, FileError {
         try {
-            load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
+            keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (FileError e) {
             throw e;
         } catch (KeyFileError e) {
@@ -243,20 +252,23 @@ public class DesktopFile : GLib.Object {
 
     public void save_file () throws FileError {
         try {
-            save_to_file (path);
+            keyfile.save_to_file (path);
         } catch (FileError e) {
             throw e;
         }
     }
 
-    public void delete_file () throws Error {
-        var f = File.new_for_path (path);
+    public bool delete_file () throws Error {
+        var file = File.new_for_path (path);
+        bool ret;
 
         try {
-            f.delete ();
+            ret = file.delete ();
         } catch (Error e) {
             throw e;
         }
+
+        return ret;
     }
 
     /**
@@ -268,24 +280,6 @@ public class DesktopFile : GLib.Object {
         try {
             ExternalAppLauncher.open_default_handler (path);
         } catch (Error e) {
-            throw e;
-        }
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //
-    // Private functions
-    //
-    ////////////////////////////////////////////////////////////////////////////
-
-    private bool load_from_file (string file, KeyFileFlags flags) throws KeyFileError, FileError {
-        return keyfile.load_from_file (file, flags);
-    }
-
-    private void save_to_file (string file) throws FileError {
-        try {
-            keyfile.save_to_file (file);
-        } catch (FileError e) {
             throw e;
         }
     }

@@ -5,7 +5,7 @@
 
 public class FilesView : Adw.NavigationPage {
     public signal void create_new ();
-    public signal void file_deleted ();
+    public signal void file_deleted (bool is_success);
 
     public MainWindow window { private get; construct; }
 
@@ -108,7 +108,7 @@ public class FilesView : Adw.NavigationPage {
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
             try {
-                file.load_file ();
+                file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
             } catch (FileError e) {
                 warning (e.message);
                 continue;
@@ -154,9 +154,10 @@ public class FilesView : Adw.NavigationPage {
                 delete_dialog.close_response = DialogResponse.CANCEL;
                 delete_dialog.response.connect ((response_id) => {
                     if (response_id == DialogResponse.OK) {
+                        bool ret = false;
+
                         try {
-                            file.delete_file ();
-                            file_deleted ();
+                            ret = file.delete_file ();
                         } catch (Error e) {
                             var error_dialog = new Adw.MessageDialog (
                                 window,
@@ -173,6 +174,8 @@ public class FilesView : Adw.NavigationPage {
                             });
                             error_dialog.present ();
                         }
+
+                        file_deleted (ret);
                     }
 
                     delete_dialog.destroy ();
