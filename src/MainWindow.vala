@@ -64,8 +64,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         content = overlay;
 
-        set_visible_view ();
-
         edit_view.file_updated.connect (() => {
             show_files_view ();
             overlay.add_toast (updated_toast);
@@ -86,27 +84,38 @@ public class MainWindow : Adw.ApplicationWindow {
 
         close_request.connect (() => {
             prep_destroy ();
-            destroy ();
+            return Gdk.EVENT_STOP;
         });
     }
 
     public void prep_destroy () {
-        unowned Views visible_view = get_visible_view ();
-
-        Application.settings.set_enum ("last-view", (int) visible_view);
-
-        // TODO Drop backup function
-        /*
-        if (visible_view == Views.EDIT_VIEW) {
-            if (edit_view.is_unsaved) {
-                // If there are unsaved work, save it as a backup
-                edit_view.save_file (true);
-            } else {
-                // If there are no unsaved work, delete the backup (if exists)
-                DesktopFileOperator.get_default ().delete_backup ();
-            }
+        if (DesktopFileOperator.get_default ().desktop_file == null
+            || !DesktopFileOperator.get_default ().desktop_file.is_updated) {
+            destroy ();
         }
-        */
+
+        var unsaved_dialog = new Adw.MessageDialog (this, _("Save Changes?"),
+                                                    _("Open entries contain unsaved changes. Changes which are not saved will be permanently lost."));
+        unsaved_dialog.add_css_class ("save-changes");
+        unsaved_dialog.add_responses (DialogResponse.CANCEL, _("_Cancel"),
+                                      DialogResponse.DISCARD, _("_Discard"),
+                                      DialogResponse.SAVE, _("_Save"));
+        unsaved_dialog.set_response_appearance (DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
+        unsaved_dialog.set_response_appearance (DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
+        unsaved_dialog.response.connect ((response) => {
+            if (response == DialogResponse.CANCEL) {
+                return;
+            }
+
+            if (response == DialogResponse.SAVE) {
+                edit_view.save_file ();
+            }
+
+            unsaved_dialog.destroy ();
+            destroy ();
+        });
+
+        unsaved_dialog.present ();
     }
 
     public void show_files_view () {
@@ -117,28 +126,6 @@ public class MainWindow : Adw.ApplicationWindow {
     public void show_edit_view () {
         edit_view.load_file ();
         leaflet.show_content = true;
-    }
-
-    private Views get_visible_view () {
-        if (!leaflet.show_content) {
-            return Views.FILES_VIEW;
-        } else {
-            return Views.EDIT_VIEW;
-        }
-    }
-
-    private void set_visible_view () {
-        /*
-        unowned var last_view = (Views) Application.settings.get_enum ("last-view");
-        var last_edited_file = DesktopFileOperator.get_default ().get_unsaved_file ();
-
-        if (last_view == Views.FILES_VIEW || last_edited_file == null) {
-            show_files_view ();
-        } else {
-            // If there were unsaved work in the last session, restore it too.
-            show_edit_view (last_edited_file);
-        }
-        */
     }
 
     private void on_new_activate () {

@@ -203,7 +203,7 @@ public class EditView : Adw.NavigationPage {
         });
 
         exec_entry.notify["text"].connect (() => {
-            desktop_file.set_string (KeyFileDesktop.KEY_EXEC, name_entry.text);
+            desktop_file.set_string (KeyFileDesktop.KEY_EXEC, exec_entry.text);
             set_save_button_sensitivity ();
         });
 
@@ -242,7 +242,7 @@ public class EditView : Adw.NavigationPage {
                 warning ("Failed to update icon_image: %s", e.message);
             }
 
-            desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
         });
 
         icon_chooser_button.clicked.connect (() => {
@@ -281,7 +281,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     icon_entry.text = path;
-                    desktop_file.set_string (KeyFileDesktop.KEY_ICON, path, false);
+                    desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
@@ -289,19 +289,19 @@ public class EditView : Adw.NavigationPage {
         });
 
         comment_entry.notify["text"].connect (() => {
-            desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text);
         });
 
         categories_row.toggled.connect (() => {
-            desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected, false);
+            desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected);
         });
 
         startup_wm_class_entry.notify["text"].connect (() => {
-            desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text);
         });
 
         terminal_row.notify["active"].connect (() => {
-            desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active, false);
+            desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active);
         });
 
         open_text_editor_button.clicked.connect (() => {

@@ -7,9 +7,26 @@
  * A class to represents a single desktop file.
  */
 public class DesktopFile : GLib.Object {
+    /**
+     * The path of the desktop file.
+     */
     public string path { get; construct; }
 
+    /**
+     * Returns if the keyfile has been updated since last save.
+     */
+    public bool is_updated {
+        get {
+            return data != backup_data;
+        }
+    }
+
     private KeyFile keyfile;
+
+    // The latest content of the keyfile.
+    private string data;
+    // The content of the keyfile when last saved/loaded.
+    private string backup_data;
 
     /**
      * The constructor.
@@ -116,13 +133,7 @@ public class DesktopFile : GLib.Object {
         return val;
     }
 
-    public void set_boolean (string key, bool val, bool is_required = true) {
-        // Just set in case of required keys
-        if (is_required) {
-            keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
-            return;
-        }
-
+    public void set_boolean (string key, bool val) {
         if (val) {
             // Update the value when the corresponding entry has some value.
             keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
@@ -136,15 +147,11 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
+
+        data = keyfile.to_data ();
     }
 
-    public void set_string (string key, string val, bool is_required = true) {
-        // Just set in case of required keys
-        if (is_required) {
-            keyfile.set_string (KeyFileDesktop.GROUP, key, val);
-            return;
-        }
-
+    public void set_string (string key, string val) {
         if (val != "") {
             // Update the value when the corresponding entry has some value.
             keyfile.set_string (KeyFileDesktop.GROUP, key, val);
@@ -158,15 +165,11 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
+
+        data = keyfile.to_data ();
     }
 
-    public void set_string_list (string key, string[] list, bool is_required = true) {
-        // Just set in case of required keys
-        if (is_required) {
-            keyfile.set_string_list (KeyFileDesktop.GROUP, key, list);
-            return;
-        }
-
+    public void set_string_list (string key, string[] list) {
         if (list.length > 0) {
             // Update the value when the corresponding entry has some value.
             keyfile.set_string_list (KeyFileDesktop.GROUP, key, list);
@@ -180,6 +183,8 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
+
+        data = keyfile.to_data ();
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -235,6 +240,9 @@ public class DesktopFile : GLib.Object {
         } catch (KeyFileError e) {
             throw e;
         }
+
+        data = keyfile.to_data ();
+        backup_data = data;
     }
 
     public void save_file () throws FileError {
@@ -243,6 +251,9 @@ public class DesktopFile : GLib.Object {
         } catch (FileError e) {
             throw e;
         }
+
+        data = keyfile.to_data ();
+        backup_data = data;
     }
 
     public bool delete_file () throws Error {
