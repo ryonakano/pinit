@@ -6,20 +6,6 @@
 public class EditView : Adw.NavigationPage {
     public signal void file_updated ();
 
-    /*
-     * When at least one input widget in this view is changed,
-     * we consider the currently open desktop file as unsaved.
-     */
-    public bool is_unsaved {
-        get {
-            return (
-                name_entry.text.length > 0 || exec_entry.text.length > 0 ||
-                icon_entry.text.length > 0 || comment_entry.text.length > 0 || categories_row.selected.length > 0 ||
-                startup_wm_class_entry.text.length > 0 || terminal_row.active
-            );
-        }
-    }
-
     public MainWindow window { private get; construct; }
 
     private unowned DesktopFile desktop_file;
