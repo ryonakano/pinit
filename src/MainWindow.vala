@@ -144,7 +144,11 @@ public class MainWindow : Adw.ApplicationWindow {
     private void on_new_activate () {
         unowned var operator = DesktopFileOperator.get_default ();
 
-        operator.desktop_file = new DesktopFile ();
+        string filename = "pinit-" + Uuid.string_random ();
+        string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
+                                            filename + DesktopFileOperator.DESKTOP_SUFFIX);
+
+        operator.desktop_file = new DesktopFile (path);
 
         try {
             operator.desktop_file.save_file ();

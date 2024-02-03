@@ -13,23 +13,10 @@ public class DesktopFile : GLib.Object {
 
     /**
      * The constructor.
-     */
-    public DesktopFile () {
-        string filename = "pinit-" + Uuid.string_random ();
-        string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                        filename + DesktopFileDefine.DESKTOP_SUFFIX);
-
-        debug ("DesktopFile: path=%s", path);
-
-        this.from_path (path);
-    }
-
-    /**
-     * The overloaded constructor.
      *
      * @param path The path to the desktop file.
      */
-    public DesktopFile.from_path (string path) {
+    public DesktopFile (string path) {
         Object (
             path: path
         );

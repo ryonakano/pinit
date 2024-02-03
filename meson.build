@@ -32,7 +32,6 @@ asresources = gnome.compile_resources(
 
 sources = files(
     'src' / 'Backend' / 'DesktopFile.vala',
-    'src' / 'Backend' / 'DesktopFileDefine.vala',
     'src' / 'Backend' / 'DesktopFileOperator.vala',
     'src' / 'Backend' / 'ExternalAppLauncher.vala',
     'src' / 'Views' / 'EditView.vala',

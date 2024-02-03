@@ -30,13 +30,13 @@ public class DesktopFileOperator : GLib.Object {
                 while ((file_info = enumerator.next_file ()) != null) {
                     // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
                     string name = file_info.get_name ();
-                    if (!name.has_suffix (DesktopFileDefine.DESKTOP_SUFFIX)) {
+                    if (!name.has_suffix (DESKTOP_SUFFIX)) {
                         continue;
                     }
 
                     // Add the desktop file found just now to the list
                     File relative_path = desktop_files_dir.resolve_relative_path (name);
-                    var desktop_file = new DesktopFile.from_path (relative_path.get_path ());
+                    var desktop_file = new DesktopFile(relative_path.get_path ());
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
@@ -56,6 +56,16 @@ public class DesktopFileOperator : GLib.Object {
      * Not intended to be overwritten after initialization.
      */
     private string desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
+
+    /**
+     * The prefix of the desktop file.
+     */
+    public const string DESKTOP_SUFFIX = ".desktop";
+
+    /**
+     * The mask bit to get permission info from mode_t (stat.st_mode).
+     */
+    private const Posix.mode_t PERMISSION_BIT = Posix.S_IRWXU | Posix.S_IRWXG | Posix.S_IRWXO;
 
     /**
      * The representation of the {@link desktop_files_path} in GLib.File type.
@@ -118,7 +128,7 @@ public class DesktopFileOperator : GLib.Object {
             return 1;
         }
 
-        Posix.mode_t cur_perm = sbuf.st_mode & DesktopFileDefine.PERMISSION_BIT;
+        Posix.mode_t cur_perm = sbuf.st_mode & PERMISSION_BIT;
 
         /*
          * If the current user already has exec permission to the specified file,
