@@ -114,8 +114,8 @@ public class MainWindow : Adw.ApplicationWindow {
         leaflet.show_content = false;
     }
 
-    public void show_edit_view (DesktopFile desktop_file) {
-        edit_view.load_file (desktop_file);
+    public void show_edit_view () {
+        edit_view.load_file ();
         leaflet.show_content = true;
     }
 
@@ -142,15 +142,17 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     private void on_new_activate () {
-        var file = new DesktopFile ();
+        unowned var operator = DesktopFileOperator.get_default ();
+
+        operator.desktop_file = new DesktopFile ();
 
         try {
-            file.save_file ();
+            operator.desktop_file.save_file ();
         } catch (FileError e) {
             warning (e.message);
         }
 
-        show_edit_view (file);
+        show_edit_view ();
         files_view.update_list ();
     }
 

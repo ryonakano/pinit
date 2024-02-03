@@ -198,7 +198,8 @@ public class FilesView : Adw.NavigationPage {
             list_item.add_prefix (app_icon);
             list_item.add_suffix (delete_button);
             list_item.activated.connect (() => {
-                window.show_edit_view (file);
+                DesktopFileOperator.get_default ().desktop_file = file;
+                window.show_edit_view ();
             });
 
             files_list.append (list_item);

@@ -22,7 +22,7 @@ public class EditView : Adw.NavigationPage {
 
     public MainWindow window { private get; construct; }
 
-    private unowned DesktopFile current_desktop_file;
+    private unowned DesktopFile desktop_file;
 
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
@@ -212,12 +212,12 @@ public class EditView : Adw.NavigationPage {
                 name_label.label = name_entry.text;
             }
 
-            current_desktop_file.set_string (KeyFileDesktop.KEY_NAME, name_entry.text);
+            desktop_file.set_string (KeyFileDesktop.KEY_NAME, name_entry.text);
             set_save_button_sensitivity ();
         });
 
         exec_entry.notify["text"].connect (() => {
-            current_desktop_file.set_string (KeyFileDesktop.KEY_EXEC, name_entry.text);
+            desktop_file.set_string (KeyFileDesktop.KEY_EXEC, name_entry.text);
             set_save_button_sensitivity ();
         });
 
@@ -241,7 +241,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     exec_entry.text = path;
-                    current_desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
+                    desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
                     set_save_button_sensitivity ();
                 } catch (Error e) {
                     warning ("Failed to select executable file: %s", e.message);
@@ -256,7 +256,7 @@ public class EditView : Adw.NavigationPage {
                 warning ("Failed to update icon_image: %s", e.message);
             }
 
-            current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text, false);
         });
 
         icon_chooser_button.clicked.connect (() => {
@@ -295,7 +295,7 @@ public class EditView : Adw.NavigationPage {
                     }
 
                     icon_entry.text = path;
-                    current_desktop_file.set_string (KeyFileDesktop.KEY_ICON, path, false);
+                    desktop_file.set_string (KeyFileDesktop.KEY_ICON, path, false);
                 } catch (Error e) {
                     warning ("Failed to select icon file: %s", e.message);
                 }
@@ -303,24 +303,24 @@ public class EditView : Adw.NavigationPage {
         });
 
         comment_entry.notify["text"].connect (() => {
-            current_desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text, false);
         });
 
         categories_row.toggled.connect (() => {
-            current_desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected, false);
+            desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected, false);
         });
 
         startup_wm_class_entry.notify["text"].connect (() => {
-            current_desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text, false);
+            desktop_file.set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class_entry.text, false);
         });
 
         terminal_row.notify["active"].connect (() => {
-            current_desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active, false);
+            desktop_file.set_boolean (KeyFileDesktop.KEY_TERMINAL, terminal_row.active, false);
         });
 
         open_text_editor_button.clicked.connect (() => {
             try {
-                current_desktop_file.open_external ();
+                desktop_file.open_external ();
             } catch (Error e) {
                 var error_dialog = new Adw.MessageDialog (
                     window,
@@ -345,11 +345,11 @@ public class EditView : Adw.NavigationPage {
      *
      * @param file The desktop file to load.
      */
-    public void load_file (DesktopFile file) {
-        current_desktop_file = file;
+    public void load_file () {
+        desktop_file = DesktopFileOperator.get_default ().desktop_file;
 
         try {
-            current_desktop_file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
+            desktop_file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (FileError e) {
             warning (e.message);
             return;
@@ -358,7 +358,7 @@ public class EditView : Adw.NavigationPage {
             return;
         }
 
-        string icon = current_desktop_file.get_string (KeyFileDesktop.KEY_ICON, false);
+        string icon = desktop_file.get_string (KeyFileDesktop.KEY_ICON, false);
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
@@ -366,8 +366,8 @@ public class EditView : Adw.NavigationPage {
             warning ("Failed to update icon_image: %s", e.message);
         }
 
-        string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-        string app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+        string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+        string app_name = desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
         if (app_name == "") {
             name_label.label = _("Untitled App");
         } else {
@@ -375,15 +375,15 @@ public class EditView : Adw.NavigationPage {
         }
 
         name_entry.text = app_name;
-        exec_entry.text = current_desktop_file.get_string (KeyFileDesktop.KEY_EXEC);
+        exec_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_EXEC);
         icon_entry.text = icon;
 
-        locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
-        comment_entry.text = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
+        locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, DesktopFileOperator.get_default ().preferred_language);
+        comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
 
-        categories_row.selected = current_desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
-        startup_wm_class_entry.text = current_desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
-        terminal_row.active = current_desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
+        categories_row.selected = desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
+        startup_wm_class_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
+        terminal_row.active = desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;
@@ -405,14 +405,14 @@ public class EditView : Adw.NavigationPage {
      */
     public void save_file () {
         try {
-            current_desktop_file.save_file ();
+            desktop_file.save_file ();
             DesktopFileOperator.get_default ().add_exec_permission (
-                current_desktop_file.get_string (KeyFileDesktop.KEY_EXEC)
+                desktop_file.get_string (KeyFileDesktop.KEY_EXEC)
             );
             file_updated ();
         } catch (Error e) {
-            string locale = current_desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
-            string app_name = current_desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+            string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, DesktopFileOperator.get_default ().preferred_language);
+            string app_name = desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
             string dialog_title = _("Could not save entry");
             if (app_name != "") {

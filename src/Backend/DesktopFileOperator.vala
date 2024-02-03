@@ -23,11 +23,11 @@ public class DesktopFileOperator : GLib.Object {
             _files.clear ();
 
             try {
-                var emumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
+                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
                 FileInfo file_info = null;
 
                 // Check and address the files in the desktop_files_path directory one by one
-                while ((file_info = emumerator.next_file ()) != null) {
+                while ((file_info = enumerator.next_file ()) != null) {
                     // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
                     string name = file_info.get_name ();
                     if (!name.has_suffix (DesktopFileDefine.DESKTOP_SUFFIX)) {
@@ -47,6 +47,8 @@ public class DesktopFileOperator : GLib.Object {
         }
     }
     private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
+
+    public DesktopFile desktop_file { get; set; }
 
     /**
      * The path where desktop files are saved.
@@ -72,7 +74,7 @@ public class DesktopFileOperator : GLib.Object {
      *
      * @return          The default instance of {@link DesktopFileOperator}.
      */
-    public static DesktopFileOperator get_default () {
+    public static unowned DesktopFileOperator get_default () {
         if (_instance == null) {
             _instance = new DesktopFileOperator ();
         }
@@ -98,7 +100,6 @@ public class DesktopFileOperator : GLib.Object {
                 warning (e.message);
             }
         }
-
     }
 
     /**

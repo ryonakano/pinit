@@ -16,8 +16,8 @@ public class DesktopFile : GLib.Object {
      */
     public DesktopFile () {
         string filename = "pinit-" + Uuid.string_random ();
-        string path = (Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                        filename + DesktopFileDefine.DESKTOP_SUFFIX));
+        string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
+                        filename + DesktopFileDefine.DESKTOP_SUFFIX);
 
         debug ("DesktopFile: path=%s", path);
 
@@ -242,7 +242,7 @@ public class DesktopFile : GLib.Object {
 
     public void load_file (KeyFileFlags flags) throws KeyFileError, FileError {
         try {
-            keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
+            keyfile.load_from_file (path, flags);
         } catch (FileError e) {
             throw e;
         } catch (KeyFileError e) {
