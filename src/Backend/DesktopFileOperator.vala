@@ -36,7 +36,7 @@ public class DesktopFileOperator : GLib.Object {
 
                     // Add the desktop file found just now to the list
                     File relative_path = desktop_files_dir.resolve_relative_path (name);
-                    var desktop_file = new DesktopFile(relative_path.get_path ());
+                    var desktop_file = new DesktopFile (relative_path.get_path ());
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
