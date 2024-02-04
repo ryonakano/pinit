@@ -59,7 +59,6 @@ public class DesktopFileOperator : GLib.Object {
     }
     private Gee.ArrayList<DesktopFile> _files = new Gee.ArrayList<DesktopFile> ();
 
-    public DesktopFile backup_desktop_file { get; set; }
     public DesktopFile desktop_file { get; set; }
 
     /**

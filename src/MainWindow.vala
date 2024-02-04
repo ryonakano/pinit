@@ -141,6 +141,7 @@ public class MainWindow : Adw.ApplicationWindow {
             operator.desktop_file.save_file ();
         } catch (FileError e) {
             warning (e.message);
+            return;
         }
 
         show_edit_view ();
