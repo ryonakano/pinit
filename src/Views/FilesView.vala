@@ -107,15 +107,6 @@ public class FilesView : Adw.NavigationPage {
         // Create a listbox per each entry
         for (int i = 0; i < files.size; i++) {
             var file = files.get (i);
-            try {
-                file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
-            } catch (FileError e) {
-                warning (e.message);
-                continue;
-            } catch (KeyFileError e) {
-                warning (e.message);
-                continue;
-            }
 
             var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
                 pixel_size = 48,

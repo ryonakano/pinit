@@ -99,11 +99,13 @@ public class Application : Adw.Application {
     }
 
     private void on_quit_activate () {
-        if (main_window == null) {
-            quit ();
+        if (main_window != null) {
+            main_window.prep_destroy ();
+            // Prevent quit() for now to show unsaved dialog
+            return;
         }
 
-        main_window.prep_destroy ();
+        quit ();
     }
 
     public static int main (string[] args) {

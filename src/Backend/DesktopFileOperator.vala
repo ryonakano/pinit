@@ -34,9 +34,20 @@ public class DesktopFileOperator : GLib.Object {
                         continue;
                     }
 
-                    // Add the desktop file found just now to the list
-                    File relative_path = desktop_files_dir.resolve_relative_path (name);
-                    var desktop_file = new DesktopFile (relative_path.get_path ());
+                    string path = Path.build_filename (desktop_files_path, name);
+                    var desktop_file = new DesktopFile (path);
+
+                    // Skip adding to the list if we fail to load.
+                    try {
+                        desktop_file.load_file (KeyFileFlags.KEEP_TRANSLATIONS);
+                    } catch (FileError e) {
+                        warning ("Failed to load desktop file: %s", e.message);
+                        continue;
+                    } catch (KeyFileError e) {
+                        warning ("Invalid desktop file: %s", e.message);
+                        continue;
+                    }
+
                     _files.add (desktop_file);
                 }
             } catch (Error e) {
