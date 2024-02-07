@@ -18,10 +18,10 @@ public class CategoryChooser : Adw.ExpanderRow {
     /**
      * Set/get selected categories.
      */
-    public string selected {
+    public string[] selected {
         // Reflect the selected categories in the UI to the desktop file.
         owned get {
-            string _selected = "";
+            string[] _selected = {};
 
             /*
              * Each category has a switch row.
@@ -31,7 +31,7 @@ public class CategoryChooser : Adw.ExpanderRow {
              */
             foreach (var item in row_items) {
                 if (item.row.active) {
-                    _selected += "%s;".printf (item.category);
+                    _selected += item.category;
                 }
             }
 
@@ -43,13 +43,11 @@ public class CategoryChooser : Adw.ExpanderRow {
          * and reflect them to the UI.
          */
         set {
-            string[] categories = value.split (";");
-
             foreach (var item in row_items) {
                 // Clear the current selection
                 item.row.active = false;
 
-                foreach (var category in categories) {
+                foreach (var category in value) {
                     // The category is in the desktop file
                     if (item.category == category) {
                         item.row.active = true;
@@ -100,7 +98,7 @@ public class CategoryChooser : Adw.ExpanderRow {
         // Create and append a switch row for each category
         foreach (var entry in categories.entries) {
             var item = new RowItem (entry.key, entry.value);
-            item.row.activated.connect (() => {
+            item.row.notify["active"].connect (() => {
                 toggled ();
             });
             row_items.add (item);

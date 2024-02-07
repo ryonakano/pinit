@@ -4,88 +4,281 @@
  */
 
 /**
- * A class to store data in a single desktop file.
- *
- * The properties in this class correspond the key names in a desktop file.
- * A typical example of a desktop file that this class expects looks like this:
- *
- * {{{
- * [Desktop Entry]
- * Name=SuperTux
- * Comment=A jump-and-run game starring Tux the Penguin
- * Exec=/home/ryonakano/Downloads/SuperTux-v0.6.3.glibc2.29-x86_64.AppImage
- * Icon=/home/ryonakano/Downloads/supertux2.svg
- * Categories=Video;Audio;Graphics;AudioVideo;Game;
- * StartupWMClass=supertux
- * Type=Application
- * Terminal=true
- * }}}
+ * A class to represents a single desktop file.
  */
 public class DesktopFile : GLib.Object {
     /**
-     * The filename of a desktop file.
+     * The path of the desktop file.
      */
-    public string file_name { get; construct; }
-    /**
-     * "Name" section in the desktop file.
-     */
-    public string app_name { get; construct; }
-    /**
-     * "Comment" section in the desktop file.
-     */
-    public string comment { get; construct; }
-    /**
-     * "Exec" section in the desktop file.
-     */
-    public string exec_file { get; construct; }
-    /**
-     * "Icon" section in the desktop file.
-     */
-    public string icon_file { get; construct; }
-    /**
-     * "Categories" section in the desktop file.
-     */
-    public string categories { get; construct; }
-    /**
-     * "StartupWMClass" section in the desktop file.
-     */
-    public string startup_wm_class { get; construct; }
-    /**
-     * "Terminal" section in the desktop file.
-     */
-    public bool is_cli { get; construct; }
+    public string path { get; construct; }
 
     /**
-     * Whether this is a backup file.
-     *
-     * This property doesn't appear in the desktop file; used internally in this app.
+     * Returns if the keyfile has been updated since last save.
      */
-    public bool is_backup { get; construct; }
+    public bool is_updated {
+        get {
+            return data != backup_data;
+        }
+    }
+
+    private KeyFile keyfile;
+
+    // The latest content of the keyfile.
+    private string data;
+    // The content of the keyfile when last saved/loaded.
+    private string backup_data;
 
     /**
      * The constructor.
+     *
+     * @param path The path to the desktop file.
      */
-    public DesktopFile (
-        string file_name = "",
-        string app_name = "",
-        string comment = "",
-        string exec_file = "",
-        string icon_file = "",
-        string categories = "",
-        string startup_wm_class = "",
-        bool is_cli = false,
-        bool is_backup = false
-    ) {
+    public DesktopFile (string path) {
         Object (
-            file_name: file_name,
-            app_name: app_name,
-            comment: comment,
-            exec_file: exec_file,
-            icon_file: icon_file,
-            categories: categories,
-            startup_wm_class: startup_wm_class,
-            is_cli: is_cli,
-            is_backup: is_backup
+            path: path
         );
+    }
+
+    construct {
+        keyfile = new KeyFile ();
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // Key Opearations
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    public bool get_boolean (string key, bool is_required = true) {
+        bool val = false;
+
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return val;
+        }
+
+        // Return if the key is not required and does not exist.
+        if (!is_required) {
+            if (!has_key (key)) {
+                return val;
+            }
+        }
+
+        try {
+            val = keyfile.get_boolean (KeyFileDesktop.GROUP, key);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, e.message);
+        }
+
+        return val;
+    }
+
+    public string get_string (string key, bool is_required = true) {
+        string val = "";
+
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return val;
+        }
+
+        // Return if the key is not required and does not exist.
+        if (!is_required) {
+            if (!has_key (key)) {
+                return val;
+            }
+        }
+
+        try {
+            val = keyfile.get_string (KeyFileDesktop.GROUP, key);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.get_string: key=%s: %s", key, e.message);
+        }
+
+        return val;
+    }
+
+    public bool has_key (string key) {
+        bool ret = false;
+
+        try {
+            ret = keyfile.has_key (KeyFileDesktop.GROUP, key);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.has_key: key=%s: %s", key, e.message);
+        }
+
+        return ret;
+    }
+
+    public string[] get_string_list (string key, bool is_required = true) {
+        string[] val = {};
+
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return val;
+        }
+
+        // Return if the key is not required and does not exist.
+        if (!is_required) {
+            if (!has_key (key)) {
+                return val;
+            }
+        }
+
+        try {
+            val = keyfile.get_string_list (KeyFileDesktop.GROUP, key);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, e.message);
+        }
+
+        return val;
+    }
+
+    public void set_boolean (string key, bool val) {
+        if (val) {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
+        } else {
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key (key)) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError e) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                }
+            }
+        }
+
+        data = keyfile.to_data ();
+    }
+
+    public void set_string (string key, string val) {
+        if (val != "") {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_string (KeyFileDesktop.GROUP, key, val);
+        } else {
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key (key)) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError e) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                }
+            }
+        }
+
+        data = keyfile.to_data ();
+    }
+
+    public void set_string_list (string key, string[] list) {
+        if (list.length > 0) {
+            // Update the value when the corresponding entry has some value.
+            keyfile.set_string_list (KeyFileDesktop.GROUP, key, list);
+        } else {
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key (key)) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError e) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                }
+            }
+        }
+
+        data = keyfile.to_data ();
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // Localized Key Opearations
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    public string? get_locale_for_key (string key, string? locale = null) {
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return null;
+        }
+
+        return keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
+    }
+
+    public string get_locale_string (string key, string? locale = null, bool is_required = true) {
+        string val = "";
+
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return val;
+        }
+
+        // Return if the key is not required and does not exist.
+        if (!is_required) {
+            if (!has_key (key)) {
+                return val;
+            }
+        }
+
+        try {
+            val = keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, e.message);
+        }
+
+        return val;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // File Opearations
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    public void load_file (KeyFileFlags flags) throws KeyFileError, FileError {
+        try {
+            keyfile.load_from_file (path, flags);
+        } catch (FileError e) {
+            throw e;
+        } catch (KeyFileError e) {
+            throw e;
+        }
+
+        data = keyfile.to_data ();
+        backup_data = data;
+    }
+
+    public void save_file () throws FileError {
+        try {
+            keyfile.save_to_file (path);
+        } catch (FileError e) {
+            throw e;
+        }
+
+        data = keyfile.to_data ();
+        backup_data = data;
+    }
+
+    public bool delete_file () throws Error {
+        var file = File.new_for_path (path);
+        bool ret;
+
+        try {
+            ret = file.delete ();
+        } catch (Error e) {
+            throw e;
+        }
+
+        return ret;
+    }
+
+    /**
+     * Open the specified file in an external editor.
+     *
+     * @throws Error    An error while opening.
+     */
+    public void open_external () throws Error {
+        try {
+            ExternalAppLauncher.open_default_handler (path);
+        } catch (Error e) {
+            throw e;
+        }
     }
 }

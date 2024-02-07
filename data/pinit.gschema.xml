@@ -5,10 +5,6 @@
     <value value="2" nick="force-light"/>
     <value value="4" nick="prefer-light"/>
   </enum>
-  <enum id="views">
-    <value value="0" nick="files-view"/>
-    <value value="1" nick="edit-view"/>
-  </enum>
 
   <schema path="/com/github/ryonakano/pinit/" id="com.github.ryonakano.pinit">
     <key name="color-scheme" enum="color-schemes">
@@ -30,16 +26,6 @@
       <default>false</default>
       <summary>Window maximized</summary>
       <description>The saved value for whether the window is maximized or not</description>
-    </key>
-    <key name="last-view" enum="views">
-      <default>'files-view'</default>
-      <summary>Last view</summary>
-      <description>View of last closed window</description>
-    </key>
-    <key name="last-edited-file" type="s">
-      <default>''</default>
-      <summary>Last edited file</summary>
-      <description>File path of the last edited file</description>
     </key>
   </schema>
 </schemalist>

@@ -10,4 +10,6 @@ namespace DialogResponse {
     const string CLOSE = "close";
     const string CANCEL = "cancel";
     const string OK = "ok";
+    const string DISCARD = "discard";
+    const string SAVE = "save";
 }
