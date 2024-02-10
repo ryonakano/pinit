@@ -3,33 +3,30 @@
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
 # JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
-# Milan Šalka <salka.milan@googlemail.com>, 2023.
+# Milan Šalka <salka.milan@googlemail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-28 03:00+0000\n"
-"PO-Revision-Date: 2023-10-04 11:10+0000\n"
-"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-"
-"metainfo/sk/>\n"
+"PO-Revision-Date: 2024-02-11 19:02+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
+"pinit-metainfo/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgid "Pin portable apps to the launcher"
-msgstr ""
-"Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
+msgstr "Pin prenosné aplikácie na štartér"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
