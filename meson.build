@@ -38,6 +38,7 @@ sources = files(
     'src' / 'View' / 'EditView.vala',
     'src' / 'View' / 'FilesView.vala',
     'src' / 'Widget' / 'CategoryChooser.vala',
+    'src' / 'Widget' / 'KeywordsRow.vala',
     'src' / 'Application.vala',
     'src' / 'Define.vala',
     'src' / 'MainWindow.vala'
