@@ -31,15 +31,15 @@ public class View.FilesView : Adw.NavigationPage {
 
         // Construct the settings menu
         var theme_submenu = new GLib.Menu ();
-        theme_submenu.append (_("Light"), "app.style-light");
-        theme_submenu.append (_("Dark"), "app.style-dark");
-        theme_submenu.append (_("System"), "app.style-system");
+        theme_submenu.append (_("_Light"), "app.style-light");
+        theme_submenu.append (_("_Dark"), "app.style-dark");
+        theme_submenu.append (_("S_ystem"), "app.style-system");
 
         var menu = new GLib.Menu ();
-        menu.append_submenu (_("Style"), theme_submenu);
-        menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
+        menu.append_submenu (_("_Style"), theme_submenu);
+        menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("About %s").printf (Define.APP_NAME), "win.about");
+        menu.append (_("_About %s").printf (Define.APP_NAME), "win.about");
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),
@@ -56,7 +56,7 @@ public class View.FilesView : Adw.NavigationPage {
          */
         // NoFilesPage: Shown when no desktop files available.
         var no_files_page = new Adw.StatusPage () {
-            title = _("No entries found"),
+            title = _("No Entries Found"),
             description = _("Click the + button on the top to create one."),
             icon_name = "dialog-information",
             vexpand = true,
@@ -107,9 +107,9 @@ public class View.FilesView : Adw.NavigationPage {
         string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
         string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
-        string dialog_title = _("Are you sure you want to delete entry?");
+        string dialog_title = _("Delete Entry?");
         if (app_name != "") {
-            dialog_title = _("Are you sure you want to delete entry of “%s”?").printf (app_name);
+            dialog_title = _("Delete Entry of “%s”?").printf (app_name);
         }
 
         var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
@@ -123,8 +123,8 @@ public class View.FilesView : Adw.NavigationPage {
                 dialog_title,
                 _("This removes the app from the launcher.")
             );
-            delete_dialog.add_response (Define.DialogResponse.CANCEL, _("Cancel"));
-            delete_dialog.add_response (Define.DialogResponse.OK, _("Delete"));
+            delete_dialog.add_response (Define.DialogResponse.CANCEL, _("_Cancel"));
+            delete_dialog.add_response (Define.DialogResponse.OK, _("_Delete"));
             delete_dialog.set_response_appearance (Define.DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
             delete_dialog.default_response = Define.DialogResponse.CANCEL;
             delete_dialog.close_response = Define.DialogResponse.CANCEL;
@@ -134,10 +134,10 @@ public class View.FilesView : Adw.NavigationPage {
                     if (!ret) {
                         var error_dialog = new Adw.MessageDialog (
                             window,
-                            _("Could not delete entry of “%s”").printf (app_name),
+                            _("Failed to Delete Entry of “%s”").printf (app_name),
                             _("There was an error while removing the app entry.")
                         );
-                        error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+                        error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
                         error_dialog.default_response = Define.DialogResponse.CLOSE;
                         error_dialog.close_response = Define.DialogResponse.CLOSE;
                         error_dialog.present ();

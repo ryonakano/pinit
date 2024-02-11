@@ -37,7 +37,7 @@ public class View.EditView : Adw.NavigationPage {
         /*
          * Headerbar part
          */
-        save_button = new Gtk.Button.with_label (_("Save"));
+        save_button = new Gtk.Button.with_mnemonic (_("_Save"));
         save_button.add_css_class ("suggested-action");
 
         headerbar = new Adw.HeaderBar ();
@@ -79,7 +79,7 @@ public class View.EditView : Adw.NavigationPage {
             title = _("Exec File")
         };
         var exec_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
-            tooltip_text = _("Select an executable file"),
+            tooltip_text = _("Select an executable file…"),
             valign = Gtk.Align.CENTER
         };
         exec_chooser_button.add_css_class ("flat");
@@ -98,7 +98,7 @@ public class View.EditView : Adw.NavigationPage {
             title = _("Icon File")
         };
         var icon_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
-            tooltip_text = _("Select an icon file"),
+            tooltip_text = _("Select an icon file…"),
             valign = Gtk.Align.CENTER
         };
         icon_chooser_button.add_css_class ("flat");
@@ -132,12 +132,12 @@ public class View.EditView : Adw.NavigationPage {
         };
         advanced_group.add (terminal_row);
 
-        var open_text_editor_button = new Gtk.Button.with_label (_("Open")) {
+        var open_text_editor_button = new Gtk.Button.with_mnemonic (_("_Open")) {
             valign = Gtk.Align.CENTER
         };
         var open_in_row = new Adw.ActionRow () {
-            title = _("Open in Text Editor"),
-            subtitle = _("You can also edit more options by opening in a text editor."),
+            title = _("Open with Text Editor"),
+            subtitle = _("You can also edit more options by opening with a text editor."),
             activatable_widget = open_text_editor_button
         };
         open_in_row.add_suffix (open_text_editor_button);
@@ -218,8 +218,8 @@ public class View.EditView : Adw.NavigationPage {
 
         exec_chooser_button.clicked.connect (() => {
             var filechooser = new Gtk.FileDialog () {
-                title = _("Select an executable file"),
-                accept_label = _("Select"),
+                title = _("Select Executable File"),
+                accept_label = _("_Select"),
                 modal = true
             };
             filechooser.open.begin (window, null, (obj, res) => {
@@ -275,8 +275,8 @@ public class View.EditView : Adw.NavigationPage {
             filefilter.set_filter_name (_("ICO, PNG, SVG, or XMP files"));
 
             var filechooser = new Gtk.FileDialog () {
-                title = _("Select an icon file"),
-                accept_label = _("Select"),
+                title = _("Select Icon File"),
+                accept_label = _("_Select"),
                 modal = true,
                 default_filter = filefilter
             };
@@ -338,10 +338,10 @@ public class View.EditView : Adw.NavigationPage {
             if (!ret) {
                 var error_dialog = new Adw.MessageDialog (
                     window,
-                    _("Could not open with external app"),
+                    _("Failed to Open with External App"),
                     _("There was an error while opening the file with an external app.")
                 );
-                error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
                 error_dialog.default_response = Define.DialogResponse.CLOSE;
                 error_dialog.close_response = Define.DialogResponse.CLOSE;
                 error_dialog.present ();
@@ -413,9 +413,9 @@ public class View.EditView : Adw.NavigationPage {
             string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
             string app_name = desktop_file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
-            string dialog_title = _("Could not save entry");
+            string dialog_title = _("Failed to Save Entry");
             if (app_name != "") {
-                dialog_title = _("Could not save entry of “%s”").printf (app_name);
+                dialog_title = _("Failed to Save Entry of “%s”").printf (app_name);
             }
 
             var error_dialog = new Adw.MessageDialog (
@@ -423,7 +423,7 @@ public class View.EditView : Adw.NavigationPage {
                 dialog_title,
                 _("There was an error while saving the app entry.")
             );
-            error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+            error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
             error_dialog.default_response = Define.DialogResponse.CLOSE;
             error_dialog.close_response = Define.DialogResponse.CLOSE;
             error_dialog.present ();
