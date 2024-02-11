@@ -135,6 +135,7 @@ public class MainWindow : Adw.ApplicationWindow {
                                       Define.DialogResponse.SAVE, _("_Save"));
         unsaved_dialog.set_response_appearance (Define.DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
         unsaved_dialog.set_response_appearance (Define.DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
+        unsaved_dialog.close_response = Define.DialogResponse.CANCEL;
         unsaved_dialog.response.connect ((response) => {
             if (response == Define.DialogResponse.CANCEL) {
                 return;
