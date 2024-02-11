@@ -89,7 +89,6 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.file_updated.connect (() => {
-            backup_desktop_file = desktop_file;
             overlay.add_toast (updated_toast);
         });
 
