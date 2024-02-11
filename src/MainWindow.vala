@@ -89,6 +89,7 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.file_updated.connect (() => {
+            desktop_file.copy_to (backup_desktop_file);
             overlay.add_toast (updated_toast);
         });
 
@@ -158,7 +159,8 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public void show_edit_view (Model.DesktopFile file) {
         desktop_file = file;
-        backup_desktop_file = new Model.DesktopFile.copy (file);
+        backup_desktop_file = new Model.DesktopFile (desktop_file.path);
+        desktop_file.copy_to (backup_desktop_file);
 
         edit_view.load_file (desktop_file);
         leaflet.show_content = true;

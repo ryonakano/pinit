@@ -30,16 +30,6 @@ public class Model.DesktopFile : Object {
         );
     }
 
-    /**
-     * The copy constructor.
-     *
-     * @param other Another DesktopFile.
-     */
-    public DesktopFile.copy (DesktopFile other) {
-        string data = other.to_data ();
-        load_from_data (data);
-    }
-
     construct {
         keyfile = new KeyFile ();
     }
@@ -56,6 +46,17 @@ public class Model.DesktopFile : Object {
         string other_data = other.to_data ();
 
         return this_data == other_data;
+    }
+
+    /**
+     * Copy and set data from this to another DesktopFile.
+     *
+     * @param dest Another DesktopFile to copy this data to.
+     * @return true if successfully copied, false otherwise.
+     */
+    public bool copy_to (DesktopFile dest) {
+        string data = to_data ();
+        return dest.load_from_data (data);
     }
 
     ////////////////////////////////////////////////////////////////////////////
