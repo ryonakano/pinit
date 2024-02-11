@@ -10,13 +10,13 @@
 namespace Util {
     [DBus (name = "org.freedesktop.portal.OpenURI")]
     public interface FDODesktopPortal : Object {
-        public abstract string open_file (string parent_window, UnixInputStream fd, HashTable<string, Variant> options) throws GLib.Error;
+        public abstract string open_file (string parent_window, UnixInputStream fd, HashTable<string, Variant> options) throws Error;
     }
 
     public class ExternalAppLauncher : Object {
         private static FDODesktopPortal desktop_portal;
 
-        private static FDODesktopPortal? get_desktop_portal () throws Error {
+        private static FDODesktopPortal? get_desktop_portal () {
             if (desktop_portal == null) {
                 try {
                     desktop_portal = Bus.get_proxy_sync (
@@ -24,33 +24,41 @@ namespace Util {
                         "org.freedesktop.portal.Desktop",
                         "/org/freedesktop/portal/desktop"
                         );
-                } catch (Error e) {
-                    throw e;
+                } catch (IOError e) {
+                    warning ("Failed to get bus proxy: %s", e.message);
                 }
             }
 
             return desktop_portal;
         }
 
-        public static void open_default_handler (string path) throws Error {
+        public static bool open_default_handler (string path) {
             // Gtk.show_uri_on_window does not seem to fully work in a Flatpak environment
             // so instead we directly call the freedesktop OpenURI DBus interface instead.
             int fd = Posix.open (path, Posix.O_RDONLY);
             if (fd == -1) {
-                ///TRANSLATORS: The first "%s" represents path to the file that just tried to open.
-                ///The second "%s" represents the detailed error message.
-                throw new FileError.NOENT (_("Cannot open %s: %s").printf (path, Posix.strerror (Posix.ENOENT)));
+                warning ("Failed to Posix.open. path=%s: %s", path, Posix.strerror (Posix.errno));
+                return false;
             }
 
-            try {
-                var portal = get_desktop_portal ();
-                if (portal != null) {
-                    portal.open_file ("", new UnixInputStream (fd, true), new GLib.HashTable<string, GLib.Variant> (null, null));
-                }
-            } catch (Error e) {
+            var portal = get_desktop_portal ();
+            if (portal == null) {
                 Posix.close (fd);
-                throw e;
+                return false;
             }
+
+            var stream = new UnixInputStream (fd, true);
+
+            try {
+                portal.open_file ("", stream, new HashTable<string, Variant> (null, null));
+            } catch (Error e) {
+                warning ("Failed to open_file: %s", e.message);
+                Posix.close (fd);
+                return false;
+            }
+
+            // We don't call Posix.close here since we set UnixInputStream.close_fd to true.
+            return true;
         }
     }
 }

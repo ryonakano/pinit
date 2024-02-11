@@ -297,15 +297,11 @@ public class Model.DesktopFile : Object {
     }
 
     /**
-     * Open the specified file in an external editor.
+     * Open this in an external editor.
      *
-     * @throws Error    An error while opening.
+     * @return true if successfully opened this, false otherwise.
      */
-    public void open_external () throws Error {
-        try {
-            Util.ExternalAppLauncher.open_default_handler (path);
-        } catch (Error e) {
-            throw e;
-        }
+    public bool open_external () {
+        return Util.ExternalAppLauncher.open_default_handler (path);
     }
 }
