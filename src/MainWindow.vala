@@ -89,7 +89,6 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.file_updated.connect (() => {
-            show_files_view ();
             overlay.add_toast (updated_toast);
         });
 
