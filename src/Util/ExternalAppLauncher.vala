@@ -12,7 +12,7 @@ public interface FDODesktopPortal : Object {
     public abstract string open_file (string parent_window, UnixInputStream fd, HashTable<string, Variant> options) throws GLib.Error;
 }
 
-public class ExternalAppLauncher : Object {
+public class Util.ExternalAppLauncher : Object {
     private static FDODesktopPortal desktop_portal;
 
     private static FDODesktopPortal? get_desktop_portal () throws Error {

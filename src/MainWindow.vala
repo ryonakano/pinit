@@ -13,10 +13,9 @@ public class MainWindow : Adw.ApplicationWindow {
     private EditView edit_view;
     private Adw.NavigationSplitView leaflet;
 
-    private enum Views {
-        FILES_VIEW,
-        EDIT_VIEW;
-    }
+    private DesktopFileModel model;
+    private DesktopFile desktop_file;
+    private DesktopFile backup_desktop_file;
 
     public MainWindow () {
         Object (
@@ -31,10 +30,13 @@ public class MainWindow : Adw.ApplicationWindow {
         width_request = 450;
         height_request = 400;
 
+        model = new DesktopFileModel ();
+        model.load ();
+
         /*
          * The two views are switched/holded using Leaflet
          */
-        files_view = new FilesView (this);
+        files_view = new FilesView (this, model.files_list);
         edit_view = new EditView (this);
 
         leaflet = new Adw.NavigationSplitView () {
@@ -64,22 +66,31 @@ public class MainWindow : Adw.ApplicationWindow {
 
         content = overlay;
 
-        edit_view.file_updated.connect (() => {
-            show_files_view ();
-            overlay.add_toast (updated_toast);
-        });
+        model.load_failure.connect (on_load_failure);
+        model.load_success.connect (on_load_success);
 
-        files_view.create_new.connect (() => {
+        files_view.new_activated.connect (() => {
             on_new_activate ();
         });
 
-        files_view.file_deleted.connect ((is_success) => {
+        files_view.deleted.connect ((is_success) => {
+            desktop_file = null;
+            backup_desktop_file = null;
             edit_view.hide_all ();
-            files_view.update_list ();
+            model.load ();
 
             if (is_success) {
                 overlay.add_toast (deleted_toast);
             }
+        });
+
+        files_view.selected.connect ((entry) => {
+            show_edit_view (entry);
+        });
+
+        edit_view.file_updated.connect (() => {
+            show_files_view ();
+            overlay.add_toast (updated_toast);
         });
 
         close_request.connect (() => {
@@ -88,10 +99,32 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
+    private void on_load_failure () {
+        var error_dialog = new Adw.MessageDialog (this,
+                                                  _("Failed to load entries"),
+                                                  _("There was an error while loading app entries.")
+        );
+        error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
+        error_dialog.default_response = DialogResponse.CLOSE;
+        error_dialog.close_response = DialogResponse.CLOSE;
+        error_dialog.present ();
+    }
+
+    private void on_load_success () {
+        // NOP
+    }
+
     public void prep_destroy () {
-        if (DesktopFileOperator.get_default ().desktop_file == null
-            || !DesktopFileOperator.get_default ().desktop_file.is_updated) {
+        // Never edited entries
+        if (desktop_file == null || backup_desktop_file == null) {
             destroy ();
+            return;
+        }
+
+        // No changes made
+        if (desktop_file.equals (backup_desktop_file)) {
+            destroy ();
+            return;
         }
 
         var unsaved_dialog = new Adw.MessageDialog (this, _("Save Changes?"),
@@ -119,33 +152,32 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     public void show_files_view () {
-        files_view.update_list ();
+        model.load ();
         leaflet.show_content = false;
     }
 
-    public void show_edit_view () {
-        edit_view.load_file ();
+    public void show_edit_view (DesktopFile file) {
+        desktop_file = file;
+        backup_desktop_file = new DesktopFile.copy (file);
+
+        edit_view.load_file (desktop_file);
         leaflet.show_content = true;
     }
 
     private void on_new_activate () {
-        unowned var operator = DesktopFileOperator.get_default ();
-
         string filename = "pinit-" + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                                            filename + DesktopFileOperator.DESKTOP_SUFFIX);
+                                            filename + DesktopFile.DESKTOP_SUFFIX);
 
-        operator.desktop_file = new DesktopFile (path);
+        var file = new DesktopFile (path);
 
-        try {
-            operator.desktop_file.save_file ();
-        } catch (FileError e) {
-            warning (e.message);
+        bool ret = file.save_file ();
+        if (!ret) {
             return;
         }
 
-        show_edit_view ();
-        files_view.update_list ();
+        model.load ();
+        show_edit_view (file);
     }
 
     private void on_about_activate () {

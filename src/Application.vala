@@ -15,6 +15,13 @@ public class Application : Adw.Application {
 
     public static Settings settings { get; private set; }
 
+    /**
+     * The language name that the user prefers in the system settings, e.g. "en_US", "ja_JP", etc.
+     *
+     * Used to show the KEY_NAME and KEY_COMMENT in the user's system language.
+     */
+    public static unowned string preferred_language { get; private set; }
+
     private MainWindow main_window;
 
     public Application () {
@@ -26,6 +33,10 @@ public class Application : Adw.Application {
 
     static construct {
         settings = new Settings (Constants.PROJECT_NAME);
+
+        // Get the user's system language and use it when loading desktop files
+        unowned var languages = Intl.get_language_names ();
+        preferred_language = languages[0];
     }
 
     protected override void startup () {
