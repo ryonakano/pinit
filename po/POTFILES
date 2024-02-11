@@ -1,6 +1,6 @@
 data/gtk/help-overlay.ui
-src/Backend/ExternalAppLauncher.vala
-src/CategoryChooser.vala
 src/MainWindow.vala
-src/Views/EditView.vala
-src/Views/FilesView.vala
+src/Util/ExternalAppLauncher.vala
+src/View/EditView.vala
+src/View/FilesView.vala
+src/Widget/CategoryChooser.vala

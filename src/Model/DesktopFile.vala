@@ -6,7 +6,7 @@
 /**
  * A class to represents a single desktop file.
  */
-public class DesktopFile : Object {
+public class Model.DesktopFile : Object {
     /**
      * The path of the desktop file.
      */

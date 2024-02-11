@@ -3,13 +3,13 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class EditView : Adw.NavigationPage {
+public class View.EditView : Adw.NavigationPage {
     public signal void file_updated ();
 
     public MainWindow window { private get; construct; }
 
     private bool is_loading = false;
-    private unowned DesktopFile desktop_file;
+    private unowned Model.DesktopFile desktop_file;
 
     private Gtk.Button save_button;
     private Adw.HeaderBar headerbar;
@@ -21,7 +21,7 @@ public class EditView : Adw.NavigationPage {
     private Adw.EntryRow exec_entry;
     private Adw.EntryRow icon_entry;
     private Adw.EntryRow comment_entry;
-    private CategoryChooser categories_row;
+    private Widget.CategoryChooser categories_row;
     private Adw.EntryRow startup_wm_class_entry;
     private Adw.SwitchRow terminal_row;
 
@@ -110,7 +110,7 @@ public class EditView : Adw.NavigationPage {
         };
         optional_group.add (comment_entry);
 
-        categories_row = new CategoryChooser ();
+        categories_row = new Widget.CategoryChooser ();
         optional_group.add (categories_row);
 
         /*
@@ -342,11 +342,11 @@ public class EditView : Adw.NavigationPage {
                     _("Could not open with external app"),
                     e.message
                 );
-                error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
-                error_dialog.default_response = DialogResponse.CLOSE;
-                error_dialog.close_response = DialogResponse.CLOSE;
+                error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+                error_dialog.default_response = Define.DialogResponse.CLOSE;
+                error_dialog.close_response = Define.DialogResponse.CLOSE;
                 error_dialog.response.connect ((response_id) => {
-                    if (response_id == DialogResponse.CLOSE) {
+                    if (response_id == Define.DialogResponse.CLOSE) {
                         error_dialog.destroy ();
                     }
                 });
@@ -360,7 +360,7 @@ public class EditView : Adw.NavigationPage {
      *
      * @param file The desktop file to load.
      */
-    public void load_file (DesktopFile file) {
+    public void load_file (Model.DesktopFile file) {
         // Prevent desktop_file from being updated by signal handlers, which causes the app segfault.
         is_loading = true;
         desktop_file = file;
@@ -429,9 +429,9 @@ public class EditView : Adw.NavigationPage {
                 dialog_title,
                 _("There was an error while saving the app entry.")
             );
-            error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
-            error_dialog.default_response = DialogResponse.CLOSE;
-            error_dialog.close_response = DialogResponse.CLOSE;
+            error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+            error_dialog.default_response = Define.DialogResponse.CLOSE;
+            error_dialog.close_response = Define.DialogResponse.CLOSE;
             error_dialog.present ();
             return;
         }

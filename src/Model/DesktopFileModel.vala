@@ -10,7 +10,7 @@
 /**
  * The class to load desktop files and stores in the form of {@link DesktopFile} class.
  */
-public class DesktopFileModel : Object {
+public class Model.DesktopFileModel : Object {
     /**
      * Notifies loading desktop files succeeded.
      */

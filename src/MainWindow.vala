@@ -9,18 +9,18 @@ public class MainWindow : Adw.ApplicationWindow {
         { "new", on_new_activate },
     };
 
-    private FilesView files_view;
-    private EditView edit_view;
+    private View.FilesView files_view;
+    private View.EditView edit_view;
     private Adw.NavigationSplitView leaflet;
 
-    private DesktopFileModel model;
-    private DesktopFile desktop_file;
-    private DesktopFile backup_desktop_file;
+    private Model.DesktopFileModel model;
+    private Model.DesktopFile desktop_file;
+    private Model.DesktopFile backup_desktop_file;
 
     public MainWindow () {
         Object (
             // On Pantheon, the app name "Pin It!" is shown in Multitasking View by setting this
-            title: Constants.APP_NAME
+            title: Define.APP_NAME
         );
     }
 
@@ -30,14 +30,14 @@ public class MainWindow : Adw.ApplicationWindow {
         width_request = 450;
         height_request = 400;
 
-        model = new DesktopFileModel ();
+        model = new Model.DesktopFileModel ();
         model.load ();
 
         /*
          * The two views are switched/holded using Leaflet
          */
-        files_view = new FilesView (this, model.files_list);
-        edit_view = new EditView (this);
+        files_view = new View.FilesView (this, model.files_list);
+        edit_view = new View.EditView (this);
 
         leaflet = new Adw.NavigationSplitView () {
             sidebar = files_view,
@@ -104,9 +104,9 @@ public class MainWindow : Adw.ApplicationWindow {
                                                   _("Failed to load entries"),
                                                   _("There was an error while loading app entries.")
         );
-        error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
-        error_dialog.default_response = DialogResponse.CLOSE;
-        error_dialog.close_response = DialogResponse.CLOSE;
+        error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+        error_dialog.default_response = Define.DialogResponse.CLOSE;
+        error_dialog.close_response = Define.DialogResponse.CLOSE;
         error_dialog.present ();
     }
 
@@ -130,17 +130,17 @@ public class MainWindow : Adw.ApplicationWindow {
         var unsaved_dialog = new Adw.MessageDialog (this, _("Save Changes?"),
                                                     _("Open entries contain unsaved changes. Changes which are not saved will be permanently lost."));
         unsaved_dialog.add_css_class ("save-changes");
-        unsaved_dialog.add_responses (DialogResponse.CANCEL, _("_Cancel"),
-                                      DialogResponse.DISCARD, _("_Discard"),
-                                      DialogResponse.SAVE, _("_Save"));
-        unsaved_dialog.set_response_appearance (DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
-        unsaved_dialog.set_response_appearance (DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
+        unsaved_dialog.add_responses (Define.DialogResponse.CANCEL, _("_Cancel"),
+                                      Define.DialogResponse.DISCARD, _("_Discard"),
+                                      Define.DialogResponse.SAVE, _("_Save"));
+        unsaved_dialog.set_response_appearance (Define.DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
+        unsaved_dialog.set_response_appearance (Define.DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
         unsaved_dialog.response.connect ((response) => {
-            if (response == DialogResponse.CANCEL) {
+            if (response == Define.DialogResponse.CANCEL) {
                 return;
             }
 
-            if (response == DialogResponse.SAVE) {
+            if (response == Define.DialogResponse.SAVE) {
                 edit_view.save_file ();
             }
 
@@ -156,9 +156,9 @@ public class MainWindow : Adw.ApplicationWindow {
         leaflet.show_content = false;
     }
 
-    public void show_edit_view (DesktopFile file) {
+    public void show_edit_view (Model.DesktopFile file) {
         desktop_file = file;
-        backup_desktop_file = new DesktopFile.copy (file);
+        backup_desktop_file = new Model.DesktopFile.copy (file);
 
         edit_view.load_file (desktop_file);
         leaflet.show_content = true;
@@ -167,9 +167,9 @@ public class MainWindow : Adw.ApplicationWindow {
     private void on_new_activate () {
         string filename = "pinit-" + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                                            filename + DesktopFile.DESKTOP_SUFFIX);
+                                            filename + Model.DesktopFile.DESKTOP_SUFFIX);
 
-        var file = new DesktopFile (path);
+        var file = new Model.DesktopFile (path);
 
         bool ret = file.save_file ();
         if (!ret) {
@@ -193,7 +193,7 @@ public class MainWindow : Adw.ApplicationWindow {
             transient_for = this,
             modal = true,
             application_icon = Constants.PROJECT_NAME,
-            application_name = Constants.APP_NAME,
+            application_name = Define.APP_NAME,
             version = Constants.PROJECT_VERSION,
             comments = _("Pin portable apps to the launcher"),
             website = "https://github.com/ryonakano/pinit",

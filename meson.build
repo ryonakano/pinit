@@ -35,11 +35,11 @@ sources = files(
     'src' / 'Model' / 'DesktopFileModel.vala',
     'src' / 'Util' / 'DesktopFileUtil.vala',
     'src' / 'Util' / 'ExternalAppLauncher.vala',
-    'src' / 'Views' / 'EditView.vala',
-    'src' / 'Views' / 'FilesView.vala',
+    'src' / 'View' / 'EditView.vala',
+    'src' / 'View' / 'FilesView.vala',
+    'src' / 'Widget' / 'CategoryChooser.vala',
     'src' / 'Application.vala',
-    'src' / 'CategoryChooser.vala',
-    'src' / 'DialogResponse.vala',
+    'src' / 'Define.vala',
     'src' / 'MainWindow.vala'
 )
 
