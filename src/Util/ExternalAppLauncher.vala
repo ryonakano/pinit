@@ -48,6 +48,7 @@ namespace Util {
                     portal.open_file ("", new UnixInputStream (fd, true), new GLib.HashTable<string, GLib.Variant> (null, null));
                 }
             } catch (Error e) {
+                Posix.close (fd);
                 throw e;
             }
         }
