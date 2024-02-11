@@ -8,21 +8,26 @@
  */
 
 /**
- * The class to load desktop files and stores in the form of DesktopFile class.
+ * The class to load desktop files and stores in the form of {@link DesktopFile} class.
  */
-public class DesktopFileModel : GLib.Object {
+public class DesktopFileModel : Object {
+    /**
+     * Notifies loading desktop files succeeded.
+     */
     public signal void load_success ();
+
+    /**
+     * Notifies loading desktop files failed.
+     */
     public signal void load_failure ();
 
-    public GLib.ListStore files_list { get; private set; }
-
     /**
-     * The prefix of the desktop file.
+     * List of {@link DesktopFile}.
      */
-    public const string DESKTOP_SUFFIX = ".desktop";
+    public ListStore files_list { get; private set; }
 
     /**
-     * The representation of the {@link desktop_files_path} in GLib.File type.
+     * The representation of the {@link desktop_files_path} in the File type.
      */
     private File desktop_files_dir;
 
@@ -30,7 +35,7 @@ public class DesktopFileModel : GLib.Object {
     }
 
     construct {
-        files_list = new GLib.ListStore (typeof (DesktopFile));
+        files_list = new ListStore (typeof (DesktopFile));
 
         string desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
         desktop_files_dir = File.new_for_path (desktop_files_path);
@@ -45,7 +50,17 @@ public class DesktopFileModel : GLib.Object {
         }
     }
 
-    public bool load () {
+    /**
+     * Search for desktop files and stores in the {@link DesktopFile} data type.
+     *
+     * Search ~/.local/share/applications for files with .desktop suffix. Create a new
+     * {@link DesktopFile} if a matching file found and is valid. Repeat this for all files in the directory
+     * and then return the list of {@link DesktopFile}.
+     *
+     * Emits {@link DesktopFileModel.load_success} if loaded successfully, {@link DesktopFileModel.load_failure}
+     * otherwise.
+     */
+    public void load () {
         files_list.remove_all ();
 
         try {
@@ -56,7 +71,7 @@ public class DesktopFileModel : GLib.Object {
             while ((file_info = enumerator.next_file ()) != null) {
                 // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
                 string name = file_info.get_name ();
-                if (!name.has_suffix (DESKTOP_SUFFIX)) {
+                if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
                     continue;
                 }
 
@@ -75,10 +90,9 @@ public class DesktopFileModel : GLib.Object {
         } catch (Error e) {
             warning (e.message);
             load_failure ();
-            return false;
+            return;
         }
 
         load_success ();
-        return true;
     }
 }

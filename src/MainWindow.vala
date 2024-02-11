@@ -167,7 +167,7 @@ public class MainWindow : Adw.ApplicationWindow {
     private void on_new_activate () {
         string filename = "pinit-" + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                                            filename + DesktopFileModel.DESKTOP_SUFFIX);
+                                            filename + DesktopFile.DESKTOP_SUFFIX);
 
         var file = new DesktopFile (path);
 

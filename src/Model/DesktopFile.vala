@@ -6,11 +6,16 @@
 /**
  * A class to represents a single desktop file.
  */
-public class DesktopFile : GLib.Object {
+public class DesktopFile : Object {
     /**
      * The path of the desktop file.
      */
     public string path { get; construct; }
+
+    /**
+     * The prefix of the desktop file.
+     */
+    public const string DESKTOP_SUFFIX = ".desktop";
 
     private KeyFile keyfile;
 

@@ -140,11 +140,6 @@ public class FilesView : Adw.NavigationPage {
                         error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
                         error_dialog.default_response = DialogResponse.CLOSE;
                         error_dialog.close_response = DialogResponse.CLOSE;
-                        error_dialog.response.connect ((response_id) => {
-                            if (response_id == DialogResponse.CLOSE) {
-                                error_dialog.destroy ();
-                            }
-                        });
                         error_dialog.present ();
                     }
 
