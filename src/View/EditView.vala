@@ -23,6 +23,7 @@ public class View.EditView : Adw.NavigationPage {
     private Adw.EntryRow generic_name_entry;
     private Adw.EntryRow comment_entry;
     private Widget.CategoriesRow categories_row;
+    private Widget.KeywordsRow keywords_row;
     private Adw.EntryRow startup_wm_class_entry;
     private Adw.SwitchRow terminal_row;
 
@@ -118,6 +119,9 @@ public class View.EditView : Adw.NavigationPage {
 
         categories_row = new Widget.CategoriesRow ();
         optional_group.add (categories_row);
+
+        keywords_row = new Widget.KeywordsRow ();
+        optional_group.add (keywords_row);
 
         /*
          * Content part - Advanced Entries
@@ -331,6 +335,14 @@ public class View.EditView : Adw.NavigationPage {
             desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected);
         });
 
+        keywords_row.keywords_changed.connect (() => {
+            if (is_loading) {
+                return;
+            }
+
+            desktop_file.set_string_list (Define.KEY_KEYWORDS, keywords_row.keywords);
+        });
+
         startup_wm_class_entry.notify["text"].connect (() => {
             if (is_loading) {
                 return;
@@ -400,6 +412,7 @@ public class View.EditView : Adw.NavigationPage {
         comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
 
         categories_row.selected = desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
+        keywords_row.keywords = desktop_file.get_string_list (Define.KEY_KEYWORDS, false);
         startup_wm_class_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
         terminal_row.active = desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
 
