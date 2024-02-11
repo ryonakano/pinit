@@ -20,6 +20,7 @@ public class View.EditView : Adw.NavigationPage {
     private Adw.EntryRow name_entry;
     private Adw.EntryRow exec_entry;
     private Adw.EntryRow icon_entry;
+    private Adw.EntryRow generic_name_entry;
     private Adw.EntryRow comment_entry;
     private Widget.CategoryChooser categories_row;
     private Adw.EntryRow startup_wm_class_entry;
@@ -104,6 +105,11 @@ public class View.EditView : Adw.NavigationPage {
         icon_chooser_button.add_css_class ("flat");
         icon_entry.add_suffix (icon_chooser_button);
         optional_group.add (icon_entry);
+
+        generic_name_entry = new Adw.EntryRow () {
+            title = _("Generic Name")
+        };
+        optional_group.add (generic_name_entry);
 
         comment_entry = new Adw.EntryRow () {
             title = _("Comment")
@@ -301,6 +307,14 @@ public class View.EditView : Adw.NavigationPage {
             });
         });
 
+        generic_name_entry.notify["text"].connect (() => {
+            if (is_loading) {
+                return;
+            }
+
+            desktop_file.set_string (KeyFileDesktop.KEY_GENERIC_NAME, generic_name_entry.text);
+        });
+
         comment_entry.notify["text"].connect (() => {
             if (is_loading) {
                 return;
@@ -378,6 +392,9 @@ public class View.EditView : Adw.NavigationPage {
         name_entry.text = app_name;
         exec_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_EXEC);
         icon_entry.text = icon;
+
+        locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
+        generic_name_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_GENERIC_NAME, locale, false);
 
         locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
         comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
