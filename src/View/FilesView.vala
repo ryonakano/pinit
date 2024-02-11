@@ -41,15 +41,16 @@ public class View.FilesView : Adw.NavigationPage {
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
         menu.append (_("_About %s").printf (Define.APP_NAME), "win.about");
 
-        var preferences_button = new Gtk.MenuButton () {
-            tooltip_text = _("Preferences"),
-            icon_name = "open-menu",
-            menu_model = menu
+        var menu_button = new Gtk.MenuButton () {
+            tooltip_text = _("Main Menu"),
+            icon_name = "open-menu-symbolic",
+            menu_model = menu,
+            primary = true
         };
 
         headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (create_button);
-        headerbar.pack_end (preferences_button);
+        headerbar.pack_end (menu_button);
 
         /*
          * Content part
