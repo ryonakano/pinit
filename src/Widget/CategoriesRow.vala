@@ -9,7 +9,7 @@
  * There are {@link Adw.SwitchRow} for each category and {@link Adw.SwitchRow.active} represents
  * whether the corresponding category is listed in the desktop file.
  */
-public class Widget.CategoryChooser : Adw.ExpanderRow {
+public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
      * A signal emitted when selected categories are changed.
      */
@@ -70,7 +70,7 @@ public class Widget.CategoryChooser : Adw.ExpanderRow {
      */
     private Gee.HashMap<string, string> categories;
 
-    public CategoryChooser () {
+    public CategoriesRow () {
     }
 
     construct {

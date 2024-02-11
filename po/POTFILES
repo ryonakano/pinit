@@ -2,4 +2,4 @@ data/gtk/help-overlay.ui
 src/MainWindow.vala
 src/View/EditView.vala
 src/View/FilesView.vala
-src/Widget/CategoryChooser.vala
+src/Widget/CategoriesRow.vala
