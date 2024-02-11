@@ -56,11 +56,11 @@ public class MainWindow : Adw.ApplicationWindow {
             child = leaflet
         };
 
-        var updated_toast = new Adw.Toast (_("Updated entry.")) {
+        var updated_toast = new Adw.Toast (_("Entry updated.")) {
             timeout = 5
         };
 
-        var deleted_toast = new Adw.Toast (_("Deleted entry.")) {
+        var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
             timeout = 5
         };
 
@@ -100,10 +100,10 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private void on_load_failure () {
         var error_dialog = new Adw.MessageDialog (this,
-                                                  _("Failed to load entries"),
+                                                  _("Failed to Load Entries"),
                                                   _("There was an error while loading app entries.")
         );
-        error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+        error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
         error_dialog.default_response = Define.DialogResponse.CLOSE;
         error_dialog.close_response = Define.DialogResponse.CLOSE;
         error_dialog.present ();
