@@ -12,21 +12,7 @@ public class DesktopFile : GLib.Object {
      */
     public string path { get; construct; }
 
-    /**
-     * Returns if the keyfile has been updated since last save.
-     */
-    public bool is_updated {
-        get {
-            return data != backup_data;
-        }
-    }
-
     private KeyFile keyfile;
-
-    // The latest content of the keyfile.
-    private string data;
-    // The content of the keyfile when last saved/loaded.
-    private string backup_data;
 
     /**
      * The constructor.
@@ -39,8 +25,32 @@ public class DesktopFile : GLib.Object {
         );
     }
 
+    /**
+     * The copy constructor.
+     *
+     * @param other Another DesktopFile.
+     */
+    public DesktopFile.copy (DesktopFile other) {
+        string data = other.to_data ();
+        load_from_data (data);
+    }
+
     construct {
         keyfile = new KeyFile ();
+    }
+
+    /**
+     * Returns true if this and other contains the same values.
+     *
+     * @param other Another DesktopFile.
+     * @return true if this and other contains the same values.
+     */
+    public bool equals (DesktopFile other) {
+        // Compare other than the path
+        string this_data = this.to_data ();
+        string other_data = other.to_data ();
+
+        return this_data == other_data;
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -147,8 +157,6 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
-
-        data = keyfile.to_data ();
     }
 
     public void set_string (string key, string val) {
@@ -165,8 +173,6 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
-
-        data = keyfile.to_data ();
     }
 
     public void set_string_list (string key, string[] list) {
@@ -183,8 +189,22 @@ public class DesktopFile : GLib.Object {
                 }
             }
         }
+    }
 
-        data = keyfile.to_data ();
+    public string to_data () {
+        return keyfile.to_data ();
+    }
+
+    public bool load_from_data (string data) {
+        bool ret = false;
+
+        try {
+            ret = keyfile.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
+        } catch (KeyFileError e) {
+            warning ("Failed to KeyFile.load_from_data: %s", e.message);
+        }
+
+        return ret;
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -232,38 +252,40 @@ public class DesktopFile : GLib.Object {
     //
     ////////////////////////////////////////////////////////////////////////////
 
-    public void load_file (KeyFileFlags flags) throws KeyFileError, FileError {
+    public bool load_file () {
+        bool ret = false;
+
         try {
-            keyfile.load_from_file (path, flags);
+            ret = keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (FileError e) {
-            throw e;
+            warning ("Failed to load from file. path=%s: %s", path, e.message);
         } catch (KeyFileError e) {
-            throw e;
+            warning ("Invalid keyfile. path=%s: %s", path, e.message);
         }
 
-        data = keyfile.to_data ();
-        backup_data = data;
+        return ret;
     }
 
-    public void save_file () throws FileError {
+    public bool save_file () {
+        bool ret = false;
+
         try {
-            keyfile.save_to_file (path);
+            ret = keyfile.save_to_file (path);
         } catch (FileError e) {
-            throw e;
+            warning ("Failed to save file. path=%s: %s", path, e.message);
         }
 
-        data = keyfile.to_data ();
-        backup_data = data;
+        return ret;
     }
 
-    public bool delete_file () throws Error {
+    public bool delete_file () {
         var file = File.new_for_path (path);
-        bool ret;
+        bool ret = false;
 
         try {
             ret = file.delete ();
         } catch (Error e) {
-            throw e;
+            warning ("Failed to delete file. path=%s: %s", path, e.message);
         }
 
         return ret;
@@ -276,7 +298,7 @@ public class DesktopFile : GLib.Object {
      */
     public void open_external () throws Error {
         try {
-            ExternalAppLauncher.open_default_handler (path);
+            Util.ExternalAppLauncher.open_default_handler (path);
         } catch (Error e) {
             throw e;
         }
