@@ -3,10 +3,10 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class FilesView : Adw.NavigationPage {
+public class View.FilesView : Adw.NavigationPage {
     public signal void new_activated ();
     public signal void deleted (bool is_success);
-    public signal void selected (DesktopFile file);
+    public signal void selected (Model.DesktopFile file);
 
     public MainWindow window { private get; construct; }
     public ListStore list { get; construct; }
@@ -39,7 +39,7 @@ public class FilesView : Adw.NavigationPage {
         menu.append_submenu (_("Style"), theme_submenu);
         menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("About %s").printf (Constants.APP_NAME), "win.about");
+        menu.append (_("About %s").printf (Define.APP_NAME), "win.about");
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),
@@ -81,7 +81,7 @@ public class FilesView : Adw.NavigationPage {
         toolbar_view.add_top_bar (headerbar);
         toolbar_view.set_content (files_list_page);
 
-        title = Constants.APP_NAME;
+        title = Define.APP_NAME;
         child = toolbar_view;
 
         create_button.clicked.connect (() => {
@@ -90,7 +90,7 @@ public class FilesView : Adw.NavigationPage {
     }
 
     private Gtk.Widget files_row_func (Object item) {
-        var file = item as DesktopFile;
+        var file = item as Model.DesktopFile;
         assert (file != null);
 
         var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
@@ -123,13 +123,13 @@ public class FilesView : Adw.NavigationPage {
                 dialog_title,
                 _("This removes the app from the launcher.")
             );
-            delete_dialog.add_response (DialogResponse.CANCEL, _("Cancel"));
-            delete_dialog.add_response (DialogResponse.OK, _("Delete"));
-            delete_dialog.set_response_appearance (DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
-            delete_dialog.default_response = DialogResponse.CANCEL;
-            delete_dialog.close_response = DialogResponse.CANCEL;
+            delete_dialog.add_response (Define.DialogResponse.CANCEL, _("Cancel"));
+            delete_dialog.add_response (Define.DialogResponse.OK, _("Delete"));
+            delete_dialog.set_response_appearance (Define.DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
+            delete_dialog.default_response = Define.DialogResponse.CANCEL;
+            delete_dialog.close_response = Define.DialogResponse.CANCEL;
             delete_dialog.response.connect ((response_id) => {
-                if (response_id == DialogResponse.OK) {
+                if (response_id == Define.DialogResponse.OK) {
                     bool ret = file.delete_file ();
                     if (!ret) {
                         var error_dialog = new Adw.MessageDialog (
@@ -137,9 +137,9 @@ public class FilesView : Adw.NavigationPage {
                             _("Could not delete entry of “%s”").printf (app_name),
                             _("There was an error while removing the app entry.")
                         );
-                        error_dialog.add_response (DialogResponse.CLOSE, _("Close"));
-                        error_dialog.default_response = DialogResponse.CLOSE;
-                        error_dialog.close_response = DialogResponse.CLOSE;
+                        error_dialog.add_response (Define.DialogResponse.CLOSE, _("Close"));
+                        error_dialog.default_response = Define.DialogResponse.CLOSE;
+                        error_dialog.close_response = Define.DialogResponse.CLOSE;
                         error_dialog.present ();
                     }
 

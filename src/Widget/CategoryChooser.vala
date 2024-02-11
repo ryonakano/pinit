@@ -9,7 +9,7 @@
  * There are {@link Adw.SwitchRow} for each category and {@link Adw.SwitchRow.active} represents
  * whether the corresponding category is listed in the desktop file.
  */
-public class CategoryChooser : Adw.ExpanderRow {
+public class Widget.CategoryChooser : Adw.ExpanderRow {
     /**
      * A signal emitted when selected categories are changed.
      */
