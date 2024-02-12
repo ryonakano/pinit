@@ -6,13 +6,13 @@ Here is the guideline for contribution.
 
 ## Table of Contents
 
-- [Submit Bug Reports or Feature Requests](submit-bug-reports-or-feature-requests)
-- [Translate the Project](translate-the-project)
-- [Propose Code Changes](propose-code-changes)
-    - [Coding Style](coding-style)
-    - [Documentation](documentation)
-- [Manage the Project](manage-the-project)
-    - [Release Flow](release-flow)
+- [Submit Bug Reports or Feature Requests](#submit-bug-reports-or-feature-requests)
+- [Translate the Project](#translate-the-project)
+- [Propose Code Changes](#propose-code-changes)
+    - [Coding Style](#coding-style)
+    - [Documentation](#documentation)
+- [Manage the Project](#manage-the-project)
+    - [Release Flow](#release-flow)
 
 ## Submit Bug Reports or Feature Requests
 
