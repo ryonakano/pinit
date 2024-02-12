@@ -59,7 +59,7 @@ or the interface of methods.
 
 Setting the build option `doc` to `true` will generate HTML documentations from the code.
 
-Assuming that you've already built the project through the way described in the [README](README.md):
+Assuming that you've already built the project through the way described in the [README](README.md#for-developers):
 
 ```bash
 cd builddir
