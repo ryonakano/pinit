@@ -2,8 +2,6 @@
 
 Thank you for getting interested in contribution to this project! We really appreciate it. 😊
 
-Here is the guideline for contribution.
-
 ## Table of Contents
 
 - [Submit Bug Reports or Feature Requests](#submit-bug-reports-or-feature-requests)
@@ -31,9 +29,17 @@ We accept translations through Weblate:
 
 Alternatively, you can fork this repository, edit the `*.po` files directly, and submit changes through pull requests.
 
+> [!NOTE]
+> Strings in the translation files are updated automatically if they're changed in the source code.
+>
+> Things to happen when strings are changed in the source code:
+>
+> - GitHub Actions ([gettext-flatpak](https://github.com/elementary/actions/tree/main/gettext-flatpak)) updates the `*.pot` file and commits it to the repository
+> - Weblate Addon ([Update PO files to match POT (msgmerge)](https://docs.weblate.org/en/latest/admin/addons.html#addon-weblate-gettext-msgmerge)) detects the modification of `*.pot` file, updates `*.po` files accordingly, and commits them to the repository
+
 ## Propose Code Changes
 
-We accepts changes to the source code through pull requests―even a small typo fix is welcome.
+We accept changes to the source code through pull requests―even a small typo fix is welcome.
 
 > [!TIP]
 > Again, [the guideline by elementary](https://docs.elementary.io/contributor-guide/development/prepare-code-for-review) would be helpful here too.
@@ -53,13 +59,13 @@ or the interface of methods.
 
 Setting the build option `doc` to `true` will generate HTML documentations from the code.
 
-Assuming that you're already build the project through the way described in the README:
+Assuming that you've already built the project through the way described in the [README](README.md):
 
 ```bash
 cd builddir
 meson configure -Ddoc=true
 ninja
-xdg-open builddir/doc/index.html
+xdg-open doc/index.html
 ```
 
 #### Editing Documentation Comments
@@ -82,31 +88,34 @@ You should clarify the behavior, parameters, and the return value in case of met
 public bool equals (DesktopFile other) {
 ```
 
-Refer to [Valadoc](https://valadoc.org/markup.htm) for markups.
+Refer to [Valadoc](https://valadoc.org/markup.htm) for available markups.
 
 ## Manage the Project
 
 ### Release Flow
 - Decide the version number of the release
     - Versioning should follow [Semantic Versioning](https://semver.org/)
-- Create a new branch named `release-X.Y.Z` from the latest `origin/main` (`X.Y.Z` is the version number)
-- See changes since the previous release: `git diff $(git describe --tags --abbrev=0)..release-X.Y.Z`
-- Perform changes
-    - Write a release note in `data/pinit.metainfo.xml.in`
-        - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
-        - Credits contributors with their GitHub username
-        - Translation contributors are excluded. Just writing `Update translations` is fine
-    - Bump `version` in `meson.build`
-    - Update screenshots if there are visual changes between releases
-- Create a pull request with the above changes
-- After merging it, [create a new release on GitHub](https://github.com/ryonakano/pinit/releases/new)
-    - Create a new tag named `X.Y.Z`
-    - Release title: `<Project Name> X.Y.Z Released`
-    - It's fine to reuse the release note in the metainfo as the release description. Just convert XML to Markdown
-- After publishing the release on GitHub, submit changes to [the Flathub repository](https://github.com/flathub/com.github.ryonakano.pinit)
+- Work on [the project repository](https://github.com/ryonakano/pinit)
+    - Create a new branch named `release-X.Y.Z` from the latest `origin/main` (`X.Y.Z` means the version number)
+    - See changes since the previous release: `git diff $(git describe --tags --abbrev=0)..release-X.Y.Z`
+    - Perform changes
+        - Write a release note in `data/pinit.metainfo.xml.in`
+            - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
+            - Credits contributors with their GitHub username
+                - Translation contributors are excluded because some don't have a GitHub account. Just writing `Update translations` is fine
+        - Bump `version` in `meson.build`
+        - Update screenshots if there are visual changes between releases
+    - Create a pull request with the above changes
+    - After merging it, [create a new release on GitHub](https://github.com/ryonakano/pinit/releases/new)
+        - Create a new tag named `X.Y.Z`
+        - Release title: `<Project Name> X.Y.Z Released`
+        - It's fine to reuse the release note in the metainfo file as the release description. Just convert XML to Markdown
+        - Publish it when completed
+- Work on [the Flathub repository](https://github.com/flathub/com.github.ryonakano.pinit)
     - Create a new branch named `release-X.Y.Z`
-    - Change `url` and `sha256` in the manifest file
-        - These two parameters point to the tar.gz of the release assets just we published on GitHub
-- Create a new pull request with the above changes
-- Merge the pull request once the build succeeded.
-- The new release will be available on Flathub after some time
+    - Perform changes
+        - Change `url` and `sha256` in the manifest file
+            - These two parameters should point to the tar.gz of the release assets just we published on the project repository
+    - Create a pull request with the above changes
+    - Merge it once the build succeeded
+    - The new release should be available on Flathub after some time
