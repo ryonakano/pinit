@@ -11,7 +11,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     private View.FilesView files_view;
     private View.EditView edit_view;
-    private Adw.NavigationSplitView leaflet;
+    private Adw.NavigationSplitView split_view;
 
     private Model.DesktopFileModel model;
     private Model.DesktopFile desktop_file;
@@ -33,13 +33,10 @@ public class MainWindow : Adw.ApplicationWindow {
         model = new Model.DesktopFileModel ();
         model.load ();
 
-        /*
-         * The two views are switched/holded using Leaflet
-         */
         files_view = new View.FilesView (this, model.files_list);
         edit_view = new View.EditView (this);
 
-        leaflet = new Adw.NavigationSplitView () {
+        split_view = new Adw.NavigationSplitView () {
             sidebar = files_view,
             content = edit_view
         };
@@ -49,11 +46,11 @@ public class MainWindow : Adw.ApplicationWindow {
         );
         var val = Value (typeof (bool));
         val.set_boolean (true);
-        breakpoint.add_setter (leaflet, "collapsed", val);
+        breakpoint.add_setter (split_view, "collapsed", val);
         add_breakpoint (breakpoint);
 
         var overlay = new Adw.ToastOverlay () {
-            child = leaflet
+            child = split_view
         };
 
         var updated_toast = new Adw.Toast (_("Entry updated.")) {
@@ -100,6 +97,11 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
+    /**
+     * The callback when loading the list of desktop files failed.
+     *
+     * Tell the user the failure through the dialog.
+     */
     private void on_load_failure () {
         var error_dialog = new Adw.MessageDialog (this,
                                                   _("Failed to Load Entries"),
@@ -111,10 +113,19 @@ public class MainWindow : Adw.ApplicationWindow {
         error_dialog.present ();
     }
 
+    /**
+     * The callback when loading the list of desktop files succeeded.
+     */
     private void on_load_success () {
         // NOP
     }
 
+    /**
+     * Preprocess before destruction of this.
+     *
+     * Just destroy this if we never edited entries or no changes made for desktop files.
+     * Otherwise, tell the user unsaved work through dialog.
+     */
     public void prep_destroy () {
         // Never edited entries
         if (desktop_file == null || backup_desktop_file == null) {
@@ -153,20 +164,33 @@ public class MainWindow : Adw.ApplicationWindow {
         unsaved_dialog.present ();
     }
 
+    /**
+     * Reload and show the file list.
+     */
     public void show_files_view () {
         model.load ();
-        leaflet.show_content = false;
+        split_view.show_content = false;
     }
 
+    /**
+     * Start editing the given DesktopFile
+     *
+     * @param file The DesktopFile to edit.
+     */
     public void show_edit_view (Model.DesktopFile file) {
         desktop_file = file;
         backup_desktop_file = new Model.DesktopFile (desktop_file.path);
         desktop_file.copy_to (backup_desktop_file);
 
         edit_view.load_file (desktop_file);
-        leaflet.show_content = true;
+        split_view.show_content = true;
     }
 
+    /**
+     * The callback for new file.
+     *
+     * Create a new DesktopFile with random filename and start editing it.
+     */
     private void on_new_activate () {
         string filename = "pinit-" + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
@@ -183,11 +207,16 @@ public class MainWindow : Adw.ApplicationWindow {
         show_edit_view (file);
     }
 
+    /**
+     * The callback for about window.
+     */
     private void on_about_activate () {
+        // List code contributors
         const string[] DEVELOPERS = {
             "Ryo Nakano https://github.com/ryonakano",
             "Jeyson Flores https://github.com/JeysonFlores",
         };
+        // List icon authors
         const string[] ARTISTS = {
             "hanaral https://github.com/hanaral",
         };
