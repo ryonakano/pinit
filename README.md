@@ -27,9 +27,10 @@ This does not mean the app no longer available on elementary OS. You can simply 
 ### For Developers
 You'll need the following dependencies to build:
 
-* libgee-0.8-dev
-* libgtk-4-dev (>= 4.10)
 * libadwaita-1-dev (>= 1.4.0)
+* libgee-0.8-dev
+* libglib2.0-dev
+* libgtk-4-dev (>= 4.10)
 * meson (>= 0.57.0)
 * valac
 

@@ -52,6 +52,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('gio-unix-2.0'),
+        dependency('glib-2.0'),
         dependency('gtk4', version: '>= 4.10'),
         dependency('libadwaita-1', version: '>= 1.4.0'),
         dependency('pango'),
@@ -62,6 +63,10 @@ executable(
 
 subdir('data')
 subdir('po')
+
+if get_option('doc')
+    subdir('doc')
+endif
 
 gnome.post_install(
     glib_compile_schemas: true,

@@ -19,7 +19,7 @@ namespace Define {
      * error. This constant does not seem to be defined in the original glib and defined in the following patch.
      * (and maybe valac uses glibc with this patch and thus it does not complain any error.)
      *
-     * https://sources.debian.org/patches/glib2.0/2.78.3-2/01_gettext-desktopfiles.patch/
+     * [[https://sources.debian.org/patches/glib2.0/2.78.3-2/01_gettext-desktopfiles.patch/]]
      *
      * I just keep to borrow the definition of KEY_KEYWORDS here instead of applying the patch,
      * since it might have side effect.
