@@ -4,7 +4,7 @@
  */
 
 public class View.EditView : Adw.NavigationPage {
-    public signal void file_updated ();
+    public signal void saved ();
 
     public MainWindow window { private get; construct; }
 
@@ -461,7 +461,7 @@ public class View.EditView : Adw.NavigationPage {
         }
 
         Util.DesktopFileUtil.add_exec_permission (desktop_file.get_string (KeyFileDesktop.KEY_EXEC));
-        file_updated ();
+        saved ();
     }
 
     /**

@@ -88,8 +88,9 @@ public class MainWindow : Adw.ApplicationWindow {
             show_edit_view (entry);
         });
 
-        edit_view.file_updated.connect (() => {
+        edit_view.saved.connect (() => {
             desktop_file.copy_to (backup_desktop_file);
+            model.load ();
             overlay.add_toast (updated_toast);
         });
 
