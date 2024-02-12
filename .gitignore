@@ -1,7 +1,6 @@
 # build dirs
 .flatpak-builder
 build*
-docs
 
 # vim
 *.swp

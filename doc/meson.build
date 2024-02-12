@@ -1,6 +1,6 @@
 valadoc = find_program('valadoc')
 
-valadoc_output_dir = 'docs'
+valadoc_output_dir = 'doc'
 valadoc_target = custom_target(
     'valadoc',
     command: [
@@ -20,7 +20,7 @@ valadoc_target = custom_target(
         '--verbose',
         '--force',
         '--use-svg-images',
-        '-o', meson.project_source_root() / valadoc_output_dir,
+        '-o', valadoc_output_dir,
     ],
 
     build_by_default: true,
