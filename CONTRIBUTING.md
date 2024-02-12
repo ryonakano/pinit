@@ -93,29 +93,35 @@ Refer to [Valadoc](https://valadoc.org/markup.htm) for available markups.
 ## Manage the Project
 
 ### Release Flow
+#### Works in Project Repository
+
+- Repository URL: https://github.com/ryonakano/pinit
 - Decide the version number of the release
     - Versioning should follow [Semantic Versioning](https://semver.org/)
-- Work on [the project repository](https://github.com/ryonakano/pinit)
-    - Create a new branch named `release-X.Y.Z` from the latest `origin/main` (`X.Y.Z` means the version number)
-    - See changes since the previous release: `git diff $(git describe --tags --abbrev=0)..release-X.Y.Z`
-    - Perform changes
-        - Write a release note in `data/pinit.metainfo.xml.in`
-            - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
-            - Credits contributors with their GitHub username
-                - Translation contributors are excluded because some don't have a GitHub account. Just writing `Update translations` is fine
-        - Bump `version` in `meson.build`
-        - Update screenshots if there are visual changes between releases
-    - Create a pull request with the above changes
-    - After merging it, [create a new release on GitHub](https://github.com/ryonakano/pinit/releases/new)
-        - Create a new tag named `X.Y.Z`
-        - Release title: `<Project Name> X.Y.Z Released`
-        - It's fine to reuse the release note in the metainfo file as the release description. Just convert XML to Markdown
-        - Publish it when completed
-- Work on [the Flathub repository](https://github.com/flathub/com.github.ryonakano.pinit)
-    - Create a new branch named `release-X.Y.Z`
-    - Perform changes
-        - Change `url` and `sha256` in the manifest file
-            - These two parameters should point to the tar.gz of the release assets just we published on the project repository
-    - Create a pull request with the above changes
-    - Merge it once the build succeeded
-    - The new release should be available on Flathub after some time
+- Create a new branch named `release-X.Y.Z` from the latest `origin/main` (`X.Y.Z` is the version number)
+- See changes since the previous release: `git diff $(git describe --tags --abbrev=0)..release-X.Y.Z`
+- Perform changes
+    - Write a release note in `data/pinit.metainfo.xml.in`
+        - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
+        - Credits contributors with their GitHub username
+            - Translation contributors are excluded because some don't have a GitHub account. Just writing `Update translations` is fine
+    - Bump `version` in `meson.build`
+    - Update screenshots if there are visual changes between releases
+- Create a pull request with the above changes
+- Merge it once the build succeeded
+- [Create a new release on GitHub](https://github.com/ryonakano/pinit/releases/new)
+    - Create a new tag named `X.Y.Z`
+    - Release title: `<Project Name> X.Y.Z Released`
+    - It's fine to reuse the release note in the metainfo file as the release description. Just convert XML to Markdown
+    - Publish it when completed
+
+#### Works in Flathub repository
+
+- Repository URL: https://github.com/flathub/com.github.ryonakano.pinit
+- Create a new branch named `release-X.Y.Z`
+- Perform changes
+    - Change `url` and `sha256` in the manifest file
+        - These two parameters should point to the tar.gz of the release assets just we published on the project repository
+- Create a pull request with the above changes
+- Merge it once the build succeeded
+- The new release should be available on Flathub after some time
