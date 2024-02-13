@@ -65,7 +65,6 @@ public class Application : Adw.Application {
             { "style-system", Adw.ColorScheme.PREFER_LIGHT }
         };
 
-        var style_manager = Adw.StyleManager.get_default ();
         style_manager.color_scheme = (Adw.ColorScheme) Application.settings.get_enum ("color-scheme");
 
         foreach (var STYLE in STYLES) {
