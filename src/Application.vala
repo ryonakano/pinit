@@ -73,7 +73,6 @@ public class Application : Adw.Application {
             style_light_action.activate.connect (() => {
                 set_app_style (STYLE.color_scheme);
             });
-            set_accels_for_action ("app." + STYLE.name, {""});
             add_action (style_light_action);
         }
     }
