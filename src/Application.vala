@@ -13,12 +13,15 @@ public class Application : Adw.Application {
         Adw.ColorScheme color_scheme;
     }
 
+    /**
+     * The instance of the application settings.
+     */
     public static Settings settings { get; private set; }
 
     /**
      * The language name that the user prefers in the system settings, e.g. "en_US", "ja_JP", etc.
      *
-     * Used to show the KEY_NAME and KEY_COMMENT in the user's system language.
+     * Used to show the ``KEY_NAME`` and ``KEY_COMMENT`` in the user's system language.
      */
     public static unowned string preferred_language { get; private set; }
 
@@ -39,13 +42,14 @@ public class Application : Adw.Application {
         preferred_language = languages[0];
     }
 
+    /**
+     * Setup localization, application style, and accel keys.
+     */
     protected override void startup () {
         base.startup ();
 
-        /*
-         * Make sure the app is shown in the user's language.
-         * https://docs.gtk.org/glib/i18n.html#internationalization
-         */
+        // Make sure the app is shown in the user's language.
+        // https://docs.gtk.org/glib/i18n.html#internationalization
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (Config.PROJECT_NAME, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset (Config.PROJECT_NAME, "UTF-8");
@@ -83,6 +87,12 @@ public class Application : Adw.Application {
         style_manager.color_scheme = color_scheme;
     }
 
+    /**
+     * Show {@link MainWindow}.
+     *
+     * If there is a instance of {@link MainWindow}, show it and leave the method.<<BR>>
+     * Otherwise, initialize it, show it, and binding window sizes/states.
+     */
     protected override void activate () {
         if (main_window != null) {
             main_window.present ();
@@ -97,10 +107,8 @@ public class Application : Adw.Application {
         settings.bind ("window-height", main_window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", main_window, "default-width", SettingsBindFlags.DEFAULT);
 
-        /*
-         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
-         * So we use the prepared binding only for setting
-         */
+        // Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+        // So we use the prepared binding only for setting
         bool is_maximized = Application.settings.get_boolean ("window-maximized");
         if (is_maximized) {
             main_window.maximize ();
