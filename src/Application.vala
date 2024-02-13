@@ -27,7 +27,7 @@ public class Application : Adw.Application {
     public Application () {
         Object (
             application_id: Config.PROJECT_NAME,
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 

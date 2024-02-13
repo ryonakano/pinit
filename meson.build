@@ -52,7 +52,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('gio-unix-2.0'),
-        dependency('glib-2.0'),
+        dependency('glib-2.0', version: '>= 2.74'),
         dependency('gtk4', version: '>= 4.10'),
         dependency('libadwaita-1', version: '>= 1.4.0'),
         dependency('pango'),
