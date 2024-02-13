@@ -26,13 +26,13 @@ public class Application : Adw.Application {
 
     public Application () {
         Object (
-            application_id: Constants.PROJECT_NAME,
+            application_id: Config.PROJECT_NAME,
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
     static construct {
-        settings = new Settings (Constants.PROJECT_NAME);
+        settings = new Settings (Config.PROJECT_NAME);
 
         // Get the user's system language and use it when loading desktop files
         unowned var languages = Intl.get_language_names ();
@@ -47,9 +47,9 @@ public class Application : Adw.Application {
          * https://docs.gtk.org/glib/i18n.html#internationalization
          */
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Constants.PROJECT_NAME, Constants.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Constants.PROJECT_NAME, "UTF-8");
-        Intl.textdomain (Constants.PROJECT_NAME);
+        Intl.bindtextdomain (Config.PROJECT_NAME, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Config.PROJECT_NAME);
 
         setup_style ();
 

@@ -224,9 +224,9 @@ public class MainWindow : Adw.ApplicationWindow {
         var about_window = new Adw.AboutWindow () {
             transient_for = this,
             modal = true,
-            application_icon = Constants.PROJECT_NAME,
+            application_icon = Config.PROJECT_NAME,
             application_name = Define.APP_NAME,
-            version = Constants.PROJECT_VERSION,
+            version = Config.PROJECT_VERSION,
             comments = _("Pin portable apps to the launcher"),
             website = "https://github.com/ryonakano/pinit",
             support_url = "https://github.com/ryonakano/pinit/discussions",
