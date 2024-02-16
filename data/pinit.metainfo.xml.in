@@ -19,7 +19,6 @@
     <ul>
       <li>Edit or delete created app entries without opening the file manager</li>
       <li>Automatically add the execute permission to the file you select</li>
-      <li>Syntax error detection</li>
     </ul>
   </description>
 
