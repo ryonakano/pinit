@@ -31,6 +31,7 @@ public class View.FilesView : Adw.NavigationPage {
 
         // Construct the settings menu
         var theme_submenu = new GLib.Menu ();
+        // See https://valadoc.org/gio-2.0/GLib.Action.parse_detailed_name.html for the format
         theme_submenu.append (_("_Light"), "app.color-scheme(%d)".printf (Adw.ColorScheme.FORCE_LIGHT));
         theme_submenu.append (_("_Dark"), "app.color-scheme(%d)".printf (Adw.ColorScheme.FORCE_DARK));
         theme_submenu.append (_("S_ystem"), "app.color-scheme(%d)".printf (Adw.ColorScheme.DEFAULT));
