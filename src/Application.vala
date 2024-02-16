@@ -34,25 +34,6 @@ public class Application : Adw.Application {
         preferred_language = languages[0];
     }
 
-    protected override void startup () {
-        base.startup ();
-
-        /*
-         * Make sure the app is shown in the user's language.
-         * https://docs.gtk.org/glib/i18n.html#internationalization
-         */
-        Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Config.PROJECT_NAME, Config.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Config.PROJECT_NAME, "UTF-8");
-        Intl.textdomain (Config.PROJECT_NAME);
-
-        setup_style ();
-
-        add_action_entries (ACTION_ENTRIES, this);
-        set_accels_for_action ("app.quit", { "<Control>q" });
-        set_accels_for_action ("win.new", { "<Control>n" });
-    }
-
     private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
         Variant? variant = from_value.dup_variant ();
         if (variant == null) {
@@ -105,7 +86,7 @@ public class Application : Adw.Application {
                 value.set_enum (Adw.ColorScheme.FORCE_DARK);
                 break;
             default:
-                warning ("color_scheme_get_mapping_cb: Invalid enum: %s", val);
+                warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
                 return false;
         }
 
@@ -128,7 +109,7 @@ public class Application : Adw.Application {
                 color_scheme = "dark";
                 break;
             default:
-                warning ("color_scheme_set_mapping_cb: Invalid Style: %d", val);
+                warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
                 // fallback to default
                 color_scheme = "default";
                 break;
@@ -150,6 +131,25 @@ public class Application : Adw.Application {
                                     color_scheme_set_mapping_cb,
                                     null, null);
         add_action (style_action);
+    }
+
+    protected override void startup () {
+        base.startup ();
+
+        /*
+         * Make sure the app is shown in the user's language.
+         * https://docs.gtk.org/glib/i18n.html#internationalization
+         */
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (Config.PROJECT_NAME, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Config.PROJECT_NAME);
+
+        setup_style ();
+
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", { "<Control>q" });
+        set_accels_for_action ("win.new", { "<Control>n" });
     }
 
     protected override void activate () {
