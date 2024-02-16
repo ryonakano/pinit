@@ -66,11 +66,13 @@ public class Application : Adw.Application {
             case Adw.ColorScheme.FORCE_LIGHT:
             case Adw.ColorScheme.FORCE_DARK:
                 to_value.set_enum (val);
-                return true;
+                break;
             default:
                 warning ("style_action_transform_to_cb: Invalid ColorScheme: %d", val);
                 return false;
         }
+
+        return true;
     }
 
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
@@ -80,11 +82,13 @@ public class Application : Adw.Application {
             case Adw.ColorScheme.FORCE_LIGHT:
             case Adw.ColorScheme.FORCE_DARK:
                 to_value.set_variant (new Variant.int32 (val));
-                return true;
+                break;
             default:
                 warning ("style_action_transform_from_cb: Invalid ColorScheme: %d", val);
                 return false;
         }
+
+        return true;
     }
 
     [ CCode ( has_target = false ) ]
