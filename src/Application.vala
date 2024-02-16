@@ -76,13 +76,13 @@ public class Application : Adw.Application {
         // Convert from the "style" enum defined in the gschema to Adw.ColorScheme
         var val = variant.get_string ();
         switch (val) {
-            case "default":
+            case Define.Style.DEFAULT:
                 value.set_enum (Adw.ColorScheme.DEFAULT);
                 break;
-            case "light":
+            case Define.Style.LIGHT:
                 value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
                 break;
-            case "dark":
+            case Define.Style.DARK:
                 value.set_enum (Adw.ColorScheme.FORCE_DARK);
                 break;
             default:
@@ -100,18 +100,18 @@ public class Application : Adw.Application {
         var val = (Adw.ColorScheme) value;
         switch (val) {
             case Adw.ColorScheme.DEFAULT:
-                color_scheme = "default";
+                color_scheme = Define.Style.DEFAULT;
                 break;
             case Adw.ColorScheme.FORCE_LIGHT:
-                color_scheme = "light";
+                color_scheme = Define.Style.LIGHT;
                 break;
             case Adw.ColorScheme.FORCE_DARK:
-                color_scheme = "dark";
+                color_scheme = Define.Style.DARK;
                 break;
             default:
                 warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
                 // fallback to default
-                color_scheme = "default";
+                color_scheme = Define.Style.DEFAULT;
                 break;
         }
 
