@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2024-02-04 11:01+0000\n"
 "Last-Translator: Сергій <sergiy.goncharuk.1@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
-"pinit-metainfo/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
+"metainfo/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,38 +47,36 @@ msgstr ""
 "файлового менеджера"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr "Автододавання дозволу на виконання до вибраного файлу"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Виявлення синтаксичних помилок"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Автозбереження всього — ваших даних під час редагування, останнього "
-"відкритого подання та налаштувань"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Перегляд файлів у світловому режимі"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Редагувати вигляд у світлому режимі"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Перегляд файлів у темному режимі"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Редагувати вигляд у світлому режимі"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Редагувати вигляд у темному режимі"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Редагувати вигляд у темному режимі"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -91,6 +89,22 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
 "File;Create;Edit;Info;Icon;AppImage;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Виявлення синтаксичних помилок"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Автозбереження всього — ваших даних під час редагування, останнього "
+#~ "відкритого подання та налаштувань"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Перегляд файлів у світловому режимі"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Перегляд файлів у темному режимі"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "Випуск з нагоди святкування 2-ї річниці застосунку!"

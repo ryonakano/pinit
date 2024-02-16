@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2024-02-11 19:02+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
-"pinit-metainfo/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/pinit-"
+"metainfo/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,39 +47,37 @@ msgstr ""
 "súborov"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 "K súborom, ktoré vyberiete, sa automaticky pridelí povolenie na spustenie"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Detekcia chýb syntaxe"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Všetko sa automaticky ukladá – vaše úpravy, posledné otvorené zobrazenie a "
-"predvoľby"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Zobrazenie súborov v svetlom režime"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Zobrazenie úprav v svetlom režime"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Zobrazenie súborov v tmavom režime"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Zobrazenie úprav v svetlom režime"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Zobrazenie úprav v tmavom režime"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Zobrazenie úprav v tmavom režime"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -91,6 +89,22 @@ msgstr "Tvorba súborov pracovnej plochy"
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Pracovná plocha;Súbor;Vytvoriť;Upraviť;Info;Informácie;Ikonka;AppImage;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Detekcia chýb syntaxe"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Všetko sa automaticky ukladá – vaše úpravy, posledné otvorené zobrazenie "
+#~ "a predvoľby"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Zobrazenie súborov v svetlom režime"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Zobrazenie súborov v tmavom režime"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "Vydanie na oslavu 2. výročia aplikácie!"

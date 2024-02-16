@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -58,39 +58,37 @@ msgstr ""
 "tvarkytuvės"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 "Pagal nutylėjimą įtraukti vykdomąsias teises tavo pasirenkamoms rinkmenoms"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Sintaksės klaidos paieška"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Pagal nutylėjimą viską išsaugoti ― tavo įvesties duomenis keitimo metu, "
-"paskutinio atidaryto rodinio metu, ir nustatymus"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Rinkmenos rodinys šviesioje veiksenoje"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Keitimo rodinys šviesioje veiksenoje"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Rinkmenos rodinys tamsioje veiksenoje"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Keitimo rodinys šviesioje veiksenoje"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Keitimo rodinys tamsioje veiksenoje"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Keitimo rodinys tamsioje veiksenoje"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -102,6 +100,22 @@ msgstr "Darbalaukio rinkmenų savininkas"
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Darbalaukis;Rinkmena;Sukurti;Keisti;Informacija;Ikonėlė;Programos atvaizdas;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Sintaksės klaidos paieška"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Pagal nutylėjimą viską išsaugoti ― tavo įvesties duomenis keitimo metu, "
+#~ "paskutinio atidaryto rodinio metu, ir nustatymus"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Rinkmenos rodinys šviesioje veiksenoje"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Rinkmenos rodinys tamsioje veiksenoje"
 
 #, fuzzy
 #~| msgid "Update Japanese translation"

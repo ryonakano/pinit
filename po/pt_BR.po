@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-02-16 23:52+0900\n"
 "PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -26,367 +26,481 @@ msgstr ""
 
 #: data/gtk/help-overlay.ui:15
 msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:21
+msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: data/gtk/help-overlay.ui:22
+#: data/gtk/help-overlay.ui:28
 #, fuzzy
 #| msgid "Edit…"
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Editar…"
 
-#: data/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "New File"
+#: data/gtk/help-overlay.ui:32
 msgctxt "shortcut window"
-msgid "New File"
-msgstr "Novo Arquivo"
-
-#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
-#. The second "%s" represents the detailed error message.
-#: src/Backend/ExternalAppLauncher.vala:41
-#, c-format
-msgid "Cannot open %s: %s"
-msgstr "Não é possível abrir %s: %s"
-
-#: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
-msgid "Sound & Video"
-msgstr "Áudio & Vídeo"
-
-#: src/CategoryChooser.vala:91
-msgid "Audio"
-msgstr "Áudio"
-
-#: src/CategoryChooser.vala:92
-msgid "Video"
-msgstr "Vídeo"
-
-#: src/CategoryChooser.vala:93
-msgid "Programming"
+msgid "New Entry"
 msgstr ""
 
-#: src/CategoryChooser.vala:94
-msgid "Education"
-msgstr "Educação"
-
-#: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
-msgid "Games"
-msgstr "Jogos"
-
-#: src/CategoryChooser.vala:96
-msgid "Graphics"
-msgstr "Gráficos"
-
-#: src/CategoryChooser.vala:97
-msgid "Internet"
+#: src/MainWindow.vala:56
+msgid "Entry updated."
 msgstr ""
 
-#: src/CategoryChooser.vala:98
-msgid "Office"
-msgstr "Escritório"
-
-#: src/CategoryChooser.vala:99
-msgid "Science"
-msgstr "Ciência"
-
-#: src/CategoryChooser.vala:100
-msgid "Settings"
-msgstr "Configurações"
-
-#: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
-msgid "System Tools"
-msgstr "Sistema"
-
-#: src/CategoryChooser.vala:102
-msgid "Accessories"
+#: src/MainWindow.vala:60
+msgid "Entry deleted."
 msgstr ""
 
-#: src/MainWindow.vala:51
-msgid "Updated entry."
-msgstr "Entrada atualizada."
-
-#: src/MainWindow.vala:55
-msgid "Deleted entry."
-msgstr "Entrada apagada."
-
-#: src/MainWindow.vala:151
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#: src/MainWindow.vala:107
+msgid "Failed to Load Entries"
 msgstr ""
-"Crie o atalho para seus aplicativos portáteis favoritos em seu lançador de "
-"aplicativos"
+
+#: src/MainWindow.vala:108
+msgid "There was an error while loading app entries."
+msgstr ""
+
+#: src/MainWindow.vala:110 src/View/EditView.vala:370
+#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#, fuzzy
+#| msgid "Close"
+msgid "_Close"
+msgstr "Fechar"
+
+#: src/MainWindow.vala:142
+#, fuzzy
+#| msgid "Saved changes!"
+msgid "Save Changes?"
+msgstr "Alterações salvas!"
+
+#: src/MainWindow.vala:143
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
+
+#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#, fuzzy
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "Cancelar"
+
+#: src/MainWindow.vala:146
+msgid "_Discard"
+msgstr ""
+
+#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#, fuzzy
+#| msgid "Save"
+msgid "_Save"
+msgstr "Salvar"
+
+#: src/MainWindow.vala:230
+#, fuzzy
+#| msgid "Pin any apps into the launcher"
+msgid "Pin portable apps to the launcher"
+msgstr "Fixe qualquer aplicativo no lançador"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:161
+#: src/MainWindow.vala:240
 msgid "translator-credits"
 msgstr "Felipe Nogueira <contato.fnog@gmail.com>"
 
-#: src/Views/EditView.vala:51
-msgid "Save"
-msgstr "Salvar"
-
-#: src/Views/EditView.vala:61
-msgid "File Name"
-msgstr "Nome do Arquivo"
-
-#: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
-msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "Nome do arquivo onde essas informações do aplicativo são salvas."
-
-#: src/Views/EditView.vala:76
-msgid "Suffix of the file"
+#: src/View/EditView.vala:71
+msgid "Required Entries"
 msgstr ""
 
-#: src/Views/EditView.vala:88
+#: src/View/EditView.vala:72
+msgid "The following entries need to be filled to save."
+msgstr ""
+
+#: src/View/EditView.vala:76
 msgid "App Name"
 msgstr "Nome do Aplicativo"
 
-#: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
-msgid "Shown in the launcher or dock."
-msgstr "Mostrar no menu de aplicativos e no Dock."
-
-#: src/Views/EditView.vala:107
-msgid "Comment"
-msgstr "Comentário"
-
-#: src/Views/EditView.vala:111
-msgid ""
-"Descibes the app. May appear as a tooltip when you hover over the app entry "
-"in the launcher/dock."
-msgstr ""
-
-#: src/Views/EditView.vala:126
+#: src/View/EditView.vala:81
 msgid "Exec File"
 msgstr "Arquivo executável"
 
-#: src/Views/EditView.vala:131
+#: src/View/EditView.vala:84
 #, fuzzy
-msgid ""
-"The command/app launched when you click the app entry in the launcher. "
-"Specify in an absolute path or an app's alias name."
-msgstr ""
-"Local do aplicativo em caminho absoluto ou alias de um nome do aplicativo"
+#| msgid "Select an executable file"
+msgid "Select an executable file…"
+msgstr "Selecionar um arquivo executável"
 
-#: src/Views/EditView.vala:148
+#: src/View/EditView.vala:95
+msgid "Optional Entries"
+msgstr ""
+
+#: src/View/EditView.vala:96
+msgid "Filling these entries improves discoverability in the app launcher."
+msgstr ""
+
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "Arquivo de Ícones"
 
-#: src/Views/EditView.vala:153
+#: src/View/EditView.vala:103
 #, fuzzy
-msgid ""
-"The icon branding the app. Specify in an absolute path or an icon's alias "
-"name."
-msgstr ""
-"Localização de um ícone para o aplicativo em um caminho absoluto ou atalho "
-"para o ícone"
+#| msgid "Select an icon file"
+msgid "Select an icon file…"
+msgstr "Selecionar um arquivo de ícones"
 
-#: src/Views/EditView.vala:170
-msgid "App Categories"
-msgstr "Categorias do Aplicativo"
-
-#: src/Views/EditView.vala:174
-msgid "Categories applicable to the app. (You can select more than one.)"
+#: src/View/EditView.vala:111
+msgid "Generic Name"
 msgstr ""
 
-#: src/Views/EditView.vala:187
-msgid "Advanced configuration"
+#: src/View/EditView.vala:116
+msgid "Comment"
+msgstr "Comentário"
+
+#: src/View/EditView.vala:130
+#, fuzzy
+#| msgid "Advanced configuration"
+msgid "Advanced Configurations"
 msgstr "Configuração avançada"
 
-#: src/Views/EditView.vala:192
+#: src/View/EditView.vala:131
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
 
-#: src/Views/EditView.vala:199
+#: src/View/EditView.vala:135
 msgid "Startup WM Class"
 msgstr ""
 
-#: src/Views/EditView.vala:204
-msgid ""
-"Associate the app with a window that has this ID. Use this if a different or "
-"duplicated icon appears in the dock when the app launches."
-msgstr ""
-
-#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+#: src/View/EditView.vala:140
 msgid "Run in Terminal"
 msgstr "Executar no Terminal"
 
-#: src/Views/EditView.vala:219
+#: src/View/EditView.vala:141
 #, fuzzy
 #| msgid "Check this in if you want to register a CUI app."
-msgid "Check this if you want to register a CUI app."
+msgid "Turn on if you want to register a CUI app."
 msgstr "Marque aqui se você quiser registar uma aplicativo CUI"
 
-#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
-msgid "Open in text editor"
+#: src/View/EditView.vala:145
+#, fuzzy
+#| msgid "Open"
+msgid "_Open"
+msgstr "Abrir"
+
+#: src/View/EditView.vala:149
+#, fuzzy
+#| msgid "Open in text editor"
+msgid "Open with Text Editor"
 msgstr "Abrir no editor de texto"
 
-#: src/Views/EditView.vala:233
-msgid "You can also edit more options by opening in a text editor."
+#: src/View/EditView.vala:150
+msgid "You can also edit more options by opening with a text editor."
 msgstr ""
 
-#: src/Views/EditView.vala:314
-msgid "Select an executable file"
-msgstr "Selecionar um arquivo executável"
-
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
-msgid "Select"
-msgstr ""
-
-#: src/Views/EditView.vala:350
-msgid "ICO, PNG, SVG, or XMP files"
-msgstr "Arquivos ICO, PNG, SVG, ou XMP"
-
-#: src/Views/EditView.vala:353
-msgid "Select an icon file"
-msgstr "Selecionar um arquivo de ícones"
-
-#: src/Views/EditView.vala:378
-msgid "Could not open with external app"
-msgstr ""
-
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:161
-msgid "Close"
-msgstr "Fechar"
-
-#: src/Views/EditView.vala:431
+#: src/View/EditView.vala:195
 msgid "New Entry"
 msgstr ""
 
-#: src/Views/EditView.vala:440
-msgid "Editing Entry"
+#: src/View/EditView.vala:211 src/View/EditView.vala:399
+#, fuzzy
+#| msgid "Untitled desktop file"
+msgid "Untitled App"
+msgstr "Arquivo de desktop sem título"
+
+#: src/View/EditView.vala:231
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select Executable File"
+msgstr "Selecionar um arquivo executável"
+
+#: src/View/EditView.vala:232 src/View/EditView.vala:289
+msgid "_Select"
 msgstr ""
 
-#: src/Views/EditView.vala:446
-#, c-format
-msgid "Editing “%s”"
+#: src/View/EditView.vala:285
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "Arquivos ICO, PNG, SVG, ou XMP"
+
+#: src/View/EditView.vala:288
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select Icon File"
+msgstr "Selecionar um arquivo de ícones"
+
+#: src/View/EditView.vala:367
+msgid "Failed to Open with External App"
+msgstr ""
+
+#: src/View/EditView.vala:368
+msgid "There was an error while opening the file with an external app."
+msgstr ""
+
+#: src/View/EditView.vala:424
+msgid "Edit Entry"
+msgstr ""
+
+#: src/View/EditView.vala:426
+#, fuzzy, c-format
+#| msgid "Editing “%s”"
+msgid "Edit “%s”"
 msgstr "Editando “%s”"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/Views/EditView.vala:534
-#, fuzzy, c-format
-#| msgid "Are you sure you want to delete “%s”?"
-msgid "Could not write to file “%s”"
-msgstr "Tem certeza que deseja deletar “%s”?"
-
-#: src/Views/EditView.vala:553
-msgid "Recommendations for naming"
+#: src/View/EditView.vala:446
+msgid "Failed to Save Entry"
 msgstr ""
 
-#: src/Views/EditView.vala:559
-msgid ""
-"It is recommended to use only alphanumeric characters and underscores. Don't "
-"begin with a number."
-msgstr ""
-
-#: src/Views/EditView.vala:560
-msgid ""
-"Include at least two elements (sections of the string seperated by a "
-"period). Most apps use three elements."
-msgstr ""
-
-#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-#. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:569
+#: src/View/EditView.vala:448
 #, c-format
-msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+msgid "Failed to Save Entry of “%s”"
 msgstr ""
 
-#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:578
-#, c-format
-msgid "For more info, see %s."
+#: src/View/EditView.vala:454
+msgid "There was an error while saving the app entry."
 msgstr ""
 
-#: src/Views/EditView.vala:580
-msgid "the file naming specification by freedesktop.org"
-msgstr ""
-
-#: src/Views/FilesView.vala:24
+#: src/View/FilesView.vala:29
 msgid "Create a new entry"
 msgstr "Criar uma nova entrada"
 
-#: src/Views/FilesView.vala:29
-msgid "Light"
+#: src/View/FilesView.vala:35
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "Claro"
 
-#: src/Views/FilesView.vala:30
-msgid "Dark"
+#: src/View/FilesView.vala:36
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "Escuro"
 
-#: src/Views/FilesView.vala:31
-msgid "System"
+#: src/View/FilesView.vala:37
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "Sistema"
 
-#: src/Views/FilesView.vala:34
-msgid "Style"
+#: src/View/FilesView.vala:40
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "Tema"
 
-#: src/Views/FilesView.vala:35
-msgid "Keyboard Shortcuts"
+#: src/View/FilesView.vala:41
+msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:37
+#: src/View/FilesView.vala:43
 #, fuzzy, c-format
 #| msgid "About %s…"
-msgid "About %s"
+msgid "_About %s"
 msgstr "Sobre %s…"
 
-#: src/Views/FilesView.vala:40
-msgid "Preferences"
-msgstr "Preferências"
+#: src/View/FilesView.vala:46
+msgid "Main Menu"
+msgstr ""
 
-#: src/Views/FilesView.vala:66
+#: src/View/FilesView.vala:61
 #, fuzzy
-msgid "No valid app entries found"
+msgid "No Entries Found"
 msgstr "Não foram encontrados arquivos de desktop válidos"
 
-#: src/Views/FilesView.vala:67
-#, fuzzy
-msgid "If you've never created one, click the + button on the top."
+#: src/View/FilesView.vala:62
+msgid "Click the + button on the top to create one."
 msgstr ""
-"Se você nunca criou um, volte à Página Inicial e clique em “Novo Arquivo”."
 
-#: src/Views/FilesView.vala:136
+#: src/View/FilesView.vala:112
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete Entry?"
+msgstr "Entrada apagada."
+
+#: src/View/FilesView.vala:114
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr ""
+
+#: src/View/FilesView.vala:118
 msgid "Delete…"
 msgstr "Deletar…"
 
-#: src/Views/FilesView.vala:142
-#, c-format
-msgid "Are you sure you want to delete “%s”?"
-msgstr "Tem certeza que deseja deletar “%s”?"
-
-#: src/Views/FilesView.vala:143
+#: src/View/FilesView.vala:126
 msgid "This removes the app from the launcher."
 msgstr "Isto retira o aplicativo do lançador."
 
-#: src/Views/FilesView.vala:146
-msgid "Delete"
+#: src/View/FilesView.vala:129
+#, fuzzy
+#| msgid "Delete"
+msgid "_Delete"
 msgstr "Deletar"
 
-#: src/Views/FilesView.vala:158
-#, c-format
-msgid "Could not delete file “%s”"
+#: src/View/FilesView.vala:139
+#, fuzzy, c-format
+#| msgid "Could not delete file “%s”"
+msgid "Failed to Delete Entry of “%s”"
 msgstr "Não foi possível apagar o arquivo \"%s\""
+
+#: src/View/FilesView.vala:140
+msgid "There was an error while removing the app entry."
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:77
+#, fuzzy
+#| msgid "App Categories"
+msgid "Categories"
+msgstr "Categorias do Aplicativo"
+
+#: src/Widget/CategoriesRow.vala:78
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:84
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
+msgstr "Áudio & Vídeo"
+
+#: src/Widget/CategoriesRow.vala:85
+msgid "Audio"
+msgstr "Áudio"
+
+#: src/Widget/CategoriesRow.vala:86
+msgid "Video"
+msgstr "Vídeo"
+
+#: src/Widget/CategoriesRow.vala:87
+msgid "Programming"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:88
+msgid "Education"
+msgstr "Educação"
+
+#: src/Widget/CategoriesRow.vala:89
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
+msgstr "Jogos"
+
+#: src/Widget/CategoriesRow.vala:90
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: src/Widget/CategoriesRow.vala:91
+msgid "Internet"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:92
+msgid "Office"
+msgstr "Escritório"
+
+#: src/Widget/CategoriesRow.vala:93
+msgid "Science"
+msgstr "Ciência"
+
+#: src/Widget/CategoriesRow.vala:94
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/Widget/CategoriesRow.vala:95
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
+msgstr "Sistema"
+
+#: src/Widget/CategoriesRow.vala:96
+msgid "Accessories"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:54
+msgid "Keywords"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:55
+msgid "These words can be used as search terms."
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:60
+msgid "Add a new keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:114
+msgid "Keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:118
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete keyword"
+msgstr "Entrada apagada."
+
+#, fuzzy
+#~| msgid "New File"
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Novo Arquivo"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Não é possível abrir %s: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Entrada atualizada."
+
+#, fuzzy
+#~| msgid ""
+#~| "Create the shortcut to your favorite portable apps into your app launcher"
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Crie o atalho para seus aplicativos portáteis favoritos em seu lançador "
+#~ "de aplicativos"
+
+#~ msgid "File Name"
+#~ msgstr "Nome do Arquivo"
+
+#, fuzzy
+#~| msgid "Name of the file where these app info is saved."
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "Nome do arquivo onde essas informações do aplicativo são salvas."
+
+#, fuzzy
+#~| msgid "Shown in the launcher or Dock."
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Mostrar no menu de aplicativos e no Dock."
+
+#, fuzzy
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Local do aplicativo em caminho absoluto ou alias de um nome do aplicativo"
+
+#, fuzzy
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Localização de um ícone para o aplicativo em um caminho absoluto ou "
+#~ "atalho para o ícone"
+
+#, fuzzy, c-format
+#~| msgid "Are you sure you want to delete “%s”?"
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Tem certeza que deseja deletar “%s”?"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#, fuzzy
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr ""
+#~ "Se você nunca criou um, volte à Página Inicial e clique em “Novo Arquivo”."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Tem certeza que deseja deletar “%s”?"
 
 #~ msgid "Development"
 #~ msgstr "Desenvolvimento"
@@ -403,18 +517,9 @@ msgstr "Não foi possível apagar o arquivo \"%s\""
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "Tipo do aplicativo, múltipla escolha."
 
-#~ msgid "Open"
-#~ msgstr "Abrir"
-
-#~ msgid "Pin any apps into the launcher"
-#~ msgstr "Fixe qualquer aplicativo no lançador"
-
 #, fuzzy
 #~ msgid "Edit an existing app entry."
 #~ msgstr "Editar um arquivo de desktop existente."
-
-#~ msgid "Saved changes!"
-#~ msgstr "Alterações salvas!"
 
 #~ msgid "Create new or edit"
 #~ msgstr "Criar novo ou editar"
@@ -424,6 +529,3 @@ msgstr "Não foi possível apagar o arquivo \"%s\""
 
 #~ msgid "Edit a desktop file"
 #~ msgstr "Editar um arquivo de desktop"
-
-#~ msgid "Untitled desktop file"
-#~ msgstr "Arquivo de desktop sem título"
