@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <enum id="color-schemes">
-    <value value="1" nick="force-dark"/>
-    <value value="2" nick="force-light"/>
-    <value value="4" nick="prefer-light"/>
+  <enum id="style">
+    <value value="0" nick="default"/>
+    <value value="1" nick="light"/>
+    <value value="2" nick="dark"/>
   </enum>
 
   <schema path="/com/github/ryonakano/pinit/" id="com.github.ryonakano.pinit">
-    <key name="color-scheme" enum="color-schemes">
-      <default>'force-light'</default>
+    <key name="color-scheme" enum="style">
+      <default>'default'</default>
       <summary>Color scheme</summary>
       <description>Whether to show the window in a dark style or not</description>
     </key>
