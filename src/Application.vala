@@ -91,7 +91,6 @@ public class Application : Adw.Application {
         return true;
     }
 
-    [ CCode ( has_target = false ) ]
     private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
         // Convert from the "style" enum defined in the gschema to Adw.ColorScheme
         var val = variant.get_string ();
@@ -113,7 +112,6 @@ public class Application : Adw.Application {
         return true;
     }
 
-    [ CCode ( has_target = false ) ]
     private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
         string color_scheme;
 
