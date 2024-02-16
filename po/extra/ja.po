@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2023-10-01 08:21+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -47,37 +47,36 @@ msgstr ""
 "要はありません"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr "選択したファイルに自動的に実行権限を追加"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "シンタックスエラーの検出機能"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存します"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "ファイル一覧画面 (ライトモード)"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "編集画面 (ライトモード)"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "ファイル一覧画面 (ダークモード)"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "編集画面 (ライトモード)"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "編集画面 (ダークモード)"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "編集画面 (ダークモード)"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -90,6 +89,22 @@ msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
 "情報;アイコン;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "シンタックスエラーの検出機能"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存しま"
+#~ "す"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "ファイル一覧画面 (ライトモード)"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "ファイル一覧画面 (ダークモード)"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "アプリの2周年記念リリース！"

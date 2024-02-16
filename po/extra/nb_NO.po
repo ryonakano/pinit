@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2024-01-27 05:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -47,39 +47,36 @@ msgstr ""
 "Rediger eller slett opprettede programoppføringer uten å åpne filbehandleren"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr "Legg til kjøringstilgang automatisk for filene du velger"
 
-#: data/pinit.metainfo.xml.in:22
+#: data/pinit.metainfo.xml.in:27
 #, fuzzy
-msgid "Syntax error detection"
-msgstr "Syntaksfeiloppdagelse"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Lagre alt automatisk — data i redigering, sist åpnet visning, og "
-"innstillinger"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Filvisning i lys drakt"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Redigeringsvisning i lys drakt"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Filvisning i mørk drakt"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Redigeringsvisning i lys drakt"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Redigeringsvisning i mørk drakt"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Redigeringsvisning i mørk drakt"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -90,6 +87,23 @@ msgstr "Skrivebordsfiloppretter"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Skrivebord;fil;opprett;rediger;info;ikon;AppImage;"
+
+#, fuzzy
+#~ msgid "Syntax error detection"
+#~ msgstr "Syntaksfeiloppdagelse"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Lagre alt automatisk — data i redigering, sist åpnet visning, og "
+#~ "innstillinger"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Filvisning i lys drakt"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Filvisning i mørk drakt"
 
 #~ msgid "Initial release"
 #~ msgstr "Opprinnelig utgave"
