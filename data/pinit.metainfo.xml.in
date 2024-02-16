@@ -24,22 +24,22 @@
 
   <screenshots>
     <screenshot type="default">
-      <caption>FilesView in the light mode</caption>
+      <caption>List of app entries in the light mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-light.png</image>
     </screenshot>
 
     <screenshot>
-      <caption>EditView in the light mode</caption>
+      <caption>Editing the app entry in the light mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-light.png</image>
     </screenshot>
 
     <screenshot>
-      <caption>FilesView in the dark mode</caption>
+      <caption>List of app entries in the dark mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-dark.png</image>
     </screenshot>
 
     <screenshot>
-      <caption>EditView in the dark mode</caption>
+      <caption>Editing the app entry in the dark mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
     </screenshot>
   </screenshots>
