@@ -31,32 +31,18 @@ namespace Define {
     public const string KEY_KEYWORDS = "Keywords";
 
     /**
-     * Defines response IDs used in Adw.MessageDialog.
+     * Response IDs used in Adw.MessageDialog.
      */
     namespace DialogResponse {
-        /**
-         * Use this constant instead of the literal string ``close``.
-         */
+        /** Use this constant instead of the literal string ``close``. */
         public const string CLOSE = "close";
-
-        /**
-         * Use this constant instead of the literal string ``cancel``.
-         */
+        /** Use this constant instead of the literal string ``cancel``. */
         public const string CANCEL = "cancel";
-
-        /**
-         * Use this constant instead of the literal string ``ok``.
-         */
+        /** Use this constant instead of the literal string ``ok``. */
         public const string OK = "ok";
-
-        /**
-         * Use this constant instead of the literal string ``discard``.
-         */
+        /** Use this constant instead of the literal string ``discard``. */
         public const string DISCARD = "discard";
-
-        /**
-         * Use this constant instead of the literal string ``save``.
-         */
+        /** Use this constant instead of the literal string ``save``. */
         public const string SAVE = "save";
     }
 
