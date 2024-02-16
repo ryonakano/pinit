@@ -31,9 +31,9 @@ public class View.FilesView : Adw.NavigationPage {
 
         // Construct the settings menu
         var theme_submenu = new GLib.Menu ();
-        theme_submenu.append (_("_Light"), "app.style-light");
-        theme_submenu.append (_("_Dark"), "app.style-dark");
-        theme_submenu.append (_("S_ystem"), "app.style-system");
+        theme_submenu.append (_("_Light"), "app.color-scheme(%d)".printf (Adw.ColorScheme.FORCE_LIGHT));
+        theme_submenu.append (_("_Dark"), "app.color-scheme(%d)".printf (Adw.ColorScheme.FORCE_DARK));
+        theme_submenu.append (_("S_ystem"), "app.color-scheme(%d)".printf (Adw.ColorScheme.DEFAULT));
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("_Style"), theme_submenu);
