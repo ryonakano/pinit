@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-02-16 23:52+0900\n"
 "PO-Revision-Date: 2024-01-27 05:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -24,184 +24,148 @@ msgid "General"
 msgstr "Generelt"
 
 #: data/gtk/help-overlay.ui:15
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Tastatursnarveier"
+
+#: data/gtk/help-overlay.ui:21
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: data/gtk/help-overlay.ui:22
+#: data/gtk/help-overlay.ui:28
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Rediger"
 
-#: data/gtk/help-overlay.ui:26
+#: data/gtk/help-overlay.ui:32
 #, fuzzy
+#| msgid "New Entry"
 msgctxt "shortcut window"
-msgid "New File"
-msgstr "Kjørbar fil"
+msgid "New Entry"
+msgstr "Ny oppføring"
 
-#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
-#. The second "%s" represents the detailed error message.
-#: src/Backend/ExternalAppLauncher.vala:41
-#, c-format
-msgid "Cannot open %s: %s"
-msgstr "Kan ikke åpne %s: %s"
-
-#: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
-msgid "Sound & Video"
-msgstr "Lyd og video"
-
-#: src/CategoryChooser.vala:91
-msgid "Audio"
-msgstr "Lyd"
-
-#: src/CategoryChooser.vala:92
-msgid "Video"
-msgstr "Video"
-
-#: src/CategoryChooser.vala:93
-msgid "Programming"
-msgstr "Programmering"
-
-#: src/CategoryChooser.vala:94
-msgid "Education"
-msgstr "Utdanning"
-
-#: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
-msgid "Games"
-msgstr "Spill"
-
-#: src/CategoryChooser.vala:96
-msgid "Graphics"
-msgstr "Grafikk"
-
-#: src/CategoryChooser.vala:97
-msgid "Internet"
-msgstr "Internett"
-
-#: src/CategoryChooser.vala:98
-msgid "Office"
-msgstr "Kontor"
-
-#: src/CategoryChooser.vala:99
-msgid "Science"
-msgstr "Vitenskap"
-
-#: src/CategoryChooser.vala:100
-msgid "Settings"
-msgstr "Innstillinger"
-
-#: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
-msgid "System Tools"
-msgstr "Systemet"
-
-#: src/CategoryChooser.vala:102
-msgid "Accessories"
-msgstr "Tilbehør"
-
-#: src/MainWindow.vala:51
-#, fuzzy
-msgid "Updated entry."
-msgstr "Oppføring oppdatert."
-
-#: src/MainWindow.vala:55
-#, fuzzy
-msgid "Deleted entry."
-msgstr "Oppføring slettet."
-
-#: src/MainWindow.vala:151
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#: src/MainWindow.vala:56
+msgid "Entry updated."
 msgstr ""
-"Fest snarveier for dine portable favorittprogrammer til din programoppstarter"
+
+#: src/MainWindow.vala:60
+msgid "Entry deleted."
+msgstr ""
+
+#: src/MainWindow.vala:107
+msgid "Failed to Load Entries"
+msgstr ""
+
+#: src/MainWindow.vala:108
+msgid "There was an error while loading app entries."
+msgstr ""
+
+#: src/MainWindow.vala:110 src/View/EditView.vala:370
+#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#, fuzzy
+#| msgid "Close"
+msgid "_Close"
+msgstr "Lukk"
+
+#: src/MainWindow.vala:142
+msgid "Save Changes?"
+msgstr ""
+
+#: src/MainWindow.vala:143
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
+
+#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#, fuzzy
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "Avbryt"
+
+#: src/MainWindow.vala:146
+msgid "_Discard"
+msgstr ""
+
+#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#, fuzzy
+#| msgid "Save"
+msgid "_Save"
+msgstr "Lagre"
+
+#: src/MainWindow.vala:230
+#, fuzzy
+#| msgid "This removes the app from the launcher."
+msgid "Pin portable apps to the launcher"
+msgstr "Dette sletter programmet fra oppstarteren."
 
 #. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:161
+#: src/MainWindow.vala:240
 msgid "translator-credits"
 msgstr "Allan Nordhøy, <epost@anotheragency.no>"
 
-#: src/Views/EditView.vala:51
-msgid "Save"
-msgstr "Lagre"
+#: src/View/EditView.vala:71
+msgid "Required Entries"
+msgstr ""
 
-#: src/Views/EditView.vala:61
-msgid "File Name"
-msgstr "Fornavn"
+#: src/View/EditView.vala:72
+msgid "The following entries need to be filled to save."
+msgstr ""
 
-#: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
-msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "Navnet på filen der denne programinfoen lagres."
-
-#: src/Views/EditView.vala:76
-msgid "Suffix of the file"
-msgstr "Endelse for filen"
-
-#: src/Views/EditView.vala:88
+#: src/View/EditView.vala:76
 msgid "App Name"
 msgstr "Programnavn"
 
-#: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
-msgid "Shown in the launcher or dock."
-msgstr "Vis i oppstarteren eller dokken."
-
-#: src/Views/EditView.vala:107
-msgid "Comment"
-msgstr "Kommentar"
-
-#: src/Views/EditView.vala:111
-msgid ""
-"Descibes the app. May appear as a tooltip when you hover over the app entry "
-"in the launcher/dock."
-msgstr ""
-"Beskriver programmet. Kan vises som verktøytips når du holder pekeren over "
-"programoppføringen i oppstarter/dokk."
-
-#: src/Views/EditView.vala:126
+#: src/View/EditView.vala:81
 #, fuzzy
 msgid "Exec File"
 msgstr "Kjørbar fil"
 
-#: src/Views/EditView.vala:131
+#: src/View/EditView.vala:84
 #, fuzzy
-msgid ""
-"The command/app launched when you click the app entry in the launcher. "
-"Specify in an absolute path or an app's alias name."
-msgstr ""
-"Kommandoen/programmet som blir startet når du klikker programoppføringen i "
-"oppstarteren. Angi en absolutt sti eller et programalias."
+#| msgid "Select an executable file"
+msgid "Select an executable file…"
+msgstr "Velg en kjørbar fil"
 
-#: src/Views/EditView.vala:148
+#: src/View/EditView.vala:95
+msgid "Optional Entries"
+msgstr ""
+
+#: src/View/EditView.vala:96
+msgid "Filling these entries improves discoverability in the app launcher."
+msgstr ""
+
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "Ikonfil"
 
-#: src/Views/EditView.vala:153
+#: src/View/EditView.vala:103
 #, fuzzy
-msgid ""
-"The icon branding the app. Specify in an absolute path or an icon's alias "
-"name."
-msgstr "Ikondrakten til symbolet. Angi en absolutt sti eller et programalias."
+#| msgid "Select an icon file"
+msgid "Select an icon file…"
+msgstr "Velg en ikon-fil"
 
-#: src/Views/EditView.vala:170
-msgid "App Categories"
-msgstr "Programkategorier"
+#: src/View/EditView.vala:111
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgid "Generic Name"
+msgstr "Generelt"
 
-#: src/Views/EditView.vala:174
-msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "Kategorier som har med programmet å gjøre. (Du kan velge mer enn én.)"
+#: src/View/EditView.vala:116
+msgid "Comment"
+msgstr "Kommentar"
 
-#: src/Views/EditView.vala:187
-msgid "Advanced configuration"
+#: src/View/EditView.vala:130
+#, fuzzy
+#| msgid "Advanced configuration"
+msgid "Advanced Configurations"
 msgstr "Avansert oppsett"
 
-#: src/Views/EditView.vala:192
+#: src/View/EditView.vala:131
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -210,187 +174,386 @@ msgstr ""
 "Dog krever noen programmet kanskje de avanserte oppsettsalternativene "
 "nedenfor."
 
-#: src/Views/EditView.vala:199
+#: src/View/EditView.vala:135
 #, fuzzy
 msgid "Startup WM Class"
 msgstr "Oppstartsvindusbehandlerklasse"
 
-#: src/Views/EditView.vala:204
-msgid ""
-"Associate the app with a window that has this ID. Use this if a different or "
-"duplicated icon appears in the dock when the app launches."
-msgstr ""
-"Tilknytt programmet til et vindu som har en ID. Bruk dette hvis et annet "
-"eller duplisert ikon vises i dokken når programmet startes."
-
-#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+#: src/View/EditView.vala:140
 msgid "Run in Terminal"
 msgstr "Kjør i terminal"
 
-#: src/Views/EditView.vala:219
+#: src/View/EditView.vala:141
 #, fuzzy
-msgid "Check this if you want to register a CUI app."
+msgid "Turn on if you want to register a CUI app."
 msgstr "Velg dette hvis du vil registrere et dialogbasert program."
 
-#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
-msgid "Open in text editor"
+#: src/View/EditView.vala:145
+#, fuzzy
+#| msgid "Open"
+msgid "_Open"
+msgstr "Åpne"
+
+#: src/View/EditView.vala:149
+#, fuzzy
+#| msgid "Open in text editor"
+msgid "Open with Text Editor"
 msgstr "Åpne i tekstbehandler"
 
-#: src/Views/EditView.vala:233
-msgid "You can also edit more options by opening in a text editor."
+#: src/View/EditView.vala:150
+#, fuzzy
+#| msgid "You can also edit more options by opening in a text editor."
+msgid "You can also edit more options by opening with a text editor."
 msgstr "Du kan redigere flere alternativer ved å åpne i tekstbehandler."
 
-#: src/Views/EditView.vala:314
-msgid "Select an executable file"
-msgstr "Velg en kjørbar fil"
-
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
-msgid "Select"
-msgstr "Velg"
-
-#: src/Views/EditView.vala:350
-msgid "ICO, PNG, SVG, or XMP files"
-msgstr "ICO, PNG, SVG, eller XMP-filer"
-
-#: src/Views/EditView.vala:353
-msgid "Select an icon file"
-msgstr "Velg en ikon-fil"
-
-#: src/Views/EditView.vala:378
-#, fuzzy
-msgid "Could not open with external app"
-msgstr "Kunne ikke åpne med eksternt program"
-
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:161
-msgid "Close"
-msgstr "Lukk"
-
-#: src/Views/EditView.vala:431
+#: src/View/EditView.vala:195
 msgid "New Entry"
 msgstr "Ny oppføring"
 
-#: src/Views/EditView.vala:440
-msgid "Editing Entry"
+#: src/View/EditView.vala:211 src/View/EditView.vala:399
+msgid "Untitled App"
+msgstr ""
+
+#: src/View/EditView.vala:231
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select Executable File"
+msgstr "Velg en kjørbar fil"
+
+#: src/View/EditView.vala:232 src/View/EditView.vala:289
+#, fuzzy
+#| msgid "Select"
+msgid "_Select"
+msgstr "Velg"
+
+#: src/View/EditView.vala:285
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO, PNG, SVG, eller XMP-filer"
+
+#: src/View/EditView.vala:288
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select Icon File"
+msgstr "Velg en ikon-fil"
+
+#: src/View/EditView.vala:367
+#, fuzzy
+msgid "Failed to Open with External App"
+msgstr "Kunne ikke åpne med eksternt program"
+
+#: src/View/EditView.vala:368
+msgid "There was an error while opening the file with an external app."
+msgstr ""
+
+#: src/View/EditView.vala:424
+#, fuzzy
+#| msgid "Editing Entry"
+msgid "Edit Entry"
 msgstr "Redigerer oppføring"
 
-#: src/Views/EditView.vala:446
-#, c-format
-msgid "Editing “%s”"
+#: src/View/EditView.vala:426
+#, fuzzy, c-format
+#| msgid "Editing “%s”"
+msgid "Edit “%s”"
 msgstr "Redigerer «%s»"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: src/Views/EditView.vala:534
-#, fuzzy, c-format
-#| msgid "Are you sure you want to delete “%s”?"
-msgid "Could not write to file “%s”"
-msgstr "Ønsker du å slette «%s»?"
-
-#: src/Views/EditView.vala:553
-msgid "Recommendations for naming"
-msgstr "Anbefalt for navngivning"
-
-#: src/Views/EditView.vala:559
-#, fuzzy
-msgid ""
-"It is recommended to use only alphanumeric characters and underscores. Don't "
-"begin with a number."
+#: src/View/EditView.vala:446
+msgid "Failed to Save Entry"
 msgstr ""
-"Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
 
-#: src/Views/EditView.vala:560
-msgid ""
-"Include at least two elements (sections of the string seperated by a "
-"period). Most apps use three elements."
+#: src/View/EditView.vala:448
+#, c-format
+msgid "Failed to Save Entry of “%s”"
 msgstr ""
-"Inkluder minst to elementer (deler inndeles av punktum). De fleste "
-"programmer bruker tre elementer."
 
-#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-#. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:569
-#, c-format
-msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr "For eksempel bør du bruke «%s» for 2D-spillet SuperTux."
+#: src/View/EditView.vala:454
+msgid "There was an error while saving the app entry."
+msgstr ""
 
-#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:578
-#, c-format
-msgid "For more info, see %s."
-msgstr "Mer info er å finne i %s."
-
-#: src/Views/EditView.vala:580
-msgid "the file naming specification by freedesktop.org"
-msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
-
-#: src/Views/FilesView.vala:24
+#: src/View/FilesView.vala:29
 msgid "Create a new entry"
 msgstr "Opprett en ny oppføring"
 
-#: src/Views/FilesView.vala:29
-msgid "Light"
+#: src/View/FilesView.vala:35
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "Lys"
 
-#: src/Views/FilesView.vala:30
-msgid "Dark"
+#: src/View/FilesView.vala:36
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "Mørk"
 
-#: src/Views/FilesView.vala:31
-msgid "System"
+#: src/View/FilesView.vala:37
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "System"
 
-#: src/Views/FilesView.vala:34
-msgid "Style"
+#: src/View/FilesView.vala:40
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "Stil"
 
-#: src/Views/FilesView.vala:35
-msgid "Keyboard Shortcuts"
+#: src/View/FilesView.vala:41
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "_Keyboard Shortcuts"
 msgstr "Tastatursnarveier"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:37
+#: src/View/FilesView.vala:43
 #, fuzzy, c-format
 #| msgid "About %s…"
-msgid "About %s"
+msgid "_About %s"
 msgstr "Om %s…"
 
-#: src/Views/FilesView.vala:40
-msgid "Preferences"
-msgstr "Innstillinger"
+#: src/View/FilesView.vala:46
+msgid "Main Menu"
+msgstr ""
 
-#: src/Views/FilesView.vala:66
-msgid "No valid app entries found"
+#: src/View/FilesView.vala:61
+#, fuzzy
+#| msgid "No valid app entries found"
+msgid "No Entries Found"
 msgstr "Fant ingen gyldige programoppføringer"
 
-#: src/Views/FilesView.vala:67
-#, fuzzy
-msgid "If you've never created one, click the + button on the top."
-msgstr "Hvis du aldri har opprettet en kan du klikke «+»-knappen der oppe."
+#: src/View/FilesView.vala:62
+msgid "Click the + button on the top to create one."
+msgstr ""
 
-#: src/Views/FilesView.vala:136
+#: src/View/FilesView.vala:112
+#, fuzzy
+msgid "Delete Entry?"
+msgstr "Oppføring slettet."
+
+#: src/View/FilesView.vala:114
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr ""
+
+#: src/View/FilesView.vala:118
 msgid "Delete…"
 msgstr "Slett ."
 
-#: src/Views/FilesView.vala:142
-#, c-format
-msgid "Are you sure you want to delete “%s”?"
-msgstr "Ønsker du å slette «%s»?"
-
-#: src/Views/FilesView.vala:143
+#: src/View/FilesView.vala:126
 msgid "This removes the app from the launcher."
 msgstr "Dette sletter programmet fra oppstarteren."
 
-#: src/Views/FilesView.vala:146
-msgid "Delete"
+#: src/View/FilesView.vala:129
+#, fuzzy
+#| msgid "Delete"
+msgid "_Delete"
 msgstr "Slett"
 
-#: src/Views/FilesView.vala:158
-#, c-format
-msgid "Could not delete file “%s”"
+#: src/View/FilesView.vala:139
+#, fuzzy, c-format
+#| msgid "Could not delete file “%s”"
+msgid "Failed to Delete Entry of “%s”"
 msgstr "Kunne ikke slette «%s»-filen"
+
+#: src/View/FilesView.vala:140
+msgid "There was an error while removing the app entry."
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:77
+#, fuzzy
+#| msgid "App Categories"
+msgid "Categories"
+msgstr "Programkategorier"
+
+#: src/Widget/CategoriesRow.vala:78
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr "Kategorier som har med programmet å gjøre. (Du kan velge mer enn én.)"
+
+#: src/Widget/CategoriesRow.vala:84
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
+msgstr "Lyd og video"
+
+#: src/Widget/CategoriesRow.vala:85
+msgid "Audio"
+msgstr "Lyd"
+
+#: src/Widget/CategoriesRow.vala:86
+msgid "Video"
+msgstr "Video"
+
+#: src/Widget/CategoriesRow.vala:87
+msgid "Programming"
+msgstr "Programmering"
+
+#: src/Widget/CategoriesRow.vala:88
+msgid "Education"
+msgstr "Utdanning"
+
+#: src/Widget/CategoriesRow.vala:89
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
+msgstr "Spill"
+
+#: src/Widget/CategoriesRow.vala:90
+msgid "Graphics"
+msgstr "Grafikk"
+
+#: src/Widget/CategoriesRow.vala:91
+msgid "Internet"
+msgstr "Internett"
+
+#: src/Widget/CategoriesRow.vala:92
+msgid "Office"
+msgstr "Kontor"
+
+#: src/Widget/CategoriesRow.vala:93
+msgid "Science"
+msgstr "Vitenskap"
+
+#: src/Widget/CategoriesRow.vala:94
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: src/Widget/CategoriesRow.vala:95
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
+msgstr "Systemet"
+
+#: src/Widget/CategoriesRow.vala:96
+msgid "Accessories"
+msgstr "Tilbehør"
+
+#: src/Widget/KeywordsRow.vala:54
+msgid "Keywords"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:55
+msgid "These words can be used as search terms."
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:60
+msgid "Add a new keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:114
+msgid "Keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:118
+#, fuzzy
+msgid "Delete keyword"
+msgstr "Oppføring slettet."
+
+#, fuzzy
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Kjørbar fil"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Kan ikke åpne %s: %s"
+
+#, fuzzy
+#~ msgid "Updated entry."
+#~ msgstr "Oppføring oppdatert."
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Fest snarveier for dine portable favorittprogrammer til din "
+#~ "programoppstarter"
+
+#~ msgid "File Name"
+#~ msgstr "Fornavn"
+
+#, fuzzy
+#~| msgid "Name of the file where these app info is saved."
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "Navnet på filen der denne programinfoen lagres."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Endelse for filen"
+
+#, fuzzy
+#~| msgid "Shown in the launcher or Dock."
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Vis i oppstarteren eller dokken."
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "Beskriver programmet. Kan vises som verktøytips når du holder pekeren "
+#~ "over programoppføringen i oppstarter/dokk."
+
+#, fuzzy
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Kommandoen/programmet som blir startet når du klikker programoppføringen "
+#~ "i oppstarteren. Angi en absolutt sti eller et programalias."
+
+#, fuzzy
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Ikondrakten til symbolet. Angi en absolutt sti eller et programalias."
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Tilknytt programmet til et vindu som har en ID. Bruk dette hvis et annet "
+#~ "eller duplisert ikon vises i dokken når programmet startes."
+
+#, fuzzy, c-format
+#~| msgid "Are you sure you want to delete “%s”?"
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Ønsker du å slette «%s»?"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Anbefalt for navngivning"
+
+#, fuzzy
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Kun bruk bokstaver, tall, understrek, og ingenting som begynner med tall."
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "Inkluder minst to elementer (deler inndeles av punktum). De fleste "
+#~ "programmer bruker tre elementer."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr "For eksempel bør du bruke «%s» for 2D-spillet SuperTux."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Mer info er å finne i %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "filnavngivningsspesifikasjonen, av freedesktop.org"
+
+#~ msgid "Preferences"
+#~ msgstr "Innstillinger"
+
+#, fuzzy
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Hvis du aldri har opprettet en kan du klikke «+»-knappen der oppe."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Ønsker du å slette «%s»?"
 
 #~ msgid "Development"
 #~ msgstr "Utvikling"
@@ -406,9 +569,6 @@ msgstr "Kunne ikke slette «%s»-filen"
 
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "Typen program, der du kan velge flere deler."
-
-#~ msgid "Open"
-#~ msgstr "Åpne"
 
 #, fuzzy
 #~ msgid ""

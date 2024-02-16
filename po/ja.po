@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-02-16 23:52+0900\n"
 "PO-Revision-Date: 2024-01-25 14:15+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
@@ -24,167 +24,147 @@ msgid "General"
 msgstr "一般"
 
 #: data/gtk/help-overlay.ui:15
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
+
+#: data/gtk/help-overlay.ui:21
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "終了する"
 
-#: data/gtk/help-overlay.ui:22
+#: data/gtk/help-overlay.ui:28
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "編集"
 
-#: data/gtk/help-overlay.ui:26
+#: data/gtk/help-overlay.ui:32
+#, fuzzy
+#| msgid "New Entry"
 msgctxt "shortcut window"
-msgid "New File"
-msgstr "新しいファイル"
+msgid "New Entry"
+msgstr "新しいエントリー"
 
-#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
-#. The second "%s" represents the detailed error message.
-#: src/Backend/ExternalAppLauncher.vala:41
-#, c-format
-msgid "Cannot open %s: %s"
-msgstr "%s を開けません: %s"
+#: src/MainWindow.vala:56
+msgid "Entry updated."
+msgstr ""
 
-#: src/CategoryChooser.vala:90
-msgid "Sound & Video"
-msgstr "サウンドとビデオ"
+#: src/MainWindow.vala:60
+msgid "Entry deleted."
+msgstr ""
 
-#: src/CategoryChooser.vala:91
-msgid "Audio"
-msgstr "オーディオ"
+#: src/MainWindow.vala:107
+msgid "Failed to Load Entries"
+msgstr ""
 
-#: src/CategoryChooser.vala:92
-msgid "Video"
-msgstr "ビデオ"
+#: src/MainWindow.vala:108
+msgid "There was an error while loading app entries."
+msgstr ""
 
-#: src/CategoryChooser.vala:93
-msgid "Programming"
-msgstr "プログラミング"
+#: src/MainWindow.vala:110 src/View/EditView.vala:370
+#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#, fuzzy
+#| msgid "Close"
+msgid "_Close"
+msgstr "閉じる"
 
-#: src/CategoryChooser.vala:94
-msgid "Education"
-msgstr "教育"
+#: src/MainWindow.vala:142
+msgid "Save Changes?"
+msgstr ""
 
-#: src/CategoryChooser.vala:95
-msgid "Games"
-msgstr "ゲーム"
+#: src/MainWindow.vala:143
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
 
-#: src/CategoryChooser.vala:96
-msgid "Graphics"
-msgstr "グラフィックス"
+#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#, fuzzy
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "キャンセル"
 
-#: src/CategoryChooser.vala:97
-msgid "Internet"
-msgstr "インターネット"
+#: src/MainWindow.vala:146
+msgid "_Discard"
+msgstr ""
 
-#: src/CategoryChooser.vala:98
-msgid "Office"
-msgstr "オフィス"
+#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#, fuzzy
+#| msgid "Save"
+msgid "_Save"
+msgstr "保存"
 
-#: src/CategoryChooser.vala:99
-msgid "Science"
-msgstr "科学"
-
-#: src/CategoryChooser.vala:100
-msgid "Settings"
-msgstr "設定"
-
-#: src/CategoryChooser.vala:101
-msgid "System Tools"
-msgstr "システムツール"
-
-#: src/CategoryChooser.vala:102
-msgid "Accessories"
-msgstr "アクセサリー"
-
-#: src/MainWindow.vala:51
-msgid "Updated entry."
-msgstr "エントリーを更新しました。"
-
-#: src/MainWindow.vala:55
-msgid "Deleted entry."
-msgstr "エントリーを削除しました。"
-
-#: src/MainWindow.vala:151
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
+#: src/MainWindow.vala:230
+#, fuzzy
+#| msgid "This removes the app from the launcher."
+msgid "Pin portable apps to the launcher"
+msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:161
+#: src/MainWindow.vala:240
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
-#: src/Views/EditView.vala:51
-msgid "Save"
-msgstr "保存"
+#: src/View/EditView.vala:71
+msgid "Required Entries"
+msgstr ""
 
-#: src/Views/EditView.vala:61
-msgid "File Name"
-msgstr "ファイル名"
+#: src/View/EditView.vala:72
+msgid "The following entries need to be filled to save."
+msgstr ""
 
-#: src/Views/EditView.vala:66
-msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "このアプリの情報が保存される .desktop ファイルの名前です。"
-
-#: src/Views/EditView.vala:76
-msgid "Suffix of the file"
-msgstr "ファイル拡張子"
-
-#: src/Views/EditView.vala:88
+#: src/View/EditView.vala:76
 msgid "App Name"
 msgstr "アプリ名"
 
-#: src/Views/EditView.vala:92
-msgid "Shown in the launcher or dock."
-msgstr "ランチャーやドックに表示されます。"
-
-#: src/Views/EditView.vala:107
-msgid "Comment"
-msgstr "コメント"
-
-#: src/Views/EditView.vala:111
-msgid ""
-"Descibes the app. May appear as a tooltip when you hover over the app entry "
-"in the launcher/dock."
-msgstr ""
-"アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーした"
-"際に、ツールチップとして表示されることがあります。"
-
-#: src/Views/EditView.vala:126
+#: src/View/EditView.vala:81
 msgid "Exec File"
 msgstr "実行ファイル"
 
-#: src/Views/EditView.vala:131
-msgid ""
-"The command/app launched when you click the app entry in the launcher. "
-"Specify in an absolute path or an app's alias name."
-msgstr ""
-"ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
-"を、絶対パスかエイリアス名で記入します。"
+#: src/View/EditView.vala:84
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select an executable file…"
+msgstr "実行ファイルを選択"
 
-#: src/Views/EditView.vala:148
+#: src/View/EditView.vala:95
+msgid "Optional Entries"
+msgstr ""
+
+#: src/View/EditView.vala:96
+msgid "Filling these entries improves discoverability in the app launcher."
+msgstr ""
+
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "アイコンファイル"
 
-#: src/Views/EditView.vala:153
-msgid ""
-"The icon branding the app. Specify in an absolute path or an icon's alias "
-"name."
-msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
+#: src/View/EditView.vala:103
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select an icon file…"
+msgstr "アイコンファイルを選択"
 
-#: src/Views/EditView.vala:170
-msgid "App Categories"
-msgstr "アプリのカテゴリー"
+#: src/View/EditView.vala:111
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgid "Generic Name"
+msgstr "一般"
 
-#: src/Views/EditView.vala:174
-msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "アプリが該当するカテゴリーです。 (複数選択可能です。)"
+#: src/View/EditView.vala:116
+msgid "Comment"
+msgstr "コメント"
 
-#: src/Views/EditView.vala:187
-msgid "Advanced configuration"
+#: src/View/EditView.vala:130
+#, fuzzy
+#| msgid "Advanced configuration"
+msgid "Advanced Configurations"
 msgstr "高度な設定"
 
-#: src/Views/EditView.vala:192
+#: src/View/EditView.vala:131
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -192,183 +172,373 @@ msgstr ""
 "ほとんどの場合、ここまでのセクションを埋めるだけでアプリのエントリーを作成可"
 "能です。しかし、一部のアプリでは以下の高度な設定が必要なことがあります。"
 
-#: src/Views/EditView.vala:199
+#: src/View/EditView.vala:135
 msgid "Startup WM Class"
 msgstr "起動時の WM クラス"
 
-#: src/Views/EditView.vala:204
-msgid ""
-"Associate the app with a window that has this ID. Use this if a different or "
-"duplicated icon appears in the dock when the app launches."
-msgstr ""
-"アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つのア"
-"イコンがドックに表示される場合は、この項目を使用してください。"
-
-#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+#: src/View/EditView.vala:140
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
-#: src/Views/EditView.vala:219
-msgid "Check this if you want to register a CUI app."
+#: src/View/EditView.vala:141
+#, fuzzy
+#| msgid "Check this if you want to register a CUI app."
+msgid "Turn on if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、チェックを入れてください。"
 
-#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
-msgid "Open in text editor"
+#: src/View/EditView.vala:145
+#, fuzzy
+#| msgid "Open"
+msgid "_Open"
+msgstr "開く"
+
+#: src/View/EditView.vala:149
+#, fuzzy
+#| msgid "Open in text editor"
+msgid "Open with Text Editor"
 msgstr "テキストエディターで開く"
 
-#: src/Views/EditView.vala:233
-msgid "You can also edit more options by opening in a text editor."
+#: src/View/EditView.vala:150
+#, fuzzy
+#| msgid "You can also edit more options by opening in a text editor."
+msgid "You can also edit more options by opening with a text editor."
 msgstr "テキストエディターで開くことで、さらに多くのオプションを編集可能です。"
 
-#: src/Views/EditView.vala:314
-msgid "Select an executable file"
-msgstr "実行ファイルを選択"
-
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
-msgid "Select"
-msgstr "選択"
-
-#: src/Views/EditView.vala:350
-msgid "ICO, PNG, SVG, or XMP files"
-msgstr "ICO、PNG、SVG、XMP ファイル"
-
-#: src/Views/EditView.vala:353
-msgid "Select an icon file"
-msgstr "アイコンファイルを選択"
-
-#: src/Views/EditView.vala:378
-msgid "Could not open with external app"
-msgstr "外部アプリで開けませんでした"
-
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:161
-msgid "Close"
-msgstr "閉じる"
-
-#: src/Views/EditView.vala:431
+#: src/View/EditView.vala:195
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/Views/EditView.vala:440
-msgid "Editing Entry"
+#: src/View/EditView.vala:211 src/View/EditView.vala:399
+msgid "Untitled App"
+msgstr ""
+
+#: src/View/EditView.vala:231
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select Executable File"
+msgstr "実行ファイルを選択"
+
+#: src/View/EditView.vala:232 src/View/EditView.vala:289
+#, fuzzy
+#| msgid "Select"
+msgid "_Select"
+msgstr "選択"
+
+#: src/View/EditView.vala:285
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO、PNG、SVG、XMP ファイル"
+
+#: src/View/EditView.vala:288
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select Icon File"
+msgstr "アイコンファイルを選択"
+
+#: src/View/EditView.vala:367
+#, fuzzy
+#| msgid "Could not open with external app"
+msgid "Failed to Open with External App"
+msgstr "外部アプリで開けませんでした"
+
+#: src/View/EditView.vala:368
+msgid "There was an error while opening the file with an external app."
+msgstr ""
+
+#: src/View/EditView.vala:424
+#, fuzzy
+#| msgid "Editing Entry"
+msgid "Edit Entry"
 msgstr "エントリーを編集しています"
 
-#: src/Views/EditView.vala:446
-#, c-format
-msgid "Editing “%s”"
+#: src/View/EditView.vala:426
+#, fuzzy, c-format
+#| msgid "Editing “%s”"
+msgid "Edit “%s”"
 msgstr "“%s”を編集しています"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: src/Views/EditView.vala:534
-#, c-format
-msgid "Could not write to file “%s”"
-msgstr "ファイル“%s”に書き込めませんでした"
-
-#: src/Views/EditView.vala:553
-msgid "Recommendations for naming"
-msgstr "ファイル名に関する推奨事項"
-
-#: src/Views/EditView.vala:559
-msgid ""
-"It is recommended to use only alphanumeric characters and underscores. Don't "
-"begin with a number."
+#: src/View/EditView.vala:446
+msgid "Failed to Save Entry"
 msgstr ""
-"英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてくだ"
-"さい。"
 
-#: src/Views/EditView.vala:560
-msgid ""
-"Include at least two elements (sections of the string seperated by a "
-"period). Most apps use three elements."
+#: src/View/EditView.vala:448
+#, c-format
+msgid "Failed to Save Entry of “%s”"
 msgstr ""
-"最低でも、2つ以上の“要素” (ピリオド区切りの文字列) が必要です。ほとんどのアプ"
-"リは要素3つを使います。"
 
-#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-#. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:569
-#, c-format
-msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
+#: src/View/EditView.vala:454
+msgid "There was an error while saving the app entry."
+msgstr ""
 
-#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:578
-#, c-format
-msgid "For more info, see %s."
-msgstr "詳細情報は %sを参照してください。"
-
-#: src/Views/EditView.vala:580
-msgid "the file naming specification by freedesktop.org"
-msgstr "freedesktop.org が策定するファイル命名仕様"
-
-#: src/Views/FilesView.vala:24
+#: src/View/FilesView.vala:29
 msgid "Create a new entry"
 msgstr "新しいエントリーを作成"
 
-#: src/Views/FilesView.vala:29
-msgid "Light"
+#: src/View/FilesView.vala:35
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "ライト"
 
-#: src/Views/FilesView.vala:30
-msgid "Dark"
+#: src/View/FilesView.vala:36
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "ダーク"
 
-#: src/Views/FilesView.vala:31
-msgid "System"
+#: src/View/FilesView.vala:37
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "システム"
 
-#: src/Views/FilesView.vala:34
-msgid "Style"
+#: src/View/FilesView.vala:40
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "スタイル"
 
-#: src/Views/FilesView.vala:35
-msgid "Keyboard Shortcuts"
+#: src/View/FilesView.vala:41
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "_Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:37
-#, c-format
-msgid "About %s"
+#: src/View/FilesView.vala:43
+#, fuzzy, c-format
+#| msgid "About %s"
+msgid "_About %s"
 msgstr "%s について"
 
-#: src/Views/FilesView.vala:40
-msgid "Preferences"
-msgstr "設定"
+#: src/View/FilesView.vala:46
+msgid "Main Menu"
+msgstr ""
 
-#: src/Views/FilesView.vala:66
-msgid "No valid app entries found"
+#: src/View/FilesView.vala:61
+#, fuzzy
+#| msgid "No valid app entries found"
+msgid "No Entries Found"
 msgstr "有効なアプリのエントリーが見つかりません"
 
-#: src/Views/FilesView.vala:67
-msgid "If you've never created one, click the + button on the top."
+#: src/View/FilesView.vala:62
+msgid "Click the + button on the top to create one."
 msgstr ""
-"アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックしてく"
-"ださい。"
 
-#: src/Views/FilesView.vala:136
+#: src/View/FilesView.vala:112
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete Entry?"
+msgstr "エントリーを削除しました。"
+
+#: src/View/FilesView.vala:114
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr ""
+
+#: src/View/FilesView.vala:118
 msgid "Delete…"
 msgstr "削除…"
 
-#: src/Views/FilesView.vala:142
-#, c-format
-msgid "Are you sure you want to delete “%s”?"
-msgstr "“%s”を削除してもよろしいですか？"
-
-#: src/Views/FilesView.vala:143
+#: src/View/FilesView.vala:126
 msgid "This removes the app from the launcher."
 msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
-#: src/Views/FilesView.vala:146
-msgid "Delete"
+#: src/View/FilesView.vala:129
+#, fuzzy
+#| msgid "Delete"
+msgid "_Delete"
 msgstr "削除"
 
-#: src/Views/FilesView.vala:158
-#, c-format
-msgid "Could not delete file “%s”"
+#: src/View/FilesView.vala:139
+#, fuzzy, c-format
+#| msgid "Could not delete file “%s”"
+msgid "Failed to Delete Entry of “%s”"
 msgstr "ファイル“%s”を削除できませんでした"
+
+#: src/View/FilesView.vala:140
+msgid "There was an error while removing the app entry."
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:77
+#, fuzzy
+#| msgid "App Categories"
+msgid "Categories"
+msgstr "アプリのカテゴリー"
+
+#: src/Widget/CategoriesRow.vala:78
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr "アプリが該当するカテゴリーです。 (複数選択可能です。)"
+
+#: src/Widget/CategoriesRow.vala:84
+msgid "Sound & Video"
+msgstr "サウンドとビデオ"
+
+#: src/Widget/CategoriesRow.vala:85
+msgid "Audio"
+msgstr "オーディオ"
+
+#: src/Widget/CategoriesRow.vala:86
+msgid "Video"
+msgstr "ビデオ"
+
+#: src/Widget/CategoriesRow.vala:87
+msgid "Programming"
+msgstr "プログラミング"
+
+#: src/Widget/CategoriesRow.vala:88
+msgid "Education"
+msgstr "教育"
+
+#: src/Widget/CategoriesRow.vala:89
+msgid "Games"
+msgstr "ゲーム"
+
+#: src/Widget/CategoriesRow.vala:90
+msgid "Graphics"
+msgstr "グラフィックス"
+
+#: src/Widget/CategoriesRow.vala:91
+msgid "Internet"
+msgstr "インターネット"
+
+#: src/Widget/CategoriesRow.vala:92
+msgid "Office"
+msgstr "オフィス"
+
+#: src/Widget/CategoriesRow.vala:93
+msgid "Science"
+msgstr "科学"
+
+#: src/Widget/CategoriesRow.vala:94
+msgid "Settings"
+msgstr "設定"
+
+#: src/Widget/CategoriesRow.vala:95
+msgid "System Tools"
+msgstr "システムツール"
+
+#: src/Widget/CategoriesRow.vala:96
+msgid "Accessories"
+msgstr "アクセサリー"
+
+#: src/Widget/KeywordsRow.vala:54
+msgid "Keywords"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:55
+msgid "These words can be used as search terms."
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:60
+msgid "Add a new keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:114
+msgid "Keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:118
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete keyword"
+msgstr "エントリーを削除しました。"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "新しいファイル"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "%s を開けません: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "エントリーを更新しました。"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
+
+#~ msgid "File Name"
+#~ msgstr "ファイル名"
+
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "このアプリの情報が保存される .desktop ファイルの名前です。"
+
+#~ msgid "Suffix of the file"
+#~ msgstr "ファイル拡張子"
+
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "ランチャーやドックに表示されます。"
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーし"
+#~ "た際に、ツールチップとして表示されることがあります。"
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
+#~ "を、絶対パスかエイリアス名で記入します。"
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つ"
+#~ "のアイコンがドックに表示される場合は、この項目を使用してください。"
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "ファイル“%s”に書き込めませんでした"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "ファイル名に関する推奨事項"
+
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてく"
+#~ "ださい。"
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "最低でも、2つ以上の“要素” (ピリオド区切りの文字列) が必要です。ほとんどの"
+#~ "アプリは要素3つを使います。"
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr ""
+#~ "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "詳細情報は %sを参照してください。"
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "freedesktop.org が策定するファイル命名仕様"
+
+#~ msgid "Preferences"
+#~ msgstr "設定"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr ""
+#~ "アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックし"
+#~ "てください。"
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "“%s”を削除してもよろしいですか？"
 
 #~ msgid "Development"
 #~ msgstr "開発"
@@ -384,9 +554,6 @@ msgstr "ファイル“%s”を削除できませんでした"
 
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "アプリの種類です。複数選択できます。"
-
-#~ msgid "Open"
-#~ msgstr "開く"
 
 #~ msgid ""
 #~ "Also, use at least one period to make sure to be separated into at least "

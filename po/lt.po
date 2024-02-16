@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 23:11+0900\n"
+"POT-Creation-Date: 2024-02-16 23:52+0900\n"
 "PO-Revision-Date: 2023-02-04 21:08+0200\n"
 "Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
 "Language-Team: \n"
@@ -25,184 +25,141 @@ msgstr ""
 
 #: data/gtk/help-overlay.ui:15
 msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/gtk/help-overlay.ui:21
+msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: data/gtk/help-overlay.ui:22
+#: data/gtk/help-overlay.ui:28
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr ""
 
-#: data/gtk/help-overlay.ui:26
+#: data/gtk/help-overlay.ui:32
 #, fuzzy
-#| msgid "Exec File"
+#| msgid "New Entry"
 msgctxt "shortcut window"
-msgid "New File"
-msgstr "Vykdomoji rinkmena"
+msgid "New Entry"
+msgstr "Nauja įvestis"
 
-#. TRANSLATORS: The first "%s" represents path to the file that just tried to open.
-#. The second "%s" represents the detailed error message.
-#: src/Backend/ExternalAppLauncher.vala:41
-#, c-format
-msgid "Cannot open %s: %s"
-msgstr "Neįmanoma atverti %s: %s"
-
-#: src/CategoryChooser.vala:90
-#, fuzzy
-#| msgid "Audio & Video"
-msgid "Sound & Video"
-msgstr "Audiovizualinių įrašų programa"
-
-#: src/CategoryChooser.vala:91
-msgid "Audio"
-msgstr "Audio įrašų programa"
-
-#: src/CategoryChooser.vala:92
-msgid "Video"
-msgstr "Vaizdo įrašų programa"
-
-#: src/CategoryChooser.vala:93
-msgid "Programming"
+#: src/MainWindow.vala:56
+msgid "Entry updated."
 msgstr ""
 
-#: src/CategoryChooser.vala:94
-msgid "Education"
-msgstr "Programa mokinimuisi"
-
-#: src/CategoryChooser.vala:95
-#, fuzzy
-#| msgid "Game"
-msgid "Games"
-msgstr "Žaidybinė programa"
-
-#: src/CategoryChooser.vala:96
-msgid "Graphics"
-msgstr "Grafikos programa"
-
-#: src/CategoryChooser.vala:97
-msgid "Internet"
+#: src/MainWindow.vala:60
+msgid "Entry deleted."
 msgstr ""
 
-#: src/CategoryChooser.vala:98
-msgid "Office"
-msgstr "Biuro programa"
-
-#: src/CategoryChooser.vala:99
-msgid "Science"
-msgstr "Mokslinių tyrimų programa"
-
-#: src/CategoryChooser.vala:100
-msgid "Settings"
-msgstr "Nustatymų programa"
-
-#: src/CategoryChooser.vala:101
-#, fuzzy
-#| msgid "System"
-msgid "System Tools"
-msgstr "Sistema"
-
-#: src/CategoryChooser.vala:102
-msgid "Accessories"
+#: src/MainWindow.vala:107
+msgid "Failed to Load Entries"
 msgstr ""
 
-#: src/MainWindow.vala:51
-msgid "Updated entry."
-msgstr "Atnaujinta įvestis."
-
-#: src/MainWindow.vala:55
-msgid "Deleted entry."
-msgstr "Ištrinta įvestis."
-
-#: src/MainWindow.vala:151
-#, fuzzy
-#| msgid ""
-#| "Create the shortcut to your favorite portable apps into your app launcher"
-msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#: src/MainWindow.vala:108
+msgid "There was an error while loading app entries."
 msgstr ""
-"Sukurti po greitąją nuorodą mėgstamiausioms perkeliamoms programėlėms jūsų "
-"programų paleidiklyje"
+
+#: src/MainWindow.vala:110 src/View/EditView.vala:370
+#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#, fuzzy
+#| msgid "Close"
+msgid "_Close"
+msgstr "Uždaryti"
+
+#: src/MainWindow.vala:142
+msgid "Save Changes?"
+msgstr ""
+
+#: src/MainWindow.vala:143
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
+
+#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#, fuzzy
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "Atšaukti"
+
+#: src/MainWindow.vala:146
+msgid "_Discard"
+msgstr ""
+
+#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#, fuzzy
+#| msgid "Save"
+msgid "_Save"
+msgstr "Išsaugoti"
+
+#: src/MainWindow.vala:230
+#, fuzzy
+#| msgid "This removes the app from the launcher."
+msgid "Pin portable apps to the launcher"
+msgstr "Tai pašalina programėlę iš paleidiklio."
 
 #. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:161
+#: src/MainWindow.vala:240
 msgid "translator-credits"
 msgstr "polpolylingo"
 
-#: src/Views/EditView.vala:51
-msgid "Save"
-msgstr "Išsaugoti"
+#: src/View/EditView.vala:71
+msgid "Required Entries"
+msgstr ""
 
-#: src/Views/EditView.vala:61
-msgid "File Name"
-msgstr "Rinkmenos pavadinimas"
+#: src/View/EditView.vala:72
+msgid "The following entries need to be filled to save."
+msgstr ""
 
-#: src/Views/EditView.vala:66
-#, fuzzy
-#| msgid "Name of the file where these app info is saved."
-msgid "Name of the .desktop file, where this app's info will be saved."
-msgstr "Rinkmenos pavadinimas, kurioje kaupiama informacija apie programą."
-
-#: src/Views/EditView.vala:76
-msgid "Suffix of the file"
-msgstr "Rinkmenos pavadinimo praplėtinys"
-
-#: src/Views/EditView.vala:88
+#: src/View/EditView.vala:76
 msgid "App Name"
 msgstr "Programos pavadinimas"
 
-#: src/Views/EditView.vala:92
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
-msgid "Shown in the launcher or dock."
-msgstr "Pateikti paleidiklyje arba Prikabiklyje."
-
-#: src/Views/EditView.vala:107
-msgid "Comment"
-msgstr "Komentaras"
-
-#: src/Views/EditView.vala:111
-msgid ""
-"Descibes the app. May appear as a tooltip when you hover over the app entry "
-"in the launcher/dock."
-msgstr ""
-
-#: src/Views/EditView.vala:126
+#: src/View/EditView.vala:81
 msgid "Exec File"
 msgstr "Vykdomoji rinkmena"
 
-#: src/Views/EditView.vala:131
-msgid ""
-"The command/app launched when you click the app entry in the launcher. "
-"Specify in an absolute path or an app's alias name."
-msgstr ""
-"Paleidiklyje paspaudus ant programėlės įvesties yra įgyvendinama komanda/"
-"paleidžiama programa. Nustatyti visą kelią arba pateikti šios programėlės "
-"alternatyvų vardą."
+#: src/View/EditView.vala:84
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select an executable file…"
+msgstr "Pasirinkti vykdomąją rinkmeną"
 
-#: src/Views/EditView.vala:148
+#: src/View/EditView.vala:95
+msgid "Optional Entries"
+msgstr ""
+
+#: src/View/EditView.vala:96
+msgid "Filling these entries improves discoverability in the app launcher."
+msgstr ""
+
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "Rinkmenos ikonėlė"
 
-#: src/Views/EditView.vala:153
-msgid ""
-"The icon branding the app. Specify in an absolute path or an icon's alias "
-"name."
-msgstr ""
-"Ikonėlė naudojama kaip oficialus programos logotipas. Nustatyti visą kelią "
-"arba pateikti šios ikonėlės alternatyvų vardą."
+#: src/View/EditView.vala:103
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select an icon file…"
+msgstr "Pasirinkti ikonėlės rinkmeną"
 
-#: src/Views/EditView.vala:170
-msgid "App Categories"
-msgstr "Programos kategorija"
-
-#: src/Views/EditView.vala:174
-msgid "Categories applicable to the app. (You can select more than one.)"
+#: src/View/EditView.vala:111
+msgid "Generic Name"
 msgstr ""
 
-#: src/Views/EditView.vala:187
-msgid "Advanced configuration"
+#: src/View/EditView.vala:116
+msgid "Comment"
+msgstr "Komentaras"
+
+#: src/View/EditView.vala:130
+#, fuzzy
+#| msgid "Advanced configuration"
+msgid "Advanced Configurations"
 msgstr "Išplėstiniai nustatymai"
 
-#: src/Views/EditView.vala:192
+#: src/View/EditView.vala:131
 #, fuzzy
 #| msgid ""
 #| "You can create an app entry by filling the sections above in most cases. "
@@ -215,190 +172,380 @@ msgstr ""
 "sekcijas.Jeigu šios sekcijos neveiktų, tuomet Jūs galite panaudoti "
 "tolesniąsias."
 
-#: src/Views/EditView.vala:199
+#: src/View/EditView.vala:135
 msgid "Startup WM Class"
 msgstr "WM klasė paleidimo metu"
 
-#: src/Views/EditView.vala:204
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
-msgid ""
-"Associate the app with a window that has this ID. Use this if a different or "
-"duplicated icon appears in the dock when the app launches."
-msgstr ""
-"Susiekite programėlę su šį ID naudojančiu langeliu. Užpildykite tai, jei "
-"skirtinga ar kopijos ikonėlė prisikabina programėlės paleidimo metu."
-
-#: src/Views/EditView.vala:215 src/Views/EditView.vala:224
+#: src/View/EditView.vala:140
 msgid "Run in Terminal"
 msgstr "Paleisti terminalinėje eilutėje"
 
-#: src/Views/EditView.vala:219
+#: src/View/EditView.vala:141
 #, fuzzy
 #| msgid "Check this in if you want to register a CUI app."
-msgid "Check this if you want to register a CUI app."
+msgid "Turn on if you want to register a CUI app."
 msgstr "Pasirinkti šią parinktį pageidaujant registruoti CUI programėlę."
 
-#: src/Views/EditView.vala:228 src/Views/EditView.vala:239
-msgid "Open in text editor"
+#: src/View/EditView.vala:145
+#, fuzzy
+#| msgid "Open"
+msgid "_Open"
+msgstr "Atidaryti"
+
+#: src/View/EditView.vala:149
+#, fuzzy
+#| msgid "Open in text editor"
+msgid "Open with Text Editor"
 msgstr "Atverti teksto redaktoriuje"
 
-#: src/Views/EditView.vala:233
-msgid "You can also edit more options by opening in a text editor."
+#: src/View/EditView.vala:150
+#, fuzzy
+#| msgid "You can also edit more options by opening in a text editor."
+msgid "You can also edit more options by opening with a text editor."
 msgstr "Atvėrus teksto redaktorių yra daugiau redagavimo parinkčių."
 
-#: src/Views/EditView.vala:314
-msgid "Select an executable file"
-msgstr "Pasirinkti vykdomąją rinkmeną"
-
-#: src/Views/EditView.vala:315 src/Views/EditView.vala:354
-msgid "Select"
-msgstr ""
-
-#: src/Views/EditView.vala:350
-msgid "ICO, PNG, SVG, or XMP files"
-msgstr "ICO, PNG, SVG, arba XMP rinkmenos"
-
-#: src/Views/EditView.vala:353
-msgid "Select an icon file"
-msgstr "Pasirinkti ikonėlės rinkmeną"
-
-#: src/Views/EditView.vala:378
-msgid "Could not open with external app"
-msgstr "Neįmanoma atverti naudojant išorinę programėlę"
-
-#: src/Views/EditView.vala:381 src/Views/EditView.vala:537
-#: src/Views/FilesView.vala:161
-msgid "Close"
-msgstr "Uždaryti"
-
-#: src/Views/EditView.vala:431
+#: src/View/EditView.vala:195
 msgid "New Entry"
 msgstr "Nauja įvestis"
 
-#: src/Views/EditView.vala:440
-msgid "Editing Entry"
+#: src/View/EditView.vala:211 src/View/EditView.vala:399
+msgid "Untitled App"
+msgstr ""
+
+#: src/View/EditView.vala:231
+#, fuzzy
+#| msgid "Select an executable file"
+msgid "Select Executable File"
+msgstr "Pasirinkti vykdomąją rinkmeną"
+
+#: src/View/EditView.vala:232 src/View/EditView.vala:289
+msgid "_Select"
+msgstr ""
+
+#: src/View/EditView.vala:285
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ICO, PNG, SVG, arba XMP rinkmenos"
+
+#: src/View/EditView.vala:288
+#, fuzzy
+#| msgid "Select an icon file"
+msgid "Select Icon File"
+msgstr "Pasirinkti ikonėlės rinkmeną"
+
+#: src/View/EditView.vala:367
+#, fuzzy
+#| msgid "Could not open with external app"
+msgid "Failed to Open with External App"
+msgstr "Neįmanoma atverti naudojant išorinę programėlę"
+
+#: src/View/EditView.vala:368
+msgid "There was an error while opening the file with an external app."
+msgstr ""
+
+#: src/View/EditView.vala:424
+#, fuzzy
+#| msgid "Editing Entry"
+msgid "Edit Entry"
 msgstr "Keisti įvestį"
 
-#: src/Views/EditView.vala:446
-#, c-format
-msgid "Editing “%s”"
+#: src/View/EditView.vala:426
+#, fuzzy, c-format
+#| msgid "Editing “%s”"
+msgid "Edit “%s”"
 msgstr "Keisti „%s“"
 
-#: src/Views/EditView.vala:499 src/Views/FilesView.vala:145
-msgid "Cancel"
-msgstr "Atšaukti"
-
-#: src/Views/EditView.vala:534
-#, c-format
-msgid "Could not write to file “%s”"
-msgstr "Neišeina įrašyti į rinkmeną „%s“"
-
-#: src/Views/EditView.vala:553
-msgid "Recommendations for naming"
-msgstr "Įvardinimo rekomendacijos"
-
-#: src/Views/EditView.vala:559
-#, fuzzy
-#| msgid ""
-#| "It is recommended to use only alphabets, numbers, and underscores, and "
-#| "none begins with numbers."
-msgid ""
-"It is recommended to use only alphanumeric characters and underscores. Don't "
-"begin with a number."
-msgstr ""
-"Yra patartina naudoti tik raidynus, skaičius, ir pabraukimo brūkšnius, ir "
-"nei vienas nėra pradedamas skaičiumi."
-
-#: src/Views/EditView.vala:560
-msgid ""
-"Include at least two elements (sections of the string seperated by a "
-"period). Most apps use three elements."
+#: src/View/EditView.vala:446
+msgid "Failed to Save Entry"
 msgstr ""
 
-#. TRANSLATORS: "%s" will be replaced by the string "org.supertuxproject.SuperTux" which is
-#. the desktop file name of SuperTux.
-#: src/Views/EditView.vala:569
+#: src/View/EditView.vala:448
 #, c-format
-msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-msgstr "Pavyzdžiui, tau reikia naudoti \"%s\" 2D žaidimui, „SuperTux“."
+msgid "Failed to Save Entry of “%s”"
+msgstr ""
 
-#. TRANSLATORS: "%s" will be replaced by the translated string of the text "the file naming specification by freedesktop.org".
-#: src/Views/EditView.vala:578
-#, c-format
-msgid "For more info, see %s."
-msgstr "Daugiau, žiū. %s."
+#: src/View/EditView.vala:454
+msgid "There was an error while saving the app entry."
+msgstr ""
 
-#: src/Views/EditView.vala:580
-msgid "the file naming specification by freedesktop.org"
-msgstr "rinkmenos užvadinimo specifikacija pagal freedesktop.org"
-
-#: src/Views/FilesView.vala:24
+#: src/View/FilesView.vala:29
 msgid "Create a new entry"
 msgstr "Kurti naują įvestį"
 
-#: src/Views/FilesView.vala:29
-msgid "Light"
+#: src/View/FilesView.vala:35
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "Šviesus"
 
-#: src/Views/FilesView.vala:30
-msgid "Dark"
+#: src/View/FilesView.vala:36
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "Tamsus"
 
-#: src/Views/FilesView.vala:31
-msgid "System"
+#: src/View/FilesView.vala:37
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "Sistema"
 
-#: src/Views/FilesView.vala:34
-msgid "Style"
+#: src/View/FilesView.vala:40
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "Stilius"
 
-#: src/Views/FilesView.vala:35
-msgid "Keyboard Shortcuts"
+#: src/View/FilesView.vala:41
+msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/Views/FilesView.vala:37
+#: src/View/FilesView.vala:43
 #, fuzzy, c-format
 #| msgid "About %s…"
-msgid "About %s"
+msgid "_About %s"
 msgstr "Apie %s…"
 
-#: src/Views/FilesView.vala:40
-msgid "Preferences"
-msgstr "Nustatymai"
+#: src/View/FilesView.vala:46
+msgid "Main Menu"
+msgstr ""
 
-#: src/Views/FilesView.vala:66
-msgid "No valid app entries found"
+#: src/View/FilesView.vala:61
+#, fuzzy
+#| msgid "No valid app entries found"
+msgid "No Entries Found"
 msgstr "Nebuvo rasta tinkamos programėlės įvesties"
 
-#: src/Views/FilesView.vala:67
-msgid "If you've never created one, click the + button on the top."
-msgstr "Jeigu nemėginai įgyvendinti spausk Plius mygtuką viršuje."
+#: src/View/FilesView.vala:62
+msgid "Click the + button on the top to create one."
+msgstr ""
 
-#: src/Views/FilesView.vala:136
+#: src/View/FilesView.vala:112
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete Entry?"
+msgstr "Ištrinta įvestis."
+
+#: src/View/FilesView.vala:114
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr ""
+
+#: src/View/FilesView.vala:118
 msgid "Delete…"
 msgstr "Ištrinti…"
 
-#: src/Views/FilesView.vala:142
-#, c-format
-msgid "Are you sure you want to delete “%s”?"
-msgstr "Ar esi tikras, kad nori ištrinti „%s“?"
-
-#: src/Views/FilesView.vala:143
+#: src/View/FilesView.vala:126
 msgid "This removes the app from the launcher."
 msgstr "Tai pašalina programėlę iš paleidiklio."
 
-#: src/Views/FilesView.vala:146
-msgid "Delete"
+#: src/View/FilesView.vala:129
+#, fuzzy
+#| msgid "Delete"
+msgid "_Delete"
 msgstr "Ištrinti"
 
-#: src/Views/FilesView.vala:158
-#, c-format
-msgid "Could not delete file “%s”"
+#: src/View/FilesView.vala:139
+#, fuzzy, c-format
+#| msgid "Could not delete file “%s”"
+msgid "Failed to Delete Entry of “%s”"
 msgstr "Neįmanoma ištrinti rinkmenos „%s“"
+
+#: src/View/FilesView.vala:140
+msgid "There was an error while removing the app entry."
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:77
+#, fuzzy
+#| msgid "App Categories"
+msgid "Categories"
+msgstr "Programos kategorija"
+
+#: src/Widget/CategoriesRow.vala:78
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:84
+#, fuzzy
+#| msgid "Audio & Video"
+msgid "Sound & Video"
+msgstr "Audiovizualinių įrašų programa"
+
+#: src/Widget/CategoriesRow.vala:85
+msgid "Audio"
+msgstr "Audio įrašų programa"
+
+#: src/Widget/CategoriesRow.vala:86
+msgid "Video"
+msgstr "Vaizdo įrašų programa"
+
+#: src/Widget/CategoriesRow.vala:87
+msgid "Programming"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:88
+msgid "Education"
+msgstr "Programa mokinimuisi"
+
+#: src/Widget/CategoriesRow.vala:89
+#, fuzzy
+#| msgid "Game"
+msgid "Games"
+msgstr "Žaidybinė programa"
+
+#: src/Widget/CategoriesRow.vala:90
+msgid "Graphics"
+msgstr "Grafikos programa"
+
+#: src/Widget/CategoriesRow.vala:91
+msgid "Internet"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:92
+msgid "Office"
+msgstr "Biuro programa"
+
+#: src/Widget/CategoriesRow.vala:93
+msgid "Science"
+msgstr "Mokslinių tyrimų programa"
+
+#: src/Widget/CategoriesRow.vala:94
+msgid "Settings"
+msgstr "Nustatymų programa"
+
+#: src/Widget/CategoriesRow.vala:95
+#, fuzzy
+#| msgid "System"
+msgid "System Tools"
+msgstr "Sistema"
+
+#: src/Widget/CategoriesRow.vala:96
+msgid "Accessories"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:54
+msgid "Keywords"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:55
+msgid "These words can be used as search terms."
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:60
+msgid "Add a new keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:114
+msgid "Keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:118
+#, fuzzy
+#| msgid "Deleted entry."
+msgid "Delete keyword"
+msgstr "Ištrinta įvestis."
+
+#, fuzzy
+#~| msgid "Exec File"
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Vykdomoji rinkmena"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Neįmanoma atverti %s: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Atnaujinta įvestis."
+
+#, fuzzy
+#~| msgid ""
+#~| "Create the shortcut to your favorite portable apps into your app launcher"
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Sukurti po greitąją nuorodą mėgstamiausioms perkeliamoms programėlėms "
+#~ "jūsų programų paleidiklyje"
+
+#~ msgid "File Name"
+#~ msgstr "Rinkmenos pavadinimas"
+
+#, fuzzy
+#~| msgid "Name of the file where these app info is saved."
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "Rinkmenos pavadinimas, kurioje kaupiama informacija apie programą."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Rinkmenos pavadinimo praplėtinys"
+
+#, fuzzy
+#~| msgid "Shown in the launcher or Dock."
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Pateikti paleidiklyje arba Prikabiklyje."
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Paleidiklyje paspaudus ant programėlės įvesties yra įgyvendinama komanda/"
+#~ "paleidžiama programa. Nustatyti visą kelią arba pateikti šios programėlės "
+#~ "alternatyvų vardą."
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Ikonėlė naudojama kaip oficialus programos logotipas. Nustatyti visą "
+#~ "kelią arba pateikti šios ikonėlės alternatyvų vardą."
+
+#, fuzzy
+#~| msgid ""
+#~| "Associate the app with a window that has this ID. Fill in this if a "
+#~| "different or duplicated icon comes up to the dock when the app launches."
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Susiekite programėlę su šį ID naudojančiu langeliu. Užpildykite tai, jei "
+#~ "skirtinga ar kopijos ikonėlė prisikabina programėlės paleidimo metu."
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Neišeina įrašyti į rinkmeną „%s“"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Įvardinimo rekomendacijos"
+
+#, fuzzy
+#~| msgid ""
+#~| "It is recommended to use only alphabets, numbers, and underscores, and "
+#~| "none begins with numbers."
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Yra patartina naudoti tik raidynus, skaičius, ir pabraukimo brūkšnius, ir "
+#~ "nei vienas nėra pradedamas skaičiumi."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr "Pavyzdžiui, tau reikia naudoti \"%s\" 2D žaidimui, „SuperTux“."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Daugiau, žiū. %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "rinkmenos užvadinimo specifikacija pagal freedesktop.org"
+
+#~ msgid "Preferences"
+#~ msgstr "Nustatymai"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Jeigu nemėginai įgyvendinti spausk Plius mygtuką viršuje."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Ar esi tikras, kad nori ištrinti „%s“?"
 
 #~ msgid "Development"
 #~ msgstr "Kūrėjo ir plėtros programa"
@@ -416,9 +563,6 @@ msgstr "Neįmanoma ištrinti rinkmenos „%s“"
 
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "Programos išskirtiniai bruožai, keleta pasirenkamų variantų."
-
-#~ msgid "Open"
-#~ msgstr "Atidaryti"
 
 #~ msgid ""
 #~ "Also, use at least one period to make sure to be separated into at least "
