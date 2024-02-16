@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2023-06-22 16:25+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -50,38 +50,36 @@ msgstr ""
 "souborů"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr "Automaticky přidejte oprávnění ke spuštění do souboru, který vyberete"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Detekce syntaktických chyb"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Automaticky ukládejte vše – svá data při úpravách, poslední otevřené "
-"zobrazení a předvolby"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Zobrazení souborů ve světlém režimu"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Editace ve světlém režimu"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Zobrazení souborů v tmavém režimu"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Editace ve světlém režimu"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Editace v tmavém režimu"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Editace v tmavém režimu"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -92,6 +90,22 @@ msgstr "Nástroj pro tvorbu souborů na ploše"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Detekce syntaktických chyb"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Automaticky ukládejte vše – svá data při úpravách, poslední otevřené "
+#~ "zobrazení a předvolby"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Zobrazení souborů ve světlém režimu"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Zobrazení souborů v tmavém režimu"
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Aktualizace verzi runtime Flatpak"

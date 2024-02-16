@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2023-09-26 05:59+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -46,38 +46,36 @@ msgid "Edit or delete created app entries without opening the file manager"
 msgstr "Редактируйте или удаляйте созданные записи без файлового менеджера"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr "Автоматически добавляет разрешение на выполнение выбранного файла"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Обнаружение синтаксических ошибок"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Автоматически всё сохраняет — ваши данные при редактировании, последнее "
-"открытое представление и настройки"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Просмотр файлов в светлом режиме"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Редактирование в светлом режиме"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Просмотр файлов в тёмном режиме"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Редактирование в светлом режиме"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Редактирование в тёмном режиме"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Редактирование в тёмном режиме"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -88,6 +86,22 @@ msgstr "Создатель файлов рабочего стола"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Рабочий стол;Файл;Создать;Редактировать;Информация;Иконка;AppImage;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Обнаружение синтаксических ошибок"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Автоматически всё сохраняет — ваши данные при редактировании, последнее "
+#~ "открытое представление и настройки"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Просмотр файлов в светлом режиме"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Просмотр файлов в тёмном режиме"
 
 #~ msgid "Fix deprecations in GTK 4.10"
 #~ msgstr "Исправлены устаревания в GTK 4.10"

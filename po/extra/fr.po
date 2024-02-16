@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-28 03:00+0000\n"
+"POT-Creation-Date: 2024-02-16 14:51+0000\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
@@ -51,39 +51,37 @@ msgstr ""
 "gestionnaire de fichiers"
 
 #: data/pinit.metainfo.xml.in:21
-msgid "Automatically add execution permission to the file you select"
+#, fuzzy
+#| msgid "Automatically add execution permission to the file you select"
+msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 "Ajout automatique de l’autorisation d’exécution pour le fichier sélectionné"
 
-#: data/pinit.metainfo.xml.in:22
-msgid "Syntax error detection"
-msgstr "Détection d’erreurs de syntaxe"
-
-#: data/pinit.metainfo.xml.in:23
-msgid ""
-"Automatically save everything―your data in editing, last open view, and "
-"preferences"
-msgstr ""
-"Sauvegarde automatique de vos données en cours d’édition, de la dernière vue "
-"ouverte et des préférences"
-
-#: data/pinit.metainfo.xml.in:29
-msgid "Files view in the light mode"
-msgstr "Vue des fichiers dans le mode clair"
-
-#: data/pinit.metainfo.xml.in:34
-msgid "Edit view in the light mode"
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "List of app entries in the light mode"
 msgstr "Vue de l’édition dans le mode clair"
 
-#: data/pinit.metainfo.xml.in:39
-msgid "Files view in the dark mode"
-msgstr "Vue des fichiers dans le mode sombre"
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+#| msgid "Edit view in the light mode"
+msgid "Editing the app entry in the light mode"
+msgstr "Vue de l’édition dans le mode clair"
 
-#: data/pinit.metainfo.xml.in:44
-msgid "Edit view in the dark mode"
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "List of app entries in the dark mode"
 msgstr "Vue de l’édition dans le mode sombre"
 
-#: data/pinit.metainfo.xml.in:62
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+#| msgid "Edit view in the dark mode"
+msgid "Editing the app entry in the dark mode"
+msgstr "Vue de l’édition dans le mode sombre"
+
+#: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -94,6 +92,22 @@ msgstr "Créateur de fichiers desktop"
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Bureau;Fichier;Créer;Modifier;Info;Icône;AppImage;"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Détection d’erreurs de syntaxe"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Sauvegarde automatique de vos données en cours d’édition, de la dernière "
+#~ "vue ouverte et des préférences"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Vue des fichiers dans le mode clair"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Vue des fichiers dans le mode sombre"
 
 #~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 #~ msgstr ""
