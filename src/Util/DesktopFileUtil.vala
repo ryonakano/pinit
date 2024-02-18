@@ -27,7 +27,7 @@ namespace Util.DesktopFileUtil {
         ret = Posix.stat (path, out sbuf);
         if (ret != 0) {
             warning ("add_exec_permission: Failed to get the current mode of \"%s\": %s",
-                    path, Posix.strerror (Posix.errno));
+                     path, Posix.strerror (Posix.errno));
             return false;
         }
 
