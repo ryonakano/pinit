@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2024-01-28 00:38+0000\n"
+"PO-Revision-Date: 2024-02-20 02:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -26,8 +26,6 @@ msgid "General"
 msgstr "Загальне"
 
 #: data/gtk/help-overlay.ui:15
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Комбінації клавіш"
@@ -43,66 +41,58 @@ msgid "Edit"
 msgstr "Змінити"
 
 #: data/gtk/help-overlay.ui:32
-#, fuzzy
-#| msgid "New Entry"
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Новий запис"
 
 #: src/MainWindow.vala:56
 msgid "Entry updated."
-msgstr ""
+msgstr "Запис оновлено."
 
 #: src/MainWindow.vala:60
 msgid "Entry deleted."
-msgstr ""
+msgstr "Запис видалено."
 
 #: src/MainWindow.vala:107
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Не вдалося завантажити записи"
 
 #: src/MainWindow.vala:108
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Виникла помилка під час завантаження записів застосунків."
 
 #: src/MainWindow.vala:110 src/View/EditView.vala:370
 #: src/View/EditView.vala:456 src/View/FilesView.vala:142
-#, fuzzy
-#| msgid "Close"
 msgid "_Close"
-msgstr "Закрити"
+msgstr "_Закрити"
 
 #: src/MainWindow.vala:142
 msgid "Save Changes?"
-msgstr ""
+msgstr "Зберегти зміни?"
 
 #: src/MainWindow.vala:143
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Відкриті записи містять незбережені зміни. Зміни, які не будуть збережені, "
+"будуть назавжди втрачені."
 
 #: src/MainWindow.vala:145 src/View/FilesView.vala:128
-#, fuzzy
-#| msgid "Cancel"
 msgid "_Cancel"
-msgstr "Скасувати"
+msgstr "_Скасувати"
 
 #: src/MainWindow.vala:146
 msgid "_Discard"
-msgstr ""
+msgstr "_Відкинути"
 
 #: src/MainWindow.vala:147 src/View/EditView.vala:42
-#, fuzzy
-#| msgid "Save"
 msgid "_Save"
-msgstr "Зберегти"
+msgstr "_Зберегти"
 
 #: src/MainWindow.vala:230
-#, fuzzy
-#| msgid "This removes the app from the launcher."
 msgid "Pin portable apps to the launcher"
-msgstr "Це видалить застосунок з панелі запуску."
+msgstr "Прикріплюйте портативні застосунки у панелі запуску"
 
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/MainWindow.vala:240
@@ -111,11 +101,11 @@ msgstr "Ihor Hordiichuk"
 
 #: src/View/EditView.vala:71
 msgid "Required Entries"
-msgstr ""
+msgstr "Обов'язкові записи"
 
 #: src/View/EditView.vala:72
 msgid "The following entries need to be filled to save."
-msgstr ""
+msgstr "Для збереження необхідно заповнити ці поля."
 
 #: src/View/EditView.vala:76
 msgid "App Name"
@@ -126,45 +116,36 @@ msgid "Exec File"
 msgstr "Виконуваний файл"
 
 #: src/View/EditView.vala:84
-#, fuzzy
-#| msgid "Select an executable file"
 msgid "Select an executable file…"
-msgstr "Вибрати виконуваний файл"
+msgstr "Вибрати виконуваний файл…"
 
 #: src/View/EditView.vala:95
 msgid "Optional Entries"
-msgstr ""
+msgstr "Необов'язкові записи"
 
 #: src/View/EditView.vala:96
 msgid "Filling these entries improves discoverability in the app launcher."
-msgstr ""
+msgstr "Заповнення цих полів поліпшує виявність в панелі запуску застосунків."
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "Файл піктограми"
 
 #: src/View/EditView.vala:103
-#, fuzzy
-#| msgid "Select an icon file"
 msgid "Select an icon file…"
-msgstr "Вибрати файл піктограми"
+msgstr "Вибрати файл піктограми…"
 
 #: src/View/EditView.vala:111
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "General"
 msgid "Generic Name"
-msgstr "Загальне"
+msgstr "Загальна назва"
 
 #: src/View/EditView.vala:116
 msgid "Comment"
 msgstr "Коментар"
 
 #: src/View/EditView.vala:130
-#, fuzzy
-#| msgid "Advanced configuration"
 msgid "Advanced Configurations"
-msgstr "Розширена конфігурація"
+msgstr "Розширені конфігурації"
 
 #: src/View/EditView.vala:131
 msgid ""
@@ -184,29 +165,22 @@ msgid "Run in Terminal"
 msgstr "Запускати у терміналі"
 
 #: src/View/EditView.vala:141
-#, fuzzy
-#| msgid "Check this if you want to register a CUI app."
 msgid "Turn on if you want to register a CUI app."
-msgstr "Позначте, якщо хочете зареєструвати застосунок CUI."
+msgstr "Увімкніть, якщо хочете зареєструвати застосунок CUI."
 
 #: src/View/EditView.vala:145
-#, fuzzy
-#| msgid "Open"
 msgid "_Open"
-msgstr "Відкрити"
+msgstr "_Відкрити"
 
 #: src/View/EditView.vala:149
-#, fuzzy
-#| msgid "Open in text editor"
 msgid "Open with Text Editor"
-msgstr "Відкрити в текстовому редакторі"
+msgstr "Відкрити за допомогою текстового редактора"
 
 #: src/View/EditView.vala:150
-#, fuzzy
-#| msgid "You can also edit more options by opening in a text editor."
 msgid "You can also edit more options by opening with a text editor."
 msgstr ""
-"Ви також можете змінити інші параметри, відкривши їх у текстовому редакторі."
+"Ви також можете змінити інші параметри, відкривши їх за допомогою текстового "
+"редактора."
 
 #: src/View/EditView.vala:195
 msgid "New Entry"
@@ -214,130 +188,104 @@ msgstr "Новий запис"
 
 #: src/View/EditView.vala:211 src/View/EditView.vala:399
 msgid "Untitled App"
-msgstr ""
+msgstr "Застосунок без назви"
 
 #: src/View/EditView.vala:231
-#, fuzzy
-#| msgid "Select an executable file"
 msgid "Select Executable File"
 msgstr "Вибрати виконуваний файл"
 
 #: src/View/EditView.vala:232 src/View/EditView.vala:289
-#, fuzzy
-#| msgid "Select"
 msgid "_Select"
-msgstr "Вибрати"
+msgstr "_Вибрати"
 
 #: src/View/EditView.vala:285
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "Файли ICO, PNG, SVG або XMP"
 
 #: src/View/EditView.vala:288
-#, fuzzy
-#| msgid "Select an icon file"
 msgid "Select Icon File"
 msgstr "Вибрати файл піктограми"
 
 #: src/View/EditView.vala:367
-#, fuzzy
-#| msgid "Could not open with external app"
 msgid "Failed to Open with External App"
 msgstr "Не вдалося відкрити в зовнішньому застосунку"
 
 #: src/View/EditView.vala:368
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Виникла помилка під час відкриття файлу зовнішнім застосунком."
 
 #: src/View/EditView.vala:424
-#, fuzzy
-#| msgid "Editing Entry"
 msgid "Edit Entry"
-msgstr "Редагування запису"
+msgstr "Редагувати запис"
 
 #: src/View/EditView.vala:426
-#, fuzzy, c-format
-#| msgid "Editing “%s”"
+#, c-format
 msgid "Edit “%s”"
-msgstr "Редагування «%s»"
+msgstr "Редагувати «%s»"
 
 #: src/View/EditView.vala:446
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Не вдалося зберегти запис"
 
 #: src/View/EditView.vala:448
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Не вдалося зберегти запис «%s»"
 
 #: src/View/EditView.vala:454
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Виникла помилка під час збереження запису застосунку."
 
 #: src/View/FilesView.vala:29
 msgid "Create a new entry"
 msgstr "Створити новий запис"
 
 #: src/View/FilesView.vala:35
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Світлий"
+msgstr "_Світлий"
 
 #: src/View/FilesView.vala:36
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Темний"
+msgstr "_Темний"
 
 #: src/View/FilesView.vala:37
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Системи"
+msgstr "С_истеми"
 
 #: src/View/FilesView.vala:40
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "Стиль"
+msgstr "С_тиль"
 
 #: src/View/FilesView.vala:41
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "_Keyboard Shortcuts"
-msgstr "Комбінації клавіш"
+msgstr "_Комбінації клавіш"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/View/FilesView.vala:43
-#, fuzzy, c-format
-#| msgid "About %s"
+#, c-format
 msgid "_About %s"
-msgstr "Про %s"
+msgstr "_Про %s"
 
 #: src/View/FilesView.vala:46
 msgid "Main Menu"
-msgstr ""
+msgstr "Головне меню"
 
 #: src/View/FilesView.vala:61
-#, fuzzy
-#| msgid "No valid app entries found"
 msgid "No Entries Found"
-msgstr "Не знайдено дійсних записів застосунків"
+msgstr "Записів не знайдено"
 
 #: src/View/FilesView.vala:62
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Натисніть кнопку + вгорі, щоб створити його."
 
 #: src/View/FilesView.vala:112
-#, fuzzy
-#| msgid "Deleted entry."
 msgid "Delete Entry?"
-msgstr "Видалений запис."
+msgstr "Видалити запис?"
 
 #: src/View/FilesView.vala:114
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Видалити запис «%s»?"
 
 #: src/View/FilesView.vala:118
 msgid "Delete…"
@@ -348,26 +296,21 @@ msgid "This removes the app from the launcher."
 msgstr "Це видалить застосунок з панелі запуску."
 
 #: src/View/FilesView.vala:129
-#, fuzzy
-#| msgid "Delete"
 msgid "_Delete"
-msgstr "Видалити"
+msgstr "_Видалити"
 
 #: src/View/FilesView.vala:139
-#, fuzzy, c-format
-#| msgid "Could not delete file “%s”"
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "Не вдалося видалити файл «%s»"
+msgstr "Не вдалося видалити запис «%s»"
 
 #: src/View/FilesView.vala:140
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Виникла помилка під час видалення запису застосунку."
 
 #: src/Widget/CategoriesRow.vala:77
-#, fuzzy
-#| msgid "App Categories"
 msgid "Categories"
-msgstr "Категорії застосунку"
+msgstr "Категорії"
 
 #: src/Widget/CategoriesRow.vala:78
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -427,25 +370,23 @@ msgstr "Приналежності"
 
 #: src/Widget/KeywordsRow.vala:54
 msgid "Keywords"
-msgstr ""
+msgstr "Ключові слова"
 
 #: src/Widget/KeywordsRow.vala:55
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Ці слова можна використовувати як пошукові терміни."
 
 #: src/Widget/KeywordsRow.vala:60
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Додати нове ключове слово"
 
 #: src/Widget/KeywordsRow.vala:114
 msgid "Keyword"
-msgstr ""
+msgstr "Ключове слово"
 
 #: src/Widget/KeywordsRow.vala:118
-#, fuzzy
-#| msgid "Deleted entry."
 msgid "Delete keyword"
-msgstr "Видалений запис."
+msgstr "Видалити ключове слово"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"
