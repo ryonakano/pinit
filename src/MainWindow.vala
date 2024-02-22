@@ -31,6 +31,9 @@ public class MainWindow : Adw.ApplicationWindow {
         height_request = 400;
 
         model = new Model.DesktopFileModel ();
+        model.load_failure.connect (on_load_failure);
+        model.load_success.connect (on_load_success);
+
         model.load ();
 
         files_view = new View.FilesView (this, model.files_list);
@@ -62,9 +65,6 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         content = overlay;
-
-        model.load_failure.connect (on_load_failure);
-        model.load_success.connect (on_load_success);
 
         files_view.new_activated.connect (() => {
             on_new_activate ();
