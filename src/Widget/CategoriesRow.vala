@@ -11,52 +11,10 @@
  */
 public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
-     * A signal emitted when categories are changed.
+     * A signal emitted when categories are changed (specifically, when a {@link Adw.SwitchRow} in this
+     * is turned on / off).
      */
     public signal void categories_changed ();
-
-    /**
-     * Categories of the app.
-     */
-    public string[] categories {
-        owned get {
-            string[] _categories = {};
-
-            /*
-             * Each category has a switch row.
-             * If the switch row is activated, that means that category is selected,
-             * so we add the name of that category in the Categories section
-             * in the desktop file.
-             */
-            foreach (var item in row_items) {
-                if (item.row.active) {
-                    _categories += item.category;
-                }
-            }
-
-            return _categories;
-        }
-
-        /*
-         * Read the listed categories in the Categories section of the desktop file,
-         * and reflect them to the UI.
-         */
-        set {
-            foreach (var item in row_items) {
-                // Clear the current selection
-                item.row.active = false;
-
-                foreach (var category in value) {
-                    // The category is in the desktop file
-                    if (item.category == category) {
-                        item.row.active = true;
-                        // We find the category matching, so no longer need the rest of the loop.
-                        continue;
-                    }
-                }
-            }
-        }
-    }
 
     /**
      * Stores all of the switch rows in this expander row.
@@ -69,6 +27,9 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
      */
     private Gee.HashMap<string, string> categories_table;
 
+    /**
+     * The constructor.
+     */
     public CategoriesRow () {
     }
 
@@ -103,6 +64,54 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
             row_items.add (item);
             add_row (item.row);
         }
+    }
+
+    /**
+     * Return categories in a string array.
+     *
+     * @return categories represented in a string array
+     */
+    public string[] to_strv () {
+        string[] _categories = {};
+
+        /*
+         * Each category has a switch row.
+         * If the switch row is activated, that means that category is selected,
+         * so we add the name of that category in the Categories section
+         * in the desktop file.
+         */
+        row_items.foreach ((item) => {
+            if (item.row.active) {
+                _categories += item.category;
+            }
+
+            return true;
+        });
+
+        return _categories;
+    }
+
+    /**
+     * Reflect categories in a string array to the UI.
+     *
+     * @param categories categories represented in a string array
+     */
+    public void from_strv (string[] categories) {
+        row_items.foreach ((item) => {
+            // Clear the current selection
+            item.row.active = false;
+
+            foreach (unowned string category in categories) {
+                // The category is in the desktop file
+                if (item.category == category) {
+                    item.row.active = true;
+                    // We find the category matching, so no longer need the rest of the loop.
+                    continue;
+                }
+            }
+
+            return true;
+        });
     }
 
     private class RowItem : Object {

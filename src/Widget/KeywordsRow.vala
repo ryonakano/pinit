@@ -15,38 +15,13 @@ public class Widget.KeywordsRow : Adw.ExpanderRow {
     public signal void keywords_changed ();
 
     /**
-     * Keywords of the app.
-     */
-    public string[] keywords {
-        owned get {
-            string[] _keywords = {};
-
-            rows.foreach ((row) => {
-                _keywords += row.text;
-                return true;
-            });
-
-            return _keywords;
-        }
-
-        set {
-            // Clear all of the currently added entries
-            rows.foreach ((row) => {
-                remove_row (row);
-                return true;
-            });
-
-            foreach (unowned string keyword in value) {
-                add_keyword (keyword);
-            }
-        }
-    }
-
-    /**
      * Stores all of the rows in this expander row.
      */
     private Gee.ArrayList<KeywordRow> rows;
 
+    /**
+     * The constructor.
+     */
     public KeywordsRow () {
     }
 
@@ -67,6 +42,39 @@ public class Widget.KeywordsRow : Adw.ExpanderRow {
             expanded = true;
             add_keyword ();
         });
+    }
+
+    /**
+     * Return keywords in a string array.
+     *
+     * @return keywords represented in a string array
+     */
+    public string[] to_strv () {
+        string[] _keywords = {};
+
+        rows.foreach ((row) => {
+            _keywords += row.text;
+            return true;
+        });
+
+        return _keywords;
+    }
+
+    /**
+     * Reflect keywords in a string array to the UI.
+     *
+     * @param keywords keywords represented in a string array
+     */
+    public void from_strv (string[] keywords) {
+        // Clear all of the currently added entries
+        rows.foreach ((row) => {
+            remove_row (row);
+            return true;
+        });
+
+        foreach (unowned string keyword in keywords) {
+            add_keyword (keyword);
+        }
     }
 
     /**
