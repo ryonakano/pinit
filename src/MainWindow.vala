@@ -31,9 +31,12 @@ public class MainWindow : Adw.ApplicationWindow {
         height_request = 400;
 
         model = new Model.DesktopFileModel ();
-        model.load ();
+        model.load_failure.connect (on_load_failure);
+        model.load_success.connect (on_load_success);
 
-        files_view = new View.FilesView (this, model.files_list);
+        model.load.begin ();
+
+        files_view = new View.FilesView (this);
         edit_view = new View.EditView (this);
 
         split_view = new Adw.NavigationSplitView () {
@@ -63,9 +66,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         content = overlay;
 
-        model.load_failure.connect (on_load_failure);
-        model.load_success.connect (on_load_success);
-
         files_view.new_activated.connect (() => {
             on_new_activate ();
         });
@@ -74,7 +74,7 @@ public class MainWindow : Adw.ApplicationWindow {
             desktop_file = null;
             backup_desktop_file = null;
             edit_view.hide_all ();
-            model.load ();
+            model.load.begin ();
 
             if (is_success) {
                 overlay.add_toast (deleted_toast);
@@ -87,7 +87,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         edit_view.saved.connect (() => {
             desktop_file.copy_to (backup_desktop_file);
-            model.load ();
+            model.load.begin ();
             overlay.add_toast (updated_toast);
         });
 
@@ -117,7 +117,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * The callback when loading the list of desktop files succeeded.
      */
     private void on_load_success () {
-        // NOP
+        files_view.set_list_data (model.files_list);
     }
 
     /**
@@ -168,7 +168,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Reload and show the file list.
      */
     public void show_files_view () {
-        model.load ();
+        model.load.begin ();
         split_view.show_content = false;
     }
 
@@ -203,7 +203,7 @@ public class MainWindow : Adw.ApplicationWindow {
             return;
         }
 
-        model.load ();
+        model.load.begin ();
         show_edit_view (file);
     }
 

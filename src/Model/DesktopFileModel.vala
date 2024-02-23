@@ -24,7 +24,7 @@ public class Model.DesktopFileModel : Object {
     /**
      * List of {@link DesktopFile}.
      */
-    public ListStore files_list { get; private set; }
+    public Gee.ArrayList<DesktopFile> files_list { get; private set; }
 
     /**
      * The directory where user desktop files are stored.
@@ -35,7 +35,7 @@ public class Model.DesktopFileModel : Object {
     }
 
     construct {
-        files_list = new ListStore (typeof (DesktopFile));
+        files_list = new Gee.ArrayList<DesktopFile> ();
 
         string desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
         desktop_files_dir = File.new_for_path (desktop_files_path);
@@ -58,39 +58,56 @@ public class Model.DesktopFileModel : Object {
      *
      * Emits {@link load_success} if loaded successfully, {@link load_failure} otherwise.
      */
-    public void load () {
-        files_list.remove_all ();
+    public async void load () {
+        bool is_success = false;
 
-        try {
-            var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
-            FileInfo file_info = null;
+        new Thread<void> (null, () => {
+            files_list.clear ();
 
-            // Check all files in the directory one by one
-            while ((file_info = enumerator.next_file ()) != null) {
-                // Ignore any files without the .desktop suffix
-                string name = file_info.get_name ();
-                if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
-                    continue;
+            try {
+                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME,
+                                                                       FileQueryInfoFlags.NONE);
+                FileInfo file_info;
+
+                // Check all files in the directory one by one
+                while ((file_info = enumerator.next_file ()) != null) {
+                    // Ignore any files without the .desktop suffix
+                    string name = file_info.get_name ();
+                    if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
+                        continue;
+                    }
+
+                    File relative_path = desktop_files_dir.resolve_relative_path (name);
+                    string path = relative_path.get_path ();
+
+                    var file = new DesktopFile (path);
+                    bool ret = file.load_file ();
+                    // Skip adding to the list if we fail to load.
+                    if (!ret) {
+                        continue;
+                    }
+
+                    files_list.add (file);
                 }
-
-                File relative_path = desktop_files_dir.resolve_relative_path (name);
-                string path = relative_path.get_path ();
-
-                var file = new DesktopFile (path);
-                bool ret = file.load_file ();
-                // Skip adding to the list if we fail to load.
-                if (!ret) {
-                    continue;
-                }
-
-                files_list.append (file);
+            } catch (Error e) {
+                warning (e.message);
+                // Schedule to let the UI thread resume from the yield sentence.
+                Idle.add (load.callback);
+                return;
             }
-        } catch (Error e) {
-            warning (e.message);
-            load_failure ();
-            return;
-        }
 
-        load_success ();
+            is_success = true;
+            // Schedule to let the UI thread resume from the yield sentence.
+            Idle.add (load.callback);
+        });
+
+        // Give up control of the CPU to the calling method.
+        yield;
+
+        if (is_success) {
+            load_success ();
+        } else {
+            load_failure ();
+        }
     }
 }
