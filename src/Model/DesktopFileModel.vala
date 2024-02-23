@@ -61,45 +61,39 @@ public class Model.DesktopFileModel : Object {
      * otherwise.
      */
     public async void load () {
-        new Thread<void *> (null, () => {
-            files_list.remove_all ();
+        files_list.remove_all ();
 
-            try {
-                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
-                FileInfo file_info = null;
+        try {
+            var enumerator = yield desktop_files_dir.enumerate_children_async (FileAttribute.STANDARD_NAME,
+                                                                               FileQueryInfoFlags.NONE);
+            FileInfo file_info;
 
-                // Check and address the files in the desktop_files_path directory one by one
-                while ((file_info = enumerator.next_file ()) != null) {
-                    // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
-                    string name = file_info.get_name ();
-                    if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
-                        continue;
-                    }
-
-                    File relative_path = desktop_files_dir.resolve_relative_path (name);
-                    string path = relative_path.get_path ();
-
-                    var file = new DesktopFile (path);
-                    bool ret = file.load_file ();
-                    // Skip adding to the list if we fail to load.
-                    if (!ret) {
-                        continue;
-                    }
-
-                    files_list.append (file);
+            // Check and address the files in the desktop_files_path directory one by one
+            while ((file_info = enumerator.next_file ()) != null) {
+                // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
+                string name = file_info.get_name ();
+                if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
+                    continue;
                 }
-            } catch (Error e) {
-                warning (e.message);
-                load_failure ();
-                Idle.add (load.callback);
-                return null;
+
+                File relative_path = desktop_files_dir.resolve_relative_path (name);
+                string path = relative_path.get_path ();
+
+                var file = new DesktopFile (path);
+                bool ret = file.load_file ();
+                // Skip adding to the list if we fail to load.
+                if (!ret) {
+                    continue;
+                }
+
+                files_list.append (file);
             }
+        } catch (Error e) {
+            warning (e.message);
+            load_failure ();
+            return;
+        }
 
-            load_success ();
-            Idle.add (load.callback);
-            return null;
-        });
-
-        yield;
+        load_success ();
     }
 }
