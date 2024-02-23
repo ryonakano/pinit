@@ -93,14 +93,17 @@ public class Model.DesktopFileModel : Object {
                 }
             } catch (Error e) {
                 warning (e.message);
+                // Schedule to let the UI thread resume from the yield sentence.
                 Idle.add (load.callback);
                 return;
             }
 
             is_success = true;
+            // Schedule to let the UI thread resume from the yield sentence.
             Idle.add (load.callback);
         });
 
+        // Give up control of the CPU to the calling method.
         yield;
 
         if (is_success) {

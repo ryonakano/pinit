@@ -76,7 +76,6 @@ public class View.FilesView : Adw.NavigationPage {
         var files_list_page = new Gtk.ScrolledWindow () {
             child = files_list,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
-            width_request = 350,
             vexpand = true,
             hexpand = true
         };
@@ -87,6 +86,7 @@ public class View.FilesView : Adw.NavigationPage {
 
         title = Define.APP_NAME;
         child = toolbar_view;
+        width_request = 350;
 
         create_button.clicked.connect (() => {
             new_activated ();
