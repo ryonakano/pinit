@@ -327,12 +327,12 @@ public class View.EditView : Adw.NavigationPage {
             desktop_file.set_string (KeyFileDesktop.KEY_COMMENT, comment_entry.text);
         });
 
-        categories_row.toggled.connect (() => {
+        categories_row.categories_changed.connect (() => {
             if (is_loading) {
                 return;
             }
 
-            desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.selected);
+            desktop_file.set_string_list (KeyFileDesktop.KEY_CATEGORIES, categories_row.categories);
         });
 
         keywords_row.keywords_changed.connect (() => {
@@ -411,7 +411,7 @@ public class View.EditView : Adw.NavigationPage {
         locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
         comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
 
-        categories_row.selected = desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
+        categories_row.categories = desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false);
         keywords_row.keywords = desktop_file.get_string_list (Define.KEY_KEYWORDS, false);
         startup_wm_class_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
         terminal_row.active = desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
