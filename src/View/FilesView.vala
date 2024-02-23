@@ -9,19 +9,20 @@ public class View.FilesView : Adw.NavigationPage {
     public signal void selected (Model.DesktopFile file);
 
     public MainWindow window { private get; construct; }
-    public ListStore list { get; construct; }
 
+    private ListStore list_store;
     private Adw.HeaderBar headerbar;
     private Gtk.ListBox files_list;
 
-    public FilesView (MainWindow window, ListStore list) {
+    public FilesView (MainWindow window) {
         Object (
-            window: window,
-            list: list
+            window: window
         );
     }
 
     construct {
+        list_store = new ListStore (typeof (Model.DesktopFile));
+
         /*
          * Headerbar part
          */
@@ -68,13 +69,14 @@ public class View.FilesView : Adw.NavigationPage {
         // FilesListPage: The page to list available desktop files.
         files_list = new Gtk.ListBox ();
         files_list.set_placeholder (no_files_page);
-        files_list.bind_model (list, files_row_func);
+        files_list.bind_model (list_store, files_row_func);
         files_list.add_css_class ("navigation-sidebar");
 
         // Pack into a scrolled window in case there are many desktop files in the files list
         var files_list_page = new Gtk.ScrolledWindow () {
             child = files_list,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
+            width_request = 350,
             vexpand = true,
             hexpand = true
         };
@@ -88,6 +90,15 @@ public class View.FilesView : Adw.NavigationPage {
 
         create_button.clicked.connect (() => {
             new_activated ();
+        });
+    }
+
+    public void set_list_data (Gee.ArrayList<Model.DesktopFile> list) {
+        list_store.remove_all ();
+
+        list.foreach ((item) => {
+            list_store.append (item);
+            return true;
         });
     }
 
@@ -164,7 +175,6 @@ public class View.FilesView : Adw.NavigationPage {
             subtitle_lines = 1,
             activatable = true
         };
-        row.width_request = 350;
         row.add_prefix (app_icon);
         row.add_suffix (delete_button);
         row.activated.connect (() => {

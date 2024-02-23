@@ -36,7 +36,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         model.load.begin ();
 
-        files_view = new View.FilesView (this, model.files_list);
+        files_view = new View.FilesView (this);
         edit_view = new View.EditView (this);
 
         split_view = new Adw.NavigationSplitView () {
@@ -117,7 +117,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * The callback when loading the list of desktop files succeeded.
      */
     private void on_load_success () {
-        // NOP
+        files_view.set_list_data (model.files_list);
     }
 
     /**

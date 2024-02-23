@@ -24,7 +24,7 @@ public class Model.DesktopFileModel : Object {
     /**
      * List of {@link DesktopFile}.
      */
-    public ListStore files_list { get; private set; }
+    public Gee.ArrayList<DesktopFile> files_list { get; private set; }
 
     /**
      * The representation of the {@link desktop_files_path} in the File type.
@@ -35,7 +35,7 @@ public class Model.DesktopFileModel : Object {
     }
 
     construct {
-        files_list = new ListStore (typeof (DesktopFile));
+        files_list = new Gee.ArrayList<DesktopFile> ();
 
         string desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
         desktop_files_dir = File.new_for_path (desktop_files_path);
@@ -61,12 +61,15 @@ public class Model.DesktopFileModel : Object {
      * otherwise.
      */
     public async void load () {
-        new Thread<void *> (null, () => {
-            files_list.remove_all ();
+        bool is_success = false;
+
+        new Thread<void> (null, () => {
+            files_list.clear ();
 
             try {
-                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NONE);
-                FileInfo file_info = null;
+                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME,
+                                                                       FileQueryInfoFlags.NONE);
+                FileInfo file_info;
 
                 // Check and address the files in the desktop_files_path directory one by one
                 while ((file_info = enumerator.next_file ()) != null) {
@@ -86,20 +89,24 @@ public class Model.DesktopFileModel : Object {
                         continue;
                     }
 
-                    files_list.append (file);
+                    files_list.add (file);
                 }
             } catch (Error e) {
                 warning (e.message);
-                load_failure ();
                 Idle.add (load.callback);
-                return null;
+                return;
             }
 
-            load_success ();
+            is_success = true;
             Idle.add (load.callback);
-            return null;
         });
 
         yield;
+
+        if (is_success) {
+            load_success ();
+        } else {
+            load_failure ();
+        }
     }
 }
