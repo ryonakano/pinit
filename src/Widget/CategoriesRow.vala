@@ -11,6 +11,16 @@
  */
 public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
+     * Represents a category.
+     */
+    private struct Categories {
+        /** The name of the category. */
+        string name;
+        /** Translatable button labels for each key. */
+        string translatable_name;
+    }
+
+    /**
      * A signal emitted when categories are changed (specifically, when a {@link Adw.SwitchRow} in this
      * is turned on / off).
      */
@@ -22,10 +32,25 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
     private Gee.ArrayList<RowItem> row_items;
 
     /**
-     * key: Category name in desktop files
-     * value: Translatable button labels for each key
+     * Array of categories.
+     *
+     * Note: See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
      */
-    private Gee.HashMap<string, string> categories_table;
+    private const Categories[] CATEGORIES_TABLE = {
+        { "AudioVideo", N_("Sound &amp; Video") },
+        { "Audio", N_("Audio") },
+        { "Video", N_("Video") },
+        { "Development", N_("Programming") },
+        { "Education", N_("Education") },
+        { "Game", N_("Games") },
+        { "Graphics", N_("Graphics") },
+        { "Network", N_("Internet") },
+        { "Office", N_("Office") },
+        { "Science", N_("Science") },
+        { "Settings", N_("Settings") },
+        { "System", N_("System Tools") },
+        { "Utility", N_("Accessories") },
+    };
 
     /**
      * The constructor.
@@ -38,26 +63,10 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
         subtitle = _("Categories applicable to the app. (You can select more than one.)");
 
         row_items = new Gee.ArrayList<RowItem> ();
-        categories_table = new Gee.HashMap<string, string> ();
-
-        // See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
-        categories_table.set ("AudioVideo", _("Sound & Video"));
-        categories_table.set ("Audio", _("Audio"));
-        categories_table.set ("Video", _("Video"));
-        categories_table.set ("Development", _("Programming"));
-        categories_table.set ("Education", _("Education"));
-        categories_table.set ("Game", _("Games"));
-        categories_table.set ("Graphics", _("Graphics"));
-        categories_table.set ("Network", _("Internet"));
-        categories_table.set ("Office", _("Office"));
-        categories_table.set ("Science", _("Science"));
-        categories_table.set ("Settings", _("Settings"));
-        categories_table.set ("System", _("System Tools"));
-        categories_table.set ("Utility", _("Accessories"));
 
         // Create and append a switch row for each category
-        foreach (var entry in categories_table.entries) {
-            var item = new RowItem (entry.key, entry.value);
+        foreach (var category in CATEGORIES_TABLE) {
+            var item = new RowItem (category.name, category.translatable_name);
             item.row.notify["active"].connect (() => {
                 categories_changed ();
             });
@@ -134,7 +143,7 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
 
         construct {
             row = new Adw.SwitchRow () {
-                title = label
+                title = _(label)
             };
         }
     }
