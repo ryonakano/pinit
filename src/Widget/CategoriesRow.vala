@@ -11,12 +11,12 @@
  */
 public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
-     * Represents a category.
+     * Represent one category.
      */
     private struct Categories {
-        /** The name of the category. */
+        /** Name of the category. */
         string name;
-        /** Translatable button labels for each key. */
+        /** Translatable name of the category. */
         string translatable_name;
     }
 
@@ -32,7 +32,7 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
     private Gee.ArrayList<RowItem> row_items;
 
     /**
-     * Array of categories.
+     * Array of known categories.
      *
      * Note: See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
      */
