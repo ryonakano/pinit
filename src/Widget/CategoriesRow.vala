@@ -11,17 +11,16 @@
  */
 public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
-     * A signal emitted when selected categories are changed.
+     * A signal emitted when categories are changed.
      */
-    public signal void toggled ();
+    public signal void categories_changed ();
 
     /**
-     * Set/get selected categories.
+     * Categories of the app.
      */
-    public string[] selected {
-        // Reflect the selected categories in the UI to the desktop file.
+    public string[] categories {
         owned get {
-            string[] _selected = {};
+            string[] _categories = {};
 
             /*
              * Each category has a switch row.
@@ -31,11 +30,11 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
              */
             foreach (var item in row_items) {
                 if (item.row.active) {
-                    _selected += item.category;
+                    _categories += item.category;
                 }
             }
 
-            return _selected;
+            return _categories;
         }
 
         /*
@@ -68,7 +67,7 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
      * key: Category name in desktop files
      * value: Translatable button labels for each key
      */
-    private Gee.HashMap<string, string> categories;
+    private Gee.HashMap<string, string> categories_table;
 
     public CategoriesRow () {
     }
@@ -78,28 +77,28 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
         subtitle = _("Categories applicable to the app. (You can select more than one.)");
 
         row_items = new Gee.ArrayList<RowItem> ();
-        categories = new Gee.HashMap<string, string> ();
+        categories_table = new Gee.HashMap<string, string> ();
 
         // See https://specifications.freedesktop.org/menu-spec/menu-spec-1.0.html#category-registry
-        categories.set ("AudioVideo", _("Sound & Video"));
-        categories.set ("Audio", _("Audio"));
-        categories.set ("Video", _("Video"));
-        categories.set ("Development", _("Programming"));
-        categories.set ("Education", _("Education"));
-        categories.set ("Game", _("Games"));
-        categories.set ("Graphics", _("Graphics"));
-        categories.set ("Network", _("Internet"));
-        categories.set ("Office", _("Office"));
-        categories.set ("Science", _("Science"));
-        categories.set ("Settings", _("Settings"));
-        categories.set ("System", _("System Tools"));
-        categories.set ("Utility", _("Accessories"));
+        categories_table.set ("AudioVideo", _("Sound & Video"));
+        categories_table.set ("Audio", _("Audio"));
+        categories_table.set ("Video", _("Video"));
+        categories_table.set ("Development", _("Programming"));
+        categories_table.set ("Education", _("Education"));
+        categories_table.set ("Game", _("Games"));
+        categories_table.set ("Graphics", _("Graphics"));
+        categories_table.set ("Network", _("Internet"));
+        categories_table.set ("Office", _("Office"));
+        categories_table.set ("Science", _("Science"));
+        categories_table.set ("Settings", _("Settings"));
+        categories_table.set ("System", _("System Tools"));
+        categories_table.set ("Utility", _("Accessories"));
 
         // Create and append a switch row for each category
-        foreach (var entry in categories.entries) {
+        foreach (var entry in categories_table.entries) {
             var item = new RowItem (entry.key, entry.value);
             item.row.notify["active"].connect (() => {
-                toggled ();
+                categories_changed ();
             });
             row_items.add (item);
             add_row (item.row);

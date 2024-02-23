@@ -15,7 +15,7 @@ public class Widget.KeywordsRow : Adw.ExpanderRow {
     public signal void keywords_changed ();
 
     /**
-     * Set/get keywords.
+     * Keywords of the app.
      */
     public string[] keywords {
         owned get {
