@@ -65,11 +65,11 @@ public class View.EditView : Adw.NavigationPage {
         header_box.append (name_label);
 
         /*
-         * Content part - Required Entries
+         * Content part - Required Fields
          */
         var required_group = new Adw.PreferencesGroup () {
-            title = _("Required Entries"),
-            description = _("The following entries need to be filled to save.")
+            title = _("Required Fields"),
+            description = _("The following fields need to be filled to save.")
         };
 
         name_entry = new Adw.EntryRow () {
@@ -89,11 +89,11 @@ public class View.EditView : Adw.NavigationPage {
         required_group.add (exec_entry);
 
         /*
-         * Content part - Optional Entries
+         * Content part - Optional Fields
          */
         var optional_group = new Adw.PreferencesGroup () {
-            title = _("Optional Entries"),
-            description = _("Filling these entries improves discoverability in the app launcher.")
+            title = _("Optional Fields"),
+            description = _("Filling these fields improves discoverability in the app launcher.")
         };
 
         icon_entry = new Adw.EntryRow () {
@@ -124,7 +124,7 @@ public class View.EditView : Adw.NavigationPage {
         optional_group.add (keywords_row);
 
         /*
-         * Content part - Advanced Entries
+         * Content part - Advanced Configurations
          */
         var advanced_group = new Adw.PreferencesGroup () {
             title = _("Advanced Configurations"),
