@@ -39,6 +39,7 @@ public class View.FilesView : Adw.NavigationPage {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("_Style"), theme_submenu);
+        menu.append (_("_Documentation"), "win.doc");
         menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
         menu.append (_("_About %s").printf (Define.APP_NAME), "win.about");
