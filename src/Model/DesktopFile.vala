@@ -306,7 +306,9 @@ public class Model.DesktopFile : Object {
     public bool open_external (Gtk.Window? parent) {
         var file = File.new_for_path (path);
 
-        var file_launcher = new Gtk.FileLauncher (file);
+        var file_launcher = new Gtk.FileLauncher (file) {
+            always_ask = true
+        };
         file_launcher.launch.begin (parent, null, (obj, res) => {
             try {
                 file_launcher.launch.end (res);
