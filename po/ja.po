@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2024-03-02 11:45+0000\n"
+"PO-Revision-Date: 2024-03-02 11:49+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "ja/>\n"
@@ -224,7 +224,7 @@ msgstr "エントリーの保存に失敗"
 #: src/View/EditView.vala:448
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr "エントリー“%s”の保存に失敗"
+msgstr "“%s”のエントリーの保存に失敗"
 
 #: src/View/EditView.vala:454
 msgid "There was an error while saving the app entry."
@@ -296,7 +296,7 @@ msgstr "削除(_D)"
 #: src/View/FilesView.vala:139
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "エントリー“%s”を削除できませんでした"
+msgstr "“%s”のエントリーを削除できませんでした"
 
 #: src/View/FilesView.vala:140
 msgid "There was an error while removing the app entry."
