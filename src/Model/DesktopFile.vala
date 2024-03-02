@@ -300,9 +300,21 @@ public class Model.DesktopFile : Object {
     /**
      * Open this in an external editor.
      *
+     * @param parent the parent GtkWindow
      * @return true if successfully opened this, false otherwise.
      */
-    public bool open_external () {
-        return Util.ExternalAppLauncher.open_default_handler (path);
+    public bool open_external (Gtk.Window? parent) {
+        var file = File.new_for_path (path);
+
+        var file_launcher = new Gtk.FileLauncher (file);
+        file_launcher.launch.begin (parent, null, (obj, res) => {
+            try {
+                file_launcher.launch.end (res);
+            } catch (Error e) {
+                warning ("Failed to launch file. path=%s: %s", path, e.message);
+            }
+        });
+
+        return true;
     }
 }

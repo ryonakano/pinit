@@ -360,7 +360,7 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            bool ret = desktop_file.open_external ();
+            bool ret = desktop_file.open_external (window);
             if (!ret) {
                 var error_dialog = new Adw.MessageDialog (
                     window,
