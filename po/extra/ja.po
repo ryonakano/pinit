@@ -1,32 +1,30 @@
 # Japanese translations for extra package.
 # Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-16 14:51+0000\n"
-"PO-Revision-Date: 2023-10-01 08:21+0000\n"
+"PO-Revision-Date: 2024-03-02 11:45+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-"
-"metainfo/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"pinit-metainfo/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/pinit.metainfo.xml.in:10 data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
 #: data/pinit.metainfo.xml.in:11 data/pinit.desktop.in:5
-#, fuzzy
-#| msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 msgid "Pin portable apps to the launcher"
-msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
+msgstr "ポータブルアプリをランチャーにピン留めします"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
@@ -47,34 +45,24 @@ msgstr ""
 "要はありません"
 
 #: data/pinit.metainfo.xml.in:21
-#, fuzzy
-#| msgid "Automatically add execution permission to the file you select"
 msgid "Automatically add the execute permission to the file you select"
 msgstr "選択したファイルに自動的に実行権限を追加"
 
 #: data/pinit.metainfo.xml.in:27
-#, fuzzy
-#| msgid "Edit view in the light mode"
 msgid "List of app entries in the light mode"
-msgstr "編集画面 (ライトモード)"
+msgstr "アプリエントリーの一覧 (ライトモード)"
 
 #: data/pinit.metainfo.xml.in:32
-#, fuzzy
-#| msgid "Edit view in the light mode"
 msgid "Editing the app entry in the light mode"
-msgstr "編集画面 (ライトモード)"
+msgstr "アプリエントリーを編集中 (ライトモード)"
 
 #: data/pinit.metainfo.xml.in:37
-#, fuzzy
-#| msgid "Edit view in the dark mode"
 msgid "List of app entries in the dark mode"
-msgstr "編集画面 (ダークモード)"
+msgstr "アプリエントリーの一覧 (ダークモード)"
 
 #: data/pinit.metainfo.xml.in:42
-#, fuzzy
-#| msgid "Edit view in the dark mode"
 msgid "Editing the app entry in the dark mode"
-msgstr "編集画面 (ダークモード)"
+msgstr "アプリエントリーを編集中 (ダークモード)"
 
 #: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
