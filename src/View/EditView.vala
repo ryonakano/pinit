@@ -248,8 +248,8 @@ public class View.EditView : Adw.NavigationPage {
                     exec_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
                     set_save_button_sensitivity ();
-                } catch (Error e) {
-                    warning ("Failed to select executable file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select executable file: %s", err.message);
                 }
             });
         });
@@ -261,8 +261,8 @@ public class View.EditView : Adw.NavigationPage {
 
             try {
                 icon_image.gicon = Icon.new_for_string (icon_entry.text);
-            } catch (Error e) {
-                warning ("Failed to update icon_image: %s", e.message);
+            } catch (Error err) {
+                warning ("Failed to update icon_image: %s", err.message);
             }
 
             desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
@@ -305,8 +305,8 @@ public class View.EditView : Adw.NavigationPage {
 
                     icon_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
-                } catch (Error e) {
-                    warning ("Failed to select icon file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select icon file: %s", err.message);
                 }
             });
         });
@@ -360,18 +360,32 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            bool ret = desktop_file.open_external ();
-            if (!ret) {
-                var error_dialog = new Adw.MessageDialog (
-                    window,
-                    _("Failed to Open with External App"),
-                    _("There was an error while opening the file with an external app.")
-                );
-                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
-                error_dialog.default_response = Define.DialogResponse.CLOSE;
-                error_dialog.close_response = Define.DialogResponse.CLOSE;
-                error_dialog.present ();
-            }
+            desktop_file.open_external.begin (window, (obj, res) => {
+                bool ret;
+
+                try {
+                    ret = desktop_file.open_external.end (res);
+                } catch (Error err) {
+                    // The calling method is responsible for showing the error log.
+
+                    // Do not treat as an error if the operation is just dismissed by the user.
+                    if (err.matches (Gtk.DialogError.quark (), Gtk.DialogError.DISMISSED)) {
+                        ret = true;
+                    }
+                }
+
+                if (!ret) {
+                    var error_dialog = new Adw.MessageDialog (
+                        window,
+                        _("Failed to Open with External App"),
+                        _("There was an error while opening the file with an external app.")
+                    );
+                    error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+                    error_dialog.default_response = Define.DialogResponse.CLOSE;
+                    error_dialog.close_response = Define.DialogResponse.CLOSE;
+                    error_dialog.present ();
+                }
+            });
         });
     }
 
@@ -389,8 +403,8 @@ public class View.EditView : Adw.NavigationPage {
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
-        } catch (Error e) {
-            warning ("Failed to update icon_image: %s", e.message);
+        } catch (Error err) {
+            warning ("Failed to update icon_image: %s", err.message);
         }
 
         string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);

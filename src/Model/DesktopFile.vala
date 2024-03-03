@@ -94,8 +94,8 @@ public class Model.DesktopFile : Object {
 
         try {
             val = keyfile.get_boolean (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, err.message);
         }
 
         return val;
@@ -118,8 +118,8 @@ public class Model.DesktopFile : Object {
 
         try {
             val = keyfile.get_string (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.get_string: key=%s: %s", key, e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.get_string: key=%s: %s", key, err.message);
         }
 
         return val;
@@ -130,8 +130,8 @@ public class Model.DesktopFile : Object {
 
         try {
             ret = keyfile.has_key (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.has_key: key=%s: %s", key, e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.has_key: key=%s: %s", key, err.message);
         }
 
         return ret;
@@ -154,8 +154,8 @@ public class Model.DesktopFile : Object {
 
         try {
             val = keyfile.get_string_list (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, err.message);
         }
 
         return val;
@@ -170,8 +170,8 @@ public class Model.DesktopFile : Object {
             if (has_key (key)) {
                 try {
                     keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError e) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                } catch (KeyFileError err) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
             }
         }
@@ -186,8 +186,8 @@ public class Model.DesktopFile : Object {
             if (has_key (key)) {
                 try {
                     keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError e) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                } catch (KeyFileError err) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
             }
         }
@@ -202,8 +202,8 @@ public class Model.DesktopFile : Object {
             if (has_key (key)) {
                 try {
                     keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError e) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, e.message);
+                } catch (KeyFileError err) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
             }
         }
@@ -218,8 +218,8 @@ public class Model.DesktopFile : Object {
 
         try {
             ret = keyfile.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.load_from_data: %s", e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.load_from_data: %s", err.message);
         }
 
         return ret;
@@ -257,8 +257,8 @@ public class Model.DesktopFile : Object {
 
         try {
             val = keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
-        } catch (KeyFileError e) {
-            warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, e.message);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, err.message);
         }
 
         return val;
@@ -275,10 +275,10 @@ public class Model.DesktopFile : Object {
 
         try {
             ret = keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
-        } catch (FileError e) {
-            warning ("Failed to load from file. path=%s: %s", path, e.message);
-        } catch (KeyFileError e) {
-            warning ("Invalid keyfile. path=%s: %s", path, e.message);
+        } catch (FileError err) {
+            warning ("Failed to load from file. path=%s: %s", path, err.message);
+        } catch (KeyFileError err) {
+            warning ("Invalid keyfile. path=%s: %s", path, err.message);
         }
 
         return ret;
@@ -289,8 +289,8 @@ public class Model.DesktopFile : Object {
 
         try {
             ret = keyfile.save_to_file (path);
-        } catch (FileError e) {
-            warning ("Failed to save file. path=%s: %s", path, e.message);
+        } catch (FileError err) {
+            warning ("Failed to save file. path=%s: %s", path, err.message);
         }
 
         return ret;
@@ -302,8 +302,8 @@ public class Model.DesktopFile : Object {
 
         try {
             ret = file.delete ();
-        } catch (Error e) {
-            warning ("Failed to delete file. path=%s: %s", path, e.message);
+        } catch (Error err) {
+            warning ("Failed to delete file. path=%s: %s", path, err.message);
         }
 
         return ret;
@@ -312,9 +312,25 @@ public class Model.DesktopFile : Object {
     /**
      * Open the desktop file associated with this in an external editor.
      *
+     * @param parent the parent GtkWindow
      * @return true if successfully opened this, false otherwise
+     * @throws Error failed to open this externally
      */
-    public bool open_external () {
-        return Util.ExternalAppLauncher.open_default_handler (path);
+    public async bool open_external (Gtk.Window? parent) throws Error {
+        var file = File.new_for_path (path);
+
+        var file_launcher = new Gtk.FileLauncher (file) {
+            always_ask = true
+        };
+
+        bool ret = false;
+        try {
+            ret = yield file_launcher.launch (parent, null);
+        } catch (Error err) {
+            warning ("Failed to open file externally. path=%s: %s", path, err.message);
+            throw err;
+        }
+
+        return ret;
     }
 }

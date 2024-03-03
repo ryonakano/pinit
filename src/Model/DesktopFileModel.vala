@@ -44,8 +44,8 @@ public class Model.DesktopFileModel : Object {
         if (!FileUtils.test (desktop_files_path, FileTest.EXISTS)) {
             try {
                 desktop_files_dir.make_directory_with_parents ();
-            } catch (Error e) {
-                warning (e.message);
+            } catch (Error err) {
+                warning ("Failed to make directory. path=%s: %s", desktop_files_path, err.message);
             }
         }
     }
@@ -64,11 +64,19 @@ public class Model.DesktopFileModel : Object {
         new Thread<void> (null, () => {
             files_list.clear ();
 
+            FileEnumerator enumerator;
             try {
-                var enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME,
-                                                                       FileQueryInfoFlags.NONE);
-                FileInfo file_info;
+                enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME,
+                                                                   FileQueryInfoFlags.NONE);
+            } catch (Error err) {
+                warning ("Failed to get information of files: %s", err.message);
+                // Schedule to let the UI thread resume from the yield sentence.
+                Idle.add (load.callback);
+                return;
+            }
 
+            FileInfo file_info;
+            try {
                 // Check all files in the directory one by one
                 while ((file_info = enumerator.next_file ()) != null) {
                     // Ignore any files without the .desktop suffix
@@ -89,8 +97,8 @@ public class Model.DesktopFileModel : Object {
 
                     files_list.add (file);
                 }
-            } catch (Error e) {
-                warning (e.message);
+            } catch (Error err) {
+                warning ("Failed to load file info: %s", err.message);
                 // Schedule to let the UI thread resume from the yield sentence.
                 Idle.add (load.callback);
                 return;

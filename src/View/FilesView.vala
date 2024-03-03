@@ -113,8 +113,8 @@ public class View.FilesView : Adw.NavigationPage {
         };
         try {
             app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON, false));
-        } catch (Error e) {
-            warning ("Failed to update app_icon: %s", e.message);
+        } catch (Error err) {
+            warning ("Failed to update app_icon: %s", err.message);
         }
 
         string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
