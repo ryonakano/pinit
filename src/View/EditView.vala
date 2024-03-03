@@ -248,8 +248,8 @@ public class View.EditView : Adw.NavigationPage {
                     exec_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
                     set_save_button_sensitivity ();
-                } catch (Error e) {
-                    warning ("Failed to select executable file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select executable file: %s", err.message);
                 }
             });
         });
@@ -261,8 +261,8 @@ public class View.EditView : Adw.NavigationPage {
 
             try {
                 icon_image.gicon = Icon.new_for_string (icon_entry.text);
-            } catch (Error e) {
-                warning ("Failed to update icon_image: %s", e.message);
+            } catch (Error err) {
+                warning ("Failed to update icon_image: %s", err.message);
             }
 
             desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
@@ -305,8 +305,8 @@ public class View.EditView : Adw.NavigationPage {
 
                     icon_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
-                } catch (Error e) {
-                    warning ("Failed to select icon file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select icon file: %s", err.message);
                 }
             });
         });
@@ -403,8 +403,8 @@ public class View.EditView : Adw.NavigationPage {
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
-        } catch (Error e) {
-            warning ("Failed to update icon_image: %s", e.message);
+        } catch (Error err) {
+            warning ("Failed to update icon_image: %s", err.message);
         }
 
         string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
