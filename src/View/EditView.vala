@@ -6,8 +6,6 @@
 public class View.EditView : Adw.NavigationPage {
     public signal void saved ();
 
-    public MainWindow window { private get; construct; }
-
     private bool is_loading = false;
     private unowned Model.DesktopFile desktop_file;
 
@@ -31,8 +29,7 @@ public class View.EditView : Adw.NavigationPage {
     private Adw.StatusPage blank_page;
     private Gtk.Stack stack;
 
-    public EditView (MainWindow window) {
-        Object (window: window);
+    public EditView () {
     }
 
     construct {
@@ -232,7 +229,7 @@ public class View.EditView : Adw.NavigationPage {
                 accept_label = _("_Select"),
                 modal = true
             };
-            filechooser.open.begin (window, null, (obj, res) => {
+            filechooser.open.begin ((Gtk.Window) get_root (), null, (obj, res) => {
                 try {
                     var file = filechooser.open.end (res);
                     if (file == null) {
@@ -290,7 +287,7 @@ public class View.EditView : Adw.NavigationPage {
                 modal = true,
                 default_filter = filefilter
             };
-            filechooser.open.begin (window, null, (obj, res) => {
+            filechooser.open.begin ((Gtk.Window) get_root (), null, (obj, res) => {
                 try {
                     var file = filechooser.open.end (res);
                     if (file == null) {
@@ -360,7 +357,7 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            desktop_file.open_external.begin (window, (obj, res) => {
+            desktop_file.open_external.begin ((Gtk.Window) get_root (), (obj, res) => {
                 bool ret;
 
                 try {
@@ -376,7 +373,7 @@ public class View.EditView : Adw.NavigationPage {
 
                 if (!ret) {
                     var error_dialog = new Adw.MessageDialog (
-                        window,
+                        (Gtk.Window) get_root (),
                         _("Failed to Open with External App"),
                         _("There was an error while opening the file with an external app.")
                     );
@@ -463,7 +460,7 @@ public class View.EditView : Adw.NavigationPage {
             }
 
             var error_dialog = new Adw.MessageDialog (
-                window,
+                (Gtk.Window) get_root (),
                 dialog_title,
                 _("There was an error while saving the app entry.")
             );

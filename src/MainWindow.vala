@@ -36,8 +36,8 @@ public class MainWindow : Adw.ApplicationWindow {
 
         model.load.begin ();
 
-        files_view = new View.FilesView (this);
-        edit_view = new View.EditView (this);
+        files_view = new View.FilesView ();
+        edit_view = new View.EditView ();
 
         split_view = new Adw.NavigationSplitView () {
             sidebar = files_view,
