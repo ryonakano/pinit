@@ -365,11 +365,11 @@ public class View.EditView : Adw.NavigationPage {
 
                 try {
                     ret = desktop_file.open_external.end (res);
-                } catch (Error e) {
+                } catch (Error err) {
                     // The calling method is responsible for showing the error log.
 
-                    // Do not treat as an error if the chooser dialog is just dismissed by the user.
-                    if (e.matches (Gtk.DialogError.quark (), Gtk.DialogError.DISMISSED)) {
+                    // Do not treat as an error if the operation is just dismissed by the user.
+                    if (err.matches (Gtk.DialogError.quark (), Gtk.DialogError.DISMISSED)) {
                         ret = true;
                     }
                 }
