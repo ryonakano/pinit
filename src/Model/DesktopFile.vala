@@ -302,6 +302,7 @@ public class Model.DesktopFile : Object {
      *
      * @param parent the parent GtkWindow
      * @return true if successfully opened this, false otherwise.
+     * @throws Error failed to open this externally.
      */
     public async bool open_external (Gtk.Window? parent) throws Error {
         var file = File.new_for_path (path);
@@ -314,7 +315,7 @@ public class Model.DesktopFile : Object {
         try {
             ret = yield file_launcher.launch (parent, null);
         } catch (Error e) {
-            warning ("Failed to launch file. path=%s: %s", path, e.message);
+            warning ("Failed to open file externally. path=%s: %s", path, e.message);
             throw e;
         }
 
