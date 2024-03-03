@@ -72,7 +72,6 @@ public class MainWindow : Adw.ApplicationWindow {
                 var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
                     timeout = 5
                 };
-
                 overlay.add_toast (deleted_toast);
             }
         });
