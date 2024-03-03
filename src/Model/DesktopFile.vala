@@ -303,20 +303,21 @@ public class Model.DesktopFile : Object {
      * @param parent the parent GtkWindow
      * @return true if successfully opened this, false otherwise.
      */
-    public bool open_external (Gtk.Window? parent) {
+    public async bool open_external (Gtk.Window? parent) throws Error {
         var file = File.new_for_path (path);
 
         var file_launcher = new Gtk.FileLauncher (file) {
             always_ask = true
         };
-        file_launcher.launch.begin (parent, null, (obj, res) => {
-            try {
-                file_launcher.launch.end (res);
-            } catch (Error e) {
-                warning ("Failed to launch file. path=%s: %s", path, e.message);
-            }
-        });
 
-        return true;
+        bool ret = false;
+        try {
+            ret = yield file_launcher.launch (parent, null);
+        } catch (Error e) {
+            warning ("Failed to launch file. path=%s: %s", path, e.message);
+            throw e;
+        }
+
+        return ret;
     }
 }

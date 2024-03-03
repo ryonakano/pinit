@@ -360,18 +360,32 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            bool ret = desktop_file.open_external (window);
-            if (!ret) {
-                var error_dialog = new Adw.MessageDialog (
-                    window,
-                    _("Failed to Open with External App"),
-                    _("There was an error while opening the file with an external app.")
-                );
-                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
-                error_dialog.default_response = Define.DialogResponse.CLOSE;
-                error_dialog.close_response = Define.DialogResponse.CLOSE;
-                error_dialog.present ();
-            }
+            desktop_file.open_external.begin (window, (obj, res) => {
+                bool ret;
+
+                try {
+                    ret = desktop_file.open_external.end (res);
+                } catch (Error e) {
+                    // The calling method is responsible for showing the error log.
+
+                    // Do not treat as an error if the chooser dialog is just dismissed by the user.
+                    if (e.matches (Gtk.DialogError.quark (), Gtk.DialogError.DISMISSED)) {
+                        ret = true;
+                    }
+                }
+
+                if (!ret) {
+                    var error_dialog = new Adw.MessageDialog (
+                        window,
+                        _("Failed to Open with External App"),
+                        _("There was an error while opening the file with an external app.")
+                    );
+                    error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+                    error_dialog.default_response = Define.DialogResponse.CLOSE;
+                    error_dialog.close_response = Define.DialogResponse.CLOSE;
+                    error_dialog.present ();
+                }
+            });
         });
     }
 
