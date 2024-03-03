@@ -16,12 +16,21 @@ Other features include:
 The original idea of the app is inspired from https://github.com/alexkdeveloper/dfc.
 
 ## Installation
-### For Users
+### From Flathub (Recommended)
 You can download the app from Flathub, which should make this app available for all Linux distribution:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/details/com.github.ryonakano.pinit)
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
 
-### For Developers
+### From Source Code (Flatpak)
+If you would like to test latest source code, clone the repository and then run the following command:
+
+```
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y --user flathub org.flatpak.Builder
+flatpak run org.flatpak.Builder build --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
+```
+
+### From Source Code (Native)
 You'll need the following dependencies to build:
 
 * libadwaita-1-dev (>= 1.4.0)
