@@ -1,9 +1,12 @@
-# ![](data/icons/16/com.github.ryonakano.pinit.svg) Pin It!
+<div align="center">
+  <img src="data/icons/64/com.github.ryonakano.pinit.svg">
+  <h1>Pin It!</h1>
+  <p>Pin portable apps to the launcher</p>
+</div>
+
+![Overview of the app](data/screenshots/overview.png)
+
 Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
-
-![Files view in the light mode](data/screenshots/gnome/screenshot-files-view-light.png)
-
-![Edit view in the light mode](data/screenshots/gnome/screenshot-edit-view-light.png)
 
 Other features include:
 
@@ -28,14 +31,14 @@ You'll need the following dependencies to build:
 * meson (>= 0.57.0)
 * valac
 
-Run `meson setup` to configure the build environment and run `meson compile` to build
+Run `meson setup` to configure the build environment and run `meson compile` to build:
 
 ```bash
 meson setup builddir --prefix=/usr
 meson compile -C builddir
 ```
 
-To install, use `meson install`, then execute with `com.github.ryonakano.pinit`
+To install, use `meson install`, then execute with `com.github.ryonakano.pinit`:
 
 ```bash
 meson install -C builddir
