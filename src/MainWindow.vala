@@ -56,14 +56,6 @@ public class MainWindow : Adw.ApplicationWindow {
             child = split_view
         };
 
-        var updated_toast = new Adw.Toast (_("Entry updated.")) {
-            timeout = 5
-        };
-
-        var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
-            timeout = 5
-        };
-
         content = overlay;
 
         files_view.new_activated.connect (() => {
@@ -77,6 +69,10 @@ public class MainWindow : Adw.ApplicationWindow {
             model.load.begin ();
 
             if (is_success) {
+                var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
+                    timeout = 5
+                };
+
                 overlay.add_toast (deleted_toast);
             }
         });
@@ -88,6 +84,10 @@ public class MainWindow : Adw.ApplicationWindow {
         edit_view.saved.connect (() => {
             desktop_file.copy_to (backup_desktop_file);
             model.load.begin ();
+
+            var updated_toast = new Adw.Toast (_("Entry updated.")) {
+                timeout = 5
+            };
             overlay.add_toast (updated_toast);
         });
 
