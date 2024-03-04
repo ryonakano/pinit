@@ -13,8 +13,6 @@ Other features include:
 - Edit or delete created app entries without opening the file manager
 - Automatically add execution permission to the file you select
 
-The original idea of the app is inspired from https://github.com/alexkdeveloper/dfc.
-
 ## Installation
 ### From Flathub (Recommended)
 You can download the app from Flathub, which should make this app available for all Linux distribution:
@@ -65,3 +63,6 @@ Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like 
 ## Get Support
 
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/pinit/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/pinit/discussions/new/choose) if none is relevant.
+
+## History
+The original idea of the app is inspired from [Desktopius by Alex K](https://github.com/alexkdeveloper/dfc).
