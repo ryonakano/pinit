@@ -25,7 +25,7 @@ If you would like to test latest source code, clone the repository and then run 
 ```
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y --user flathub org.flatpak.Builder
-flatpak run org.flatpak.Builder build --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
+flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
 ```
 
 ### From Source Code (Native)
