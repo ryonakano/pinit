@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2024-01-27 05:50+0000\n"
+"PO-Revision-Date: 2024-03-10 15:01+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-app/"
 "es/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -321,7 +321,7 @@ msgstr "Acerca de %s"
 
 #: src/View/FilesView.vala:46
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú principal"
 
 #: src/View/FilesView.vala:61
 #, fuzzy
