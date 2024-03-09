@@ -507,7 +507,6 @@ msgstr "Borrar la palabra clave"
 #~ msgstr "Una descripción que diga lo que la aplicación te ayuda a hacer."
 
 #, fuzzy
-#~| msgid "Type of the app."
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "Tipo de aplicación."
 
