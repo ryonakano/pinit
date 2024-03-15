@@ -50,7 +50,6 @@ com.github.ryonakano.pinit
 ```
 
 ## Contributing
-
 Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
 - submit bug reports / feature requests
@@ -58,7 +57,6 @@ Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like 
 - translate the project
 
 ## Get Support
-
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/pinit/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/pinit/discussions/new/choose) if none is relevant.
 
 ## History
