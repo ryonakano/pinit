@@ -28,6 +28,7 @@ flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean 
 ### From Source Code (Native)
 You'll need the following dependencies to build:
 
+* blueprint-compiler
 * libadwaita-1-dev (>= 1.4.0)
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.74)

@@ -1,0 +1,32 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: "shortcuts";
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "General");
+
+      ShortcutsShortcut {
+        action-name: "win.show-help-overlay";
+        title: C_("shortcut window", "Keyboard Shortcuts");
+      }
+
+      ShortcutsShortcut {
+        action-name: "app.quit";
+        title: C_("shortcut window", "Quit");
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Edit");
+
+      ShortcutsShortcut {
+        action-name: "win.new";
+        title: C_("shortcut window", "New Entry");
+      }
+    }
+  }
+}
