@@ -23,12 +23,7 @@ config_file = configure_file(
     configuration: config_data
 )
 
-asresources = gnome.compile_resources(
-    'as-resources',
-    'data' / 'pinit.gresource.xml',
-    source_dir: 'data',
-    c_name: 'as'
-)
+subdir('data')
 
 sources = files(
     'src' / 'Model' / 'DesktopFile.vala',
@@ -60,7 +55,6 @@ executable(
     install: true
 )
 
-subdir('data')
 subdir('po')
 
 if get_option('doc')

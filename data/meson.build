@@ -30,6 +30,27 @@ install_data(
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
 
+blueprints = custom_target('blueprints',
+    input: files(
+        'gtk' / 'help-overlay.blp'
+    ),
+    output: '.',
+    command: [
+        find_program('blueprint-compiler'),
+        'batch-compile',
+        '@OUTPUT@',
+        '@CURRENT_SOURCE_DIR@',
+        '@INPUT@'
+    ]
+)
+
+asresources = gnome.compile_resources(
+    'as-resources',
+    'pinit.gresource.xml',
+    dependencies: blueprints,
+    c_name: 'as'
+)
+
 # Test definitions
 desktop_utils = find_program('desktop-file-validate', required: false)
 if desktop_utils.found()
