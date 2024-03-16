@@ -30,11 +30,6 @@ install_data(
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
 
-gnome.post_install(
-    glib_compile_schemas: true,
-    gtk_update_icon_cache: true
-)
-
 # Test definitions
 desktop_utils = find_program('desktop-file-validate', required: false)
 if desktop_utils.found()
