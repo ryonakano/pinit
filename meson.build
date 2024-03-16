@@ -5,6 +5,7 @@ project(
     meson_version: '>=0.57.0'
 )
 
+gnome = import('gnome')
 i18n = import('i18n')
 
 add_project_arguments(
@@ -22,7 +23,7 @@ config_file = configure_file(
     configuration: config_data
 )
 
-subdir('data')
+subdir('data/resources')
 
 sources = files(
     'src' / 'Model' / 'DesktopFile.vala',
@@ -54,6 +55,7 @@ executable(
     install: true
 )
 
+subdir('data')
 subdir('po')
 
 if get_option('doc')
