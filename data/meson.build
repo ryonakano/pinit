@@ -44,11 +44,18 @@ blueprints = custom_target('blueprints',
     ]
 )
 
+gnome = import('gnome')
+
 asresources = gnome.compile_resources(
     'as-resources',
     'pinit.gresource.xml',
     dependencies: blueprints,
     c_name: 'as'
+)
+
+gnome.post_install(
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: true
 )
 
 # Test definitions

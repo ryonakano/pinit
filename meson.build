@@ -5,7 +5,6 @@ project(
     meson_version: '>=0.57.0'
 )
 
-gnome = import('gnome')
 i18n = import('i18n')
 
 add_project_arguments(
@@ -60,8 +59,3 @@ subdir('po')
 if get_option('doc')
     subdir('doc')
 endif
-
-gnome.post_install(
-    glib_compile_schemas: true,
-    gtk_update_icon_cache: true
-)
