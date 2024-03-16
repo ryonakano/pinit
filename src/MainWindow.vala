@@ -3,6 +3,23 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The window of the application.
+ *
+ * It contains a ``Adw.NavigationSplitView`` as a view which has a {@link View.FilesView} and
+ * {@link View.EditView} inside.
+ *
+ * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when:
+ *
+ *  * constructed
+ *  * {@link View.FilesView.deleted} is emitted
+ *  * {@link View.EditView.saved} is emitted
+ *  * the action ``win.new`` is called
+ *
+ * If {@link Model.DesktopFileModel.load} succeeded, this calls {@link View.FilesView.set_list_data} to reflect
+ * load result.<<BR>>
+ * Otherwise, this shows a dialog to tell the user about the failure.
+ */
 public class MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
         { "about", on_about_activate },
@@ -99,7 +116,7 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * The callback when loading the list of desktop files failed.
      *
-     * Tell the user the failure through the dialog.
+     * Tell the user the failure through a dialog.
      */
     private void on_load_failure () {
         var error_dialog = new Adw.MessageDialog (this,
@@ -123,7 +140,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Preprocess before destruction of this.
      *
      * Just destroy this if we never edited entries or no changes made for desktop files.
-     * Otherwise, tell the user unsaved work through dialog.
+     * Otherwise, tell the user unsaved work through a dialog.
      */
     public void prep_destroy () {
         // Never edited entries
@@ -172,9 +189,12 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /**
-     * Start editing the given DesktopFile
+     * Start editing the given {@link Model.DesktopFile}.
      *
-     * @param file The DesktopFile to edit.
+     * It first backups the given {@link Model.DesktopFile} and then calls {@link View.EditView.load_file} to start
+     * editing, so that the app can recognize unsaved changes before destruction.
+     *
+     * @param file The {@link Model.DesktopFile} to edit
      */
     public void show_edit_view (Model.DesktopFile file) {
         desktop_file = file;
@@ -210,12 +230,12 @@ public class MainWindow : Adw.ApplicationWindow {
      * The callback for about window.
      */
     private void on_about_activate () {
-        // List code contributors
+        // List of code contributors
         const string[] DEVELOPERS = {
             "Ryo Nakano https://github.com/ryonakano",
             "Jeyson Flores https://github.com/JeysonFlores",
         };
-        // List icon authors
+        // List of icon authors
         const string[] ARTISTS = {
             "hanaral https://github.com/hanaral",
         };
@@ -235,7 +255,10 @@ public class MainWindow : Adw.ApplicationWindow {
             developer_name = "Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
-            ///TRANSLATORS: Replace with your name; don't translate literally
+            ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+            ///You may add your name and your email address/website URL if you want, e.g.:
+            ///John Doe <john-doe@example.com>
+            ///Jane Doe <https://example.com>
             translator_credits = _("translator-credits")
         };
 
