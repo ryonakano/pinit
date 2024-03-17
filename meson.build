@@ -2,7 +2,7 @@ project(
     'com.github.ryonakano.pinit',
     'vala', 'c',
     version: '2.0.3',
-    meson_version: '>=0.57.0'
+    meson_version: '>=0.58.0'
 )
 
 gnome = import('gnome')
@@ -17,6 +17,7 @@ config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('PROJECT_NAME', meson.project_name())
 config_data.set_quoted('PROJECT_VERSION', meson.project_version())
+config_data.set_quoted('RESOURCE_PREFIX', '/' + meson.project_name().replace('.', '/'))
 config_file = configure_file(
     input: 'src' / 'Config.vala.in',
     output: '@BASENAME@',

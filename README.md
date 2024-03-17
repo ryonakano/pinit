@@ -33,7 +33,7 @@ You'll need the following dependencies to build:
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.74)
 * libgtk-4-dev (>= 4.10)
-* meson (>= 0.57.0)
+* meson (>= 0.58.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:

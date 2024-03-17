@@ -240,19 +240,14 @@ public class MainWindow : Adw.ApplicationWindow {
             "hanaral https://github.com/hanaral",
         };
 
-        var about_window = new Adw.AboutWindow () {
+        var about_window = new Adw.AboutWindow.from_appdata (
+            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.PROJECT_NAME),
+            null
+        ) {
             transient_for = this,
             modal = true,
-            application_icon = Config.PROJECT_NAME,
-            application_name = Define.APP_NAME,
-            version = Config.PROJECT_VERSION,
             comments = _("Pin portable apps to the launcher"),
-            website = "https://github.com/ryonakano/pinit",
-            support_url = "https://github.com/ryonakano/pinit/discussions",
-            issue_url = "https://github.com/ryonakano/pinit/issues",
             copyright = "© 2021-2024 Ryo Nakano",
-            license_type = Gtk.License.GPL_3_0,
-            developer_name = "Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
             ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
