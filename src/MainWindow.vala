@@ -241,7 +241,7 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         var about_window = new Adw.AboutWindow.from_appdata (
-            "/com/github/ryonakano/pinit/com.github.ryonakano.pinit.metainfo.xml",
+            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.PROJECT_NAME),
             null
         ) {
             transient_for = this,
