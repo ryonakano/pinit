@@ -2,18 +2,18 @@
 # Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Nathan Bonnemains (@NathanBnm), 2021.
-#
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
-# rene-coty <irenee.thirion@e.email>, 2023.
+# rene-coty <irenee.thirion@e.email>, 2022, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 22:48+0900\n"
+"POT-Creation-Date: 2024-03-20 23:00+0900\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-app/fr/"
-">\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
+"metainfo/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,59 +23,70 @@ msgstr ""
 
 #: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
 msgid "Pin It!"
-msgstr ""
+msgstr "Pin It!"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Créateur de fichiers desktop"
 
 #: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
 #: src/MainWindow.vala:249
 #, fuzzy
 msgid "Pin portable apps to the launcher"
-msgstr "Épinglez n'importe quelle application dans le lanceur"
+msgstr "Épinglez n'importe quelle application au lanceur"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
+msgstr "Bureau;Fichier;Créer;Modifier;Info;Icône;AppImage;"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"Épinglez des raccourcis vers vos applications portables (fichiers "
+"exécutables bruts, fichiers AppImage, etc.) dans le lanceur d’applications "
+"de votre environnement de bureau."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
-msgstr ""
+msgstr "Les autres fonctionnalités incluent :"
 
 #: data/pinit.metainfo.xml.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"Modification ou suppression des entrées d’applications créées sans ouvrir le "
+"gestionnaire de fichiers"
 
 #: data/pinit.metainfo.xml.in:21
+#, fuzzy
 msgid "Automatically add the execute permission to the file you select"
 msgstr ""
+"Ajout automatique de l’autorisation d’exécution pour le fichier sélectionné"
 
 #: data/pinit.metainfo.xml.in:27
+#, fuzzy
 msgid "List of app entries in the light mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode clair"
 
 #: data/pinit.metainfo.xml.in:32
+#, fuzzy
 msgid "Editing the app entry in the light mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode clair"
 
 #: data/pinit.metainfo.xml.in:37
+#, fuzzy
 msgid "List of app entries in the dark mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode sombre"
 
 #: data/pinit.metainfo.xml.in:42
+#, fuzzy
 msgid "Editing the app entry in the dark mode"
-msgstr ""
+msgstr "Vue de l’édition dans le mode sombre"
 
 #: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -486,11 +497,6 @@ msgstr "Entrée supprimée."
 #~ msgid "Updated entry."
 #~ msgstr "Entrée mise à jour."
 
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr ""
-#~ "Épinglez des raccourcis vers vos applications portables préférées dans "
-#~ "votre lanceur d’applications"
-
 #~ msgid "File Name"
 #~ msgstr "Nom du fichier"
 
@@ -610,3 +616,252 @@ msgstr "Entrée supprimée."
 
 #~ msgid "Edit a desktop file"
 #~ msgstr "Modifier un fichier desktop"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Épinglez des raccourcis vers vos applications portables préférées dans "
+#~ "votre lanceur d’applications"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Détection d’erreurs de syntaxe"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Sauvegarde automatique de vos données en cours d’édition, de la dernière "
+#~ "vue ouverte et des préférences"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Vue des fichiers dans le mode clair"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Vue des fichiers dans le mode sombre"
+
+#~ msgid "The release for celebrating the 2nd anniversary of the app!"
+#~ msgstr "La version célébrant le deuxième anniversaire de l’appli !"
+
+#~ msgid "Fix deprecations in GTK 4.10"
+#~ msgstr "Correction de régressions dans GTK 4.10"
+
+#~ msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+#~ msgstr "Changements grammaticaux en anglais (grâce à @BraidenPsiuk)"
+
+#~ msgid ""
+#~ "EditView: Make keys that is not required by the freedesktop.org "
+#~ "specification optional"
+#~ msgstr ""
+#~ "Vue d’édition : les touches non requises par la spécification freedesktop."
+#~ "org deviennent optionnelles"
+
+#~ msgid "CategoryChooser: Improve layout management"
+#~ msgstr "Sélecteur de catégories : amélioration de la mise en page"
+
+#~ msgid "Fix navigate back shows empty window"
+#~ msgstr "Correction du retour en arrière qui affichait une fenêtre vide"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Mise à jour de l’environnement d’exécution Flatpak"
+
+#~ msgid "Update translations"
+#~ msgstr "Mise à jour des traductions"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr ""
+#~ "La mise à jour la plus grande et la plus importante concerne « Pin It » :"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Nouveau design pour s’adapter aux environnements de bureau modernes, "
+#~ "comprenant la prise en charge de la conception réactive"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migration vers GTK 4, la dernière version de GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Autres changements :"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr ""
+#~ "Possibilité de définir des fichiers « .ico » comme icônes d’applications"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Possibilité d’édition dans un éditeur de texte"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr ""
+#~ "Résolution de l’impossibilité de changer la taille de la fenêtre sur "
+#~ "écrans de petite taille"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr ""
+#~ "Affichage d’une fenêtre de dialogue pour les erreurs lors d’un échec de "
+#~ "l’enregistrement / la sauvegarde"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr ""
+#~ "Vérification qu’aucun élément vide n’a été laissé dans les fichiers de "
+#~ "bureau générés"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr ""
+#~ "Vérification que l’ensemble des autorisations des fichiers exécutables "
+#~ "sélectionnés n’est pas écrasé"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr ""
+#~ "Accord des permissions d’exécution à l’utilisateur, uniquement quand il "
+#~ "ne les a pas"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "Métadonnées de l’application : correction de l’année de sortie"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Mise à jour des traductions :"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Mise à jour des traductions italiennes (grâce à @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr ""
+#~ "Vérification de l’environnement de bureau dans l’environnement d’exécution"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Réduction de la portée de l’accès aux fichiers"
+
+#~ msgid "Make window resizable"
+#~ msgstr "La fenêtre est désormais redimensionnable"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Volet d’édition : moins strict sur les noms de fichiers"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Ajout des traductions en italien (grâce à @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Ajout d’une traduction néerlandaise (grâce à @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Mise à jour de la traduction japonaise"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Correction d’une erreur de build sur d’autres distributions"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "Vue des fichiers : boîte de dialogue correctement centrée par rapport à "
+#~ "la fenêtre de l’application"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Restauration de la dernière vue ouverte et de son dernier état"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Ajout d’un nouveau bouton de sélection du thème"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr ""
+#~ "Correction de l’étiquette de la barre de titre lorsqu’aucun nom "
+#~ "d’application n’a été spécifié"
+
+#~ msgid "Readable copies"
+#~ msgstr "Copies lisibles"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr ""
+#~ "Vue des fichiers : ellipse si les textes d’étiquette sont trop longs"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr ""
+#~ "Précision des formats de fichiers acceptés dans le sélectionneur de "
+#~ "fichiers"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr ""
+#~ "Ajout d’une traduction en portugais brésilien (grâce à @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr ""
+#~ "Vue d’édition : focalisation sur l’entrée du nom du fichier par défaut"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Vue des fichiers : défilement possible du contenu de la fenêtre, laquelle "
+#~ "garde une taille raisonnable lorsqu’il y a beaucoup de champs de saisie"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr ""
+#~ "Amélioration de la prise en charge des autres environnements de bureau"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr ""
+#~ "Ajout d’une permission d’exécution lors du clic sur le bouton "
+#~ "« Épingler ! »"
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Ajout du sélecteur de catégories"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr ""
+#~ "Prise en charge du raccourci Alt + ⌘ pour afficher la page d'accueil"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Autorisation de l'accélération matérielle par défaut"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Ajout d'une icône au format 128px (Grâce à @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Coins arrondis de la fenêtre peu importe la feuille de style (Grâce à "
+#~ "@JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Prise en charge des gestes multi-touch (Grâce à @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr ""
+#~ "Correction du texte de description qui était illisible dans le Centre "
+#~ "d'Applications"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Sauvegarde et restauration de la position de la fenêtre"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Ajout des traductions en espagnol (grâce à @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Version initiale"
+
+#~ msgid "Files View"
+#~ msgstr "Page des fichiers"
+
+#~ msgid "Edit View"
+#~ msgstr "Page de modification"
+
+#, fuzzy
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr ""
+#~ "Amélioration de la prise en charge des autres environnements de bureau"
+
+#~ msgid "Welcome View"
+#~ msgstr "Page d'accueil"
+
+#, fuzzy
+#~ msgid ""
+#~ "Pin It! comes with syntax errors detection, so you will never need to "
+#~ "waste your time seeking for why your desktop entry won't be shown in the "
+#~ "launcher."
+#~ msgstr ""
+#~ "Pin It! intègre une détection des erreurs de syntaxe afin que vous ne "
+#~ "perdiez pas votre temps à chercher pourquoi votre fichier desktop "
+#~ "n'apparaît pas dans le Menu des Applications."
+
+#~ msgid "com.github.ryonakano.pinit"
+#~ msgstr "com.github.ryonakano.pinit"
