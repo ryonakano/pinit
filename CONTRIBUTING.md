@@ -57,7 +57,11 @@ or the interface of methods.
 
 #### Refer to Existing Documentation Comments
 
-Setting the build option `doc` to `true` will generate HTML documentations from the code.
+Building the source code with the option `doc` to `true` will generate HTML documentations.
+
+You'll need the following extra dependencies to build:
+
+* valadoc
 
 Assuming that you've already built the project through the way described in the [README](README.md#for-developers):
 
