@@ -65,7 +65,7 @@ Assuming that you've already built the project through the way described in the 
 cd builddir
 meson configure -Ddoc=true
 ninja
-xdg-open doc/index.html
+xdg-open valadoc/index.html
 ```
 
 #### Editing Documentation Comments
