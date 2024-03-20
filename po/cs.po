@@ -1,13 +1,12 @@
-# Czech translation for Pinit.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Czech translation for com.github.ryonakano.pinit.
+# Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Amerey.eu <info@amerey.eu>, 2023.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 22:54+0900\n"
+"POT-Creation-Date: 2024-03-20 23:37+0900\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"

@@ -4,16 +4,14 @@
 # Nathan Bonnemains (@NathanBnm), 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # rene-coty <irenee.thirion@e.email>, 2022, 2023.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 23:00+0900\n"
+"POT-Creation-Date: 2024-03-20 23:37+0900\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/pinit-"
-"metainfo/fr/>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
