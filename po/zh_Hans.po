@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # TSc2end <lianhaoxin2012@163.com>, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2023-01-05 06:52+0000\n"
-"Last-Translator: TSc2end <lianhaoxin2012@163.com>\n"
+"PO-Revision-Date: 2024-03-20 13:46+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "rosp/pinit-app/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -103,7 +104,7 @@ msgstr "这将从启动器中移除应用。"
 #. TRANSLATORS: Replace with your name; don't translate literally
 #: src/MainWindow.vala:240
 msgid "translator-credits"
-msgstr "译者注"
+msgstr ""
 
 #: src/View/EditView.vala:71
 msgid "Required Entries"
