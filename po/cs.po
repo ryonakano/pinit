@@ -1,13 +1,12 @@
-# Czech translation for Pinit.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Czech translation for com.github.ryonakano.pinit.
+# Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Amerey.eu <info@amerey.eu>, 2023.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 23:52+0900\n"
+"POT-Creation-Date: 2024-03-20 23:37+0900\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -18,153 +17,208 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: data/gtk/help-overlay.ui:11
+#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+msgid "Pin It!"
+msgstr "Pin It!"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "Nástroj pro tvorbu souborů na ploše"
+
+#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
+#: src/MainWindow.vala:249
+#, fuzzy
+msgid "Pin portable apps to the launcher"
+msgstr ""
+"Vytvořte si zástupce svých oblíbených přenosných aplikací ve spouštěči "
+"aplikací"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+
+#: data/pinit.metainfo.xml.in:13
+msgid ""
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
+msgstr ""
+"Vytvořte zástupce přenosných aplikací, jako jsou nezpracované spustitelné "
+"soubory, soubory AppImage atd., do spouštěče aplikací vašeho desktopového "
+"prostředí."
+
+#: data/pinit.metainfo.xml.in:16
+msgid "Other features include:"
+msgstr "Mezi další funkce patří:"
+
+#: data/pinit.metainfo.xml.in:20
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+"Upravte nebo odstraňte vytvořené položky aplikace bez otevření správce "
+"souborů"
+
+#: data/pinit.metainfo.xml.in:21
+#, fuzzy
+msgid "Automatically add the execute permission to the file you select"
+msgstr "Automaticky přidejte oprávnění ke spuštění do souboru, který vyberete"
+
+#: data/pinit.metainfo.xml.in:27
+#, fuzzy
+msgid "List of app entries in the light mode"
+msgstr "Editace ve světlém režimu"
+
+#: data/pinit.metainfo.xml.in:32
+#, fuzzy
+msgid "Editing the app entry in the light mode"
+msgstr "Editace ve světlém režimu"
+
+#: data/pinit.metainfo.xml.in:37
+#, fuzzy
+msgid "List of app entries in the dark mode"
+msgstr "Editace v tmavém režimu"
+
+#: data/pinit.metainfo.xml.in:42
+#, fuzzy
+msgid "Editing the app entry in the dark mode"
+msgstr "Editace v tmavém režimu"
+
+#: data/pinit.metainfo.xml.in:60
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Obecné"
 
-#: data/gtk/help-overlay.ui:15
+#: data/resources/gtk/help-overlay.blp:14
 #, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zktatky"
 
-#: data/gtk/help-overlay.ui:21
+#: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Ukončit"
 
-#: data/gtk/help-overlay.ui:28
+#: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Editovat"
 
-#: data/gtk/help-overlay.ui:32
+#: data/resources/gtk/help-overlay.blp:28
 #, fuzzy
-#| msgid "New Entry"
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: src/MainWindow.vala:56
-msgid "Entry updated."
-msgstr ""
-
-#: src/MainWindow.vala:60
+#: src/MainWindow.vala:89
 msgid "Entry deleted."
 msgstr ""
 
-#: src/MainWindow.vala:107
+#: src/MainWindow.vala:104
+msgid "Entry updated."
+msgstr ""
+
+#: src/MainWindow.vala:123
 msgid "Failed to Load Entries"
 msgstr ""
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:124
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:110 src/View/EditView.vala:370
-#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#: src/MainWindow.vala:126 src/View/EditView.vala:380
+#: src/View/EditView.vala:469 src/View/FilesView.vala:148
 #, fuzzy
-#| msgid "Close"
 msgid "_Close"
 msgstr "Zavřít"
 
-#: src/MainWindow.vala:142
+#: src/MainWindow.vala:158
 msgid "Save Changes?"
 msgstr ""
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
 
-#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#: src/MainWindow.vala:161 src/View/FilesView.vala:134
 #, fuzzy
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "Zrušit"
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:162
 msgid "_Discard"
 msgstr ""
 
-#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#: src/MainWindow.vala:163 src/View/EditView.vala:39
 #, fuzzy
-#| msgid "Save"
 msgid "_Save"
 msgstr "Uložit"
 
-#: src/MainWindow.vala:230
-#, fuzzy
-#| msgid "This removes the app from the launcher."
-msgid "Pin portable apps to the launcher"
-msgstr "Tím se aplikace odstraní ze spouštěče aplikací."
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:240
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You may add your name and your email address/website URL if you want, e.g.:
+#. John Doe <john-doe@example.com>
+#. Jane Doe <https://example.com>
+#: src/MainWindow.vala:257
 msgid "translator-credits"
 msgstr "Amerey.eu"
 
-#: src/View/EditView.vala:71
-msgid "Required Entries"
+#: src/View/EditView.vala:68
+msgid "Required Fields"
 msgstr ""
 
-#: src/View/EditView.vala:72
-msgid "The following entries need to be filled to save."
+#: src/View/EditView.vala:69
+msgid "The following fields need to be filled to save."
 msgstr ""
 
-#: src/View/EditView.vala:76
+#: src/View/EditView.vala:73
 msgid "App Name"
 msgstr "Jméno aplikace"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:78
 msgid "Exec File"
 msgstr "Spustitelný soubor"
 
-#: src/View/EditView.vala:84
+#: src/View/EditView.vala:81
 #, fuzzy
-#| msgid "Select an executable file"
 msgid "Select an executable file…"
 msgstr "Vybrat spustitelný soubor"
 
-#: src/View/EditView.vala:95
-msgid "Optional Entries"
+#: src/View/EditView.vala:92
+msgid "Optional Fields"
 msgstr ""
 
-#: src/View/EditView.vala:96
-msgid "Filling these entries improves discoverability in the app launcher."
+#: src/View/EditView.vala:93
+msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 
-#: src/View/EditView.vala:100
+#: src/View/EditView.vala:97
 msgid "Icon File"
 msgstr "Ikona"
 
-#: src/View/EditView.vala:103
+#: src/View/EditView.vala:100
 #, fuzzy
-#| msgid "Select an icon file"
 msgid "Select an icon file…"
 msgstr "Vybrat ikonu"
 
-#: src/View/EditView.vala:111
+#: src/View/EditView.vala:108
 #, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "General"
 msgid "Generic Name"
 msgstr "Obecné"
 
-#: src/View/EditView.vala:116
+#: src/View/EditView.vala:113
 msgid "Comment"
 msgstr "Popis aplikace"
 
-#: src/View/EditView.vala:130
+#: src/View/EditView.vala:127
 #, fuzzy
-#| msgid "Advanced configuration"
 msgid "Advanced Configurations"
 msgstr "Pokročilá konfigurace"
 
-#: src/View/EditView.vala:131
+#: src/View/EditView.vala:128
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -172,274 +226,253 @@ msgstr ""
 "Ve většině případů můžete vytvořit položku aplikace vyplněním sekcí výše. V "
 "případě, že nebudou fungovat, můžete použít následující sekci."
 
-#: src/View/EditView.vala:135
+#: src/View/EditView.vala:132
 msgid "Startup WM Class"
 msgstr "Třída spuštění WM"
 
-#: src/View/EditView.vala:140
+#: src/View/EditView.vala:137
 msgid "Run in Terminal"
 msgstr "Spustit v Terminálu"
 
-#: src/View/EditView.vala:141
+#: src/View/EditView.vala:138
 #, fuzzy
-#| msgid "Check this if you want to register a CUI app."
 msgid "Turn on if you want to register a CUI app."
 msgstr "Zaškrtněte, pokud chcete zaregistrovat aplikaci CUI."
 
-#: src/View/EditView.vala:145
+#: src/View/EditView.vala:142
 #, fuzzy
-#| msgid "Open"
 msgid "_Open"
 msgstr "Otevřít"
 
-#: src/View/EditView.vala:149
+#: src/View/EditView.vala:146
 #, fuzzy
-#| msgid "Open in text editor"
 msgid "Open with Text Editor"
 msgstr "Otevřít v textovém editoru"
 
-#: src/View/EditView.vala:150
+#: src/View/EditView.vala:147
 #, fuzzy
-#| msgid "You can also edit more options by opening in a text editor."
 msgid "You can also edit more options by opening with a text editor."
 msgstr "Další možnosti můžete upravit otevřením v textovém editoru."
 
-#: src/View/EditView.vala:195
+#: src/View/EditView.vala:192
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: src/View/EditView.vala:211 src/View/EditView.vala:399
+#: src/View/EditView.vala:208 src/View/EditView.vala:410
 msgid "Untitled App"
 msgstr ""
 
-#: src/View/EditView.vala:231
+#: src/View/EditView.vala:228
 #, fuzzy
-#| msgid "Select an executable file"
 msgid "Select Executable File"
 msgstr "Vybrat spustitelný soubor"
 
-#: src/View/EditView.vala:232 src/View/EditView.vala:289
+#: src/View/EditView.vala:229 src/View/EditView.vala:286
 #, fuzzy
-#| msgid "Select"
 msgid "_Select"
 msgstr "Vybrat"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:282
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG, nebo XMP soubory"
 
-#: src/View/EditView.vala:288
+#: src/View/EditView.vala:285
 #, fuzzy
-#| msgid "Select an icon file"
 msgid "Select Icon File"
 msgstr "Vybrat ikonu"
 
-#: src/View/EditView.vala:367
+#: src/View/EditView.vala:377
 #, fuzzy
-#| msgid "Could not open with external app"
 msgid "Failed to Open with External App"
 msgstr "Nelze otevřít pomocí externí aplikace"
 
-#: src/View/EditView.vala:368
+#: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
-#: src/View/EditView.vala:424
+#: src/View/EditView.vala:435
 #, fuzzy
-#| msgid "Editing Entry"
 msgid "Edit Entry"
 msgstr "Editace položky"
 
-#: src/View/EditView.vala:426
+#: src/View/EditView.vala:437
 #, fuzzy, c-format
-#| msgid "Editing “%s”"
 msgid "Edit “%s”"
 msgstr "Editace “%s”"
 
-#: src/View/EditView.vala:446
+#: src/View/EditView.vala:459
 msgid "Failed to Save Entry"
 msgstr ""
 
-#: src/View/EditView.vala:448
+#: src/View/EditView.vala:461
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr ""
 
-#: src/View/EditView.vala:454
+#: src/View/EditView.vala:467
 msgid "There was an error while saving the app entry."
 msgstr ""
 
-#: src/View/FilesView.vala:29
+#: src/View/FilesView.vala:25
 msgid "Create a new entry"
 msgstr "Vytvořit novou položku"
 
-#: src/View/FilesView.vala:35
+#: src/View/FilesView.vala:31
 #, fuzzy
-#| msgid "Light"
 msgid "_Light"
 msgstr "Světlý"
 
-#: src/View/FilesView.vala:36
+#: src/View/FilesView.vala:32
 #, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
 msgstr "Tmavý"
 
-#: src/View/FilesView.vala:37
+#: src/View/FilesView.vala:33
 #, fuzzy
-#| msgid "System"
 msgid "S_ystem"
 msgstr "Systém"
 
-#: src/View/FilesView.vala:40
+#: src/View/FilesView.vala:36
 #, fuzzy
-#| msgid "Style"
 msgid "_Style"
 msgstr "Motiv"
 
-#: src/View/FilesView.vala:41
+#: src/View/FilesView.vala:37
 #, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "_Keyboard Shortcuts"
 msgstr "Klávesové zktatky"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/View/FilesView.vala:43
+#: src/View/FilesView.vala:39
 #, fuzzy, c-format
-#| msgid "About %s"
 msgid "_About %s"
 msgstr "O aplikaci %s"
 
-#: src/View/FilesView.vala:46
+#: src/View/FilesView.vala:42
 msgid "Main Menu"
 msgstr ""
 
-#: src/View/FilesView.vala:61
+#: src/View/FilesView.vala:57
 #, fuzzy
-#| msgid "No valid app entries found"
 msgid "No Entries Found"
 msgstr "Nebyly nalezeny žádné platné položky aplikací"
 
-#: src/View/FilesView.vala:62
+#: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
 msgstr ""
 
-#: src/View/FilesView.vala:112
+#: src/View/FilesView.vala:118
 #, fuzzy
-#| msgid "Deleted entry."
 msgid "Delete Entry?"
 msgstr "Smazaná položka."
 
-#: src/View/FilesView.vala:114
+#: src/View/FilesView.vala:120
 #, c-format
 msgid "Delete Entry of “%s”?"
 msgstr ""
 
-#: src/View/FilesView.vala:118
+#: src/View/FilesView.vala:124
 msgid "Delete…"
 msgstr "Smazat…"
 
-#: src/View/FilesView.vala:126
+#: src/View/FilesView.vala:132
 msgid "This removes the app from the launcher."
 msgstr "Tím se aplikace odstraní ze spouštěče aplikací."
 
-#: src/View/FilesView.vala:129
+#: src/View/FilesView.vala:135
 #, fuzzy
-#| msgid "Delete"
 msgid "_Delete"
 msgstr "Smazat"
 
-#: src/View/FilesView.vala:139
+#: src/View/FilesView.vala:145
 #, fuzzy, c-format
-#| msgid "Could not delete file “%s”"
 msgid "Failed to Delete Entry of “%s”"
 msgstr "Nelze smazat soubor „%s“"
 
-#: src/View/FilesView.vala:140
+#: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
 msgstr ""
 
-#: src/Widget/CategoriesRow.vala:77
+#: src/Widget/CategoriesRow.vala:40
 #, fuzzy
-#| msgid "App Categories"
-msgid "Categories"
-msgstr "Kategorie aplikací"
-
-#: src/Widget/CategoriesRow.vala:78
-msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "Kategorie platné pro aplikaci. (Můžete vybrat více než jednu.)"
-
-#: src/Widget/CategoriesRow.vala:84
-msgid "Sound & Video"
+msgid "Sound &amp; Video"
 msgstr "Audio a Video"
 
-#: src/Widget/CategoriesRow.vala:85
+#: src/Widget/CategoriesRow.vala:41
 msgid "Audio"
 msgstr "Audio"
 
-#: src/Widget/CategoriesRow.vala:86
+#: src/Widget/CategoriesRow.vala:42
 msgid "Video"
 msgstr "Video"
 
-#: src/Widget/CategoriesRow.vala:87
+#: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
 msgstr "Programování"
 
-#: src/Widget/CategoriesRow.vala:88
+#: src/Widget/CategoriesRow.vala:44
 msgid "Education"
 msgstr "Vzdělávání"
 
-#: src/Widget/CategoriesRow.vala:89
+#: src/Widget/CategoriesRow.vala:45
 msgid "Games"
 msgstr "Hry"
 
-#: src/Widget/CategoriesRow.vala:90
+#: src/Widget/CategoriesRow.vala:46
 msgid "Graphics"
 msgstr "Grafika"
 
-#: src/Widget/CategoriesRow.vala:91
+#: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
 msgstr "Internet"
 
-#: src/Widget/CategoriesRow.vala:92
+#: src/Widget/CategoriesRow.vala:48
 msgid "Office"
 msgstr "Kancelář"
 
-#: src/Widget/CategoriesRow.vala:93
+#: src/Widget/CategoriesRow.vala:49
 msgid "Science"
 msgstr "Věda"
 
-#: src/Widget/CategoriesRow.vala:94
+#: src/Widget/CategoriesRow.vala:50
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/Widget/CategoriesRow.vala:95
+#: src/Widget/CategoriesRow.vala:51
 msgid "System Tools"
 msgstr "Systémové nástroje"
 
-#: src/Widget/CategoriesRow.vala:96
+#: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
 msgstr "Příslušenství"
 
-#: src/Widget/KeywordsRow.vala:54
+#: src/Widget/CategoriesRow.vala:62
+#, fuzzy
+msgid "Categories"
+msgstr "Kategorie aplikací"
+
+#: src/Widget/CategoriesRow.vala:63
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr "Kategorie platné pro aplikaci. (Můžete vybrat více než jednu.)"
+
+#: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
 msgstr ""
 
-#: src/Widget/KeywordsRow.vala:55
+#: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
 msgstr ""
 
-#: src/Widget/KeywordsRow.vala:60
+#: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
 msgstr ""
 
-#: src/Widget/KeywordsRow.vala:114
+#: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
 msgstr ""
 
-#: src/Widget/KeywordsRow.vala:118
+#: src/Widget/KeywordsRow.vala:126
 #, fuzzy
-#| msgid "Deleted entry."
 msgid "Delete keyword"
 msgstr "Smazaná položka."
 
@@ -560,3 +593,173 @@ msgstr "Smazaná položka."
 #~ msgstr ""
 #~ "Použijte také alespoň jednu tečku, abyste se ujistili, že je název "
 #~ "rozdělen alespoň na dva prvky."
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Detekce syntaktických chyb"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Automaticky ukládejte vše – svá data při úpravách, poslední otevřené "
+#~ "zobrazení a předvolby"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Zobrazení souborů ve světlém režimu"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Zobrazení souborů v tmavém režimu"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Aktualizace verzi runtime Flatpak"
+
+#~ msgid "Update translations"
+#~ msgstr "Aktualizace překladů"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "Největší a nejlepší aktualizace přicházejí do „Pin It!“:"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Redesign, aby vyhovoval moderním desktopovým prostředím, včetně podpory "
+#~ "responzivního designu"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Přechod na GTK 4, nejnovější verzi GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Další změny:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr "Podpora nastavení souborů „.ico“ jako ikony aplikace"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Podpora otevírání v textovém editoru"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr "Oprava - velikost okna nelze změnit na malých displejích"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "Zobrazit chybová dialogová okna, když se ukládání/mazání nezdařilo"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr "Do generovaných souborů nepřidávat prázdné prvky"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr "Nepřepisovat všechna oprávnění vybraných spustitelných souborů"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr ""
+#~ "Udělit uživateli oprávnění ke spustitelnému souboru pouze v případě, že "
+#~ "jej nemá"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "AppData: Oprava roku vydání"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aktualizace překladu:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Italský překlad (díky @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Kontrola desktopového prostředí"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Zmenšen rozsah přístupu k souborům"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Možnost změny velikost okna"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Editace: Méně striktní na názvy souborů"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Přidán italský překlad (díky @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Přidán holandský překlad (díky @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Aktualizace překladu japonštiny"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Oprava chyby sestavení v jiných distribucích"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "Zobrazení souborů: Správně vycentrováno dialogové okno proti oknu aplikace"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Obnovení naposledy otevřeného zobrazení a jeho stav"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Přidán nový přepínač stylů"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr "Opravený popisek záhlaví, když není zadán žádný název aplikace"
+
+#~ msgid "Readable copies"
+#~ msgstr "Čitelné kopie"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr ""
+#~ "Zobrazení souborů: Pokud jsou texty štítků příliš dlouhé, jsou zkráceny a "
+#~ "nahrazeny tečkami"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "Akceptované formáty souborů ve Výběru souborů"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Přidán překlad do brazilského portugalštiny (díky @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Editace: Ve výchozím nastavení se zaměří na zadání názvu souboru"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Zobrazení souborů: Umožnění posouvání a oprava velikosti okna při mnoha "
+#~ "záznamech"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Přidán francouzský překlad (díky @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Vylepšená podpora pro další desktopová prostředí"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Přidáno oprávnění při kliknutí na tlačítko \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Přidán výběr kategorií"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Podpora Alt+Home pro zobrazení uvítací obrazovky"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Ve výchozím nastavení povolena akcelerace GPU"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Přidána ikona aplikace 128px (díky @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr "Zaoblené rohy oken na libovolné šabloně stylů (díky @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Podpora vícedotykových gest (díky @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Oprava: nečitelný text popisu v centru aplikací"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Uložení a obnovení pozice okna"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Přidán španělský překlad (díky @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "První vydání"
