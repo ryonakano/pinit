@@ -25,19 +25,7 @@ config_file = configure_file(
 )
 
 subdir('data/resources')
-
-sources = files(
-    'src' / 'Model' / 'DesktopFile.vala',
-    'src' / 'Model' / 'DesktopFileModel.vala',
-    'src' / 'Util' / 'DesktopFileUtil.vala',
-    'src' / 'View' / 'EditView.vala',
-    'src' / 'View' / 'FilesView.vala',
-    'src' / 'Widget' / 'CategoriesRow.vala',
-    'src' / 'Widget' / 'KeywordsRow.vala',
-    'src' / 'Application.vala',
-    'src' / 'Define.vala',
-    'src' / 'MainWindow.vala'
-)
+subdir('src')
 
 executable(
     meson.project_name(),
@@ -58,10 +46,6 @@ executable(
 
 subdir('data')
 subdir('po')
-
-if get_option('doc')
-    subdir('doc')
-endif
 
 gnome.post_install(
     glib_compile_schemas: true,
