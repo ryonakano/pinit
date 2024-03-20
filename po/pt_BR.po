@@ -1,17 +1,17 @@
-# Brazilian-Portuguese translations for main po.
-# Copyright (C) 2021 THE PACKAGE'S COPYRIGHT HOLDER
+# Brazilian-Portuguese translations for com.github.ryonakano.pinit package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Daniel Tolentino Ferreira Santos <danieltolentino@protonmail.comS>, 2021.
+# Daniel Tolentino <danieltolentino@protonmail.com>, 2021.
 # Felipe Nogueira <contato.fnog@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 22:48+0900\n"
+"POT-Creation-Date: 2024-03-20 23:12+0900\n"
 "PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
-"pinit-app/pt_BR/>\n"
+"pinit-metadata/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
 msgid "Pin It!"
-msgstr ""
+msgstr "Pin It!"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Criador de arquivos de desktop"
 
 #: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
 #: src/MainWindow.vala:249
@@ -35,13 +35,17 @@ msgstr "Fixe qualquer aplicativo no lançador"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
+msgstr "Desktop;Arquivo;Criar;Editar;Info;Ícone;AppImage;"
 
 #: data/pinit.metainfo.xml.in:13
+#, fuzzy
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"Adicione aplicativos portáteis como arquivos executáveis brutos, arquivos "
+"AppImage, etc.facilmente no Menu de Aplicativos. Edite ou delete arquivos de "
+"desktop existentes sem abrir o gerenciador de arquivos."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
@@ -73,7 +77,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -474,14 +478,6 @@ msgstr "Entrada apagada."
 #~ msgid "Updated entry."
 #~ msgstr "Entrada atualizada."
 
-#, fuzzy
-#~| msgid ""
-#~| "Create the shortcut to your favorite portable apps into your app launcher"
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr ""
-#~ "Crie o atalho para seus aplicativos portáteis favoritos em seu lançador "
-#~ "de aplicativos"
-
 #~ msgid "File Name"
 #~ msgstr "Nome do Arquivo"
 
@@ -554,3 +550,123 @@ msgstr "Entrada apagada."
 
 #~ msgid "Edit a desktop file"
 #~ msgstr "Editar um arquivo de desktop"
+
+#, fuzzy
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Crie o atalho para seus aplicativos portáteis favoritos em seu lançador "
+#~ "de aplicativos"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update translations"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Atualizações de tradução:"
+
+#, fuzzy
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#, fuzzy
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Página de Arquivos: Faz a página ralável e conserte a janela ficar maior "
+#~ "se houver muitas entradas"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
+
+#, fuzzy
+#~| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Adiciona SeletorDeCategoria"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Suporta Alt+Home para exibir início"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Permite aceleração de GPU por padrão"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Cantos de janela arredondados em qualquer folha de estilo (agradecimentos "
+#~ "a @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Corrige texto de descrição ilegível no AppCenter"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Salvar e restaurar posição da janela"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Lançamento inicial"
+
+#~ msgid "Files View"
+#~ msgstr "Página de Arquivos"
+
+#~ msgid "Edit View"
+#~ msgstr "Página de Edição"
+
+#, fuzzy
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
+
+#~ msgid "Welcome View"
+#~ msgstr "Página Inicial"
+
+#, fuzzy
+#~ msgid ""
+#~ "Pin It! comes with syntax errors detection, so you will never need to "
+#~ "waste your time seeking for why your desktop entry won't be shown in the "
+#~ "launcher."
+#~ msgstr ""
+#~ "Pint It! vem com detecção de erros de sintaxe, para que você não precise "
+#~ "perder seu tempo procurando porque o seu atalho de desktop não está no "
+#~ "Menu de Aplicativos."
+
+#~ msgid "com.github.ryonakano.pinit"
+#~ msgstr "com.github.ryonakano.pinit"
