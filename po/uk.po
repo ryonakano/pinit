@@ -8,9 +8,10 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-20 23:37+0900\n"
-"PO-Revision-Date: 2024-02-20 02:01+0000\n"
+"PO-Revision-Date: 2024-03-21 03:45+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: \n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/>"
+"\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,14 +160,12 @@ msgid "translator-credits"
 msgstr "Ihor Hordiichuk"
 
 #: src/View/EditView.vala:68
-#, fuzzy
 msgid "Required Fields"
-msgstr "Обов'язкові записи"
+msgstr "Обов'язкові поля"
 
 #: src/View/EditView.vala:69
-#, fuzzy
 msgid "The following fields need to be filled to save."
-msgstr "Для збереження необхідно заповнити ці поля."
+msgstr "Щоб зберегти необхідно заповнити ці поля."
 
 #: src/View/EditView.vala:73
 msgid "App Name"
@@ -181,14 +180,12 @@ msgid "Select an executable file…"
 msgstr "Вибрати виконуваний файл…"
 
 #: src/View/EditView.vala:92
-#, fuzzy
 msgid "Optional Fields"
-msgstr "Необов'язкові записи"
+msgstr "Необов'язкові поля"
 
 #: src/View/EditView.vala:93
-#, fuzzy
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr "Заповнення цих полів поліпшує виявність в панелі запуску застосунків."
+msgstr "Заповнення цих полів поліпшує виявність на панелі запуску застосунків."
 
 #: src/View/EditView.vala:97
 msgid "Icon File"
@@ -372,7 +369,6 @@ msgid "There was an error while removing the app entry."
 msgstr "Виникла помилка під час видалення запису застосунку."
 
 #: src/Widget/CategoriesRow.vala:40
-#, fuzzy
 msgid "Sound &amp; Video"
 msgstr "Звук і відео"
 
