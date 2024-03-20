@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 22:48+0900\n"
+"POT-Creation-Date: 2024-03-20 23:20+0900\n"
 "PO-Revision-Date: 2024-02-20 02:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-app/"
-"uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit-"
+"metainfo/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
 msgid "Pin It!"
-msgstr ""
+msgstr "Pin It!"
 
 #: data/pinit.desktop.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Створення файлів робочого столу"
 
 #: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
 #: src/MainWindow.vala:249
@@ -36,44 +36,50 @@ msgstr "Прикріплюйте портативні застосунки у п
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
+"Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
+"File;Create;Edit;Info;Icon;AppImage;"
 
 #: data/pinit.metainfo.xml.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"Прикріплюйте ярлики портативних застосунків, таких як необроблені виконувані "
+"файли, файли AppImage тощо, у панелі застосунків вашої стільниці."
 
 #: data/pinit.metainfo.xml.in:16
 msgid "Other features include:"
-msgstr ""
+msgstr "Інші функції включають:"
 
 #: data/pinit.metainfo.xml.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"Редагування або видалення створених записів застосунків без відкриття "
+"файлового менеджера"
 
 #: data/pinit.metainfo.xml.in:21
 msgid "Automatically add the execute permission to the file you select"
-msgstr ""
+msgstr "Автододавання дозволу на виконання до вибраного файлу"
 
 #: data/pinit.metainfo.xml.in:27
 msgid "List of app entries in the light mode"
-msgstr ""
+msgstr "Список записів застосунків у світлому режимі"
 
 #: data/pinit.metainfo.xml.in:32
 msgid "Editing the app entry in the light mode"
-msgstr ""
+msgstr "Редагування запису застосунку у світловому режимі"
 
 #: data/pinit.metainfo.xml.in:37
 msgid "List of app entries in the dark mode"
-msgstr ""
+msgstr "Список записів застосунків у темному режимі"
 
 #: data/pinit.metainfo.xml.in:42
 msgid "Editing the app entry in the dark mode"
-msgstr ""
+msgstr "Редагування запису застосунку у темному режимі"
 
 #: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -569,3 +575,209 @@ msgstr "Видалити ключове слово"
 #~ msgstr ""
 #~ "Використовуйте принаймні одну крапку, щоб переконатися, що текст "
 #~ "розділений принаймні на два елементи."
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Виявлення синтаксичних помилок"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Автозбереження всього — ваших даних під час редагування, останнього "
+#~ "відкритого подання та налаштувань"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Перегляд файлів у світловому режимі"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Перегляд файлів у темному режимі"
+
+#~ msgid "The release for celebrating the 2nd anniversary of the app!"
+#~ msgstr "Випуск з нагоди святкування 2-ї річниці застосунку!"
+
+#~ msgid "Fix deprecations in GTK 4.10"
+#~ msgstr "Усунено застарілості в GTK 4.10"
+
+#~ msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+#~ msgstr "Граматичні зміни у версії англійською (завдяки @BraidenPsiuk)"
+
+#~ msgid ""
+#~ "EditView: Make keys that is not required by the freedesktop.org "
+#~ "specification optional"
+#~ msgstr ""
+#~ "EditView: Ключі, які не вимагаються специфікацією freedesktop.org, стали "
+#~ "необов'язковими"
+
+#~ msgid "CategoryChooser: Improve layout management"
+#~ msgstr "CategoryChooser: Удосконалено керування макетами"
+
+#~ msgid "Fix navigate back shows empty window"
+#~ msgstr ""
+#~ "Виправлено проблему, коли під час переходу назад показувались порожні "
+#~ "вікна"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Оновлення версії середовища виконання Flatpak"
+
+#~ msgid "Update translations"
+#~ msgstr "Оновлені переклади"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "Найбільші та найкращі оновлення приходять до «Pin It!»:"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Редизайн під сучасні стільничні середовища, включаючи підтримку "
+#~ "адаптивного дизайну"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Перехід на GTK 4, найновішу версію GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Інші зміни:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr "Підтримка налаштування файлів піктограм застосунку «.ico»"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Підтримка відкриття в текстовому редакторі"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr "Усунено неможливість зміни розміру вікна на маленьких дисплеях"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "Показ діалогових вікон помилок, коли зберегти/видалити не вдалося"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr ""
+#~ "Порожні елементи більше не додаються у створені файли робочого столу"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr "Не перезаписувати весь дозвіл вибраних виконуваних файлів"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr "Надавати дозвіл виконання користувачу, лише якщо він його не має"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "AppData: виправлено рік випуску"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Оновлення перекладів:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Оновлення перекладу італійською мовою (завдяки @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Перевірка стільничного середовища під час роботи"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Зменшення зони доступу до файлів"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Вікно зі змінюваним розміром"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "EditView: менш вимогливий до назв файлів"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Додано переклад італійською мовою (спасибі @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Додано переклад нідерландською (завдяки @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Оновлення перекладу японською мовою"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Виправлення помилки збирання на інших дистрибутивах"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "FilesView: правильне центрування діалогового вікна до вікна застосунку"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Відновлення останнього відкритого подання та його стану"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Доданий новий перемикач стилів"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr "Правильна мітка панелі заголовка, якщо не вказано назву застосунку"
+
+#~ msgid "Readable copies"
+#~ msgstr "Читабельні копії"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr "FilesView: Еліпсис, якщо текст міток задовгий"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "Повідомлення про прийняті формати файлів у FileChooser"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr ""
+#~ "Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "EditView: Фокусування на записі назви файлу після відкриття"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "FilesView: вікно стало прокручуваним і виправлено можливість збільшення, "
+#~ "якщо багато записів"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Поліпшена підтримка інших стільничних середовищ"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Додавання дозволу на виконання натисканням кнопки «Pin It!»"
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Доданий вибір категорій"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Підтримка Alt+Home, щоб перейти на сторінку привітання"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Додано GPU-прискорення з коробки"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Додана піктограма застосунку 128px (завдяки @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Закруглені кути вікон на будь-якій таблиці стилів (завдяки @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Підтримка мультитач жестів (завдяки @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Виправлено нечитабельний текст опису у Центрі застосунків"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Збереження та відновлення розташування вікна"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Доданий переклад іспанською мовою (спасибі @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Початковий випуск"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "Підтримка налаштування ключа «StartupWMClass»"
+
+#~ msgid "Files View"
+#~ msgstr "Перегляд файлів"
+
+#~ msgid "Edit View"
+#~ msgstr "Редагування перегляду"
+
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr ""
+#~ "Застосунок повністю перероблений для сучасних стільничних середовищ!"
