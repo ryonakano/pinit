@@ -7,9 +7,10 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-20 23:37+0900\n"
-"PO-Revision-Date: 2024-03-02 11:45+0000\n"
+"PO-Revision-Date: 2024-03-21 11:38+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
+"\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -157,12 +158,10 @@ msgid "translator-credits"
 msgstr "Ryo Nakano"
 
 #: src/View/EditView.vala:68
-#, fuzzy
 msgid "Required Fields"
 msgstr "必須項目"
 
 #: src/View/EditView.vala:69
-#, fuzzy
 msgid "The following fields need to be filled to save."
 msgstr "保存するには以下の項目を埋める必要があります。"
 
@@ -179,12 +178,10 @@ msgid "Select an executable file…"
 msgstr "実行ファイルを選択…"
 
 #: src/View/EditView.vala:92
-#, fuzzy
 msgid "Optional Fields"
 msgstr "オプション項目"
 
 #: src/View/EditView.vala:93
-#, fuzzy
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr "これらの項目を埋めると、アプリランチャーで見つけやすくなります。"
 
@@ -367,7 +364,6 @@ msgid "There was an error while removing the app entry."
 msgstr "アプリのエントリーを削除中にエラーが発生しました。"
 
 #: src/Widget/CategoriesRow.vala:40
-#, fuzzy
 msgid "Sound &amp; Video"
 msgstr "サウンドとビデオ"
 
