@@ -251,9 +251,8 @@ public class MainWindow : Adw.ApplicationWindow {
             developers = DEVELOPERS,
             artists = ARTISTS,
             ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-            ///You may add your name and your email address/website URL if you want, e.g.:
+            ///You may add your name and your email address if you want, e.g.:
             ///John Doe <john-doe@example.com>
-            ///Jane Doe <https://example.com>
             translator_credits = _("translator-credits")
         };
 
