@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 23:37+0900\n"
+"POT-Creation-Date: 2024-03-21 12:19+0000\n"
 "PO-Revision-Date: 2024-03-21 11:38+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
-"\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/"
+">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,10 +150,9 @@ msgid "_Save"
 msgstr "保存(_S)"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You may add your name and your email address/website URL if you want, e.g.:
+#. You may add your name and your email address if you want, e.g.:
 #. John Doe <john-doe@example.com>
-#. Jane Doe <https://example.com>
-#: src/MainWindow.vala:257
+#: src/MainWindow.vala:256
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
