@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
+# Sabri Ünal <yakushabb@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-20 23:37+0900\n"
-"PO-Revision-Date: 2023-08-23 14:51+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-03-21 11:38+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
 msgid "Pin It!"
@@ -28,11 +29,8 @@ msgstr "Masaüstü Dosya Oluşturucu"
 
 #: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
 #: src/MainWindow.vala:249
-#, fuzzy
 msgid "Pin portable apps to the launcher"
-msgstr ""
-"Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
-"oluşturun"
+msgstr "Taşınabilir uygulamaları başlatıcıya sabitle"
 
 #: data/pinit.desktop.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
@@ -62,24 +60,20 @@ msgid "Automatically add the execute permission to the file you select"
 msgstr "Seçtiğiniz dosyaya kendiliğinden yürütme izni ekleyin"
 
 #: data/pinit.metainfo.xml.in:27
-#, fuzzy
 msgid "List of app entries in the light mode"
-msgstr "Açık kipte görünümü düzenle"
+msgstr "Açık kipte uygulama girdilerinin listesi"
 
 #: data/pinit.metainfo.xml.in:32
-#, fuzzy
 msgid "Editing the app entry in the light mode"
-msgstr "Açık kipte görünümü düzenle"
+msgstr "Açık kipte uygulama girdisini düzenleme"
 
 #: data/pinit.metainfo.xml.in:37
-#, fuzzy
 msgid "List of app entries in the dark mode"
-msgstr "Koyu kipte görünümü düzenle"
+msgstr "Koyu kipte uygulama girdilerinin listesi"
 
 #: data/pinit.metainfo.xml.in:42
-#, fuzzy
 msgid "Editing the app entry in the dark mode"
-msgstr "Koyu kipte görünümü düzenle"
+msgstr "Koyu kipte uygulama girdisini düzenleme"
 
 #: data/pinit.metainfo.xml.in:60
 msgid "Ryo Nakano"
@@ -88,54 +82,52 @@ msgstr "Ryo Nakano"
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klavye Kısayolları"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Çık"
 
 #: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "Düzenle"
 
 #: data/resources/gtk/help-overlay.blp:28
-#, fuzzy
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Yeni Girdi"
 
 #: src/MainWindow.vala:89
 msgid "Entry deleted."
-msgstr ""
+msgstr "Girdi silindi."
 
 #: src/MainWindow.vala:104
 msgid "Entry updated."
-msgstr ""
+msgstr "Girdi güncellendi."
 
 #: src/MainWindow.vala:123
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Girdiler Yüklenemedi"
 
 #: src/MainWindow.vala:124
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Uygulama girdileri yüklenirken hata oluştu."
 
 #: src/MainWindow.vala:126 src/View/EditView.vala:380
 #: src/View/EditView.vala:469 src/View/FilesView.vala:148
-#, fuzzy
 msgid "_Close"
-msgstr "Kapat"
+msgstr "_Kapat"
 
 #: src/MainWindow.vala:158
 msgid "Save Changes?"
-msgstr ""
+msgstr "Değişiklikler Kaydedilsin Mi?"
 
 #: src/MainWindow.vala:159
 msgid ""
@@ -144,18 +136,16 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:161 src/View/FilesView.vala:134
-#, fuzzy
 msgid "_Cancel"
-msgstr "İptal Et"
+msgstr "İ_ptal"
 
 #: src/MainWindow.vala:162
 msgid "_Discard"
-msgstr ""
+msgstr "_Gözden Çıkar"
 
 #: src/MainWindow.vala:163 src/View/EditView.vala:39
-#, fuzzy
 msgid "_Save"
-msgstr "Kaydet"
+msgstr "_Kaydet"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You may add your name and your email address/website URL if you want, e.g.:
@@ -163,15 +153,15 @@ msgstr "Kaydet"
 #. Jane Doe <https://example.com>
 #: src/MainWindow.vala:257
 msgid "translator-credits"
-msgstr "Sabri Ünal <libreajans@gmail.com>"
+msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
-msgstr ""
+msgstr "Gerekli Alanlar"
 
 #: src/View/EditView.vala:69
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Kayıt için aşağıdaki alanlar doldurulmalıdır."
 
 #: src/View/EditView.vala:73
 msgid "App Name"
@@ -182,13 +172,12 @@ msgid "Exec File"
 msgstr "Yürütme Dosyası"
 
 #: src/View/EditView.vala:81
-#, fuzzy
 msgid "Select an executable file…"
-msgstr "Yürütülebilir bir dosya seçin"
+msgstr "Yürütülebilir dosya seç…"
 
 #: src/View/EditView.vala:92
 msgid "Optional Fields"
-msgstr ""
+msgstr "İsteğe Bağlı Alanlar"
 
 #: src/View/EditView.vala:93
 msgid "Filling these fields improves discoverability in the app launcher."
@@ -199,22 +188,20 @@ msgid "Icon File"
 msgstr "Simge Dosyası"
 
 #: src/View/EditView.vala:100
-#, fuzzy
 msgid "Select an icon file…"
-msgstr "Bir simge dosyası seçin"
+msgstr "Simge dosyası seç…"
 
 #: src/View/EditView.vala:108
 msgid "Generic Name"
-msgstr ""
+msgstr "Genel Ad"
 
 #: src/View/EditView.vala:113
 msgid "Comment"
 msgstr "Yorum"
 
 #: src/View/EditView.vala:127
-#, fuzzy
 msgid "Advanced Configurations"
-msgstr "Gelişmiş yapılandırma"
+msgstr "Gelişmiş Yapılandırma"
 
 #: src/View/EditView.vala:128
 msgid ""
@@ -234,25 +221,20 @@ msgid "Run in Terminal"
 msgstr "Uçbirim'de Çalıştır"
 
 #: src/View/EditView.vala:138
-#, fuzzy
 msgid "Turn on if you want to register a CUI app."
-msgstr "Bir komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
+msgstr "Komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
 
 #: src/View/EditView.vala:142
-#, fuzzy
 msgid "_Open"
-msgstr "Aç"
+msgstr "_Aç"
 
 #: src/View/EditView.vala:146
-#, fuzzy
 msgid "Open with Text Editor"
-msgstr "Metin düzenleyicide aç"
+msgstr "Metin Düzenleyici İle Aç"
 
 #: src/View/EditView.vala:147
-#, fuzzy
 msgid "You can also edit more options by opening with a text editor."
-msgstr ""
-"Bir metin düzenleyicide açarak daha fazla seçeneği de düzenleyebilirsiniz."
+msgstr "Metin düzenleyici ile açarak daha çok seçeneği düzenleyebilirsiniz."
 
 #: src/View/EditView.vala:192
 msgid "New Entry"
@@ -260,115 +242,104 @@ msgstr "Yeni Girdi"
 
 #: src/View/EditView.vala:208 src/View/EditView.vala:410
 msgid "Untitled App"
-msgstr ""
+msgstr "Adsız Uygulama"
 
 #: src/View/EditView.vala:228
-#, fuzzy
 msgid "Select Executable File"
-msgstr "Yürütülebilir bir dosya seçin"
+msgstr "Yürütülebilir Dosya Seç"
 
 #: src/View/EditView.vala:229 src/View/EditView.vala:286
-#, fuzzy
 msgid "_Select"
-msgstr "Seç"
+msgstr "_Seç"
 
 #: src/View/EditView.vala:282
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG veya XMP dosyaları"
 
 #: src/View/EditView.vala:285
-#, fuzzy
 msgid "Select Icon File"
-msgstr "Bir simge dosyası seçin"
+msgstr "Simge Dosyası Seç"
 
 #: src/View/EditView.vala:377
-#, fuzzy
 msgid "Failed to Open with External App"
-msgstr "Harici uygulama ile açılamadı"
+msgstr "Harici Uygulama İle Açılamadı"
 
 #: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
 #: src/View/EditView.vala:435
-#, fuzzy
 msgid "Edit Entry"
-msgstr "Girdi Düzenleme"
+msgstr "Girdiyi Düzenle"
 
 #: src/View/EditView.vala:437
-#, fuzzy, c-format
+#, c-format
 msgid "Edit “%s”"
-msgstr "“%s” düzenleniyor"
+msgstr "“%s” düzenleni"
 
 #: src/View/EditView.vala:459
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Girdi Kaydedilemedi"
 
 #: src/View/EditView.vala:461
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "“%s” Girdisi Kaydedilemedi"
 
 #: src/View/EditView.vala:467
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Uygulama girdisi kaydedilirken hata oluştur."
 
 #: src/View/FilesView.vala:25
 msgid "Create a new entry"
 msgstr "Yeni girdi oluştur"
 
 #: src/View/FilesView.vala:31
-#, fuzzy
 msgid "_Light"
-msgstr "Açık"
+msgstr "_Açık"
 
 #: src/View/FilesView.vala:32
-#, fuzzy
 msgid "_Dark"
-msgstr "Koyu"
+msgstr "_Koyu"
 
 #: src/View/FilesView.vala:33
-#, fuzzy
 msgid "S_ystem"
-msgstr "Sistem"
+msgstr "_Sistem"
 
 #: src/View/FilesView.vala:36
-#, fuzzy
 msgid "_Style"
-msgstr "Biçim"
+msgstr "_Biçim"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klavye Kısayolları"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/View/FilesView.vala:39
-#, fuzzy, c-format
+#, c-format
 msgid "_About %s"
-msgstr "%s Hakkında…"
+msgstr "%s Hakkında"
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: src/View/FilesView.vala:57
-#, fuzzy
 msgid "No Entries Found"
-msgstr "Geçerli uygulama girdisi bulunamadı"
+msgstr "Girdi Bulunamadı"
 
 #: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
 msgstr ""
 
 #: src/View/FilesView.vala:118
-#, fuzzy
 msgid "Delete Entry?"
-msgstr "Girdi silindi."
+msgstr "Girdi Silinsin Mi?"
 
 #: src/View/FilesView.vala:120
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "“%s” Girdisi Silinsin Mi?"
 
 #: src/View/FilesView.vala:124
 msgid "Delete…"
@@ -379,21 +350,19 @@ msgid "This removes the app from the launcher."
 msgstr "Bu, uygulamayı başlatıcıdan kaldırır."
 
 #: src/View/FilesView.vala:135
-#, fuzzy
 msgid "_Delete"
-msgstr "Sil"
+msgstr "_Sil"
 
 #: src/View/FilesView.vala:145
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "“%s” dosyası silinemedi"
+msgstr "“%s” Girdisi Silinemedi"
 
 #: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Uygulama girdisi kaldırılırken hata oluştu."
 
 #: src/Widget/CategoriesRow.vala:40
-#, fuzzy
 msgid "Sound &amp; Video"
 msgstr "Ses ve Video"
 
@@ -407,14 +376,13 @@ msgstr "Video"
 
 #: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
-msgstr ""
+msgstr "Programlama"
 
 #: src/Widget/CategoriesRow.vala:44
 msgid "Education"
 msgstr "Eğitim"
 
 #: src/Widget/CategoriesRow.vala:45
-#, fuzzy
 msgid "Games"
 msgstr "Oyun"
 
@@ -424,7 +392,7 @@ msgstr "Grafik"
 
 #: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
-msgstr ""
+msgstr "İnternet"
 
 #: src/Widget/CategoriesRow.vala:48
 msgid "Office"
@@ -439,18 +407,16 @@ msgid "Settings"
 msgstr "Ayarlar"
 
 #: src/Widget/CategoriesRow.vala:51
-#, fuzzy
 msgid "System Tools"
-msgstr "Sistem"
+msgstr "Sistem Araçları"
 
 #: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
-msgstr ""
+msgstr "Donatılar"
 
 #: src/Widget/CategoriesRow.vala:62
-#, fuzzy
 msgid "Categories"
-msgstr "Uygulama Kategorileri"
+msgstr "Kategoriler"
 
 #: src/Widget/CategoriesRow.vala:63
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -458,24 +424,23 @@ msgstr "Uygulamanın kategorileri. (Birden fazla seçebilirsiniz)"
 
 #: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
-msgstr ""
+msgstr "Anahtar Sözcükler"
 
 #: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Bu sözcükler arama terimi olarak kullanılabilir."
 
 #: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Yeni anahtar sözcük ekle"
 
 #: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
-msgstr ""
+msgstr "Anahtar sözcük"
 
 #: src/Widget/KeywordsRow.vala:126
-#, fuzzy
 msgid "Delete keyword"
-msgstr "Girdi silindi."
+msgstr "Anahtar sözcük sil"
 
 #, fuzzy
 #~| msgid "Exec File"
