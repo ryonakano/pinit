@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 12:19+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2024-03-21 03:45+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -76,10 +76,6 @@ msgstr "Список записів застосунків у темному р�
 #: data/pinit.metainfo.xml.in:42
 msgid "Editing the app entry in the dark mode"
 msgstr "Редагування запису застосунку у темному режимі"
-
-#: data/pinit.metainfo.xml.in:60
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -446,6 +442,9 @@ msgstr "Ключове слово"
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
 msgstr "Видалити ключове слово"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 12:19+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "1 : 2);\n"
 "X-Generator: Weblate 5.0-dev\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -86,10 +86,6 @@ msgstr "Keitimo rodinys tamsioje veiksenoje"
 #, fuzzy
 msgid "Editing the app entry in the dark mode"
 msgstr "Keitimo rodinys tamsioje veiksenoje"
-
-#: data/pinit.metainfo.xml.in:60
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -480,6 +476,9 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Ištrinta įvestis."
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
 
 #, fuzzy
 #~| msgid "Exec File"

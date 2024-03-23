@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 12:19+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2023-04-05 19:50+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.17-dev\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -72,10 +72,6 @@ msgstr ""
 #: data/pinit.metainfo.xml.in:42
 msgid "Editing the app entry in the dark mode"
 msgstr ""
-
-#: data/pinit.metainfo.xml.in:60
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -470,6 +466,9 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Item verwijderd"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
 
 #, fuzzy
 #~| msgid "Exec File"
