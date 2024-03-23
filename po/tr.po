@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:24+0000\n"
-"PO-Revision-Date: 2024-03-21 11:38+0000\n"
+"PO-Revision-Date: 2024-03-25 00:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
@@ -55,7 +55,6 @@ msgstr ""
 "silin"
 
 #: data/pinit.metainfo.xml.in:21
-#, fuzzy
 msgid "Automatically add the execute permission to the file you select"
 msgstr "Seçtiğiniz dosyaya kendiliğinden yürütme izni ekleyin"
 
@@ -130,6 +129,8 @@ msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Açık girdiler kaydedilmemiş değişiklikler içeriyor. Kaydedilmemiş "
+"değişiklikler kalıcı olarak yitecek."
 
 #: src/MainWindow.vala:161 src/View/FilesView.vala:134
 msgid "_Cancel"
@@ -177,6 +178,7 @@ msgstr "İsteğe Bağlı Alanlar"
 #: src/View/EditView.vala:93
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
+"Bu alanların doldurulması uygulama başlatıcıdaki keşfedilirliği artırır."
 
 #: src/View/EditView.vala:97
 msgid "Icon File"
@@ -261,7 +263,7 @@ msgstr "Harici Uygulama İle Açılamadı"
 
 #: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Dosya harici uygulamayla açılırken hata oluştu."
 
 #: src/View/EditView.vala:435
 msgid "Edit Entry"
@@ -325,7 +327,7 @@ msgstr "Girdi Bulunamadı"
 
 #: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Bir tane oluşturmak için üstteki + düğmesine tıklayın."
 
 #: src/View/FilesView.vala:118
 msgid "Delete Entry?"
