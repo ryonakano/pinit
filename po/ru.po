@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 12:19+0000\n"
+"POT-Creation-Date: 2024-03-23 06:15+0000\n"
 "PO-Revision-Date: 2024-03-06 07:01+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -75,7 +75,8 @@ msgstr "Редактирование в тёмном режиме"
 msgid "Editing the app entry in the dark mode"
 msgstr "Редактирование в тёмном режиме"
 
-#: data/pinit.metainfo.xml.in:60
+#. developer_name has deprecated since AppStream 1.0
+#: data/pinit.metainfo.xml.in:61
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
