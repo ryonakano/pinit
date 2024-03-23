@@ -57,7 +57,12 @@
     <control>keyboard</control>
   </supports>
 
+  <!-- developer_name has deprecated since AppStream 1.0 -->
   <developer_name>Ryo Nakano</developer_name>
+  <developer id="com.github.ryonakano">
+    <name>Ryo Nakano</name>
+  </developer>
+
   <url type="homepage">https://github.com/ryonakano/pinit</url>
   <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
   <url type="help">https://github.com/ryonakano/pinit/discussions</url>
