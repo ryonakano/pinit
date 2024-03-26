@@ -5,9 +5,9 @@
   <launchable type="desktop-id">com.github.ryonakano.pinit.desktop</launchable>
   <translation type="gettext">com.github.ryonakano.pinit</translation>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+</project_license>
+  <project_license>GPL-3.0-or-later</project_license>
 
-  <name>Pin It!</name>
+  <name translatable="no">Pin It!</name>
   <summary>Pin portable apps to the launcher</summary>
   <description>
     <p>
@@ -57,7 +57,12 @@
     <control>keyboard</control>
   </supports>
 
-  <developer_name>Ryo Nakano</developer_name>
+  <!-- developer_name has deprecated since AppStream 1.0 -->
+  <developer_name translatable="no">Ryo Nakano</developer_name>
+  <developer id="com.github.ryonakano">
+    <name translatable="no">Ryo Nakano</name>
+  </developer>
+
   <url type="homepage">https://github.com/ryonakano/pinit</url>
   <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
   <url type="help">https://github.com/ryonakano/pinit/discussions</url>

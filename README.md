@@ -9,47 +9,48 @@ Other features include:
 
 - Edit or delete created app entries without opening the file manager
 - Automatically add execution permission to the file you select
-- Syntax error detection
-- Automatically save everything―your data in editing, last open view, and preferences
-
-The original idea of the app is inspired from https://github.com/alexkdeveloper/dfc.
 
 ## Installation
-### For Users
+### From Flathub (Recommended)
 You can download the app from Flathub, which should make this app available for all Linux distribution:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/details/com.github.ryonakano.pinit)
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
 
-We originally targeted this app for elementary OS and also released it on Flathub after some time, but **we decided to publish the app only on Flathub since version `2.0.0`. We no longer publish new features or bug fixes to the elementary-curated version of the app.**
+### From Source Code (Flatpak)
+If you would like to test latest source code, clone the repository and then run the following command:
 
-This does not mean the app no longer available on elementary OS. You can simply switch to the Flathub version of the app; please uninstall the current installation and then re-install the app from Flathub.
+```
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y --user flathub org.flatpak.Builder
+flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
+```
 
-### For Developers
+### From Source Code (Native)
 You'll need the following dependencies to build:
 
+* blueprint-compiler
 * libadwaita-1-dev (>= 1.4.0)
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.74)
 * libgtk-4-dev (>= 4.10)
-* meson (>= 0.57.0)
+* meson (>= 0.58.0)
 * valac
 
-Run `meson setup` to configure the build environment and run `ninja` to build
+Run `meson setup` to configure the build environment and run `meson compile` to build:
 
 ```bash
 meson setup builddir --prefix=/usr
-ninja -C builddir
+meson compile -C builddir
 ```
 
-To install, use `ninja install`, then execute with `com.github.ryonakano.pinit`
+To install, use `meson install`, then execute with `com.github.ryonakano.pinit`:
 
 ```bash
-ninja install -C builddir
+meson install -C builddir
 com.github.ryonakano.pinit
 ```
 
 ## Contributing
-
 Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
 - submit bug reports / feature requests
@@ -57,5 +58,7 @@ Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like 
 - translate the project
 
 ## Get Support
-
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/pinit/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/pinit/discussions/new/choose) if none is relevant.
+
+## History
+The original idea of the app is inspired from [Desktopius by Alex K](https://github.com/alexkdeveloper/dfc).

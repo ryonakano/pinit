@@ -6,3 +6,6 @@ build*
 *.swp
 *~
 *.un~
+
+# subprojects
+subprojects/blueprint-compiler

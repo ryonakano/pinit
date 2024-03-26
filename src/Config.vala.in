@@ -2,4 +2,5 @@ namespace Config {
     public const string LOCALEDIR = @LOCALEDIR@;
     public const string PROJECT_NAME = @PROJECT_NAME@;
     public const string PROJECT_VERSION = @PROJECT_VERSION@;
+    public const string RESOURCE_PREFIX = @RESOURCE_PREFIX@;
 }

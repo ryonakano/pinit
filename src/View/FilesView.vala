@@ -8,16 +8,11 @@ public class View.FilesView : Adw.NavigationPage {
     public signal void deleted (bool is_success);
     public signal void selected (Model.DesktopFile file);
 
-    public MainWindow window { private get; construct; }
-
     private ListStore list_store;
     private Adw.HeaderBar headerbar;
     private Gtk.ListBox files_list;
 
-    public FilesView (MainWindow window) {
-        Object (
-            window: window
-        );
+    public FilesView () {
     }
 
     construct {
@@ -114,8 +109,8 @@ public class View.FilesView : Adw.NavigationPage {
         };
         try {
             app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON, false));
-        } catch (Error e) {
-            warning ("Failed to update app_icon: %s", e.message);
+        } catch (Error err) {
+            warning ("Failed to update app_icon: %s", err.message);
         }
 
         string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
@@ -133,7 +128,7 @@ public class View.FilesView : Adw.NavigationPage {
         delete_button.add_css_class ("flat");
         delete_button.clicked.connect (() => {
             var delete_dialog = new Adw.MessageDialog (
-                window,
+                (Gtk.Window) get_root (),
                 dialog_title,
                 _("This removes the app from the launcher.")
             );
@@ -147,7 +142,7 @@ public class View.FilesView : Adw.NavigationPage {
                     bool ret = file.delete_file ();
                     if (!ret) {
                         var error_dialog = new Adw.MessageDialog (
-                            window,
+                            (Gtk.Window) get_root (),
                             _("Failed to Delete Entry of “%s”").printf (app_name),
                             _("There was an error while removing the app entry.")
                         );

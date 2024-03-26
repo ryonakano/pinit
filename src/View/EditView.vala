@@ -6,8 +6,6 @@
 public class View.EditView : Adw.NavigationPage {
     public signal void saved ();
 
-    public MainWindow window { private get; construct; }
-
     private bool is_loading = false;
     private unowned Model.DesktopFile desktop_file;
 
@@ -31,8 +29,7 @@ public class View.EditView : Adw.NavigationPage {
     private Adw.StatusPage blank_page;
     private Gtk.Stack stack;
 
-    public EditView (MainWindow window) {
-        Object (window: window);
+    public EditView () {
     }
 
     construct {
@@ -65,11 +62,11 @@ public class View.EditView : Adw.NavigationPage {
         header_box.append (name_label);
 
         /*
-         * Content part - Required Entries
+         * Content part - Required Fields
          */
         var required_group = new Adw.PreferencesGroup () {
-            title = _("Required Entries"),
-            description = _("The following entries need to be filled to save.")
+            title = _("Required Fields"),
+            description = _("The following fields need to be filled to save.")
         };
 
         name_entry = new Adw.EntryRow () {
@@ -89,11 +86,11 @@ public class View.EditView : Adw.NavigationPage {
         required_group.add (exec_entry);
 
         /*
-         * Content part - Optional Entries
+         * Content part - Optional Fields
          */
         var optional_group = new Adw.PreferencesGroup () {
-            title = _("Optional Entries"),
-            description = _("Filling these entries improves discoverability in the app launcher.")
+            title = _("Optional Fields"),
+            description = _("Filling these fields improves discoverability in the app launcher.")
         };
 
         icon_entry = new Adw.EntryRow () {
@@ -124,7 +121,7 @@ public class View.EditView : Adw.NavigationPage {
         optional_group.add (keywords_row);
 
         /*
-         * Content part - Advanced Entries
+         * Content part - Advanced Configurations
          */
         var advanced_group = new Adw.PreferencesGroup () {
             title = _("Advanced Configurations"),
@@ -232,7 +229,7 @@ public class View.EditView : Adw.NavigationPage {
                 accept_label = _("_Select"),
                 modal = true
             };
-            filechooser.open.begin (window, null, (obj, res) => {
+            filechooser.open.begin ((Gtk.Window) get_root (), null, (obj, res) => {
                 try {
                     var file = filechooser.open.end (res);
                     if (file == null) {
@@ -248,8 +245,8 @@ public class View.EditView : Adw.NavigationPage {
                     exec_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_EXEC, path);
                     set_save_button_sensitivity ();
-                } catch (Error e) {
-                    warning ("Failed to select executable file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select executable file: %s", err.message);
                 }
             });
         });
@@ -261,8 +258,8 @@ public class View.EditView : Adw.NavigationPage {
 
             try {
                 icon_image.gicon = Icon.new_for_string (icon_entry.text);
-            } catch (Error e) {
-                warning ("Failed to update icon_image: %s", e.message);
+            } catch (Error err) {
+                warning ("Failed to update icon_image: %s", err.message);
             }
 
             desktop_file.set_string (KeyFileDesktop.KEY_ICON, icon_entry.text);
@@ -290,7 +287,7 @@ public class View.EditView : Adw.NavigationPage {
                 modal = true,
                 default_filter = filefilter
             };
-            filechooser.open.begin (window, null, (obj, res) => {
+            filechooser.open.begin ((Gtk.Window) get_root (), null, (obj, res) => {
                 try {
                     var file = filechooser.open.end (res);
                     if (file == null) {
@@ -305,8 +302,8 @@ public class View.EditView : Adw.NavigationPage {
 
                     icon_entry.text = path;
                     desktop_file.set_string (KeyFileDesktop.KEY_ICON, path);
-                } catch (Error e) {
-                    warning ("Failed to select icon file: %s", e.message);
+                } catch (Error err) {
+                    warning ("Failed to select icon file: %s", err.message);
                 }
             });
         });
@@ -360,18 +357,32 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            bool ret = desktop_file.open_external ();
-            if (!ret) {
-                var error_dialog = new Adw.MessageDialog (
-                    window,
-                    _("Failed to Open with External App"),
-                    _("There was an error while opening the file with an external app.")
-                );
-                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
-                error_dialog.default_response = Define.DialogResponse.CLOSE;
-                error_dialog.close_response = Define.DialogResponse.CLOSE;
-                error_dialog.present ();
-            }
+            desktop_file.open_external.begin ((Gtk.Window) get_root (), (obj, res) => {
+                bool ret;
+
+                try {
+                    ret = desktop_file.open_external.end (res);
+                } catch (Error err) {
+                    // The calling method is responsible for showing the error log.
+
+                    // Do not treat as an error if the operation is just dismissed by the user.
+                    if (err.matches (Gtk.DialogError.quark (), Gtk.DialogError.DISMISSED)) {
+                        ret = true;
+                    }
+                }
+
+                if (!ret) {
+                    var error_dialog = new Adw.MessageDialog (
+                        (Gtk.Window) get_root (),
+                        _("Failed to Open with External App"),
+                        _("There was an error while opening the file with an external app.")
+                    );
+                    error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+                    error_dialog.default_response = Define.DialogResponse.CLOSE;
+                    error_dialog.close_response = Define.DialogResponse.CLOSE;
+                    error_dialog.present ();
+                }
+            });
         });
     }
 
@@ -389,8 +400,8 @@ public class View.EditView : Adw.NavigationPage {
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
-        } catch (Error e) {
-            warning ("Failed to update icon_image: %s", e.message);
+        } catch (Error err) {
+            warning ("Failed to update icon_image: %s", err.message);
         }
 
         string locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
@@ -437,6 +448,8 @@ public class View.EditView : Adw.NavigationPage {
      * Get values from the input widgets in the view and save them to a desktop file.
      */
     public void save_file () {
+        desktop_file.set_string (KeyFileDesktop.KEY_TYPE, "Application");
+
         bool ret = desktop_file.save_file ();
 
         if (!ret) {
@@ -449,7 +462,7 @@ public class View.EditView : Adw.NavigationPage {
             }
 
             var error_dialog = new Adw.MessageDialog (
-                window,
+                (Gtk.Window) get_root (),
                 dialog_title,
                 _("There was an error while saving the app entry.")
             );
