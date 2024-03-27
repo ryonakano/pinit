@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2024-03-02 11:49+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"PO-Revision-Date: 2024-03-21 11:38+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit-app/"
-"ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/"
+">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,133 +18,189 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/gtk/help-overlay.ui:11
+#: data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr "Pin It!"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "デスクトップファイル作成アプリ"
+
+#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
+#: src/MainWindow.vala:249
+msgid "Pin portable apps to the launcher"
+msgstr "ポータブルアプリをランチャーにピン留めします"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr ""
+"Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
+"情報;アイコン;"
+
+#: data/pinit.metainfo.xml.in:13
+msgid ""
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
+msgstr ""
+"実行可能ファイルや AppImage ファイルなどのポータブルアプリへのショートカット"
+"を、お使いのデスクトップのアプリランチャーにピン留めします。"
+
+#: data/pinit.metainfo.xml.in:16
+msgid "Other features include:"
+msgstr "そのほかの機能:"
+
+#: data/pinit.metainfo.xml.in:20
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+"作成したアプリのエントリーを編集・削除できます。ファイルマネージャーを開く必"
+"要はありません"
+
+#: data/pinit.metainfo.xml.in:21
+msgid "Automatically add the execute permission to the file you select"
+msgstr "選択したファイルに自動的に実行権限を追加"
+
+#: data/pinit.metainfo.xml.in:27
+msgid "List of app entries in the light mode"
+msgstr "アプリエントリーの一覧 (ライトモード)"
+
+#: data/pinit.metainfo.xml.in:32
+msgid "Editing the app entry in the light mode"
+msgstr "アプリエントリーを編集中 (ライトモード)"
+
+#: data/pinit.metainfo.xml.in:37
+msgid "List of app entries in the dark mode"
+msgstr "アプリエントリーの一覧 (ダークモード)"
+
+#: data/pinit.metainfo.xml.in:42
+msgid "Editing the app entry in the dark mode"
+msgstr "アプリエントリーを編集中 (ダークモード)"
+
+#: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr "一般"
 
-#: data/gtk/help-overlay.ui:15
+#: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
-#: data/gtk/help-overlay.ui:21
+#: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "終了する"
 
-#: data/gtk/help-overlay.ui:28
+#: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "編集"
 
-#: data/gtk/help-overlay.ui:32
+#: data/resources/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/MainWindow.vala:56
-msgid "Entry updated."
-msgstr "エントリーを更新しました。"
-
-#: src/MainWindow.vala:60
+#: src/MainWindow.vala:89
 msgid "Entry deleted."
 msgstr "エントリーを削除しました。"
 
-#: src/MainWindow.vala:107
+#: src/MainWindow.vala:104
+msgid "Entry updated."
+msgstr "エントリーを更新しました。"
+
+#: src/MainWindow.vala:123
 msgid "Failed to Load Entries"
 msgstr "エントリーの読み込みに失敗"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:124
 msgid "There was an error while loading app entries."
 msgstr "アプリのエントリーを読み込み中にエラーが発生しました。"
 
-#: src/MainWindow.vala:110 src/View/EditView.vala:370
-#: src/View/EditView.vala:456 src/View/FilesView.vala:142
+#: src/MainWindow.vala:126 src/View/EditView.vala:380
+#: src/View/EditView.vala:469 src/View/FilesView.vala:148
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: src/MainWindow.vala:142
+#: src/MainWindow.vala:158
 msgid "Save Changes?"
 msgstr "変更を保存しますか?"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
-msgstr "開いているエントリーに未保存の変更内容が含まれています。保存しないと変更内容"
+msgstr ""
+"開いているエントリーに未保存の変更内容が含まれています。保存しないと変更内容"
 "が完全に失われます。"
 
-#: src/MainWindow.vala:145 src/View/FilesView.vala:128
+#: src/MainWindow.vala:161 src/View/FilesView.vala:134
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:162
 msgid "_Discard"
 msgstr "破棄(_D)"
 
-#: src/MainWindow.vala:147 src/View/EditView.vala:42
+#: src/MainWindow.vala:163 src/View/EditView.vala:39
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: src/MainWindow.vala:230
-msgid "Pin portable apps to the launcher"
-msgstr "ポータブルアプリをランチャーにピン留めします"
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:240
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You may add your name and your email address if you want, e.g.:
+#. John Doe <john-doe@example.com>
+#: src/MainWindow.vala:256
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
-#: src/View/EditView.vala:71
-msgid "Required Entries"
+#: src/View/EditView.vala:68
+msgid "Required Fields"
 msgstr "必須項目"
 
-#: src/View/EditView.vala:72
-msgid "The following entries need to be filled to save."
+#: src/View/EditView.vala:69
+msgid "The following fields need to be filled to save."
 msgstr "保存するには以下の項目を埋める必要があります。"
 
-#: src/View/EditView.vala:76
+#: src/View/EditView.vala:73
 msgid "App Name"
 msgstr "アプリ名"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:78
 msgid "Exec File"
 msgstr "実行ファイル"
 
-#: src/View/EditView.vala:84
+#: src/View/EditView.vala:81
 msgid "Select an executable file…"
 msgstr "実行ファイルを選択…"
 
-#: src/View/EditView.vala:95
-msgid "Optional Entries"
+#: src/View/EditView.vala:92
+msgid "Optional Fields"
 msgstr "オプション項目"
 
-#: src/View/EditView.vala:96
-msgid "Filling these entries improves discoverability in the app launcher."
+#: src/View/EditView.vala:93
+msgid "Filling these fields improves discoverability in the app launcher."
 msgstr "これらの項目を埋めると、アプリランチャーで見つけやすくなります。"
 
-#: src/View/EditView.vala:100
+#: src/View/EditView.vala:97
 msgid "Icon File"
 msgstr "アイコンファイル"
 
-#: src/View/EditView.vala:103
+#: src/View/EditView.vala:100
 msgid "Select an icon file…"
 msgstr "アイコンファイルを選択…"
 
-#: src/View/EditView.vala:111
+#: src/View/EditView.vala:108
 msgid "Generic Name"
 msgstr "一般名"
 
-#: src/View/EditView.vala:116
+#: src/View/EditView.vala:113
 msgid "Comment"
 msgstr "コメント"
 
-#: src/View/EditView.vala:130
+#: src/View/EditView.vala:127
 msgid "Advanced Configurations"
 msgstr "高度な設定"
 
-#: src/View/EditView.vala:131
+#: src/View/EditView.vala:128
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -152,235 +208,238 @@ msgstr ""
 "ほとんどの場合、ここまでのセクションを埋めるだけでアプリのエントリーを作成可"
 "能です。しかし、一部のアプリでは以下の高度な設定が必要なことがあります。"
 
-#: src/View/EditView.vala:135
+#: src/View/EditView.vala:132
 msgid "Startup WM Class"
 msgstr "起動時の WM クラス"
 
-#: src/View/EditView.vala:140
+#: src/View/EditView.vala:137
 msgid "Run in Terminal"
 msgstr "ターミナルで実行"
 
-#: src/View/EditView.vala:141
+#: src/View/EditView.vala:138
 msgid "Turn on if you want to register a CUI app."
 msgstr "CUI アプリを登録したい場合、オンにしてください。"
 
-#: src/View/EditView.vala:145
+#: src/View/EditView.vala:142
 msgid "_Open"
 msgstr "開く(_O)"
 
-#: src/View/EditView.vala:149
+#: src/View/EditView.vala:146
 msgid "Open with Text Editor"
 msgstr "テキストエディターで開く"
 
-#: src/View/EditView.vala:150
+#: src/View/EditView.vala:147
 msgid "You can also edit more options by opening with a text editor."
 msgstr "テキストエディターで開くことで、さらに多くのオプションを編集可能です。"
 
-#: src/View/EditView.vala:195
+#: src/View/EditView.vala:192
 msgid "New Entry"
 msgstr "新しいエントリー"
 
-#: src/View/EditView.vala:211 src/View/EditView.vala:399
+#: src/View/EditView.vala:208 src/View/EditView.vala:410
 msgid "Untitled App"
 msgstr "名称未設定のアプリ"
 
-#: src/View/EditView.vala:231
+#: src/View/EditView.vala:228
 msgid "Select Executable File"
 msgstr "実行ファイルを選択"
 
-#: src/View/EditView.vala:232 src/View/EditView.vala:289
+#: src/View/EditView.vala:229 src/View/EditView.vala:286
 msgid "_Select"
 msgstr "選択(_S)"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:282
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO、PNG、SVG、XMP ファイル"
 
-#: src/View/EditView.vala:288
+#: src/View/EditView.vala:285
 msgid "Select Icon File"
 msgstr "アイコンファイルを選択"
 
-#: src/View/EditView.vala:367
+#: src/View/EditView.vala:377
 msgid "Failed to Open with External App"
 msgstr "外部アプリで開けませんでした"
 
-#: src/View/EditView.vala:368
+#: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
 msgstr "外部アプリで開く際にエラーが発生しました。"
 
-#: src/View/EditView.vala:424
+#: src/View/EditView.vala:435
 msgid "Edit Entry"
 msgstr "エントリーを編集"
 
-#: src/View/EditView.vala:426
+#: src/View/EditView.vala:437
 #, c-format
 msgid "Edit “%s”"
 msgstr "“%s”を編集"
 
-#: src/View/EditView.vala:446
+#: src/View/EditView.vala:459
 msgid "Failed to Save Entry"
 msgstr "エントリーの保存に失敗"
 
-#: src/View/EditView.vala:448
+#: src/View/EditView.vala:461
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "“%s”のエントリーの保存に失敗"
 
-#: src/View/EditView.vala:454
+#: src/View/EditView.vala:467
 msgid "There was an error while saving the app entry."
 msgstr "アプリのエントリーを保存中にエラーが発生しました。"
 
-#: src/View/FilesView.vala:29
+#: src/View/FilesView.vala:25
 msgid "Create a new entry"
 msgstr "新しいエントリーを作成"
 
-#: src/View/FilesView.vala:35
+#: src/View/FilesView.vala:31
 msgid "_Light"
 msgstr "明るい(_L)"
 
-#: src/View/FilesView.vala:36
+#: src/View/FilesView.vala:32
 msgid "_Dark"
 msgstr "暗い(_D)"
 
-#: src/View/FilesView.vala:37
+#: src/View/FilesView.vala:33
 msgid "S_ystem"
 msgstr "システム(_Y)"
 
-#: src/View/FilesView.vala:40
+#: src/View/FilesView.vala:36
 msgid "_Style"
 msgstr "スタイル(_S)"
 
-#: src/View/FilesView.vala:41
+#: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
 msgstr "キーボードショートカット(_K)"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/View/FilesView.vala:43
+#: src/View/FilesView.vala:39
 #, c-format
 msgid "_About %s"
 msgstr "%s について(_A)"
 
-#: src/View/FilesView.vala:46
+#: src/View/FilesView.vala:42
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: src/View/FilesView.vala:61
+#: src/View/FilesView.vala:57
 msgid "No Entries Found"
 msgstr "エントリーが見つかりませんでした"
 
-#: src/View/FilesView.vala:62
+#: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
 msgstr "上部の + ボタンをクリックして作成してください。"
 
-#: src/View/FilesView.vala:112
+#: src/View/FilesView.vala:118
 msgid "Delete Entry?"
 msgstr "エントリーを削除しますか?"
 
-#: src/View/FilesView.vala:114
+#: src/View/FilesView.vala:120
 #, c-format
 msgid "Delete Entry of “%s”?"
 msgstr "“%s”のエントリーを削除しますか?"
 
-#: src/View/FilesView.vala:118
+#: src/View/FilesView.vala:124
 msgid "Delete…"
 msgstr "削除…"
 
-#: src/View/FilesView.vala:126
+#: src/View/FilesView.vala:132
 msgid "This removes the app from the launcher."
 msgstr "この操作によって、ランチャーからアプリが削除されます。"
 
-#: src/View/FilesView.vala:129
+#: src/View/FilesView.vala:135
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: src/View/FilesView.vala:139
+#: src/View/FilesView.vala:145
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "“%s”のエントリーを削除できませんでした"
 
-#: src/View/FilesView.vala:140
+#: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
 msgstr "アプリのエントリーを削除中にエラーが発生しました。"
 
-#: src/Widget/CategoriesRow.vala:77
-msgid "Categories"
-msgstr "カテゴリー"
-
-#: src/Widget/CategoriesRow.vala:78
-msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "アプリが該当するカテゴリーです。 (複数選択可能です。)"
-
-#: src/Widget/CategoriesRow.vala:84
-msgid "Sound & Video"
+#: src/Widget/CategoriesRow.vala:40
+msgid "Sound &amp; Video"
 msgstr "サウンドとビデオ"
 
-#: src/Widget/CategoriesRow.vala:85
+#: src/Widget/CategoriesRow.vala:41
 msgid "Audio"
 msgstr "オーディオ"
 
-#: src/Widget/CategoriesRow.vala:86
+#: src/Widget/CategoriesRow.vala:42
 msgid "Video"
 msgstr "ビデオ"
 
-#: src/Widget/CategoriesRow.vala:87
+#: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
 msgstr "プログラミング"
 
-#: src/Widget/CategoriesRow.vala:88
+#: src/Widget/CategoriesRow.vala:44
 msgid "Education"
 msgstr "教育"
 
-#: src/Widget/CategoriesRow.vala:89
+#: src/Widget/CategoriesRow.vala:45
 msgid "Games"
 msgstr "ゲーム"
 
-#: src/Widget/CategoriesRow.vala:90
+#: src/Widget/CategoriesRow.vala:46
 msgid "Graphics"
 msgstr "グラフィックス"
 
-#: src/Widget/CategoriesRow.vala:91
+#: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
 msgstr "インターネット"
 
-#: src/Widget/CategoriesRow.vala:92
+#: src/Widget/CategoriesRow.vala:48
 msgid "Office"
 msgstr "オフィス"
 
-#: src/Widget/CategoriesRow.vala:93
+#: src/Widget/CategoriesRow.vala:49
 msgid "Science"
 msgstr "科学"
 
-#: src/Widget/CategoriesRow.vala:94
+#: src/Widget/CategoriesRow.vala:50
 msgid "Settings"
 msgstr "設定"
 
-#: src/Widget/CategoriesRow.vala:95
+#: src/Widget/CategoriesRow.vala:51
 msgid "System Tools"
 msgstr "システムツール"
 
-#: src/Widget/CategoriesRow.vala:96
+#: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
 msgstr "アクセサリー"
 
-#: src/Widget/KeywordsRow.vala:54
+#: src/Widget/CategoriesRow.vala:62
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: src/Widget/CategoriesRow.vala:63
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr "アプリが該当するカテゴリーです。 (複数選択可能です。)"
+
+#: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
 msgstr "キーワード"
 
-#: src/Widget/KeywordsRow.vala:55
+#: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
 msgstr "これらの単語を検索用語として使用できます。"
 
-#: src/Widget/KeywordsRow.vala:60
+#: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
 msgstr "新しいキーワードを追加"
 
-#: src/Widget/KeywordsRow.vala:114
+#: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
 msgstr "キーワード"
 
-#: src/Widget/KeywordsRow.vala:118
+#: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
 msgstr "キーワードを削除"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"
@@ -499,3 +558,212 @@ msgstr "キーワードを削除"
 #~ "two elements."
 #~ msgstr ""
 #~ "また、最低でも1回はピリオドを使って、2つ以上の要素に分けてください。"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "シンタックスエラーの検出機能"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存しま"
+#~ "す"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "ファイル一覧画面 (ライトモード)"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "ファイル一覧画面 (ダークモード)"
+
+#~ msgid "The release for celebrating the 2nd anniversary of the app!"
+#~ msgstr "アプリの2周年記念リリース！"
+
+#~ msgid "Fix deprecations in GTK 4.10"
+#~ msgstr "GTK 4.10 で非推奨となったコードを修正"
+
+#~ msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+#~ msgstr "英文法的な変更 (貢献者: @BraidenPsiuk)"
+
+#~ msgid ""
+#~ "EditView: Make keys that is not required by the freedesktop.org "
+#~ "specification optional"
+#~ msgstr ""
+#~ "編集画面: freedesktop.org の仕様上必要とされていないキーを任意項目に変更"
+
+#~ msgid "CategoryChooser: Improve layout management"
+#~ msgstr "カテゴリー選択ウィジェット: レイアウト管理を改善"
+
+#~ msgid "Fix navigate back shows empty window"
+#~ msgstr "前画面に遷移すると空のウィンドウが表示される不具合を修正"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Flatpak ランタイムのバージョンを更新"
+
+#~ msgid "Update translations"
+#~ msgstr "翻訳を更新"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "過去最大かつ最高のアップデートがやってきました。"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "最近のデスクトップ環境に合うように、デザインを変更しました。これにはレスポ"
+#~ "ンシブデザインへの対応も含まれます"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "GTK の最新バージョンである、GTK 4 に移行"
+
+#~ msgid "Other changes:"
+#~ msgstr "そのほかの変更:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr "アプリのアイコンとして \".ico\" ファイルを指定可能に"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "テキストエディターでの編集に対応"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr "画面が狭い環境において、ウィンドウをリサイズできない不具合を修正"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "保存／削除に失敗した際にエラーダイアログを表示するように修正"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr "生成したデスクトップファイルに空の要素がないように修正"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr ""
+#~ "選択した実行可能ファイルのパーミッション全体を書き換えないように修正"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr ""
+#~ "ユーザーに権限がない場合のみ、実行可能ファイルに実行権限を付与するように修"
+#~ "正"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "アプリデータ: リリース年を修正"
+
+#~ msgid "Translation updates:"
+#~ msgstr "翻訳の更新:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "イタリア語翻訳を更新 (貢献者: @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "実行時にデスクトップ環境を確認するように修正"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "ファイルアクセス権の見直し"
+
+#~ msgid "Make window resizable"
+#~ msgstr "ウィンドウサイズを変更可能に修正"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "編集画面: ファイル命名規則の寛容化"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "ドイツ語翻訳を追加 (貢献者: @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "日本語翻訳を更新"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "ほかのディストリビューションにおけるビルドエラーを修正"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "ファイル画面: アプリのウィンドウに対して中央にダイアログを表示するように修"
+#~ "正"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "最後に開いた画面とその状態を復元するように修正"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "新しいスタイルスイッチャーを追加"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr ""
+#~ "アプリ名が設定されていなくてもタイトルバーに適切なラベルが表示されるように"
+#~ "修正"
+
+#~ msgid "Readable copies"
+#~ msgstr "画面上のテキストの意味がわかりやすくなるように修正"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr "ファイル画面: ラベルのテキストが長すぎる場合は省略するように修正"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "使用可能なファイル形式をファイル選択ダイアログに表示するように修正"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "ブラジルポルトガル語翻訳を追加 (貢献者: @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "編集画面: デフォルトでファイル名の欄にフォーカスするように修正"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "ファイル一覧画面: スクロール可能にし、エントリーが多い場合にウィンドウが大"
+#~ "きくなる不具合を修正"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "フランス語翻訳を追加 (貢献者: @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "ほかのデスクトップ環境への対応を改善"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "\"Pin It!\" ボタンをクリックすると実行権限を付与するように修正"
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "カテゴリー選択ウィジェットを追加"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Alt+Home キーでようこそ画面を表示できる機能を追加"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "GPU アクセラレーションをデフォルトで有効化"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "128px のアプリアイコンを追加 (貢献者: @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "スタイルシートの種類によらずウィンドウが角丸になるように修正 (貢献者: "
+#~ "@JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "マルチタッチジェスチャーに対応 (貢献者: @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "AppCenter で表示される説明テキストが見にくい不具合を修正"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "ウィンドウの位置を保存し復元するように修正"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "スペイン語翻訳を追加 (貢献者: @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "最初のリリース"
+
+#~ msgid "Support setting \"StartupWMClass\" key"
+#~ msgstr "\"StartupWMClass\" キーを設定可能に"
+
+#~ msgid "Files View"
+#~ msgstr "ファイル画面"
+
+#~ msgid "Edit View"
+#~ msgstr "編集画面"
+
+#~ msgid "The app now fully redesigned for modern desktop environments!"
+#~ msgstr ""
+#~ "現代的なデスクトップ環境に合うよう、アプリのデザインを抜本的に変更しまし"
+#~ "た！"
