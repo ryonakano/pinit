@@ -6,74 +6,76 @@ Here are the descriptions of what each field in the app does and which key in th
 
 ## Required Fields
 ### App Name
+![screenshot of the app name field](images/app-name.png)
+
 The name of your app.
 
-The text you specified may be shown in the launcher or dock. Below is an example in GNOME:
+The text you specified would be shown in the launcher or dock.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Name`
+- Key name in Desktop Entry Specification: `Name`
 
 ### Exec File
+![screenshot of the exec name field](images/exec-file.png)
+
 The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.
 
 You can use the right button to navigate and select your app instead of specifying the path manually.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Exec`
+- Key name in Desktop Entry Specification: `Exec`
 
 ## Optional Fields
 ### Icon File
+![screenshot of the icon file field](images/icon-file.png)
+
 The icon branding the app. Specify in an absolute path or an icon's alias name.
 
 You can use the right button to navigate and select your favorite icon. ICO, PNG, SVG, and XMP files are supported.
 
 The icon you specified would be shown in the app launcher or dock.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Icon`
+- Key name in Desktop Entry Specification: `Icon`
 
 ### Generic Name
+![screenshot of the generic name field](images/generic-name.png)
+
 Generic name of the app, for example "Web Browser" or "Mail Client". This text is used in some desktop environment like KDE.
 
 <!-- TODO Screenshot -->
 
-Corresponding key in Desktop Entry Specification: `GenericName`
+- Key name in Desktop Entry Specification: `GenericName`
 
 ### Comment
+![screenshot of the comment field](images/comment.png)
+
 Descibes the app. May appear as a tooltip when you hover over the app entry in the launcher/dock.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Comment`
+- Key name in Desktop Entry Specification: `Comment`
 
 ### Categories
+![screenshot of the categories field](images/categories.png)
+
 Categories applicable to the app. App launchers that groups follows this selection.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Categories`
+- Key name in Desktop Entry Specification: `Categories`
 
 ### Keywords
+![screenshot of the keywords field](images/keywords.png)
+
 Words that can be used to search your app in the app launcher.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Keywords`
+- Key name in Desktop Entry Specification: `Keywords`
 
 ## Advanced Configurations
 ### Startup WM Class
+![screenshot of the startup WM class field](images/startup-wm-class.png)
+
 Associate the app with a window that has this ID. Use this if a different or duplicated icon appears in the dock when the app launches. This often happens when your app is a wrapper.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `StartupWMClass`
+- Key name in Desktop Entry Specification: `StartupWMClass`
 
 ### Run in Terminal
+![screenshot of the run in terminal switch](images/run-in-terminal.png)
+
 Whether the program runs in a terminal window.
 
-<!-- TODO Screenshot -->
-
-Corresponding key in Desktop Entry Specification: `Terminal`
+- Key name in Desktop Entry Specification: `Treminal`
