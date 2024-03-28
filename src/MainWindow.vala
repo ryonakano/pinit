@@ -24,7 +24,9 @@ public class MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
         { "about", on_about_activate },
         { "new", on_new_activate },
+        { "doc", on_doc_activate },
     };
+    private const string DOC_URL = "https://ryonakano.github.io/pinit/";
 
     private View.FilesView files_view;
     private View.EditView edit_view;
@@ -224,6 +226,22 @@ public class MainWindow : Adw.ApplicationWindow {
 
         model.load.begin ();
         show_edit_view (file);
+    }
+
+    /**
+     * The callback for documentation.
+     *
+     * Open the documentation in the default Web browser.
+     */
+    private void on_doc_activate () {
+        var doc_launcher = new Gtk.UriLauncher (DOC_URL);
+        doc_launcher.launch.begin (this, null, (obj, res) => {
+            try {
+                doc_launcher.launch.end (res);
+            } catch (Error e) {
+                warning ("Failed to open doc: %s", e.message);
+            }
+        });
     }
 
     /**
