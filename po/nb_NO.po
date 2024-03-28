@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:24+0000\n"
-"PO-Revision-Date: 2024-03-21 03:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-03-26 02:01+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
 "pinit/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -109,19 +109,21 @@ msgstr "Ny oppføring"
 
 #: src/MainWindow.vala:89
 msgid "Entry deleted."
-msgstr ""
+msgstr "Oppføring slettet."
 
 #: src/MainWindow.vala:104
 msgid "Entry updated."
-msgstr ""
+msgstr "Oppføring oppdatert."
 
 #: src/MainWindow.vala:123
+#, fuzzy
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Klarte ikke å laste inn oppføringer."
 
 #: src/MainWindow.vala:124
+#, fuzzy
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Kunne ikke laste inn programoppføringer."
 
 #: src/MainWindow.vala:126 src/View/EditView.vala:380
 #: src/View/EditView.vala:469 src/View/FilesView.vala:148
@@ -131,13 +133,15 @@ msgstr "Lukk"
 
 #: src/MainWindow.vala:158
 msgid "Save Changes?"
-msgstr ""
+msgstr "Lagre endringer?"
 
 #: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Åpne oppføringer inneholder ulagrede endringer. Endringer som ikke er lagret "
+"vil gå tapt for alltid."
 
 #: src/MainWindow.vala:161 src/View/FilesView.vala:134
 #, fuzzy
@@ -146,7 +150,7 @@ msgstr "Avbryt"
 
 #: src/MainWindow.vala:162
 msgid "_Discard"
-msgstr ""
+msgstr "_Forkast"
 
 #: src/MainWindow.vala:163 src/View/EditView.vala:39
 #, fuzzy
@@ -162,11 +166,11 @@ msgstr "Allan Nordhøy, <epost@anotheragency.no>"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
-msgstr ""
+msgstr "Påkrevde felter"
 
 #: src/View/EditView.vala:69
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Følgende felter å utfylles for å lagre."
 
 #: src/View/EditView.vala:73
 msgid "App Name"
@@ -184,11 +188,12 @@ msgstr "Velg en kjørbar fil"
 
 #: src/View/EditView.vala:92
 msgid "Optional Fields"
-msgstr ""
+msgstr "Valgfrie felter"
 
 #: src/View/EditView.vala:93
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
+"Innfylling av disse feltene bedrer oppdagbarheten i programoppstarteren."
 
 #: src/View/EditView.vala:97
 msgid "Icon File"
@@ -257,7 +262,7 @@ msgstr "Ny oppføring"
 
 #: src/View/EditView.vala:208 src/View/EditView.vala:410
 msgid "Untitled App"
-msgstr ""
+msgstr "Navnløst program"
 
 #: src/View/EditView.vala:228
 #, fuzzy
@@ -285,7 +290,7 @@ msgstr "Kunne ikke åpne med eksternt program"
 
 #: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Kunne ikke åpne filen i eksternt program."
 
 #: src/View/EditView.vala:435
 #, fuzzy
@@ -298,17 +303,19 @@ msgid "Edit “%s”"
 msgstr "Redigerer «%s»"
 
 #: src/View/EditView.vala:459
+#, fuzzy
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Klarte ikke å lagre oppføring"
 
 #: src/View/EditView.vala:461
-#, c-format
+#, c-format, fuzzy
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Klarte ikke å lagre «%s»-oppføringen"
 
 #: src/View/EditView.vala:467
+#, fuzzy
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Kunne ikke lagre programoppføringen."
 
 #: src/View/FilesView.vala:25
 msgid "Create a new entry"
@@ -347,7 +354,7 @@ msgstr "Om %s…"
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
-msgstr ""
+msgstr "Hovedmeny"
 
 #: src/View/FilesView.vala:57
 #, fuzzy
@@ -356,7 +363,7 @@ msgstr "Fant ingen gyldige programoppføringer"
 
 #: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Klikk «+»-knappen på toppen for å opprette."
 
 #: src/View/FilesView.vala:118
 #, fuzzy
@@ -364,9 +371,9 @@ msgid "Delete Entry?"
 msgstr "Oppføring slettet."
 
 #: src/View/FilesView.vala:120
-#, c-format
+#, c-format, fuzzy
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Slett «%s»-oppføringen?"
 
 #: src/View/FilesView.vala:124
 msgid "Delete…"
@@ -387,8 +394,9 @@ msgid "Failed to Delete Entry of “%s”"
 msgstr "Kunne ikke slette «%s»-filen"
 
 #: src/View/FilesView.vala:146
+#, fuzzy
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Kunne ikke fjerne programoppføring."
 
 #: src/Widget/CategoriesRow.vala:40
 #, fuzzy
@@ -456,19 +464,20 @@ msgstr "Kategorier som har med programmet å gjøre. (Du kan velge mer enn én.)
 
 #: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
-msgstr ""
+msgstr "Nøkkelord"
 
 #: src/Widget/KeywordsRow.vala:30
+#, fuzzy
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Disse ordene kan brukes som søk."
 
 #: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Legg til nytt nøkkelord"
 
 #: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
-msgstr ""
+msgstr "Nøkkelord"
 
 #: src/Widget/KeywordsRow.vala:126
 #, fuzzy
