@@ -26,7 +26,7 @@ public class MainWindow : Adw.ApplicationWindow {
         { "new", on_new_activate },
         { "doc", on_doc_activate },
     };
-    private const string FOD_DOC_URL = "https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html";
+    private const string DOC_URL = "https://ryonakano.github.io/pinit/";
 
     private View.FilesView files_view;
     private View.EditView edit_view;
@@ -234,7 +234,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Open the documentation in the default Web browser.
      */
     private void on_doc_activate () {
-        var doc_launcher = new Gtk.UriLauncher (FOD_DOC_URL);
+        var doc_launcher = new Gtk.UriLauncher (DOC_URL);
         doc_launcher.launch.begin (this, null, (obj, res) => {
             try {
                 doc_launcher.launch.end (res);
