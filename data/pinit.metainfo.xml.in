@@ -24,23 +24,13 @@
 
   <screenshots>
     <screenshot type="default">
-      <caption>List of app entries in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-light.png</image>
+      <caption>Overview of the app in the light mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-light.png</image>
     </screenshot>
 
     <screenshot>
-      <caption>Editing the app entry in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-light.png</image>
-    </screenshot>
-
-    <screenshot>
-      <caption>List of app entries in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-files-view-dark.png</image>
-    </screenshot>
-
-    <screenshot>
-      <caption>Editing the app entry in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/2.0.3/data/screenshots/gnome/screenshot-edit-view-dark.png</image>
+      <caption>Overview of the app in the dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/main/data/screenshots/gnome/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 

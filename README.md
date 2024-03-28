@@ -1,9 +1,12 @@
-# Pin It!
+<div align="center">
+  <img src="data/icons/64/com.github.ryonakano.pinit.svg">
+  <h1>Pin It!</h1>
+  <p>Pin portable apps to the launcher</p>
+</div>
+
+![Overview of the app](data/screenshots/gnome/screenshot-light.png)
+
 Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
-
-![Files view in the light mode](data/screenshots/gnome/screenshot-files-view-light.png)
-
-![Edit view in the light mode](data/screenshots/gnome/screenshot-edit-view-light.png)
 
 Other features include:
 
