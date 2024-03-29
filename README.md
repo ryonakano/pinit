@@ -4,7 +4,7 @@
   <p>Pin portable apps to the launcher</p>
 </div>
 
-![Overview of the app](data/screenshots/gnome/screenshot-light.png)
+![Light Mode Screenshot](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)![Dark Mode Screenshot](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
 
 Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
 
