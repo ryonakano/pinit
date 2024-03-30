@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 02:25+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -80,283 +80,6 @@ msgstr "Editace v tmavém režimu"
 #, fuzzy
 msgid "Editing the app entry in the dark mode"
 msgstr "Editace v tmavém režimu"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pinit.metainfo.xml.in:61
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
-#: data/pinit.metainfo.xml.in:75
-msgid "This release fixes some critical issues and plus add some improvements."
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:78
-msgid "Bug fixes:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:82
-msgid ""
-"Regain access to HOME to fix several issues that pinned apps disappear after "
-"reboot/upgrade of OS"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:83
-msgid "Avoid listing errored entries in FilesView"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:84
-msgid "Avoid errors when optional keys not found"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Save desktop files without locales"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:87
-msgid "Improvements:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:91
-msgid "Mark release descriptions as untranslatable (thanks to @sabriunal)"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:92
-#, fuzzy
-msgid "Add keyboard shortcuts window"
-msgstr "Klávesové zktatky"
-
-#: data/pinit.metainfo.xml.in:93 data/pinit.metainfo.xml.in:110
-#: data/pinit.metainfo.xml.in:119 data/pinit.metainfo.xml.in:144
-msgid "Update translations"
-msgstr "Aktualizace překladů"
-
-#: data/pinit.metainfo.xml.in:100
-msgid "The release for celebrating the 2nd anniversary of the app!"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:104
-msgid "Fix deprecations in GTK 4.10"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:105
-msgid "English grammatical changes (thanks to @BraidenPsiuk)"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:106
-msgid ""
-"EditView: Make keys that is not required by the freedesktop.org "
-"specification optional"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:107
-msgid "CategoryChooser: Improve layout management"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:108
-msgid "Fix navigate back shows empty window"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:109 data/pinit.metainfo.xml.in:118
-msgid "Update Flatpak runtime version"
-msgstr "Aktualizace verzi runtime Flatpak"
-
-#: data/pinit.metainfo.xml.in:126
-msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr "Největší a nejlepší aktualizace přicházejí do „Pin It!“:"
-
-#: data/pinit.metainfo.xml.in:130
-msgid ""
-"Redesign to fit modern desktop environments, including support for "
-"responsive design"
-msgstr ""
-"Redesign, aby vyhovoval moderním desktopovým prostředím, včetně podpory "
-"responzivního designu"
-
-#: data/pinit.metainfo.xml.in:131
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr "Přechod na GTK 4, nejnovější verzi GTK"
-
-#: data/pinit.metainfo.xml.in:133
-msgid "Other changes:"
-msgstr "Další změny:"
-
-#: data/pinit.metainfo.xml.in:137
-msgid "Support setting \".ico\" files as the app icon"
-msgstr "Podpora nastavení souborů „.ico“ jako ikony aplikace"
-
-#: data/pinit.metainfo.xml.in:138
-msgid "Support opening in a text editor"
-msgstr "Podpora otevírání v textovém editoru"
-
-#: data/pinit.metainfo.xml.in:139
-msgid "Fix window size cannot be resized on small displays"
-msgstr "Oprava - velikost okna nelze změnit na malých displejích"
-
-#: data/pinit.metainfo.xml.in:140
-msgid "Show error dialogs when saving/deleting failed"
-msgstr "Zobrazit chybová dialogová okna, když se ukládání/mazání nezdařilo"
-
-#: data/pinit.metainfo.xml.in:141
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "Do generovaných souborů nepřidávat prázdné prvky"
-
-#: data/pinit.metainfo.xml.in:142
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr "Nepřepisovat všechna oprávnění vybraných spustitelných souborů"
-
-#: data/pinit.metainfo.xml.in:143
-msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
-"Udělit uživateli oprávnění ke spustitelnému souboru pouze v případě, že jej "
-"nemá"
-
-#: data/pinit.metainfo.xml.in:152
-msgid "AppData: Fix release year"
-msgstr "AppData: Oprava roku vydání"
-
-#: data/pinit.metainfo.xml.in:154 data/pinit.metainfo.xml.in:169
-#: data/pinit.metainfo.xml.in:188 data/pinit.metainfo.xml.in:201
-#: data/pinit.metainfo.xml.in:215 data/pinit.metainfo.xml.in:229
-#: data/pinit.metainfo.xml.in:243 data/pinit.metainfo.xml.in:259
-msgid "Translation updates:"
-msgstr "Aktualizace překladu:"
-
-#: data/pinit.metainfo.xml.in:156
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Italský překlad (díky @albanobattistella)"
-
-#: data/pinit.metainfo.xml.in:164
-msgid "Check desktop environment on runtime"
-msgstr "Kontrola desktopového prostředí"
-
-#: data/pinit.metainfo.xml.in:165
-msgid "Lessen scope of file access"
-msgstr "Zmenšen rozsah přístupu k souborům"
-
-#: data/pinit.metainfo.xml.in:166
-msgid "Make window resizable"
-msgstr "Možnost změny velikost okna"
-
-#: data/pinit.metainfo.xml.in:167
-msgid "EditView: Less strict on file names"
-msgstr "Editace: Méně striktní na názvy souborů"
-
-#: data/pinit.metainfo.xml.in:171
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Přidán italský překlad (díky @albanobattistella)"
-
-#: data/pinit.metainfo.xml.in:172
-msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Přidán holandský překlad (díky @Vistaus)"
-
-#: data/pinit.metainfo.xml.in:173 data/pinit.metainfo.xml.in:190
-#: data/pinit.metainfo.xml.in:204 data/pinit.metainfo.xml.in:218
-#: data/pinit.metainfo.xml.in:231 data/pinit.metainfo.xml.in:245
-#: data/pinit.metainfo.xml.in:262
-msgid "Update Japanese translation"
-msgstr "Aktualizace překladu japonštiny"
-
-#: data/pinit.metainfo.xml.in:181
-msgid "Fix build error on other distros"
-msgstr "Oprava chyby sestavení v jiných distribucích"
-
-#: data/pinit.metainfo.xml.in:182
-msgid "FilesView: Properly center the dialog against the app window"
-msgstr ""
-"Zobrazení souborů: Správně vycentrováno dialogové okno proti oknu aplikace"
-
-#: data/pinit.metainfo.xml.in:183
-msgid "Restore last opened view and its state"
-msgstr "Obnovení naposledy otevřeného zobrazení a jeho stav"
-
-#: data/pinit.metainfo.xml.in:184
-msgid "Add new style switcher"
-msgstr "Přidán nový přepínač stylů"
-
-#: data/pinit.metainfo.xml.in:185
-msgid "Correct titlebar label when no app name specified"
-msgstr "Opravený popisek záhlaví, když není zadán žádný název aplikace"
-
-#: data/pinit.metainfo.xml.in:186
-msgid "Readable copies"
-msgstr "Čitelné kopie"
-
-#: data/pinit.metainfo.xml.in:198
-msgid "FilesView: Ellipsize if label texts are too long"
-msgstr ""
-"Zobrazení souborů: Pokud jsou texty štítků příliš dlouhé, jsou zkráceny a "
-"nahrazeny tečkami"
-
-#: data/pinit.metainfo.xml.in:199
-msgid "Tell accepted file formats in FileChooser"
-msgstr "Akceptované formáty souborů ve Výběru souborů"
-
-#: data/pinit.metainfo.xml.in:203
-msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr "Přidán překlad do brazilského portugalštiny (díky @DanielTolentino)"
-
-#: data/pinit.metainfo.xml.in:212
-msgid "EditView: Focus on file name entry by default"
-msgstr "Editace: Ve výchozím nastavení se zaměří na zadání názvu souboru"
-
-#: data/pinit.metainfo.xml.in:213
-msgid ""
-"FilesView: Make scrollable and fix the window get bigger if many entries"
-msgstr ""
-"Zobrazení souborů: Umožnění posouvání a oprava velikosti okna při mnoha "
-"záznamech"
-
-#: data/pinit.metainfo.xml.in:217
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Přidán francouzský překlad (díky @NathanBnm)"
-
-#: data/pinit.metainfo.xml.in:226
-msgid "Improved support for other desktop environments"
-msgstr "Vylepšená podpora pro další desktopová prostředí"
-
-#: data/pinit.metainfo.xml.in:227
-msgid "Add execution permission on clicking the \"Pin It!\" button"
-msgstr "Přidáno oprávnění při kliknutí na tlačítko \"Pin It!\""
-
-#: data/pinit.metainfo.xml.in:239
-msgid "Add CategoryChooser"
-msgstr "Přidán výběr kategorií"
-
-#: data/pinit.metainfo.xml.in:240
-msgid "Support Alt+Home to show welcome"
-msgstr "Podpora Alt+Home pro zobrazení uvítací obrazovky"
-
-#: data/pinit.metainfo.xml.in:241
-msgid "Allow GPU acceralation by default"
-msgstr "Ve výchozím nastavení povolena akcelerace GPU"
-
-#: data/pinit.metainfo.xml.in:253
-msgid "Add 128px app icon (thanks to @hanaral)"
-msgstr "Přidána ikona aplikace 128px (díky @hanaral)"
-
-#: data/pinit.metainfo.xml.in:254
-msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-msgstr "Zaoblené rohy oken na libovolné šabloně stylů (díky @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:255
-msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr "Podpora vícedotykových gest (díky @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:256
-msgid "Fix unreadable description text in AppCenter"
-msgstr "Oprava: nečitelný text popisu v centru aplikací"
-
-#: data/pinit.metainfo.xml.in:257
-msgid "Save and restore window position"
-msgstr "Uložení a obnovení pozice okna"
-
-#: data/pinit.metainfo.xml.in:261
-msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr "Přidán španělský překlad (díky @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:270
-msgid "Initial release"
-msgstr "První vydání"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -747,6 +470,167 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Smazaná položka."
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
+
+#, fuzzy
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "Klávesové zktatky"
+
+#~ msgid "Update translations"
+#~ msgstr "Aktualizace překladů"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Aktualizace verzi runtime Flatpak"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "Největší a nejlepší aktualizace přicházejí do „Pin It!“:"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Redesign, aby vyhovoval moderním desktopovým prostředím, včetně podpory "
+#~ "responzivního designu"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Přechod na GTK 4, nejnovější verzi GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Další změny:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr "Podpora nastavení souborů „.ico“ jako ikony aplikace"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Podpora otevírání v textovém editoru"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr "Oprava - velikost okna nelze změnit na malých displejích"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "Zobrazit chybová dialogová okna, když se ukládání/mazání nezdařilo"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr "Do generovaných souborů nepřidávat prázdné prvky"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr "Nepřepisovat všechna oprávnění vybraných spustitelných souborů"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr ""
+#~ "Udělit uživateli oprávnění ke spustitelnému souboru pouze v případě, že "
+#~ "jej nemá"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "AppData: Oprava roku vydání"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aktualizace překladu:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Italský překlad (díky @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Kontrola desktopového prostředí"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Zmenšen rozsah přístupu k souborům"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Možnost změny velikost okna"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Editace: Méně striktní na názvy souborů"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Přidán italský překlad (díky @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Přidán holandský překlad (díky @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Aktualizace překladu japonštiny"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Oprava chyby sestavení v jiných distribucích"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "Zobrazení souborů: Správně vycentrováno dialogové okno proti oknu aplikace"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Obnovení naposledy otevřeného zobrazení a jeho stav"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Přidán nový přepínač stylů"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr "Opravený popisek záhlaví, když není zadán žádný název aplikace"
+
+#~ msgid "Readable copies"
+#~ msgstr "Čitelné kopie"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr ""
+#~ "Zobrazení souborů: Pokud jsou texty štítků příliš dlouhé, jsou zkráceny a "
+#~ "nahrazeny tečkami"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "Akceptované formáty souborů ve Výběru souborů"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Přidán překlad do brazilského portugalštiny (díky @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Editace: Ve výchozím nastavení se zaměří na zadání názvu souboru"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Zobrazení souborů: Umožnění posouvání a oprava velikosti okna při mnoha "
+#~ "záznamech"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Přidán francouzský překlad (díky @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Vylepšená podpora pro další desktopová prostředí"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Přidáno oprávnění při kliknutí na tlačítko \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Přidán výběr kategorií"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Podpora Alt+Home pro zobrazení uvítací obrazovky"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Ve výchozím nastavení povolena akcelerace GPU"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Přidána ikona aplikace 128px (díky @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr "Zaoblené rohy oken na libovolné šabloně stylů (díky @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Podpora vícedotykových gest (díky @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Oprava: nečitelný text popisu v centru aplikací"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Uložení a obnovení pozice okna"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Přidán španělský překlad (díky @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "První vydání"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"

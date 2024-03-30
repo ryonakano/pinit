@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 02:25+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2024-03-21 03:45+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -76,285 +76,6 @@ msgstr "Список записів застосунків у темному р�
 #: data/pinit.metainfo.xml.in:42
 msgid "Editing the app entry in the dark mode"
 msgstr "Редагування запису застосунку у темному режимі"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pinit.metainfo.xml.in:61
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
-#: data/pinit.metainfo.xml.in:75
-msgid "This release fixes some critical issues and plus add some improvements."
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:78
-msgid "Bug fixes:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:82
-msgid ""
-"Regain access to HOME to fix several issues that pinned apps disappear after "
-"reboot/upgrade of OS"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:83
-msgid "Avoid listing errored entries in FilesView"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:84
-msgid "Avoid errors when optional keys not found"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Save desktop files without locales"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:87
-msgid "Improvements:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:91
-msgid "Mark release descriptions as untranslatable (thanks to @sabriunal)"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:92
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Keyboard Shortcuts"
-msgid "Add keyboard shortcuts window"
-msgstr "Комбінації клавіш"
-
-#: data/pinit.metainfo.xml.in:93 data/pinit.metainfo.xml.in:110
-#: data/pinit.metainfo.xml.in:119 data/pinit.metainfo.xml.in:144
-msgid "Update translations"
-msgstr "Оновлені переклади"
-
-#: data/pinit.metainfo.xml.in:100
-msgid "The release for celebrating the 2nd anniversary of the app!"
-msgstr "Випуск з нагоди святкування 2-ї річниці застосунку!"
-
-#: data/pinit.metainfo.xml.in:104
-msgid "Fix deprecations in GTK 4.10"
-msgstr "Усунено застарілості в GTK 4.10"
-
-#: data/pinit.metainfo.xml.in:105
-msgid "English grammatical changes (thanks to @BraidenPsiuk)"
-msgstr "Граматичні зміни у версії англійською (завдяки @BraidenPsiuk)"
-
-#: data/pinit.metainfo.xml.in:106
-msgid ""
-"EditView: Make keys that is not required by the freedesktop.org "
-"specification optional"
-msgstr ""
-"EditView: Ключі, які не вимагаються специфікацією freedesktop.org, стали "
-"необов'язковими"
-
-#: data/pinit.metainfo.xml.in:107
-msgid "CategoryChooser: Improve layout management"
-msgstr "CategoryChooser: Удосконалено керування макетами"
-
-#: data/pinit.metainfo.xml.in:108
-msgid "Fix navigate back shows empty window"
-msgstr ""
-"Виправлено проблему, коли під час переходу назад показувались порожні вікна"
-
-#: data/pinit.metainfo.xml.in:109 data/pinit.metainfo.xml.in:118
-msgid "Update Flatpak runtime version"
-msgstr "Оновлення версії середовища виконання Flatpak"
-
-#: data/pinit.metainfo.xml.in:126
-msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr "Найбільші та найкращі оновлення приходять до «Pin It!»:"
-
-#: data/pinit.metainfo.xml.in:130
-msgid ""
-"Redesign to fit modern desktop environments, including support for "
-"responsive design"
-msgstr ""
-"Редизайн під сучасні стільничні середовища, включаючи підтримку адаптивного "
-"дизайну"
-
-#: data/pinit.metainfo.xml.in:131
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr "Перехід на GTK 4, найновішу версію GTK"
-
-#: data/pinit.metainfo.xml.in:133
-msgid "Other changes:"
-msgstr "Інші зміни:"
-
-#: data/pinit.metainfo.xml.in:137
-msgid "Support setting \".ico\" files as the app icon"
-msgstr "Підтримка налаштування файлів піктограм застосунку «.ico»"
-
-#: data/pinit.metainfo.xml.in:138
-msgid "Support opening in a text editor"
-msgstr "Підтримка відкриття в текстовому редакторі"
-
-#: data/pinit.metainfo.xml.in:139
-msgid "Fix window size cannot be resized on small displays"
-msgstr "Усунено неможливість зміни розміру вікна на маленьких дисплеях"
-
-#: data/pinit.metainfo.xml.in:140
-msgid "Show error dialogs when saving/deleting failed"
-msgstr "Показ діалогових вікон помилок, коли зберегти/видалити не вдалося"
-
-#: data/pinit.metainfo.xml.in:141
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr "Порожні елементи більше не додаються у створені файли робочого столу"
-
-#: data/pinit.metainfo.xml.in:142
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr "Не перезаписувати весь дозвіл вибраних виконуваних файлів"
-
-#: data/pinit.metainfo.xml.in:143
-msgid "Give executable permission for the user only when they don't have it"
-msgstr "Надавати дозвіл виконання користувачу, лише якщо він його не має"
-
-#: data/pinit.metainfo.xml.in:152
-msgid "AppData: Fix release year"
-msgstr "AppData: виправлено рік випуску"
-
-#: data/pinit.metainfo.xml.in:154 data/pinit.metainfo.xml.in:169
-#: data/pinit.metainfo.xml.in:188 data/pinit.metainfo.xml.in:201
-#: data/pinit.metainfo.xml.in:215 data/pinit.metainfo.xml.in:229
-#: data/pinit.metainfo.xml.in:243 data/pinit.metainfo.xml.in:259
-msgid "Translation updates:"
-msgstr "Оновлення перекладів:"
-
-#: data/pinit.metainfo.xml.in:156
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Оновлення перекладу італійською мовою (завдяки @albanobattistella)"
-
-#: data/pinit.metainfo.xml.in:164
-msgid "Check desktop environment on runtime"
-msgstr "Перевірка стільничного середовища під час роботи"
-
-#: data/pinit.metainfo.xml.in:165
-msgid "Lessen scope of file access"
-msgstr "Зменшення зони доступу до файлів"
-
-#: data/pinit.metainfo.xml.in:166
-msgid "Make window resizable"
-msgstr "Вікно зі змінюваним розміром"
-
-#: data/pinit.metainfo.xml.in:167
-msgid "EditView: Less strict on file names"
-msgstr "EditView: менш вимогливий до назв файлів"
-
-#: data/pinit.metainfo.xml.in:171
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Додано переклад італійською мовою (спасибі @albanobattistella)"
-
-#: data/pinit.metainfo.xml.in:172
-msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Додано переклад нідерландською (завдяки @Vistaus)"
-
-#: data/pinit.metainfo.xml.in:173 data/pinit.metainfo.xml.in:190
-#: data/pinit.metainfo.xml.in:204 data/pinit.metainfo.xml.in:218
-#: data/pinit.metainfo.xml.in:231 data/pinit.metainfo.xml.in:245
-#: data/pinit.metainfo.xml.in:262
-msgid "Update Japanese translation"
-msgstr "Оновлення перекладу японською мовою"
-
-#: data/pinit.metainfo.xml.in:181
-msgid "Fix build error on other distros"
-msgstr "Виправлення помилки збирання на інших дистрибутивах"
-
-#: data/pinit.metainfo.xml.in:182
-msgid "FilesView: Properly center the dialog against the app window"
-msgstr "FilesView: правильне центрування діалогового вікна до вікна застосунку"
-
-#: data/pinit.metainfo.xml.in:183
-msgid "Restore last opened view and its state"
-msgstr "Відновлення останнього відкритого подання та його стану"
-
-#: data/pinit.metainfo.xml.in:184
-msgid "Add new style switcher"
-msgstr "Доданий новий перемикач стилів"
-
-#: data/pinit.metainfo.xml.in:185
-msgid "Correct titlebar label when no app name specified"
-msgstr "Правильна мітка панелі заголовка, якщо не вказано назву застосунку"
-
-#: data/pinit.metainfo.xml.in:186
-msgid "Readable copies"
-msgstr "Читабельні копії"
-
-#: data/pinit.metainfo.xml.in:198
-msgid "FilesView: Ellipsize if label texts are too long"
-msgstr "FilesView: Еліпсис, якщо текст міток задовгий"
-
-#: data/pinit.metainfo.xml.in:199
-msgid "Tell accepted file formats in FileChooser"
-msgstr "Повідомлення про прийняті формати файлів у FileChooser"
-
-#: data/pinit.metainfo.xml.in:203
-msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr ""
-"Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
-
-#: data/pinit.metainfo.xml.in:212
-msgid "EditView: Focus on file name entry by default"
-msgstr "EditView: Фокусування на записі назви файлу після відкриття"
-
-#: data/pinit.metainfo.xml.in:213
-msgid ""
-"FilesView: Make scrollable and fix the window get bigger if many entries"
-msgstr ""
-"FilesView: вікно стало прокручуваним і виправлено можливість збільшення, "
-"якщо багато записів"
-
-#: data/pinit.metainfo.xml.in:217
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
-
-#: data/pinit.metainfo.xml.in:226
-msgid "Improved support for other desktop environments"
-msgstr "Поліпшена підтримка інших стільничних середовищ"
-
-#: data/pinit.metainfo.xml.in:227
-msgid "Add execution permission on clicking the \"Pin It!\" button"
-msgstr "Додавання дозволу на виконання натисканням кнопки «Pin It!»"
-
-#: data/pinit.metainfo.xml.in:239
-msgid "Add CategoryChooser"
-msgstr "Доданий вибір категорій"
-
-#: data/pinit.metainfo.xml.in:240
-msgid "Support Alt+Home to show welcome"
-msgstr "Підтримка Alt+Home, щоб перейти на сторінку привітання"
-
-#: data/pinit.metainfo.xml.in:241
-msgid "Allow GPU acceralation by default"
-msgstr "Додано GPU-прискорення з коробки"
-
-#: data/pinit.metainfo.xml.in:253
-msgid "Add 128px app icon (thanks to @hanaral)"
-msgstr "Додана піктограма застосунку 128px (завдяки @hanaral)"
-
-#: data/pinit.metainfo.xml.in:254
-msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-msgstr ""
-"Закруглені кути вікон на будь-якій таблиці стилів (завдяки @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:255
-msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr "Підтримка мультитач жестів (завдяки @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:256
-msgid "Fix unreadable description text in AppCenter"
-msgstr "Виправлено нечитабельний текст опису у Центрі застосунків"
-
-#: data/pinit.metainfo.xml.in:257
-msgid "Save and restore window position"
-msgstr "Збереження та відновлення розташування вікна"
-
-#: data/pinit.metainfo.xml.in:261
-msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr "Доданий переклад іспанською мовою (спасибі @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:270
-msgid "Initial release"
-msgstr "Початковий випуск"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -721,6 +442,192 @@ msgstr "Ключове слово"
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
 msgstr "Видалити ключове слово"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
+
+#, fuzzy
+#~| msgctxt "shortcut window"
+#~| msgid "Keyboard Shortcuts"
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "Комбінації клавіш"
+
+#~ msgid "Update translations"
+#~ msgstr "Оновлені переклади"
+
+#~ msgid "The release for celebrating the 2nd anniversary of the app!"
+#~ msgstr "Випуск з нагоди святкування 2-ї річниці застосунку!"
+
+#~ msgid "Fix deprecations in GTK 4.10"
+#~ msgstr "Усунено застарілості в GTK 4.10"
+
+#~ msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+#~ msgstr "Граматичні зміни у версії англійською (завдяки @BraidenPsiuk)"
+
+#~ msgid ""
+#~ "EditView: Make keys that is not required by the freedesktop.org "
+#~ "specification optional"
+#~ msgstr ""
+#~ "EditView: Ключі, які не вимагаються специфікацією freedesktop.org, стали "
+#~ "необов'язковими"
+
+#~ msgid "CategoryChooser: Improve layout management"
+#~ msgstr "CategoryChooser: Удосконалено керування макетами"
+
+#~ msgid "Fix navigate back shows empty window"
+#~ msgstr ""
+#~ "Виправлено проблему, коли під час переходу назад показувались порожні "
+#~ "вікна"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Оновлення версії середовища виконання Flatpak"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "Найбільші та найкращі оновлення приходять до «Pin It!»:"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Редизайн під сучасні стільничні середовища, включаючи підтримку "
+#~ "адаптивного дизайну"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Перехід на GTK 4, найновішу версію GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Інші зміни:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr "Підтримка налаштування файлів піктограм застосунку «.ico»"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Підтримка відкриття в текстовому редакторі"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr "Усунено неможливість зміни розміру вікна на маленьких дисплеях"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "Показ діалогових вікон помилок, коли зберегти/видалити не вдалося"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr ""
+#~ "Порожні елементи більше не додаються у створені файли робочого столу"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr "Не перезаписувати весь дозвіл вибраних виконуваних файлів"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr "Надавати дозвіл виконання користувачу, лише якщо він його не має"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "AppData: виправлено рік випуску"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Оновлення перекладів:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Оновлення перекладу італійською мовою (завдяки @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Перевірка стільничного середовища під час роботи"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Зменшення зони доступу до файлів"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Вікно зі змінюваним розміром"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "EditView: менш вимогливий до назв файлів"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Додано переклад італійською мовою (спасибі @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Додано переклад нідерландською (завдяки @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Оновлення перекладу японською мовою"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Виправлення помилки збирання на інших дистрибутивах"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "FilesView: правильне центрування діалогового вікна до вікна застосунку"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Відновлення останнього відкритого подання та його стану"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Доданий новий перемикач стилів"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr "Правильна мітка панелі заголовка, якщо не вказано назву застосунку"
+
+#~ msgid "Readable copies"
+#~ msgstr "Читабельні копії"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr "FilesView: Еліпсис, якщо текст міток задовгий"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "Повідомлення про прийняті формати файлів у FileChooser"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr ""
+#~ "Доданий переклад португальською бразильською (завдяки @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "EditView: Фокусування на записі назви файлу після відкриття"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "FilesView: вікно стало прокручуваним і виправлено можливість збільшення, "
+#~ "якщо багато записів"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Поліпшена підтримка інших стільничних середовищ"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Додавання дозволу на виконання натисканням кнопки «Pin It!»"
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Доданий вибір категорій"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Підтримка Alt+Home, щоб перейти на сторінку привітання"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Додано GPU-прискорення з коробки"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Додана піктограма застосунку 128px (завдяки @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Закруглені кути вікон на будь-якій таблиці стилів (завдяки @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Підтримка мультитач жестів (завдяки @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Виправлено нечитабельний текст опису у Центрі застосунків"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Збереження та відновлення розташування вікна"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Доданий переклад іспанською мовою (спасибі @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Початковий випуск"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"

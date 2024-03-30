@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 02:25+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
 "PO-Revision-Date: 2023-04-20 23:49+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.18-dev\n"
 
-#: data/pinit.desktop.in:3 data/pinit.metainfo.xml.in:10
+#: data/pinit.desktop.in:3
 msgid "Pin It!"
 msgstr "Pin It!"
 
@@ -73,288 +73,6 @@ msgstr ""
 #: data/pinit.metainfo.xml.in:42
 msgid "Editing the app entry in the dark mode"
 msgstr ""
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pinit.metainfo.xml.in:61
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
-#: data/pinit.metainfo.xml.in:75
-msgid "This release fixes some critical issues and plus add some improvements."
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:78
-msgid "Bug fixes:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:82
-msgid ""
-"Regain access to HOME to fix several issues that pinned apps disappear after "
-"reboot/upgrade of OS"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:83
-msgid "Avoid listing errored entries in FilesView"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:84
-msgid "Avoid errors when optional keys not found"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:85
-msgid "Save desktop files without locales"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:87
-msgid "Improvements:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:91
-msgid "Mark release descriptions as untranslatable (thanks to @sabriunal)"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:92
-msgid "Add keyboard shortcuts window"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:93 data/pinit.metainfo.xml.in:110
-#: data/pinit.metainfo.xml.in:119 data/pinit.metainfo.xml.in:144
-#, fuzzy
-#| msgid "Update Japanese translation"
-msgid "Update translations"
-msgstr "Atualiza tradução Japonesa"
-
-#: data/pinit.metainfo.xml.in:100
-msgid "The release for celebrating the 2nd anniversary of the app!"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:104
-msgid "Fix deprecations in GTK 4.10"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:105
-msgid "English grammatical changes (thanks to @BraidenPsiuk)"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:106
-msgid ""
-"EditView: Make keys that is not required by the freedesktop.org "
-"specification optional"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:107
-msgid "CategoryChooser: Improve layout management"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:108
-msgid "Fix navigate back shows empty window"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:109 data/pinit.metainfo.xml.in:118
-#, fuzzy
-#| msgid "Update Japanese translation"
-msgid "Update Flatpak runtime version"
-msgstr "Atualiza tradução Japonesa"
-
-#: data/pinit.metainfo.xml.in:126
-msgid "The biggest and greatest updates come to \"Pin It!\":"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:130
-msgid ""
-"Redesign to fit modern desktop environments, including support for "
-"responsive design"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:131
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:133
-msgid "Other changes:"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:137
-msgid "Support setting \".ico\" files as the app icon"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:138
-msgid "Support opening in a text editor"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:139
-msgid "Fix window size cannot be resized on small displays"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:140
-msgid "Show error dialogs when saving/deleting failed"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:141
-msgid "Make sure not to add blank elements in generated desktop files"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:142
-msgid "Don't overwrite the entire permission of the selected executable files"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:143
-msgid "Give executable permission for the user only when they don't have it"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:152
-msgid "AppData: Fix release year"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:154 data/pinit.metainfo.xml.in:169
-#: data/pinit.metainfo.xml.in:188 data/pinit.metainfo.xml.in:201
-#: data/pinit.metainfo.xml.in:215 data/pinit.metainfo.xml.in:229
-#: data/pinit.metainfo.xml.in:243 data/pinit.metainfo.xml.in:259
-msgid "Translation updates:"
-msgstr "Atualizações de tradução:"
-
-#: data/pinit.metainfo.xml.in:156
-#, fuzzy
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:164
-msgid "Check desktop environment on runtime"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:165
-msgid "Lessen scope of file access"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:166
-msgid "Make window resizable"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:167
-#, fuzzy
-msgid "EditView: Less strict on file names"
-msgstr "Página de Edição: Foco no nome do arquivo por padrão"
-
-#: data/pinit.metainfo.xml.in:171
-#, fuzzy
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:172
-#, fuzzy
-msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
-
-#: data/pinit.metainfo.xml.in:173 data/pinit.metainfo.xml.in:190
-#: data/pinit.metainfo.xml.in:204 data/pinit.metainfo.xml.in:218
-#: data/pinit.metainfo.xml.in:231 data/pinit.metainfo.xml.in:245
-#: data/pinit.metainfo.xml.in:262
-msgid "Update Japanese translation"
-msgstr "Atualiza tradução Japonesa"
-
-#: data/pinit.metainfo.xml.in:181
-msgid "Fix build error on other distros"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:182
-msgid "FilesView: Properly center the dialog against the app window"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:183
-msgid "Restore last opened view and its state"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:184
-msgid "Add new style switcher"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:185
-msgid "Correct titlebar label when no app name specified"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:186
-msgid "Readable copies"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:198
-msgid "FilesView: Ellipsize if label texts are too long"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:199
-msgid "Tell accepted file formats in FileChooser"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:203
-#, fuzzy
-msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:212
-msgid "EditView: Focus on file name entry by default"
-msgstr "Página de Edição: Foco no nome do arquivo por padrão"
-
-#: data/pinit.metainfo.xml.in:213
-msgid ""
-"FilesView: Make scrollable and fix the window get bigger if many entries"
-msgstr ""
-"Página de Arquivos: Faz a página ralável e conserte a janela ficar maior se "
-"houver muitas entradas"
-
-#: data/pinit.metainfo.xml.in:217
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
-
-#: data/pinit.metainfo.xml.in:226
-msgid "Improved support for other desktop environments"
-msgstr "Melhorias no suporte para outros ambientes de trabalho"
-
-#: data/pinit.metainfo.xml.in:227
-#, fuzzy
-#| msgid "Add execution permisson on clicking the \"Pin It!\" button"
-msgid "Add execution permission on clicking the \"Pin It!\" button"
-msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
-
-#: data/pinit.metainfo.xml.in:239
-msgid "Add CategoryChooser"
-msgstr "Adiciona SeletorDeCategoria"
-
-#: data/pinit.metainfo.xml.in:240
-msgid "Support Alt+Home to show welcome"
-msgstr "Suporta Alt+Home para exibir início"
-
-#: data/pinit.metainfo.xml.in:241
-msgid "Allow GPU acceralation by default"
-msgstr "Permite aceleração de GPU por padrão"
-
-#: data/pinit.metainfo.xml.in:253
-msgid "Add 128px app icon (thanks to @hanaral)"
-msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
-
-#: data/pinit.metainfo.xml.in:254
-msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-msgstr ""
-"Cantos de janela arredondados em qualquer folha de estilo (agradecimentos a "
-"@JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:255
-msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:256
-msgid "Fix unreadable description text in AppCenter"
-msgstr "Corrige texto de descrição ilegível no AppCenter"
-
-#: data/pinit.metainfo.xml.in:257
-msgid "Save and restore window position"
-msgstr "Salvar e restaurar posição da janela"
-
-#: data/pinit.metainfo.xml.in:261
-msgid "Add Spanish translation (thanks to @JeysonFlores)"
-msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#: data/pinit.metainfo.xml.in:270
-msgid "Initial release"
-msgstr "Lançamento inicial"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -740,6 +458,97 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Entrada apagada."
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update translations"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Atualizações de tradução:"
+
+#, fuzzy
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#, fuzzy
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Página de Arquivos: Faz a página ralável e conserte a janela ficar maior "
+#~ "se houver muitas entradas"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
+
+#, fuzzy
+#~| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Adiciona SeletorDeCategoria"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Suporta Alt+Home para exibir início"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Permite aceleração de GPU por padrão"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Cantos de janela arredondados em qualquer folha de estilo (agradecimentos "
+#~ "a @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Corrige texto de descrição ilegível no AppCenter"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Salvar e restaurar posição da janela"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Lançamento inicial"
 
 #, fuzzy
 #~| msgid "New File"
