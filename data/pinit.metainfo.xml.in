@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name translatable="no">Pin It!</name>
+  <name translate="no">Pin It!</name>
   <summary>Pin portable apps to the launcher</summary>
   <description>
     <p>
@@ -58,19 +58,20 @@
   </supports>
 
   <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translatable="no">Ryo Nakano</developer_name>
+  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
-    <name translatable="no">Ryo Nakano</name>
+    <name translate="no">Ryo Nakano</name>
   </developer>
 
   <url type="homepage">https://github.com/ryonakano/pinit</url>
   <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
   <url type="help">https://github.com/ryonakano/pinit/discussions</url>
+  <url type="vcs-browser">https://github.com/ryonakano/pinit</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
     <release version="2.0.3" date="2024-01-27" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <p>
           This release fixes some critical issues and plus add some improvements.
         </p>
@@ -95,7 +96,7 @@
     </release>
 
     <release version="2.0.2" date="2023-10-01" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <p>
           The release for celebrating the 2nd anniversary of the app!
         </p>
@@ -112,7 +113,7 @@
     </release>
 
     <release version="2.0.1" date="2023-04-15" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -121,7 +122,7 @@
     </release>
 
     <release version="2.0.0" date="2023-01-10" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <p>
           The biggest and greatest updates come to "Pin It!":
         </p>
@@ -146,7 +147,7 @@
     </release>
 
     <release version="1.4.1" date="2022-04-09" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>AppData: Fix release year</li>
         </ul>
@@ -158,7 +159,7 @@
     </release>
 
     <release version="1.4.0" date="2022-04-04" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Check desktop environment on runtime</li>
           <li>Lessen scope of file access</li>
@@ -175,7 +176,7 @@
     </release>
 
     <release version="1.3.0" date="2021-12-17" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix build error on other distros</li>
           <li>FilesView: Properly center the dialog against the app window</li>
@@ -192,7 +193,7 @@
     </release>
 
     <release version="1.2.2" date="2021-12-03" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>FilesView: Ellipsize if label texts are too long</li>
           <li>Tell accepted file formats in FileChooser</li>
@@ -206,7 +207,7 @@
     </release>
 
     <release version="1.2.1" date="2021-10-19" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>EditView: Focus on file name entry by default</li>
           <li>FilesView: Make scrollable and fix the window get bigger if many entries</li>
@@ -220,7 +221,7 @@
     </release>
 
     <release version="1.2.0" date="2021-10-13" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Improved support for other desktop environments</li>
           <li>Add execution permission on clicking the "Pin It!" button</li>
@@ -233,7 +234,7 @@
     </release>
 
     <release version="1.1.0" date="2021-10-12" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Add CategoryChooser</li>
           <li>Support Alt+Home to show welcome</li>
@@ -247,7 +248,7 @@
     </release>
 
     <release version="1.0.0" date="2021-10-07" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Add 128px app icon (thanks to @hanaral)</li>
           <li>Rounded window corners on any stylesheet (thanks to @JeysonFlores)</li>
@@ -264,7 +265,7 @@
     </release>
 
     <release version="0.1.0" date="2021-10-01" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Initial release</li>
         </ul>
