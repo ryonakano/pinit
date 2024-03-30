@@ -26,7 +26,7 @@ public class MainWindow : Adw.ApplicationWindow {
         { "new", on_new_activate },
         { "doc", on_doc_activate },
     };
-    private const string DOC_URL = "https://ryonakano.github.io/pinit/";
+    private const string DOC_URL = "https://github.com/ryonakano/pinit/blob/" + Config.PROJECT_VERSION + "/docs/index.md";
 
     private View.FilesView files_view;
     private View.EditView edit_view;

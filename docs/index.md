@@ -1,3 +1,4 @@
+# Pin It! Documentation
 Pin It! allows you to easily create shortcut entry of your favorite portable apps to the app launcher.
 It respects [Desktop Entry Specification by freedesktop.org](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html).
 
