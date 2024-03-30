@@ -66,6 +66,7 @@
   <url type="homepage">https://github.com/ryonakano/pinit</url>
   <url type="bugtracker">https://github.com/ryonakano/pinit/issues</url>
   <url type="help">https://github.com/ryonakano/pinit/discussions</url>
+  <url type="vcs-browser">https://github.com/ryonakano/pinit</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
