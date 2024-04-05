@@ -1,5 +1,4 @@
 # Pin It!
-
 Pin portable apps to the launcher
 
 ![Light Mode Screenshot](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)![Dark Mode Screenshot](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
