@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"POT-Creation-Date: 2024-04-06 10:07+0900\n"
 "PO-Revision-Date: 2023-04-05 19:50+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: \n"
@@ -116,8 +116,8 @@ msgstr ""
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:380
-#: src/View/EditView.vala:469 src/View/FilesView.vala:148
+#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
 #, fuzzy
 msgid "_Close"
 msgstr "Sluiten"
@@ -168,46 +168,79 @@ msgstr ""
 msgid "App Name"
 msgstr "App-naam"
 
-#: src/View/EditView.vala:78
+#: src/View/EditView.vala:74
+#, fuzzy
+#| msgid "Shown in the launcher or Dock."
+msgid "Shown in the launcher or dock."
+msgstr "Deze naam wordt getoond in de starter of dock"
+
+#: src/View/EditView.vala:79
 msgid "Exec File"
 msgstr "Uitvoerbaar bestand"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"De opdracht/app die wordt uitgevoerd als u de app aanklikt in de starter. "
+"Geef een directe locatie of app-alias op."
+
+#: src/View/EditView.vala:83
 #, fuzzy
 msgid "Select an executable file…"
 msgstr "Kies een uitvoerbaar bestand"
 
-#: src/View/EditView.vala:92
+#: src/View/EditView.vala:94
 msgid "Optional Fields"
 msgstr ""
 
-#: src/View/EditView.vala:93
+#: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 
-#: src/View/EditView.vala:97
+#: src/View/EditView.vala:99
 msgid "Icon File"
 msgstr "Pictogrambestand"
 
 #: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"Het pictogram dat bij de app wordt getoond. Geef een directe locatie of "
+"pictogramalias op."
+
+#: src/View/EditView.vala:103
 #, fuzzy
 msgid "Select an icon file…"
 msgstr "Kies een pictogrambestand"
 
-#: src/View/EditView.vala:108
+#: src/View/EditView.vala:111
 msgid "Generic Name"
 msgstr ""
 
-#: src/View/EditView.vala:113
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
 msgid "Comment"
 msgstr "Opmerking"
 
-#: src/View/EditView.vala:127
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+
+#: src/View/EditView.vala:132
 #, fuzzy
 msgid "Advanced Configurations"
 msgstr "Geavanceerde voorkeuren"
 
-#: src/View/EditView.vala:128
+#: src/View/EditView.vala:133
 #, fuzzy
 msgid ""
 "You can create most app entries just by filling in the sections above. "
@@ -216,90 +249,102 @@ msgstr ""
 "U kunt een app-item aanmaken door onderstaande secties in te vullen. Als dat "
 "niet werkt, dan kunt u de volgende sectie gebruiken."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:137
 msgid "Startup WM Class"
 msgstr "Opstartvensterklasse"
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
+#, fuzzy
+#| msgid ""
+#| "Associate the app with a window that has this ID. Fill in this if a "
+#| "different or duplicated icon comes up to the dock when the app launches."
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"Koppel de app aan een venster met deze ID. Voer een klasse in als er een "
+"onjuist of meerdere pictogrammen op de dock verschijnen."
+
+#: src/View/EditView.vala:143
 msgid "Run in Terminal"
 msgstr "Uitvoeren in terminalvenster"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:144
 #, fuzzy
 msgid "Turn on if you want to register a CUI app."
 msgstr "Vink aan als u een CLI-app wilt uitvoeren"
 
-#: src/View/EditView.vala:142
+#: src/View/EditView.vala:148
 #, fuzzy
 msgid "_Open"
 msgstr "Openen"
 
-#: src/View/EditView.vala:146
+#: src/View/EditView.vala:152
 #, fuzzy
 msgid "Open with Text Editor"
 msgstr "Bewerken met tekstbewerker"
 
-#: src/View/EditView.vala:147
+#: src/View/EditView.vala:153
 #, fuzzy
 msgid "You can also edit more options by opening with a text editor."
 msgstr ""
 "U kunt meer opties aanpassen door het bestand te bewerken met een "
 "tekstbewerker"
 
-#: src/View/EditView.vala:192
+#: src/View/EditView.vala:198
 msgid "New Entry"
 msgstr "Nieuw item"
 
-#: src/View/EditView.vala:208 src/View/EditView.vala:410
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
 msgstr ""
 
-#: src/View/EditView.vala:228
+#: src/View/EditView.vala:234
 #, fuzzy
 msgid "Select Executable File"
 msgstr "Kies een uitvoerbaar bestand"
 
-#: src/View/EditView.vala:229 src/View/EditView.vala:286
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
 msgid "_Select"
 msgstr ""
 
-#: src/View/EditView.vala:282
+#: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO-, PNG-, SVG of XMP-bestand"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:291
 #, fuzzy
 msgid "Select Icon File"
 msgstr "Kies een pictogrambestand"
 
-#: src/View/EditView.vala:377
+#: src/View/EditView.vala:383
 #, fuzzy
 msgid "Failed to Open with External App"
 msgstr "De externe app kan niet worden geopend"
 
-#: src/View/EditView.vala:378
+#: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
-#: src/View/EditView.vala:435
+#: src/View/EditView.vala:441
 msgid "Edit Entry"
 msgstr "Item bewerken"
 
-#: src/View/EditView.vala:437
+#: src/View/EditView.vala:443
 #, fuzzy, c-format
 msgid "Edit “%s”"
 msgstr "‘%s’ bewerken"
 
-#: src/View/EditView.vala:459
+#: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
 msgstr ""
 
-#: src/View/EditView.vala:461
+#: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr ""
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
 msgstr ""
 
@@ -567,36 +612,6 @@ msgstr "Item verwijderd"
 
 #~ msgid "Suffix of the file"
 #~ msgstr "Bestandsextensie"
-
-#, fuzzy
-#~| msgid "Shown in the launcher or Dock."
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Deze naam wordt getoond in de starter of dock"
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "De opdracht/app die wordt uitgevoerd als u de app aanklikt in de starter. "
-#~ "Geef een directe locatie of app-alias op."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Het pictogram dat bij de app wordt getoond. Geef een directe locatie of "
-#~ "pictogramalias op."
-
-#, fuzzy
-#~| msgid ""
-#~| "Associate the app with a window that has this ID. Fill in this if a "
-#~| "different or duplicated icon comes up to the dock when the app launches."
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Koppel de app aan een venster met deze ID. Voer een klasse in als er een "
-#~ "onjuist of meerdere pictogrammen op de dock verschijnen."
 
 #~ msgid "Editing Entry"
 #~ msgstr "Item bewerken"

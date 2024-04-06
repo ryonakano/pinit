@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"POT-Creation-Date: 2024-04-06 10:07+0900\n"
 "PO-Revision-Date: 2024-03-06 07:01+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -117,8 +117,8 @@ msgstr ""
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:380
-#: src/View/EditView.vala:469 src/View/FilesView.vala:148
+#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
 #, fuzzy
 msgid "_Close"
 msgstr "Закрыть"
@@ -166,46 +166,79 @@ msgstr ""
 msgid "App Name"
 msgstr "Название приложения"
 
-#: src/View/EditView.vala:78
+#: src/View/EditView.vala:74
+msgid "Shown in the launcher or dock."
+msgstr "Отображается в меню или в доке."
+
+#: src/View/EditView.vala:79
 msgid "Exec File"
 msgstr "Исполняемый файл"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Команда или запись, которая исполняется когда вы нажимаете на приложение в "
+"Меню приложений. Укажите абсолютный путь или псевдоним приложения."
+
+#: src/View/EditView.vala:83
 #, fuzzy
 msgid "Select an executable file…"
 msgstr "Выбрать исполняемый файл"
 
-#: src/View/EditView.vala:92
+#: src/View/EditView.vala:94
 msgid "Optional Fields"
 msgstr ""
 
-#: src/View/EditView.vala:93
+#: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 
-#: src/View/EditView.vala:97
+#: src/View/EditView.vala:99
 msgid "Icon File"
 msgstr "Файл иконки"
 
 #: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"Иконка, обозначающая приложение. Укажите абсолютный путь или псевдоним "
+"значка."
+
+#: src/View/EditView.vala:103
 #, fuzzy
 msgid "Select an icon file…"
 msgstr "Выбрать файл иконки"
 
-#: src/View/EditView.vala:108
+#: src/View/EditView.vala:111
 msgid "Generic Name"
 msgstr ""
 
-#: src/View/EditView.vala:113
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
 msgid "Comment"
 msgstr "Комментарий"
 
-#: src/View/EditView.vala:127
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+"Описывает приложение. Может появляться в виде всплывающей подсказки при "
+"наведении в меню приложений или доке."
+
+#: src/View/EditView.vala:132
 #, fuzzy
 msgid "Advanced Configurations"
 msgstr "Дополнительные настройки"
 
-#: src/View/EditView.vala:128
+#: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -214,92 +247,101 @@ msgstr ""
 "Одноко, некоторые приложения могут потребовать дополнительной конфигурации "
 "ниже."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:137
 msgid "Startup WM Class"
 msgstr "Startup WM Class"
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"Ассоциирует приложение с окном, которое имеет данный идентификатор. "
+"Используйте это поле, если при запуске приложения в доке появляется другой "
+"или повторяющийся значок."
+
+#: src/View/EditView.vala:143
 msgid "Run in Terminal"
 msgstr "Запускать в терминале"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:144
 #, fuzzy
 msgid "Turn on if you want to register a CUI app."
 msgstr "Включите, если вы хотите зарегистрировать CUI приложение."
 
-#: src/View/EditView.vala:142
+#: src/View/EditView.vala:148
 #, fuzzy
 msgid "_Open"
 msgstr "Открыть"
 
-#: src/View/EditView.vala:146
+#: src/View/EditView.vala:152
 #, fuzzy
 msgid "Open with Text Editor"
 msgstr "Открыть в тестовом редакторе"
 
-#: src/View/EditView.vala:147
+#: src/View/EditView.vala:153
 #, fuzzy
 msgid "You can also edit more options by opening with a text editor."
 msgstr ""
 "Вы также можете изменять и другие параметры, открыв файл в текстовом "
 "редакторе."
 
-#: src/View/EditView.vala:192
+#: src/View/EditView.vala:198
 msgid "New Entry"
 msgstr "Новая запись"
 
-#: src/View/EditView.vala:208 src/View/EditView.vala:410
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
 msgstr ""
 
-#: src/View/EditView.vala:228
+#: src/View/EditView.vala:234
 #, fuzzy
 msgid "Select Executable File"
 msgstr "Выбрать исполняемый файл"
 
-#: src/View/EditView.vala:229 src/View/EditView.vala:286
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
 #, fuzzy
 msgid "_Select"
 msgstr "Выбрать"
 
-#: src/View/EditView.vala:282
+#: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG или XMP файлы"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:291
 #, fuzzy
 msgid "Select Icon File"
 msgstr "Выбрать файл иконки"
 
-#: src/View/EditView.vala:377
+#: src/View/EditView.vala:383
 #, fuzzy
 msgid "Failed to Open with External App"
 msgstr "Ошибка открытия через внешнее приложение"
 
-#: src/View/EditView.vala:378
+#: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
-#: src/View/EditView.vala:435
+#: src/View/EditView.vala:441
 #, fuzzy
 msgid "Edit Entry"
 msgstr "Редактировать запись"
 
-#: src/View/EditView.vala:437
+#: src/View/EditView.vala:443
 #, fuzzy, c-format
 msgid "Edit “%s”"
 msgstr "Редактирование «%s»"
 
-#: src/View/EditView.vala:459
+#: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
 msgstr ""
 
-#: src/View/EditView.vala:461
+#: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr ""
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
 msgstr ""
 
@@ -673,38 +715,6 @@ msgstr "Запись удалена."
 
 #~ msgid "Suffix of the file"
 #~ msgstr "Окончание названия файла"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Отображается в меню или в доке."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Описывает приложение. Может появляться в виде всплывающей подсказки при "
-#~ "наведении в меню приложений или доке."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Команда или запись, которая исполняется когда вы нажимаете на приложение "
-#~ "в Меню приложений. Укажите абсолютный путь или псевдоним приложения."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Иконка, обозначающая приложение. Укажите абсолютный путь или псевдоним "
-#~ "значка."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Ассоциирует приложение с окном, которое имеет данный идентификатор. "
-#~ "Используйте это поле, если при запуске приложения в доке появляется "
-#~ "другой или повторяющийся значок."
 
 #, c-format
 #~ msgid "Could not write to file “%s”"
