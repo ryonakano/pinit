@@ -211,7 +211,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Create a new DesktopFile with random filename and start editing it.
      */
     private void on_new_activate () {
-        string filename = "pinit-" + Uuid.string_random ();
+        string filename = Config.PROJECT_NAME + "." + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
                                             filename + Model.DesktopFile.DESKTOP_SUFFIX);
 
