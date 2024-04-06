@@ -70,12 +70,14 @@ public class View.EditView : Adw.NavigationPage {
         };
 
         name_entry = new Adw.EntryRow () {
-            title = _("App Name")
+            title = _("App Name"),
+            tooltip_text = _("Shown in the launcher or dock.")
         };
         required_group.add (name_entry);
 
         exec_entry = new Adw.EntryRow () {
-            title = _("Exec File")
+            title = _("Exec File"),
+            tooltip_text = _("The command/app launched when you click the app entry in the launcher. Specify in an absolute path or an app's alias name.")
         };
         var exec_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
             tooltip_text = _("Select an executable file…"),
@@ -94,7 +96,8 @@ public class View.EditView : Adw.NavigationPage {
         };
 
         icon_entry = new Adw.EntryRow () {
-            title = _("Icon File")
+            title = _("Icon File"),
+            tooltip_text = _("The icon branding the app. Specify in an absolute path or an icon's alias name.")
         };
         var icon_chooser_button = new Gtk.Button.from_icon_name ("document-open-symbolic") {
             tooltip_text = _("Select an icon file…"),
@@ -105,12 +108,14 @@ public class View.EditView : Adw.NavigationPage {
         optional_group.add (icon_entry);
 
         generic_name_entry = new Adw.EntryRow () {
-            title = _("Generic Name")
+            title = _("Generic Name"),
+            tooltip_text = _("Generic name of the app, for example \"Web Browser\" or \"Mail Client\".")
         };
         optional_group.add (generic_name_entry);
 
         comment_entry = new Adw.EntryRow () {
-            title = _("Comment")
+            title = _("Comment"),
+            tooltip_text = _("Descibes the app. May appear as a tooltip when you hover over the app entry in the launcher/dock.")
         };
         optional_group.add (comment_entry);
 
@@ -129,7 +134,8 @@ public class View.EditView : Adw.NavigationPage {
         };
 
         startup_wm_class_entry = new Adw.EntryRow () {
-            title = _("Startup WM Class")
+            title = _("Startup WM Class"),
+            tooltip_text = _("Associate the app with a window that has this ID. Use this if a different or duplicated icon appears in the dock when the app launches.")
         };
         advanced_group.add (startup_wm_class_entry);
 
