@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"POT-Creation-Date: 2024-04-06 10:07+0900\n"
 "PO-Revision-Date: 2024-03-25 00:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
@@ -115,8 +115,8 @@ msgstr "Girdiler Yüklenemedi"
 msgid "There was an error while loading app entries."
 msgstr "Uygulama girdileri yüklenirken hata oluştu."
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:380
-#: src/View/EditView.vala:469 src/View/FilesView.vala:148
+#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
 msgstr "_Kapat"
 
@@ -163,44 +163,77 @@ msgstr "Kayıt için aşağıdaki alanlar doldurulmalıdır."
 msgid "App Name"
 msgstr "Uygulama Adı"
 
-#: src/View/EditView.vala:78
+#: src/View/EditView.vala:74
+msgid "Shown in the launcher or dock."
+msgstr "Başlatıcıda ya da rıhtımda gösterilir."
+
+#: src/View/EditView.vala:79
 msgid "Exec File"
 msgstr "Yürütme Dosyası"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Başlatıcıda uygulama girdisine tıkladığınızda başlatılacak komut/uygulama. "
+"Mutlak bir yol veya bir uygulamanın takma adını belirtin."
+
+#: src/View/EditView.vala:83
 msgid "Select an executable file…"
 msgstr "Yürütülebilir dosya seç…"
 
-#: src/View/EditView.vala:92
+#: src/View/EditView.vala:94
 msgid "Optional Fields"
 msgstr "İsteğe Bağlı Alanlar"
 
-#: src/View/EditView.vala:93
+#: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 "Bu alanların doldurulması uygulama başlatıcıdaki keşfedilirliği artırır."
 
-#: src/View/EditView.vala:97
+#: src/View/EditView.vala:99
 msgid "Icon File"
 msgstr "Simge Dosyası"
 
 #: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"Uygulamanın marka simgesi. Mutlak bir yol ya da bir simgenin takma adını "
+"belirtin."
+
+#: src/View/EditView.vala:103
 msgid "Select an icon file…"
 msgstr "Simge dosyası seç…"
 
-#: src/View/EditView.vala:108
+#: src/View/EditView.vala:111
 msgid "Generic Name"
 msgstr "Genel Ad"
 
-#: src/View/EditView.vala:113
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
 msgid "Comment"
 msgstr "Yorum"
 
-#: src/View/EditView.vala:127
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+"Uygulamayı açıklar. Başlatıcı/rıtımda uygulama girdisinin üzerine "
+"geldiğinizde ipucu olarak gösterilir."
+
+#: src/View/EditView.vala:132
 msgid "Advanced Configurations"
 msgstr "Gelişmiş Yapılandırma"
 
-#: src/View/EditView.vala:128
+#: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -209,81 +242,90 @@ msgstr ""
 "oluşturabilirsiniz. Ancak bazı uygulamalar aşağıdaki gelişmiş yapılandırma "
 "seçeneklerini gerektirebilir."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:137
 msgid "Startup WM Class"
 msgstr "Başlangıç WM Sınıfı"
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
+"başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge görünürse bunu "
+"kullanın."
+
+#: src/View/EditView.vala:143
 msgid "Run in Terminal"
 msgstr "Uçbirim'de Çalıştır"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:144
 msgid "Turn on if you want to register a CUI app."
 msgstr "Komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
 
-#: src/View/EditView.vala:142
+#: src/View/EditView.vala:148
 msgid "_Open"
 msgstr "_Aç"
 
-#: src/View/EditView.vala:146
+#: src/View/EditView.vala:152
 msgid "Open with Text Editor"
 msgstr "Metin Düzenleyici İle Aç"
 
-#: src/View/EditView.vala:147
+#: src/View/EditView.vala:153
 msgid "You can also edit more options by opening with a text editor."
 msgstr "Metin düzenleyici ile açarak daha çok seçeneği düzenleyebilirsiniz."
 
-#: src/View/EditView.vala:192
+#: src/View/EditView.vala:198
 msgid "New Entry"
 msgstr "Yeni Girdi"
 
-#: src/View/EditView.vala:208 src/View/EditView.vala:410
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
 msgstr "Adsız Uygulama"
 
-#: src/View/EditView.vala:228
+#: src/View/EditView.vala:234
 msgid "Select Executable File"
 msgstr "Yürütülebilir Dosya Seç"
 
-#: src/View/EditView.vala:229 src/View/EditView.vala:286
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
 msgid "_Select"
 msgstr "_Seç"
 
-#: src/View/EditView.vala:282
+#: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG veya XMP dosyaları"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:291
 msgid "Select Icon File"
 msgstr "Simge Dosyası Seç"
 
-#: src/View/EditView.vala:377
+#: src/View/EditView.vala:383
 msgid "Failed to Open with External App"
 msgstr "Harici Uygulama İle Açılamadı"
 
-#: src/View/EditView.vala:378
+#: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
 msgstr "Dosya harici uygulamayla açılırken hata oluştu."
 
-#: src/View/EditView.vala:435
+#: src/View/EditView.vala:441
 msgid "Edit Entry"
 msgstr "Girdiyi Düzenle"
 
-#: src/View/EditView.vala:437
+#: src/View/EditView.vala:443
 #, c-format
 msgid "Edit “%s”"
 msgstr "“%s” düzenleni"
 
-#: src/View/EditView.vala:459
+#: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
 msgstr "Girdi Kaydedilemedi"
 
-#: src/View/EditView.vala:461
+#: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "“%s” Girdisi Kaydedilemedi"
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
 msgstr "Uygulama girdisi kaydedilirken hata oluştur."
 
@@ -631,38 +673,6 @@ msgstr "Anahtar sözcük sil"
 
 #~ msgid "Suffix of the file"
 #~ msgstr "Dosyanın son eki"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Başlatıcıda ya da rıhtımda gösterilir."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Uygulamayı açıklar. Başlatıcı/rıtımda uygulama girdisinin üzerine "
-#~ "geldiğinizde ipucu olarak gösterilir."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Başlatıcıda uygulama girdisine tıkladığınızda başlatılacak komut/"
-#~ "uygulama. Mutlak bir yol veya bir uygulamanın takma adını belirtin."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Uygulamanın marka simgesi. Mutlak bir yol ya da bir simgenin takma adını "
-#~ "belirtin."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
-#~ "başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge görünürse "
-#~ "bunu kullanın."
 
 #, c-format
 #~ msgid "Could not write to file “%s”"

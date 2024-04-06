@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"POT-Creation-Date: 2024-04-06 10:07+0900\n"
 "PO-Revision-Date: 2024-03-26 02:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -125,8 +125,8 @@ msgstr "Klarte ikke å laste inn oppføringer."
 msgid "There was an error while loading app entries."
 msgstr "Kunne ikke laste inn programoppføringer."
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:380
-#: src/View/EditView.vala:469 src/View/FilesView.vala:148
+#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
 #, fuzzy
 msgid "_Close"
 msgstr "Lukk"
@@ -176,49 +176,84 @@ msgstr "Følgende felter å utfylles for å lagre."
 msgid "App Name"
 msgstr "Programnavn"
 
-#: src/View/EditView.vala:78
+#: src/View/EditView.vala:74
+#, fuzzy
+#| msgid "Shown in the launcher or Dock."
+msgid "Shown in the launcher or dock."
+msgstr "Vis i oppstarteren eller dokken."
+
+#: src/View/EditView.vala:79
 #, fuzzy
 msgid "Exec File"
 msgstr "Kjørbar fil"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:80
+#, fuzzy
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Kommandoen/programmet som blir startet når du klikker programoppføringen i "
+"oppstarteren. Angi en absolutt sti eller et programalias."
+
+#: src/View/EditView.vala:83
 #, fuzzy
 msgid "Select an executable file…"
 msgstr "Velg en kjørbar fil"
 
-#: src/View/EditView.vala:92
+#: src/View/EditView.vala:94
 msgid "Optional Fields"
 msgstr "Valgfrie felter"
 
-#: src/View/EditView.vala:93
+#: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 "Innfylling av disse feltene bedrer oppdagbarheten i programoppstarteren."
 
-#: src/View/EditView.vala:97
+#: src/View/EditView.vala:99
 msgid "Icon File"
 msgstr "Ikonfil"
 
 #: src/View/EditView.vala:100
 #, fuzzy
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr "Ikondrakten til symbolet. Angi en absolutt sti eller et programalias."
+
+#: src/View/EditView.vala:103
+#, fuzzy
 msgid "Select an icon file…"
 msgstr "Velg en ikon-fil"
 
-#: src/View/EditView.vala:108
+#: src/View/EditView.vala:111
 #, fuzzy
 msgid "Generic Name"
 msgstr "Generelt"
 
-#: src/View/EditView.vala:113
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
 msgid "Comment"
 msgstr "Kommentar"
 
-#: src/View/EditView.vala:127
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+"Beskriver programmet. Kan vises som verktøytips når du holder pekeren over "
+"programoppføringen i oppstarter/dokk."
+
+#: src/View/EditView.vala:132
 #, fuzzy
 msgid "Advanced Configurations"
 msgstr "Avansert oppsett"
 
-#: src/View/EditView.vala:128
+#: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -227,92 +262,100 @@ msgstr ""
 "Dog krever noen programmet kanskje de avanserte oppsettsalternativene "
 "nedenfor."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:137
 #, fuzzy
 msgid "Startup WM Class"
 msgstr "Oppstartsvindusbehandlerklasse"
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"Tilknytt programmet til et vindu som har en ID. Bruk dette hvis et annet "
+"eller duplisert ikon vises i dokken når programmet startes."
+
+#: src/View/EditView.vala:143
 msgid "Run in Terminal"
 msgstr "Kjør i terminal"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:144
 #, fuzzy
 msgid "Turn on if you want to register a CUI app."
 msgstr "Velg dette hvis du vil registrere et dialogbasert program."
 
-#: src/View/EditView.vala:142
+#: src/View/EditView.vala:148
 #, fuzzy
 msgid "_Open"
 msgstr "Åpne"
 
-#: src/View/EditView.vala:146
+#: src/View/EditView.vala:152
 #, fuzzy
 msgid "Open with Text Editor"
 msgstr "Åpne i tekstbehandler"
 
-#: src/View/EditView.vala:147
+#: src/View/EditView.vala:153
 #, fuzzy
 msgid "You can also edit more options by opening with a text editor."
 msgstr "Du kan redigere flere alternativer ved å åpne i tekstbehandler."
 
-#: src/View/EditView.vala:192
+#: src/View/EditView.vala:198
 msgid "New Entry"
 msgstr "Ny oppføring"
 
-#: src/View/EditView.vala:208 src/View/EditView.vala:410
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
 msgstr "Navnløst program"
 
-#: src/View/EditView.vala:228
+#: src/View/EditView.vala:234
 #, fuzzy
 msgid "Select Executable File"
 msgstr "Velg en kjørbar fil"
 
-#: src/View/EditView.vala:229 src/View/EditView.vala:286
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
 #, fuzzy
 msgid "_Select"
 msgstr "Velg"
 
-#: src/View/EditView.vala:282
+#: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG, eller XMP-filer"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:291
 #, fuzzy
 msgid "Select Icon File"
 msgstr "Velg en ikon-fil"
 
-#: src/View/EditView.vala:377
+#: src/View/EditView.vala:383
 #, fuzzy
 msgid "Failed to Open with External App"
 msgstr "Kunne ikke åpne med eksternt program"
 
-#: src/View/EditView.vala:378
+#: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
 msgstr "Kunne ikke åpne filen i eksternt program."
 
-#: src/View/EditView.vala:435
+#: src/View/EditView.vala:441
 #, fuzzy
 msgid "Edit Entry"
 msgstr "Redigerer oppføring"
 
-#: src/View/EditView.vala:437
+#: src/View/EditView.vala:443
 #, fuzzy, c-format
 msgid "Edit “%s”"
 msgstr "Redigerer «%s»"
 
-#: src/View/EditView.vala:459
+#: src/View/EditView.vala:465
 #, fuzzy
 msgid "Failed to Save Entry"
 msgstr "Klarte ikke å lagre oppføring"
 
-#: src/View/EditView.vala:461
+#: src/View/EditView.vala:467
 #, fuzzy, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "Klarte ikke å lagre «%s»-oppføringen"
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:473
 #, fuzzy
 msgid "There was an error while saving the app entry."
 msgstr "Kunne ikke lagre programoppføringen."
@@ -526,40 +569,6 @@ msgstr "Oppføring slettet."
 
 #~ msgid "Suffix of the file"
 #~ msgstr "Endelse for filen"
-
-#, fuzzy
-#~| msgid "Shown in the launcher or Dock."
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Vis i oppstarteren eller dokken."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Beskriver programmet. Kan vises som verktøytips når du holder pekeren "
-#~ "over programoppføringen i oppstarter/dokk."
-
-#, fuzzy
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Kommandoen/programmet som blir startet når du klikker programoppføringen "
-#~ "i oppstarteren. Angi en absolutt sti eller et programalias."
-
-#, fuzzy
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Ikondrakten til symbolet. Angi en absolutt sti eller et programalias."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Tilknytt programmet til et vindu som har en ID. Bruk dette hvis et annet "
-#~ "eller duplisert ikon vises i dokken når programmet startes."
 
 #, fuzzy, c-format
 #~| msgid "Are you sure you want to delete “%s”?"
