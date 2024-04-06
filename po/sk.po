@@ -476,141 +476,12 @@ msgstr "Položka odstránená."
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "Nový súbor"
+#, fuzzy
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "_Klávesové skratky"
 
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "Nedá sa otvoriť %s: %s"
-
-#~ msgid "Updated entry."
-#~ msgstr "Položka aktualizovaná."
-
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr ""
-#~ "Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
-
-#~ msgid "File Name"
-#~ msgstr "Názov súboru"
-
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr ""
-#~ "Názov . desktopový súbor, kde budú uložené informácie tejto aplikácie."
-
-#~ msgid "Suffix of the file"
-#~ msgstr "Koncovka súboru"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Shown v spúšťacom alebo docku."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Opíšte aplikáciu. Môže sa objaviť ako nástrojtip, keď ste hover cez vstup "
-#~ "aplikácie v spúšťacom / púčika."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Príkaz/aplikácia, ktorá bude spustená po kliknutí na položku aplikácie v "
-#~ "spúšťači. Upresnite v absolútnom popise umiestnenia alebo v aliase názvu "
-#~ "aplikácie."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Ikonka označujúca aplikáciu. Upravte v absolútnom popise umiestnenia "
-#~ "alebo v aliase názvu ikonky."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Pripojiť aplikáciu s oknom, ktoré má toto ID. Použite to, ak sa objaví "
-#~ "iná alebo duplicitná ikona v doku, keď aplikácia začne."
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "Nepodarilo sa zapísať do súboru „%s“"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "Odporúčania na pomenovávanie"
-
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr ""
-#~ "Odporúča sa používať iba alfa znakov a podčiarkov. Nepoužívajte číslo."
-
-#~ msgid ""
-#~ "Include at least two elements (sections of the string seperated by a "
-#~ "period). Most apps use three elements."
-#~ msgstr ""
-#~ "Zahrňte aspoň dve prvky (sekcia reťazca seperované obdobím). Väčšina "
-#~ "aplikácií používa tri prvky."
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr "Napríklad pre 2D hru SuperTux by ste mali použiť \"%s\"."
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "Pre viac informácií viď %s."
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "špecifiká pomenovávania súborov od freedesktop.org"
-
-#~ msgid "Preferences"
-#~ msgstr "Predvoľby"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr "Ak ste nikdy nijakú nevytvorili, kliknite na tlačidlo + navrchu."
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "Naozaj chcete odstrániť „%s“?"
-
-#~ msgid "Development"
-#~ msgstr "Vývoj"
-
-#~ msgid "Network"
-#~ msgstr "Sieť"
-
-#~ msgid "Utility"
-#~ msgstr "Užitočné"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "Popisný text, ktorý opisuje, na čo slúži aplikácia."
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "Typ aplikácie, možnosť výberu viacerých položiek."
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr ""
-#~ "Taktiež použite aspoň jednu bodku aby ste sa uistili, že sa text rozdelí "
-#~ "minimálne na dva prvky."
-
-#~ msgid "Syntax error detection"
-#~ msgstr "Detekcia chýb syntaxe"
-
-#~ msgid ""
-#~ "Automatically save everything―your data in editing, last open view, and "
-#~ "preferences"
-#~ msgstr ""
-#~ "Všetko sa automaticky ukladá – vaše úpravy, posledné otvorené zobrazenie "
-#~ "a predvoľby"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Zobrazenie súborov v svetlom režime"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Zobrazenie súborov v tmavom režime"
+#~ msgid "Update translations"
+#~ msgstr "Aktualizované preklady"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "Vydanie na oslavu 2. výročia aplikácie!"
@@ -636,9 +507,6 @@ msgstr "Položka odstránená."
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Aktualizovať verziu Flatpak runtime"
-
-#~ msgid "Update translations"
-#~ msgstr "Aktualizované preklady"
 
 #~ msgid "The biggest and greatest updates come to \"Pin It!\":"
 #~ msgstr ""
@@ -790,6 +658,142 @@ msgstr "Položka odstránená."
 
 #~ msgid "Initial release"
 #~ msgstr "Prvé vydanie"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Nový súbor"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Nedá sa otvoriť %s: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Položka aktualizovaná."
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Pin skratky pre vaše obľúbené prenosné aplikácie na spustenie aplikácie"
+
+#~ msgid "File Name"
+#~ msgstr "Názov súboru"
+
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr ""
+#~ "Názov . desktopový súbor, kde budú uložené informácie tejto aplikácie."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Koncovka súboru"
+
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Shown v spúšťacom alebo docku."
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "Opíšte aplikáciu. Môže sa objaviť ako nástrojtip, keď ste hover cez vstup "
+#~ "aplikácie v spúšťacom / púčika."
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Príkaz/aplikácia, ktorá bude spustená po kliknutí na položku aplikácie v "
+#~ "spúšťači. Upresnite v absolútnom popise umiestnenia alebo v aliase názvu "
+#~ "aplikácie."
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Ikonka označujúca aplikáciu. Upravte v absolútnom popise umiestnenia "
+#~ "alebo v aliase názvu ikonky."
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Pripojiť aplikáciu s oknom, ktoré má toto ID. Použite to, ak sa objaví "
+#~ "iná alebo duplicitná ikona v doku, keď aplikácia začne."
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Nepodarilo sa zapísať do súboru „%s“"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Odporúčania na pomenovávanie"
+
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Odporúča sa používať iba alfa znakov a podčiarkov. Nepoužívajte číslo."
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "Zahrňte aspoň dve prvky (sekcia reťazca seperované obdobím). Väčšina "
+#~ "aplikácií používa tri prvky."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr "Napríklad pre 2D hru SuperTux by ste mali použiť \"%s\"."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Pre viac informácií viď %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "špecifiká pomenovávania súborov od freedesktop.org"
+
+#~ msgid "Preferences"
+#~ msgstr "Predvoľby"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Ak ste nikdy nijakú nevytvorili, kliknite na tlačidlo + navrchu."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Naozaj chcete odstrániť „%s“?"
+
+#~ msgid "Development"
+#~ msgstr "Vývoj"
+
+#~ msgid "Network"
+#~ msgstr "Sieť"
+
+#~ msgid "Utility"
+#~ msgstr "Užitočné"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Popisný text, ktorý opisuje, na čo slúži aplikácia."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Typ aplikácie, možnosť výberu viacerých položiek."
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Taktiež použite aspoň jednu bodku aby ste sa uistili, že sa text rozdelí "
+#~ "minimálne na dva prvky."
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Detekcia chýb syntaxe"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Všetko sa automaticky ukladá – vaše úpravy, posledné otvorené zobrazenie "
+#~ "a predvoľby"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Zobrazenie súborov v svetlom režime"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Zobrazenie súborov v tmavom režime"
 
 #~ msgid "Files View"
 #~ msgstr "Zobrazenie súborov"

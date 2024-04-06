@@ -470,146 +470,8 @@ msgstr "Запись удалена."
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
-#, fuzzy
-#~| msgid "Exec File"
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "Исполняемый файл"
-
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "Невозможно открыть %s: %s"
-
-#~ msgid "Updated entry."
-#~ msgstr "Запись обновлена."
-
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr "Закрепляйте ваши любимые портативные приложения"
-
-#~ msgid "File Name"
-#~ msgstr "Имя файла"
-
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr ""
-#~ "Имя .desktop файла, в который будет сохранена информация об этом "
-#~ "приложении."
-
-#~ msgid "Suffix of the file"
-#~ msgstr "Окончание названия файла"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Отображается в меню или в доке."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Описывает приложение. Может появляться в виде всплывающей подсказки при "
-#~ "наведении в меню приложений или доке."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Команда или запись, которая исполняется когда вы нажимаете на приложение "
-#~ "в Меню приложений. Укажите абсолютный путь или псевдоним приложения."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Иконка, обозначающая приложение. Укажите абсолютный путь или псевдоним "
-#~ "значка."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Ассоциирует приложение с окном, которое имеет данный идентификатор. "
-#~ "Используйте это поле, если при запуске приложения в доке появляется "
-#~ "другой или повторяющийся значок."
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "Не удалось записать файл «%s»"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "Рекомендации по именованию"
-
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr ""
-#~ "Рекомендуется использовать только буквы, цифры и нижние подчёркивания. "
-#~ "Название не может начинаться с цифры."
-
-#~ msgid ""
-#~ "Include at least two elements (sections of the string seperated by a "
-#~ "period). Most apps use three elements."
-#~ msgstr ""
-#~ "Включет в себя как минимум два элемента (разделы из строк, разделённых "
-#~ "точками). Большинство приложений используют три элемента."
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr ""
-#~ "Например, вам следует использовать «%s» для 2D игры такой как, например, "
-#~ "SuperTux."
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "Для получения дополнительной информации см. %s."
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "спецификация именования файлов от freedesktop.org"
-
-#~ msgid "Preferences"
-#~ msgstr "Параметры"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr "Если вы никогда не создавали записи, нажмите кнопку + вверху."
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "Вы уверены, что хотите удалить «%s»?"
-
-#~ msgid "Development"
-#~ msgstr "Разработка"
-
-#~ msgid "Network"
-#~ msgstr "Сеть"
-
-#~ msgid "Utility"
-#~ msgstr "Утилиты"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "Всплывающая подсказка, которая описывает ваше приложение."
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "Тип приложения, можно выбрать сразу несколько категорий."
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr ""
-#~ "Кроме того, используйте хотя бы одну точку, чтобы убедиться, что название "
-#~ "разделено на как минимум два элемента."
-
-#~ msgid "Syntax error detection"
-#~ msgstr "Обнаружение синтаксических ошибок"
-
-#~ msgid ""
-#~ "Automatically save everything―your data in editing, last open view, and "
-#~ "preferences"
-#~ msgstr ""
-#~ "Автоматически всё сохраняет — ваши данные при редактировании, последнее "
-#~ "открытое представление и настройки"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Просмотр файлов в светлом режиме"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Просмотр файлов в тёмном режиме"
+#~ msgid "Update translations"
+#~ msgstr "Обновлены переводы"
 
 #~ msgid "Fix deprecations in GTK 4.10"
 #~ msgstr "Исправлены устаревания в GTK 4.10"
@@ -631,9 +493,6 @@ msgstr "Запись удалена."
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Обновлена версия Flatpak runtime"
-
-#~ msgid "Update translations"
-#~ msgstr "Обновлены переводы"
 
 #~ msgid "The biggest and greatest updates come to \"Pin It!\":"
 #~ msgstr "Большие обновления приходят в «Pin It!»:"
@@ -787,6 +646,147 @@ msgstr "Запись удалена."
 
 #~ msgid "Initial release"
 #~ msgstr "Начальный выпуск"
+
+#, fuzzy
+#~| msgid "Exec File"
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Исполняемый файл"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Невозможно открыть %s: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Запись обновлена."
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr "Закрепляйте ваши любимые портативные приложения"
+
+#~ msgid "File Name"
+#~ msgstr "Имя файла"
+
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr ""
+#~ "Имя .desktop файла, в который будет сохранена информация об этом "
+#~ "приложении."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Окончание названия файла"
+
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Отображается в меню или в доке."
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "Описывает приложение. Может появляться в виде всплывающей подсказки при "
+#~ "наведении в меню приложений или доке."
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Команда или запись, которая исполняется когда вы нажимаете на приложение "
+#~ "в Меню приложений. Укажите абсолютный путь или псевдоним приложения."
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Иконка, обозначающая приложение. Укажите абсолютный путь или псевдоним "
+#~ "значка."
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Ассоциирует приложение с окном, которое имеет данный идентификатор. "
+#~ "Используйте это поле, если при запуске приложения в доке появляется "
+#~ "другой или повторяющийся значок."
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Не удалось записать файл «%s»"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Рекомендации по именованию"
+
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Рекомендуется использовать только буквы, цифры и нижние подчёркивания. "
+#~ "Название не может начинаться с цифры."
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "Включет в себя как минимум два элемента (разделы из строк, разделённых "
+#~ "точками). Большинство приложений используют три элемента."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr ""
+#~ "Например, вам следует использовать «%s» для 2D игры такой как, например, "
+#~ "SuperTux."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Для получения дополнительной информации см. %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "спецификация именования файлов от freedesktop.org"
+
+#~ msgid "Preferences"
+#~ msgstr "Параметры"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Если вы никогда не создавали записи, нажмите кнопку + вверху."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Вы уверены, что хотите удалить «%s»?"
+
+#~ msgid "Development"
+#~ msgstr "Разработка"
+
+#~ msgid "Network"
+#~ msgstr "Сеть"
+
+#~ msgid "Utility"
+#~ msgstr "Утилиты"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Всплывающая подсказка, которая описывает ваше приложение."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Тип приложения, можно выбрать сразу несколько категорий."
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Кроме того, используйте хотя бы одну точку, чтобы убедиться, что название "
+#~ "разделено на как минимум два элемента."
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Обнаружение синтаксических ошибок"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Автоматически всё сохраняет — ваши данные при редактировании, последнее "
+#~ "открытое представление и настройки"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Просмотр файлов в светлом режиме"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Просмотр файлов в тёмном режиме"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Поддержка параметра «StartupWMClass»"

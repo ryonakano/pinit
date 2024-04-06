@@ -470,6 +470,80 @@ msgstr "Item verwijderd"
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
+#~ msgid "Update translations"
+#~ msgstr "Vertalingen bijgewerkt"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Bijgewerkt: Japanse vertaling"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migratie naar GTK4, de nieuwste GTK-versie"
+
+#~ msgid "Other changes:"
+#~ msgstr "Andere wijzigingen:"
+
+#, fuzzy
+#~ msgid "Support opening in a text editor"
+#~ msgstr ""
+#~ "U kunt meer opties aanpassen door het bestand te bewerken met een "
+#~ "tekstbewerker"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Vertaalupdates:"
+
+#, fuzzy
+#~| msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Controleer de werkomgeving bij het uitvoeren"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Pas de vensterafmetingen aan"
+
+#, fuzzy
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Minder streng bij bestandsnamen"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
+
+#, fuzzy
+#~| msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Bijgewerkt: Japanse vertaling"
+
+#, fuzzy
+#~| msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
+
+#, fuzzy
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Minder streng bij bestandsnamen"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#, fuzzy
+#~| msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#, fuzzy
+#~| msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Eerste versie"
+
 #, fuzzy
 #~| msgid "Exec File"
 #~ msgctxt "shortcut window"
@@ -606,45 +680,6 @@ msgstr "Item verwijderd"
 #, fuzzy
 #~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
 #~ msgstr "Maak snelkoppelingen naar uw favoriete portable-apps"
-
-#, fuzzy
-#~| msgid "Update Japanese translation"
-#~ msgid "Update Flatpak runtime version"
-#~ msgstr "Bijgewerkt: Japanse vertaling"
-
-#~ msgid "Update translations"
-#~ msgstr "Vertalingen bijgewerkt"
-
-#~ msgid "Migrate to GTK 4, the latest version of GTK"
-#~ msgstr "Migratie naar GTK4, de nieuwste GTK-versie"
-
-#~ msgid "Other changes:"
-#~ msgstr "Andere wijzigingen:"
-
-#~ msgid "Translation updates:"
-#~ msgstr "Vertaalupdates:"
-
-#~ msgid "Check desktop environment on runtime"
-#~ msgstr "Controleer de werkomgeving bij het uitvoeren"
-
-#~ msgid "Make window resizable"
-#~ msgstr "Pas de vensterafmetingen aan"
-
-#, fuzzy
-#~ msgid "EditView: Less strict on file names"
-#~ msgstr "Minder streng bij bestandsnamen"
-
-#~ msgid "Add Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
-
-#~ msgid "Update Japanese translation"
-#~ msgstr "Bijgewerkt: Japanse vertaling"
-
-#~ msgid "Add French translation (thanks to @NathanBnm)"
-#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
-
-#~ msgid "Initial release"
-#~ msgstr "Eerste versie"
 
 #~ msgid "Files View"
 #~ msgstr "Bestandsscherm"

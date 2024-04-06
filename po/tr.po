@@ -443,149 +443,16 @@ msgstr "Anahtar sözcük sil"
 #~ msgstr "Ryo Nakano"
 
 #, fuzzy
-#~| msgid "Exec File"
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "Yürütme Dosyası"
-
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "%s açılamıyor: %s"
-
-#~ msgid "Updated entry."
-#~ msgstr "Girdi güncellendi."
-
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr ""
-#~ "Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
-#~ "oluşturun"
-
-#~ msgid "File Name"
-#~ msgstr "Dosya Adı"
-
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr "Bu uygulamanın bilgilerinin kaydedildiği .desktop dosyanın adı."
-
-#~ msgid "Suffix of the file"
-#~ msgstr "Dosyanın son eki"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Başlatıcıda ya da rıhtımda gösterilir."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Uygulamayı açıklar. Başlatıcı/rıtımda uygulama girdisinin üzerine "
-#~ "geldiğinizde ipucu olarak gösterilir."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Başlatıcıda uygulama girdisine tıkladığınızda başlatılacak komut/"
-#~ "uygulama. Mutlak bir yol veya bir uygulamanın takma adını belirtin."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "Uygulamanın marka simgesi. Mutlak bir yol ya da bir simgenin takma adını "
-#~ "belirtin."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
-#~ "başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge görünürse "
-#~ "bunu kullanın."
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "“%s” dosyasına yazılamadı"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "Adlandırma önerileri"
-
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr ""
-#~ "Yalnızca alfabetik karakterler ve alt çizgi kullanılması öneriir. Rakamla "
-#~ "başlamamalıdır."
-
-#~ msgid ""
-#~ "Include at least two elements (sections of the string seperated by a "
-#~ "period). Most apps use three elements."
-#~ msgstr ""
-#~ "En az iki öge (dizenin noktayla ayrılmış bölümleri) ekleyin. Çoğu "
-#~ "uygulama üç ögeyi kullanır."
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr "Örneğin, 2D oyun SuperTux için \"%s\" kullanmalısınız."
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "Daha fazla bilgi için bkz. %s."
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "freedesktop.org tarafından önerilen dosya adlandırma özellikleri"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr "Daha önce oluşturmadıysanız, üstteki + düğmesine tıklayın."
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "\"%s\" i silmek istediğinizden emin misiniz?"
-
-#~ msgid "Development"
-#~ msgstr "Geliştirme"
-
-#~ msgid "Network"
-#~ msgstr "Ağ"
-
-#~ msgid "Utility"
-#~ msgstr "Araç"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "Uygulamanın türü, çoklu seçilebilir."
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr ""
-#~ "Ayrıca, en az iki ögeye ayrıldığından emin olmak için en az bir nokta "
-#~ "kullanın."
-
-#~ msgid "Syntax error detection"
-#~ msgstr "Sözdizimi hatası algılama"
-
-#~ msgid ""
-#~ "Automatically save everything―your data in editing, last open view, and "
-#~ "preferences"
-#~ msgstr ""
-#~ "Her şeyi kendiliğinden kaydedin - düzenleme sırasındaki verileriniz, son "
-#~ "açık görünüm ve tercihler"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Açık kipte dosya görünümü"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Koyu kipte dosya görünümü"
-
-#~ msgid "Update Flatpak runtime version"
-#~ msgstr "Flatpak çalışma zamanı sürümü güncellendi"
+#~| msgctxt "shortcut window"
+#~| msgid "Keyboard Shortcuts"
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "Klavye Kısayolları"
 
 #~ msgid "Update translations"
 #~ msgstr "Çeviriler güncellendi"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Flatpak çalışma zamanı sürümü güncellendi"
 
 #~ msgid "The biggest and greatest updates come to \"Pin It!\":"
 #~ msgstr "En büyük ve en harika güncellemeler \"Pin It!\" için geliyor:"
@@ -737,6 +604,145 @@ msgstr "Anahtar sözcük sil"
 
 #~ msgid "Initial release"
 #~ msgstr "İlk sürüm"
+
+#, fuzzy
+#~| msgid "Exec File"
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Yürütme Dosyası"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "%s açılamıyor: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Girdi güncellendi."
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Uygulama başlatıcınızda gözde taşınabilir uygulamalarınızın kısayolunu "
+#~ "oluşturun"
+
+#~ msgid "File Name"
+#~ msgstr "Dosya Adı"
+
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "Bu uygulamanın bilgilerinin kaydedildiği .desktop dosyanın adı."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Dosyanın son eki"
+
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Başlatıcıda ya da rıhtımda gösterilir."
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "Uygulamayı açıklar. Başlatıcı/rıtımda uygulama girdisinin üzerine "
+#~ "geldiğinizde ipucu olarak gösterilir."
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "Başlatıcıda uygulama girdisine tıkladığınızda başlatılacak komut/"
+#~ "uygulama. Mutlak bir yol veya bir uygulamanın takma adını belirtin."
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "Uygulamanın marka simgesi. Mutlak bir yol ya da bir simgenin takma adını "
+#~ "belirtin."
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Uygulamayı bu kimliğe sahip bir pencereyle ilişkilendirin. Uygulama "
+#~ "başlatıldığında rıhtımınıza farklı veya çoğaltılmış bir simge görünürse "
+#~ "bunu kullanın."
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "“%s” dosyasına yazılamadı"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Adlandırma önerileri"
+
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Yalnızca alfabetik karakterler ve alt çizgi kullanılması öneriir. Rakamla "
+#~ "başlamamalıdır."
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "En az iki öge (dizenin noktayla ayrılmış bölümleri) ekleyin. Çoğu "
+#~ "uygulama üç ögeyi kullanır."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr "Örneğin, 2D oyun SuperTux için \"%s\" kullanmalısınız."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Daha fazla bilgi için bkz. %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "freedesktop.org tarafından önerilen dosya adlandırma özellikleri"
+
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Daha önce oluşturmadıysanız, üstteki + düğmesine tıklayın."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "\"%s\" i silmek istediğinizden emin misiniz?"
+
+#~ msgid "Development"
+#~ msgstr "Geliştirme"
+
+#~ msgid "Network"
+#~ msgstr "Ağ"
+
+#~ msgid "Utility"
+#~ msgstr "Araç"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Uygulamanın ne işe yaradığını açıklayan bir ipucu metni."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Uygulamanın türü, çoklu seçilebilir."
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Ayrıca, en az iki ögeye ayrıldığından emin olmak için en az bir nokta "
+#~ "kullanın."
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Sözdizimi hatası algılama"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Her şeyi kendiliğinden kaydedin - düzenleme sırasındaki verileriniz, son "
+#~ "açık görünüm ve tercihler"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Açık kipte dosya görünümü"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Koyu kipte dosya görünümü"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "\"StartupWMClass\" anahtarını ayarlama desteği"

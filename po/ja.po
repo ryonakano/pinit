@@ -441,139 +441,14 @@ msgstr "キーワードを削除"
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "新しいファイル"
+#, fuzzy
+#~| msgctxt "shortcut window"
+#~| msgid "Keyboard Shortcuts"
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "キーボードショートカット"
 
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "%s を開けません: %s"
-
-#~ msgid "Updated entry."
-#~ msgstr "エントリーを更新しました。"
-
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
-
-#~ msgid "File Name"
-#~ msgstr "ファイル名"
-
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr "このアプリの情報が保存される .desktop ファイルの名前です。"
-
-#~ msgid "Suffix of the file"
-#~ msgstr "ファイル拡張子"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "ランチャーやドックに表示されます。"
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーし"
-#~ "た際に、ツールチップとして表示されることがあります。"
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
-#~ "を、絶対パスかエイリアス名で記入します。"
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つ"
-#~ "のアイコンがドックに表示される場合は、この項目を使用してください。"
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "ファイル“%s”に書き込めませんでした"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "ファイル名に関する推奨事項"
-
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr ""
-#~ "英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてく"
-#~ "ださい。"
-
-#~ msgid ""
-#~ "Include at least two elements (sections of the string seperated by a "
-#~ "period). Most apps use three elements."
-#~ msgstr ""
-#~ "最低でも、2つ以上の“要素” (ピリオド区切りの文字列) が必要です。ほとんどの"
-#~ "アプリは要素3つを使います。"
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr ""
-#~ "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "詳細情報は %sを参照してください。"
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "freedesktop.org が策定するファイル命名仕様"
-
-#~ msgid "Preferences"
-#~ msgstr "設定"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr ""
-#~ "アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックし"
-#~ "てください。"
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "“%s”を削除してもよろしいですか？"
-
-#~ msgid "Development"
-#~ msgstr "開発"
-
-#~ msgid "Network"
-#~ msgstr "ネットワーク"
-
-#~ msgid "Utility"
-#~ msgstr "ユーティリティー"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "アプリの種類です。複数選択できます。"
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr ""
-#~ "また、最低でも1回はピリオドを使って、2つ以上の要素に分けてください。"
-
-#~ msgid "Syntax error detection"
-#~ msgstr "シンタックスエラーの検出機能"
-
-#~ msgid ""
-#~ "Automatically save everything―your data in editing, last open view, and "
-#~ "preferences"
-#~ msgstr ""
-#~ "編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存しま"
-#~ "す"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "ファイル一覧画面 (ライトモード)"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "ファイル一覧画面 (ダークモード)"
+#~ msgid "Update translations"
+#~ msgstr "翻訳を更新"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "アプリの2周年記念リリース！"
@@ -598,9 +473,6 @@ msgstr "キーワードを削除"
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Flatpak ランタイムのバージョンを更新"
-
-#~ msgid "Update translations"
-#~ msgstr "翻訳を更新"
 
 #~ msgid "The biggest and greatest updates come to \"Pin It!\":"
 #~ msgstr "過去最大かつ最高のアップデートがやってきました。"
@@ -753,6 +625,140 @@ msgstr "キーワードを削除"
 
 #~ msgid "Initial release"
 #~ msgstr "最初のリリース"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "新しいファイル"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "%s を開けません: %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "エントリーを更新しました。"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr "ポータブルアプリのショートカットをアプリランチャーにピン留めします"
+
+#~ msgid "File Name"
+#~ msgstr "ファイル名"
+
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr "このアプリの情報が保存される .desktop ファイルの名前です。"
+
+#~ msgid "Suffix of the file"
+#~ msgstr "ファイル拡張子"
+
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "ランチャーやドックに表示されます。"
+
+#~ msgid ""
+#~ "Descibes the app. May appear as a tooltip when you hover over the app "
+#~ "entry in the launcher/dock."
+#~ msgstr ""
+#~ "アプリの説明です。ランチャーやドックに登録されたアプリエントリーをホバーし"
+#~ "た際に、ツールチップとして表示されることがあります。"
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "ランチャーにあるアプリのエントリーをクリックすると起動するコマンド・アプリ"
+#~ "を、絶対パスかエイリアス名で記入します。"
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr "アプリのアイコンを、絶対パスかエイリアス名で記入します。"
+
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "アプリをこの ID を持つウィンドウに関連付けます。アプリ起動時、別または2つ"
+#~ "のアイコンがドックに表示される場合は、この項目を使用してください。"
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "ファイル“%s”に書き込めませんでした"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "ファイル名に関する推奨事項"
+
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "英数字とアンダースコアのみの使用を推奨します。最初の文字は数字以外にしてく"
+#~ "ださい。"
+
+#~ msgid ""
+#~ "Include at least two elements (sections of the string seperated by a "
+#~ "period). Most apps use three elements."
+#~ msgstr ""
+#~ "最低でも、2つ以上の“要素” (ピリオド区切りの文字列) が必要です。ほとんどの"
+#~ "アプリは要素3つを使います。"
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr ""
+#~ "例えば、2D ゲームの SuperTux であれば、\"%s\" とするのが望ましいです。"
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "詳細情報は %sを参照してください。"
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "freedesktop.org が策定するファイル命名仕様"
+
+#~ msgid "Preferences"
+#~ msgstr "設定"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr ""
+#~ "アプリのエントリーを作成したことがない場合は、上部の + ボタンをクリックし"
+#~ "てください。"
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "“%s”を削除してもよろしいですか？"
+
+#~ msgid "Development"
+#~ msgstr "開発"
+
+#~ msgid "Network"
+#~ msgstr "ネットワーク"
+
+#~ msgid "Utility"
+#~ msgstr "ユーティリティー"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "アプリを使うと何ができるのかを説明するツールチップテキストです。"
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "アプリの種類です。複数選択できます。"
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "また、最低でも1回はピリオドを使って、2つ以上の要素に分けてください。"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "シンタックスエラーの検出機能"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存しま"
+#~ "す"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "ファイル一覧画面 (ライトモード)"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "ファイル一覧画面 (ダークモード)"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "\"StartupWMClass\" キーを設定可能に"

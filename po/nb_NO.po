@@ -308,7 +308,7 @@ msgid "Failed to Save Entry"
 msgstr "Klarte ikke å lagre oppføring"
 
 #: src/View/EditView.vala:461
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "Klarte ikke å lagre «%s»-oppføringen"
 
@@ -371,7 +371,7 @@ msgid "Delete Entry?"
 msgstr "Oppføring slettet."
 
 #: src/View/FilesView.vala:120
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Delete Entry of “%s”?"
 msgstr "Slett «%s»-oppføringen?"
 
@@ -486,6 +486,17 @@ msgstr "Oppføring slettet."
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
+
+#, fuzzy
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "Tastatursnarveier"
+
+#, fuzzy
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Du kan redigere flere alternativer ved å åpne i tekstbehandler."
+
+#~ msgid "Initial release"
+#~ msgstr "Opprinnelig utgave"
 
 #, fuzzy
 #~ msgctxt "shortcut window"
@@ -633,6 +644,3 @@ msgstr "Oppføring slettet."
 
 #~ msgid "Files view in the dark mode"
 #~ msgstr "Filvisning i mørk drakt"
-
-#~ msgid "Initial release"
-#~ msgstr "Opprinnelig utgave"

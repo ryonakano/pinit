@@ -457,6 +457,10 @@ msgstr "Poista"
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
+#, fuzzy
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Voit muokata lisää valintoja avaamalla tekstimuokkaimen."
+
 #, c-format
 #~ msgid "Cannot open %s: %s"
 #~ msgstr "Ei voi avata %s: %s"

@@ -465,6 +465,10 @@ msgstr "删除的条目。"
 #~ msgstr "Ryo Nakano"
 
 #, fuzzy
+#~ msgid "Support opening in a text editor"
+#~ msgstr "在文本编辑器中修改更多选项。"
+
+#, fuzzy
 #~| msgid "Exec File"
 #~ msgctxt "shortcut window"
 #~ msgid "New File"

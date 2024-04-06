@@ -480,159 +480,8 @@ msgstr "Entrée supprimée."
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
 
-#, fuzzy
-#~| msgid "New File"
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "Nouveau fichier"
-
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "Impossible d’ouvrir %s : %s"
-
-#~ msgid "Updated entry."
-#~ msgstr "Entrée mise à jour."
-
-#~ msgid "File Name"
-#~ msgstr "Nom du fichier"
-
-#, fuzzy
-#~| msgid "Name of the file where these app info is saved."
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr ""
-#~ "Nom du fichier dans lequel les informations sur l'application sont "
-#~ "enregistrées."
-
-#~ msgid "Suffix of the file"
-#~ msgstr "Suffixe du fichier"
-
-#, fuzzy
-#~| msgid "Shown in the launcher or Dock."
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Affiché dans le lanceur ou le Dock."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "La commande/application lancée lorsque vous cliquez sur l'entrée de "
-#~ "l'application dans le lanceur. Indiquez un chemin absolu ou un nom "
-#~ "d'alias d'application."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr ""
-#~ "L'icône qui marque l'application. Indiquez un chemin absolu ou le nom "
-#~ "d'un alias de l'icône."
-
-#, fuzzy
-#~| msgid ""
-#~| "Associate the app with a window that has this ID. Fill in this if a "
-#~| "different or duplicated icon comes up to the dock when the app launches."
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Associer l’application avec une fenêtre qui a cet identifiant. Remplissez "
-#~ "ce champ si une icône différente ou dupliquée apparaît dans le dock au "
-#~ "lancement de l’application."
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "Impossible d’écrire dans le fichier « %s »"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "Recommandations pour la dénomination"
-
-#, fuzzy
-#~| msgid ""
-#~| "It is recommended to use only alphabets, numbers, and underscores, and "
-#~| "none begins with numbers."
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr ""
-#~ "Il est recommandé de n’utiliser que des lettres, des chiffres et des "
-#~ "tirets bas, et rien qui commence par des chiffres."
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr ""
-#~ "Par exemple, vous devriez utiliser « %s » pour le jeu en 2D SuperTux."
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "Pour plus d'informations, voir %s."
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "la spécification du nommage des fichiers par freedesktop.org"
-
-#~ msgid "Preferences"
-#~ msgstr "Préférences"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr "Si vous n'en avez jamais créé, cliquez sur le bouton + en haut."
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "Êtes-vous sûr(e) de vouloir supprimer « %s » ?"
-
-#~ msgid "Development"
-#~ msgstr "Développement"
-
-#~ msgid "Network"
-#~ msgstr "Réseau"
-
-#~ msgid "Utility"
-#~ msgstr "Accessoires"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "Un texte court pour décrire ce que l'application peut effectuer."
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "Type de l’application, sélection multiple possible."
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr ""
-#~ "Utilisez aussi au moins un point pour être sûr d’être séparé en au moins "
-#~ "deux éléments."
-
-#, fuzzy
-#~ msgid "Edit an existing app entry."
-#~ msgstr "Modifier un fichier desktop existant."
-
-#~ msgid "Create new or edit"
-#~ msgstr "Créer ou modifier"
-
-#~ msgid "Edit File"
-#~ msgstr "Modifier le fichier"
-
-#~ msgid "Edit a desktop file"
-#~ msgstr "Modifier un fichier desktop"
-
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr ""
-#~ "Épinglez des raccourcis vers vos applications portables préférées dans "
-#~ "votre lanceur d’applications"
-
-#~ msgid "Syntax error detection"
-#~ msgstr "Détection d’erreurs de syntaxe"
-
-#~ msgid ""
-#~ "Automatically save everything―your data in editing, last open view, and "
-#~ "preferences"
-#~ msgstr ""
-#~ "Sauvegarde automatique de vos données en cours d’édition, de la dernière "
-#~ "vue ouverte et des préférences"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Vue des fichiers dans le mode clair"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Vue des fichiers dans le mode sombre"
+#~ msgid "Update translations"
+#~ msgstr "Mise à jour des traductions"
 
 #~ msgid "The release for celebrating the 2nd anniversary of the app!"
 #~ msgstr "La version célébrant le deuxième anniversaire de l’appli !"
@@ -658,9 +507,6 @@ msgstr "Entrée supprimée."
 
 #~ msgid "Update Flatpak runtime version"
 #~ msgstr "Mise à jour de l’environnement d’exécution Flatpak"
-
-#~ msgid "Update translations"
-#~ msgstr "Mise à jour des traductions"
 
 #~ msgid "The biggest and greatest updates come to \"Pin It!\":"
 #~ msgstr ""
@@ -834,6 +680,160 @@ msgstr "Entrée supprimée."
 
 #~ msgid "Initial release"
 #~ msgstr "Version initiale"
+
+#, fuzzy
+#~| msgid "New File"
+#~ msgctxt "shortcut window"
+#~ msgid "New File"
+#~ msgstr "Nouveau fichier"
+
+#, c-format
+#~ msgid "Cannot open %s: %s"
+#~ msgstr "Impossible d’ouvrir %s : %s"
+
+#~ msgid "Updated entry."
+#~ msgstr "Entrée mise à jour."
+
+#~ msgid "File Name"
+#~ msgstr "Nom du fichier"
+
+#, fuzzy
+#~| msgid "Name of the file where these app info is saved."
+#~ msgid "Name of the .desktop file, where this app's info will be saved."
+#~ msgstr ""
+#~ "Nom du fichier dans lequel les informations sur l'application sont "
+#~ "enregistrées."
+
+#~ msgid "Suffix of the file"
+#~ msgstr "Suffixe du fichier"
+
+#, fuzzy
+#~| msgid "Shown in the launcher or Dock."
+#~ msgid "Shown in the launcher or dock."
+#~ msgstr "Affiché dans le lanceur ou le Dock."
+
+#~ msgid ""
+#~ "The command/app launched when you click the app entry in the launcher. "
+#~ "Specify in an absolute path or an app's alias name."
+#~ msgstr ""
+#~ "La commande/application lancée lorsque vous cliquez sur l'entrée de "
+#~ "l'application dans le lanceur. Indiquez un chemin absolu ou un nom "
+#~ "d'alias d'application."
+
+#~ msgid ""
+#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
+#~ "name."
+#~ msgstr ""
+#~ "L'icône qui marque l'application. Indiquez un chemin absolu ou le nom "
+#~ "d'un alias de l'icône."
+
+#, fuzzy
+#~| msgid ""
+#~| "Associate the app with a window that has this ID. Fill in this if a "
+#~| "different or duplicated icon comes up to the dock when the app launches."
+#~ msgid ""
+#~ "Associate the app with a window that has this ID. Use this if a different "
+#~ "or duplicated icon appears in the dock when the app launches."
+#~ msgstr ""
+#~ "Associer l’application avec une fenêtre qui a cet identifiant. Remplissez "
+#~ "ce champ si une icône différente ou dupliquée apparaît dans le dock au "
+#~ "lancement de l’application."
+
+#, c-format
+#~ msgid "Could not write to file “%s”"
+#~ msgstr "Impossible d’écrire dans le fichier « %s »"
+
+#~ msgid "Recommendations for naming"
+#~ msgstr "Recommandations pour la dénomination"
+
+#, fuzzy
+#~| msgid ""
+#~| "It is recommended to use only alphabets, numbers, and underscores, and "
+#~| "none begins with numbers."
+#~ msgid ""
+#~ "It is recommended to use only alphanumeric characters and underscores. "
+#~ "Don't begin with a number."
+#~ msgstr ""
+#~ "Il est recommandé de n’utiliser que des lettres, des chiffres et des "
+#~ "tirets bas, et rien qui commence par des chiffres."
+
+#, c-format
+#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
+#~ msgstr ""
+#~ "Par exemple, vous devriez utiliser « %s » pour le jeu en 2D SuperTux."
+
+#, c-format
+#~ msgid "For more info, see %s."
+#~ msgstr "Pour plus d'informations, voir %s."
+
+#~ msgid "the file naming specification by freedesktop.org"
+#~ msgstr "la spécification du nommage des fichiers par freedesktop.org"
+
+#~ msgid "Preferences"
+#~ msgstr "Préférences"
+
+#~ msgid "If you've never created one, click the + button on the top."
+#~ msgstr "Si vous n'en avez jamais créé, cliquez sur le bouton + en haut."
+
+#, c-format
+#~ msgid "Are you sure you want to delete “%s”?"
+#~ msgstr "Êtes-vous sûr(e) de vouloir supprimer « %s » ?"
+
+#~ msgid "Development"
+#~ msgstr "Développement"
+
+#~ msgid "Network"
+#~ msgstr "Réseau"
+
+#~ msgid "Utility"
+#~ msgstr "Accessoires"
+
+#~ msgid "A tooltip text to describe what the app helps you to do."
+#~ msgstr "Un texte court pour décrire ce que l'application peut effectuer."
+
+#~ msgid "Type of the app, multiply selectable."
+#~ msgstr "Type de l’application, sélection multiple possible."
+
+#~ msgid ""
+#~ "Also, use at least one period to make sure to be separated into at least "
+#~ "two elements."
+#~ msgstr ""
+#~ "Utilisez aussi au moins un point pour être sûr d’être séparé en au moins "
+#~ "deux éléments."
+
+#, fuzzy
+#~ msgid "Edit an existing app entry."
+#~ msgstr "Modifier un fichier desktop existant."
+
+#~ msgid "Create new or edit"
+#~ msgstr "Créer ou modifier"
+
+#~ msgid "Edit File"
+#~ msgstr "Modifier le fichier"
+
+#~ msgid "Edit a desktop file"
+#~ msgstr "Modifier un fichier desktop"
+
+#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
+#~ msgstr ""
+#~ "Épinglez des raccourcis vers vos applications portables préférées dans "
+#~ "votre lanceur d’applications"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Détection d’erreurs de syntaxe"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Sauvegarde automatique de vos données en cours d’édition, de la dernière "
+#~ "vue ouverte et des préférences"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Vue des fichiers dans le mode clair"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Vue des fichiers dans le mode sombre"
 
 #~ msgid "Files View"
 #~ msgstr "Page des fichiers"

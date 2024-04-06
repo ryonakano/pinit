@@ -463,6 +463,94 @@ msgstr "Entrada apagada."
 #~ msgstr "Ryo Nakano"
 
 #, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update translations"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~| msgid "Update Japanese translation"
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Atualizações de tradução:"
+
+#, fuzzy
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#, fuzzy
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#, fuzzy
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Atualiza tradução Japonesa"
+
+#, fuzzy
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Página de Arquivos: Faz a página ralável e conserte a janela ficar maior "
+#~ "se houver muitas entradas"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
+
+#, fuzzy
+#~| msgid "Add execution permisson on clicking the \"Pin It!\" button"
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Adiciona SeletorDeCategoria"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Suporta Alt+Home para exibir início"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Permite aceleração de GPU por padrão"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Cantos de janela arredondados em qualquer folha de estilo (agradecimentos "
+#~ "a @JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Corrige texto de descrição ilegível no AppCenter"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Salvar e restaurar posição da janela"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Lançamento inicial"
+
+#, fuzzy
 #~| msgid "New File"
 #~ msgctxt "shortcut window"
 #~ msgid "New File"
@@ -553,94 +641,6 @@ msgstr "Entrada apagada."
 #~ msgstr ""
 #~ "Crie o atalho para seus aplicativos portáteis favoritos em seu lançador "
 #~ "de aplicativos"
-
-#, fuzzy
-#~| msgid "Update Japanese translation"
-#~ msgid "Update Flatpak runtime version"
-#~ msgstr "Atualiza tradução Japonesa"
-
-#, fuzzy
-#~| msgid "Update Japanese translation"
-#~ msgid "Update translations"
-#~ msgstr "Atualiza tradução Japonesa"
-
-#~ msgid "Translation updates:"
-#~ msgstr "Atualizações de tradução:"
-
-#, fuzzy
-#~ msgid "Update Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#, fuzzy
-#~ msgid "EditView: Less strict on file names"
-#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
-
-#, fuzzy
-#~ msgid "Add Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#, fuzzy
-#~ msgid "Add Dutch translation (thanks to @Vistaus)"
-#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
-
-#~ msgid "Update Japanese translation"
-#~ msgstr "Atualiza tradução Japonesa"
-
-#, fuzzy
-#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
-#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#~ msgid "EditView: Focus on file name entry by default"
-#~ msgstr "Página de Edição: Foco no nome do arquivo por padrão"
-
-#~ msgid ""
-#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
-#~ msgstr ""
-#~ "Página de Arquivos: Faz a página ralável e conserte a janela ficar maior "
-#~ "se houver muitas entradas"
-
-#~ msgid "Add French translation (thanks to @NathanBnm)"
-#~ msgstr "Adiciona tradução Francesa (agradecimentos a @NathanBnm)"
-
-#~ msgid "Improved support for other desktop environments"
-#~ msgstr "Melhorias no suporte para outros ambientes de trabalho"
-
-#, fuzzy
-#~| msgid "Add execution permisson on clicking the \"Pin It!\" button"
-#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
-#~ msgstr "Adiciona permissão de execução ao clicar no botão \"Pin It!\""
-
-#~ msgid "Add CategoryChooser"
-#~ msgstr "Adiciona SeletorDeCategoria"
-
-#~ msgid "Support Alt+Home to show welcome"
-#~ msgstr "Suporta Alt+Home para exibir início"
-
-#~ msgid "Allow GPU acceralation by default"
-#~ msgstr "Permite aceleração de GPU por padrão"
-
-#~ msgid "Add 128px app icon (thanks to @hanaral)"
-#~ msgstr "Adiciona ícone de formato 128px (agradecimentos a @hanaral)"
-
-#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
-#~ msgstr ""
-#~ "Cantos de janela arredondados em qualquer folha de estilo (agradecimentos "
-#~ "a @JeysonFlores)"
-
-#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
-#~ msgstr "Suporte à gestos multitoques (agradecimentos a @JeysonFlores)"
-
-#~ msgid "Fix unreadable description text in AppCenter"
-#~ msgstr "Corrige texto de descrição ilegível no AppCenter"
-
-#~ msgid "Save and restore window position"
-#~ msgstr "Salvar e restaurar posição da janela"
-
-#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
-#~ msgstr "Adiciona tradução em Espanhol (agradecimentos a @JeysonFlores)"
-
-#~ msgid "Initial release"
-#~ msgstr "Lançamento inicial"
 
 #~ msgid "Files View"
 #~ msgstr "Página de Arquivos"
