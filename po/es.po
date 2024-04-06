@@ -1,175 +1,210 @@
-# Spanish translations for com.github.ryonakano.pinit package.
-# Copyright (C) 2021 THE com.github.ryonakano.pinit'S COPYRIGHT HOLDER
+# Spanish translations for com.github.ryonakano.pinit.
+# Copyright (C) 2021-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Jeyson Antonio Flores Deras <jeyson.flores@protonmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate.org>, 2023.
 # gallegonovato <fran-carro@hotmail.es>, 2023, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 23:52+0900\n"
-"PO-Revision-Date: 2024-01-27 05:50+0000\n"
+"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"PO-Revision-Date: 2024-03-21 12:19+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit-app/"
-"es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/pinit/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
-#: data/gtk/help-overlay.ui:11
+#: data/pinit.desktop.in:3
+msgid "Pin It!"
+msgstr "Pin It!"
+
+#: data/pinit.desktop.in:4
+msgid "Desktop File Creator"
+msgstr "Creador de archivos de escritorio"
+
+#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
+#: src/MainWindow.vala:249
+msgid "Pin portable apps to the launcher"
+msgstr "Fijar las aplicaciones portátiles al lanzador"
+
+#: data/pinit.desktop.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr "Escritorio;Archivo;Crear;Editar;Info;Icono;AppImage;"
+
+#: data/pinit.metainfo.xml.in:13
+msgid ""
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
+msgstr ""
+"Crea accesos directos a las aplicaciones portátiles, como ejecutables sin "
+"formato, archivos de AppImage, etc., en el launcher de las aplicaciones de "
+"tu entorno de escritorio."
+
+#: data/pinit.metainfo.xml.in:16
+msgid "Other features include:"
+msgstr "Otras características son:"
+
+#: data/pinit.metainfo.xml.in:20
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+"Editar o eliminar las entradas de las aplicaciones creadas sin abrir el "
+"gestor de archivos"
+
+#: data/pinit.metainfo.xml.in:21
+msgid "Automatically add the execute permission to the file you select"
+msgstr ""
+"Añade automáticamente el permiso de ejecución al archivo que selecciones"
+
+#: data/pinit.metainfo.xml.in:27
+msgid "List of app entries in the light mode"
+msgstr "Lista de entradas de aplicaciones en el modo claro"
+
+#: data/pinit.metainfo.xml.in:32
+msgid "Editing the app entry in the light mode"
+msgstr "Editar la entrada de la aplicación en el modo claro"
+
+#: data/pinit.metainfo.xml.in:37
+msgid "List of app entries in the dark mode"
+msgstr "Lista de entradas de aplicaciones en el modo oscuro"
+
+#: data/pinit.metainfo.xml.in:42
+msgid "Editing the app entry in the dark mode"
+msgstr "Editar la entrada de la aplicación en el modo oscuro"
+
+#: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr "General"
 
-#: data/gtk/help-overlay.ui:15
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
+#: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr "Atajos del teclado"
+msgstr "Teclas de acceso rápido"
 
-#: data/gtk/help-overlay.ui:21
+#: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Dejar"
 
-#: data/gtk/help-overlay.ui:28
+#: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Editar"
 
-#: data/gtk/help-overlay.ui:32
-#, fuzzy
-#| msgid "New Entry"
+#: data/resources/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
-msgstr "Entrada nueva"
+msgstr "Nueva entrada"
 
-#: src/MainWindow.vala:56
-msgid "Entry updated."
-msgstr ""
-
-#: src/MainWindow.vala:60
+#: src/MainWindow.vala:89
 msgid "Entry deleted."
-msgstr ""
+msgstr "Entrada borrada."
 
-#: src/MainWindow.vala:107
+#: src/MainWindow.vala:104
+msgid "Entry updated."
+msgstr "Entrada actualizada."
+
+#: src/MainWindow.vala:123
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Fallo al cargar las entradas"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:124
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Se ha producido un error al cargar las entradas de la aplicación."
 
-#: src/MainWindow.vala:110 src/View/EditView.vala:370
-#: src/View/EditView.vala:456 src/View/FilesView.vala:142
-#, fuzzy
-#| msgid "Close"
+#: src/MainWindow.vala:126 src/View/EditView.vala:380
+#: src/View/EditView.vala:469 src/View/FilesView.vala:148
 msgid "_Close"
-msgstr "Cerrar"
+msgstr "_Cerrar"
 
-#: src/MainWindow.vala:142
-#, fuzzy
-#| msgid "Saved changes!"
+#: src/MainWindow.vala:158
 msgid "Save Changes?"
-msgstr "¡Cambios guardados!"
+msgstr "¿Guardar los cambios?"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Las entradas abiertas contienen cambios no guardados. Los cambios que no se "
+"guarden se perderán permanentemente."
 
-#: src/MainWindow.vala:145 src/View/FilesView.vala:128
-#, fuzzy
-#| msgid "Cancel"
+#: src/MainWindow.vala:161 src/View/FilesView.vala:134
 msgid "_Cancel"
-msgstr "Cancelar"
+msgstr "_Cancelar"
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:162
 msgid "_Discard"
-msgstr ""
+msgstr "_Descartar"
 
-#: src/MainWindow.vala:147 src/View/EditView.vala:42
-#, fuzzy
-#| msgid "Save"
+#: src/MainWindow.vala:163 src/View/EditView.vala:39
 msgid "_Save"
-msgstr "Guardar"
+msgstr "_Guardar"
 
-#: src/MainWindow.vala:230
-#, fuzzy
-#| msgid "Pin any apps into the launcher"
-msgid "Pin portable apps to the launcher"
-msgstr "Fija cualquier aplicación en el lanzador"
-
-#. TRANSLATORS: Replace with your name; don't translate literally
-#: src/MainWindow.vala:240
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You may add your name and your email address if you want, e.g.:
+#. John Doe <john-doe@example.com>
+#: src/MainWindow.vala:256
 msgid "translator-credits"
 msgstr "Óscar Fernández Díaz <oscfdezdz@tuta.io>"
 
-#: src/View/EditView.vala:71
-msgid "Required Entries"
-msgstr ""
+#: src/View/EditView.vala:68
+msgid "Required Fields"
+msgstr "Campos requeridos"
 
-#: src/View/EditView.vala:72
-msgid "The following entries need to be filled to save."
-msgstr ""
+#: src/View/EditView.vala:69
+msgid "The following fields need to be filled to save."
+msgstr "Los siguientes campos deben completarse para guardar."
 
-#: src/View/EditView.vala:76
+#: src/View/EditView.vala:73
 msgid "App Name"
 msgstr "Nombre de la aplicación"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:78
 msgid "Exec File"
 msgstr "Archivo ejecutable"
 
-#: src/View/EditView.vala:84
-#, fuzzy
-#| msgid "Select an executable file"
+#: src/View/EditView.vala:81
 msgid "Select an executable file…"
-msgstr "Seleccione un archivo ejecutable"
+msgstr "Seleccione un archivo ejecutable…"
 
-#: src/View/EditView.vala:95
-msgid "Optional Entries"
+#: src/View/EditView.vala:92
+msgid "Optional Fields"
+msgstr "Campos opcionales"
+
+#: src/View/EditView.vala:93
+msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
+"Completar estos campos mejora la visibilidad en el iniciador de aplicaciones."
 
-#: src/View/EditView.vala:96
-msgid "Filling these entries improves discoverability in the app launcher."
-msgstr ""
-
-#: src/View/EditView.vala:100
+#: src/View/EditView.vala:97
 msgid "Icon File"
 msgstr "Archivo del icono"
 
-#: src/View/EditView.vala:103
-#, fuzzy
-#| msgid "Select an icon file"
+#: src/View/EditView.vala:100
 msgid "Select an icon file…"
-msgstr "Seleccione un archivo de icono"
+msgstr "Seleccione un archivo de iconos…"
 
-#: src/View/EditView.vala:111
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "General"
+#: src/View/EditView.vala:108
 msgid "Generic Name"
-msgstr "General"
+msgstr "Nombre común"
 
-#: src/View/EditView.vala:116
+#: src/View/EditView.vala:113
 msgid "Comment"
 msgstr "Comentario"
 
-#: src/View/EditView.vala:130
-#, fuzzy
-#| msgid "Advanced configuration"
+#: src/View/EditView.vala:127
 msgid "Advanced Configurations"
-msgstr "Configuración avanzada"
+msgstr "Configuraciones avanzadas"
 
-#: src/View/EditView.vala:131
+#: src/View/EditView.vala:128
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -179,278 +214,435 @@ msgstr ""
 "pueden requerir las opciones de configuración avanzadas que se indican a "
 "continuación."
 
-#: src/View/EditView.vala:135
+#: src/View/EditView.vala:132
 msgid "Startup WM Class"
 msgstr "Inicio de la clase WM"
 
-#: src/View/EditView.vala:140
+#: src/View/EditView.vala:137
 msgid "Run in Terminal"
 msgstr "Ejecutar en terminal"
 
-#: src/View/EditView.vala:141
-#, fuzzy
-#| msgid "Check this if you want to register a CUI app."
+#: src/View/EditView.vala:138
 msgid "Turn on if you want to register a CUI app."
-msgstr "Marque esta casilla si desea registrar una aplicación CUI."
+msgstr "Actívelo si desea registrar una aplicación CUI."
 
-#: src/View/EditView.vala:145
-#, fuzzy
-#| msgid "Open"
+#: src/View/EditView.vala:142
 msgid "_Open"
-msgstr "Abrir"
+msgstr "_Abrir"
 
-#: src/View/EditView.vala:149
-#, fuzzy
-#| msgid "Open in text editor"
+#: src/View/EditView.vala:146
 msgid "Open with Text Editor"
-msgstr "Abrir en editor de texto"
+msgstr "Abrir con el editor de texto"
 
-#: src/View/EditView.vala:150
-#, fuzzy
-#| msgid "You can also edit more options by opening in a text editor."
+#: src/View/EditView.vala:147
 msgid "You can also edit more options by opening with a text editor."
-msgstr "También puede editar más opciones abriendo en un editor de texto."
+msgstr "También puede editar más opciones abriéndolas con un editor de texto."
 
-#: src/View/EditView.vala:195
+#: src/View/EditView.vala:192
 msgid "New Entry"
 msgstr "Entrada nueva"
 
-#: src/View/EditView.vala:211 src/View/EditView.vala:399
-#, fuzzy
-#| msgid "Untitled desktop file"
+#: src/View/EditView.vala:208 src/View/EditView.vala:410
 msgid "Untitled App"
-msgstr "Archivo de escritorio sin nombre"
+msgstr "Aplicación sin título"
 
-#: src/View/EditView.vala:231
-#, fuzzy
-#| msgid "Select an executable file"
+#: src/View/EditView.vala:228
 msgid "Select Executable File"
-msgstr "Seleccione un archivo ejecutable"
+msgstr "Seleccionar un archivo ejecutable"
 
-#: src/View/EditView.vala:232 src/View/EditView.vala:289
-#, fuzzy
-#| msgid "Select"
+#: src/View/EditView.vala:229 src/View/EditView.vala:286
 msgid "_Select"
-msgstr "Seleccionar"
+msgstr "_Seleccionar"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:282
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "Archivos ICO, PNG, SVG, o XMP"
 
-#: src/View/EditView.vala:288
-#, fuzzy
-#| msgid "Select an icon file"
+#: src/View/EditView.vala:285
 msgid "Select Icon File"
-msgstr "Seleccione un archivo de icono"
+msgstr "Seleccionar un archivo de iconos"
 
-#: src/View/EditView.vala:367
-#, fuzzy
-#| msgid "Could not open with external app"
+#: src/View/EditView.vala:377
 msgid "Failed to Open with External App"
-msgstr "No se puede abrir con una aplicación externa"
+msgstr "Error al abrir con una aplicación externa"
 
-#: src/View/EditView.vala:368
+#: src/View/EditView.vala:378
 msgid "There was an error while opening the file with an external app."
 msgstr ""
+"Se ha producido un error al abrir el archivo con una aplicación externa."
 
-#: src/View/EditView.vala:424
-#, fuzzy
-#| msgid "Editing Entry"
+#: src/View/EditView.vala:435
 msgid "Edit Entry"
-msgstr "Editando entrada"
+msgstr "Editar la entrada"
 
-#: src/View/EditView.vala:426
-#, fuzzy, c-format
-#| msgid "Editing “%s”"
+#: src/View/EditView.vala:437
+#, c-format
 msgid "Edit “%s”"
-msgstr "Editando «%s»"
+msgstr "Editar \"%s\""
 
-#: src/View/EditView.vala:446
+#: src/View/EditView.vala:459
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Error al guardar la entrada"
 
-#: src/View/EditView.vala:448
+#: src/View/EditView.vala:461
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Error al guardar la entrada de \"%s\""
 
-#: src/View/EditView.vala:454
+#: src/View/EditView.vala:467
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Se ha producido un error al guardar la entrada de la aplicación."
 
-#: src/View/FilesView.vala:29
+#: src/View/FilesView.vala:25
 msgid "Create a new entry"
 msgstr "Crear una entrada nueva"
 
-#: src/View/FilesView.vala:35
-#, fuzzy
-#| msgid "Light"
+#: src/View/FilesView.vala:31
 msgid "_Light"
-msgstr "Claro"
+msgstr "_Claro"
+
+#: src/View/FilesView.vala:32
+msgid "_Dark"
+msgstr "_Oscuro"
+
+#: src/View/FilesView.vala:33
+msgid "S_ystem"
+msgstr "S_istema"
 
 #: src/View/FilesView.vala:36
-#, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
-msgstr "Oscuro"
+msgid "_Style"
+msgstr "_Estilo"
 
 #: src/View/FilesView.vala:37
-#, fuzzy
-#| msgid "System"
-msgid "S_ystem"
-msgstr "Sistema"
-
-#: src/View/FilesView.vala:40
-#, fuzzy
-#| msgid "Style"
-msgid "_Style"
-msgstr "Estilo"
-
-#: src/View/FilesView.vala:41
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "_Keyboard Shortcuts"
-msgstr "Atajos del teclado"
+msgstr "_Teclas de acceso rápido"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/View/FilesView.vala:43
-#, fuzzy, c-format
-#| msgid "About %s"
-msgid "_About %s"
-msgstr "Acerca de %s"
-
-#: src/View/FilesView.vala:46
-msgid "Main Menu"
-msgstr ""
-
-#: src/View/FilesView.vala:61
-#, fuzzy
-#| msgid "No valid app entries found"
-msgid "No Entries Found"
-msgstr "No se han encontrado entradas de aplicaciones válidas"
-
-#: src/View/FilesView.vala:62
-msgid "Click the + button on the top to create one."
-msgstr ""
-
-#: src/View/FilesView.vala:112
-#, fuzzy
-#| msgid "Deleted entry."
-msgid "Delete Entry?"
-msgstr "Entrada borrada."
-
-#: src/View/FilesView.vala:114
+#: src/View/FilesView.vala:39
 #, c-format
-msgid "Delete Entry of “%s”?"
-msgstr ""
+msgid "_About %s"
+msgstr "_Acerca de %s"
+
+#: src/View/FilesView.vala:42
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: src/View/FilesView.vala:57
+msgid "No Entries Found"
+msgstr "No se encontraron entradas"
+
+#: src/View/FilesView.vala:58
+msgid "Click the + button on the top to create one."
+msgstr "Haz clic en el botón + de la parte superior para crear una."
 
 #: src/View/FilesView.vala:118
+msgid "Delete Entry?"
+msgstr "¿Borrar la entrada?"
+
+#: src/View/FilesView.vala:120
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr "¿Borrar la entrada de \"%s\"?"
+
+#: src/View/FilesView.vala:124
 msgid "Delete…"
 msgstr "Borrar…"
 
-#: src/View/FilesView.vala:126
+#: src/View/FilesView.vala:132
 msgid "This removes the app from the launcher."
 msgstr "Esto elimina la aplicación del lanzador."
 
-#: src/View/FilesView.vala:129
-#, fuzzy
-#| msgid "Delete"
+#: src/View/FilesView.vala:135
 msgid "_Delete"
-msgstr "Borrar"
+msgstr "_Borrar"
 
-#: src/View/FilesView.vala:139
-#, fuzzy, c-format
-#| msgid "Could not delete file “%s”"
+#: src/View/FilesView.vala:145
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "No se ha podido borrar el archivo \"%s\""
+msgstr "Error al borrar la entrada de \"%s\""
 
-#: src/View/FilesView.vala:140
+#: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Se ha producido un error al eliminar la entrada de la aplicación."
 
-#: src/Widget/CategoriesRow.vala:77
-#, fuzzy
-#| msgid "App Categories"
-msgid "Categories"
-msgstr "Categorías de aplicaciones"
-
-#: src/Widget/CategoriesRow.vala:78
-msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr "Categorías aplicables a la aplicación. (Puede seleccionar más de una.)"
-
-#: src/Widget/CategoriesRow.vala:84
-msgid "Sound & Video"
+#: src/Widget/CategoriesRow.vala:40
+msgid "Sound &amp; Video"
 msgstr "Sonido y vídeo"
 
-#: src/Widget/CategoriesRow.vala:85
+#: src/Widget/CategoriesRow.vala:41
 msgid "Audio"
 msgstr "Sonido"
 
-#: src/Widget/CategoriesRow.vala:86
+#: src/Widget/CategoriesRow.vala:42
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/Widget/CategoriesRow.vala:87
+#: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
 msgstr "Programando"
 
-#: src/Widget/CategoriesRow.vala:88
+#: src/Widget/CategoriesRow.vala:44
 msgid "Education"
 msgstr "Educación"
 
-#: src/Widget/CategoriesRow.vala:89
+#: src/Widget/CategoriesRow.vala:45
 msgid "Games"
 msgstr "Juegos"
 
-#: src/Widget/CategoriesRow.vala:90
+#: src/Widget/CategoriesRow.vala:46
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: src/Widget/CategoriesRow.vala:91
+#: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
 msgstr "Internet"
 
-#: src/Widget/CategoriesRow.vala:92
+#: src/Widget/CategoriesRow.vala:48
 msgid "Office"
 msgstr "Oficina"
 
-#: src/Widget/CategoriesRow.vala:93
+#: src/Widget/CategoriesRow.vala:49
 msgid "Science"
 msgstr "Ciencia"
 
-#: src/Widget/CategoriesRow.vala:94
+#: src/Widget/CategoriesRow.vala:50
 msgid "Settings"
 msgstr "Configuración"
 
-#: src/Widget/CategoriesRow.vala:95
+#: src/Widget/CategoriesRow.vala:51
 msgid "System Tools"
 msgstr "Herramientas del sistema"
 
-#: src/Widget/CategoriesRow.vala:96
+#: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
 msgstr "Accesorios"
 
-#: src/Widget/KeywordsRow.vala:54
+#: src/Widget/CategoriesRow.vala:62
+msgid "Categories"
+msgstr "Categorías"
+
+#: src/Widget/CategoriesRow.vala:63
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr "Categorías aplicables a la aplicación. (Puede seleccionar más de una.)"
+
+#: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
-msgstr ""
+msgstr "Palabras clave"
 
-#: src/Widget/KeywordsRow.vala:55
+#: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Estas palabras pueden utilizarse como términos en la búsqueda."
 
-#: src/Widget/KeywordsRow.vala:60
+#: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Agregar una nueva palabra clave"
 
-#: src/Widget/KeywordsRow.vala:114
+#: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
-msgstr ""
+msgstr "Palabra clave"
 
-#: src/Widget/KeywordsRow.vala:118
-#, fuzzy
-#| msgid "Deleted entry."
+#: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
-msgstr "Entrada borrada."
+msgstr "Borrar la palabra clave"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
+
+#, fuzzy
+#~| msgctxt "shortcut window"
+#~| msgid "Keyboard Shortcuts"
+#~ msgid "Add keyboard shortcuts window"
+#~ msgstr "Teclas de acceso rápido"
+
+#~ msgid "Update translations"
+#~ msgstr "Actualizar las traducciones"
+
+#~ msgid "The release for celebrating the 2nd anniversary of the app!"
+#~ msgstr "¡El lanzamiento para celebrar el 2º aniversario de la aplicación!"
+
+#~ msgid "Fix deprecations in GTK 4.10"
+#~ msgstr "Arreglar las obsoletas en GTK 4.10"
+
+#~ msgid "English grammatical changes (thanks to @BraidenPsiuk)"
+#~ msgstr "Cambios gramaticales en inglés (gracias a @BraidenPsiuk)"
+
+#~ msgid ""
+#~ "EditView: Make keys that is not required by the freedesktop.org "
+#~ "specification optional"
+#~ msgstr ""
+#~ "Editar la Vista: Hacer opcionales las claves no requeridas por "
+#~ "freedesktop.org"
+
+#~ msgid "CategoryChooser: Improve layout management"
+#~ msgstr "Selector de categorías: Mejorar la gestión del diseño"
+
+#~ msgid "Fix navigate back shows empty window"
+#~ msgstr ""
+#~ "Se corrigió un error por el cual regresar mostraba una ventana vacía"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Actualizar la versión de Flatpak"
+
+#~ msgid "The biggest and greatest updates come to \"Pin It!\":"
+#~ msgstr "Las actualizaciones más importantes llegan a \"Pin It!\":"
+
+#~ msgid ""
+#~ "Redesign to fit modern desktop environments, including support for "
+#~ "responsive design"
+#~ msgstr ""
+#~ "Rediseño para adaptarse a los entornos de escritorio modernos, incluida "
+#~ "la compatibilidad con el diseño adaptable"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migrar a GTK 4, la última versión de GTK"
+
+#~ msgid "Other changes:"
+#~ msgstr "Otras modificaciones:"
+
+#~ msgid "Support setting \".ico\" files as the app icon"
+#~ msgstr ""
+#~ "Admite la configuración de archivos \".ico\" como icono de la aplicación"
+
+#~ msgid "Support opening in a text editor"
+#~ msgstr "Admite la apertura en un editor de textos"
+
+#~ msgid "Fix window size cannot be resized on small displays"
+#~ msgstr ""
+#~ "Se solucionó el problema de no poder cambiar el tamaño de la ventana en "
+#~ "pantallas pequeñas"
+
+#~ msgid "Show error dialogs when saving/deleting failed"
+#~ msgstr "Mostrar cuadros de diálogo de error cuando falla guardar/eliminar"
+
+#~ msgid "Make sure not to add blank elements in generated desktop files"
+#~ msgstr ""
+#~ "Asegúrate de no añadir elementos en blanco en los archivos de escritorio "
+#~ "generados"
+
+#~ msgid ""
+#~ "Don't overwrite the entire permission of the selected executable files"
+#~ msgstr "No sobrescribir todo el permiso de los ejecutables seleccionados"
+
+#~ msgid "Give executable permission for the user only when they don't have it"
+#~ msgstr "Dar permiso de ejecución para el usuario sólo cuando no lo tiene"
+
+#~ msgid "AppData: Fix release year"
+#~ msgstr "Datos de la aplicación: año de lanzamiento corregido"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Actualizaciones de las traducciones:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr ""
+#~ "Actualización de la traducción al italiano (gracias a @albanobattistella)"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Comprobar el entorno de escritorio cuando se ejecuta"
+
+#~ msgid "Lessen scope of file access"
+#~ msgstr "Reducir el ámbito de acceso a los archivos"
+
+#~ msgid "Make window resizable"
+#~ msgstr "Cambiar el tamaño de la ventana"
+
+#~ msgid "EditView: Less strict on file names"
+#~ msgstr "Editar Vista: Menos estricto con los nombres de los archivos"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Añadir traducción al italiano (gracias a @albanobattistella)"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Añadir traducción al holandés (gracias a @Vistaus)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Actualizar la traducción al japonés"
+
+#~ msgid "Fix build error on other distros"
+#~ msgstr "Corregir error en la compilación en otras distribuciones"
+
+#~ msgid "FilesView: Properly center the dialog against the app window"
+#~ msgstr ""
+#~ "Vista de archivos: Centrar correctamente el diálogo en la ventana de la "
+#~ "aplicación"
+
+#~ msgid "Restore last opened view and its state"
+#~ msgstr "Restaurar la última vista abierta y su estado"
+
+#~ msgid "Add new style switcher"
+#~ msgstr "Añadir un nuevo conmutador de estilos"
+
+#~ msgid "Correct titlebar label when no app name specified"
+#~ msgstr ""
+#~ "Corrección de la etiqueta de la barra de título cuando no se especifica "
+#~ "el nombre de la aplicación"
+
+#~ msgid "Readable copies"
+#~ msgstr "Copias legibles"
+
+#~ msgid "FilesView: Ellipsize if label texts are too long"
+#~ msgstr ""
+#~ "Vista del archivo: Ellipsize si los textos de las etiquetas son demasiado "
+#~ "largos"
+
+#~ msgid "Tell accepted file formats in FileChooser"
+#~ msgstr "Indicar los formatos de los archivos aceptados en FileChooser"
+
+#~ msgid "Add Brazilian Porguguese translation (thanks to @DanielTolentino)"
+#~ msgstr ""
+#~ "Añadir traducción al portugués brasileño (gracias a @DanielTolentino)"
+
+#~ msgid "EditView: Focus on file name entry by default"
+#~ msgstr ""
+#~ "Cambiar la vista: centrarse en la entrada del nombre del archivo de forma "
+#~ "predeterminada"
+
+#~ msgid ""
+#~ "FilesView: Make scrollable and fix the window get bigger if many entries"
+#~ msgstr ""
+#~ "Vista de archivos: permite el desplazamiento y el cambio del tamaño de la "
+#~ "ventana para múltiples registros"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Añadir traducción al francés (gracias a @NathanBnm)"
+
+#~ msgid "Improved support for other desktop environments"
+#~ msgstr "Mayor compatibilidad con otros entornos de escritorio"
+
+#~ msgid "Add execution permission on clicking the \"Pin It!\" button"
+#~ msgstr ""
+#~ "¡Añadir el permiso de ejecución al hacer clic en el botón de \"Pin It!\""
+
+#~ msgid "Add CategoryChooser"
+#~ msgstr "Añadir un selector de categoría"
+
+#~ msgid "Support Alt+Home to show welcome"
+#~ msgstr "Soporta Alt+Inicio para mostrar la bienvenida"
+
+#~ msgid "Allow GPU acceralation by default"
+#~ msgstr "Permitir la aceleración de la GPU por defecto"
+
+#~ msgid "Add 128px app icon (thanks to @hanaral)"
+#~ msgstr "Añadir el icono de la aplicación de 128px (gracias a @hanaral)"
+
+#~ msgid "Rounded window corners on any stylesheet (thanks to @JeysonFlores)"
+#~ msgstr ""
+#~ "Esquinas de las ventana redondeadas en cualquier formato (gracias a "
+#~ "@JeysonFlores)"
+
+#~ msgid "Support multitouch gestures (thanks to @JeysonFlores)"
+#~ msgstr "Admite gestos multitáctiles (gracias a @JeysonFlores)"
+
+#~ msgid "Fix unreadable description text in AppCenter"
+#~ msgstr "Corrección del texto de la descripción ilegible en AppCenter"
+
+#~ msgid "Save and restore window position"
+#~ msgstr "Guardar y recuperar la posición de la ventana"
+
+#~ msgid "Add Spanish translation (thanks to @JeysonFlores)"
+#~ msgstr "Añadir traducción al español (gracias a @JeysonFlores)"
+
+#~ msgid "Initial release"
+#~ msgstr "Versión inicial"
 
 #~ msgctxt "shortcut window"
 #~ msgid "New File"
@@ -568,7 +760,6 @@ msgstr "Entrada borrada."
 #~ msgstr "Una descripción que diga lo que la aplicación te ayuda a hacer."
 
 #, fuzzy
-#~| msgid "Type of the app."
 #~ msgid "Type of the app, multiply selectable."
 #~ msgstr "Tipo de aplicación."
 
@@ -584,3 +775,19 @@ msgstr "Entrada borrada."
 
 #~ msgid "Edit a desktop file"
 #~ msgstr "Editar un archivo de escritorio"
+
+#~ msgid "Syntax error detection"
+#~ msgstr "Detección de errores sintácticos"
+
+#~ msgid ""
+#~ "Automatically save everything―your data in editing, last open view, and "
+#~ "preferences"
+#~ msgstr ""
+#~ "Guarda todo automáticamente: los datos de edición, la última vista "
+#~ "abierta y las preferencias"
+
+#~ msgid "Files view in the light mode"
+#~ msgstr "Vista de los archivos en modo claro"
+
+#~ msgid "Files view in the dark mode"
+#~ msgstr "Vista de los archivos en modo oscuro"

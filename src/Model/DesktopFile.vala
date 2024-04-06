@@ -8,21 +8,24 @@
  */
 public class Model.DesktopFile : Object {
     /**
-     * The path of the desktop file.
+     * The absolute path to the desktop file.
      */
     public string path { get; construct; }
 
     /**
-     * The prefix of the desktop file.
+     * The suffix of the desktop files.
      */
     public const string DESKTOP_SUFFIX = ".desktop";
 
+    /**
+     * Store data in a single desktop file.
+     */
     private KeyFile keyfile;
 
     /**
      * The constructor.
      *
-     * @param path The path to the desktop file.
+     * @param path the absolute path to the desktop file
      */
     public DesktopFile (string path) {
         Object (
@@ -35,10 +38,10 @@ public class Model.DesktopFile : Object {
     }
 
     /**
-     * Returns true if this and other contains the same values.
+     * Check if this and other contains the same values as desktop files.
      *
-     * @param other Another DesktopFile.
-     * @return true if this and other contains the same values.
+     * @param other another DesktopFile
+     * @return true if this and other contains the same values
      */
     public bool equals (DesktopFile other) {
         // Compare other than the path
@@ -51,8 +54,8 @@ public class Model.DesktopFile : Object {
     /**
      * Copy and set data from this to another DesktopFile.
      *
-     * @param dest Another DesktopFile to copy this data to.
-     * @return true if successfully copied, false otherwise.
+     * @param dest another DesktopFile to copy this data to
+     * @return true if successfully copied, false otherwise
      */
     public bool copy_to (DesktopFile dest) {
         string data = to_data ();
@@ -65,6 +68,15 @@ public class Model.DesktopFile : Object {
     //
     ////////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Return the value associated with ``key`` as a boolean.
+     *
+     * @param key a key
+     * @param is_required whether this key is required in
+     * [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html|Desktop Entry Specification]]
+     * @return the value associated with the key as a boolean, or false if the key was not found or could not be parsed
+     * @see GLib.KeyFile.get_boolean
+     */
     public bool get_boolean (string key, bool is_required = true) {
         bool val = false;
 
@@ -298,11 +310,11 @@ public class Model.DesktopFile : Object {
     }
 
     /**
-     * Open this in an external editor.
+     * Open the desktop file associated with this in an external editor.
      *
      * @param parent the parent GtkWindow
-     * @return true if successfully opened this, false otherwise.
-     * @throws Error failed to open this externally.
+     * @return true if successfully opened this, false otherwise
+     * @throws Error failed to open this externally
      */
     public async bool open_external (Gtk.Window? parent) throws Error {
         var file = File.new_for_path (path);

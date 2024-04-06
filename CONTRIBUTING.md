@@ -22,10 +22,7 @@ Thank you for getting interested in contribution to this project! We really appr
 
 ## Translate the Project
 
-We accept translations through Weblate:
-
-- [pinit-app](https://hosted.weblate.org/projects/rosp/pinit-app/): Texts in the app itself
-- [pinit-metainfo](https://hosted.weblate.org/projects/rosp/pinit-metainfo/): Texts in the desktop entry and the software center
+We accept translations through [Weblate](https://hosted.weblate.org/projects/rosp/pinit/).
 
 Alternatively, you can fork this repository, edit the `*.po` files directly, and submit changes through pull requests.
 
@@ -57,7 +54,11 @@ or the interface of methods.
 
 #### Refer to Existing Documentation Comments
 
-Setting the build option `doc` to `true` will generate HTML documentations from the code.
+Building the source code with the option `doc` to `true` will generate HTML documentations.
+
+You'll need the following extra dependencies to build:
+
+* valadoc
 
 Assuming that you've already built the project through the way described in the [README](README.md#for-developers):
 
@@ -65,7 +66,7 @@ Assuming that you've already built the project through the way described in the 
 cd builddir
 meson configure -Ddoc=true
 ninja
-xdg-open doc/index.html
+xdg-open valadoc/index.html
 ```
 
 #### Editing Documentation Comments

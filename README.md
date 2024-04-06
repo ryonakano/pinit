@@ -30,11 +30,12 @@ flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean 
 ### From Source Code (Native)
 You'll need the following dependencies to build:
 
+* blueprint-compiler
 * libadwaita-1-dev (>= 1.4.0)
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.74)
 * libgtk-4-dev (>= 4.10)
-* meson (>= 0.57.0)
+* meson (>= 0.58.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
@@ -52,7 +53,6 @@ com.github.ryonakano.pinit
 ```
 
 ## Contributing
-
 Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
 - submit bug reports / feature requests
@@ -60,7 +60,6 @@ Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like 
 - translate the project
 
 ## Get Support
-
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/pinit/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/pinit/discussions/new/choose) if none is relevant.
 
 ## History

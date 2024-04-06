@@ -8,7 +8,7 @@
  */
 
 /**
- * The class to load desktop files and stores in the form of {@link DesktopFile} class.
+ * The class to load desktop files and store them in the type of {@link DesktopFile}.
  */
 public class Model.DesktopFileModel : Object {
     /**
@@ -27,7 +27,7 @@ public class Model.DesktopFileModel : Object {
     public Gee.ArrayList<DesktopFile> files_list { get; private set; }
 
     /**
-     * The representation of the {@link desktop_files_path} in the File type.
+     * The directory where user desktop files are stored.
      */
     private File desktop_files_dir;
 
@@ -51,14 +51,12 @@ public class Model.DesktopFileModel : Object {
     }
 
     /**
-     * Search for desktop files and stores in the {@link DesktopFile} data type.
+     * Search for desktop files and store in the {@link DesktopFile} data type.
      *
-     * Search ~/.local/share/applications for files with .desktop suffix. Create a new
-     * {@link DesktopFile} if a matching file found and is valid. Repeat this for all files in the directory
-     * and then return the list of {@link DesktopFile}.
+     * Search ``~/.local/share/applications`` for files with .desktop suffix. Create a new
+     * {@link DesktopFile} if a matching file found and is valid. Repeat this for all files in the directory.
      *
-     * Emits {@link DesktopFileModel.load_success} if loaded successfully, {@link DesktopFileModel.load_failure}
-     * otherwise.
+     * Emits {@link load_success} if loaded successfully, {@link load_failure} otherwise.
      */
     public async void load () {
         bool is_success = false;
@@ -79,9 +77,9 @@ public class Model.DesktopFileModel : Object {
 
             FileInfo file_info;
             try {
-                // Check and address the files in the desktop_files_path directory one by one
+                // Check all files in the directory one by one
                 while ((file_info = enumerator.next_file ()) != null) {
-                    // We handle only the desktop file in this app, so ignore any files without the .desktop suffix
+                    // Ignore any files without the .desktop suffix
                     string name = file_info.get_name ();
                     if (!name.has_suffix (DesktopFile.DESKTOP_SUFFIX)) {
                         continue;
