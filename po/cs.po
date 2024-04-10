@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:24+0000\n"
+"POT-Creation-Date: 2024-04-06 10:07+0900\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -124,8 +124,8 @@ msgstr ""
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:380
-#: src/View/EditView.vala:469 src/View/FilesView.vala:148
+#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
 #, fuzzy
 msgid "_Close"
 msgstr "Zavřít"
@@ -173,47 +173,78 @@ msgstr ""
 msgid "App Name"
 msgstr "Jméno aplikace"
 
-#: src/View/EditView.vala:78
+#: src/View/EditView.vala:74
+msgid "Shown in the launcher or dock."
+msgstr "Zobrazuje se ve spouštěči aplikací nebo doku."
+
+#: src/View/EditView.vala:79
 msgid "Exec File"
 msgstr "Spustitelný soubor"
 
-#: src/View/EditView.vala:81
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"Příkaz/aplikace se spustí po kliknutí na položku aplikace ve spouštěči. "
+"Zadejte absolutní cestu nebo název aliasu aplikace."
+
+#: src/View/EditView.vala:83
 #, fuzzy
 msgid "Select an executable file…"
 msgstr "Vybrat spustitelný soubor"
 
-#: src/View/EditView.vala:92
+#: src/View/EditView.vala:94
 msgid "Optional Fields"
 msgstr ""
 
-#: src/View/EditView.vala:93
+#: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 
-#: src/View/EditView.vala:97
+#: src/View/EditView.vala:99
 msgid "Icon File"
 msgstr "Ikona"
 
 #: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr "Ikona aplikace. Zadejte absolutní cestu nebo název aliasu ikony."
+
+#: src/View/EditView.vala:103
 #, fuzzy
 msgid "Select an icon file…"
 msgstr "Vybrat ikonu"
 
-#: src/View/EditView.vala:108
+#: src/View/EditView.vala:111
 #, fuzzy
 msgid "Generic Name"
 msgstr "Obecné"
 
-#: src/View/EditView.vala:113
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
 msgid "Comment"
 msgstr "Popis aplikace"
 
-#: src/View/EditView.vala:127
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+"Popisuje aplikaci. Může se zobrazit jako popis, když umístíte ukazatel myši "
+"na položku aplikace ve spouštěči/doku."
+
+#: src/View/EditView.vala:132
 #, fuzzy
 msgid "Advanced Configurations"
 msgstr "Pokročilá konfigurace"
 
-#: src/View/EditView.vala:128
+#: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -221,90 +252,98 @@ msgstr ""
 "Ve většině případů můžete vytvořit položku aplikace vyplněním sekcí výše. V "
 "případě, že nebudou fungovat, můžete použít následující sekci."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:137
 msgid "Startup WM Class"
 msgstr "Třída spuštění WM"
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"Přidružte aplikaci k oknu, které má toto ID. Vyplňte, pokud se při spuštění "
+"aplikace objeví v doku jiná nebo duplicitní ikona."
+
+#: src/View/EditView.vala:143
 msgid "Run in Terminal"
 msgstr "Spustit v Terminálu"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:144
 #, fuzzy
 msgid "Turn on if you want to register a CUI app."
 msgstr "Zaškrtněte, pokud chcete zaregistrovat aplikaci CUI."
 
-#: src/View/EditView.vala:142
+#: src/View/EditView.vala:148
 #, fuzzy
 msgid "_Open"
 msgstr "Otevřít"
 
-#: src/View/EditView.vala:146
+#: src/View/EditView.vala:152
 #, fuzzy
 msgid "Open with Text Editor"
 msgstr "Otevřít v textovém editoru"
 
-#: src/View/EditView.vala:147
+#: src/View/EditView.vala:153
 #, fuzzy
 msgid "You can also edit more options by opening with a text editor."
 msgstr "Další možnosti můžete upravit otevřením v textovém editoru."
 
-#: src/View/EditView.vala:192
+#: src/View/EditView.vala:198
 msgid "New Entry"
 msgstr "Nová položka"
 
-#: src/View/EditView.vala:208 src/View/EditView.vala:410
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
 msgstr ""
 
-#: src/View/EditView.vala:228
+#: src/View/EditView.vala:234
 #, fuzzy
 msgid "Select Executable File"
 msgstr "Vybrat spustitelný soubor"
 
-#: src/View/EditView.vala:229 src/View/EditView.vala:286
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
 #, fuzzy
 msgid "_Select"
 msgstr "Vybrat"
 
-#: src/View/EditView.vala:282
+#: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG, nebo XMP soubory"
 
-#: src/View/EditView.vala:285
+#: src/View/EditView.vala:291
 #, fuzzy
 msgid "Select Icon File"
 msgstr "Vybrat ikonu"
 
-#: src/View/EditView.vala:377
+#: src/View/EditView.vala:383
 #, fuzzy
 msgid "Failed to Open with External App"
 msgstr "Nelze otevřít pomocí externí aplikace"
 
-#: src/View/EditView.vala:378
+#: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
-#: src/View/EditView.vala:435
+#: src/View/EditView.vala:441
 #, fuzzy
 msgid "Edit Entry"
 msgstr "Editace položky"
 
-#: src/View/EditView.vala:437
+#: src/View/EditView.vala:443
 #, fuzzy, c-format
 msgid "Edit “%s”"
 msgstr "Editace “%s”"
 
-#: src/View/EditView.vala:459
+#: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
 msgstr ""
 
-#: src/View/EditView.vala:461
+#: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr ""
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
 msgstr ""
 
@@ -656,35 +695,6 @@ msgstr "Smazaná položka."
 
 #~ msgid "Suffix of the file"
 #~ msgstr "Přípona souboru"
-
-#~ msgid "Shown in the launcher or dock."
-#~ msgstr "Zobrazuje se ve spouštěči aplikací nebo doku."
-
-#~ msgid ""
-#~ "Descibes the app. May appear as a tooltip when you hover over the app "
-#~ "entry in the launcher/dock."
-#~ msgstr ""
-#~ "Popisuje aplikaci. Může se zobrazit jako popis, když umístíte ukazatel "
-#~ "myši na položku aplikace ve spouštěči/doku."
-
-#~ msgid ""
-#~ "The command/app launched when you click the app entry in the launcher. "
-#~ "Specify in an absolute path or an app's alias name."
-#~ msgstr ""
-#~ "Příkaz/aplikace se spustí po kliknutí na položku aplikace ve spouštěči. "
-#~ "Zadejte absolutní cestu nebo název aliasu aplikace."
-
-#~ msgid ""
-#~ "The icon branding the app. Specify in an absolute path or an icon's alias "
-#~ "name."
-#~ msgstr "Ikona aplikace. Zadejte absolutní cestu nebo název aliasu ikony."
-
-#~ msgid ""
-#~ "Associate the app with a window that has this ID. Use this if a different "
-#~ "or duplicated icon appears in the dock when the app launches."
-#~ msgstr ""
-#~ "Přidružte aplikaci k oknu, které má toto ID. Vyplňte, pokud se při "
-#~ "spuštění aplikace objeví v doku jiná nebo duplicitní ikona."
 
 #, c-format
 #~ msgid "Could not write to file “%s”"
