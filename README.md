@@ -1,6 +1,4 @@
 # Pin It!
-Pin portable apps to the launcher
-
 ![Light Mode Screenshot](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)
 
 ![Dark Mode Screenshot](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
@@ -19,12 +17,19 @@ You can download the app from Flathub, which should make this app available for 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
 
 ### From Source Code (Flatpak)
-If you would like to test latest source code, clone the repository and then run the following command:
+You'll need `flatpak` and `flatpak-builder` commands installed on your system.
+
+Run `flatpak remote-add` to add Flathub remote for dependencies:
 
 ```
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y --user flathub org.flatpak.Builder
-flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
+```
+
+To build and install, use `flatpak-builder`, then execute with `flatpak run`:
+
+```
+flatpak-builder builddir --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
+flatpak run com.github.ryonakano.pinit
 ```
 
 ### From Source Code (Native)
