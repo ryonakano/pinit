@@ -250,7 +250,6 @@ public class MainWindow : Adw.ApplicationWindow {
         ) {
             transient_for = this,
             modal = true,
-            comments = _("Pin portable apps to the launcher"),
             copyright = "© 2021-2024 Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
