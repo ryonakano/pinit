@@ -5,6 +5,13 @@ project(
     meson_version: '>=0.58.0'
 )
 
+app_name = 'Pin It!'
+app_id = meson.project_name()
+if get_option('development')
+    app_name += ' (Development)'
+    app_id += '.Devel'
+endif
+
 gnome = import('gnome')
 i18n = import('i18n')
 

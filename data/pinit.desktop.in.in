@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Pin It!
+Name=@APP_NAME@
 GenericName=Desktop File Creator
 Comment=Pin portable apps to the launcher
 Categories=System;Utility;
-Exec=com.github.ryonakano.pinit
-Icon=com.github.ryonakano.pinit
+Exec=@APP_ID@
+Icon=@APP_ID@
 Terminal=false
 Type=Application
 Keywords=Desktop;File;Create;Edit;Info;Icon;AppImage;

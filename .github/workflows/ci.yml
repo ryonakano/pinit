@@ -36,7 +36,7 @@ jobs:
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
           bundle: pinit.flatpak
-          manifest-path: com.github.ryonakano.pinit.yml
+          manifest-path: build-aux/flathub/com.github.ryonakano.pinit.Devel.yml
           run-tests: true
           cache-key: "flatpak-builder-${{ github.sha }}"
           arch: ${{ matrix.arch }}

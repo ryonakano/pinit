@@ -1,5 +1,5 @@
-data/pinit.desktop.in
-data/pinit.metainfo.xml.in
+data/pinit.desktop.in.in
+data/pinit.metainfo.xml.in.in
 data/resources/gtk/help-overlay.blp
 src/MainWindow.vala
 src/View/EditView.vala

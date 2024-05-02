@@ -42,6 +42,11 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        // Distinct development build visually
+        if (".Devel" in Config.APP_ID) {
+            add_css_class ("devel");
+        }
+
         add_action_entries (ACTION_ENTRIES, this);
 
         width_request = 450;
@@ -211,7 +216,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Create a new DesktopFile with random filename and start editing it.
      */
     private void on_new_activate () {
-        string filename = Config.PROJECT_NAME + "." + Uuid.string_random ();
+        string filename = Config.APP_ID + "." + Uuid.string_random ();
         string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
                                             filename + Model.DesktopFile.DESKTOP_SUFFIX);
 
@@ -240,7 +245,7 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         var about_window = new Adw.AboutWindow.from_appdata (
-            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.PROJECT_NAME),
+            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
             null
         ) {
             transient_for = this,
@@ -254,6 +259,11 @@ public class MainWindow : Adw.ApplicationWindow {
             ///John Doe <john-doe@example.com>
             translator_credits = _("translator-credits")
         };
+
+        // Distinct development build visually
+        if (".Devel" in Config.APP_ID) {
+            about_window.add_css_class ("devel");
+        }
 
         about_window.present ();
     }
