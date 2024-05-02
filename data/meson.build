@@ -53,7 +53,7 @@ gschema_file = configure_file(
 
 install_data(
     gschema_file,
-    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
 
 # Test definitions
