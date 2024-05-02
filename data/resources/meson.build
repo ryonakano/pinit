@@ -1,6 +1,6 @@
 blueprints = custom_target('blueprints',
     input: files(
-        'gtk' / 'help-overlay.blp'
+        'gtk/help-overlay.blp'
     ),
     output: '.',
     command: [
