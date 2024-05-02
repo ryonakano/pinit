@@ -50,11 +50,11 @@ public class Application : Adw.Application {
     /**
      * Convert ``from_value`` to ``to_value``.
      *
-     * @param binding a binding
-     * @param from_value the value of Action.state property
-     * @param to_value the value of Adw.StyleManager.color_scheme property
-     * @return true if the transformation was successful, false otherwise
+     * @param binding       a binding
+     * @param from_value    the value of Action.state property
+     * @param to_value      the value of Adw.StyleManager.color_scheme property
      *
+     * @return true if the transformation was successful, false otherwise
      * @see GLib.BindingTransformFunc
      */
     private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
@@ -64,15 +64,19 @@ public class Application : Adw.Application {
             return false;
         }
 
-        var val = (Adw.ColorScheme) variant.get_int32 ();
+        var val = variant.get_string ();
         switch (val) {
-            case Adw.ColorScheme.DEFAULT:
-            case Adw.ColorScheme.FORCE_LIGHT:
-            case Adw.ColorScheme.FORCE_DARK:
-                to_value.set_enum (val);
+            case Define.ColorScheme.DEFAULT:
+                to_value.set_enum (Adw.ColorScheme.DEFAULT);
+                break;
+            case Define.ColorScheme.FORCE_LIGHT:
+                to_value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
+                break;
+            case Define.ColorScheme.FORCE_DARK:
+                to_value.set_enum (Adw.ColorScheme.FORCE_DARK);
                 break;
             default:
-                warning ("style_action_transform_to_cb: Invalid ColorScheme: %d", val);
+                warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
                 return false;
         }
 
@@ -82,23 +86,27 @@ public class Application : Adw.Application {
     /**
      * Convert ``from_value`` to ``to_value``.
      *
-     * @param binding a binding
-     * @param from_value the value of Adw.StyleManager.color_scheme property
-     * @param to_value the value of Action.state property
-     * @return true if the transformation was successful, false otherwise
+     * @param binding       a binding
+     * @param from_value    the value of Adw.StyleManager.color_scheme property
+     * @param to_value      the value of Action.state property
      *
+     * @return true if the transformation was successful, false otherwise
      * @see GLib.BindingTransformFunc
      */
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
         var val = (Adw.ColorScheme) from_value;
         switch (val) {
             case Adw.ColorScheme.DEFAULT:
+                to_value.set_variant (new Variant.string (Define.ColorScheme.DEFAULT));
+                break;
             case Adw.ColorScheme.FORCE_LIGHT:
+                to_value.set_variant (new Variant.string (Define.ColorScheme.FORCE_LIGHT));
+                break;
             case Adw.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.int32 (val));
+                to_value.set_variant (new Variant.string (Define.ColorScheme.FORCE_DARK));
                 break;
             default:
-                warning ("style_action_transform_from_cb: Invalid ColorScheme: %d", val);
+                warning ("style_action_transform_from_cb: Invalid color scheme: %d", val);
                 return false;
         }
 
@@ -108,24 +116,24 @@ public class Application : Adw.Application {
     /**
      * Convert from the "style" enum defined in the gschema to Adw.ColorScheme.
      *
-     * @param to_value return location for the "color-scheme" property value of ``style_manager``
-     * @param from_variant the Variant containing "style" enum value of {@link settings}
-     * @param user_data unused (null)
-     * @return true if the conversion succeeded, false otherwise
+     * @param value         the Value containing Adw.ColorScheme value
+     * @param variant       the Variant containing "style" enum value defined in the gschema
+     * @param user_data     unused (null)
      *
+     * @return true if the conversion succeeded, false otherwise
      * @see GLib.SettingsBindGetMappingShared
      */
-    private static bool color_scheme_get_mapping_cb (Value to_value, Variant from_variant, void* user_data) {
-        var val = from_variant.get_string ();
+    private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
+        var val = variant.get_string ();
         switch (val) {
-            case Define.Style.DEFAULT:
-                to_value.set_enum (Adw.ColorScheme.DEFAULT);
+            case Define.ColorScheme.DEFAULT:
+                value.set_enum (Adw.ColorScheme.DEFAULT);
                 break;
-            case Define.Style.LIGHT:
-                to_value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
+            case Define.ColorScheme.FORCE_LIGHT:
+                value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
                 break;
-            case Define.Style.DARK:
-                to_value.set_enum (Adw.ColorScheme.FORCE_DARK);
+            case Define.ColorScheme.FORCE_DARK:
+                value.set_enum (Adw.ColorScheme.FORCE_DARK);
                 break;
             default:
                 warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
@@ -138,31 +146,31 @@ public class Application : Adw.Application {
     /**
      * Convert from Adw.ColorScheme to the "style" enum defined in the gschema.
      *
-     * @param from_value the "color-scheme" property value of ``style_manager``
-     * @param expected_type the expected type of Variant that this method returns
-     * @param user_data unused (null)
-     * @return a new Variant holding the data from ``from_value``
+     * @param value             the Value containing Adw.ColorScheme value
+     * @param expected_type     the expected type of Variant that this method returns
+     * @param user_data         unused (null)
      *
+     * @return a new Variant containing "style" enum value defined in the gschema
      * @see GLib.SettingsBindSetMappingShared
      */
-    private static Variant color_scheme_set_mapping_cb (Value from_value, VariantType expected_type, void* user_data) {
+    private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
         string color_scheme;
 
-        var val = (Adw.ColorScheme) from_value;
+        var val = (Adw.ColorScheme) value;
         switch (val) {
             case Adw.ColorScheme.DEFAULT:
-                color_scheme = Define.Style.DEFAULT;
+                color_scheme = Define.ColorScheme.DEFAULT;
                 break;
             case Adw.ColorScheme.FORCE_LIGHT:
-                color_scheme = Define.Style.LIGHT;
+                color_scheme = Define.ColorScheme.FORCE_LIGHT;
                 break;
             case Adw.ColorScheme.FORCE_DARK:
-                color_scheme = Define.Style.DARK;
+                color_scheme = Define.ColorScheme.FORCE_DARK;
                 break;
             default:
                 warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
                 // fallback to default
-                color_scheme = Define.Style.DEFAULT;
+                color_scheme = Define.ColorScheme.DEFAULT;
                 break;
         }
 
@@ -178,7 +186,7 @@ public class Application : Adw.Application {
      */
     private void setup_style () {
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.INT32, new Variant.int32 (Adw.ColorScheme.DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,

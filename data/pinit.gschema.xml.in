@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <enum id="style">
-    <value value="0" nick="default"/>
-    <value value="1" nick="light"/>
-    <value value="2" nick="dark"/>
-  </enum>
-
   <schema path="/com/github/ryonakano/pinit/" id="@APP_ID@">
-    <key name="color-scheme" enum="style">
+    <key name="color-scheme" type="s">
+      <choices>
+        <choice value="default"/>
+        <choice value="force-light"/>
+        <choice value="force-dark"/>
+      </choices>
+
       <default>'default'</default>
       <summary>Color scheme</summary>
       <description>Whether to show the window in a dark style or not</description>
