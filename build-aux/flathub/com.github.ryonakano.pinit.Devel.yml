@@ -22,7 +22,7 @@ modules:
 
   - name: pinit
     buildsystem: meson
-    config_opts:
+    config-opts:
       - '-Ddevelopment=true'
     sources:
       - type: dir
