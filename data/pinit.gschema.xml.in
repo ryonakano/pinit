@@ -6,7 +6,7 @@
     <value value="2" nick="dark"/>
   </enum>
 
-  <schema path="/com/github/ryonakano/pinit/" id="com.github.ryonakano.pinit">
+  <schema path="/com/github/ryonakano/pinit/" id="@APP_ID@">
     <key name="color-scheme" enum="style">
       <default>'default'</default>
       <summary>Color scheme</summary>

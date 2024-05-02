@@ -1,8 +1,8 @@
-app-id: com.github.ryonakano.pinit
+app-id: com.github.ryonakano.pinit.Devel
 runtime: org.gnome.Platform
 runtime-version: '46'
 sdk: org.gnome.Sdk
-command: com.github.ryonakano.pinit
+command: com.github.ryonakano.pinit.Devel
 finish-args:
   - '--share=ipc'
   - '--socket=wayland'
@@ -22,6 +22,8 @@ modules:
 
   - name: pinit
     buildsystem: meson
+    config_opts:
+      - '-Ddevelopment=true'
     sources:
       - type: dir
-        path: .
+        path: ../../

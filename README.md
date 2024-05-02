@@ -28,8 +28,8 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 To build and install, use `flatpak-builder`, then execute with `flatpak run`:
 
 ```
-flatpak-builder builddir --user --install --force-clean --install-deps-from=flathub com.github.ryonakano.pinit.yml
-flatpak run com.github.ryonakano.pinit
+flatpak-builder builddir --user --install --force-clean --install-deps-from=flathub build-aux/flathub/com.github.ryonakano.pinit.Devel.yml
+flatpak run com.github.ryonakano.pinit.Devel
 ```
 
 ### From Source Code (Native)
