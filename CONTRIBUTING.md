@@ -63,10 +63,9 @@ You'll need the following extra dependencies to build:
 Assuming that you've already built the project through the way described in the [README](README.md#for-developers):
 
 ```bash
-cd builddir
-meson configure -Ddoc=true
-ninja
-xdg-open valadoc/index.html
+meson configure builddir -Ddoc=true
+meson compile -C builddir
+xdg-open builddir/valadoc/index.html
 ```
 
 #### Editing Documentation Comments
