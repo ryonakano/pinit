@@ -230,10 +230,9 @@ public class MainWindow : Adw.ApplicationWindow {
      * The callback for about window.
      */
     private void on_about_activate () {
-        // List of code contributors
+        // List of code maintainers
         const string[] DEVELOPERS = {
             "Ryo Nakano https://github.com/ryonakano",
-            "Jeyson Flores https://github.com/JeysonFlores",
         };
         // List of icon authors
         const string[] ARTISTS = {
