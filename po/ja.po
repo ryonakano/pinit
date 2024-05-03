@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-06 10:07+0900\n"
-"PO-Revision-Date: 2024-04-09 12:01+0000\n"
+"PO-Revision-Date: 2024-05-04 06:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
 "\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -331,11 +331,11 @@ msgstr "新しいエントリーを作成"
 
 #: src/View/FilesView.vala:31
 msgid "_Light"
-msgstr "明るい(_L)"
+msgstr "ライト(_L)"
 
 #: src/View/FilesView.vala:32
 msgid "_Dark"
-msgstr "暗い(_D)"
+msgstr "ダーク(_D)"
 
 #: src/View/FilesView.vala:33
 msgid "S_ystem"
