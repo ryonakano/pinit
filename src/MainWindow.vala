@@ -244,12 +244,10 @@ public class MainWindow : Adw.ApplicationWindow {
             "hanaral https://github.com/hanaral",
         };
 
-        var about_window = new Adw.AboutWindow.from_appdata (
+        var about_dialog = new Adw.AboutDialog.from_appdata (
             "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
             null
         ) {
-            transient_for = this,
-            modal = true,
             copyright = "© 2021-2024 Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
@@ -258,12 +256,6 @@ public class MainWindow : Adw.ApplicationWindow {
             ///John Doe <john-doe@example.com>
             translator_credits = _("translator-credits")
         };
-
-        // Distinct development build visually
-        if (".Devel" in Config.APP_ID) {
-            about_window.add_css_class ("devel");
-        }
-
-        about_window.present ();
+        about_dialog.present (this);
     }
 }
