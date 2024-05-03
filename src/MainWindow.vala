@@ -256,12 +256,6 @@ public class MainWindow : Adw.ApplicationWindow {
             ///John Doe <john-doe@example.com>
             translator_credits = _("translator-credits")
         };
-
-        // Distinct development build visually
-        if (".Devel" in Config.APP_ID) {
-            about_dialog.add_css_class ("devel");
-        }
-
         about_dialog.present (this);
     }
 }
