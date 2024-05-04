@@ -3,40 +3,40 @@
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # albanobattistella <albano_battistella@hotmail.com>, 2021, 2022, 2023, 2024.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 10:07+0900\n"
-"PO-Revision-Date: 2024-04-13 08:54+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"PO-Revision-Date: 2024-05-04 15:05+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
-#: data/pinit.desktop.in:3
-msgid "Pin It!"
-msgstr "Pin It!"
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in:4
+#: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
 msgstr "Creatore di File Desktop"
 
-#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
-#: src/MainWindow.vala:249
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 #, fuzzy
 msgid "Pin portable apps to the launcher"
 msgstr "Aggiungi qualsiasi app al launcher"
 
-#: data/pinit.desktop.in:11
+#: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
 
-#: data/pinit.metainfo.xml.in:13
+#: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
@@ -44,40 +44,32 @@ msgstr ""
 "Aggiungi scorciatoie per app portatili come file eseguibili non elaborati, "
 "file AppImage, ecc. all'avvio delle app sul desktop."
 
-#: data/pinit.metainfo.xml.in:16
+#: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
 msgstr "Altre funzionalità includono:"
 
-#: data/pinit.metainfo.xml.in:20
+#: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
 "Modifica o elimina le voci dell'app create senza aprire il file manager"
 
-#: data/pinit.metainfo.xml.in:21
+#: data/pinit.metainfo.xml.in.in:21
 #, fuzzy
 msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 "Aggiunge automaticamente l'autorizzazione di esecuzione al file selezionato"
 
-#: data/pinit.metainfo.xml.in:27
+#: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "List of app entries in the light mode"
-msgstr "Modifica vista in modalità chiara"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Visualizzazione dei file in modalità chiara"
 
-#: data/pinit.metainfo.xml.in:32
+#: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Editing the app entry in the light mode"
-msgstr "Modifica vista in modalità chiara"
-
-#: data/pinit.metainfo.xml.in:37
-#, fuzzy
-msgid "List of app entries in the dark mode"
-msgstr "Modifica vista in modalità scura"
-
-#: data/pinit.metainfo.xml.in:42
-#, fuzzy
-msgid "Editing the app entry in the dark mode"
-msgstr "Modifica vista in modalità scura"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Visualizzazione dei file in modalità scura"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -106,59 +98,62 @@ msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Nuova Voce"
 
-#: src/MainWindow.vala:89
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr "Albano Battistella"
+
+#: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr ""
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:108
 msgid "Entry updated."
 msgstr ""
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
 msgstr ""
 
-#: src/MainWindow.vala:124
+#: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 #, fuzzy
 msgid "_Close"
 msgstr "Chiudi"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:162
 #, fuzzy
 msgid "Save Changes?"
 msgstr "Modifiche salvate!"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
 
-#: src/MainWindow.vala:161 src/View/FilesView.vala:134
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
 #, fuzzy
 msgid "_Cancel"
 msgstr "Cancella"
 
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:166
 msgid "_Discard"
 msgstr ""
 
-#: src/MainWindow.vala:163 src/View/EditView.vala:39
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
 #, fuzzy
 msgid "_Save"
 msgstr "Salva"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You may add your name and your email address if you want, e.g.:
-#. John Doe <john-doe@example.com>
-#: src/MainWindow.vala:256
-msgid "translator-credits"
-msgstr "Albano Battistella"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
@@ -354,18 +349,18 @@ msgstr "Crea una nuova voce"
 
 #: src/View/FilesView.vala:31
 #, fuzzy
-msgid "_Light"
-msgstr "Chiaro"
+msgid "S_ystem"
+msgstr "Sistema"
 
 #: src/View/FilesView.vala:32
 #, fuzzy
-msgid "_Dark"
-msgstr "Scuro"
+msgid "_Light"
+msgstr "Chiaro"
 
 #: src/View/FilesView.vala:33
 #, fuzzy
-msgid "S_ystem"
-msgstr "Sistema"
+msgid "_Dark"
+msgstr "Scuro"
 
 #: src/View/FilesView.vala:36
 #, fuzzy
@@ -511,6 +506,25 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Voce eliminata."
+
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Modifica vista in modalità chiara"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Modifica vista in modalità scura"
+
+#~ msgid "Pin It!"
+#~ msgstr "Pin It!"
+
+#, fuzzy
+#~ msgid "List of app entries in the light mode"
+#~ msgstr "Modifica vista in modalità chiara"
+
+#, fuzzy
+#~ msgid "List of app entries in the dark mode"
+#~ msgstr "Modifica vista in modalità scura"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
@@ -805,12 +819,6 @@ msgstr "Voce eliminata."
 #~ msgstr ""
 #~ "Salva automaticamente tutto: i tuoi dati in fase di modifica, ultima "
 #~ "visualizzazione aperta e preferenze"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Visualizzazione dei file in modalità chiara"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Visualizzazione dei file in modalità scura"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Supporto per l'impostazione della chiave \"StartupWMClass\""

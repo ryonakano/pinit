@@ -2,13 +2,14 @@
 # Copyright (C) 2021-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 10:07+0900\n"
-"PO-Revision-Date: 2024-05-04 06:07+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"PO-Revision-Date: 2024-05-04 15:05+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,24 +19,23 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/pinit.desktop.in:3
-msgid "Pin It!"
-msgstr "Pin It!"
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in:4
+#: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
 msgstr "Создатель файлов рабочего стола"
 
-#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
-#: src/MainWindow.vala:249
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "Закрепляйте портативные приложения"
 
-#: data/pinit.desktop.in:11
+#: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Рабочий стол;Файл;Создать;Редактировать;Информация;Иконка;AppImage;"
 
-#: data/pinit.metainfo.xml.in:13
+#: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
@@ -43,33 +43,29 @@ msgstr ""
 "Закрепляйте портативные программы, такие как исполняемые файлы, программы "
 "AppImage и др. в ваше меню приложений."
 
-#: data/pinit.metainfo.xml.in:16
+#: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
 msgstr "Другие функции включают в себя:"
 
-#: data/pinit.metainfo.xml.in:20
+#: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr "Редактируйте или удаляйте созданные записи без файлового менеджера"
 
-#: data/pinit.metainfo.xml.in:21
+#: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
 msgstr "Автоматически добавляет разрешение на выполнение выбранного файла"
 
-#: data/pinit.metainfo.xml.in:27
-msgid "List of app entries in the light mode"
-msgstr "Список записей в светлом режиме"
+#: data/pinit.metainfo.xml.in.in:27
+#, fuzzy
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Просмотр файлов в светлом режиме"
 
-#: data/pinit.metainfo.xml.in:32
-msgid "Editing the app entry in the light mode"
-msgstr "Редактирование в светлом режиме"
-
-#: data/pinit.metainfo.xml.in:37
-msgid "List of app entries in the dark mode"
-msgstr "Список записей в тёмном режиме"
-
-#: data/pinit.metainfo.xml.in:42
-msgid "Editing the app entry in the dark mode"
-msgstr "Редактирование в тёмном режиме"
+#: data/pinit.metainfo.xml.in.in:32
+#, fuzzy
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Просмотр файлов в тёмном режиме"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -96,32 +92,42 @@ msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Новая запись"
 
-#: src/MainWindow.vala:89
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr "lenemter"
+
+#: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr "Запись удалена."
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:108
 msgid "Entry updated."
 msgstr "Запись обновлена."
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
 msgstr "Не удалось загрузить записи"
 
-#: src/MainWindow.vala:124
+#: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
 msgstr "При загрузке записей произошла ошибка."
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
 msgstr "Закрыть"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:162
 msgid "Save Changes?"
 msgstr "Сохранить изменения?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -129,24 +135,17 @@ msgstr ""
 "Открытые записи содержат несохранённые изменения. Несохранённые изменения "
 "будут безвозвратно потеряны."
 
-#: src/MainWindow.vala:161 src/View/FilesView.vala:134
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
 msgstr "Отменить"
 
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:166
 msgid "_Discard"
 msgstr "Сбросить"
 
-#: src/MainWindow.vala:163 src/View/EditView.vala:39
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
 msgid "_Save"
 msgstr "Сохранить"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You may add your name and your email address if you want, e.g.:
-#. John Doe <john-doe@example.com>
-#: src/MainWindow.vala:256
-msgid "translator-credits"
-msgstr "lenemter"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
@@ -343,16 +342,16 @@ msgid "Create a new entry"
 msgstr "Создать новую запись"
 
 #: src/View/FilesView.vala:31
+msgid "S_ystem"
+msgstr "Система"
+
+#: src/View/FilesView.vala:32
 msgid "_Light"
 msgstr "Светлый"
 
-#: src/View/FilesView.vala:32
+#: src/View/FilesView.vala:33
 msgid "_Dark"
 msgstr "Тёмный"
-
-#: src/View/FilesView.vala:33
-msgid "S_ystem"
-msgstr "Система"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
@@ -497,6 +496,25 @@ msgstr ""
 #, fuzzy
 msgid "Delete keyword"
 msgstr "Запись удалена."
+
+#, fuzzy
+#~| msgid "Editing the app entry in the light mode"
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Редактирование в светлом режиме"
+
+#, fuzzy
+#~| msgid "Editing the app entry in the dark mode"
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Редактирование в тёмном режиме"
+
+#~ msgid "Pin It!"
+#~ msgstr "Pin It!"
+
+#~ msgid "List of app entries in the light mode"
+#~ msgstr "Список записей в светлом режиме"
+
+#~ msgid "List of app entries in the dark mode"
+#~ msgstr "Список записей в тёмном режиме"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
@@ -780,12 +798,6 @@ msgstr "Запись удалена."
 #~ msgstr ""
 #~ "Автоматически всё сохраняет — ваши данные при редактировании, последнее "
 #~ "открытое представление и настройки"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Просмотр файлов в светлом режиме"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Просмотр файлов в тёмном режиме"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Поддержка параметра «StartupWMClass»"
