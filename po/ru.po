@@ -2,13 +2,14 @@
 # Copyright (C) 2021-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 06:07+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"PO-Revision-Date: 2024-05-04 15:05+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
-msgstr ""
+msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
