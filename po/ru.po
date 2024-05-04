@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-05-04 06:07+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit/ru/>\n"
@@ -56,15 +56,15 @@ msgstr "Автоматически добавляет разрешение на 
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-#| msgid "Editing the app entry in the light mode"
-msgid "Overview of the app in the light mode"
-msgstr "Редактирование в светлом режиме"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Просмотр файлов в светлом режиме"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-#| msgid "Editing the app entry in the dark mode"
-msgid "Overview of the app in the dark mode"
-msgstr "Редактирование в тёмном режиме"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Просмотр файлов в тёмном режиме"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -496,6 +496,16 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Запись удалена."
 
+#, fuzzy
+#~| msgid "Editing the app entry in the light mode"
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Редактирование в светлом режиме"
+
+#, fuzzy
+#~| msgid "Editing the app entry in the dark mode"
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Редактирование в тёмном режиме"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -787,12 +797,6 @@ msgstr "Запись удалена."
 #~ msgstr ""
 #~ "Автоматически всё сохраняет — ваши данные при редактировании, последнее "
 #~ "открытое представление и настройки"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Просмотр файлов в светлом режиме"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Просмотр файлов в тёмном режиме"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Поддержка параметра «StartupWMClass»"

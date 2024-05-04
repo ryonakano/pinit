@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-02-11 19:02+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: \n"
@@ -62,13 +62,15 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Zobrazenie úprav v svetlom režime"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Zobrazenie súborov v svetlom režime"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Zobrazenie úprav v tmavom režime"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Zobrazenie súborov v tmavom režime"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -507,6 +509,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Položka odstránená."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Zobrazenie úprav v svetlom režime"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Zobrazenie úprav v tmavom režime"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -801,12 +811,6 @@ msgstr "Položka odstránená."
 #~ msgstr ""
 #~ "Všetko sa automaticky ukladá – vaše úpravy, posledné otvorené zobrazenie "
 #~ "a predvoľby"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Zobrazenie súborov v svetlom režime"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Zobrazenie súborov v tmavom režime"
 
 #~ msgid "Files View"
 #~ msgstr "Zobrazenie súborov"

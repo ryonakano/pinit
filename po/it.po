@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-04-13 08:54+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
@@ -60,13 +60,15 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Modifica vista in modalità chiara"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Visualizzazione dei file in modalità chiara"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Modifica vista in modalità scura"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Visualizzazione dei file in modalità scura"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -504,6 +506,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Voce eliminata."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Modifica vista in modalità chiara"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Modifica vista in modalità scura"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -808,12 +818,6 @@ msgstr "Voce eliminata."
 #~ msgstr ""
 #~ "Salva automaticamente tutto: i tuoi dati in fase di modifica, ultima "
 #~ "visualizzazione aperta e preferenze"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Visualizzazione dei file in modalità chiara"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Visualizzazione dei file in modalità scura"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Supporto per l'impostazione della chiave \"StartupWMClass\""

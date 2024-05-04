@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-04-09 12:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/"
@@ -62,15 +62,15 @@ msgstr "Автододавання дозволу на виконання до �
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-#| msgid "Editing the app entry in the light mode"
-msgid "Overview of the app in the light mode"
-msgstr "Редагування запису застосунку у світловому режимі"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Перегляд файлів у світловому режимі"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-#| msgid "Editing the app entry in the dark mode"
-msgid "Overview of the app in the dark mode"
-msgstr "Редагування запису застосунку у темному режимі"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Перегляд файлів у темному режимі"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -484,6 +484,16 @@ msgstr "Ключове слово"
 msgid "Delete keyword"
 msgstr "Видалити ключове слово"
 
+#, fuzzy
+#~| msgid "Editing the app entry in the light mode"
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Редагування запису застосунку у світловому режимі"
+
+#, fuzzy
+#~| msgid "Editing the app entry in the dark mode"
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Редагування запису застосунку у темному режимі"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -778,12 +788,6 @@ msgstr "Видалити ключове слово"
 #~ msgstr ""
 #~ "Автозбереження всього — ваших даних під час редагування, останнього "
 #~ "відкритого подання та налаштувань"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Перегляд файлів у світловому режимі"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Перегляд файлів у темному режимі"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "Підтримка налаштування ключа «StartupWMClass»"

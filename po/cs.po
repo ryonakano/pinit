@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -62,13 +62,15 @@ msgstr "Automaticky přidejte oprávnění ke spuštění do souboru, který vyb
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Editace ve světlém režimu"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Zobrazení souborů ve světlém režimu"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Editace v tmavém režimu"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Zobrazení souborů v tmavém režimu"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -502,6 +504,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Smazaná položka."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Editace ve světlém režimu"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Editace v tmavém režimu"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -772,9 +782,3 @@ msgstr "Smazaná položka."
 #~ msgstr ""
 #~ "Automaticky ukládejte vše – svá data při úpravách, poslední otevřené "
 #~ "zobrazení a předvolby"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Zobrazení souborů ve světlém režimu"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Zobrazení souborů v tmavém režimu"

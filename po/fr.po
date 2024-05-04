@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2023-10-04 11:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: \n"
@@ -63,13 +63,15 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Vue de l’édition dans le mode clair"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Vue des fichiers dans le mode clair"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Vue de l’édition dans le mode sombre"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Vue des fichiers dans le mode sombre"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -516,6 +518,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Entrée supprimée."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Vue de l’édition dans le mode clair"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Vue de l’édition dans le mode sombre"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -846,12 +856,6 @@ msgstr "Entrée supprimée."
 #~ msgstr ""
 #~ "Sauvegarde automatique de vos données en cours d’édition, de la dernière "
 #~ "vue ouverte et des préférences"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Vue des fichiers dans le mode clair"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Vue des fichiers dans le mode sombre"
 
 #~ msgid "Files View"
 #~ msgstr "Page des fichiers"

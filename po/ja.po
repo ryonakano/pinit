@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-05-04 06:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/"
@@ -60,15 +60,15 @@ msgstr "選択したファイルに自動的に実行権限を追加"
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-#| msgid "Editing the app entry in the light mode"
-msgid "Overview of the app in the light mode"
-msgstr "アプリエントリーを編集中 (ライトモード)"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "ファイル一覧画面 (ライトモード)"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-#| msgid "Editing the app entry in the dark mode"
-msgid "Overview of the app in the dark mode"
-msgstr "アプリエントリーを編集中 (ダークモード)"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "ファイル一覧画面 (ダークモード)"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -476,6 +476,16 @@ msgstr "キーワード"
 msgid "Delete keyword"
 msgstr "キーワードを削除"
 
+#, fuzzy
+#~| msgid "Editing the app entry in the light mode"
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "アプリエントリーを編集中 (ライトモード)"
+
+#, fuzzy
+#~| msgid "Editing the app entry in the dark mode"
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "アプリエントリーを編集中 (ダークモード)"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -771,12 +781,6 @@ msgstr "キーワードを削除"
 #~ msgstr ""
 #~ "編集中のデータ、最後に開いていた画面、設定項目など、すべての状態を保存しま"
 #~ "す"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "ファイル一覧画面 (ライトモード)"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "ファイル一覧画面 (ダークモード)"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "\"StartupWMClass\" キーを設定可能に"

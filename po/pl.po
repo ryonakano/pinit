@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2023-12-27 01:13+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: \n"
@@ -62,13 +62,15 @@ msgstr "Automatycznie dodaj uprawnienie do wykonywania do wybranego pliku"
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Edytuj widok w trybie światła"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Widok plików w trybie światła"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Edytuj widok w trybie ciemnym"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Widok plików w trybie ciemnym"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -512,6 +514,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Usunięty wpis."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Edytuj widok w trybie światła"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Edytuj widok w trybie ciemnym"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -794,9 +804,3 @@ msgstr "Usunięty wpis."
 #~ msgstr ""
 #~ "Automatycznie zapisuj wszystko — Twoje dane w edytowaniu, ostatnim "
 #~ "otwartym widoku i preferencjach"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Widok plików w trybie światła"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Widok plików w trybie ciemnym"

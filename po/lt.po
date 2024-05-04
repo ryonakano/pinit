@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2023-07-09 07:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -68,13 +68,15 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Keitimo rodinys šviesioje veiksenoje"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Rinkmenos rodinys šviesioje veiksenoje"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Keitimo rodinys tamsioje veiksenoje"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Rinkmenos rodinys tamsioje veiksenoje"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -515,6 +517,14 @@ msgstr ""
 msgid "Delete keyword"
 msgstr "Ištrinta įvestis."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Keitimo rodinys šviesioje veiksenoje"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Keitimo rodinys tamsioje veiksenoje"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -796,9 +806,3 @@ msgstr "Ištrinta įvestis."
 #~ msgstr ""
 #~ "Pagal nutylėjimą viską išsaugoti ― tavo įvesties duomenis keitimo metu, "
 #~ "paskutinio atidaryto rodinio metu, ir nustatymus"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Rinkmenos rodinys šviesioje veiksenoje"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Rinkmenos rodinys tamsioje veiksenoje"

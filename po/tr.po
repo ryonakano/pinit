@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-05-04 14:58+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
@@ -59,15 +59,15 @@ msgstr "Seçtiğiniz dosyaya kendiliğinden yürütme izni ekleyin"
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-#| msgid "Editing the app entry in the light mode"
-msgid "Overview of the app in the light mode"
-msgstr "Açık kipte uygulama girdisini düzenleme"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Açık kipte dosya görünümü"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-#| msgid "Editing the app entry in the dark mode"
-msgid "Overview of the app in the dark mode"
-msgstr "Koyu kipte uygulama girdisini düzenleme"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Koyu kipte dosya görünümü"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -480,6 +480,16 @@ msgstr "Anahtar sözcük"
 msgid "Delete keyword"
 msgstr "Anahtar sözcük sil"
 
+#, fuzzy
+#~| msgid "Editing the app entry in the light mode"
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Açık kipte uygulama girdisini düzenleme"
+
+#, fuzzy
+#~| msgid "Editing the app entry in the dark mode"
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Koyu kipte uygulama girdisini düzenleme"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -755,12 +765,6 @@ msgstr "Anahtar sözcük sil"
 #~ msgstr ""
 #~ "Her şeyi kendiliğinden kaydedin - düzenleme sırasındaki verileriniz, son "
 #~ "açık görünüm ve tercihler"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Açık kipte dosya görünümü"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Koyu kipte dosya görünümü"
 
 #~ msgid "Support setting \"StartupWMClass\" key"
 #~ msgstr "\"StartupWMClass\" anahtarını ayarlama desteği"

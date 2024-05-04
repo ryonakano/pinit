@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-03-26 02:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -61,13 +61,15 @@ msgstr "Legg til kjøringstilgang automatisk for filene du velger"
 
 #: data/pinit.metainfo.xml.in.in:27
 #, fuzzy
-msgid "Overview of the app in the light mode"
-msgstr "Redigeringsvisning i lys drakt"
+#| msgid "Files view in the light mode"
+msgid "App window in the light mode"
+msgstr "Filvisning i lys drakt"
 
 #: data/pinit.metainfo.xml.in.in:32
 #, fuzzy
-msgid "Overview of the app in the dark mode"
-msgstr "Redigeringsvisning i mørk drakt"
+#| msgid "Files view in the dark mode"
+msgid "App window in the dark mode"
+msgstr "Filvisning i mørk drakt"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -519,6 +521,14 @@ msgstr "Nøkkelord"
 msgid "Delete keyword"
 msgstr "Oppføring slettet."
 
+#, fuzzy
+#~ msgid "Overview of the app in the light mode"
+#~ msgstr "Redigeringsvisning i lys drakt"
+
+#, fuzzy
+#~ msgid "Overview of the app in the dark mode"
+#~ msgstr "Redigeringsvisning i mørk drakt"
+
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
 
@@ -650,9 +660,3 @@ msgstr "Oppføring slettet."
 #~ msgstr ""
 #~ "Lagre alt automatisk — data i redigering, sist åpnet visning, og "
 #~ "innstillinger"
-
-#~ msgid "Files view in the light mode"
-#~ msgstr "Filvisning i lys drakt"
-
-#~ msgid "Files view in the dark mode"
-#~ msgstr "Filvisning i mørk drakt"

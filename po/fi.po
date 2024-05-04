@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:58+0900\n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
 "PO-Revision-Date: 2024-03-21 03:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/pinit/fi/>\n"
@@ -54,11 +54,11 @@ msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
-msgid "Overview of the app in the light mode"
+msgid "App window in the light mode"
 msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:32
-msgid "Overview of the app in the dark mode"
+msgid "App window in the dark mode"
 msgstr ""
 
 #: data/resources/gtk/help-overlay.blp:10
