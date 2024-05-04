@@ -22,7 +22,6 @@
  */
 public class MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
-        { "about", on_about_activate },
         { "new", on_new_activate },
     };
 
@@ -229,33 +228,5 @@ public class MainWindow : Adw.ApplicationWindow {
 
         model.load.begin ();
         show_edit_view (file);
-    }
-
-    /**
-     * The callback for about window.
-     */
-    private void on_about_activate () {
-        // List of code maintainers
-        const string[] DEVELOPERS = {
-            "Ryo Nakano https://github.com/ryonakano",
-        };
-        // List of icon authors
-        const string[] ARTISTS = {
-            "hanaral https://github.com/hanaral",
-        };
-
-        var about_dialog = new Adw.AboutDialog.from_appdata (
-            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
-            null
-        ) {
-            copyright = "© 2021-2024 Ryo Nakano",
-            developers = DEVELOPERS,
-            artists = ARTISTS,
-            ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-            ///You may add your name and your email address if you want, e.g.:
-            ///John Doe <john-doe@example.com>
-            translator_credits = _("translator-credits")
-        };
-        about_dialog.present (this);
     }
 }

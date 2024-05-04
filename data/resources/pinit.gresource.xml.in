@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/ryonakano/pinit">
-    <file preprocess="xml-stripblanks" alias="@APP_ID@.metainfo.xml">../@APP_ID@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+
+    <file preprocess="xml-stripblanks" alias="@APP_ID@.metainfo.xml">../@APP_ID@.metainfo.xml</file>
   </gresource>
 </gresources>
