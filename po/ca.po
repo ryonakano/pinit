@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 10:07+0900\n"
+"POT-Creation-Date: 2024-05-04 23:58+0900\n"
 "PO-Revision-Date: 2024-03-21 03:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/rosp/pinit/ca/>\n"
@@ -18,55 +18,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/pinit.desktop.in:3
-msgid "Pin It!"
-msgstr "Pin It!"
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/pinit.desktop.in:4
+#: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
 msgstr ""
 
-#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
-#: src/MainWindow.vala:249
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr ""
 
-#: data/pinit.desktop.in:11
+#: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:13
+#: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:16
+#: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:20
+#: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:21
+#: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:27
-msgid "List of app entries in the light mode"
+#: data/pinit.metainfo.xml.in.in:27
+msgid "Overview of the app in the light mode"
 msgstr ""
 
-#: data/pinit.metainfo.xml.in:32
-msgid "Editing the app entry in the light mode"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:37
-msgid "List of app entries in the dark mode"
-msgstr ""
-
-#: data/pinit.metainfo.xml.in:42
-msgid "Editing the app entry in the dark mode"
+#: data/pinit.metainfo.xml.in.in:32
+msgid "Overview of the app in the dark mode"
 msgstr ""
 
 #: data/resources/gtk/help-overlay.blp:10
@@ -94,56 +85,59 @@ msgctxt "shortcut window"
 msgid "New Entry"
 msgstr ""
 
-#: src/MainWindow.vala:89
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr ""
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:108
 msgid "Entry updated."
 msgstr ""
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
 msgstr ""
 
-#: src/MainWindow.vala:124
+#: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
 msgstr ""
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
 msgstr ""
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:162
 msgid "Save Changes?"
 msgstr ""
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
 
-#: src/MainWindow.vala:161 src/View/FilesView.vala:134
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
 msgstr ""
 
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:166
 msgid "_Discard"
 msgstr ""
 
-#: src/MainWindow.vala:163 src/View/EditView.vala:39
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
 #, fuzzy
 msgid "_Save"
 msgstr "Desar"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You may add your name and your email address if you want, e.g.:
-#. John Doe <john-doe@example.com>
-#: src/MainWindow.vala:256
-msgid "translator-credits"
-msgstr ""
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
@@ -328,18 +322,18 @@ msgstr ""
 
 #: src/View/FilesView.vala:31
 #, fuzzy
-msgid "_Light"
-msgstr "Clar"
+msgid "S_ystem"
+msgstr "Sistema"
 
 #: src/View/FilesView.vala:32
 #, fuzzy
-msgid "_Dark"
-msgstr "Fosc"
+msgid "_Light"
+msgstr "Clar"
 
 #: src/View/FilesView.vala:33
 #, fuzzy
-msgid "S_ystem"
-msgstr "Sistema"
+msgid "_Dark"
+msgstr "Fosc"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
@@ -477,6 +471,9 @@ msgstr ""
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
 msgstr ""
+
+#~ msgid "Pin It!"
+#~ msgstr "Pin It!"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

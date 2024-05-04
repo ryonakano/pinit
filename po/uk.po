@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 10:07+0900\n"
+"POT-Creation-Date: 2024-05-04 23:58+0900\n"
 "PO-Revision-Date: 2024-04-09 12:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/>"
-"\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/pinit/uk/"
+">\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,26 +20,25 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/pinit.desktop.in:3
-msgid "Pin It!"
-msgstr "Pin It!"
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/pinit.desktop.in:4
+#: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
 msgstr "Створення файлів робочого столу"
 
-#: data/pinit.desktop.in:5 data/pinit.metainfo.xml.in:11
-#: src/MainWindow.vala:249
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "Прикріплюйте портативні застосунки у панелі запуску"
 
-#: data/pinit.desktop.in:11
+#: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Робочий;Стіл;Файл;Створити;Редагувати;Відомості;Піктограма;Образ;Desktop;"
 "File;Create;Edit;Info;Icon;AppImage;"
 
-#: data/pinit.metainfo.xml.in:13
+#: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
@@ -47,34 +46,30 @@ msgstr ""
 "Прикріплюйте ярлики портативних застосунків, таких як необроблені виконувані "
 "файли, файли AppImage тощо, у панелі застосунків вашої стільниці."
 
-#: data/pinit.metainfo.xml.in:16
+#: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
 msgstr "Інші функції включають:"
 
-#: data/pinit.metainfo.xml.in:20
+#: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
 "Редагування або видалення створених записів застосунків без відкриття "
 "файлового менеджера"
 
-#: data/pinit.metainfo.xml.in:21
+#: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
 msgstr "Автододавання дозволу на виконання до вибраного файлу"
 
-#: data/pinit.metainfo.xml.in:27
-msgid "List of app entries in the light mode"
-msgstr "Список записів застосунків у світлому режимі"
-
-#: data/pinit.metainfo.xml.in:32
-msgid "Editing the app entry in the light mode"
+#: data/pinit.metainfo.xml.in.in:27
+#, fuzzy
+#| msgid "Editing the app entry in the light mode"
+msgid "Overview of the app in the light mode"
 msgstr "Редагування запису застосунку у світловому режимі"
 
-#: data/pinit.metainfo.xml.in:37
-msgid "List of app entries in the dark mode"
-msgstr "Список записів застосунків у темному режимі"
-
-#: data/pinit.metainfo.xml.in:42
-msgid "Editing the app entry in the dark mode"
+#: data/pinit.metainfo.xml.in.in:32
+#, fuzzy
+#| msgid "Editing the app entry in the dark mode"
+msgid "Overview of the app in the dark mode"
 msgstr "Редагування запису застосунку у темному режимі"
 
 #: data/resources/gtk/help-overlay.blp:10
@@ -102,32 +97,42 @@ msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Новий запис"
 
-#: src/MainWindow.vala:89
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr "Ihor Hordiichuk"
+
+#: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr "Запис видалено."
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:108
 msgid "Entry updated."
 msgstr "Запис оновлено."
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
 msgstr "Не вдалося завантажити записи"
 
-#: src/MainWindow.vala:124
+#: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
 msgstr "Виникла помилка під час завантаження записів застосунків."
 
-#: src/MainWindow.vala:126 src/View/EditView.vala:386
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
 msgstr "_Закрити"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:162
 msgid "Save Changes?"
 msgstr "Зберегти зміни?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -135,24 +140,17 @@ msgstr ""
 "Відкриті записи містять незбережені зміни. Зміни, які не будуть збережені, "
 "будуть назавжди втрачені."
 
-#: src/MainWindow.vala:161 src/View/FilesView.vala:134
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:166
 msgid "_Discard"
 msgstr "_Відкинути"
 
-#: src/MainWindow.vala:163 src/View/EditView.vala:39
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
 msgid "_Save"
 msgstr "_Зберегти"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You may add your name and your email address if you want, e.g.:
-#. John Doe <john-doe@example.com>
-#: src/MainWindow.vala:256
-msgid "translator-credits"
-msgstr "Ihor Hordiichuk"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
@@ -339,16 +337,16 @@ msgid "Create a new entry"
 msgstr "Створити новий запис"
 
 #: src/View/FilesView.vala:31
+msgid "S_ystem"
+msgstr "С_истеми"
+
+#: src/View/FilesView.vala:32
 msgid "_Light"
 msgstr "_Світлий"
 
-#: src/View/FilesView.vala:32
+#: src/View/FilesView.vala:33
 msgid "_Dark"
 msgstr "_Темний"
-
-#: src/View/FilesView.vala:33
-msgid "S_ystem"
-msgstr "С_истеми"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
@@ -485,6 +483,15 @@ msgstr "Ключове слово"
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
 msgstr "Видалити ключове слово"
+
+#~ msgid "Pin It!"
+#~ msgstr "Pin It!"
+
+#~ msgid "List of app entries in the light mode"
+#~ msgstr "Список записів застосунків у світлому режимі"
+
+#~ msgid "List of app entries in the dark mode"
+#~ msgstr "Список записів застосунків у темному режимі"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
