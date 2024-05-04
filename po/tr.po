@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-06 10:07+0900\n"
-"PO-Revision-Date: 2024-04-15 10:01+0000\n"
+"PO-Revision-Date: 2024-05-04 14:58+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/pinit.desktop.in:3
 msgid "Pin It!"
@@ -348,7 +348,7 @@ msgstr "_Sistem"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
-msgstr "_Biçim"
+msgstr "_Biçem"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
