@@ -12,11 +12,11 @@ if get_option('development')
     app_name += ' (Development)'
     app_id += '.Devel'
 
-    vcs_tag = run_command('git', 'rev-parse', '--short', 'HEAD', check: false).stdout().strip()
-    if vcs_tag == ''
+    ret = run_command('git', 'rev-parse', '--short', 'HEAD', check: false)
+    if ret.returncode() != 0
         version_suffix = '-devel'
     else
-        version_suffix = '-@0@'.format(vcs_tag)
+        version_suffix = '-@0@'.format(ret.stdout().strip())
     endif
 
     app_version += version_suffix
