@@ -36,7 +36,7 @@ public class View.FilesView : Adw.NavigationPage {
         menu.append_submenu (_("_Style"), theme_submenu);
         menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("_About %s").printf (Define.APP_NAME), "win.about");
+        menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),

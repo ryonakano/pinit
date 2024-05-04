@@ -7,9 +7,19 @@ project(
 
 app_name = 'Pin It!'
 app_id = meson.project_name()
+app_version = meson.project_version()
 if get_option('development')
     app_name += ' (Development)'
     app_id += '.Devel'
+
+    vcs_tag = run_command('git', 'rev-parse', '--short', 'HEAD', check: false).stdout().strip()
+    if vcs_tag == ''
+        version_suffix = '-devel'
+    else
+        version_suffix = '-@0@'.format(vcs_tag)
+    endif
+
+    app_version += version_suffix
 endif
 
 gnome = import('gnome')
