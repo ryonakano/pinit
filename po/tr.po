@@ -4,13 +4,14 @@
 # Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
 # Sabri Ünal <yakushabb@gmail.com>, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 14:58+0000\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"PO-Revision-Date: 2024-05-04 15:05+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
-msgstr ""
+msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
