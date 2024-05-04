@@ -1,7 +1,7 @@
 # Pin It!
-![Light Mode Screenshot](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)
+![App window in the light mode](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)
 
-![Dark Mode Screenshot](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
+![App window in the dark mode](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
 
 Pin shortcuts for portable apps like raw executable files, AppImage files, etc. to the app launcher on your desktop.
 
