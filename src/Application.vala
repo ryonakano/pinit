@@ -271,7 +271,7 @@ public class Application : Adw.Application {
      * Show the about dialog.
      */
     private void on_about_activate () {
-        // List of code maintainers
+        // List of maintainers
         const string[] DEVELOPERS = {
             "Ryo Nakano https://github.com/ryonakano",
         };
