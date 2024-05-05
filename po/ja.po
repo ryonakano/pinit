@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 15:05+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-06 01:07+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
 "\n"
 "Language: ja\n"
@@ -60,16 +60,12 @@ msgid "Automatically add the execute permission to the file you select"
 msgstr "選択したファイルに自動的に実行権限を追加"
 
 #: data/pinit.metainfo.xml.in.in:27
-#, fuzzy
-#| msgid "Files view in the light mode"
 msgid "App window in the light mode"
-msgstr "ファイル一覧画面 (ライトモード)"
+msgstr "ライトモードのアプリウィンドウ"
 
 #: data/pinit.metainfo.xml.in.in:32
-#, fuzzy
-#| msgid "Files view in the dark mode"
 msgid "App window in the dark mode"
-msgstr "ファイル一覧画面 (ダークモード)"
+msgstr "ダークモードのアプリウィンドウ"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
