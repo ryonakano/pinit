@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 15:05+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-08 16:36+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -56,16 +56,12 @@ msgid "Automatically add the execute permission to the file you select"
 msgstr "Автоматически добавляет разрешение на выполнение выбранного файла"
 
 #: data/pinit.metainfo.xml.in.in:27
-#, fuzzy
-#| msgid "Files view in the light mode"
 msgid "App window in the light mode"
-msgstr "Просмотр файлов в светлом режиме"
+msgstr "Окно приложения в светлом режиме"
 
 #: data/pinit.metainfo.xml.in.in:32
-#, fuzzy
-#| msgid "Files view in the dark mode"
 msgid "App window in the dark mode"
-msgstr "Просмотр файлов в тёмном режиме"
+msgstr "Окно приложения в тёмном режиме"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
