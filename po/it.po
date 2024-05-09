@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 15:05+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-09 12:48+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -60,16 +60,12 @@ msgstr ""
 "Aggiunge automaticamente l'autorizzazione di esecuzione al file selezionato"
 
 #: data/pinit.metainfo.xml.in.in:27
-#, fuzzy
-#| msgid "Files view in the light mode"
 msgid "App window in the light mode"
-msgstr "Visualizzazione dei file in modalità chiara"
+msgstr "Finestra dell'app in modalità chiara"
 
 #: data/pinit.metainfo.xml.in.in:32
-#, fuzzy
-#| msgid "Files view in the dark mode"
 msgid "App window in the dark mode"
-msgstr "Visualizzazione dei file in modalità scura"
+msgstr "Finestra dell'app in modalità scura"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
