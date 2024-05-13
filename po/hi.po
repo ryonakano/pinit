@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-13 08:02+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-14 01:56+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/pinit/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.5-dev\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
-msgstr ""
+msgstr "अन्य विशेषताओं में शामिल हैं:"
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
@@ -54,11 +54,11 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
-msgstr ""
+msgstr "ऐप खिड़की हल्के मोड में"
 
 #: data/pinit.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "ऐप खिड़की गहरे मोड में"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -93,7 +93,7 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:297
 msgid "translator-credits"
-msgstr ""
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
@@ -309,19 +309,19 @@ msgstr ""
 
 #: src/View/FilesView.vala:31
 msgid "S_ystem"
-msgstr ""
+msgstr "सिस्टम (_y)"
 
 #: src/View/FilesView.vala:32
 msgid "_Light"
-msgstr ""
+msgstr "हल्की (_L)"
 
 #: src/View/FilesView.vala:33
 msgid "_Dark"
-msgstr ""
+msgstr "गहरी (_D)"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
-msgstr ""
+msgstr "शैली (_S)"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
@@ -335,7 +335,7 @@ msgstr ""
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
-msgstr ""
+msgstr "मुख्य मेनू"
 
 #: src/View/FilesView.vala:57
 msgid "No Entries Found"
