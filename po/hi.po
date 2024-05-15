@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-14 01:56+0000\n"
+"PO-Revision-Date: 2024-05-16 15:02+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/pinit/hi/>\n"
 "Language: hi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -24,21 +24,23 @@ msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "डेस्कटॉप फाइल निर्माता"
 
 #: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
-msgstr ""
+msgstr "पोर्टेबल ऐप्स को लॉन्चर पर पिन करें"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
+msgstr "डेस्कटॉप;फाइल;बनाएं;संपादित करें;जानकारी;आइकन;AppImage;"
 
 #: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"अपने डेस्कटॉप पर ऐप लॉन्चर पर पोर्टेबल ऐप्स जैसे रॉ निष्पादन-योग्य फाइलें, "
+"AppImage फाइलें इत्यादि के लिए शॉर्टकट पिन करें।"
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
@@ -46,11 +48,11 @@ msgstr "अन्य विशेषताओं में शामिल ह�
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
-msgstr ""
+msgstr "फाइल प्रबंधक खोले बिना बनाई गई ऐप प्रविष्टियां संपादित करें या मिटाएं"
 
 #: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
-msgstr ""
+msgstr "आपके द्वारा चुनी गई फाइल में स्वचालित रूप से निष्पादन अनुमति जोड़ें"
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
@@ -63,27 +65,27 @@ msgstr "ऐप खिड़की गहरे मोड में"
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "कीबोर्ड शॉर्टकट"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "छोड़ें"
 
 #: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "संपादित करें"
 
 #: data/resources/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
-msgstr ""
+msgstr "नई प्रविष्टि"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -97,215 +99,227 @@ msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
-msgstr ""
+msgstr "प्रविष्टि मिटाई गई।"
 
 #: src/MainWindow.vala:108
 msgid "Entry updated."
-msgstr ""
+msgstr "प्रविष्टि अद्यतित।"
 
 #: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "प्रविष्टियां लोड करने में विफल"
 
 #: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "ऐप प्रविष्टियां लोड करते समय एक त्रुटि हुई।"
 
 #: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
-msgstr ""
+msgstr "बंद करें (_C)"
 
 #: src/MainWindow.vala:162
 msgid "Save Changes?"
-msgstr ""
+msgstr "परिवर्तन सहेजें?"
 
 #: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"खुली प्रविष्टियों में सहेजे न गए परिवर्तन शामिल हैं। जो परिवर्तन सहेजे नहीं "
+"गए वे स्थायी रूप से नष्ट हो जाएंगे।"
 
 #: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
-msgstr ""
+msgstr "रद्द करें (_C)"
 
 #: src/MainWindow.vala:166
 msgid "_Discard"
-msgstr ""
+msgstr "त्यागें (_D)"
 
 #: src/MainWindow.vala:167 src/View/EditView.vala:39
 msgid "_Save"
-msgstr ""
+msgstr "सहेजें (_S)"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
-msgstr ""
+msgstr "आवश्यक क्षेत्र"
 
 #: src/View/EditView.vala:69
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "सहेजने के लिए निम्नलिखित क्षेत्र भरने की आवश्यकता है।"
 
 #: src/View/EditView.vala:73
 msgid "App Name"
-msgstr ""
+msgstr "ऐप नाम"
 
 #: src/View/EditView.vala:74
 msgid "Shown in the launcher or dock."
-msgstr ""
+msgstr "लॉन्चर या डॉक में दिखाया गया।"
 
 #: src/View/EditView.vala:79
 msgid "Exec File"
-msgstr ""
+msgstr "निष्पादन फाइल"
 
 #: src/View/EditView.vala:80
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"जब आप लॉन्चर में ऐप प्रविष्टि पर क्लिक करते हैं तो कमांड/ऐप लॉन्च होता है। "
+"निरपेक्ष पथ या ऐप के उपनाम नाम में निर्दिष्ट करें।"
 
 #: src/View/EditView.vala:83
 msgid "Select an executable file…"
-msgstr ""
+msgstr "निष्पादन-योग्य फाइल चुनें…"
 
 #: src/View/EditView.vala:94
 msgid "Optional Fields"
-msgstr ""
+msgstr "वैकल्पिक क्षेत्र"
 
 #: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
+msgstr "इन क्षेत्र को भरने से ऐप लॉन्चर में खोज योग्यता में सुधार होता है।"
 
 #: src/View/EditView.vala:99
 msgid "Icon File"
-msgstr ""
+msgstr "आइकन फाइल"
 
 #: src/View/EditView.vala:100
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
+"ऐप की ब्रांडिंग करने वाला आइकन। किसी पूर्ण पथ या आइकन के उपनाम नाम में "
+"निर्दिष्ट करें।"
 
 #: src/View/EditView.vala:103
 msgid "Select an icon file…"
-msgstr ""
+msgstr "आइकन फाइल चुनें…"
 
 #: src/View/EditView.vala:111
 msgid "Generic Name"
-msgstr ""
+msgstr "सामान्य नाम"
 
 #: src/View/EditView.vala:112
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
-msgstr ""
+msgstr "ऐप का सामान्य नाम, उदाहरण के लिए \"वेब ब्राउज़र\" या \"मेल क्लाइंट\"।"
 
 #: src/View/EditView.vala:117
 msgid "Comment"
-msgstr ""
+msgstr "टिप्पणी"
 
 #: src/View/EditView.vala:118
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"ऐप का वर्णन करता है। जब आप लॉन्चर/डॉक में ऐप प्रविष्टि पर मंडराते हैं तो यह "
+"टूलटिप के रूप में दिखाई दे सकता है।"
 
 #: src/View/EditView.vala:132
 msgid "Advanced Configurations"
-msgstr ""
+msgstr "उन्नत विन्यास"
 
 #: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
+"आप उपरोक्त अनुभागों को भरकर अधिकांश ऐप प्रविष्टियां बना सकते हैं। हालांकि, कु"
+"छ ऐप्स को नीचे दिए गए उन्नत विन्यास विकल्पों की आवश्यकता हो सकती है।"
 
 #: src/View/EditView.vala:137
 msgid "Startup WM Class"
-msgstr ""
+msgstr "स्टार्टअप WM क्लास"
 
 #: src/View/EditView.vala:138
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
+"ऐप को उस विंडो से संबद्ध करें जिसमें यह ID है। यदि ऐप लॉन्च होने पर डॉक में "
+"कोई भिन्न या डुप्लिकेट आइकन दिखाई देता है तो इसका उपयोग करें।"
 
 #: src/View/EditView.vala:143
 msgid "Run in Terminal"
-msgstr ""
+msgstr "टर्मिनल में चलाएं"
 
 #: src/View/EditView.vala:144
 msgid "Turn on if you want to register a CUI app."
-msgstr ""
+msgstr "यदि आप CUI ऐप पंजीकृत करना चाहते हैं तो चालू करें।"
 
 #: src/View/EditView.vala:148
 msgid "_Open"
-msgstr ""
+msgstr "खोलें (_O)"
 
 #: src/View/EditView.vala:152
 msgid "Open with Text Editor"
-msgstr ""
+msgstr "पाठ संपादक के साथ खोलें"
 
 #: src/View/EditView.vala:153
 msgid "You can also edit more options by opening with a text editor."
-msgstr ""
+msgstr "आप पाठ संपादक से खोलकर अधिक विकल्प भी संपादित कर सकते हैं।"
 
 #: src/View/EditView.vala:198
 msgid "New Entry"
-msgstr ""
+msgstr "नई प्रविष्टि"
 
 #: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
-msgstr ""
+msgstr "शीर्षकहीन ऐप"
 
 #: src/View/EditView.vala:234
 msgid "Select Executable File"
-msgstr ""
+msgstr "निष्पादन-योग्य फाइल चुनें"
 
 #: src/View/EditView.vala:235 src/View/EditView.vala:292
 msgid "_Select"
-msgstr ""
+msgstr "चुनें (_S)"
 
 #: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "ICO, PNG, SVG, या XMP फाइलें"
 
 #: src/View/EditView.vala:291
 msgid "Select Icon File"
-msgstr ""
+msgstr "आइकन फाइल चुनें"
 
 #: src/View/EditView.vala:383
 msgid "Failed to Open with External App"
-msgstr ""
+msgstr "बाहरी ऐप से खुलने में विफल"
 
 #: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "बाहरी ऐप से फाइल खोलते समय एक त्रुटि हुई।"
 
 #: src/View/EditView.vala:441
 msgid "Edit Entry"
-msgstr ""
+msgstr "प्रविष्टि संपादित करें"
 
 #: src/View/EditView.vala:443
 #, c-format
 msgid "Edit “%s”"
-msgstr ""
+msgstr "“%s” संपादित करें"
 
 #: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "प्रविष्टि सहेजने में विफल"
 
 #: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "“%s” की प्रविष्टि सहेजने में विफल"
 
 #: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "ऐप प्रविष्टि सहेजते समय त्रुटि हुई।"
 
 #: src/View/FilesView.vala:25
 msgid "Create a new entry"
-msgstr ""
+msgstr "नई प्रविष्टि बनाएं"
 
 #: src/View/FilesView.vala:31
 msgid "S_ystem"
@@ -325,13 +339,13 @@ msgstr "शैली (_S)"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "कीबोर्ड शॉर्टकट (_K)"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/View/FilesView.vala:39
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "%s के बारे में (_A)"
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
@@ -339,118 +353,118 @@ msgstr "मुख्य मेनू"
 
 #: src/View/FilesView.vala:57
 msgid "No Entries Found"
-msgstr ""
+msgstr "कोई प्रविष्टियां नहीं मिलीं"
 
 #: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "बनाने के लिए शीर्ष पर + बटन पर क्लिक करें।"
 
 #: src/View/FilesView.vala:118
 msgid "Delete Entry?"
-msgstr ""
+msgstr "प्रविष्टि मिटाएं?"
 
 #: src/View/FilesView.vala:120
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "“%s” की प्रविष्टि मिटाएं?"
 
 #: src/View/FilesView.vala:124
 msgid "Delete…"
-msgstr ""
+msgstr "मिटाएं…"
 
 #: src/View/FilesView.vala:132
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "यह ऐप को लॉन्चर से हटा देता है।"
 
 #: src/View/FilesView.vala:135
 msgid "_Delete"
-msgstr ""
+msgstr "मिटाएं (_D)"
 
 #: src/View/FilesView.vala:145
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr ""
+msgstr "“%s” की प्रविष्टि मिटाने में विफल"
 
 #: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "ऐप प्रविष्टि हटाते समय त्रुटि हुई।"
 
 #: src/Widget/CategoriesRow.vala:40
 msgid "Sound &amp; Video"
-msgstr ""
+msgstr "ध्वनि &amp; वीडियो"
 
 #: src/Widget/CategoriesRow.vala:41
 msgid "Audio"
-msgstr ""
+msgstr "ऑडियो"
 
 #: src/Widget/CategoriesRow.vala:42
 msgid "Video"
-msgstr ""
+msgstr "वीडियो"
 
 #: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
-msgstr ""
+msgstr "प्रोग्रामिंग"
 
 #: src/Widget/CategoriesRow.vala:44
 msgid "Education"
-msgstr ""
+msgstr "शिक्षा"
 
 #: src/Widget/CategoriesRow.vala:45
 msgid "Games"
-msgstr ""
+msgstr "खेल"
 
 #: src/Widget/CategoriesRow.vala:46
 msgid "Graphics"
-msgstr ""
+msgstr "चित्रोपमा"
 
 #: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
-msgstr ""
+msgstr "इंटरनेट"
 
 #: src/Widget/CategoriesRow.vala:48
 msgid "Office"
-msgstr ""
+msgstr "कार्यालय"
 
 #: src/Widget/CategoriesRow.vala:49
 msgid "Science"
-msgstr ""
+msgstr "विज्ञान"
 
 #: src/Widget/CategoriesRow.vala:50
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग"
 
 #: src/Widget/CategoriesRow.vala:51
 msgid "System Tools"
-msgstr ""
+msgstr "सिस्टम औजार"
 
 #: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
-msgstr ""
+msgstr "सहायक सामग्री"
 
 #: src/Widget/CategoriesRow.vala:62
 msgid "Categories"
-msgstr ""
+msgstr "श्रेणियां"
 
 #: src/Widget/CategoriesRow.vala:63
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "ऐप पर लागू श्रेणियां। (आप एक से अधिक का चयन कर सकते हैं।)"
 
 #: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
-msgstr ""
+msgstr "खोजशब्द"
 
 #: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "इन शब्दों का उपयोग खोज शब्दों के रूप में किया जा सकता है।"
 
 #: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
-msgstr ""
+msgstr "नया खोजशब्द जोड़ें"
 
 #: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
-msgstr ""
+msgstr "खोजशब्द"
 
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
-msgstr ""
+msgstr "खोजशब्द मिटाएं"
