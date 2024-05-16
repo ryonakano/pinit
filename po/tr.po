@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-05-04 15:05+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-07 17:07+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -59,16 +59,12 @@ msgid "Automatically add the execute permission to the file you select"
 msgstr "Seçtiğiniz dosyaya kendiliğinden yürütme izni ekleyin"
 
 #: data/pinit.metainfo.xml.in.in:27
-#, fuzzy
-#| msgid "Files view in the light mode"
 msgid "App window in the light mode"
-msgstr "Açık kipte dosya görünümü"
+msgstr "Uygulama penceresi açık kipte"
 
 #: data/pinit.metainfo.xml.in.in:32
-#, fuzzy
-#| msgid "Files view in the dark mode"
 msgid "App window in the dark mode"
-msgstr "Koyu kipte dosya görünümü"
+msgstr "Uygulama penceresi koyu kipte"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
