@@ -15,6 +15,12 @@ public class Application : Adw.Application {
         { "about", on_about_activate },
     };
 
+    public static bool IS_ON_PANTHEON {
+        get {
+            return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+        }
+    }
+
     /**
      * The instance of the application settings.
      */
@@ -204,6 +210,17 @@ public class Application : Adw.Application {
      * Setup localization, app style, and accel keys.
      */
     protected override void startup () {
+#if USE_GRANITE
+        // Use both compile-time and runtime conditions to:
+        //
+        //  * make Granite optional dependency
+        //  * make sure to respect currently running DE
+        if (IS_ON_PANTHEON) {
+            // Apply elementary stylesheet instead of default Adwaita stylesheet
+            Granite.init ();
+        }
+#endif
+
         base.startup ();
 
         // Make sure the app is shown in the user's language.

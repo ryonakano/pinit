@@ -35,8 +35,11 @@ public class View.FilesView : Adw.NavigationPage {
         var menu = new GLib.Menu ();
         menu.append_submenu (_("_Style"), theme_submenu);
         menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
-        ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
-        menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
+        // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
+        if (!Application.IS_ON_PANTHEON) {
+            ///TRANSLATORS: %s will be replaced by the app name (Pin It!)
+            menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
+        }
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),
