@@ -11,10 +11,14 @@ Other features include:
 - Automatically add execution permission to the file you select
 
 ## Installation
-### From Flathub (Recommended)
-You can download the app from Flathub, which should make this app available for all Linux distribution:
+### From Flathub or AppCenter (Recommended)
+You can install Pin It! from Flathub:
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
+
+You should install Pin It! from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.pinit)
 
 ### From Source Code (Flatpak)
 You'll need `flatpak` and `flatpak-builder` commands installed on your system.
