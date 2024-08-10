@@ -19,6 +19,10 @@ modules:
       - type: archive
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz
         sha256: 6dbb4ea851cec164030abded5949ea77ff92032e23527e1c0597d7efe0c36a81
+        x-checker-data:
+          type: anitya
+          project-id: 279929
+          url-template: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v$version/blueprint-compiler-v$version.tar.gz
 
   - name: pinit
     buildsystem: meson
