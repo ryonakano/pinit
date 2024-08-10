@@ -10,10 +10,16 @@ config_file = configure_file(
     configuration: config_data
 )
 
+granite_dep = dependency('granite-7', version: '>= 7.2.0', required: get_option('granite'))
+if granite_dep.found()
+    add_project_arguments('--define=USE_GRANITE', language: 'vala')
+endif
+
 dependencies =  [
     dependency('gee-0.8'),
     dependency('gio-unix-2.0'),
     dependency('glib-2.0', version: '>= 2.74'),
+    granite_dep,
     dependency('gtk4', version: '>= 4.10'),
     dependency('libadwaita-1', version: '>= 1.5.0'),
     dependency('pango'),
