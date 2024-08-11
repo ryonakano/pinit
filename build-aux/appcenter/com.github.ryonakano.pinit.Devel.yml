@@ -4,12 +4,12 @@ runtime-version: '8'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.pinit.Devel
 finish-args:
-  - '--share=ipc'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
-  - '--filesystem=home'
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --filesystem=home
   # For drawing icons
-  - '--device=dri'
+  - --device=dri
 modules:
   - name: blueprint-compiler
     buildsystem: meson
@@ -27,8 +27,8 @@ modules:
   - name: pinit
     buildsystem: meson
     config-opts:
-      - '-Ddevelopment=true'
-      - '-Dgranite=enabled'
+      - -Ddevelopment=true
+      - -Dgranite=enabled
     sources:
       - type: dir
         path: ../../
