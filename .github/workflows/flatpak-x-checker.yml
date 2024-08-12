@@ -23,7 +23,8 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: --update --never-fork build-aux/flathub/com.github.ryonakano.pinit.Devel.yml
+          # use --edit-only instead of --update to create single PR that updates all manifests
+          args: --edit-only --never-fork build-aux/flathub/com.github.ryonakano.pinit.Devel.yml
 
       - name: Update AppCenter development manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
@@ -35,7 +36,8 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: --update --never-fork build-aux/appcenter/com.github.ryonakano.pinit.Devel.yml
+          # use --edit-only instead of --update to create single PR that updates all manifests
+          args: --edit-only --never-fork build-aux/appcenter/com.github.ryonakano.pinit.Devel.yml
 
       - name: Update AppCenter stable manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
