@@ -16,8 +16,8 @@ jobs:
       - name: Update Flathub development manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
-          GIT_AUTHOR_NAME: Flatpak External Data Checker
-          GIT_COMMITTER_NAME: Flatpak External Data Checker
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_COMMITTER_NAME: github-actions[bot]
           # email sets "github-actions[bot]" as commit author, see https://github.com/orgs/community/discussions/26560
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
@@ -29,8 +29,8 @@ jobs:
       - name: Update AppCenter development manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
-          GIT_AUTHOR_NAME: Flatpak External Data Checker
-          GIT_COMMITTER_NAME: Flatpak External Data Checker
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_COMMITTER_NAME: github-actions[bot]
           # email sets "github-actions[bot]" as commit author, see https://github.com/orgs/community/discussions/26560
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
@@ -42,8 +42,8 @@ jobs:
       - name: Update AppCenter stable manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
-          GIT_AUTHOR_NAME: Flatpak External Data Checker
-          GIT_COMMITTER_NAME: Flatpak External Data Checker
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_COMMITTER_NAME: github-actions[bot]
           # email sets "github-actions[bot]" as commit author, see https://github.com/orgs/community/discussions/26560
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
