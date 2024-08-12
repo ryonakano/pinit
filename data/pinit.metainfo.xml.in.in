@@ -60,6 +60,16 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
+    <release version="2.1.1" date="2024-08-15" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Support development build</li>
+          <li>Support AppCenter build (again)</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.1.0" date="2024-04-14" urgency="medium">
       <description translate="no">
         <p>
