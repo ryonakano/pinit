@@ -123,9 +123,10 @@ public class MainWindow : Adw.ApplicationWindow {
      * Tell the user the failure through a dialog.
      */
     private void on_load_failure () {
-        var error_dialog = new Adw.MessageDialog (this,
-                                                  _("Failed to Load Entries"),
-                                                  _("There was an error while loading app entries.")
+        var error_dialog = new Adw.MessageDialog (
+            this,
+            _("Failed to Load Entries"),
+            _("There was an error while loading app entries.")
         );
         error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
         error_dialog.default_response = Define.DialogResponse.CLOSE;
@@ -159,12 +160,16 @@ public class MainWindow : Adw.ApplicationWindow {
             return;
         }
 
-        var unsaved_dialog = new Adw.MessageDialog (this, _("Save Changes?"),
-                                                    _("Open entries contain unsaved changes. Changes which are not saved will be permanently lost."));
+        var unsaved_dialog = new Adw.MessageDialog (
+            this, _("Save Changes?"),
+            _("Open entries contain unsaved changes. Changes which are not saved will be permanently lost.")
+        );
         unsaved_dialog.add_css_class ("save-changes");
-        unsaved_dialog.add_responses (Define.DialogResponse.CANCEL, _("_Cancel"),
-                                      Define.DialogResponse.DISCARD, _("_Discard"),
-                                      Define.DialogResponse.SAVE, _("_Save"));
+        unsaved_dialog.add_responses (
+            Define.DialogResponse.CANCEL, _("_Cancel"),
+            Define.DialogResponse.DISCARD, _("_Discard"),
+            Define.DialogResponse.SAVE, _("_Save")
+        );
         unsaved_dialog.set_response_appearance (Define.DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
         unsaved_dialog.set_response_appearance (Define.DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
         unsaved_dialog.close_response = Define.DialogResponse.CANCEL;
@@ -216,8 +221,10 @@ public class MainWindow : Adw.ApplicationWindow {
      */
     private void on_new_activate () {
         string filename = Config.APP_ID + "." + Uuid.string_random ();
-        string path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications",
-                                            filename + Model.DesktopFile.DESKTOP_SUFFIX);
+        string path = Path.build_filename (
+            Environment.get_home_dir (), ".local/share/applications",
+            filename + Model.DesktopFile.DESKTOP_SUFFIX
+        );
 
         var file = new Model.DesktopFile (path);
 

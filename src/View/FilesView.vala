@@ -147,7 +147,7 @@ public class View.FilesView : Adw.NavigationPage {
                 }
 
                 deleted (ret);
-    
+
                 delete_dialog.destroy ();
             });
 
