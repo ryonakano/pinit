@@ -29,7 +29,7 @@ public class Model.DesktopFileModel : Object {
     /**
      * The directory where user desktop files are stored.
      */
-    private File desktop_files_dir;
+    private string desktop_files_path;
 
     public DesktopFileModel () {
     }
@@ -37,11 +37,12 @@ public class Model.DesktopFileModel : Object {
     construct {
         files_list = new Gee.ArrayList<DesktopFile> ();
 
-        string desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
-        desktop_files_dir = File.new_for_path (desktop_files_path);
+        desktop_files_path = Path.build_filename (Environment.get_home_dir (), ".local/share/applications");
 
         // Create the desktop files directory if not exists
         if (!FileUtils.test (desktop_files_path, FileTest.EXISTS)) {
+            var desktop_files_dir = File.new_for_path (desktop_files_path);
+
             try {
                 desktop_files_dir.make_directory_with_parents ();
             } catch (Error err) {
@@ -64,6 +65,7 @@ public class Model.DesktopFileModel : Object {
         new Thread<void> (null, () => {
             files_list.clear ();
 
+            var desktop_files_dir = File.new_for_path (desktop_files_path);
             FileEnumerator enumerator;
             try {
                 enumerator = desktop_files_dir.enumerate_children (FileAttribute.STANDARD_NAME,
