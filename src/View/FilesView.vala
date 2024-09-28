@@ -9,8 +9,6 @@ public class View.FilesView : Adw.NavigationPage {
     public signal void selected (Model.DesktopFile file);
 
     private ListStore list_store;
-    private Adw.HeaderBar headerbar;
-    private Gtk.ListBox files_list;
 
     public FilesView () {
     }
@@ -18,9 +16,19 @@ public class View.FilesView : Adw.NavigationPage {
     construct {
         list_store = new ListStore (typeof (Model.DesktopFile));
 
-        /*
-         * Headerbar part
-         */
+        var headerbar = setup_headerbar ();
+        var content = setup_content ();
+
+        var toolbar_view = new Adw.ToolbarView ();
+        toolbar_view.add_top_bar (headerbar);
+        toolbar_view.set_content (content);
+
+        title = Define.APP_NAME;
+        child = toolbar_view;
+        width_request = 350;
+    }
+
+    private Gtk.Widget setup_headerbar () {
         var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
             tooltip_text = _("Create a new entry")
         };
@@ -48,13 +56,18 @@ public class View.FilesView : Adw.NavigationPage {
             primary = true
         };
 
-        headerbar = new Adw.HeaderBar ();
+        var headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (create_button);
         headerbar.pack_end (menu_button);
 
-        /*
-         * Content part
-         */
+        create_button.clicked.connect (() => {
+            new_activated ();
+        });
+
+        return headerbar;
+    }
+
+    private Gtk.Widget setup_content () {
         // NoFilesPage: Shown when no desktop files available.
         var no_files_page = new Adw.StatusPage () {
             title = _("No Entries Found"),
@@ -65,7 +78,7 @@ public class View.FilesView : Adw.NavigationPage {
         };
 
         // FilesListPage: The page to list available desktop files.
-        files_list = new Gtk.ListBox ();
+        var files_list = new Gtk.ListBox ();
         files_list.set_placeholder (no_files_page);
         files_list.bind_model (list_store, files_row_func);
         files_list.add_css_class ("navigation-sidebar");
@@ -78,17 +91,7 @@ public class View.FilesView : Adw.NavigationPage {
             hexpand = true
         };
 
-        var toolbar_view = new Adw.ToolbarView ();
-        toolbar_view.add_top_bar (headerbar);
-        toolbar_view.set_content (files_list_page);
-
-        title = Define.APP_NAME;
-        child = toolbar_view;
-        width_request = 350;
-
-        create_button.clicked.connect (() => {
-            new_activated ();
-        });
+        return files_list_page;
     }
 
     public void set_list_data (Gee.ArrayList<Model.DesktopFile> list) {
