@@ -110,7 +110,7 @@ public class View.FilesView : Adw.NavigationPage {
             margin_bottom = 6
         };
         try {
-            app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON, false));
+            app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON));
         } catch (Error err) {
             warning ("Failed to update app_icon: %s", err.message);
         }
@@ -164,7 +164,7 @@ public class View.FilesView : Adw.NavigationPage {
         });
 
         locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-        string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
+        string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
         var row = new Adw.ActionRow () {
             title = app_name,

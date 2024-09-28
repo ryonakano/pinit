@@ -402,7 +402,7 @@ public class View.EditView : Adw.NavigationPage {
         is_loading = true;
         desktop_file = file;
 
-        string icon = desktop_file.get_string (KeyFileDesktop.KEY_ICON, false);
+        string icon = desktop_file.get_string (KeyFileDesktop.KEY_ICON);
 
         try {
             icon_image.gicon = Icon.new_for_string (icon);
@@ -423,15 +423,15 @@ public class View.EditView : Adw.NavigationPage {
         icon_entry.text = icon;
 
         locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
-        generic_name_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_GENERIC_NAME, locale, false);
+        generic_name_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_GENERIC_NAME, locale);
 
         locale = desktop_file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-        comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale, false);
+        comment_entry.text = desktop_file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
-        categories_row.from_strv (desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES, false));
-        keywords_row.from_strv (desktop_file.get_string_list (Define.KEY_KEYWORDS, false));
-        startup_wm_class_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, false);
-        terminal_row.active = desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL, false);
+        categories_row.from_strv (desktop_file.get_string_list (KeyFileDesktop.KEY_CATEGORIES));
+        keywords_row.from_strv (desktop_file.get_string_list (Define.KEY_KEYWORDS));
+        startup_wm_class_entry.text = desktop_file.get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+        terminal_row.active = desktop_file.get_boolean (KeyFileDesktop.KEY_TERMINAL);
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;

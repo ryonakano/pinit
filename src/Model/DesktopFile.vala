@@ -72,12 +72,10 @@ public class Model.DesktopFile : Object {
      * Return the value associated with ``key`` as a boolean.
      *
      * @param key a key
-     * @param is_required whether this key is required in
-     * [[https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html|Desktop Entry Specification]]
      * @return the value associated with the key as a boolean, or false if the key was not found or could not be parsed
      * @see GLib.KeyFile.get_boolean
      */
-    public bool get_boolean (string key, bool is_required = true) {
+    public bool get_boolean (string key) {
         bool val = false;
 
         // Maybe keyfile is new and has no key yet
@@ -85,11 +83,9 @@ public class Model.DesktopFile : Object {
             return val;
         }
 
-        // Return if the key is not required and does not exist.
-        if (!is_required) {
-            if (!has_key (key)) {
-                return val;
-            }
+        // Return if the key does not exist.
+        if (!has_key (key)) {
+            return val;
         }
 
         try {
@@ -101,7 +97,7 @@ public class Model.DesktopFile : Object {
         return val;
     }
 
-    public string get_string (string key, bool is_required = true) {
+    public string get_string (string key) {
         string val = "";
 
         // Maybe keyfile is new and has no key yet
@@ -109,11 +105,9 @@ public class Model.DesktopFile : Object {
             return val;
         }
 
-        // Return if the key is not required and does not exist.
-        if (!is_required) {
-            if (!has_key (key)) {
-                return val;
-            }
+        // Return if the key does not exist.
+        if (!has_key (key)) {
+            return val;
         }
 
         try {
@@ -137,7 +131,7 @@ public class Model.DesktopFile : Object {
         return ret;
     }
 
-    public string[] get_string_list (string key, bool is_required = true) {
+    public string[] get_string_list (string key) {
         string[] val = {};
 
         // Maybe keyfile is new and has no key yet
@@ -145,11 +139,9 @@ public class Model.DesktopFile : Object {
             return val;
         }
 
-        // Return if the key is not required and does not exist.
-        if (!is_required) {
-            if (!has_key (key)) {
-                return val;
-            }
+        // Return if the key does not exist.
+        if (!has_key (key)) {
+            return val;
         }
 
         try {
@@ -240,7 +232,7 @@ public class Model.DesktopFile : Object {
         return keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
     }
 
-    public string get_locale_string (string key, string? locale = null, bool is_required = true) {
+    public string get_locale_string (string key, string? locale = null) {
         string val = "";
 
         // Maybe keyfile is new and has no key yet
@@ -248,11 +240,9 @@ public class Model.DesktopFile : Object {
             return val;
         }
 
-        // Return if the key is not required and does not exist.
-        if (!is_required) {
-            if (!has_key (key)) {
-                return val;
-            }
+        // Return if the key is does not exist.
+        if (!has_key (key)) {
+            return val;
         }
 
         try {
