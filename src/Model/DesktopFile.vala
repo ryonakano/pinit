@@ -8,14 +8,30 @@
  */
 public class Model.DesktopFile : Object {
     /**
-     * The absolute path to the desktop file.
-     */
-    public string path { get; construct; }
-
-    /**
      * The suffix of the desktop files.
      */
     public const string DESKTOP_SUFFIX = ".desktop";
+
+    /**
+     * A key under ``g_key_file_desktop_group``, whose value is a list of strings giving the keywords which may be used in
+     * addition to other metadata to describe this entry.
+     *
+     * Note: Using ``KeyFileDesktop.KEY_KEYWORDS`` will cause the cc failing with ``‘G_KEY_FILE_DESKTOP_KEY_KEYWORDS’ undeclared``
+     * error.<<BR>>
+     * This constant does not seem to be defined in the original glib and defined in the following patch.<<BR>>
+     * (and maybe valac uses glibc with this patch and thus it does not complain any error.)<<BR>>
+     * <<BR>>
+     * [[https://sources.debian.org/patches/glib2.0/2.78.3-2/01_gettext-desktopfiles.patch/]]<<BR>>
+     * <<BR>>
+     * We just keep to borrow the definition of KEY_KEYWORDS here instead of applying the patch,
+     * since it might have side effect.
+     */
+    public const string KEY_KEYWORDS = "Keywords";
+
+    /**
+     * The absolute path to the desktop file.
+     */
+    public string path { get; construct; }
 
     /**
      * Value of "Name" entry.
@@ -109,11 +125,11 @@ public class Model.DesktopFile : Object {
      */
     public string[] value_keywords {
         owned get {
-            return get_string_list (Define.KEY_KEYWORDS);
+            return get_string_list (KEY_KEYWORDS);
         }
 
         set {
-            set_string_list (Define.KEY_KEYWORDS, value);
+            set_string_list (KEY_KEYWORDS, value);
         }
     }
 
