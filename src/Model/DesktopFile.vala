@@ -220,12 +220,6 @@ public class Model.DesktopFile : Object {
     public bool get_boolean (string key) {
         bool val = false;
 
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
-            return val;
-        }
-
-        // Return if the key does not exist.
         if (!has_key (key)) {
             return val;
         }
@@ -242,12 +236,6 @@ public class Model.DesktopFile : Object {
     public string get_string (string key) {
         string val = "";
 
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
-            return val;
-        }
-
-        // Return if the key does not exist.
         if (!has_key (key)) {
             return val;
         }
@@ -264,6 +252,11 @@ public class Model.DesktopFile : Object {
     public bool has_key (string key) {
         bool ret = false;
 
+        // Maybe keyfile is new and has no key yet
+        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+            return ret;
+        }
+
         try {
             ret = keyfile.has_key (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
@@ -276,12 +269,6 @@ public class Model.DesktopFile : Object {
     public string[] get_string_list (string key) {
         string[] val = {};
 
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
-            return val;
-        }
-
-        // Return if the key does not exist.
         if (!has_key (key)) {
             return val;
         }
@@ -366,23 +353,12 @@ public class Model.DesktopFile : Object {
     ////////////////////////////////////////////////////////////////////////////
 
     public string? get_locale_for_key (string key, string? locale = null) {
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
-            return null;
-        }
-
         return keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
     }
 
     public string get_locale_string (string key, string? locale = null) {
         string val = "";
 
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
-            return val;
-        }
-
-        // Return if the key is does not exist.
         if (!has_key (key)) {
             return val;
         }
