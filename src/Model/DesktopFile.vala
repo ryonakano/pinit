@@ -416,29 +416,4 @@ public class Model.DesktopFile : Object {
 
         return ret;
     }
-
-    /**
-     * Open the desktop file associated with this in an external editor.
-     *
-     * @param parent the parent GtkWindow
-     * @return true if successfully opened this, false otherwise
-     * @throws Error failed to open this externally
-     */
-    public async bool open_external (Gtk.Window? parent) throws Error {
-        var file = File.new_for_path (path);
-
-        var file_launcher = new Gtk.FileLauncher (file) {
-            always_ask = true
-        };
-
-        bool ret = false;
-        try {
-            ret = yield file_launcher.launch (parent, null);
-        } catch (Error err) {
-            warning ("Failed to open file externally. path=%s: %s", path, err.message);
-            throw err;
-        }
-
-        return ret;
-    }
 }

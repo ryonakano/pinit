@@ -363,11 +363,11 @@ public class View.EditView : Adw.NavigationPage {
         });
 
         open_text_editor_button.clicked.connect (() => {
-            desktop_file.open_external.begin ((Gtk.Window) get_root (), (obj, res) => {
+            open_external.begin (desktop_file.path, (obj, res) => {
                 bool ret;
 
                 try {
-                    ret = desktop_file.open_external.end (res);
+                    ret = open_external.end (res);
                 } catch (Error err) {
                     // The calling method is responsible for showing the error log.
 
@@ -493,5 +493,23 @@ public class View.EditView : Adw.NavigationPage {
      */
     private void set_save_button_sensitivity () {
         save_button.sensitive = (name_entry.text.length > 0 && exec_entry.text.length > 0);
+    }
+
+    private async bool open_external (string path) throws Error {
+        var file = File.new_for_path (path);
+
+        var file_launcher = new Gtk.FileLauncher (file) {
+            always_ask = true
+        };
+
+        bool ret = false;
+        try {
+            ret = yield file_launcher.launch ((Gtk.Window) get_root (), null);
+        } catch (Error err) {
+            warning ("Failed to open file externally. path=%s: %s", path, err.message);
+            throw err;
+        }
+
+        return ret;
     }
 }
