@@ -80,7 +80,7 @@ public class View.FilesView : Adw.NavigationPage {
         // FilesListPage: The page to list available desktop files.
         var files_list = new Gtk.ListBox ();
         files_list.set_placeholder (no_files_page);
-        files_list.bind_model (list_store, files_row_func);
+        files_list.bind_model (list_store, create_files_row);
         files_list.add_css_class ("navigation-sidebar");
 
         // Pack into a scrolled window in case there are many desktop files in the files list
@@ -103,9 +103,8 @@ public class View.FilesView : Adw.NavigationPage {
         });
     }
 
-    private Gtk.Widget files_row_func (Object item) {
+    private Gtk.Widget create_files_row (Object item) {
         var file = item as Model.DesktopFile;
-        assert (file != null);
 
         var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
             pixel_size = 48,
@@ -121,10 +120,8 @@ public class View.FilesView : Adw.NavigationPage {
         string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
         string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
-        string dialog_title = _("Delete Entry?");
-        if (app_name != "") {
-            dialog_title = _("Delete Entry of “%s”?").printf (app_name);
-        }
+        locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+        string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
         var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
             tooltip_text = _("Delete…"),
@@ -132,42 +129,36 @@ public class View.FilesView : Adw.NavigationPage {
         };
         delete_button.add_css_class ("flat");
         delete_button.clicked.connect (() => {
-            var delete_dialog = new Adw.MessageDialog (
-                (Gtk.Window) get_root (),
-                dialog_title,
-                _("This removes the app from the launcher.")
-            );
-            delete_dialog.add_response (Define.DialogResponse.CANCEL, _("_Cancel"));
-            delete_dialog.add_response (Define.DialogResponse.OK, _("_Delete"));
-            delete_dialog.set_response_appearance (Define.DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
-            delete_dialog.default_response = Define.DialogResponse.CANCEL;
-            delete_dialog.close_response = Define.DialogResponse.CANCEL;
-            delete_dialog.response.connect ((response_id) => {
-                if (response_id == Define.DialogResponse.OK) {
-                    bool ret = file.delete_file ();
-                    if (!ret) {
-                        var error_dialog = new Adw.MessageDialog (
-                            (Gtk.Window) get_root (),
-                            _("Failed to Delete Entry of “%s”").printf (app_name),
-                            _("There was an error while removing the app entry.")
-                        );
-                        error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
-                        error_dialog.default_response = Define.DialogResponse.CLOSE;
-                        error_dialog.close_response = Define.DialogResponse.CLOSE;
-                        error_dialog.present ();
-                    }
+            var delete_dialog = setup_delete_dialog (app_name);
 
-                    deleted (ret);
+            delete_dialog.response.connect ((response_id) => {
+                if (response_id != Define.DialogResponse.OK) {
+                    return;
                 }
 
+                bool ret = file.delete_file ();
+                if (!ret) {
+                    var error_dialog = new Adw.MessageDialog (
+                        (Gtk.Window) get_root (),
+                        _("Failed to Delete Entry of “%s”").printf (app_name),
+                        _("There was an error while removing the app entry.")
+                    );
+
+                    error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+
+                    error_dialog.default_response = Define.DialogResponse.CLOSE;
+                    error_dialog.close_response = Define.DialogResponse.CLOSE;
+
+                    error_dialog.present ();
+                }
+
+                deleted (ret);
+    
                 delete_dialog.destroy ();
             });
 
             delete_dialog.present ();
         });
-
-        locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-        string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
         var row = new Adw.ActionRow () {
             title = app_name,
@@ -183,5 +174,28 @@ public class View.FilesView : Adw.NavigationPage {
         });
 
         return row;
+    }
+
+    private Adw.MessageDialog setup_delete_dialog (string app_name) {
+        string dialog_title = _("Delete Entry?");
+        if (app_name != "") {
+            dialog_title = _("Delete Entry of “%s”?").printf (app_name);
+        }
+
+        var delete_dialog = new Adw.MessageDialog (
+            (Gtk.Window) get_root (),
+            dialog_title,
+            _("This removes the app from the launcher.")
+        );
+
+        delete_dialog.add_response (Define.DialogResponse.CANCEL, _("_Cancel"));
+        delete_dialog.add_response (Define.DialogResponse.OK, _("_Delete"));
+
+        delete_dialog.set_response_appearance (Define.DialogResponse.OK, Adw.ResponseAppearance.DESTRUCTIVE);
+
+        delete_dialog.default_response = Define.DialogResponse.CANCEL;
+        delete_dialog.close_response = Define.DialogResponse.CANCEL;
+
+        return delete_dialog;
     }
 }
