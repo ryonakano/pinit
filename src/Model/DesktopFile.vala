@@ -38,7 +38,7 @@ public class Model.DesktopFile : Object {
      */
     public string value_name {
         owned get {
-            string locale = get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
+            string? locale = get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
             string name = get_locale_string (KeyFileDesktop.KEY_NAME, locale);
 
             return name;
@@ -80,7 +80,7 @@ public class Model.DesktopFile : Object {
      */
     public string value_generic_name {
         owned get {
-            string locale = get_locale_for_key (KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
+            string? locale = get_locale_for_key (KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
             string generic_name = get_locale_string (KeyFileDesktop.KEY_GENERIC_NAME, locale);
 
             return generic_name;
@@ -96,7 +96,7 @@ public class Model.DesktopFile : Object {
      */
     public string value_comment {
         owned get {
-            string locale = get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+            string? locale = get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
             string comment = get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
             return comment;
