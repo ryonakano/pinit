@@ -18,6 +18,132 @@ public class Model.DesktopFile : Object {
     public const string DESKTOP_SUFFIX = ".desktop";
 
     /**
+     * Value of "Name" entry.
+     */
+    public string value_name {
+        owned get {
+            string locale = get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
+            string name = get_locale_string (KeyFileDesktop.KEY_NAME, locale);
+
+            return name;
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_NAME, value);
+        }
+    }
+
+    /**
+     * Value of "Exec" entry.
+     */
+    public string value_exec {
+        owned get {
+            return get_string (KeyFileDesktop.KEY_EXEC);
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_EXEC, value);
+        }
+    }
+
+    /**
+     * Value of "Icon" entry.
+     */
+    public string value_icon {
+        owned get {
+            return get_string (KeyFileDesktop.KEY_ICON);
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_ICON, value);
+        }
+    }
+
+    /**
+     * Value of "GenericName" entry.
+     */
+    public string value_generic_name {
+        owned get {
+            string locale = get_locale_for_key (KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
+            string generic_name = get_locale_string (KeyFileDesktop.KEY_GENERIC_NAME, locale);
+
+            return generic_name;
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_GENERIC_NAME, value);
+        }
+    }
+
+    /**
+     * Value of "Comment" entry.
+     */
+    public string value_comment {
+        owned get {
+            string locale = get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+            string comment = get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
+
+            return comment;
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_COMMENT, value);
+        }
+    }
+
+    /**
+     * Value of "Categories" entry.
+     */
+    public string[] value_categories {
+        owned get {
+            return get_string_list (KeyFileDesktop.KEY_CATEGORIES);
+        }
+
+        set {
+            set_string_list (KeyFileDesktop.KEY_CATEGORIES, value);
+        }
+    }
+
+    /**
+     * Value of "Keywords" entry.
+     */
+    public string[] value_keywords {
+        owned get {
+            return get_string_list (Define.KEY_KEYWORDS);
+        }
+
+        set {
+            set_string_list (Define.KEY_KEYWORDS, value);
+        }
+    }
+
+    /**
+     * Value of "StartupWMClass" entry.
+     */
+    public string value_startup_wm_class {
+        owned get {
+            return get_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+        }
+
+        set {
+            set_string (KeyFileDesktop.KEY_STARTUP_WM_CLASS, value);
+        }
+    }
+
+    /**
+     * Value of "Terminal" entry.
+     */
+    public bool value_terminal {
+        get {
+            return get_boolean (KeyFileDesktop.KEY_TERMINAL);
+        }
+
+        set {
+            set_boolean (KeyFileDesktop.KEY_TERMINAL, value);
+        }
+    }
+
+    /**
      * Store data in a single desktop file.
      */
     private KeyFile keyfile;

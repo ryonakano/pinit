@@ -112,16 +112,10 @@ public class View.FilesView : Adw.NavigationPage {
             margin_bottom = 6
         };
         try {
-            app_icon.gicon = Icon.new_for_string (file.get_string (KeyFileDesktop.KEY_ICON));
+            app_icon.gicon = Icon.new_for_string (file.value_icon);
         } catch (Error err) {
             warning ("Failed to update app_icon: %s", err.message);
         }
-
-        string locale = file.get_locale_for_key (KeyFileDesktop.KEY_NAME, Application.preferred_language);
-        string app_name = file.get_locale_string (KeyFileDesktop.KEY_NAME, locale);
-
-        locale = file.get_locale_for_key (KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-        string comment = file.get_locale_string (KeyFileDesktop.KEY_COMMENT, locale);
 
         var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
             tooltip_text = _("Delete…"),
@@ -129,7 +123,7 @@ public class View.FilesView : Adw.NavigationPage {
         };
         delete_button.add_css_class ("flat");
         delete_button.clicked.connect (() => {
-            var delete_dialog = setup_delete_dialog (app_name);
+            var delete_dialog = setup_delete_dialog (file.value_name);
 
             delete_dialog.response.connect ((response_id) => {
                 if (response_id != Define.DialogResponse.OK) {
@@ -140,7 +134,7 @@ public class View.FilesView : Adw.NavigationPage {
                 if (!ret) {
                     var error_dialog = new Adw.MessageDialog (
                         (Gtk.Window) get_root (),
-                        _("Failed to Delete Entry of “%s”").printf (app_name),
+                        _("Failed to Delete Entry of “%s”").printf (file.value_name),
                         _("There was an error while removing the app entry.")
                     );
 
@@ -161,8 +155,8 @@ public class View.FilesView : Adw.NavigationPage {
         });
 
         var row = new Adw.ActionRow () {
-            title = app_name,
-            subtitle = comment,
+            title = file.value_name,
+            subtitle = file.value_comment,
             title_lines = 1,
             subtitle_lines = 1,
             activatable = true
