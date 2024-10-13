@@ -179,4 +179,19 @@ public class Model.DesktopFileModel : Object {
 
         return ret;
     }
+
+    /**
+     * Check if there is a desktop file with unsaved changes.
+     *
+     * @return true if a desktop file with unsaved changes exists, false otherwise
+     */
+    public bool has_unsaved_changes () {
+        foreach (Model.DesktopFile file in files_list) {
+            if (!file.is_clean) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

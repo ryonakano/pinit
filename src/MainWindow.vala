@@ -155,16 +155,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Otherwise, tell the user unsaved work through a dialog.
      */
     public void prep_destroy () {
-        // Check if there is a desktop file with changes
-        bool is_changed = false;
-        foreach (Model.DesktopFile file in model.files_list) {
-            if (!file.is_clean) {
-                is_changed = true;
-                break;
-            }
-        }
-
-        if (!is_changed) {
+        if (!model.has_unsaved_changes ()) {
             destroy ();
             return;
         }
