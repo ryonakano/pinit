@@ -160,9 +160,22 @@ public class Model.DesktopFile : Object {
     }
 
     /**
-     * Store data in a single desktop file.
+     * Returns if this contains unsaved changes to the disk.
      */
-    private KeyFile keyfile;
+    public bool is_clean {
+        get {
+            return equals_keyfile (keyfile_ditry, keyfile_clean);
+        }
+    }
+
+    /**
+     * Data in a single desktop file that loaded from the disk.
+     */
+    private KeyFile keyfile_clean;
+    /**
+     * Data in a single desktop file that may contain unsaved changes to the disk.
+     */
+    private KeyFile keyfile_ditry;
 
     /**
      * The constructor.
@@ -176,32 +189,42 @@ public class Model.DesktopFile : Object {
     }
 
     construct {
-        keyfile = new KeyFile ();
+        keyfile_clean = new KeyFile ();
+        keyfile_ditry = new KeyFile ();
     }
 
     /**
-     * Check if this and other contains the same values as desktop files.
+     * Check if two KeyFiles have the same content.
      *
-     * @param other another DesktopFile
-     * @return true if this and other contains the same values
+     * @param a KeyFile to compare
+     * @param b KeyFile to compare
+     * @return true if two KeyFiles have the same content
      */
-    public bool equals (DesktopFile other) {
-        // Compare other than the path
-        string this_data = this.to_data ();
-        string other_data = other.to_data ();
+    public bool equals_keyfile (KeyFile a, KeyFile b) {
+        string a_data = a.to_data ();
+        string b_data = b.to_data ();
 
-        return this_data == other_data;
+        return a_data == b_data;
     }
 
     /**
-     * Copy and set data from this to another DesktopFile.
+     * Sync content of KeyFile between.
      *
-     * @param dest another DesktopFile to copy this data to
+     * @param src KeyFile to be copied from
+     * @param dst KeyFile to be copied to
      * @return true if successfully copied, false otherwise
      */
-    public bool copy_to (DesktopFile dest) {
-        string data = to_data ();
-        return dest.load_from_data (data);
+    public bool copy_keyfile (KeyFile dst, KeyFile src) {
+        string data = src.to_data ();
+
+        try {
+            dst.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.load_from_data: %s", err.message);
+            return false;
+        }
+
+        return true;
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -225,7 +248,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile.get_boolean (KeyFileDesktop.GROUP, key);
+            val = keyfile_ditry.get_boolean (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, err.message);
         }
@@ -241,7 +264,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile.get_string (KeyFileDesktop.GROUP, key);
+            val = keyfile_ditry.get_string (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_string: key=%s: %s", key, err.message);
         }
@@ -252,13 +275,13 @@ public class Model.DesktopFile : Object {
     public bool has_key (string key) {
         bool ret = false;
 
-        // Maybe keyfile is new and has no key yet
-        if (!keyfile.has_group (KeyFileDesktop.GROUP)) {
+        // Maybe keyfile_ditry is new and has no key yet
+        if (!keyfile_ditry.has_group (KeyFileDesktop.GROUP)) {
             return ret;
         }
 
         try {
-            ret = keyfile.has_key (KeyFileDesktop.GROUP, key);
+            ret = keyfile_ditry.has_key (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.has_key: key=%s: %s", key, err.message);
         }
@@ -274,7 +297,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile.get_string_list (KeyFileDesktop.GROUP, key);
+            val = keyfile_ditry.get_string_list (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, err.message);
         }
@@ -285,12 +308,12 @@ public class Model.DesktopFile : Object {
     public void set_boolean (string key, bool val) {
         if (val) {
             // Update the value when the corresponding entry has some value.
-            keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
+            keyfile_ditry.set_boolean (KeyFileDesktop.GROUP, key, val);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -301,12 +324,12 @@ public class Model.DesktopFile : Object {
     public void set_string (string key, string val) {
         if (val != "") {
             // Update the value when the corresponding entry has some value.
-            keyfile.set_string (KeyFileDesktop.GROUP, key, val);
+            keyfile_ditry.set_string (KeyFileDesktop.GROUP, key, val);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -317,12 +340,12 @@ public class Model.DesktopFile : Object {
     public void set_string_list (string key, string[] list) {
         if (list.length > 0) {
             // Update the value when the corresponding entry has some value.
-            keyfile.set_string_list (KeyFileDesktop.GROUP, key, list);
+            keyfile_ditry.set_string_list (KeyFileDesktop.GROUP, key, list);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -331,14 +354,14 @@ public class Model.DesktopFile : Object {
     }
 
     public string to_data () {
-        return keyfile.to_data ();
+        return keyfile_ditry.to_data ();
     }
 
     public bool load_from_data (string data) {
         bool ret = false;
 
         try {
-            ret = keyfile.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
+            ret = keyfile_ditry.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.load_from_data: %s", err.message);
         }
@@ -353,7 +376,7 @@ public class Model.DesktopFile : Object {
     ////////////////////////////////////////////////////////////////////////////
 
     public string? get_locale_for_key (string key, string? locale = null) {
-        return keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
+        return keyfile_ditry.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
     }
 
     public string get_locale_string (string key, string? locale = null) {
@@ -364,7 +387,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
+            val = keyfile_ditry.get_locale_string (KeyFileDesktop.GROUP, key, locale);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, err.message);
         }
@@ -379,29 +402,27 @@ public class Model.DesktopFile : Object {
     ////////////////////////////////////////////////////////////////////////////
 
     public bool load_file () {
-        bool ret = false;
-
         try {
-            ret = keyfile.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
+            keyfile_clean.load_from_file (path, KeyFileFlags.KEEP_TRANSLATIONS);
         } catch (FileError err) {
             warning ("Failed to load from file. path=%s: %s", path, err.message);
+            return false;
         } catch (KeyFileError err) {
-            warning ("Invalid keyfile. path=%s: %s", path, err.message);
+            warning ("Invalid keyfile_ditry. path=%s: %s", path, err.message);
+            return false;
         }
 
-        return ret;
+        return copy_keyfile (keyfile_ditry, keyfile_clean);
     }
 
     public bool save_file () {
-        bool ret = false;
-
         try {
-            ret = keyfile.save_to_file (path);
+            keyfile_ditry.save_to_file (path);
         } catch (FileError err) {
             warning ("Failed to save file. path=%s: %s", path, err.message);
         }
 
-        return ret;
+        return copy_keyfile (keyfile_clean, keyfile_ditry);
     }
 
     public bool delete_file () {

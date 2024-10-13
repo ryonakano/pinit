@@ -30,8 +30,6 @@ public class MainWindow : Adw.ApplicationWindow {
     private Adw.NavigationSplitView split_view;
 
     private Model.DesktopFileModel model;
-    private Model.DesktopFile desktop_file;
-    private Model.DesktopFile backup_desktop_file;
 
     public MainWindow () {
         Object (
@@ -84,8 +82,6 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         files_view.deleted.connect ((is_success) => {
-            desktop_file = null;
-            backup_desktop_file = null;
             edit_view.hide_all ();
             model.load.begin ();
 
@@ -102,7 +98,6 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.saved.connect (() => {
-            desktop_file.copy_to (backup_desktop_file);
             model.load.begin ();
 
             var updated_toast = new Adw.Toast (_("Entry updated.")) {
@@ -144,18 +139,20 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * Preprocess before destruction of this.
      *
-     * Just destroy this if we never edited entries or no changes made for desktop files.
+     * Just destroy this if no changes made for desktop files.
      * Otherwise, tell the user unsaved work through a dialog.
      */
     public void prep_destroy () {
-        // Never edited entries
-        if (desktop_file == null || backup_desktop_file == null) {
-            destroy ();
-            return;
+        // Check if there is a desktop file with changes
+        bool is_changed = false;
+        foreach (Model.DesktopFile file in model.files_list) {
+            if (!file.is_clean) {
+                is_changed = true;
+                break;
+            }
         }
 
-        // No changes made
-        if (desktop_file.equals (backup_desktop_file)) {
+        if (!is_changed) {
             destroy ();
             return;
         }
@@ -200,17 +197,10 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * Start editing the given {@link Model.DesktopFile}.
      *
-     * It first backups the given {@link Model.DesktopFile} and then calls {@link View.EditView.load_file} to start
-     * editing, so that the app can recognize unsaved changes before destruction.
-     *
      * @param file The {@link Model.DesktopFile} to edit
      */
     public void show_edit_view (Model.DesktopFile file) {
-        desktop_file = file;
-        backup_desktop_file = new Model.DesktopFile (desktop_file.path);
-        desktop_file.copy_to (backup_desktop_file);
-
-        edit_view.load_file (desktop_file);
+        edit_view.load_file (file);
         split_view.show_content = true;
     }
 
