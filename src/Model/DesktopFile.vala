@@ -18,15 +18,6 @@ public class Model.DesktopFile : Object {
     public string path { get; construct; }
 
     /**
-     * Value of "Type" entry.
-     */
-    public string value_type {
-        set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_TYPE, value);
-        }
-    }
-
-    /**
      * Value of "Name" entry.
      */
     public string value_name {
@@ -235,6 +226,8 @@ public class Model.DesktopFile : Object {
     }
 
     public bool save_file () {
+        Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_TYPE, "Application");
+
         bool ret = Util.KeyFileUtil.save_file (keyfile_dirty, path);
         if (!ret) {
             return false;
