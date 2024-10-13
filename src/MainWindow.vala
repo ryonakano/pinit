@@ -9,12 +9,8 @@
  * It contains a ``Adw.NavigationSplitView`` as a view which has a {@link View.FilesView} and
  * {@link View.EditView} inside.
  *
- * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when:
- *
- *  * constructed
- *  * {@link View.FilesView.deleted} is emitted
- *  * {@link View.EditView.saved} is emitted
- *  * the action ``win.new`` is called
+ * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when
+ * constructed.
  *
  * If {@link Model.DesktopFileModel.load} succeeded, this calls {@link View.FilesView.set_list_data} to reflect
  * load result.<<BR>>
@@ -30,8 +26,6 @@ public class MainWindow : Adw.ApplicationWindow {
     private Adw.NavigationSplitView split_view;
 
     private Model.DesktopFileModel model;
-    private Model.DesktopFile desktop_file;
-    private Model.DesktopFile backup_desktop_file;
 
     public MainWindow () {
         Object (
@@ -83,18 +77,32 @@ public class MainWindow : Adw.ApplicationWindow {
             on_new_activate ();
         });
 
-        files_view.deleted.connect ((is_success) => {
-            desktop_file = null;
-            backup_desktop_file = null;
+        files_view.delete_activated.connect ((file) => {
             edit_view.hide_all ();
-            model.load.begin ();
 
-            if (is_success) {
-                var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
-                    timeout = 5
-                };
-                overlay.add_toast (deleted_toast);
+            bool ret = model.delete_file (file);
+            if (!ret) {
+                var error_dialog = new Adw.MessageDialog (
+                    (Gtk.Window) get_root (),
+                    _("Failed to Delete Entry of “%s”").printf (file.value_name),
+                    _("There was an error while removing the app entry.")
+                );
+
+                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+
+                error_dialog.default_response = Define.DialogResponse.CLOSE;
+                error_dialog.close_response = Define.DialogResponse.CLOSE;
+
+                error_dialog.present ();
+                return;
             }
+
+            show_files_view ();
+
+            var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
+                timeout = 5
+            };
+            overlay.add_toast (deleted_toast);
         });
 
         files_view.selected.connect ((entry) => {
@@ -102,8 +110,7 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.saved.connect (() => {
-            desktop_file.copy_to (backup_desktop_file);
-            model.load.begin ();
+            files_view.set_list_data (model.files_list);
 
             var updated_toast = new Adw.Toast (_("Entry updated.")) {
                 timeout = 5
@@ -144,18 +151,20 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * Preprocess before destruction of this.
      *
-     * Just destroy this if we never edited entries or no changes made for desktop files.
+     * Just destroy this if no changes made for desktop files.
      * Otherwise, tell the user unsaved work through a dialog.
      */
     public void prep_destroy () {
-        // Never edited entries
-        if (desktop_file == null || backup_desktop_file == null) {
-            destroy ();
-            return;
+        // Check if there is a desktop file with changes
+        bool is_changed = false;
+        foreach (Model.DesktopFile file in model.files_list) {
+            if (!file.is_clean) {
+                is_changed = true;
+                break;
+            }
         }
 
-        // No changes made
-        if (desktop_file.equals (backup_desktop_file)) {
+        if (!is_changed) {
             destroy ();
             return;
         }
@@ -193,47 +202,29 @@ public class MainWindow : Adw.ApplicationWindow {
      * Reload and show the file list.
      */
     public void show_files_view () {
-        model.load.begin ();
+        files_view.set_list_data (model.files_list);
         split_view.show_content = false;
     }
 
     /**
      * Start editing the given {@link Model.DesktopFile}.
      *
-     * It first backups the given {@link Model.DesktopFile} and then calls {@link View.EditView.load_file} to start
-     * editing, so that the app can recognize unsaved changes before destruction.
-     *
      * @param file The {@link Model.DesktopFile} to edit
      */
     public void show_edit_view (Model.DesktopFile file) {
-        desktop_file = file;
-        backup_desktop_file = new Model.DesktopFile (desktop_file.path);
-        desktop_file.copy_to (backup_desktop_file);
-
-        edit_view.load_file (desktop_file);
+        edit_view.load_file (file);
         split_view.show_content = true;
     }
 
     /**
      * The callback for new file.
      *
-     * Create a new DesktopFile with random filename and start editing it.
+     * Create a new DesktopFile and start editing it.
      */
     private void on_new_activate () {
-        string filename = Config.APP_ID + "." + Uuid.string_random ();
-        string path = Path.build_filename (
-            Environment.get_home_dir (), ".local/share/applications",
-            filename + Model.DesktopFile.DESKTOP_SUFFIX
-        );
+        Model.DesktopFile file = model.create_file ();
 
-        var file = new Model.DesktopFile (path);
-
-        bool ret = file.save_file ();
-        if (!ret) {
-            return;
-        }
-
-        model.load.begin ();
+        files_view.set_list_data (model.files_list);
         show_edit_view (file);
     }
 }

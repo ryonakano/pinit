@@ -22,7 +22,7 @@ public class Model.DesktopFile : Object {
      */
     public string value_type {
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_TYPE, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_TYPE, value);
         }
     }
 
@@ -31,14 +31,14 @@ public class Model.DesktopFile : Object {
      */
     public string value_name {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile, KeyFileDesktop.KEY_NAME, Application.preferred_language);
-            string name = Util.KeyFileUtil.get_locale_string (keyfile, KeyFileDesktop.KEY_NAME, locale);
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_NAME, Application.preferred_language);
+            string name = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_NAME, locale);
 
             return name;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_NAME, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_NAME, value);
         }
     }
 
@@ -47,11 +47,11 @@ public class Model.DesktopFile : Object {
      */
     public string value_exec {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile, KeyFileDesktop.KEY_EXEC);
+            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_EXEC);
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_EXEC, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_EXEC, value);
         }
     }
 
@@ -60,11 +60,11 @@ public class Model.DesktopFile : Object {
      */
     public string value_icon {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile, KeyFileDesktop.KEY_ICON);
+            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_ICON);
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_ICON, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_ICON, value);
         }
     }
 
@@ -73,14 +73,14 @@ public class Model.DesktopFile : Object {
      */
     public string value_generic_name {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile, KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
-            string generic_name = Util.KeyFileUtil.get_locale_string (keyfile, KeyFileDesktop.KEY_GENERIC_NAME, locale);
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
+            string generic_name = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, locale);
 
             return generic_name;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_GENERIC_NAME, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, value);
         }
     }
 
@@ -89,14 +89,14 @@ public class Model.DesktopFile : Object {
      */
     public string value_comment {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-            string comment = Util.KeyFileUtil.get_locale_string (keyfile, KeyFileDesktop.KEY_COMMENT, locale);
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+            string comment = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, locale);
 
             return comment;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_COMMENT, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, value);
         }
     }
 
@@ -105,11 +105,11 @@ public class Model.DesktopFile : Object {
      */
     public string[] value_categories {
         owned get {
-            return Util.KeyFileUtil.get_string_list (keyfile, KeyFileDesktop.KEY_CATEGORIES);
+            return Util.KeyFileUtil.get_string_list (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES);
         }
 
         set {
-            Util.KeyFileUtil.set_string_list (keyfile, KeyFileDesktop.KEY_CATEGORIES, value);
+            Util.KeyFileUtil.set_string_list (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES, value);
         }
     }
 
@@ -118,11 +118,11 @@ public class Model.DesktopFile : Object {
      */
     public string[] value_keywords {
         owned get {
-            return Util.KeyFileUtil.get_string_list (keyfile, Util.KeyFileUtil.KEY_KEYWORDS);
+            return Util.KeyFileUtil.get_string_list (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS);
         }
 
         set {
-            Util.KeyFileUtil.set_string_list (keyfile, Util.KeyFileUtil.KEY_KEYWORDS, value);
+            Util.KeyFileUtil.set_string_list (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS, value);
         }
     }
 
@@ -131,11 +131,11 @@ public class Model.DesktopFile : Object {
      */
     public string value_startup_wm_class {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile, KeyFileDesktop.KEY_STARTUP_WM_CLASS, value);
+            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS, value);
         }
     }
 
@@ -144,18 +144,64 @@ public class Model.DesktopFile : Object {
      */
     public bool value_terminal {
         get {
-            return Util.KeyFileUtil.get_boolean (keyfile, KeyFileDesktop.KEY_TERMINAL);
+            return Util.KeyFileUtil.get_boolean (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL);
         }
 
         set {
-            Util.KeyFileUtil.set_boolean (keyfile, KeyFileDesktop.KEY_TERMINAL, value);
+            Util.KeyFileUtil.set_boolean (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL, value);
         }
     }
 
     /**
-     * Store data in a single desktop file.
+     * Value of "Name" entry without unsaved changes.
      */
-    private KeyFile keyfile;
+    public string saved_value_name {
+        owned get {
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_NAME, Application.preferred_language);
+            string name = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_NAME, locale);
+
+            return name;
+        }
+    }
+
+    /**
+     * Value of "Icon" entry without unsaved changes.
+     */
+    public string saved_value_icon {
+        owned get {
+            return Util.KeyFileUtil.get_string (keyfile_clean, KeyFileDesktop.KEY_ICON);
+        }
+    }
+
+    /**
+     * Value of "Comment" entry without unsaved changes.
+     */
+    public string saved_value_comment {
+        owned get {
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+            string comment = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_COMMENT, locale);
+
+            return comment;
+        }
+    }
+
+    /**
+     * Returns if this contains unsaved changes to the disk.
+     */
+    public bool is_clean {
+        get {
+            return Util.KeyFileUtil.equals (keyfile_dirty, keyfile_clean);
+        }
+    }
+
+    /**
+     * Data in a single desktop file that loaded from the disk.
+     */
+    private KeyFile keyfile_clean;
+    /**
+     * Data in a single desktop file that may contain unsaved changes to the disk.
+     */
+    private KeyFile keyfile_dirty;
 
     /**
      * The constructor.
@@ -169,48 +215,8 @@ public class Model.DesktopFile : Object {
     }
 
     construct {
-        keyfile = new KeyFile ();
-    }
-
-    /**
-     * Check if this and other contains the same values as desktop files.
-     *
-     * @param other another DesktopFile
-     * @return true if this and other contains the same values
-     */
-    public bool equals (DesktopFile other) {
-        // Compare other than the path
-        string this_data = this.to_data ();
-        string other_data = other.to_data ();
-
-        return this_data == other_data;
-    }
-
-    /**
-     * Copy and set data from this to another DesktopFile.
-     *
-     * @param dest another DesktopFile to copy this data to
-     * @return true if successfully copied, false otherwise
-     */
-    public bool copy_to (DesktopFile dest) {
-        string data = to_data ();
-        return dest.load_from_data (data);
-    }
-
-    public string to_data () {
-        return keyfile.to_data ();
-    }
-
-    public bool load_from_data (string data) {
-        bool ret = false;
-
-        try {
-            ret = keyfile.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
-        } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.load_from_data: %s", err.message);
-        }
-
-        return ret;
+        keyfile_clean = new KeyFile ();
+        keyfile_dirty = new KeyFile ();
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -220,23 +226,20 @@ public class Model.DesktopFile : Object {
     ////////////////////////////////////////////////////////////////////////////
 
     public bool load_file () {
-        return Util.KeyFileUtil.load_file (keyfile, path, KeyFileFlags.KEEP_TRANSLATIONS);
+        bool ret = Util.KeyFileUtil.load_file (keyfile_clean, path, KeyFileFlags.KEEP_TRANSLATIONS);
+        if (!ret) {
+            return false;
+        }
+
+        return Util.KeyFileUtil.copy (keyfile_dirty, keyfile_clean);
     }
 
     public bool save_file () {
-        return Util.KeyFileUtil.save_file (keyfile, path);
-    }
-
-    public bool delete_file () {
-        var file = File.new_for_path (path);
-        bool ret = false;
-
-        try {
-            ret = file.delete ();
-        } catch (Error err) {
-            warning ("Failed to delete file. path=%s: %s", path, err.message);
+        bool ret = Util.KeyFileUtil.save_file (keyfile_dirty, path);
+        if (!ret) {
+            return false;
         }
 
-        return ret;
+        return Util.KeyFileUtil.copy (keyfile_clean, keyfile_dirty);
     }
 }

@@ -23,6 +23,40 @@ namespace Util.KeyFileUtil {
      */
     public const string KEY_KEYWORDS = "Keywords";
 
+    /**
+     * Check if two KeyFiles have the same content.
+     *
+     * @param a KeyFile to compare
+     * @param b KeyFile to compare
+     * @return true if two KeyFiles have the same content
+     */
+    public static bool equals (KeyFile a, KeyFile b) {
+        string a_data = a.to_data ();
+        string b_data = b.to_data ();
+
+        return a_data == b_data;
+    }
+
+    /**
+     * Sync content of KeyFile between.
+     *
+     * @param src KeyFile to be copied from
+     * @param dst KeyFile to be copied to
+     * @return true if successfully copied, false otherwise
+     */
+    public static bool copy (KeyFile dst, KeyFile src) {
+        string data = src.to_data ();
+
+        try {
+            dst.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
+        } catch (KeyFileError err) {
+            warning ("Failed to KeyFile.load_from_data: %s", err.message);
+            return false;
+        }
+
+        return true;
+    }
+
     ////////////////////////////////////////////////////////////////////////////
     //
     // Key Opearations

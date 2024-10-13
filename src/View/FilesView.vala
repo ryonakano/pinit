@@ -5,7 +5,7 @@
 
 public class View.FilesView : Adw.NavigationPage {
     public signal void new_activated ();
-    public signal void deleted (bool is_success);
+    public signal void delete_activated (Model.DesktopFile file);
     public signal void selected (Model.DesktopFile file);
 
     private ListStore list_store;
@@ -112,7 +112,7 @@ public class View.FilesView : Adw.NavigationPage {
             margin_bottom = 6
         };
         try {
-            app_icon.gicon = Icon.new_for_string (file.value_icon);
+            app_icon.gicon = Icon.new_for_string (file.saved_value_icon);
         } catch (Error err) {
             warning ("Failed to update app_icon: %s", err.message);
         }
@@ -123,40 +123,24 @@ public class View.FilesView : Adw.NavigationPage {
         };
         delete_button.add_css_class ("flat");
         delete_button.clicked.connect (() => {
-            var delete_dialog = setup_delete_dialog (file.value_name);
+            var delete_dialog = setup_delete_dialog (file.saved_value_name);
 
             delete_dialog.response.connect ((response_id) => {
                 if (response_id != Define.DialogResponse.OK) {
                     return;
                 }
 
-                bool ret = file.delete_file ();
-                if (!ret) {
-                    var error_dialog = new Adw.MessageDialog (
-                        (Gtk.Window) get_root (),
-                        _("Failed to Delete Entry of “%s”").printf (file.value_name),
-                        _("There was an error while removing the app entry.")
-                    );
-
-                    error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
-
-                    error_dialog.default_response = Define.DialogResponse.CLOSE;
-                    error_dialog.close_response = Define.DialogResponse.CLOSE;
-
-                    error_dialog.present ();
-                }
-
-                deleted (ret);
-
                 delete_dialog.destroy ();
+
+                delete_activated (file);
             });
 
             delete_dialog.present ();
         });
 
         var row = new Adw.ActionRow () {
-            title = file.value_name,
-            subtitle = file.value_comment,
+            title = file.saved_value_name,
+            subtitle = file.saved_value_comment,
             title_lines = 1,
             subtitle_lines = 1,
             activatable = true
