@@ -106,15 +106,13 @@ public class View.FilesView : Adw.NavigationPage {
     private Gtk.Widget create_files_row (Object item) {
         var file = item as Model.DesktopFile;
 
-        string app_name = file.value_name;
-
         var app_icon = new Gtk.Image.from_gicon (new ThemedIcon ("application-x-executable")) {
             pixel_size = 48,
             margin_top = 6,
             margin_bottom = 6
         };
         try {
-            app_icon.gicon = Icon.new_for_string (file.value_icon);
+            app_icon.gicon = Icon.new_for_string (file.saved_value_icon);
         } catch (Error err) {
             warning ("Failed to update app_icon: %s", err.message);
         }
@@ -125,7 +123,7 @@ public class View.FilesView : Adw.NavigationPage {
         };
         delete_button.add_css_class ("flat");
         delete_button.clicked.connect (() => {
-            var delete_dialog = setup_delete_dialog (app_name);
+            var delete_dialog = setup_delete_dialog (file.saved_value_name);
 
             delete_dialog.response.connect ((response_id) => {
                 if (response_id != Define.DialogResponse.OK) {
@@ -141,8 +139,8 @@ public class View.FilesView : Adw.NavigationPage {
         });
 
         var row = new Adw.ActionRow () {
-            title = app_name,
-            subtitle = file.value_comment,
+            title = file.saved_value_name,
+            subtitle = file.saved_value_comment,
             title_lines = 1,
             subtitle_lines = 1,
             activatable = true

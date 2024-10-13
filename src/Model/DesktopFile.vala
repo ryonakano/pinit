@@ -153,6 +153,39 @@ public class Model.DesktopFile : Object {
     }
 
     /**
+     * Value of "Name" entry without unsaved changes.
+     */
+    public string saved_value_name {
+        owned get {
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_NAME, Application.preferred_language);
+            string name = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_NAME, locale);
+
+            return name;
+        }
+    }
+
+    /**
+     * Value of "Icon" entry without unsaved changes.
+     */
+    public string saved_value_icon {
+        owned get {
+            return Util.KeyFileUtil.get_string (keyfile_clean, KeyFileDesktop.KEY_ICON);
+        }
+    }
+
+    /**
+     * Value of "Comment" entry without unsaved changes.
+     */
+    public string saved_value_comment {
+        owned get {
+            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
+            string comment = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_COMMENT, locale);
+
+            return comment;
+        }
+    }
+
+    /**
      * Returns if this contains unsaved changes to the disk.
      */
     public bool is_clean {
