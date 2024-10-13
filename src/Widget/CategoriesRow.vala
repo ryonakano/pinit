@@ -6,10 +6,44 @@
 /**
  * List Categories of the app.
  *
- * There are {@link Adw.SwitchRow} for each category and {@link Adw.SwitchRow.active} represents
+ * There are ``Adw.SwitchRow`` for each category and ``Adw.SwitchRow.active`` represents
  * whether the corresponding category is listed in the desktop file.
  */
 public class Widget.CategoriesRow : Adw.ExpanderRow {
+    /**
+     * A signal emitted when categories are changed (specifically, when a ``Adw.SwitchRow`` in ``this``
+     * is turned on / off).
+     */
+    public signal void categories_changed ();
+
+    /**
+     * Preserve the category name and its corresponding switch row.
+     */
+    private class RowItem : Object {
+        public string category { get; construct; }
+        public string label { get; construct; }
+
+        public Adw.SwitchRow row { get; construct; }
+
+        public RowItem (string category, string label) {
+            Object (
+                category: category,
+                label: label
+            );
+        }
+
+        construct {
+            row = new Adw.SwitchRow () {
+                title = _(label)
+            };
+        }
+    }
+
+    /**
+     * Stores all switch rows in ``this``.
+     */
+    private Gee.ArrayList<RowItem> row_items;
+
     /**
      * Represent one category.
      */
@@ -19,17 +53,6 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
         /** Translatable name of the category. */
         string translatable_name;
     }
-
-    /**
-     * A signal emitted when categories are changed (specifically, when a {@link Adw.SwitchRow} in this
-     * is turned on / off).
-     */
-    public signal void categories_changed ();
-
-    /**
-     * Stores all of the switch rows in this expander row.
-     */
-    private Gee.ArrayList<RowItem> row_items;
 
     /**
      * Array of known categories.
@@ -52,9 +75,6 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
         { "Utility", N_("Accessories") },
     };
 
-    /**
-     * The constructor.
-     */
     public CategoriesRow () {
     }
 
@@ -103,7 +123,7 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
     /**
      * Reflect categories in a string array to the UI.
      *
-     * @param categories categories represented in a string array
+     * @param categories    categories represented in a string array
      */
     public void from_strv (string[] categories) {
         row_items.foreach ((item) => {
@@ -121,30 +141,5 @@ public class Widget.CategoriesRow : Adw.ExpanderRow {
 
             return true;
         });
-    }
-
-    private class RowItem : Object {
-        /*
-         * We want to preserve the category key name in each switch row,
-         * so wrap Adw.SwitchRow.
-         */
-
-        public string category { get; construct; }
-        public string label { get; construct; }
-
-        public Adw.SwitchRow row { get; construct; }
-
-        public RowItem (string category, string label) {
-            Object (
-                category: category,
-                label: label
-            );
-        }
-
-        construct {
-            row = new Adw.SwitchRow () {
-                title = _(label)
-            };
-        }
     }
 }
