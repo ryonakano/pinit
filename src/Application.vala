@@ -8,13 +8,8 @@
  */
 public class Application : Adw.Application {
     /**
-     * Action names and their callbacks.
+     * Whether the app is running on Pantheon desktop environment.
      */
-    private const ActionEntry[] ACTION_ENTRIES = {
-        { "quit", on_quit_activate },
-        { "about", on_about_activate },
-    };
-
     public static bool IS_ON_PANTHEON {
         get {
             return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
@@ -34,8 +29,13 @@ public class Application : Adw.Application {
     public static unowned string preferred_language { get; private set; }
 
     /**
-     * The instance of the app window.
+     * Action names and their callbacks.
      */
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "quit", on_quit_activate },
+        { "about", on_about_activate },
+    };
+
     private MainWindow main_window;
 
     public Application () {
@@ -188,7 +188,7 @@ public class Application : Adw.Application {
      * Make it possible to change the app style with the following action names
      * and remember that preference to {@link settings}.
      *
-     * You can change the app style by passsing Adw.ColorScheme value as a target value
+     * You can change the app style by passsing {@link Define.ColorScheme} value as a target value
      * to the ``app.color-scheme`` action.
      */
     private void setup_style () {
@@ -274,7 +274,8 @@ public class Application : Adw.Application {
     /**
      * The callback for "app.quit" action.
      *
-     * Perform pre-destruction process if there is an instance of {@link MainWindow}, otherwise quit the app immediately.
+     * Quit the app immediately if there is no instance of {@link MainWindow}.<<BR>>
+     * Otherwise, destory it after checking if we can.
      */
     private void on_quit_activate () {
         if (main_window == null) {
