@@ -119,7 +119,11 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         close_request.connect (() => {
-            prep_destroy ();
+            bool can_destroy = check_destroy ();
+            if (can_destroy) {
+                return Gdk.EVENT_PROPAGATE;
+            }
+
             return Gdk.EVENT_STOP;
         });
     }
@@ -149,15 +153,14 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /**
-     * Preprocess before destruction of this.
+     * Check if we can quit the app immediately.
+     * If we have unsaved changes and can't, confirm interactivelly by presenting a dialog.
      *
-     * Just destroy this if no changes made for desktop files.
-     * Otherwise, tell the user unsaved work through a dialog.
+     * @return true if we can quit the app, false otherwise.
      */
-    public void prep_destroy () {
+    public bool check_destroy () {
         if (!model.has_unsaved_changes ()) {
-            destroy ();
-            return;
+            return true;
         }
 
         var unsaved_dialog = new Adw.MessageDialog (
@@ -173,20 +176,32 @@ public class MainWindow : Adw.ApplicationWindow {
         unsaved_dialog.set_response_appearance (Define.DialogResponse.DISCARD, Adw.ResponseAppearance.DESTRUCTIVE);
         unsaved_dialog.set_response_appearance (Define.DialogResponse.SAVE, Adw.ResponseAppearance.SUGGESTED);
         unsaved_dialog.close_response = Define.DialogResponse.CANCEL;
+
+        string unsaved_dialog_resp = Define.DialogResponse.CANCEL;
+        var resp_wait_loop = new MainLoop ();
         unsaved_dialog.response.connect ((response) => {
-            if (response == Define.DialogResponse.CANCEL) {
-                return;
-            }
-
-            if (response == Define.DialogResponse.SAVE) {
-                edit_view.save_file ();
-            }
-
-            unsaved_dialog.destroy ();
-            destroy ();
+            unsaved_dialog_resp = response;
+            resp_wait_loop.quit ();
         });
 
+        // Show the dialog and wait for its response
         unsaved_dialog.present ();
+        resp_wait_loop.run ();
+
+        switch (unsaved_dialog_resp) {
+            case Define.DialogResponse.CANCEL:
+                return false;
+            case Define.DialogResponse.SAVE:
+                edit_view.save_file ();
+                break;
+            case Define.DialogResponse.DISCARD:
+                break;
+            default:
+                assert_not_reached ();
+        }
+
+        unsaved_dialog.destroy ();
+        return true;
     }
 
     /**

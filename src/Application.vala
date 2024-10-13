@@ -277,13 +277,15 @@ public class Application : Adw.Application {
      * Perform pre-destruction process if there is an instance of {@link MainWindow}, otherwise quit the app immediately.
      */
     private void on_quit_activate () {
-        if (main_window != null) {
-            main_window.prep_destroy ();
-            // Prevent quit() for now to show unsaved dialog
+        if (main_window == null) {
+            quit ();
             return;
         }
 
-        quit ();
+        bool can_destroy = main_window.check_destroy ();
+        if (can_destroy) {
+            main_window.destroy ();
+        }
     }
 
     /**
