@@ -29,6 +29,7 @@ dependencies =  [
 sources = files(
     'Model/DesktopFile.vala',
     'Model/DesktopFileModel.vala',
+    'Util/KeyFileUtil.vala',
     'Util/DesktopFileUtil.vala',
     'View/EditView.vala',
     'View/FilesView.vala',
