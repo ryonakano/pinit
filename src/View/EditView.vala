@@ -451,7 +451,7 @@ public class View.EditView : Adw.NavigationPage {
      * Get values from the input widgets in the view and save them to a desktop file.
      */
     public void save_file () {
-        desktop_file.set_string (KeyFileDesktop.KEY_TYPE, "Application");
+        desktop_file.value_type = "Application";
 
         bool ret = desktop_file.save_file ();
 
