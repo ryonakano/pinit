@@ -9,12 +9,8 @@
  * It contains a ``Adw.NavigationSplitView`` as a view which has a {@link View.FilesView} and
  * {@link View.EditView} inside.
  *
- * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when:
- *
- *  * constructed
- *  * {@link View.FilesView.deleted} is emitted
- *  * {@link View.EditView.saved} is emitted
- *  * the action ``win.new`` is called
+ * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when
+ * constructed.
  *
  * If {@link Model.DesktopFileModel.load} succeeded, this calls {@link View.FilesView.set_list_data} to reflect
  * load result.<<BR>>
@@ -81,16 +77,32 @@ public class MainWindow : Adw.ApplicationWindow {
             on_new_activate ();
         });
 
-        files_view.deleted.connect ((is_success) => {
+        files_view.delete_activated.connect ((file) => {
             edit_view.hide_all ();
-            model.load.begin ();
 
-            if (is_success) {
-                var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
-                    timeout = 5
-                };
-                overlay.add_toast (deleted_toast);
+            bool ret = model.delete_file (file);
+            if (!ret) {
+                var error_dialog = new Adw.MessageDialog (
+                    (Gtk.Window) get_root (),
+                    _("Failed to Delete Entry of “%s”").printf (file.value_name),
+                    _("There was an error while removing the app entry.")
+                );
+
+                error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
+
+                error_dialog.default_response = Define.DialogResponse.CLOSE;
+                error_dialog.close_response = Define.DialogResponse.CLOSE;
+
+                error_dialog.present ();
+                return;
             }
+
+            show_files_view ();
+
+            var deleted_toast = new Adw.Toast (_("Entry deleted.")) {
+                timeout = 5
+            };
+            overlay.add_toast (deleted_toast);
         });
 
         files_view.selected.connect ((entry) => {
@@ -98,7 +110,7 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         edit_view.saved.connect (() => {
-            model.load.begin ();
+            files_view.set_list_data (model.files_list);
 
             var updated_toast = new Adw.Toast (_("Entry updated.")) {
                 timeout = 5
@@ -190,7 +202,7 @@ public class MainWindow : Adw.ApplicationWindow {
      * Reload and show the file list.
      */
     public void show_files_view () {
-        model.load.begin ();
+        files_view.set_list_data (model.files_list);
         split_view.show_content = false;
     }
 
@@ -207,23 +219,12 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * The callback for new file.
      *
-     * Create a new DesktopFile with random filename and start editing it.
+     * Create a new DesktopFile and start editing it.
      */
     private void on_new_activate () {
-        string filename = Config.APP_ID + "." + Uuid.string_random ();
-        string path = Path.build_filename (
-            Environment.get_home_dir (), ".local/share/applications",
-            filename + Model.DesktopFile.DESKTOP_SUFFIX
-        );
+        Model.DesktopFile file = model.create_file ();
 
-        var file = new Model.DesktopFile (path);
-
-        bool ret = file.save_file ();
-        if (!ret) {
-            return;
-        }
-
-        model.load.begin ();
+        files_view.set_list_data (model.files_list);
         show_edit_view (file);
     }
 }

@@ -209,17 +209,4 @@ public class Model.DesktopFile : Object {
 
         return Util.KeyFileUtil.copy (keyfile_clean, keyfile_dirty);
     }
-
-    public bool delete_file () {
-        var file = File.new_for_path (path);
-        bool ret = false;
-
-        try {
-            ret = file.delete ();
-        } catch (Error err) {
-            warning ("Failed to delete file. path=%s: %s", path, err.message);
-        }
-
-        return ret;
-    }
 }

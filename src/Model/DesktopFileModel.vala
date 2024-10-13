@@ -120,4 +120,63 @@ public class Model.DesktopFileModel : Object {
             load_failure ();
         }
     }
+
+    /**
+     * Create a new {@link DesktopFile} with random filename.
+     *
+     * @return Created {@link DesktopFile}
+     */
+    public Model.DesktopFile create_file () {
+        string filename = Config.APP_ID + "." + Uuid.string_random ();
+        string path = Path.build_filename (
+            desktop_files_path,
+            filename + Model.DesktopFile.DESKTOP_SUFFIX
+        );
+
+        var file = new Model.DesktopFile (path);
+
+        files_list.add (file);
+
+        return file;
+    }
+
+    /**
+     * Delete desktop file from list and the disk.
+     *
+     * @param file A {@link DesktopFile} to delete
+     * @return true if succeeded, false otherwise
+     */
+    public bool delete_file (Model.DesktopFile file) {
+        bool ret = delete_from_disk (file.path);
+        if (!ret) {
+            return false;
+        }
+
+        files_list.remove (file);
+
+        return true;
+    }
+
+    /**
+     * Delete file at path from the disk.
+     *
+     * @param path A file to delete
+     * @return true if succeeded, false otherwise
+     */
+    private bool delete_from_disk (string path) {
+        var file = File.new_for_path (path);
+
+        if (!file.query_exists ()) {
+            return true;
+        }
+
+        bool ret = false;
+        try {
+            ret = file.delete ();
+        } catch (Error err) {
+            warning ("Failed to delete file. path=%s: %s", path, err.message);
+        }
+
+        return ret;
+    }
 }
