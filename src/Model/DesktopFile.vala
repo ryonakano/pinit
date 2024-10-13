@@ -353,22 +353,6 @@ public class Model.DesktopFile : Object {
         }
     }
 
-    public string to_data () {
-        return keyfile_ditry.to_data ();
-    }
-
-    public bool load_from_data (string data) {
-        bool ret = false;
-
-        try {
-            ret = keyfile_ditry.load_from_data (data, data.length, KeyFileFlags.KEEP_TRANSLATIONS);
-        } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.load_from_data: %s", err.message);
-        }
-
-        return ret;
-    }
-
     ////////////////////////////////////////////////////////////////////////////
     //
     // Localized Key Opearations
