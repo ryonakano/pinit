@@ -164,7 +164,7 @@ public class Model.DesktopFile : Object {
      */
     public bool is_clean {
         get {
-            return equals_keyfile (keyfile_ditry, keyfile_clean);
+            return equals_keyfile (keyfile_dirty, keyfile_clean);
         }
     }
 
@@ -175,7 +175,7 @@ public class Model.DesktopFile : Object {
     /**
      * Data in a single desktop file that may contain unsaved changes to the disk.
      */
-    private KeyFile keyfile_ditry;
+    private KeyFile keyfile_dirty;
 
     /**
      * The constructor.
@@ -190,7 +190,7 @@ public class Model.DesktopFile : Object {
 
     construct {
         keyfile_clean = new KeyFile ();
-        keyfile_ditry = new KeyFile ();
+        keyfile_dirty = new KeyFile ();
     }
 
     /**
@@ -248,7 +248,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile_ditry.get_boolean (KeyFileDesktop.GROUP, key);
+            val = keyfile_dirty.get_boolean (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, err.message);
         }
@@ -264,7 +264,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile_ditry.get_string (KeyFileDesktop.GROUP, key);
+            val = keyfile_dirty.get_string (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_string: key=%s: %s", key, err.message);
         }
@@ -275,13 +275,13 @@ public class Model.DesktopFile : Object {
     public bool has_key (string key) {
         bool ret = false;
 
-        // Maybe keyfile_ditry is new and has no key yet
-        if (!keyfile_ditry.has_group (KeyFileDesktop.GROUP)) {
+        // Maybe keyfile_dirty is new and has no key yet
+        if (!keyfile_dirty.has_group (KeyFileDesktop.GROUP)) {
             return ret;
         }
 
         try {
-            ret = keyfile_ditry.has_key (KeyFileDesktop.GROUP, key);
+            ret = keyfile_dirty.has_key (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.has_key: key=%s: %s", key, err.message);
         }
@@ -297,7 +297,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile_ditry.get_string_list (KeyFileDesktop.GROUP, key);
+            val = keyfile_dirty.get_string_list (KeyFileDesktop.GROUP, key);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, err.message);
         }
@@ -308,12 +308,12 @@ public class Model.DesktopFile : Object {
     public void set_boolean (string key, bool val) {
         if (val) {
             // Update the value when the corresponding entry has some value.
-            keyfile_ditry.set_boolean (KeyFileDesktop.GROUP, key, val);
+            keyfile_dirty.set_boolean (KeyFileDesktop.GROUP, key, val);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_dirty.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -324,12 +324,12 @@ public class Model.DesktopFile : Object {
     public void set_string (string key, string val) {
         if (val != "") {
             // Update the value when the corresponding entry has some value.
-            keyfile_ditry.set_string (KeyFileDesktop.GROUP, key, val);
+            keyfile_dirty.set_string (KeyFileDesktop.GROUP, key, val);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_dirty.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -340,12 +340,12 @@ public class Model.DesktopFile : Object {
     public void set_string_list (string key, string[] list) {
         if (list.length > 0) {
             // Update the value when the corresponding entry has some value.
-            keyfile_ditry.set_string_list (KeyFileDesktop.GROUP, key, list);
+            keyfile_dirty.set_string_list (KeyFileDesktop.GROUP, key, list);
         } else {
             // Remove the key when it exists and the corresponding entry has no value.
             if (has_key (key)) {
                 try {
-                    keyfile_ditry.remove_key (KeyFileDesktop.GROUP, key);
+                    keyfile_dirty.remove_key (KeyFileDesktop.GROUP, key);
                 } catch (KeyFileError err) {
                     warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
                 }
@@ -360,7 +360,7 @@ public class Model.DesktopFile : Object {
     ////////////////////////////////////////////////////////////////////////////
 
     public string? get_locale_for_key (string key, string? locale = null) {
-        return keyfile_ditry.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
+        return keyfile_dirty.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
     }
 
     public string get_locale_string (string key, string? locale = null) {
@@ -371,7 +371,7 @@ public class Model.DesktopFile : Object {
         }
 
         try {
-            val = keyfile_ditry.get_locale_string (KeyFileDesktop.GROUP, key, locale);
+            val = keyfile_dirty.get_locale_string (KeyFileDesktop.GROUP, key, locale);
         } catch (KeyFileError err) {
             warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, err.message);
         }
@@ -392,21 +392,21 @@ public class Model.DesktopFile : Object {
             warning ("Failed to load from file. path=%s: %s", path, err.message);
             return false;
         } catch (KeyFileError err) {
-            warning ("Invalid keyfile_ditry. path=%s: %s", path, err.message);
+            warning ("Invalid keyfile_dirty. path=%s: %s", path, err.message);
             return false;
         }
 
-        return copy_keyfile (keyfile_ditry, keyfile_clean);
+        return copy_keyfile (keyfile_dirty, keyfile_clean);
     }
 
     public bool save_file () {
         try {
-            keyfile_ditry.save_to_file (path);
+            keyfile_dirty.save_to_file (path);
         } catch (FileError err) {
             warning ("Failed to save file. path=%s: %s", path, err.message);
         }
 
-        return copy_keyfile (keyfile_clean, keyfile_ditry);
+        return copy_keyfile (keyfile_clean, keyfile_dirty);
     }
 
     public bool delete_file () {
