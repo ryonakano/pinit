@@ -210,12 +210,11 @@ public class Model.DesktopFile : Object {
         keyfile_dirty = new KeyFile ();
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    //
-    // File Opearations
-    //
-    ////////////////////////////////////////////////////////////////////////////
-
+    /**
+     * Read content of the desktop file from the disk.
+     *
+     * @return true if succeeded, false otherwise
+     */
     public bool load_file () {
         bool ret = Util.KeyFileUtil.load_file (keyfile_clean, path, KeyFileFlags.KEEP_TRANSLATIONS);
         if (!ret) {
@@ -225,6 +224,11 @@ public class Model.DesktopFile : Object {
         return Util.KeyFileUtil.copy (keyfile_dirty, keyfile_clean);
     }
 
+    /**
+     * Write content of the desktop file to the disk.
+     *
+     * @return true if succeeded, false otherwise
+     */
     public bool save_file () {
         Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_TYPE, "Application");
 
