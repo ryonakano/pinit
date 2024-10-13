@@ -10,11 +10,9 @@
  * {@link View.EditView} inside.
  *
  * It also has a instance of {@link Model.DesktopFileModel} and calls {@link Model.DesktopFileModel.load} when
- * constructed.
- *
- * If {@link Model.DesktopFileModel.load} succeeded, this calls {@link View.FilesView.set_list_data} to reflect
+ * constructed. If the call succeeded, it calls {@link View.FilesView.set_list_data} to reflect
  * load result.<<BR>>
- * Otherwise, this shows a dialog to tell the user about the failure.
+ * Otherwise, it shows a dialog to tell the user about the failure.
  */
 public class MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
@@ -29,7 +27,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public MainWindow () {
         Object (
-            // On Pantheon, the app name "Pin It!" is shown in Multitasking View by setting this
+            // On Pantheon, this property is used to show the app name in Multitasking View
             title: Define.APP_NAME
         );
     }
@@ -154,6 +152,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     /**
      * Check if we can quit the app immediately.
+     *
      * If we have unsaved changes and can't, confirm interactivelly by presenting a dialog.
      *
      * @return true if we can quit the app, false otherwise.
@@ -205,7 +204,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /**
-     * Reload and show the file list.
+     * Refresh and show the file list.
      */
     public void show_files_view () {
         files_view.set_list_data (model.files_list);
@@ -215,7 +214,7 @@ public class MainWindow : Adw.ApplicationWindow {
     /**
      * Start editing the given {@link Model.DesktopFile}.
      *
-     * @param file The {@link Model.DesktopFile} to edit
+     * @param file      the {@link Model.DesktopFile} to edit
      */
     public void show_edit_view (Model.DesktopFile file) {
         edit_view.load_file (file);
