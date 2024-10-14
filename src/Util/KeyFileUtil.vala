@@ -24,6 +24,21 @@ namespace Util.KeyFileUtil {
     public const string KEY_KEYWORDS = "Keywords";
 
     /**
+     * The language name that the user prefers in the system settings, e.g. "en_US", "ja_JP", etc.
+     *
+     * Used to show the ``KEY_NAME`` and ``KEY_COMMENT`` in the user's system language.
+     */
+    private static unowned string? preferred_language = null;
+    private static unowned string get_preferred_language () {
+        if (preferred_language == null) {
+            unowned var languages = Intl.get_language_names ();
+            preferred_language = languages[0];
+        }
+
+        return preferred_language;
+    }
+
+    /**
      * Check if two KeyFiles have the same content.
      *
      * @param a KeyFile to compare
@@ -157,7 +172,7 @@ namespace Util.KeyFileUtil {
     }
 
     public static Value get_locale_string (KeyFile keyfile, string key) throws KeyFileError {
-        string? locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, Application.preferred_language);
+        string? locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, get_preferred_language ());
 
         return keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
     }
