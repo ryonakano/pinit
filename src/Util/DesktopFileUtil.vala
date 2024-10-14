@@ -3,11 +3,14 @@
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * Definitions and methods related to creating desktop files.
+ */
 namespace Util.DesktopFileUtil {
     /**
-     * The mask bit to get permission info (``st_mode``) from ``mode_t``.
+     * The mask bit to get permission info from ``mode_t``.
      *
-     * Refer to ``man stat.3`` for more info.
+     * Refer to ``man inode.7`` for more info.
      */
     public const Posix.mode_t PERMISSION_BIT = Posix.S_IRWXU | Posix.S_IRWXG | Posix.S_IRWXO;
 
@@ -17,16 +20,17 @@ namespace Util.DesktopFileUtil {
      * If the current user already has execute permission to the given path,
      * this method doesn't change its permission and returns true.
      *
-     * @param path the path to add execute permission for the current user
-     * @return true when succeed, false otherwise
+     * @param path      the path to add execute permission for the current user
+     * @return          true when succeed, false otherwise
      */
     public bool add_exec_permission (string path) {
         int ret;
         Posix.Stat sbuf;
 
+        // Also we can check if it's really a path
         ret = Posix.stat (path, out sbuf);
         if (ret != 0) {
-            warning ("add_exec_permission: Failed to get the current mode of \"%s\": %s",
+            warning ("Failed to get the current mode of \"%s\": %s",
                      path, Posix.strerror (Posix.errno));
             return false;
         }
@@ -40,7 +44,7 @@ namespace Util.DesktopFileUtil {
 
         ret = Posix.chmod (path, current_permission | Posix.S_IXUSR);
         if (ret != 0) {
-            warning ("add_exec_permission: Failed to give exec permission to \"%s\": %s",
+            warning ("Failed to give exec permission to \"%s\": %s",
                      path, Posix.strerror (Posix.errno));
             return false;
         }
