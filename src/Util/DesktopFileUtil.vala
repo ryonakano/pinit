@@ -8,11 +8,9 @@
  */
 namespace Util.DesktopFileUtil {
     /**
-     * The mask bit to get permission info from ``mode_t``.
-     *
-     * Refer to ``man inode.7`` for more info.
+     * The mask bit to get permission info from ``Posix.mode_t``.
      */
-    public const Posix.mode_t PERMISSION_BIT = Posix.S_IRWXU | Posix.S_IRWXG | Posix.S_IRWXO;
+    private const Posix.mode_t PERMISSION_MASK = Posix.S_IRWXU | Posix.S_IRWXG | Posix.S_IRWXO;
 
     /**
      * Add execute permission to the given path.
@@ -35,7 +33,7 @@ namespace Util.DesktopFileUtil {
             return false;
         }
 
-        Posix.mode_t current_permission = sbuf.st_mode & PERMISSION_BIT;
+        Posix.mode_t current_permission = sbuf.st_mode & PERMISSION_MASK;
 
         // Do nothing if the current user already has execute permission
         if ((current_permission & Posix.S_IXUSR) == Posix.S_IXUSR) {
