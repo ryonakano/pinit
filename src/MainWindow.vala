@@ -60,9 +60,7 @@ public class MainWindow : Adw.ApplicationWindow {
         var breakpoint = new Adw.Breakpoint (
             new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 800, Adw.LengthUnit.SP)
         );
-        var val = Value (typeof (bool));
-        val.set_boolean (true);
-        breakpoint.add_setter (split_view, "collapsed", val);
+        breakpoint.add_setter (split_view, "collapsed", true);
         add_breakpoint (breakpoint);
 
         var overlay = new Adw.ToastOverlay () {
