@@ -64,43 +64,102 @@ namespace Util.KeyFileUtil {
     ////////////////////////////////////////////////////////////////////////////
 
     /**
-     * Return the value associated with ``key`` as a boolean.
+     * Return the value associated with ``key``.
      *
-     * @param keyfile a KeyFile
-     * @param key a key
-     * @return the value associated with the key as a boolean, or false if the key was not found or could not be parsed
-     * @see GLib.KeyFile.get_boolean
+     * @param keyfile   a ``KeyFile``
+     * @param key       a key
+     * @return          the value associated with the key
      */
-    public static bool get_boolean (KeyFile keyfile, string key) {
-        bool val = false;
+    public delegate Value GetValueFunc (KeyFile keyfile, string key) throws KeyFileError;
+    /**
+     * Associates a new value with ``key``.
+     *
+     * If ``key`` cannot be found then it is created.
+     *
+     * @param keyfile   a ``KeyFile``
+     * @param key       a key
+     * @param val       a value to associate
+     */
+    public delegate void SetValueFunc (KeyFile keyfile, string key, Value val);
+
+    /**
+     * Return the value associated with ``key``.
+     *
+     * @param keyfile   a ``KeyFile``
+     * @param key       a key
+     * @param get_func  a function to actually get value from ``keyfile``
+     * @return          the value associated with the key, or null if the key was not found or could not be parsed
+     */
+    public static Value? get_value (KeyFile keyfile, string key, GetValueFunc get_func) {
+        Value? val = null;
 
         if (!has_key (keyfile, key)) {
             return val;
         }
 
         try {
-            val = keyfile.get_boolean (KeyFileDesktop.GROUP, key);
+            val = get_func (keyfile, key);
         } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.get_boolean: key=%s: %s", key, err.message);
+            warning ("Failed to get value from keyfile: key=%s: %s", key, err.message);
         }
 
         return val;
     }
 
-    public static string get_string (KeyFile keyfile, string key) {
-        string val = "";
-
-        if (!has_key (keyfile, key)) {
-            return val;
+    /**
+     * Associates a new value with ``key``.
+     *
+     * If ``key`` cannot be found then it is created. If ``val`` is ``null`` then ``key`` is removed.
+     *
+     * @param keyfile   a ``KeyFile``
+     * @param key       a key
+     * @param val       a value to associate or ``null`` to remove ``key``
+     * @param set_func  a function to actually set value to ``keyfile``
+     */
+    public static void set_value (KeyFile keyfile, string key, Value? val, SetValueFunc set_func) {
+        if (val != null) {
+            // Update the value when the corresponding entry has some value.
+            set_func (keyfile, key, val);
+        } else {
+            // Remove the key when it exists and the corresponding entry has no value.
+            if (has_key (keyfile, key)) {
+                try {
+                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
+                } catch (KeyFileError err) {
+                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
+                }
+            }
         }
+    }
 
-        try {
-            val = keyfile.get_string (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.get_string: key=%s: %s", key, err.message);
-        }
+    public static Value get_boolean (KeyFile keyfile, string key) throws KeyFileError {
+        return keyfile.get_boolean (KeyFileDesktop.GROUP, key);
+    }
 
-        return val;
+    public static void set_boolean (KeyFile keyfile, string key, Value val) {
+        keyfile.set_boolean (KeyFileDesktop.GROUP, key, (bool) val);
+    }
+
+    public static Value get_string (KeyFile keyfile, string key) throws KeyFileError {
+        return keyfile.get_string (KeyFileDesktop.GROUP, key);
+    }
+
+    public static void set_string (KeyFile keyfile, string key, Value val) {
+        keyfile.set_string (KeyFileDesktop.GROUP, key, (string) val);
+    }
+
+    public static Value get_strv (KeyFile keyfile, string key) throws KeyFileError {
+        return keyfile.get_string_list (KeyFileDesktop.GROUP, key);
+    }
+
+    public static void set_strv (KeyFile keyfile, string key, Value val) {
+        keyfile.set_string_list (KeyFileDesktop.GROUP, key, (string[]) val);
+    }
+
+    public static Value get_locale_string (KeyFile keyfile, string key) throws KeyFileError {
+        string? locale = keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, Application.preferred_language);
+
+        return keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
     }
 
     public static bool has_key (KeyFile keyfile, string key) {
@@ -118,96 +177,6 @@ namespace Util.KeyFileUtil {
         }
 
         return ret;
-    }
-
-    public static string[] get_string_list (KeyFile keyfile, string key) {
-        string[] val = {};
-
-        if (!has_key (keyfile, key)) {
-            return val;
-        }
-
-        try {
-            val = keyfile.get_string_list (KeyFileDesktop.GROUP, key);
-        } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.get_string_list: key=%s: %s", key, err.message);
-        }
-
-        return val;
-    }
-
-    public static void set_boolean (KeyFile keyfile, string key, bool val) {
-        if (val) {
-            // Update the value when the corresponding entry has some value.
-            keyfile.set_boolean (KeyFileDesktop.GROUP, key, val);
-        } else {
-            // Remove the key when it exists and the corresponding entry has no value.
-            if (has_key (keyfile, key)) {
-                try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError err) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
-                }
-            }
-        }
-    }
-
-    public static void set_string (KeyFile keyfile, string key, string val) {
-        if (val != "") {
-            // Update the value when the corresponding entry has some value.
-            keyfile.set_string (KeyFileDesktop.GROUP, key, val);
-        } else {
-            // Remove the key when it exists and the corresponding entry has no value.
-            if (has_key (keyfile, key)) {
-                try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError err) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
-                }
-            }
-        }
-    }
-
-    public static void set_string_list (KeyFile keyfile, string key, string[] list) {
-        if (list.length > 0) {
-            // Update the value when the corresponding entry has some value.
-            keyfile.set_string_list (KeyFileDesktop.GROUP, key, list);
-        } else {
-            // Remove the key when it exists and the corresponding entry has no value.
-            if (has_key (keyfile, key)) {
-                try {
-                    keyfile.remove_key (KeyFileDesktop.GROUP, key);
-                } catch (KeyFileError err) {
-                    warning ("Failed to KeyFile.remove_key: key=%s: %s", key, err.message);
-                }
-            }
-        }
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //
-    // Localized Key Opearations
-    //
-    ////////////////////////////////////////////////////////////////////////////
-
-    public static string? get_locale_for_key (KeyFile keyfile, string key, string? locale = null) {
-        return keyfile.get_locale_for_key (KeyFileDesktop.GROUP, key, locale);
-    }
-
-    public static string get_locale_string (KeyFile keyfile, string key, string? locale = null) {
-        string val = "";
-
-        if (!has_key (keyfile, key)) {
-            return val;
-        }
-
-        try {
-            val = keyfile.get_locale_string (KeyFileDesktop.GROUP, key, locale);
-        } catch (KeyFileError err) {
-            warning ("Failed to KeyFile.get_locale_string: key=%s: %s", key, err.message);
-        }
-
-        return val;
     }
 
     ////////////////////////////////////////////////////////////////////////////

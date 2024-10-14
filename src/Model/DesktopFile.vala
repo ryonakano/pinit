@@ -22,14 +22,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_name {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_NAME, Application.preferred_language);
-            string name = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_NAME, locale);
+            Value? name = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_NAME, Util.KeyFileUtil.get_locale_string);
+            if (name == null) {
+                return "";
+            }
 
-            return name;
+            return (string) name;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_NAME, value);
+            Value? name = null;
+            if (value != "") {
+                name = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_NAME, name, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -38,11 +45,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_exec {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_EXEC);
+            Value? exec = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_EXEC, Util.KeyFileUtil.get_string);
+            if (exec == null) {
+                return "";
+            }
+
+            return (string) exec;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_EXEC, value);
+            Value? exec = null;
+            if (value != "") {
+                exec = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_EXEC, exec, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -51,11 +68,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_icon {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_ICON);
+            Value? icon = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_ICON, Util.KeyFileUtil.get_string);
+            if (icon == null) {
+                return "";
+            }
+
+            return (string) icon;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_ICON, value);
+            Value? icon = null;
+            if (value != "") {
+                icon = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_ICON, icon, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -64,14 +91,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_generic_name {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, Application.preferred_language);
-            string generic_name = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, locale);
+            Value? generic_name = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, Util.KeyFileUtil.get_locale_string);
+            if (generic_name == null) {
+                return "";
+            }
 
-            return generic_name;
+            return (string) generic_name;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, value);
+            Value? generic_name = null;
+            if (value != "") {
+                generic_name = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_GENERIC_NAME, generic_name, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -80,14 +114,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_comment {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-            string comment = Util.KeyFileUtil.get_locale_string (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, locale);
+            Value? comment = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, Util.KeyFileUtil.get_locale_string);
+            if (comment == null) {
+                return "";
+            }
 
-            return comment;
+            return (string) comment;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, value);
+            Value? comment = null;
+            if (value != "") {
+                comment = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_COMMENT, comment, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -96,11 +137,21 @@ public class Model.DesktopFile : Object {
      */
     public string[] value_categories {
         owned get {
-            return Util.KeyFileUtil.get_string_list (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES);
+            Value? categories = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES, Util.KeyFileUtil.get_strv);
+            if (categories == null) {
+                return {};
+            }
+
+            return (string[]) categories;
         }
 
         set {
-            Util.KeyFileUtil.set_string_list (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES, value);
+            Value? categories = null;
+            if (value.length > 0) {
+                categories = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_CATEGORIES, categories, Util.KeyFileUtil.set_strv);
         }
     }
 
@@ -109,11 +160,21 @@ public class Model.DesktopFile : Object {
      */
     public string[] value_keywords {
         owned get {
-            return Util.KeyFileUtil.get_string_list (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS);
+            Value? keywords = Util.KeyFileUtil.get_value (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS, Util.KeyFileUtil.get_strv);
+            if (keywords == null) {
+                return {};
+            }
+
+            return (string[]) keywords;
         }
 
         set {
-            Util.KeyFileUtil.set_string_list (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS, value);
+            Value? keywords = null;
+            if (value.length > 0) {
+                keywords = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, Util.KeyFileUtil.KEY_KEYWORDS, keywords, Util.KeyFileUtil.set_strv);
         }
     }
 
@@ -122,11 +183,21 @@ public class Model.DesktopFile : Object {
      */
     public string value_startup_wm_class {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS);
+            Value? startup_wm_class = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS, Util.KeyFileUtil.get_string);
+            if (startup_wm_class == null) {
+                return "";
+            }
+
+            return (string) startup_wm_class;
         }
 
         set {
-            Util.KeyFileUtil.set_string (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS, value);
+            Value? startup_wm_class = null;
+            if (value != "") {
+                startup_wm_class = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_STARTUP_WM_CLASS, startup_wm_class, Util.KeyFileUtil.set_string);
         }
     }
 
@@ -135,11 +206,21 @@ public class Model.DesktopFile : Object {
      */
     public bool value_terminal {
         get {
-            return Util.KeyFileUtil.get_boolean (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL);
+            Value? terminal = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL, Util.KeyFileUtil.get_boolean);
+            if (terminal == null) {
+                return false;
+            }
+
+            return (bool) terminal;
         }
 
         set {
-            Util.KeyFileUtil.set_boolean (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL, value);
+            Value? terminal = null;
+            if (value) {
+                terminal = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_TERMINAL, terminal, Util.KeyFileUtil.set_boolean);
         }
     }
 
@@ -148,10 +229,12 @@ public class Model.DesktopFile : Object {
      */
     public string saved_value_name {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_NAME, Application.preferred_language);
-            string name = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_NAME, locale);
+            Value? name = Util.KeyFileUtil.get_value (keyfile_clean, KeyFileDesktop.KEY_NAME, Util.KeyFileUtil.get_locale_string);
+            if (name == null) {
+                return "";
+            }
 
-            return name;
+            return (string) name;
         }
     }
 
@@ -160,7 +243,12 @@ public class Model.DesktopFile : Object {
      */
     public string saved_value_icon {
         owned get {
-            return Util.KeyFileUtil.get_string (keyfile_clean, KeyFileDesktop.KEY_ICON);
+            Value? icon = Util.KeyFileUtil.get_value (keyfile_clean, KeyFileDesktop.KEY_ICON, Util.KeyFileUtil.get_string);
+            if (icon == null) {
+                return "";
+            }
+
+            return (string) icon;
         }
     }
 
@@ -169,10 +257,12 @@ public class Model.DesktopFile : Object {
      */
     public string saved_value_comment {
         owned get {
-            string? locale = Util.KeyFileUtil.get_locale_for_key (keyfile_clean, KeyFileDesktop.KEY_COMMENT, Application.preferred_language);
-            string comment = Util.KeyFileUtil.get_locale_string (keyfile_clean, KeyFileDesktop.KEY_COMMENT, locale);
+            Value? comment = Util.KeyFileUtil.get_value (keyfile_clean, KeyFileDesktop.KEY_COMMENT, Util.KeyFileUtil.get_locale_string);
+            if (comment == null) {
+                return "";
+            }
 
-            return comment;
+            return (string) comment;
         }
     }
 
