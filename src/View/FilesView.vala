@@ -4,7 +4,6 @@
  */
 
 public class View.FilesView : Adw.NavigationPage {
-    public signal void new_activated ();
     public signal void delete_activated (Model.DesktopFile file);
     public signal void selected (Model.DesktopFile file);
 
@@ -30,7 +29,8 @@ public class View.FilesView : Adw.NavigationPage {
 
     private Gtk.Widget setup_headerbar () {
         var create_button = new Gtk.Button.from_icon_name ("list-add-symbolic") {
-            tooltip_text = _("Create a new entry")
+            tooltip_text = _("Create a new entry"),
+            action_name = "win.new"
         };
 
         // Construct the settings menu
@@ -59,10 +59,6 @@ public class View.FilesView : Adw.NavigationPage {
         var headerbar = new Adw.HeaderBar ();
         headerbar.pack_start (create_button);
         headerbar.pack_end (menu_button);
-
-        create_button.clicked.connect (() => {
-            new_activated ();
-        });
 
         return headerbar;
     }

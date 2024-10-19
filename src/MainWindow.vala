@@ -69,10 +69,6 @@ public class MainWindow : Adw.ApplicationWindow {
 
         content = overlay;
 
-        files_view.new_activated.connect (() => {
-            on_new_activate ();
-        });
-
         files_view.delete_activated.connect ((file) => {
             edit_view.hide_all ();
 
