@@ -131,7 +131,7 @@ public class View.FilesView : Adw.NavigationPage {
                 delete_activated (file);
             });
 
-            delete_dialog.present ();
+            delete_dialog.present ((Adw.Window) get_root ());
         });
 
         var row = new Adw.ActionRow () {
@@ -150,14 +150,13 @@ public class View.FilesView : Adw.NavigationPage {
         return row;
     }
 
-    private Adw.MessageDialog setup_delete_dialog (string app_name) {
+    private Adw.AlertDialog setup_delete_dialog (string app_name) {
         string dialog_title = _("Delete Entry?");
         if (app_name != "") {
             dialog_title = _("Delete Entry of “%s”?").printf (app_name);
         }
 
-        var delete_dialog = new Adw.MessageDialog (
-            (Gtk.Window) get_root (),
+        var delete_dialog = new Adw.AlertDialog (
             dialog_title,
             _("This removes the app from the launcher.")
         );

@@ -74,8 +74,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
             bool ret = model.delete_file (file);
             if (!ret) {
-                var error_dialog = new Adw.MessageDialog (
-                    (Gtk.Window) get_root (),
+                var error_dialog = new Adw.AlertDialog (
                     _("Failed to Delete Entry of “%s”").printf (file.value_name),
                     _("There was an error while removing the app entry.")
                 );
@@ -85,7 +84,7 @@ public class MainWindow : Adw.ApplicationWindow {
                 error_dialog.default_response = Define.DialogResponse.CLOSE;
                 error_dialog.close_response = Define.DialogResponse.CLOSE;
 
-                error_dialog.present ();
+                error_dialog.present ((Adw.Window) get_root ());
                 return;
             }
 
@@ -126,15 +125,14 @@ public class MainWindow : Adw.ApplicationWindow {
      * Tell the user the failure through a dialog.
      */
     private void on_load_failure () {
-        var error_dialog = new Adw.MessageDialog (
-            this,
+        var error_dialog = new Adw.AlertDialog (
             _("Failed to Load Entries"),
             _("There was an error while loading app entries.")
         );
         error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
         error_dialog.default_response = Define.DialogResponse.CLOSE;
         error_dialog.close_response = Define.DialogResponse.CLOSE;
-        error_dialog.present ();
+        error_dialog.present (this);
     }
 
     /**
@@ -156,8 +154,8 @@ public class MainWindow : Adw.ApplicationWindow {
             return true;
         }
 
-        var unsaved_dialog = new Adw.MessageDialog (
-            this, _("Save Changes?"),
+        var unsaved_dialog = new Adw.AlertDialog (
+            _("Save Changes?"),
             _("Open entries contain unsaved changes. Changes which are not saved will be permanently lost.")
         );
         unsaved_dialog.add_css_class ("save-changes");
@@ -178,7 +176,7 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         // Show the dialog and wait for its response
-        unsaved_dialog.present ();
+        unsaved_dialog.present (this);
         resp_wait_loop.run ();
 
         switch (unsaved_dialog_resp) {
