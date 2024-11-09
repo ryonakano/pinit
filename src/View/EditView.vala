@@ -385,7 +385,7 @@ public class View.EditView : Adw.NavigationPage {
                     error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
                     error_dialog.default_response = Define.DialogResponse.CLOSE;
                     error_dialog.close_response = Define.DialogResponse.CLOSE;
-                    error_dialog.present ((Adw.Window) get_root ());
+                    error_dialog.present ((Adw.ApplicationWindow) get_root ());
                 }
             });
         });
@@ -465,7 +465,7 @@ public class View.EditView : Adw.NavigationPage {
             error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
             error_dialog.default_response = Define.DialogResponse.CLOSE;
             error_dialog.close_response = Define.DialogResponse.CLOSE;
-            error_dialog.present ((Adw.Window) get_root ());
+            error_dialog.present ((Adw.ApplicationWindow) get_root ());
             return;
         }
 

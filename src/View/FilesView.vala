@@ -131,7 +131,7 @@ public class View.FilesView : Adw.NavigationPage {
                 delete_activated (file);
             });
 
-            delete_dialog.present ((Adw.Window) get_root ());
+            delete_dialog.present ((Adw.ApplicationWindow) get_root ());
         });
 
         var row = new Adw.ActionRow () {

@@ -84,7 +84,7 @@ public class MainWindow : Adw.ApplicationWindow {
                 error_dialog.default_response = Define.DialogResponse.CLOSE;
                 error_dialog.close_response = Define.DialogResponse.CLOSE;
 
-                error_dialog.present ((Adw.Window) get_root ());
+                error_dialog.present ((Adw.ApplicationWindow) get_root ());
                 return;
             }
 
