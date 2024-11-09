@@ -15,7 +15,7 @@ namespace Define {
     public const string APP_NAME = "Pin It!";
 
     /**
-     * Response IDs used in ``Adw.MessageDialog``.
+     * Response IDs used in ``Adw.AlertDialog``.
      */
     namespace DialogResponse {
         /** Use this constant instead of the literal string ``close``. */

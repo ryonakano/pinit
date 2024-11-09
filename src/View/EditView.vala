@@ -378,15 +378,14 @@ public class View.EditView : Adw.NavigationPage {
                 }
 
                 if (!ret) {
-                    var error_dialog = new Adw.MessageDialog (
-                        (Gtk.Window) get_root (),
+                    var error_dialog = new Adw.AlertDialog (
                         _("Failed to Open with External App"),
                         _("There was an error while opening the file with an external app.")
                     );
                     error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
                     error_dialog.default_response = Define.DialogResponse.CLOSE;
                     error_dialog.close_response = Define.DialogResponse.CLOSE;
-                    error_dialog.present ();
+                    error_dialog.present ((Adw.ApplicationWindow) get_root ());
                 }
             });
         });
@@ -459,15 +458,14 @@ public class View.EditView : Adw.NavigationPage {
                 dialog_title = _("Failed to Save Entry of “%s”").printf (app_name);
             }
 
-            var error_dialog = new Adw.MessageDialog (
-                (Gtk.Window) get_root (),
+            var error_dialog = new Adw.AlertDialog (
                 dialog_title,
                 _("There was an error while saving the app entry.")
             );
             error_dialog.add_response (Define.DialogResponse.CLOSE, _("_Close"));
             error_dialog.default_response = Define.DialogResponse.CLOSE;
             error_dialog.close_response = Define.DialogResponse.CLOSE;
-            error_dialog.present ();
+            error_dialog.present ((Adw.ApplicationWindow) get_root ());
             return;
         }
 
