@@ -1,0 +1,453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# Priit Jõerüüt <hwlate@joeruut.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
+
+#: data/pinit.desktop.in.in:4
+msgid "Desktop File Creator"
+msgstr ""
+
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+msgid "Pin portable apps to the launcher"
+msgstr ""
+
+#: data/pinit.desktop.in.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:13
+msgid ""
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:16
+msgid "Other features include:"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:20
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:21
+msgid "Automatically add the execute permission to the file you select"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:27
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/pinit.metainfo.xml.in.in:32
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:24
+msgctxt "shortcut window"
+msgid "Edit"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:28
+msgctxt "shortcut window"
+msgid "New Entry"
+msgstr ""
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:93
+msgid "Entry deleted."
+msgstr ""
+
+#: src/MainWindow.vala:108
+msgid "Entry updated."
+msgstr ""
+
+#: src/MainWindow.vala:127
+msgid "Failed to Load Entries"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "There was an error while loading app entries."
+msgstr ""
+
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
+msgid "_Close"
+msgstr ""
+
+#: src/MainWindow.vala:162
+msgid "Save Changes?"
+msgstr ""
+
+#: src/MainWindow.vala:163
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
+
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
+msgid "_Cancel"
+msgstr ""
+
+#: src/MainWindow.vala:166
+msgid "_Discard"
+msgstr ""
+
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
+msgid "_Save"
+msgstr ""
+
+#: src/View/EditView.vala:68
+msgid "Required Fields"
+msgstr ""
+
+#: src/View/EditView.vala:69
+msgid "The following fields need to be filled to save."
+msgstr ""
+
+#: src/View/EditView.vala:73
+msgid "App Name"
+msgstr ""
+
+#: src/View/EditView.vala:74
+msgid "Shown in the launcher or dock."
+msgstr ""
+
+#: src/View/EditView.vala:79
+msgid "Exec File"
+msgstr ""
+
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+
+#: src/View/EditView.vala:83
+msgid "Select an executable file…"
+msgstr ""
+
+#: src/View/EditView.vala:94
+msgid "Optional Fields"
+msgstr ""
+
+#: src/View/EditView.vala:95
+msgid "Filling these fields improves discoverability in the app launcher."
+msgstr ""
+
+#: src/View/EditView.vala:99
+msgid "Icon File"
+msgstr ""
+
+#: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+
+#: src/View/EditView.vala:103
+msgid "Select an icon file…"
+msgstr ""
+
+#: src/View/EditView.vala:111
+msgid "Generic Name"
+msgstr ""
+
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+
+#: src/View/EditView.vala:117
+msgid "Comment"
+msgstr ""
+
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+
+#: src/View/EditView.vala:132
+msgid "Advanced Configurations"
+msgstr ""
+
+#: src/View/EditView.vala:133
+msgid ""
+"You can create most app entries just by filling in the sections above. "
+"However, some apps may require the advanced configuration options below."
+msgstr ""
+
+#: src/View/EditView.vala:137
+msgid "Startup WM Class"
+msgstr ""
+
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+
+#: src/View/EditView.vala:143
+msgid "Run in Terminal"
+msgstr ""
+
+#: src/View/EditView.vala:144
+msgid "Turn on if you want to register a CUI app."
+msgstr ""
+
+#: src/View/EditView.vala:148
+msgid "_Open"
+msgstr ""
+
+#: src/View/EditView.vala:152
+msgid "Open with Text Editor"
+msgstr ""
+
+#: src/View/EditView.vala:153
+msgid "You can also edit more options by opening with a text editor."
+msgstr ""
+
+#: src/View/EditView.vala:198
+msgid "New Entry"
+msgstr ""
+
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
+msgid "Untitled App"
+msgstr ""
+
+#: src/View/EditView.vala:234
+msgid "Select Executable File"
+msgstr ""
+
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
+msgid "_Select"
+msgstr ""
+
+#: src/View/EditView.vala:288
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr ""
+
+#: src/View/EditView.vala:291
+msgid "Select Icon File"
+msgstr ""
+
+#: src/View/EditView.vala:383
+msgid "Failed to Open with External App"
+msgstr ""
+
+#: src/View/EditView.vala:384
+msgid "There was an error while opening the file with an external app."
+msgstr ""
+
+#: src/View/EditView.vala:441
+msgid "Edit Entry"
+msgstr ""
+
+#: src/View/EditView.vala:443
+#, c-format
+msgid "Edit “%s”"
+msgstr ""
+
+#: src/View/EditView.vala:465
+msgid "Failed to Save Entry"
+msgstr ""
+
+#: src/View/EditView.vala:467
+#, c-format
+msgid "Failed to Save Entry of “%s”"
+msgstr ""
+
+#: src/View/EditView.vala:473
+msgid "There was an error while saving the app entry."
+msgstr ""
+
+#: src/View/FilesView.vala:25
+msgid "Create a new entry"
+msgstr ""
+
+#: src/View/FilesView.vala:31
+msgid "S_ystem"
+msgstr ""
+
+#: src/View/FilesView.vala:32
+msgid "_Light"
+msgstr ""
+
+#: src/View/FilesView.vala:33
+msgid "_Dark"
+msgstr ""
+
+#: src/View/FilesView.vala:36
+msgid "_Style"
+msgstr ""
+
+#: src/View/FilesView.vala:37
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/View/FilesView.vala:39
+#, c-format
+msgid "_About %s"
+msgstr ""
+
+#: src/View/FilesView.vala:42
+msgid "Main Menu"
+msgstr ""
+
+#: src/View/FilesView.vala:57
+msgid "No Entries Found"
+msgstr ""
+
+#: src/View/FilesView.vala:58
+msgid "Click the + button on the top to create one."
+msgstr ""
+
+#: src/View/FilesView.vala:118
+msgid "Delete Entry?"
+msgstr ""
+
+#: src/View/FilesView.vala:120
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr ""
+
+#: src/View/FilesView.vala:124
+msgid "Delete…"
+msgstr ""
+
+#: src/View/FilesView.vala:132
+msgid "This removes the app from the launcher."
+msgstr ""
+
+#: src/View/FilesView.vala:135
+msgid "_Delete"
+msgstr ""
+
+#: src/View/FilesView.vala:145
+#, c-format
+msgid "Failed to Delete Entry of “%s”"
+msgstr ""
+
+#: src/View/FilesView.vala:146
+msgid "There was an error while removing the app entry."
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:40
+msgid "Sound &amp; Video"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:41
+msgid "Audio"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:42
+msgid "Video"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:43
+msgid "Programming"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:44
+msgid "Education"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:45
+msgid "Games"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:46
+msgid "Graphics"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:47
+msgid "Internet"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:48
+msgid "Office"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:49
+msgid "Science"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:50
+msgid "Settings"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:51
+msgid "System Tools"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:52
+msgid "Accessories"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:62
+msgid "Categories"
+msgstr ""
+
+#: src/Widget/CategoriesRow.vala:63
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:29
+msgid "Keywords"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:30
+msgid "These words can be used as search terms."
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:35
+msgid "Add a new keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:122
+msgid "Keyword"
+msgstr ""
+
+#: src/Widget/KeywordsRow.vala:126
+msgid "Delete keyword"
+msgstr ""
