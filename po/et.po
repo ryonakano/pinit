@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-12-10 15:29+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-12-11 12:15+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/>"
 "\n"
 "Language: et\n"
@@ -25,15 +25,18 @@ msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Töölaua seadistusfailide looja"
 
 #: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr ""
+"Kinnita üksikuid ja/või süsteemiväliseid rakendusi rakenduste käivitajasse"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
+"Desktop;File;fail;loo;muuda;lisa;teave;rakendus;käivitaja;start;ikoon;AppImag"
+"e;töölaud;töölauafail;"
 
 #: data/pinit.metainfo.xml.in.in:13
 msgid ""
@@ -43,7 +46,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
-msgstr ""
+msgstr "Lisavõimalused:"
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
@@ -55,11 +58,11 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Heledas kujunduses rakenduse aken"
 
 #: data/pinit.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Tumedas kujunduses rakenduse aken"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -129,67 +132,73 @@ msgstr ""
 
 #: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
-msgstr ""
+msgstr "_Katkesta"
 
 #: src/MainWindow.vala:166
 msgid "_Discard"
-msgstr ""
+msgstr "_Loobu"
 
 #: src/MainWindow.vala:167 src/View/EditView.vala:39
 msgid "_Save"
-msgstr ""
+msgstr "_Salvesta"
 
 #: src/View/EditView.vala:68
 msgid "Required Fields"
-msgstr ""
+msgstr "Kohustuslikud väljad"
 
 #: src/View/EditView.vala:69
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Nende väljade täitmine on salvestamise eelduseks."
 
 #: src/View/EditView.vala:73
 msgid "App Name"
-msgstr ""
+msgstr "Rakenduse nimi"
 
 #: src/View/EditView.vala:74
 msgid "Shown in the launcher or dock."
-msgstr ""
+msgstr "Näidatakse rakenduste käivitajas, dokis ja mujal töölaual."
 
 #: src/View/EditView.vala:79
 msgid "Exec File"
-msgstr ""
+msgstr "Rakenduse käivitusfail"
 
 #: src/View/EditView.vala:80
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"Kui klõpsid käivitajas seda kirjet, siis käivitatakse antud käivitusfail või "
+"käsk. Pead näitama täpse asukoha või kasutama rakenduse toimivat aliast."
 
 #: src/View/EditView.vala:83
 msgid "Select an executable file…"
-msgstr ""
+msgstr "Vali rakenduse käivitusfail…"
 
 #: src/View/EditView.vala:94
 msgid "Optional Fields"
-msgstr ""
+msgstr "Täiendavad väljad"
 
 #: src/View/EditView.vala:95
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
+"Nende väljade täitmine parandab rakenduse leitavust ning menüüdes ja "
+"käivitajates kuvamise kvaliteeti."
 
 #: src/View/EditView.vala:99
 msgid "Icon File"
-msgstr ""
+msgstr "Ikoonifail"
 
 #: src/View/EditView.vala:100
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
+"Fail rakenduse graafilise tunnuse või logoga. Pead näitama täpse asukoha või "
+"kasutama ikoonifaili toimivat aliast."
 
 #: src/View/EditView.vala:103
 msgid "Select an icon file…"
-msgstr ""
+msgstr "Vali ikoonifail…"
 
 #: src/View/EditView.vala:111
 msgid "Generic Name"
@@ -310,19 +319,19 @@ msgstr ""
 
 #: src/View/FilesView.vala:31
 msgid "S_ystem"
-msgstr ""
+msgstr "S_üsteemi kujundus"
 
 #: src/View/FilesView.vala:32
 msgid "_Light"
-msgstr ""
+msgstr "_Hele kujundus"
 
 #: src/View/FilesView.vala:33
 msgid "_Dark"
-msgstr ""
+msgstr "_Tume kujundus"
 
 #: src/View/FilesView.vala:36
 msgid "_Style"
-msgstr ""
+msgstr "_Kujundus"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
@@ -336,7 +345,7 @@ msgstr ""
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
-msgstr ""
+msgstr "Põhimenüü"
 
 #: src/View/FilesView.vala:57
 msgid "No Entries Found"
