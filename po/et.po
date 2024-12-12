@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-05 00:05+0900\n"
-"PO-Revision-Date: 2024-12-11 12:15+0000\n"
+"PO-Revision-Date: 2024-12-13 00:48+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/>"
 "\n"
@@ -43,6 +43,10 @@ msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"Kinnita viiteid üksikutele ja/või süsteemivälistele rakendustele, näiteks "
+"AppImage failidele, skriptidele või juhuslike programmide failidele oma "
+"töölaua rakenduste käivitajasse ja muudesse sarnastesse vaadetesse. Põhineb "
+"standardsete .desktop failide haldusel."
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
@@ -50,11 +54,11 @@ msgstr "Lisavõimalused:"
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
-msgstr ""
+msgstr "Muuda või kustuta rakenduste kirjeid ilma failihaldurit kasutamata"
 
 #: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
-msgstr ""
+msgstr "Luba lisatud failile automaatselt käivitusõigused"
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
@@ -67,27 +71,27 @@ msgstr "Tumedas kujunduses rakenduse aken"
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Üldised"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klaviatuuri kiirklahvid"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Välju"
 
 #: data/resources/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "Muuda"
 
 #: data/resources/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
-msgstr ""
+msgstr "Uus kirje"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -97,38 +101,40 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:297
 msgid "translator-credits"
-msgstr ""
+msgstr "Priit Jõerüüt 2024"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
-msgstr ""
+msgstr "Kirje on kustutatud."
 
 #: src/MainWindow.vala:108
 msgid "Entry updated."
-msgstr ""
+msgstr "Kirje on uuendatud."
 
 #: src/MainWindow.vala:127
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Kirjete laadimine ei õnnestunud"
 
 #: src/MainWindow.vala:128
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Rakenduste kirjete laadimisel tekkis viga."
 
 #: src/MainWindow.vala:130 src/View/EditView.vala:386
 #: src/View/EditView.vala:475 src/View/FilesView.vala:148
 msgid "_Close"
-msgstr ""
+msgstr "_Sulge"
 
 #: src/MainWindow.vala:162
 msgid "Save Changes?"
-msgstr ""
+msgstr "Kas salvestame muudatused?"
 
 #: src/MainWindow.vala:163
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Avatud kirjetes on salvestamata muudatusi. Kui sa ei salvesta ja sulged, "
+"siis lähevad muudatused jäädavalt kaotsi."
 
 #: src/MainWindow.vala:165 src/View/FilesView.vala:134
 msgid "_Cancel"
@@ -202,120 +208,132 @@ msgstr "Vali ikoonifail…"
 
 #: src/View/EditView.vala:111
 msgid "Generic Name"
-msgstr ""
+msgstr "Üldine nimi"
 
 #: src/View/EditView.vala:112
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
-msgstr ""
+msgstr "Rakenduse üldnimi, nagu näiteks „Veebibrauser“ või „E-posti klient“."
 
 #: src/View/EditView.vala:117
 msgid "Comment"
-msgstr ""
+msgstr "Kommentaar"
 
 #: src/View/EditView.vala:118
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Rakendust kirjeldav nimi. Sõltuvalt kasutajaliidesest võidakse seda kasutada "
+"kohtvihjena käivitajas, dokis või mujal."
 
 #: src/View/EditView.vala:132
 msgid "Advanced Configurations"
-msgstr ""
+msgstr "Täiendavad seadistused"
 
 #: src/View/EditView.vala:133
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
+"Enamuste rakenduste jaoks piisab ülaltoodud andmetest. Aga mõned rakendused "
+"võivad vajada järgnevaid lisaseadistusi."
 
 #: src/View/EditView.vala:137
 msgid "Startup WM Class"
-msgstr ""
+msgstr "Aknahalduri klass käivitamisel (WM Class)"
 
 #: src/View/EditView.vala:138
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
+"Seosta rakendus aknaga, millele on nimetatud tunnus. Kasuta seda võimalust, "
+"kui rakenduse käivitamisel tekib tegumiribale topeltikoon või teistsugune "
+"ikoon."
 
 #: src/View/EditView.vala:143
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Käivita terminalis"
 
 #: src/View/EditView.vala:144
 msgid "Turn on if you want to register a CUI app."
 msgstr ""
+"Vajad seda valikut, kui soovid lisada kirjet käsurearakendusele, mis kasutab "
+"tekstiliidest (CUI)."
 
 #: src/View/EditView.vala:148
 msgid "_Open"
-msgstr ""
+msgstr "_Ava"
 
 #: src/View/EditView.vala:152
 msgid "Open with Text Editor"
-msgstr ""
+msgstr "Ava tekstitoimetiga"
 
 #: src/View/EditView.vala:153
 msgid "You can also edit more options by opening with a text editor."
 msgstr ""
+"Lisaks on sul võimalik tekstitoimetis lisada kõiki muid väärtusi vastavalt "
+"standardile, mille leiad siit: https://specifications.freedesktop.org/"
+"desktop-entry-spec/latest/ ."
 
 #: src/View/EditView.vala:198
 msgid "New Entry"
-msgstr ""
+msgstr "Uus kirje"
 
 #: src/View/EditView.vala:214 src/View/EditView.vala:416
 msgid "Untitled App"
-msgstr ""
+msgstr "Ilma nimeta rakendus"
 
 #: src/View/EditView.vala:234
 msgid "Select Executable File"
-msgstr ""
+msgstr "Vali käivitusfail"
 
 #: src/View/EditView.vala:235 src/View/EditView.vala:292
 msgid "_Select"
-msgstr ""
+msgstr "_Vali"
 
 #: src/View/EditView.vala:288
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "ICO, PNG, SVG või XMP failid"
 
 #: src/View/EditView.vala:291
 msgid "Select Icon File"
-msgstr ""
+msgstr "Vali ikoonifail"
 
 #: src/View/EditView.vala:383
 msgid "Failed to Open with External App"
-msgstr ""
+msgstr "Välise rakendusega käivitamine ei õnnestunud"
 
 #: src/View/EditView.vala:384
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Selle faili avamisel välise rakendusega tekkis viga."
 
 #: src/View/EditView.vala:441
 msgid "Edit Entry"
-msgstr ""
+msgstr "Muuda kirjet"
 
 #: src/View/EditView.vala:443
 #, c-format
 msgid "Edit “%s”"
-msgstr ""
+msgstr "Muuda kirjet: „%s“"
 
 #: src/View/EditView.vala:465
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Kirje salvestamine ei õnnestunud"
 
 #: src/View/EditView.vala:467
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "„%s“ kirje salvestamine ei õnnestunud"
 
 #: src/View/EditView.vala:473
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Rakenduse kirje salvestamisel tekkis viga."
 
 #: src/View/FilesView.vala:25
 msgid "Create a new entry"
-msgstr ""
+msgstr "Lisa uus kirje"
 
 #: src/View/FilesView.vala:31
 msgid "S_ystem"
@@ -335,13 +353,13 @@ msgstr "_Kujundus"
 
 #: src/View/FilesView.vala:37
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klaviatuuri kiirklahvid"
 
 #. TRANSLATORS: %s will be replaced by the app name (Pin It!)
 #: src/View/FilesView.vala:39
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "_Rakenduse teave: %s"
 
 #: src/View/FilesView.vala:42
 msgid "Main Menu"
@@ -349,118 +367,118 @@ msgstr "Põhimenüü"
 
 #: src/View/FilesView.vala:57
 msgid "No Entries Found"
-msgstr ""
+msgstr "Kirjeid ei leidu"
 
 #: src/View/FilesView.vala:58
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Lisamiseks klõpsi „+“ ikooni."
 
 #: src/View/FilesView.vala:118
 msgid "Delete Entry?"
-msgstr ""
+msgstr "Kas kustutame kirje?"
 
 #: src/View/FilesView.vala:120
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Kas kustutame „%s“ kirje?"
 
 #: src/View/FilesView.vala:124
 msgid "Delete…"
-msgstr ""
+msgstr "Delete…"
 
 #: src/View/FilesView.vala:132
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "Sellega kustutatakse rakendus käivitajast, dokilt ja mujalt."
 
 #: src/View/FilesView.vala:135
 msgid "_Delete"
-msgstr ""
+msgstr "_Kustuta"
 
 #: src/View/FilesView.vala:145
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr ""
+msgstr "„%s“ kirje kustutamine ei õnnestunud"
 
 #: src/View/FilesView.vala:146
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Antud rakenduse kirje kustutamisel tekkis viga."
 
 #: src/Widget/CategoriesRow.vala:40
 msgid "Sound &amp; Video"
-msgstr ""
+msgstr "Multimeedia"
 
 #: src/Widget/CategoriesRow.vala:41
 msgid "Audio"
-msgstr ""
+msgstr "Heli"
 
 #: src/Widget/CategoriesRow.vala:42
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/Widget/CategoriesRow.vala:43
 msgid "Programming"
-msgstr ""
+msgstr "Programmeerimine"
 
 #: src/Widget/CategoriesRow.vala:44
 msgid "Education"
-msgstr ""
+msgstr "Haridus"
 
 #: src/Widget/CategoriesRow.vala:45
 msgid "Games"
-msgstr ""
+msgstr "Mängud"
 
 #: src/Widget/CategoriesRow.vala:46
 msgid "Graphics"
-msgstr ""
+msgstr "Graafika"
 
 #: src/Widget/CategoriesRow.vala:47
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/Widget/CategoriesRow.vala:48
 msgid "Office"
-msgstr ""
+msgstr "Kontoritarvikud"
 
 #: src/Widget/CategoriesRow.vala:49
 msgid "Science"
-msgstr ""
+msgstr "Teadus"
 
 #: src/Widget/CategoriesRow.vala:50
 msgid "Settings"
-msgstr ""
+msgstr "Seadistused"
 
 #: src/Widget/CategoriesRow.vala:51
 msgid "System Tools"
-msgstr ""
+msgstr "Süsteemi tarvikud"
 
 #: src/Widget/CategoriesRow.vala:52
 msgid "Accessories"
-msgstr ""
+msgstr "Tarvikud"
 
 #: src/Widget/CategoriesRow.vala:62
 msgid "Categories"
-msgstr ""
+msgstr "Kategooriad"
 
 #: src/Widget/CategoriesRow.vala:63
 msgid "Categories applicable to the app. (You can select more than one.)"
-msgstr ""
+msgstr "Rakendusekohased kategooriad . (Võid valida enam kui ühe.)"
 
 #: src/Widget/KeywordsRow.vala:29
 msgid "Keywords"
-msgstr ""
+msgstr "Märksõnad"
 
 #: src/Widget/KeywordsRow.vala:30
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Neid sõnu kasutatakse tihtipeale otsingusõnadena."
 
 #: src/Widget/KeywordsRow.vala:35
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Lisa uus märksõna"
 
 #: src/Widget/KeywordsRow.vala:122
 msgid "Keyword"
-msgstr ""
+msgstr "Märksõna"
 
 #: src/Widget/KeywordsRow.vala:126
 msgid "Delete keyword"
-msgstr ""
+msgstr "Kustuta märksõna"
