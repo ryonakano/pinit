@@ -16,13 +16,13 @@ modules:
     cleanup:
       - '*'
     sources:
-      - type: archive
-        url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.14.0/blueprint-compiler-v0.14.0.tar.gz
-        sha256: 05faf3810cb76d4e2d2382c6a7e6c8096af27e144e2260635c97f6a173d67234
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
+        tag: v0.14.0
+        commit: 8e10fcf8692108b9d4ab78f41086c5d7773ef864
         x-checker-data:
-          type: anitya
-          project-id: 279929
-          url-template: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v$version/blueprint-compiler-v$version.tar.gz
+          type: git
+          tag-pattern: '^v([\d.]+)$'
 
   - name: pinit
     buildsystem: meson
