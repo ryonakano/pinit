@@ -1,4 +1,4 @@
-app-id: com.github.ryonakano.pinit.Devel
+id: com.github.ryonakano.pinit.Devel
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk

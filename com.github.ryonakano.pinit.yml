@@ -1,4 +1,4 @@
-app-id: com.github.ryonakano.pinit
+id: com.github.ryonakano.pinit
 runtime: io.elementary.Platform
 runtime-version: '8'
 sdk: io.elementary.Sdk
