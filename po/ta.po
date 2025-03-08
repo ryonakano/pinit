@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"POT-Creation-Date: 2025-03-08 23:05+0900\n"
 "PO-Revision-Date: 2025-03-02 06:40+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/pinit/ta/>\n"
@@ -39,8 +39,8 @@ msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
-"உங்கள் டெச்க்டாப்பில் உள்ள பயன்பாட்டு துவக்கிக்கு மூல இயங்கக்கூடிய கோப்புகள், அபிமேச் கோப்புகள்"
-" போன்ற சிறிய பயன்பாடுகளுக்கான குறுக்குவழிகள்."
+"உங்கள் டெச்க்டாப்பில் உள்ள பயன்பாட்டு துவக்கிக்கு மூல இயங்கக்கூடிய கோப்புகள், அபிமேச் "
+"கோப்புகள் போன்ற சிறிய பயன்பாடுகளுக்கான குறுக்குவழிகள்."
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
@@ -94,36 +94,45 @@ msgstr "புதிய நுழைவு"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:297
+#: src/Application.vala:310
 msgid "translator-credits"
 msgstr "மொழிபெயர்ப்பாளர்-வரவு"
+
+#: src/MainWindow.vala:78
+#, c-format
+msgid "Failed to Delete Entry of “%s”"
+msgstr "“%s” இன் நுழைவை நீக்கத் தவறிவிட்டது"
+
+#: src/MainWindow.vala:79
+msgid "There was an error while removing the app entry."
+msgstr "பயன்பாட்டு உள்ளீட்டை அகற்றும்போது பிழை ஏற்பட்டது."
+
+#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/View/EditView.vala:481
+msgid "_Close"
+msgstr "மூடு (_C)"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr "நுழைவு நீக்கப்பட்டது."
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:106
 msgid "Entry updated."
 msgstr "நுழைவு புதுப்பிக்கப்பட்டது."
 
-#: src/MainWindow.vala:127
+#: src/MainWindow.vala:129
 msgid "Failed to Load Entries"
 msgstr "உள்ளீடுகளை ஏற்றுவதில் தோல்வி"
 
-#: src/MainWindow.vala:128
+#: src/MainWindow.vala:130
 msgid "There was an error while loading app entries."
 msgstr "பயன்பாட்டு உள்ளீடுகளை ஏற்றும்போது பிழை ஏற்பட்டது."
 
-#: src/MainWindow.vala:130 src/View/EditView.vala:386
-#: src/View/EditView.vala:475 src/View/FilesView.vala:148
-msgid "_Close"
-msgstr "மூடு (_C)"
-
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:158
 msgid "Save Changes?"
 msgstr "மாற்றங்களைச் சேமிக்கவா?"
 
-#: src/MainWindow.vala:163
+#: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -131,64 +140,63 @@ msgstr ""
 "திறந்த உள்ளீடுகளில் சேமிக்கப்படாத மாற்றங்கள் உள்ளன. சேமிக்கப்படாத மாற்றங்கள் நிரந்தரமாக "
 "இழக்கப்படும்."
 
-#: src/MainWindow.vala:165 src/View/FilesView.vala:134
+#: src/MainWindow.vala:163 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "_CANCEL"
 
-#: src/MainWindow.vala:166
+#: src/MainWindow.vala:164
 msgid "_Discard"
 msgstr "_ டிச்கார்ட்"
 
-#: src/MainWindow.vala:167 src/View/EditView.vala:39
+#: src/MainWindow.vala:165 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_சேவ்"
 
-#: src/View/EditView.vala:68
+#: src/View/EditView.vala:69
 msgid "Required Fields"
 msgstr "தேவையான புலங்கள்"
 
-#: src/View/EditView.vala:69
+#: src/View/EditView.vala:70
 msgid "The following fields need to be filled to save."
 msgstr "சேமிக்க பின்வரும் புலங்கள் நிரப்பப்பட வேண்டும்."
 
-#: src/View/EditView.vala:73
+#: src/View/EditView.vala:74
 msgid "App Name"
 msgstr "பயன்பாட்டு பெயர்"
 
-#: src/View/EditView.vala:74
+#: src/View/EditView.vala:75
 msgid "Shown in the launcher or dock."
 msgstr "துவக்கி அல்லது கப்பல்துறையில் காட்டப்பட்டுள்ளது."
 
-#: src/View/EditView.vala:79
+#: src/View/EditView.vala:80
 msgid "Exec File"
 msgstr "EXEC கோப்பு"
 
-#: src/View/EditView.vala:80
+#: src/View/EditView.vala:81
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
-"துவக்கத்தில் பயன்பாட்டு உள்ளீட்டைக் சொடுக்கு செய்யும் போது கட்டளை/பயன்பாடு தொடங்கப்பட்டது. ஒரு"
-" முழுமையான பாதை அல்லது பயன்பாட்டின் மாற்றுப்பெயர் பெயரில் குறிப்பிடவும்."
+"துவக்கத்தில் பயன்பாட்டு உள்ளீட்டைக் சொடுக்கு செய்யும் போது கட்டளை/பயன்பாடு தொடங்கப்பட்டது. "
+"ஒரு முழுமையான பாதை அல்லது பயன்பாட்டின் மாற்றுப்பெயர் பெயரில் குறிப்பிடவும்."
 
-#: src/View/EditView.vala:83
+#: src/View/EditView.vala:84
 msgid "Select an executable file…"
 msgstr "இயங்கக்கூடிய கோப்பைத் தேர்ந்தெடுக்கவும்…"
 
-#: src/View/EditView.vala:94
+#: src/View/EditView.vala:95
 msgid "Optional Fields"
 msgstr "விருப்ப புலங்கள்"
 
-#: src/View/EditView.vala:95
+#: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
-"இந்த புலங்களை நிரப்புவது பயன்பாட்டு துவக்கத்தில் கண்டுபிடிப்பதை மேம்படுத்துகிறது."
+msgstr "இந்த புலங்களை நிரப்புவது பயன்பாட்டு துவக்கத்தில் கண்டுபிடிப்பதை மேம்படுத்துகிறது."
 
-#: src/View/EditView.vala:99
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "படவுரு கோப்பு"
 
-#: src/View/EditView.vala:100
+#: src/View/EditView.vala:101
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
@@ -196,25 +204,25 @@ msgstr ""
 "படவுரு பயன்பாட்டை முத்திரை குத்துகிறது. ஒரு முழுமையான பாதை அல்லது ஒரு ஐகானின் "
 "மாற்றுப்பெயர் பெயரில் குறிப்பிடவும்."
 
-#: src/View/EditView.vala:103
+#: src/View/EditView.vala:104
 msgid "Select an icon file…"
 msgstr "ஒரு படவுரு கோப்பைத் தேர்ந்தெடுக்கவும்…"
 
-#: src/View/EditView.vala:111
+#: src/View/EditView.vala:112
 msgid "Generic Name"
 msgstr "பொதுவான பெயர்"
 
-#: src/View/EditView.vala:112
+#: src/View/EditView.vala:113
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
 msgstr ""
 "பயன்பாட்டின் பொதுவான பெயர், எடுத்துக்காட்டாக \"வலை உலாவி\" அல்லது \"அஞ்சல் கிளையண்ட்\"."
 
-#: src/View/EditView.vala:117
+#: src/View/EditView.vala:118
 msgid "Comment"
 msgstr "கருத்து"
 
-#: src/View/EditView.vala:118
+#: src/View/EditView.vala:119
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
@@ -222,11 +230,11 @@ msgstr ""
 "பயன்பாட்டை விவரிக்கிறது. துவக்கி/கப்பல்துறையில் பயன்பாட்டு நுழைவுக்கு மேல் நீங்கள் "
 "வட்டமிடும்போது ஒரு உதவிக்குறிப்பாக தோன்றலாம்."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:133
 msgid "Advanced Configurations"
 msgstr "மேம்பட்ட உள்ளமைவுகள்"
 
-#: src/View/EditView.vala:133
+#: src/View/EditView.vala:134
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -234,11 +242,11 @@ msgstr ""
 "மேலே உள்ள பிரிவுகளை நிரப்புவதன் மூலம் பெரும்பாலான பயன்பாட்டு உள்ளீடுகளை உருவாக்கலாம். "
 "இருப்பினும், சில பயன்பாடுகளுக்கு கீழே மேம்பட்ட உள்ளமைவு விருப்பங்கள் தேவைப்படலாம்."
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
 msgid "Startup WM Class"
 msgstr "தொடக்க WM வகுப்பு"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:139
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
@@ -246,229 +254,230 @@ msgstr ""
 "இந்த ஐடியைக் கொண்ட ஒரு சாளரத்துடன் பயன்பாட்டை இணைக்கவும். பயன்பாடு தொடங்கும்போது "
 "கப்பல்துறையில் வேறு அல்லது நகல் படவுரு தோன்றினால் இதைப் பயன்படுத்தவும்."
 
-#: src/View/EditView.vala:143
+#: src/View/EditView.vala:144
 msgid "Run in Terminal"
 msgstr "முனையத்தில் இயக்கவும்"
 
-#: src/View/EditView.vala:144
+#: src/View/EditView.vala:145
 msgid "Turn on if you want to register a CUI app."
 msgstr "நீங்கள் ஒரு CUI பயன்பாட்டை பதிவு செய்ய விரும்பினால் இயக்கவும்."
 
-#: src/View/EditView.vala:148
+#: src/View/EditView.vala:150
+msgid "Hide in Applications Menu"
+msgstr ""
+
+#: src/View/EditView.vala:151
+msgid ""
+"Useful when you won't launch the app by itself, but want to associate it "
+"with filetypes to open files with the app from file managers."
+msgstr ""
+
+#: src/View/EditView.vala:155
 msgid "_Open"
 msgstr "_OPEN"
 
-#: src/View/EditView.vala:152
+#: src/View/EditView.vala:159
 msgid "Open with Text Editor"
 msgstr "உரை எடிட்டருடன் திறக்கவும்"
 
-#: src/View/EditView.vala:153
+#: src/View/EditView.vala:160
 msgid "You can also edit more options by opening with a text editor."
 msgstr "உரை எடிட்டருடன் திறப்பதன் மூலம் கூடுதல் விருப்பங்களையும் திருத்தலாம்."
 
-#: src/View/EditView.vala:198
+#: src/View/EditView.vala:205
 msgid "New Entry"
 msgstr "புதிய நுழைவு"
 
-#: src/View/EditView.vala:214 src/View/EditView.vala:416
+#: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
 msgstr "பெயரிடப்படாத பயன்பாடு"
 
-#: src/View/EditView.vala:234
+#: src/View/EditView.vala:241
 msgid "Select Executable File"
 msgstr "இயங்கக்கூடிய கோப்பைத் தேர்ந்தெடுக்கவும்"
 
-#: src/View/EditView.vala:235 src/View/EditView.vala:292
+#: src/View/EditView.vala:242 src/View/EditView.vala:299
 msgid "_Select"
 msgstr "_ தேர்ந்தெடுக்கவும்"
 
-#: src/View/EditView.vala:288
+#: src/View/EditView.vala:295
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ஐ.சி.ஓ, பி.என்.சி, எச்.வி.சி அல்லது எக்ச்எம்பி கோப்புகள்"
 
-#: src/View/EditView.vala:291
+#: src/View/EditView.vala:298
 msgid "Select Icon File"
 msgstr "படவுரு கோப்பைத் தேர்ந்தெடுக்கவும்"
 
-#: src/View/EditView.vala:383
+#: src/View/EditView.vala:397
 msgid "Failed to Open with External App"
 msgstr "வெளிப்புற பயன்பாட்டுடன் திறக்கத் தவறிவிட்டது"
 
-#: src/View/EditView.vala:384
+#: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
 msgstr "வெளிப்புற பயன்பாட்டுடன் கோப்பைத் திறக்கும்போது பிழை ஏற்பட்டது."
 
-#: src/View/EditView.vala:441
+#: src/View/EditView.vala:453
 msgid "Edit Entry"
 msgstr "நுழைவு திருத்து"
 
-#: src/View/EditView.vala:443
+#: src/View/EditView.vala:455
 #, c-format
 msgid "Edit “%s”"
 msgstr "“%s” திருத்து"
 
-#: src/View/EditView.vala:465
+#: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
 msgstr "நுழைவு சேமிப்பதில் தோல்வி"
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "“%s” இன் நுழைவைச் சேமிப்பதில் தோல்வி"
 
-#: src/View/EditView.vala:473
+#: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
 msgstr "பயன்பாட்டு உள்ளீட்டைச் சேமிக்கும்போது பிழை ஏற்பட்டது."
 
-#: src/View/FilesView.vala:25
+#: src/View/FilesView.vala:32
 msgid "Create a new entry"
 msgstr "புதிய நுழைவை உருவாக்கவும்"
 
-#: src/View/FilesView.vala:31
+#: src/View/FilesView.vala:39
 msgid "S_ystem"
 msgstr "எச்_ச்டம்"
 
-#: src/View/FilesView.vala:32
+#: src/View/FilesView.vala:40
 msgid "_Light"
 msgstr "_ விளக்கு"
 
-#: src/View/FilesView.vala:33
+#: src/View/FilesView.vala:41
 msgid "_Dark"
 msgstr "_ டார்க்"
 
-#: src/View/FilesView.vala:36
+#: src/View/FilesView.vala:44
 msgid "_Style"
 msgstr "_ பாணி"
 
-#: src/View/FilesView.vala:37
+#: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
-#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/View/FilesView.vala:39
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
 msgstr "_About %s"
 
-#: src/View/FilesView.vala:42
+#: src/View/FilesView.vala:53
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/View/FilesView.vala:57
+#: src/View/FilesView.vala:69
 msgid "No Entries Found"
 msgstr "உள்ளீடுகள் எதுவும் கிடைக்கவில்லை"
 
-#: src/View/FilesView.vala:58
+#: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
 msgstr "ஒன்றை உருவாக்க மேலே உள்ள + பொத்தானைக் சொடுக்கு செய்க."
 
-#: src/View/FilesView.vala:118
+#: src/View/FilesView.vala:117
+msgid "Delete…"
+msgstr "நீக்கு…"
+
+#: src/View/FilesView.vala:154
 msgid "Delete Entry?"
 msgstr "நுழைவை நீக்கவா?"
 
-#: src/View/FilesView.vala:120
+#: src/View/FilesView.vala:156
 #, c-format
 msgid "Delete Entry of “%s”?"
 msgstr "“%s” இன் நுழைவை நீக்கவா?"
 
-#: src/View/FilesView.vala:124
-msgid "Delete…"
-msgstr "நீக்கு…"
-
-#: src/View/FilesView.vala:132
+#: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
 msgstr "இது துவக்கத்திலிருந்து பயன்பாட்டை நீக்குகிறது."
 
-#: src/View/FilesView.vala:135
+#: src/View/FilesView.vala:165
 msgid "_Delete"
 msgstr "_Delete"
 
-#: src/View/FilesView.vala:145
-#, c-format
-msgid "Failed to Delete Entry of “%s”"
-msgstr "“%s” இன் நுழைவை நீக்கத் தவறிவிட்டது"
-
-#: src/View/FilesView.vala:146
-msgid "There was an error while removing the app entry."
-msgstr "பயன்பாட்டு உள்ளீட்டை அகற்றும்போது பிழை ஏற்பட்டது."
-
-#: src/Widget/CategoriesRow.vala:40
+#: src/Widget/CategoriesRow.vala:63
 msgid "Sound &amp; Video"
 msgstr "ஒலி &amp; வீடியோ"
 
-#: src/Widget/CategoriesRow.vala:41
+#: src/Widget/CategoriesRow.vala:64
 msgid "Audio"
 msgstr "ஆடியோ"
 
-#: src/Widget/CategoriesRow.vala:42
+#: src/Widget/CategoriesRow.vala:65
 msgid "Video"
 msgstr "ஒளிதோற்றம்"
 
-#: src/Widget/CategoriesRow.vala:43
+#: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
 msgstr "நிரலாக்க"
 
-#: src/Widget/CategoriesRow.vala:44
+#: src/Widget/CategoriesRow.vala:67
 msgid "Education"
 msgstr "கல்வி"
 
-#: src/Widget/CategoriesRow.vala:45
+#: src/Widget/CategoriesRow.vala:68
 msgid "Games"
 msgstr "விளையாட்டுகள்"
 
-#: src/Widget/CategoriesRow.vala:46
+#: src/Widget/CategoriesRow.vala:69
 msgid "Graphics"
 msgstr "கிராபிக்ச்"
 
-#: src/Widget/CategoriesRow.vala:47
+#: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
 msgstr "இணையம்"
 
-#: src/Widget/CategoriesRow.vala:48
+#: src/Widget/CategoriesRow.vala:71
 msgid "Office"
 msgstr "அலுவலகம்"
 
-#: src/Widget/CategoriesRow.vala:49
+#: src/Widget/CategoriesRow.vala:72
 msgid "Science"
 msgstr "அறிவியல்"
 
-#: src/Widget/CategoriesRow.vala:50
+#: src/Widget/CategoriesRow.vala:73
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
-#: src/Widget/CategoriesRow.vala:51
+#: src/Widget/CategoriesRow.vala:74
 msgid "System Tools"
 msgstr "கணினி கருவிகள்"
 
-#: src/Widget/CategoriesRow.vala:52
+#: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
 msgstr "பாகங்கள்"
 
-#: src/Widget/CategoriesRow.vala:62
+#: src/Widget/CategoriesRow.vala:82
 msgid "Categories"
 msgstr "வகைகள்"
 
-#: src/Widget/CategoriesRow.vala:63
+#: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
 msgstr ""
 "பயன்பாட்டிற்கு பொருந்தக்கூடிய வகைகள். (நீங்கள் ஒன்றுக்கு மேற்பட்டவற்றைத் தேர்ந்தெடுக்கலாம்.)"
 
-#: src/Widget/KeywordsRow.vala:29
-msgid "Keywords"
-msgstr "முக்கிய வார்த்தைகள்"
-
-#: src/Widget/KeywordsRow.vala:30
-msgid "These words can be used as search terms."
-msgstr "இந்த சொற்களை தேடல் சொற்களாகப் பயன்படுத்தலாம்."
-
-#: src/Widget/KeywordsRow.vala:35
-msgid "Add a new keyword"
-msgstr "புதிய முக்கிய சொல்லைச் சேர்க்கவும்"
-
-#: src/Widget/KeywordsRow.vala:122
+#: src/Widget/KeywordsRow.vala:32
 msgid "Keyword"
 msgstr "முக்கிய சொல்"
 
-#: src/Widget/KeywordsRow.vala:126
+#: src/Widget/KeywordsRow.vala:36
 msgid "Delete keyword"
 msgstr "முக்கிய சொல்லை நீக்கு"
+
+#: src/Widget/KeywordsRow.vala:57
+msgid "Keywords"
+msgstr "முக்கிய வார்த்தைகள்"
+
+#: src/Widget/KeywordsRow.vala:58
+msgid "These words can be used as search terms."
+msgstr "இந்த சொற்களை தேடல் சொற்களாகப் பயன்படுத்தலாம்."
+
+#: src/Widget/KeywordsRow.vala:63
+msgid "Add a new keyword"
+msgstr "புதிய முக்கிய சொல்லைச் சேர்க்கவும்"

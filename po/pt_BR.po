@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"POT-Creation-Date: 2025-03-08 23:05+0900\n"
 "PO-Revision-Date: 2024-12-11 12:15+0000\n"
 "Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -58,7 +58,8 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
-msgstr "Adicione automaticamente a permissão de execução ao arquivo selecionado"
+msgstr ""
+"Adicione automaticamente a permissão de execução ao arquivo selecionado"
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
@@ -99,36 +100,45 @@ msgstr "Nova entrada"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:297
+#: src/Application.vala:310
 msgid "translator-credits"
 msgstr "Felipe Nogueira <contato.fnog@gmail.com>"
+
+#: src/MainWindow.vala:78
+#, c-format
+msgid "Failed to Delete Entry of “%s”"
+msgstr "Falha ao excluir entrada de “%s”"
+
+#: src/MainWindow.vala:79
+msgid "There was an error while removing the app entry."
+msgstr "Ocorreu um erro ao remover a entrada do aplicativo."
+
+#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/View/EditView.vala:481
+msgid "_Close"
+msgstr "_Fechar"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
 msgstr "Entrada excluída."
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:106
 msgid "Entry updated."
 msgstr "Entrada atualizada."
 
-#: src/MainWindow.vala:127
+#: src/MainWindow.vala:129
 msgid "Failed to Load Entries"
 msgstr "Falha ao carregar entradas"
 
-#: src/MainWindow.vala:128
+#: src/MainWindow.vala:130
 msgid "There was an error while loading app entries."
 msgstr "Ocorreu um erro ao carregar as entradas do aplicativo."
 
-#: src/MainWindow.vala:130 src/View/EditView.vala:386
-#: src/View/EditView.vala:475 src/View/FilesView.vala:148
-msgid "_Close"
-msgstr "_Fechar"
-
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:158
 msgid "Save Changes?"
 msgstr "Salvar alterações?"
 
-#: src/MainWindow.vala:163
+#: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -136,39 +146,39 @@ msgstr ""
 "Entradas abertas contêm alterações não salvas. Alterações que não forem "
 "salvas serão perdidas permanentemente."
 
-#: src/MainWindow.vala:165 src/View/FilesView.vala:134
+#: src/MainWindow.vala:163 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/MainWindow.vala:166
+#: src/MainWindow.vala:164
 msgid "_Discard"
 msgstr "_Descartar"
 
-#: src/MainWindow.vala:167 src/View/EditView.vala:39
+#: src/MainWindow.vala:165 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_Salvar"
 
-#: src/View/EditView.vala:68
+#: src/View/EditView.vala:69
 msgid "Required Fields"
 msgstr "Campos obrigatórios"
 
-#: src/View/EditView.vala:69
+#: src/View/EditView.vala:70
 msgid "The following fields need to be filled to save."
 msgstr "Os seguintes campos precisam ser preenchidos para salvar."
 
-#: src/View/EditView.vala:73
+#: src/View/EditView.vala:74
 msgid "App Name"
 msgstr "Nome do Aplicativo"
 
-#: src/View/EditView.vala:74
+#: src/View/EditView.vala:75
 msgid "Shown in the launcher or dock."
 msgstr "Exibido no inicializador ou no dock."
 
-#: src/View/EditView.vala:79
+#: src/View/EditView.vala:80
 msgid "Exec File"
 msgstr "Arquivo executável"
 
-#: src/View/EditView.vala:80
+#: src/View/EditView.vala:81
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
@@ -176,25 +186,25 @@ msgstr ""
 "O comando/app é iniciado quando você clica na entrada do app no "
 "inicializador. Especifique em um caminho absoluto ou um nome de alias do app."
 
-#: src/View/EditView.vala:83
+#: src/View/EditView.vala:84
 msgid "Select an executable file…"
 msgstr "Selecione um arquivo executável…"
 
-#: src/View/EditView.vala:94
+#: src/View/EditView.vala:95
 msgid "Optional Fields"
 msgstr "Campos Opcionais"
 
-#: src/View/EditView.vala:95
+#: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
 msgstr ""
 "Preencher esses campos melhora a capacidade de descoberta no inicializador "
 "de aplicativos."
 
-#: src/View/EditView.vala:99
+#: src/View/EditView.vala:100
 msgid "Icon File"
 msgstr "Arquivo de Ícones"
 
-#: src/View/EditView.vala:100
+#: src/View/EditView.vala:101
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
@@ -202,26 +212,26 @@ msgstr ""
 "O ícone que marca o aplicativo. Especifique em um caminho absoluto ou um "
 "nome de alias do ícone."
 
-#: src/View/EditView.vala:103
+#: src/View/EditView.vala:104
 msgid "Select an icon file…"
 msgstr "Selecione um arquivo de ícone…"
 
-#: src/View/EditView.vala:111
+#: src/View/EditView.vala:112
 msgid "Generic Name"
 msgstr "Nome genérico"
 
-#: src/View/EditView.vala:112
+#: src/View/EditView.vala:113
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
 msgstr ""
 "Nome genérico do aplicativo, por exemplo \"Navegador da Web\" ou \"Cliente "
 "de e-mail\"."
 
-#: src/View/EditView.vala:117
+#: src/View/EditView.vala:118
 msgid "Comment"
 msgstr "Comentário"
 
-#: src/View/EditView.vala:118
+#: src/View/EditView.vala:119
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
@@ -229,11 +239,11 @@ msgstr ""
 "Descreve o aplicativo. Pode aparecer como uma dica de ferramenta quando você "
 "passa o mouse sobre a entrada do aplicativo no inicializador/dock."
 
-#: src/View/EditView.vala:132
+#: src/View/EditView.vala:133
 msgid "Advanced Configurations"
 msgstr "Configurações avançadas"
 
-#: src/View/EditView.vala:133
+#: src/View/EditView.vala:134
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
@@ -242,11 +252,11 @@ msgstr ""
 "seções acima. No entanto, alguns aplicativos podem exigir as opções de "
 "configuração avançadas abaixo."
 
-#: src/View/EditView.vala:137
+#: src/View/EditView.vala:138
 msgid "Startup WM Class"
 msgstr "Classe WM de inicialização"
 
-#: src/View/EditView.vala:138
+#: src/View/EditView.vala:139
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
@@ -254,232 +264,233 @@ msgstr ""
 "Associe o aplicativo a uma janela que tenha esse ID. Use isso se um ícone "
 "diferente ou duplicado aparecer no dock quando o aplicativo for iniciado."
 
-#: src/View/EditView.vala:143
+#: src/View/EditView.vala:144
 msgid "Run in Terminal"
 msgstr "Executar no Terminal"
 
-#: src/View/EditView.vala:144
+#: src/View/EditView.vala:145
 msgid "Turn on if you want to register a CUI app."
 msgstr "Ative se quiser registrar um aplicativo CUI."
 
-#: src/View/EditView.vala:148
+#: src/View/EditView.vala:150
+msgid "Hide in Applications Menu"
+msgstr ""
+
+#: src/View/EditView.vala:151
+msgid ""
+"Useful when you won't launch the app by itself, but want to associate it "
+"with filetypes to open files with the app from file managers."
+msgstr ""
+
+#: src/View/EditView.vala:155
 msgid "_Open"
 msgstr "_Abrir"
 
-#: src/View/EditView.vala:152
+#: src/View/EditView.vala:159
 msgid "Open with Text Editor"
 msgstr "Abrir com editor de texto"
 
-#: src/View/EditView.vala:153
+#: src/View/EditView.vala:160
 msgid "You can also edit more options by opening with a text editor."
 msgstr "Você também pode editar mais opções abrindo com um editor de texto."
 
-#: src/View/EditView.vala:198
+#: src/View/EditView.vala:205
 msgid "New Entry"
 msgstr "Nova entrada"
 
-#: src/View/EditView.vala:214 src/View/EditView.vala:416
+#: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
 msgstr "Aplicativo sem título"
 
-#: src/View/EditView.vala:234
+#: src/View/EditView.vala:241
 msgid "Select Executable File"
 msgstr "Selecione o arquivo executável"
 
-#: src/View/EditView.vala:235 src/View/EditView.vala:292
+#: src/View/EditView.vala:242 src/View/EditView.vala:299
 msgid "_Select"
 msgstr "_Selecionar"
 
-#: src/View/EditView.vala:288
+#: src/View/EditView.vala:295
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "Arquivos ICO, PNG, SVG, ou XMP"
 
-#: src/View/EditView.vala:291
+#: src/View/EditView.vala:298
 msgid "Select Icon File"
 msgstr "Selecionar arquivo de ícone"
 
-#: src/View/EditView.vala:383
+#: src/View/EditView.vala:397
 msgid "Failed to Open with External App"
 msgstr "Falha ao abrir com aplicativo externo"
 
-#: src/View/EditView.vala:384
+#: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
 msgstr "Ocorreu um erro ao abrir o arquivo com um aplicativo externo."
 
-#: src/View/EditView.vala:441
+#: src/View/EditView.vala:453
 msgid "Edit Entry"
 msgstr "Editar entrada"
 
-#: src/View/EditView.vala:443
+#: src/View/EditView.vala:455
 #, c-format
 msgid "Edit “%s”"
 msgstr "Editar “%s”"
 
-#: src/View/EditView.vala:465
+#: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
 msgstr "Falha ao salvar a entrada"
 
-#: src/View/EditView.vala:467
+#: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
 msgstr "Falha ao salvar a entrada de “%s”"
 
-#: src/View/EditView.vala:473
+#: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
 msgstr "Ocorreu um erro ao salvar a entrada do aplicativo."
 
-#: src/View/FilesView.vala:25
+#: src/View/FilesView.vala:32
 msgid "Create a new entry"
 msgstr "Criar uma nova entrada"
 
-#: src/View/FilesView.vala:31
+#: src/View/FilesView.vala:39
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/View/FilesView.vala:32
+#: src/View/FilesView.vala:40
 msgid "_Light"
 msgstr "_Claro"
 
-#: src/View/FilesView.vala:33
+#: src/View/FilesView.vala:41
 msgid "_Dark"
 msgstr "_Escuro"
 
-#: src/View/FilesView.vala:36
+#: src/View/FilesView.vala:44
 msgid "_Style"
 msgstr "_Estilo"
 
-#: src/View/FilesView.vala:37
+#: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
 msgstr "_Atalhos de teclado"
 
-#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
-#: src/View/FilesView.vala:39
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
 msgstr "_Sobre %s"
 
-#: src/View/FilesView.vala:42
+#: src/View/FilesView.vala:53
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: src/View/FilesView.vala:57
+#: src/View/FilesView.vala:69
 msgid "No Entries Found"
 msgstr "Nenhuma entrada encontrada"
 
-#: src/View/FilesView.vala:58
+#: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
 msgstr "Clique no botão + na parte superior para criar uma."
 
-#: src/View/FilesView.vala:118
+#: src/View/FilesView.vala:117
+msgid "Delete…"
+msgstr "Deletar…"
+
+#: src/View/FilesView.vala:154
 msgid "Delete Entry?"
 msgstr "Excluir entrada?"
 
-#: src/View/FilesView.vala:120
+#: src/View/FilesView.vala:156
 #, c-format
 msgid "Delete Entry of “%s”?"
 msgstr "Excluir entrada de “%s”?"
 
-#: src/View/FilesView.vala:124
-msgid "Delete…"
-msgstr "Deletar…"
-
-#: src/View/FilesView.vala:132
+#: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
 msgstr "Isto retira o aplicativo do lançador."
 
-#: src/View/FilesView.vala:135
+#: src/View/FilesView.vala:165
 msgid "_Delete"
 msgstr "_Deletar"
 
-#: src/View/FilesView.vala:145
-#, c-format
-msgid "Failed to Delete Entry of “%s”"
-msgstr "Falha ao excluir entrada de “%s”"
-
-#: src/View/FilesView.vala:146
-msgid "There was an error while removing the app entry."
-msgstr "Ocorreu um erro ao remover a entrada do aplicativo."
-
-#: src/Widget/CategoriesRow.vala:40
+#: src/Widget/CategoriesRow.vala:63
 msgid "Sound &amp; Video"
 msgstr "Som e Vídeo"
 
-#: src/Widget/CategoriesRow.vala:41
+#: src/Widget/CategoriesRow.vala:64
 msgid "Audio"
 msgstr "Áudio"
 
-#: src/Widget/CategoriesRow.vala:42
+#: src/Widget/CategoriesRow.vala:65
 msgid "Video"
 msgstr "Vídeo"
 
-#: src/Widget/CategoriesRow.vala:43
+#: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
 msgstr "Programação"
 
-#: src/Widget/CategoriesRow.vala:44
+#: src/Widget/CategoriesRow.vala:67
 msgid "Education"
 msgstr "Educação"
 
-#: src/Widget/CategoriesRow.vala:45
+#: src/Widget/CategoriesRow.vala:68
 msgid "Games"
 msgstr "Jogos"
 
-#: src/Widget/CategoriesRow.vala:46
+#: src/Widget/CategoriesRow.vala:69
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: src/Widget/CategoriesRow.vala:47
+#: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
 msgstr "Internet"
 
-#: src/Widget/CategoriesRow.vala:48
+#: src/Widget/CategoriesRow.vala:71
 msgid "Office"
 msgstr "Escritório"
 
-#: src/Widget/CategoriesRow.vala:49
+#: src/Widget/CategoriesRow.vala:72
 msgid "Science"
 msgstr "Ciência"
 
-#: src/Widget/CategoriesRow.vala:50
+#: src/Widget/CategoriesRow.vala:73
 msgid "Settings"
 msgstr "Configurações"
 
-#: src/Widget/CategoriesRow.vala:51
+#: src/Widget/CategoriesRow.vala:74
 msgid "System Tools"
 msgstr "Ferramentas do sistema"
 
-#: src/Widget/CategoriesRow.vala:52
+#: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
 msgstr "Acessórios"
 
-#: src/Widget/CategoriesRow.vala:62
+#: src/Widget/CategoriesRow.vala:82
 msgid "Categories"
 msgstr "Categorias"
 
-#: src/Widget/CategoriesRow.vala:63
+#: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
 msgstr ""
 "Categorias aplicáveis ao aplicativo. (Você pode selecionar mais de uma.)"
 
-#: src/Widget/KeywordsRow.vala:29
-msgid "Keywords"
-msgstr "Palavras-chave"
-
-#: src/Widget/KeywordsRow.vala:30
-msgid "These words can be used as search terms."
-msgstr "Essas palavras podem ser usadas como termos de pesquisa."
-
-#: src/Widget/KeywordsRow.vala:35
-msgid "Add a new keyword"
-msgstr "Adicionar uma nova palavra-chave"
-
-#: src/Widget/KeywordsRow.vala:122
+#: src/Widget/KeywordsRow.vala:32
 msgid "Keyword"
 msgstr "Palavra-chave"
 
-#: src/Widget/KeywordsRow.vala:126
+#: src/Widget/KeywordsRow.vala:36
 msgid "Delete keyword"
 msgstr "Excluir palavra-chave"
+
+#: src/Widget/KeywordsRow.vala:57
+msgid "Keywords"
+msgstr "Palavras-chave"
+
+#: src/Widget/KeywordsRow.vala:58
+msgid "These words can be used as search terms."
+msgstr "Essas palavras podem ser usadas como termos de pesquisa."
+
+#: src/Widget/KeywordsRow.vala:63
+msgid "Add a new keyword"
+msgstr "Adicionar uma nova palavra-chave"
 
 #~ msgid "Pin It!"
 #~ msgstr "Pin It!"
