@@ -51,12 +51,12 @@ jobs:
       - name: Build
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: pinit.flatpak
+          bundle: pinit-${{ matrix.repository-name }}.flatpak
           manifest-path: build-aux/${{ matrix.repository-name }}/com.github.ryonakano.pinit.Devel.yml
           run-tests: true
           repository-name: ${{ matrix.repository-name }}
           repository-url: ${{ matrix.repository-url }}
-          cache-key: "flatpak-builder-${{ github.sha }}-${{ matrix.repository-name }}"
+          cache-key: "flatpak-builder-${sha256(manifestPath)}-${{ github.sha }}"
           arch: ${{ matrix.arch }}
 
   lint:
