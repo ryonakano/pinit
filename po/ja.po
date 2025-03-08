@@ -1,23 +1,23 @@
 # Japanese translations for com.github.ryonakano.pinit.
 # Copyright (C) 2021-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-08 23:05+0900\n"
-"PO-Revision-Date: 2024-05-06 01:07+0000\n"
+"PO-Revision-Date: 2025-03-08 14:22+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/"
-">\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
+"\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -266,13 +266,14 @@ msgstr "CUI アプリを登録したい場合、オンにしてください。"
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "アプリケーションメニューで非表示にする"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
-msgstr ""
+msgstr "アプリ単独で起動する想定はないが、ファイルタイプと関連付けることでファイルマ"
+"ネージャーからアプリを使ってファイルを開きたい場合に便利です。"
 
 #: src/View/EditView.vala:155
 msgid "_Open"
