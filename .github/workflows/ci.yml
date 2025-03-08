@@ -56,7 +56,7 @@ jobs:
           run-tests: true
           repository-name: ${{ matrix.repository-name }}
           repository-url: ${{ matrix.repository-url }}
-          cache-key: "flatpak-builder-${{ github.sha }}-${{ $matrix.repository-name }}"
+          cache-key: "flatpak-builder-${{ github.sha }}-${{ matrix.repository-name }}"
           arch: ${{ matrix.arch }}
 
   lint:
