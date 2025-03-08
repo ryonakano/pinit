@@ -24,6 +24,7 @@ public class View.EditView : Adw.NavigationPage {
     private Widget.KeywordsRow keywords_row;
     private Adw.EntryRow startup_wm_class_entry;
     private Adw.SwitchRow terminal_row;
+    private Adw.SwitchRow nodisplay_row;
 
     private Gtk.ScrolledWindow edit_page;
     private Adw.StatusPage blank_page;
@@ -144,6 +145,12 @@ public class View.EditView : Adw.NavigationPage {
             subtitle = _("Turn on if you want to register a CUI app.")
         };
         advanced_group.add (terminal_row);
+
+        nodisplay_row = new Adw.SwitchRow () {
+            title = _("Hide in Applications Menu"),
+            subtitle = _("Useful when you won't launch the app by itself, but want to associate it with filetypes to open files with the app from file managers.")
+        };
+        advanced_group.add (nodisplay_row);
 
         var open_text_editor_button = new Gtk.Button.with_mnemonic (_("_Open")) {
             valign = Gtk.Align.CENTER
@@ -362,6 +369,14 @@ public class View.EditView : Adw.NavigationPage {
             desktop_file.value_terminal = terminal_row.active;
         });
 
+        nodisplay_row.notify["active"].connect (() => {
+            if (is_loading) {
+                return;
+            }
+
+            desktop_file.value_nodisplay = nodisplay_row.active;
+        });
+
         open_text_editor_button.clicked.connect (() => {
             open_external.begin (desktop_file.path, (obj, res) => {
                 bool ret;
@@ -428,6 +443,7 @@ public class View.EditView : Adw.NavigationPage {
         keywords_row.from_strv (desktop_file.value_keywords);
         startup_wm_class_entry.text = desktop_file.value_startup_wm_class;
         terminal_row.active = desktop_file.value_terminal;
+        nodisplay_row.active = desktop_file.value_nodisplay;
 
         // Show the page that filled in just now.
         stack.visible_child = edit_page;

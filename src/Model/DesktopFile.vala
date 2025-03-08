@@ -225,6 +225,29 @@ public class Model.DesktopFile : Object {
     }
 
     /**
+     * Value of "NoDisplay" entry.
+     */
+    public bool value_nodisplay {
+        get {
+            Value? nodisplay = Util.KeyFileUtil.get_value (keyfile_dirty, KeyFileDesktop.KEY_NO_DISPLAY, Util.KeyFileUtil.get_boolean);
+            if (nodisplay == null) {
+                return false;
+            }
+
+            return (bool) nodisplay;
+        }
+
+        set {
+            Value? nodisplay = null;
+            if (value) {
+                nodisplay = value;
+            }
+
+            Util.KeyFileUtil.set_value (keyfile_dirty, KeyFileDesktop.KEY_NO_DISPLAY, nodisplay, Util.KeyFileUtil.set_boolean);
+        }
+    }
+
+    /**
      * Value of "Name" entry without unsaved changes.
      */
     public string saved_value_name {
