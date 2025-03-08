@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   flatpak:
-    name: Flatpak
+    name: Flatpak (${{ matrix.arch }}, ${{ matrix.repository-name }})
     runs-on: ubuntu-latest
 
     strategy:
