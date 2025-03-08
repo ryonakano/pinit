@@ -9,11 +9,15 @@ jobs:
 
     strategy:
       matrix:
-        arch: [ x86_64, aarch64 ]
-        container-image: bilelmoussaoui/flatpak-github-actions:gnome-47
-        repository-name: flathub
-        repository-url: https://flathub.org/repo/flathub.flatpakrepo
         include:
+          - arch: x86_64
+            container-image: bilelmoussaoui/flatpak-github-actions:gnome-47
+            repository-name: flathub
+            repository-url: https://flathub.org/repo/flathub.flatpakrepo
+          - arch: aarch64
+            container-image: bilelmoussaoui/flatpak-github-actions:gnome-47
+            repository-name: flathub
+            repository-url: https://flathub.org/repo/flathub.flatpakrepo
           - arch: x86_64
             container-image: ghcr.io/elementary/flatpak-platform/runtime:8-x86_64
             repository-name: appcenter
