@@ -1,5 +1,5 @@
 # Dutch translations for com.github.ryonakano.pinit.
-# Copyright (C) 2021-2024 Ryo Nakano
+# Copyright (C) 2021-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
 # Philip Goto <philip.goto@gmail.com>, 2023.

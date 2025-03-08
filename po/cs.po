@@ -1,5 +1,5 @@
 # Czech translation for com.github.ryonakano.pinit.
-# Copyright (C) 2021-2024 Ryo Nakano
+# Copyright (C) 2021-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Amerey.eu <info@amerey.eu>, 2023.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
