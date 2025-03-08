@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.pinit package.
+# தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.pinit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-05 00:05+0900\n"
+"PO-Revision-Date: 2025-03-02 06:40+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/pinit/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.3-dev\n"
+
+#: data/pinit.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr "@APP_NAME@"
+
+#: data/pinit.desktop.in.in:4
+msgid "Desktop File Creator"
+msgstr "டெச்க்டாப் கோப்பு உருவாக்கியவர்"
+
+#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+msgid "Pin portable apps to the launcher"
+msgstr "சிறிய பயன்பாடுகளை துவக்கிக்கு முள்"
+
+#: data/pinit.desktop.in.in:11
+msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr "டெச்க்டாப்; கோப்பு; உருவாக்கு; திருத்து; தகவல்; ஐகான்; அபிமேச்;"
+
+#: data/pinit.metainfo.xml.in.in:13
+msgid ""
+"Pin shortcuts for portable apps like raw executable files, AppImage files, "
+"etc. to the app launcher on your desktop."
+msgstr ""
+"உங்கள் டெச்க்டாப்பில் உள்ள பயன்பாட்டு துவக்கிக்கு மூல இயங்கக்கூடிய கோப்புகள், அபிமேச் கோப்புகள்"
+" போன்ற சிறிய பயன்பாடுகளுக்கான குறுக்குவழிகள்."
+
+#: data/pinit.metainfo.xml.in.in:16
+msgid "Other features include:"
+msgstr "பிற நற்பொருத்தங்கள் பின்வருமாறு:"
+
+#: data/pinit.metainfo.xml.in.in:20
+msgid "Edit or delete created app entries without opening the file manager"
+msgstr ""
+"கோப்பு மேலாளரைத் திறக்காமல் உருவாக்கிய பயன்பாட்டு உள்ளீடுகளைத் திருத்தவும் அல்லது நீக்கவும்"
+
+#: data/pinit.metainfo.xml.in.in:21
+msgid "Automatically add the execute permission to the file you select"
+msgstr "நீங்கள் தேர்ந்தெடுக்கும் கோப்பில் தானாகவே இயக்க அனுமதியைச் சேர்க்கவும்"
+
+#: data/pinit.metainfo.xml.in.in:27
+msgid "App window in the light mode"
+msgstr "ஒளி பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#: data/pinit.metainfo.xml.in.in:32
+msgid "App window in the dark mode"
+msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr "பொது"
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "வெளியேறு"
+
+#: data/resources/gtk/help-overlay.blp:24
+msgctxt "shortcut window"
+msgid "Edit"
+msgstr "தொகு"
+
+#: data/resources/gtk/help-overlay.blp:28
+msgctxt "shortcut window"
+msgid "New Entry"
+msgstr "புதிய நுழைவு"
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:297
+msgid "translator-credits"
+msgstr "மொழிபெயர்ப்பாளர்-வரவு"
+
+#: src/MainWindow.vala:93
+msgid "Entry deleted."
+msgstr "நுழைவு நீக்கப்பட்டது."
+
+#: src/MainWindow.vala:108
+msgid "Entry updated."
+msgstr "நுழைவு புதுப்பிக்கப்பட்டது."
+
+#: src/MainWindow.vala:127
+msgid "Failed to Load Entries"
+msgstr "உள்ளீடுகளை ஏற்றுவதில் தோல்வி"
+
+#: src/MainWindow.vala:128
+msgid "There was an error while loading app entries."
+msgstr "பயன்பாட்டு உள்ளீடுகளை ஏற்றும்போது பிழை ஏற்பட்டது."
+
+#: src/MainWindow.vala:130 src/View/EditView.vala:386
+#: src/View/EditView.vala:475 src/View/FilesView.vala:148
+msgid "_Close"
+msgstr "மூடு (_C)"
+
+#: src/MainWindow.vala:162
+msgid "Save Changes?"
+msgstr "மாற்றங்களைச் சேமிக்கவா?"
+
+#: src/MainWindow.vala:163
+msgid ""
+"Open entries contain unsaved changes. Changes which are not saved will be "
+"permanently lost."
+msgstr ""
+"திறந்த உள்ளீடுகளில் சேமிக்கப்படாத மாற்றங்கள் உள்ளன. சேமிக்கப்படாத மாற்றங்கள் நிரந்தரமாக "
+"இழக்கப்படும்."
+
+#: src/MainWindow.vala:165 src/View/FilesView.vala:134
+msgid "_Cancel"
+msgstr "_CANCEL"
+
+#: src/MainWindow.vala:166
+msgid "_Discard"
+msgstr "_ டிச்கார்ட்"
+
+#: src/MainWindow.vala:167 src/View/EditView.vala:39
+msgid "_Save"
+msgstr "_சேவ்"
+
+#: src/View/EditView.vala:68
+msgid "Required Fields"
+msgstr "தேவையான புலங்கள்"
+
+#: src/View/EditView.vala:69
+msgid "The following fields need to be filled to save."
+msgstr "சேமிக்க பின்வரும் புலங்கள் நிரப்பப்பட வேண்டும்."
+
+#: src/View/EditView.vala:73
+msgid "App Name"
+msgstr "பயன்பாட்டு பெயர்"
+
+#: src/View/EditView.vala:74
+msgid "Shown in the launcher or dock."
+msgstr "துவக்கி அல்லது கப்பல்துறையில் காட்டப்பட்டுள்ளது."
+
+#: src/View/EditView.vala:79
+msgid "Exec File"
+msgstr "EXEC கோப்பு"
+
+#: src/View/EditView.vala:80
+msgid ""
+"The command/app launched when you click the app entry in the launcher. "
+"Specify in an absolute path or an app's alias name."
+msgstr ""
+"துவக்கத்தில் பயன்பாட்டு உள்ளீட்டைக் சொடுக்கு செய்யும் போது கட்டளை/பயன்பாடு தொடங்கப்பட்டது. ஒரு"
+" முழுமையான பாதை அல்லது பயன்பாட்டின் மாற்றுப்பெயர் பெயரில் குறிப்பிடவும்."
+
+#: src/View/EditView.vala:83
+msgid "Select an executable file…"
+msgstr "இயங்கக்கூடிய கோப்பைத் தேர்ந்தெடுக்கவும்…"
+
+#: src/View/EditView.vala:94
+msgid "Optional Fields"
+msgstr "விருப்ப புலங்கள்"
+
+#: src/View/EditView.vala:95
+msgid "Filling these fields improves discoverability in the app launcher."
+msgstr ""
+"இந்த புலங்களை நிரப்புவது பயன்பாட்டு துவக்கத்தில் கண்டுபிடிப்பதை மேம்படுத்துகிறது."
+
+#: src/View/EditView.vala:99
+msgid "Icon File"
+msgstr "படவுரு கோப்பு"
+
+#: src/View/EditView.vala:100
+msgid ""
+"The icon branding the app. Specify in an absolute path or an icon's alias "
+"name."
+msgstr ""
+"படவுரு பயன்பாட்டை முத்திரை குத்துகிறது. ஒரு முழுமையான பாதை அல்லது ஒரு ஐகானின் "
+"மாற்றுப்பெயர் பெயரில் குறிப்பிடவும்."
+
+#: src/View/EditView.vala:103
+msgid "Select an icon file…"
+msgstr "ஒரு படவுரு கோப்பைத் தேர்ந்தெடுக்கவும்…"
+
+#: src/View/EditView.vala:111
+msgid "Generic Name"
+msgstr "பொதுவான பெயர்"
+
+#: src/View/EditView.vala:112
+msgid ""
+"Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
+msgstr ""
+"பயன்பாட்டின் பொதுவான பெயர், எடுத்துக்காட்டாக \"வலை உலாவி\" அல்லது \"அஞ்சல் கிளையண்ட்\"."
+
+#: src/View/EditView.vala:117
+msgid "Comment"
+msgstr "கருத்து"
+
+#: src/View/EditView.vala:118
+msgid ""
+"Descibes the app. May appear as a tooltip when you hover over the app entry "
+"in the launcher/dock."
+msgstr ""
+"பயன்பாட்டை விவரிக்கிறது. துவக்கி/கப்பல்துறையில் பயன்பாட்டு நுழைவுக்கு மேல் நீங்கள் "
+"வட்டமிடும்போது ஒரு உதவிக்குறிப்பாக தோன்றலாம்."
+
+#: src/View/EditView.vala:132
+msgid "Advanced Configurations"
+msgstr "மேம்பட்ட உள்ளமைவுகள்"
+
+#: src/View/EditView.vala:133
+msgid ""
+"You can create most app entries just by filling in the sections above. "
+"However, some apps may require the advanced configuration options below."
+msgstr ""
+"மேலே உள்ள பிரிவுகளை நிரப்புவதன் மூலம் பெரும்பாலான பயன்பாட்டு உள்ளீடுகளை உருவாக்கலாம். "
+"இருப்பினும், சில பயன்பாடுகளுக்கு கீழே மேம்பட்ட உள்ளமைவு விருப்பங்கள் தேவைப்படலாம்."
+
+#: src/View/EditView.vala:137
+msgid "Startup WM Class"
+msgstr "தொடக்க WM வகுப்பு"
+
+#: src/View/EditView.vala:138
+msgid ""
+"Associate the app with a window that has this ID. Use this if a different or "
+"duplicated icon appears in the dock when the app launches."
+msgstr ""
+"இந்த ஐடியைக் கொண்ட ஒரு சாளரத்துடன் பயன்பாட்டை இணைக்கவும். பயன்பாடு தொடங்கும்போது "
+"கப்பல்துறையில் வேறு அல்லது நகல் படவுரு தோன்றினால் இதைப் பயன்படுத்தவும்."
+
+#: src/View/EditView.vala:143
+msgid "Run in Terminal"
+msgstr "முனையத்தில் இயக்கவும்"
+
+#: src/View/EditView.vala:144
+msgid "Turn on if you want to register a CUI app."
+msgstr "நீங்கள் ஒரு CUI பயன்பாட்டை பதிவு செய்ய விரும்பினால் இயக்கவும்."
+
+#: src/View/EditView.vala:148
+msgid "_Open"
+msgstr "_OPEN"
+
+#: src/View/EditView.vala:152
+msgid "Open with Text Editor"
+msgstr "உரை எடிட்டருடன் திறக்கவும்"
+
+#: src/View/EditView.vala:153
+msgid "You can also edit more options by opening with a text editor."
+msgstr "உரை எடிட்டருடன் திறப்பதன் மூலம் கூடுதல் விருப்பங்களையும் திருத்தலாம்."
+
+#: src/View/EditView.vala:198
+msgid "New Entry"
+msgstr "புதிய நுழைவு"
+
+#: src/View/EditView.vala:214 src/View/EditView.vala:416
+msgid "Untitled App"
+msgstr "பெயரிடப்படாத பயன்பாடு"
+
+#: src/View/EditView.vala:234
+msgid "Select Executable File"
+msgstr "இயங்கக்கூடிய கோப்பைத் தேர்ந்தெடுக்கவும்"
+
+#: src/View/EditView.vala:235 src/View/EditView.vala:292
+msgid "_Select"
+msgstr "_ தேர்ந்தெடுக்கவும்"
+
+#: src/View/EditView.vala:288
+msgid "ICO, PNG, SVG, or XMP files"
+msgstr "ஐ.சி.ஓ, பி.என்.சி, எச்.வி.சி அல்லது எக்ச்எம்பி கோப்புகள்"
+
+#: src/View/EditView.vala:291
+msgid "Select Icon File"
+msgstr "படவுரு கோப்பைத் தேர்ந்தெடுக்கவும்"
+
+#: src/View/EditView.vala:383
+msgid "Failed to Open with External App"
+msgstr "வெளிப்புற பயன்பாட்டுடன் திறக்கத் தவறிவிட்டது"
+
+#: src/View/EditView.vala:384
+msgid "There was an error while opening the file with an external app."
+msgstr "வெளிப்புற பயன்பாட்டுடன் கோப்பைத் திறக்கும்போது பிழை ஏற்பட்டது."
+
+#: src/View/EditView.vala:441
+msgid "Edit Entry"
+msgstr "நுழைவு திருத்து"
+
+#: src/View/EditView.vala:443
+#, c-format
+msgid "Edit “%s”"
+msgstr "“%s” திருத்து"
+
+#: src/View/EditView.vala:465
+msgid "Failed to Save Entry"
+msgstr "நுழைவு சேமிப்பதில் தோல்வி"
+
+#: src/View/EditView.vala:467
+#, c-format
+msgid "Failed to Save Entry of “%s”"
+msgstr "“%s” இன் நுழைவைச் சேமிப்பதில் தோல்வி"
+
+#: src/View/EditView.vala:473
+msgid "There was an error while saving the app entry."
+msgstr "பயன்பாட்டு உள்ளீட்டைச் சேமிக்கும்போது பிழை ஏற்பட்டது."
+
+#: src/View/FilesView.vala:25
+msgid "Create a new entry"
+msgstr "புதிய நுழைவை உருவாக்கவும்"
+
+#: src/View/FilesView.vala:31
+msgid "S_ystem"
+msgstr "எச்_ச்டம்"
+
+#: src/View/FilesView.vala:32
+msgid "_Light"
+msgstr "_ விளக்கு"
+
+#: src/View/FilesView.vala:33
+msgid "_Dark"
+msgstr "_ டார்க்"
+
+#: src/View/FilesView.vala:36
+msgid "_Style"
+msgstr "_ பாணி"
+
+#: src/View/FilesView.vala:37
+msgid "_Keyboard Shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#. TRANSLATORS: %s will be replaced by the app name (Pin It!)
+#: src/View/FilesView.vala:39
+#, c-format
+msgid "_About %s"
+msgstr "_About %s"
+
+#: src/View/FilesView.vala:42
+msgid "Main Menu"
+msgstr "பட்டியல் விளையாடுங்கள்"
+
+#: src/View/FilesView.vala:57
+msgid "No Entries Found"
+msgstr "உள்ளீடுகள் எதுவும் கிடைக்கவில்லை"
+
+#: src/View/FilesView.vala:58
+msgid "Click the + button on the top to create one."
+msgstr "ஒன்றை உருவாக்க மேலே உள்ள + பொத்தானைக் சொடுக்கு செய்க."
+
+#: src/View/FilesView.vala:118
+msgid "Delete Entry?"
+msgstr "நுழைவை நீக்கவா?"
+
+#: src/View/FilesView.vala:120
+#, c-format
+msgid "Delete Entry of “%s”?"
+msgstr "“%s” இன் நுழைவை நீக்கவா?"
+
+#: src/View/FilesView.vala:124
+msgid "Delete…"
+msgstr "நீக்கு…"
+
+#: src/View/FilesView.vala:132
+msgid "This removes the app from the launcher."
+msgstr "இது துவக்கத்திலிருந்து பயன்பாட்டை நீக்குகிறது."
+
+#: src/View/FilesView.vala:135
+msgid "_Delete"
+msgstr "_Delete"
+
+#: src/View/FilesView.vala:145
+#, c-format
+msgid "Failed to Delete Entry of “%s”"
+msgstr "“%s” இன் நுழைவை நீக்கத் தவறிவிட்டது"
+
+#: src/View/FilesView.vala:146
+msgid "There was an error while removing the app entry."
+msgstr "பயன்பாட்டு உள்ளீட்டை அகற்றும்போது பிழை ஏற்பட்டது."
+
+#: src/Widget/CategoriesRow.vala:40
+msgid "Sound &amp; Video"
+msgstr "ஒலி &amp; வீடியோ"
+
+#: src/Widget/CategoriesRow.vala:41
+msgid "Audio"
+msgstr "ஆடியோ"
+
+#: src/Widget/CategoriesRow.vala:42
+msgid "Video"
+msgstr "ஒளிதோற்றம்"
+
+#: src/Widget/CategoriesRow.vala:43
+msgid "Programming"
+msgstr "நிரலாக்க"
+
+#: src/Widget/CategoriesRow.vala:44
+msgid "Education"
+msgstr "கல்வி"
+
+#: src/Widget/CategoriesRow.vala:45
+msgid "Games"
+msgstr "விளையாட்டுகள்"
+
+#: src/Widget/CategoriesRow.vala:46
+msgid "Graphics"
+msgstr "கிராபிக்ச்"
+
+#: src/Widget/CategoriesRow.vala:47
+msgid "Internet"
+msgstr "இணையம்"
+
+#: src/Widget/CategoriesRow.vala:48
+msgid "Office"
+msgstr "அலுவலகம்"
+
+#: src/Widget/CategoriesRow.vala:49
+msgid "Science"
+msgstr "அறிவியல்"
+
+#: src/Widget/CategoriesRow.vala:50
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+#: src/Widget/CategoriesRow.vala:51
+msgid "System Tools"
+msgstr "கணினி கருவிகள்"
+
+#: src/Widget/CategoriesRow.vala:52
+msgid "Accessories"
+msgstr "பாகங்கள்"
+
+#: src/Widget/CategoriesRow.vala:62
+msgid "Categories"
+msgstr "வகைகள்"
+
+#: src/Widget/CategoriesRow.vala:63
+msgid "Categories applicable to the app. (You can select more than one.)"
+msgstr ""
+"பயன்பாட்டிற்கு பொருந்தக்கூடிய வகைகள். (நீங்கள் ஒன்றுக்கு மேற்பட்டவற்றைத் தேர்ந்தெடுக்கலாம்.)"
+
+#: src/Widget/KeywordsRow.vala:29
+msgid "Keywords"
+msgstr "முக்கிய வார்த்தைகள்"
+
+#: src/Widget/KeywordsRow.vala:30
+msgid "These words can be used as search terms."
+msgstr "இந்த சொற்களை தேடல் சொற்களாகப் பயன்படுத்தலாம்."
+
+#: src/Widget/KeywordsRow.vala:35
+msgid "Add a new keyword"
+msgstr "புதிய முக்கிய சொல்லைச் சேர்க்கவும்"
+
+#: src/Widget/KeywordsRow.vala:122
+msgid "Keyword"
+msgstr "முக்கிய சொல்"
+
+#: src/Widget/KeywordsRow.vala:126
+msgid "Delete keyword"
+msgstr "முக்கிய சொல்லை நீக்கு"
