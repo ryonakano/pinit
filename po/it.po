@@ -1,7 +1,7 @@
 # Italian translations for com.github.ryonakano.pinit.
 # Copyright (C) 2021-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# albanobattistella <albano_battistella@hotmail.com>, 2021, 2022, 2023, 2024.
+# albanobattistella <albano_battistella@hotmail.com>, 2021, 2022, 2023, 2024, 2025.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-08 23:05+0900\n"
-"PO-Revision-Date: 2024-07-09 19:09+0000\n"
+"PO-Revision-Date: 2025-03-11 13:02+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -363,24 +363,20 @@ msgid "Create a new entry"
 msgstr "Crea una nuova voce"
 
 #: src/View/FilesView.vala:39
-#, fuzzy
 msgid "S_ystem"
-msgstr "Sistema"
+msgstr "S_istema"
 
 #: src/View/FilesView.vala:40
-#, fuzzy
 msgid "_Light"
-msgstr "Chiaro"
+msgstr "_Chiaro"
 
 #: src/View/FilesView.vala:41
-#, fuzzy
 msgid "_Dark"
-msgstr "Scuro"
+msgstr "_Scuro"
 
 #: src/View/FilesView.vala:44
-#, fuzzy
 msgid "_Style"
-msgstr "Stile"
+msgstr "_Stile"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
