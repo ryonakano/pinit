@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-08 23:05+0900\n"
+"POT-Creation-Date: 2025-03-16 19:27+0900\n"
 "PO-Revision-Date: 2025-03-02 06:40+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/pinit/ta/>\n"
@@ -63,27 +63,27 @@ msgstr "ஒளி பயன்முறையில் பயன்பாட்�
 msgid "App window in the dark mode"
 msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
 
-#: data/resources/gtk/help-overlay.blp:10
+#: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr "பொது"
 
-#: data/resources/gtk/help-overlay.blp:14
+#: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
-#: data/resources/gtk/help-overlay.blp:19
+#: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "வெளியேறு"
 
-#: data/resources/gtk/help-overlay.blp:24
+#: data/ui/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "தொகு"
 
-#: data/resources/gtk/help-overlay.blp:28
+#: data/ui/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "புதிய நுழைவு"

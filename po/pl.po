@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-08 23:05+0900\n"
+"POT-Creation-Date: 2025-03-16 19:27+0900\n"
 "PO-Revision-Date: 2024-05-04 15:05+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/pinit/pl/>\n"
@@ -73,27 +73,27 @@ msgstr "Widok plików w trybie światła"
 msgid "App window in the dark mode"
 msgstr "Widok plików w trybie ciemnym"
 
-#: data/resources/gtk/help-overlay.blp:10
+#: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:14
+#: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:19
+#: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:24
+#: data/ui/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:28
+#: data/ui/help-overlay.blp:28
 #, fuzzy
 msgctxt "shortcut window"
 msgid "New Entry"
