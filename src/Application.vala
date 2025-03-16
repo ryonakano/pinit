@@ -35,136 +35,6 @@ public class Application : Adw.Application {
     }
 
     /**
-     * Convert ``from_value`` to ``to_value``.
-     *
-     * @param binding       a binding
-     * @param from_value    the value of Action.state property
-     * @param to_value      the value of Adw.StyleManager.color_scheme property
-     *
-     * @return true if the transformation was successful, false otherwise
-     * @see GLib.BindingTransformFunc
-     */
-    private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
-        Variant? variant = from_value.dup_variant ();
-        if (variant == null) {
-            warning ("Failed to Variant.dup_variant");
-            return false;
-        }
-
-        var val = variant.get_string ();
-        switch (val) {
-            case Define.ColorScheme.DEFAULT:
-                to_value.set_enum (Adw.ColorScheme.DEFAULT);
-                break;
-            case Define.ColorScheme.FORCE_LIGHT:
-                to_value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
-                break;
-            case Define.ColorScheme.FORCE_DARK:
-                to_value.set_enum (Adw.ColorScheme.FORCE_DARK);
-                break;
-            default:
-                warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * Convert ``from_value`` to ``to_value``.
-     *
-     * @param binding       a binding
-     * @param from_value    the value of Adw.StyleManager.color_scheme property
-     * @param to_value      the value of Action.state property
-     *
-     * @return true if the transformation was successful, false otherwise
-     * @see GLib.BindingTransformFunc
-     */
-    private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        var val = (Adw.ColorScheme) from_value;
-        switch (val) {
-            case Adw.ColorScheme.DEFAULT:
-                to_value.set_variant (new Variant.string (Define.ColorScheme.DEFAULT));
-                break;
-            case Adw.ColorScheme.FORCE_LIGHT:
-                to_value.set_variant (new Variant.string (Define.ColorScheme.FORCE_LIGHT));
-                break;
-            case Adw.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.string (Define.ColorScheme.FORCE_DARK));
-                break;
-            default:
-                warning ("style_action_transform_from_cb: Invalid color scheme: %d", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * Convert from the "style" enum defined in the gschema to Adw.ColorScheme.
-     *
-     * @param value         the Value containing Adw.ColorScheme value
-     * @param variant       the Variant containing "style" enum value defined in the gschema
-     * @param user_data     unused (null)
-     *
-     * @return true if the conversion succeeded, false otherwise
-     * @see GLib.SettingsBindGetMappingShared
-     */
-    private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
-        var val = variant.get_string ();
-        switch (val) {
-            case Define.ColorScheme.DEFAULT:
-                value.set_enum (Adw.ColorScheme.DEFAULT);
-                break;
-            case Define.ColorScheme.FORCE_LIGHT:
-                value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
-                break;
-            case Define.ColorScheme.FORCE_DARK:
-                value.set_enum (Adw.ColorScheme.FORCE_DARK);
-                break;
-            default:
-                warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * Convert from Adw.ColorScheme to the "style" enum defined in the gschema.
-     *
-     * @param value             the Value containing Adw.ColorScheme value
-     * @param expected_type     the expected type of Variant that this method returns
-     * @param user_data         unused (null)
-     *
-     * @return a new Variant containing "style" enum value defined in the gschema
-     * @see GLib.SettingsBindSetMappingShared
-     */
-    private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
-        string color_scheme;
-
-        var val = (Adw.ColorScheme) value;
-        switch (val) {
-            case Adw.ColorScheme.DEFAULT:
-                color_scheme = Define.ColorScheme.DEFAULT;
-                break;
-            case Adw.ColorScheme.FORCE_LIGHT:
-                color_scheme = Define.ColorScheme.FORCE_LIGHT;
-                break;
-            case Adw.ColorScheme.FORCE_DARK:
-                color_scheme = Define.ColorScheme.FORCE_DARK;
-                break;
-            default:
-                warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
-                // fallback to default
-                color_scheme = Define.ColorScheme.DEFAULT;
-                break;
-        }
-
-        return new Variant.string (color_scheme);
-    }
-
-    /**
      * Make it possible to change the app style with the following action names
      * and remember that preference to {@link settings}.
      *
@@ -176,15 +46,37 @@ public class Application : Adw.Application {
             "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
         style_action.bind_property (
-            "state", style_manager, "color-scheme",
+            "state",
+            style_manager, "color-scheme",
             BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-            style_action_transform_to_cb,
-            style_action_transform_from_cb
+            (binding, state_scheme, ref adw_scheme) => {
+                Variant? state_scheme_dup = state_scheme.dup_variant ();
+                if (state_scheme_dup == null) {
+                    warning ("Failed to Variant.dup_variant");
+                    return false;
+                }
+
+                adw_scheme = Util.to_adw_scheme ((string) state_scheme_dup);
+                return true;
+            },
+            (binding, adw_scheme, ref state_scheme) => {
+                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                state_scheme = new Variant.string (str_scheme);
+                return true;
+            }
         );
         settings.bind_with_mapping (
-            "color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
-            color_scheme_get_mapping_cb,
-            color_scheme_set_mapping_cb,
+            "color-scheme",
+            style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
+            (adw_scheme, gschema_scheme, user_data) => {
+                adw_scheme = Util.to_adw_scheme ((string) gschema_scheme);
+                return true;
+            },
+            (adw_scheme, expected_type, user_data) => {
+                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                Variant gschema_scheme = new Variant.string (str_scheme);
+                return gschema_scheme;
+            },
             null, null
         );
         add_action (style_action);
