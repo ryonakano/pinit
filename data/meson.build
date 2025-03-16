@@ -85,6 +85,7 @@ asresources = gnome.compile_resources(
     'as-resources',
     gresource_file_in,
     dependencies: blueprints,
+    source_dir: 'data',
     c_name: 'as'
 )
 

@@ -15,7 +15,7 @@ if granite_dep.found()
     add_project_arguments('--define=USE_GRANITE', language: 'vala')
 endif
 
-dependencies =  [
+dependencies = [
     dependency('gee-0.8'),
     dependency('gio-unix-2.0'),
     dependency('glib-2.0', version: '>= 2.74'),
