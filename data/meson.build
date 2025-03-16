@@ -61,7 +61,7 @@ install_data(
 
 blueprints = custom_target('blueprints',
     input: files(
-        'ui/help-overlay.blp'
+        'ui/help-overlay.blp',
     ),
     output: '.',
     command: [
