@@ -59,6 +59,35 @@ install_data(
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
 
+blueprints = custom_target('blueprints',
+    input: files(
+        'ui/help-overlay.blp'
+    ),
+    output: '.',
+    command: [
+        find_program('blueprint-compiler'),
+        'batch-compile',
+        '@OUTPUT@',
+        '@CURRENT_SOURCE_DIR@',
+        '@INPUT@'
+    ]
+)
+
+gresource_conf = configuration_data()
+gresource_conf.set('APP_ID', app_id)
+gresource_file_in = configure_file(
+    input: 'pinit.gresource.xml.in',
+    output: '@0@.gresource.xml'.format(app_id),
+    configuration: gresource_conf
+)
+
+asresources = gnome.compile_resources(
+    'as-resources',
+    gresource_file_in,
+    dependencies: blueprints,
+    c_name: 'as'
+)
+
 # Test definitions
 desktop_utils = find_program('desktop-file-validate', required: false)
 if desktop_utils.found()
@@ -73,5 +102,3 @@ compile_schemas = find_program('glib-compile-schemas', required: false, disabler
 test('Validate schema file',
     compile_schemas,
     args: ['--strict', '--dry-run', meson.current_source_dir()])
-
-subdir('resources')
