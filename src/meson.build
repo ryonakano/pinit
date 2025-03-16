@@ -37,7 +37,8 @@ sources = files(
     'Widget/KeywordsRow.vala',
     'Application.vala',
     'Define.vala',
-    'MainWindow.vala'
+    'MainWindow.vala',
+    'Util.vala',
 )
 
 executable(

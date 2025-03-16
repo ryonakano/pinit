@@ -44,7 +44,7 @@ public class View.FilesView : Adw.NavigationPage {
         menu.append_submenu (_("_Style"), theme_submenu);
         menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
-        if (!Application.IS_ON_PANTHEON) {
+        if (!Util.is_on_pantheon ()) {
             ///TRANSLATORS: %s will be replaced by the app name
             menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
         }
