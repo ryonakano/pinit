@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2025-03-11 13:02+0000\n"
+"PO-Revision-Date: 2025-03-17 23:25+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/"
-">\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/>"
+"\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -71,7 +71,7 @@ msgstr "Tumedas kujunduses rakenduse aken"
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Üldised"
+msgstr "Üldised seadistused"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
@@ -381,7 +381,7 @@ msgstr "_Klaviatuuri kiirklahvid"
 #: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
-msgstr "%s'i te_ave"
+msgstr "R_akenduse teave: %s"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
