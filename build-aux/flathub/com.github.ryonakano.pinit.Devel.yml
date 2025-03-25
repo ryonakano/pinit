@@ -1,6 +1,6 @@
 id: com.github.ryonakano.pinit.Devel
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.pinit.Devel
 finish-args:
