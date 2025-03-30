@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2025-03-11 13:02+0000\n"
+"PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -70,17 +70,17 @@ msgstr "Finestra dell'app in modalità scura"
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Generale"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Scorciatoie da tastiera"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Esci"
 
 #: data/ui/help-overlay.blp:24
 #, fuzzy
@@ -102,7 +102,7 @@ msgstr "Nuova Voce"
 #. John Doe https://example.com
 #: src/Application.vala:310
 msgid "translator-credits"
-msgstr "Albano Battistella"
+msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
 #: src/MainWindow.vala:78
 #, fuzzy, c-format
@@ -380,13 +380,13 @@ msgstr "_Stile"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Scorciatoie da tastiera"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/FilesView.vala:49
-#, fuzzy, c-format
+#, c-format
 msgid "_About %s"
-msgstr "Informazioni su %s…"
+msgstr "_Informazioni su %s"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
