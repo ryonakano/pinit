@@ -34,7 +34,7 @@ You'll need the following extra dependencies to generate documentation:
 
 * valadoc
 
-Assuming that you've already built the project as written in the [README](README.md#from-source-code-(native)):
+Assuming that you've already built the project as written in the [README](README.md#from-source-code-native):
 
 ```bash
 meson configure builddir -Ddoc=true
