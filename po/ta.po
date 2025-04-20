@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2025-03-02 06:40+0000\n"
+"PO-Revision-Date: 2025-04-20 23:37+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/pinit/ta/>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -264,13 +264,15 @@ msgstr "நீங்கள் ஒரு CUI பயன்பாட்டை ப�
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "பயன்பாடுகள் பட்டியலில் மறை"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"நீங்கள் பயன்பாட்டைத் தானே தொடங்காமல், கோப்பு மேலாளர்களிடமிருந்து பயன்பாட்டுடன் கோப்புகளைத் "
+"திறக்க கோப்பு வகைகளுடன் அதை இணைக்க விரும்பும் போது பயனுள்ளதாக இருக்கும்."
 
 #: src/View/EditView.vala:155
 msgid "_Open"
@@ -344,11 +346,11 @@ msgstr "புதிய நுழைவை உருவாக்கவும்"
 
 #: src/View/FilesView.vala:39
 msgid "S_ystem"
-msgstr "எச்_ச்டம்"
+msgstr "முறைமை"
 
 #: src/View/FilesView.vala:40
 msgid "_Light"
-msgstr "_ விளக்கு"
+msgstr "விளக்கு"
 
 #: src/View/FilesView.vala:41
 msgid "_Dark"
@@ -356,7 +358,7 @@ msgstr "_ டார்க்"
 
 #: src/View/FilesView.vala:44
 msgid "_Style"
-msgstr "_ பாணி"
+msgstr "பாணி"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
@@ -366,7 +368,7 @@ msgstr "விசைப்பலகை குறுக்குவழிகள�
 #: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
-msgstr "_About %s"
+msgstr "%s பற்றி"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
