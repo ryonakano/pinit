@@ -1,14 +1,14 @@
 # Russian translations for com.github.ryonakano.pinit.
 # Copyright (C) 2021-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
+# lenemter <lenemter@gmail.com>, 2022, 2023, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2024-05-08 16:36+0000\n"
+"PO-Revision-Date: 2025-08-01 16:02+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/pinit/ru/>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -96,16 +96,16 @@ msgstr "Новая запись"
 #. John Doe https://example.com
 #: src/Application.vala:310
 msgid "translator-credits"
-msgstr "lenemter"
+msgstr "Leo \"lenemter\" <lenemter@gmail.com>"
 
 #: src/MainWindow.vala:78
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "Не удалось удалить файл «%s»"
 
 #: src/MainWindow.vala:79
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Произошла ошибка во время удаления файла."
 
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
@@ -190,7 +190,7 @@ msgstr "Дополнительные поля"
 
 #: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
+msgstr "Заполнение этих полей улучшит определение приложения."
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
@@ -205,18 +205,17 @@ msgstr ""
 "значка."
 
 #: src/View/EditView.vala:104
-#, fuzzy
 msgid "Select an icon file…"
-msgstr "Выбрать файл иконки"
+msgstr "Выбрать файл иконки…"
 
 #: src/View/EditView.vala:112
 msgid "Generic Name"
-msgstr ""
+msgstr "Общее название"
 
 #: src/View/EditView.vala:113
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
-msgstr ""
+msgstr "Общее название приложения, например «Браузер» или «Почта»."
 
 #: src/View/EditView.vala:118
 msgid "Comment"
@@ -231,7 +230,6 @@ msgstr ""
 "наведении в меню приложений или доке."
 
 #: src/View/EditView.vala:133
-#, fuzzy
 msgid "Advanced Configurations"
 msgstr "Дополнительные настройки"
 
@@ -262,32 +260,30 @@ msgid "Run in Terminal"
 msgstr "Запускать в терминале"
 
 #: src/View/EditView.vala:145
-#, fuzzy
 msgid "Turn on if you want to register a CUI app."
 msgstr "Включите, если вы хотите зарегистрировать CUI приложение."
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "Скрыть из меню приложений"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"Может быть полезным, если вы не хотите запускать приложение напрямую, но "
+"хотите чтобы оно отображалось при открытии файлов в файловых менеджерах."
 
 #: src/View/EditView.vala:155
-#, fuzzy
 msgid "_Open"
 msgstr "Открыть"
 
 #: src/View/EditView.vala:159
-#, fuzzy
 msgid "Open with Text Editor"
 msgstr "Открыть в тестовом редакторе"
 
 #: src/View/EditView.vala:160
-#, fuzzy
 msgid "You can also edit more options by opening with a text editor."
 msgstr ""
 "Вы также можете изменять и другие параметры, открыв файл в текстовом "
@@ -299,15 +295,13 @@ msgstr "Новая запись"
 
 #: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
-msgstr ""
+msgstr "Приложение без названия"
 
 #: src/View/EditView.vala:241
-#, fuzzy
 msgid "Select Executable File"
 msgstr "Выбрать исполняемый файл"
 
 #: src/View/EditView.vala:242 src/View/EditView.vala:299
-#, fuzzy
 msgid "_Select"
 msgstr "Выбрать"
 
@@ -316,41 +310,38 @@ msgid "ICO, PNG, SVG, or XMP files"
 msgstr "ICO, PNG, SVG или XMP файлы"
 
 #: src/View/EditView.vala:298
-#, fuzzy
 msgid "Select Icon File"
 msgstr "Выбрать файл иконки"
 
 #: src/View/EditView.vala:397
-#, fuzzy
 msgid "Failed to Open with External App"
-msgstr "Ошибка открытия через внешнее приложение"
+msgstr "Не удалось открыть через стороннее приложение"
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Произошла ошибка при открытии файла через стороннее приложение."
 
 #: src/View/EditView.vala:453
-#, fuzzy
 msgid "Edit Entry"
 msgstr "Редактировать запись"
 
 #: src/View/EditView.vala:455
-#, fuzzy, c-format
+#, c-format
 msgid "Edit “%s”"
 msgstr "Редактирование «%s»"
 
 #: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Не удалось сохранить запись приложения"
 
 #: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Не удалось сохранить запись «%s»"
 
 #: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Произошла ошибка при сохранении записи приложения."
 
 #: src/View/FilesView.vala:32
 msgid "Create a new entry"
@@ -374,52 +365,48 @@ msgstr "Стиль"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Сочетания клавиш"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/FilesView.vala:49
-#, fuzzy, c-format
+#, c-format
 msgid "_About %s"
-msgstr "О %s…"
+msgstr "О %s"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
 msgstr "Главное меню"
 
 #: src/View/FilesView.vala:69
-#, fuzzy
 msgid "No Entries Found"
-msgstr "Действительные записи приложений не найдены"
+msgstr "Записи приложений не найдены"
 
 #: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Нажмите на + вверху, чтобы создать новую запись."
 
 #: src/View/FilesView.vala:117
 msgid "Delete…"
 msgstr "Удалить…"
 
 #: src/View/FilesView.vala:154
-#, fuzzy
 msgid "Delete Entry?"
-msgstr "Запись удалена."
+msgstr "Удалить запись?"
 
 #: src/View/FilesView.vala:156
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Удалить запись «%s»?"
 
 #: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
 msgstr "Это удалит приложение из Меню приложений."
 
 #: src/View/FilesView.vala:165
-#, fuzzy
 msgid "_Delete"
 msgstr "Удалить"
 
 #: src/Widget/CategoriesRow.vala:63
-#, fuzzy
 msgid "Sound &amp; Video"
 msgstr "Аудио и видео"
 
@@ -433,14 +420,13 @@ msgstr "Видео"
 
 #: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
-msgstr ""
+msgstr "Программирование"
 
 #: src/Widget/CategoriesRow.vala:67
 msgid "Education"
 msgstr "Образование"
 
 #: src/Widget/CategoriesRow.vala:68
-#, fuzzy
 msgid "Games"
 msgstr "Игры"
 
@@ -450,7 +436,7 @@ msgstr "Графика"
 
 #: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
-msgstr ""
+msgstr "Интернет"
 
 #: src/Widget/CategoriesRow.vala:71
 msgid "Office"
@@ -465,18 +451,16 @@ msgid "Settings"
 msgstr "Настройки"
 
 #: src/Widget/CategoriesRow.vala:74
-#, fuzzy
 msgid "System Tools"
 msgstr "Система"
 
 #: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
-msgstr ""
+msgstr "Прочее"
 
 #: src/Widget/CategoriesRow.vala:82
-#, fuzzy
 msgid "Categories"
-msgstr "Категории приложения"
+msgstr "Категории"
 
 #: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -484,24 +468,23 @@ msgstr "Категории приложения. (Вы можете выбрат
 
 #: src/Widget/KeywordsRow.vala:32
 msgid "Keyword"
-msgstr ""
+msgstr "Ключевое слово"
 
 #: src/Widget/KeywordsRow.vala:36
-#, fuzzy
 msgid "Delete keyword"
-msgstr "Запись удалена."
+msgstr "Удалить ключевое слово"
 
 #: src/Widget/KeywordsRow.vala:57
 msgid "Keywords"
-msgstr ""
+msgstr "Ключевые слова"
 
 #: src/Widget/KeywordsRow.vala:58
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Эти слова могут использоваться для быстрого поиска приложения."
 
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Добавить новое ключевое слово"
 
 #, fuzzy
 #~| msgid "Editing the app entry in the light mode"
