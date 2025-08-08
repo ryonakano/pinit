@@ -185,7 +185,8 @@ public class MainWindow : Adw.ApplicationWindow {
             case Define.DialogResponse.DISCARD:
                 break;
             default:
-                assert_not_reached ();
+                warning ("Unexpected response from unsaved dialog: %s", unsaved_dialog_resp);
+                break;
         }
 
         unsaved_dialog.destroy ();
