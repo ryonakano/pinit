@@ -60,6 +60,19 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
+    <release version="2.2.0" date="2025-08-09" urgency="medium">
+      <description translate="no">
+        <p>
+          This release includes some performance improvements:
+        </p>
+        <ul>
+          <li>Access to the disk only when launching the app, saving the entry, and deleting it; No disk I/O when creating a new entry and switching to the entries list</li>
+          <li>Don't reload all entries when saving or deleting an entry. The app now reloads only the updated entry</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.1.1" date="2024-08-12" urgency="low">
       <description translate="no">
         <ul>
