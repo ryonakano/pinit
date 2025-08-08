@@ -60,7 +60,7 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <releases>
-    <release version="2.2.0" date="2025-08-12" urgency="medium">
+    <release version="2.2.0" date="2025-08-09" urgency="medium">
       <description translate="no">
         <p>
           This release includes some performance improvements:
