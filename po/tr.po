@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
-# Sabri Ünal <yakushabb@gmail.com>, 2024.
+# Sabri Ünal <yakushabb@gmail.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2024-05-07 17:07+0000\n"
+"PO-Revision-Date: 2025-08-30 16:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.13.1-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -270,13 +270,16 @@ msgstr "Komut satırı uygulaması kaydetmek istiyorsanız bunu işaretleyin."
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "Uygulama Menüsünde Gizle"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"Uygulamayı tek başına başlatmayacağınız, ancak dosya yöneticilerinden "
+"uygulamayla dosyaları açmak için dosya türleriyle ilişkilendirmek "
+"istediğinizde kullanışlıdır."
 
 #: src/View/EditView.vala:155
 msgid "_Open"
@@ -372,7 +375,7 @@ msgstr "_Klavye Kısayolları"
 #: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
-msgstr "%s Hakkında"
+msgstr "%s _Hakkında"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
