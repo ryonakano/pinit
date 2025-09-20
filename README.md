@@ -14,7 +14,7 @@ Other features include:
 ### From Flathub or AppCenter (Recommended)
 You can install Pin It! from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/com.github.ryonakano.pinit)
 
 You should install Pin It! from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
 
