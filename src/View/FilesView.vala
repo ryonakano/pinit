@@ -42,7 +42,7 @@ public class View.FilesView : Adw.NavigationPage {
 
         var menu = new GLib.Menu ();
         menu.append_submenu (_("_Style"), theme_submenu);
-        menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
+        menu.append (_("_Keyboard Shortcuts"), "app.shortcuts");
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Util.is_on_pantheon ()) {
             ///TRANSLATORS: %s will be replaced by the app name

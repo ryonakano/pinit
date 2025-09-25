@@ -21,7 +21,7 @@ dependencies = [
     dependency('glib-2.0', version: '>= 2.74'),
     granite_dep,
     dependency('gtk4', version: '>= 4.10'),
-    dependency('libadwaita-1', version: '>= 1.5.0'),
+    dependency('libadwaita-1', version: '>= 1.8'), # Adw.ShortcutsDialog
     dependency('pango'),
     meson.get_compiler('vala').find_library('posix'),
 ]
