@@ -4,20 +4,21 @@
 # albanobattistella <albano_battistella@hotmail.com>, 2021, 2022, 2023, 2024, 2025.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+# albanobattistella <albanobattistella@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2025-03-31 04:19+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"PO-Revision-Date: 2025-10-13 08:07+0000\n"
+"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -28,9 +29,8 @@ msgid "Desktop File Creator"
 msgstr "Creatore di File Desktop"
 
 #: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
-#, fuzzy
 msgid "Pin portable apps to the launcher"
-msgstr "Aggiungi qualsiasi app al launcher"
+msgstr "Aggiungi app portatili al launcher"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
@@ -54,10 +54,9 @@ msgstr ""
 "Modifica o elimina le voci dell'app create senza aprire il file manager"
 
 #: data/pinit.metainfo.xml.in.in:21
-#, fuzzy
 msgid "Automatically add the execute permission to the file you select"
 msgstr ""
-"Aggiunge automaticamente l'autorizzazione di esecuzione al file selezionato"
+"Aggiungi automaticamente l'autorizzazione di esecuzione al file selezionato"
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
@@ -83,13 +82,11 @@ msgid "Quit"
 msgstr "Esci"
 
 #: data/ui/help-overlay.blp:24
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr "Modifica…"
+msgstr "Modifica"
 
 #: data/ui/help-overlay.blp:28
-#, fuzzy
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Nuova Voce"
@@ -105,68 +102,66 @@ msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
 #: src/MainWindow.vala:78
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "Impossibile eliminare il file “%s”"
+msgstr "Impossibile eliminare la voce \"%s\""
 
 #: src/MainWindow.vala:79
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Si è verificato un errore durante la rimozione della voce dell'app."
 
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
-#, fuzzy
 msgid "_Close"
-msgstr "Chiudi"
+msgstr "_Chiudi"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
-msgstr ""
+msgstr "Voce eliminata."
 
 #: src/MainWindow.vala:106
 msgid "Entry updated."
-msgstr ""
+msgstr "Voce aggiornata."
 
 #: src/MainWindow.vala:129
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Impossibile caricare le voci"
 
 #: src/MainWindow.vala:130
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Si è verificato un errore durante il caricamento delle voci dell'app."
 
 #: src/MainWindow.vala:158
-#, fuzzy
 msgid "Save Changes?"
-msgstr "Modifiche salvate!"
+msgstr "Salvare le modifiche?"
 
 #: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Le voci aperte contengono modifiche non salvate. Le modifiche non salvate "
+"andranno perse definitivamente."
 
 #: src/MainWindow.vala:163 src/View/FilesView.vala:164
-#, fuzzy
 msgid "_Cancel"
-msgstr "Cancella"
+msgstr "_Annulla"
 
 #: src/MainWindow.vala:164
 msgid "_Discard"
-msgstr ""
+msgstr "_Scarta"
 
 #: src/MainWindow.vala:165 src/View/EditView.vala:40
-#, fuzzy
 msgid "_Save"
-msgstr "Salva"
+msgstr "_Salva"
 
 #: src/View/EditView.vala:69
 msgid "Required Fields"
-msgstr ""
+msgstr "Campi obbligatori"
 
 #: src/View/EditView.vala:70
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Per salvare è necessario compilare i seguenti campi."
 
 #: src/View/EditView.vala:74
 msgid "App Name"
@@ -190,17 +185,16 @@ msgstr ""
 "un'app."
 
 #: src/View/EditView.vala:84
-#, fuzzy
 msgid "Select an executable file…"
-msgstr "Seleziona un file eseguibile"
+msgstr "Seleziona un file eseguibile…"
 
 #: src/View/EditView.vala:95
 msgid "Optional Fields"
-msgstr ""
+msgstr "Campi facoltativi"
 
 #: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
+msgstr "Compilando questi campi si migliora la visibilità nell'app launcher."
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
@@ -215,18 +209,18 @@ msgstr ""
 "nome o l'alias dell'icona."
 
 #: src/View/EditView.vala:104
-#, fuzzy
 msgid "Select an icon file…"
-msgstr "Seleziona un file icona"
+msgstr "Seleziona un file icona…"
 
 #: src/View/EditView.vala:112
 msgid "Generic Name"
-msgstr ""
+msgstr "Nome generico"
 
 #: src/View/EditView.vala:113
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
 msgstr ""
+"Nome generico dell'app, ad esempio \"Browser Web\" o \"Client di posta\"."
 
 #: src/View/EditView.vala:118
 msgid "Comment"
@@ -241,9 +235,8 @@ msgstr ""
 "sopra la voce dell'app nel launcher/dock."
 
 #: src/View/EditView.vala:133
-#, fuzzy
 msgid "Advanced Configurations"
-msgstr "Configurazione avanzata"
+msgstr "Configurazioni avanzate"
 
 #: src/View/EditView.vala:134
 msgid ""
@@ -271,34 +264,34 @@ msgid "Run in Terminal"
 msgstr "Esegui nel terminale"
 
 #: src/View/EditView.vala:145
-#, fuzzy
 msgid "Turn on if you want to register a CUI app."
-msgstr "Selezionare questa opzione se si desidera registrare un'app CUI."
+msgstr "Attivare questa opzione se si desidera registrare un'app CUI."
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "Nascondi nel menu Applicazioni"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"Utile quando non si avvia l'app da sola, ma si desidera associarla a tipi di "
+"file per aprire i file con l'app dai file manager."
 
 #: src/View/EditView.vala:155
-#, fuzzy
 msgid "_Open"
-msgstr "Apri"
+msgstr "_Apri"
 
 #: src/View/EditView.vala:159
-#, fuzzy
 msgid "Open with Text Editor"
-msgstr "Apri nell'editor di testo"
+msgstr "Apri con l'editor di testo"
 
 #: src/View/EditView.vala:160
-#, fuzzy
 msgid "You can also edit more options by opening with a text editor."
-msgstr "Puoi anche modificare più opzioni aprendo un editor di testo."
+msgstr ""
+"È anche possibile modificare altre opzioni aprendo il file con un editor di "
+"testo."
 
 #: src/View/EditView.vala:205
 msgid "New Entry"
@@ -306,57 +299,54 @@ msgstr "Nuova Voce"
 
 #: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
-msgstr ""
+msgstr "App senza titolo"
 
 #: src/View/EditView.vala:241
-#, fuzzy
 msgid "Select Executable File"
-msgstr "Seleziona un file eseguibile"
+msgstr "Seleziona file eseguibile"
 
 #: src/View/EditView.vala:242 src/View/EditView.vala:299
-#, fuzzy
 msgid "_Select"
-msgstr "Seleziona"
+msgstr "_Seleziona"
 
 #: src/View/EditView.vala:295
 msgid "ICO, PNG, SVG, or XMP files"
 msgstr "File ICO, PNG, SVG o XMP"
 
 #: src/View/EditView.vala:298
-#, fuzzy
 msgid "Select Icon File"
-msgstr "Seleziona un file icona"
+msgstr "Seleziona file icona"
 
 #: src/View/EditView.vala:397
-#, fuzzy
 msgid "Failed to Open with External App"
-msgstr "Impossibile aprire con un'app esterna"
+msgstr "Impossibile aprire con app esterna"
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
 msgstr ""
+"Si è verificato un errore durante l'apertura del file con un'app esterna."
 
 #: src/View/EditView.vala:453
 msgid "Edit Entry"
 msgstr "Modifica Voce"
 
 #: src/View/EditView.vala:455
-#, fuzzy, c-format
+#, c-format
 msgid "Edit “%s”"
-msgstr "Modifica di «%s»"
+msgstr "Modifica «%s»"
 
 #: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Impossibile salvare la voce"
 
 #: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Impossibile salvare la voce \"%s\""
 
 #: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Si è verificato un errore durante il salvataggio della voce dell'app."
 
 #: src/View/FilesView.vala:32
 msgid "Create a new entry"
@@ -393,41 +383,37 @@ msgid "Main Menu"
 msgstr "Menu principale"
 
 #: src/View/FilesView.vala:69
-#, fuzzy
 msgid "No Entries Found"
-msgstr "Nessuna voce valida per l'app trovata"
+msgstr "Nessuna voce trovata"
 
 #: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Clicca sul pulsante + in alto per crearne una."
 
 #: src/View/FilesView.vala:117
 msgid "Delete…"
 msgstr "Elimina…"
 
 #: src/View/FilesView.vala:154
-#, fuzzy
 msgid "Delete Entry?"
-msgstr "Voce eliminata."
+msgstr "Eliminare la voce?"
 
 #: src/View/FilesView.vala:156
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Eliminare la voce \"%s\"?"
 
 #: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
 msgstr "Questo rimuove l'app dal launcher."
 
 #: src/View/FilesView.vala:165
-#, fuzzy
 msgid "_Delete"
-msgstr "Elimina"
+msgstr "_Elimina"
 
 #: src/Widget/CategoriesRow.vala:63
-#, fuzzy
 msgid "Sound &amp; Video"
-msgstr "Audio e video"
+msgstr "Audio &amp; Video"
 
 #: src/Widget/CategoriesRow.vala:64
 msgid "Audio"
@@ -439,14 +425,13 @@ msgstr "Video"
 
 #: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
-msgstr ""
+msgstr "Programmazione"
 
 #: src/Widget/CategoriesRow.vala:67
 msgid "Education"
 msgstr "Istruzione"
 
 #: src/Widget/CategoriesRow.vala:68
-#, fuzzy
 msgid "Games"
 msgstr "Giochi"
 
@@ -456,7 +441,7 @@ msgstr "Grafica"
 
 #: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/Widget/CategoriesRow.vala:71
 msgid "Office"
@@ -471,18 +456,16 @@ msgid "Settings"
 msgstr "Impostazioni"
 
 #: src/Widget/CategoriesRow.vala:74
-#, fuzzy
 msgid "System Tools"
-msgstr "Sistema"
+msgstr "Strumenti di sistema"
 
 #: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
-msgstr ""
+msgstr "Accessori"
 
 #: src/Widget/CategoriesRow.vala:82
-#, fuzzy
 msgid "Categories"
-msgstr "Categorie di app"
+msgstr "Categorie"
 
 #: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -490,24 +473,23 @@ msgstr "Categorie applicabili all'app. (Puoi selezionarne più di una.)"
 
 #: src/Widget/KeywordsRow.vala:32
 msgid "Keyword"
-msgstr ""
+msgstr "Parola chiave"
 
 #: src/Widget/KeywordsRow.vala:36
-#, fuzzy
 msgid "Delete keyword"
-msgstr "Voce eliminata."
+msgstr "Elimina parola chiave"
 
 #: src/Widget/KeywordsRow.vala:57
 msgid "Keywords"
-msgstr ""
+msgstr "Parole chiave"
 
 #: src/Widget/KeywordsRow.vala:58
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Queste parole possono essere utilizzate come termini di ricerca."
 
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Aggiungi una nuova parola chiave"
 
 #, fuzzy
 #~ msgid "Overview of the app in the light mode"
