@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Occitan translations for com.github.ryonakano.pinit.
+# Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Quentin PAGÈS <quentinantonin@free.fr>, 2026.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2026.
