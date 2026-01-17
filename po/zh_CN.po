@@ -1,5 +1,5 @@
 # Simplified Chinese translations for com.github.ryonakano.pinit.
-# Copyright (C) 2021-2025 Ryo Nakano
+# Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # TSc2end <lianhaoxin2012@163.com>, 2023.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2024.

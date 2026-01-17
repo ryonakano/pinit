@@ -1,5 +1,5 @@
 # Ukrainian translations for com.github.ryonakano.pinit.
-# Copyright (C) 2021-2025 Ryo Nakano
+# Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
 # Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
 # Сергій <sergiy.goncharuk.1@gmail.com>, 2024.
