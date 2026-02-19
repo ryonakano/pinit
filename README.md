@@ -45,7 +45,7 @@ You'll need the following dependencies to build:
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
 * libgtk-4-dev (>= 4.10)
-* meson (>= 0.58.0)
+* meson (>= 1.5.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:

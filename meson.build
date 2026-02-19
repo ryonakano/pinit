@@ -2,7 +2,7 @@ project(
   'com.github.ryonakano.pinit',
   'vala', 'c',
   version: '2.2.1',
-  meson_version: '>= 0.58.0',
+  meson_version: '>= 1.5.0',
 )
 
 app_name = 'Pin It!'
@@ -36,9 +36,29 @@ add_project_arguments(
   language: 'c',
 )
 
+granite_dep = dependency('granite-7', version: '>= 7.2.0', required: get_option('granite'))
+if granite_dep.found()
+  add_project_arguments('--define=USE_GRANITE', language: 'vala')
+endif
+
+dependencies = [
+  dependency('gee-0.8'),
+  dependency('gio-unix-2.0'),
+  dependency('glib-2.0', version: '>= 2.74'),
+  granite_dep,
+  dependency('gtk4', version: '>= 4.10'),
+  dependency('libadwaita-1', version: '>= 1.5.0'),
+  dependency('pango'),
+  meson.get_compiler('vala').find_library('posix'),
+]
+
 subdir('data')
 subdir('po')
 subdir('src')
+
+if get_option('doc')
+  subdir('docs')
+endif
 
 gnome.post_install(
   glib_compile_schemas: true,
