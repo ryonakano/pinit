@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Util.KeyFileUtil &ndash; com.github.ryonakano.pinit &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Util.KeyFileUtil &ndash; com.github.ryonakano.pinit Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">com.github.ryonakano.pinit</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Util.html">Util</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace">KeyFileUtil</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="constant"><a href="Util.KeyFileUtil.KEY_KEYWORDS.html">KEY_KEYWORDS</a></li>
+          <li class="delegate"><a href="Util.KeyFileUtil.GetValueFunc.html">GetValueFunc</a></li>
+          <li class="delegate"><a href="Util.KeyFileUtil.SetValueFunc.html">SetValueFunc</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.copy.html">copy</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.equals.html">equals</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.get_boolean.html">get_boolean</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.get_locale_string.html">get_locale_string</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.get_string.html">get_string</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.get_strv.html">get_strv</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.get_value.html">get_value</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.has_key.html">has_key</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.load_file.html">load_file</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.save_file.html">save_file</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.set_boolean.html">set_boolean</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.set_string.html">set_string</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.set_strv.html">set_strv</a></li>
+          <li class="method"><a href="Util.KeyFileUtil.set_value.html">set_value</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Util.KeyFileUtil</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="description">
+          <p>Definitions and wrapper methods related to KeyFile.</p>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Constants:</h3>
+        <ul class="navi_inline">
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Util.KeyFileUtil.KEY_KEYWORDS.html" class="constant">KEY_KEYWORDS</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A key under <code>g_key_file_desktop_group</code>, whose value is a 
+                list of strings giving the keywords which may be used in addition to other metadata to describe this entry.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Delegates:</h3>
+        <ul class="navi_inline">
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_type"><span class="struct">Value</span></span> <b><a href="Util.KeyFileUtil.GetValueFunc.html" class="delegate">GetValueFunc</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key) <span class="main_keyword">throws</span> <span class="main_type"><span class="errordomain">KeyFileError</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Return the value associated with <code>key</code>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="Util.KeyFileUtil.SetValueFunc.html" class="delegate">SetValueFunc</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><span class="struct">Value</span></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Associates a new value with <code>key</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Functions:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.KeyFileUtil.copy.html" class="method">copy</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> dst, <span class="main_type"><span class="class">KeyFile</span></span> src)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sync content of KeyFile between.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.KeyFileUtil.equals.html" class="method">equals</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> a, <span class="main_type"><span class="class">KeyFile</span></span> b)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if two KeyFiles have the same content.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Value</span></span> <b><a href="Util.KeyFileUtil.get_boolean.html" class="method">get_boolean</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key) <span class="main_keyword">throws</span> <span class="main_type"><span class="errordomain">KeyFileError</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Value</span></span> <b><a href="Util.KeyFileUtil.get_locale_string.html" class="method">get_locale_string</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key) <span class="main_keyword">throws</span> <span class="main_type"><span class="errordomain">KeyFileError</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Value</span></span> <b><a href="Util.KeyFileUtil.get_string.html" class="method">get_string</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key) <span class="main_keyword">throws</span> <span class="main_type"><span class="errordomain">KeyFileError</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Value</span></span> <b><a href="Util.KeyFileUtil.get_strv.html" class="method">get_strv</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key) <span class="main_keyword">throws</span> <span class="main_type"><span class="errordomain">KeyFileError</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Value</span></span>? <b><a href="Util.KeyFileUtil.get_value.html" class="method">get_value</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><a href="Util.KeyFileUtil.GetValueFunc.html" class="delegate">GetValueFunc</a></span> get_func)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Return the value associated with <code>key</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.KeyFileUtil.has_key.html" class="method">has_key</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.KeyFileUtil.load_file.html" class="method">load_file</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> path, <span class="main_type"><span class="enum">KeyFileFlags</span></span> flags)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.KeyFileUtil.save_file.html" class="method">save_file</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> path)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Util.KeyFileUtil.set_boolean.html" class="method">set_boolean</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><span class="struct">Value</span></span> val)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Util.KeyFileUtil.set_string.html" class="method">set_string</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><span class="struct">Value</span></span> val)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Util.KeyFileUtil.set_strv.html" class="method">set_strv</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><span class="struct">Value</span></span> val)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Util.KeyFileUtil.set_value.html" class="method">set_value</a></b> (<span class="main_type"><span class="class">KeyFile</span></span> keyfile, <span class="main_basic_type"><span class="class">string</span></span> key, <span class="main_type"><span class="struct">Value</span></span>? val, <span class="main_type"><a href="Util.KeyFileUtil.SetValueFunc.html" class="delegate">SetValueFunc</a></span> set_func)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Associates a new value with <code>key</code>.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://docs.vala.dev"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>
