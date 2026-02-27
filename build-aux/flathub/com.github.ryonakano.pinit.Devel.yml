@@ -10,6 +10,10 @@ finish-args:
   - --filesystem=home
   # For drawing icons
   - --device=dri
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/vala
 modules:
   - name: pinit
     buildsystem: meson
