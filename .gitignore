@@ -1,6 +1,8 @@
 # build dirs
 .flatpak-builder
 builddir*
+repo
+*.flatpak
 
 # vim
 *.swp
