@@ -8,13 +8,6 @@
  */
 namespace Define {
     /**
-     * The name of the application.
-     *
-     * Use this constant to prevent the app name from being translated.
-     */
-    public const string APP_NAME = "Pin It!";
-
-    /**
      * Response IDs used in ``Adw.AlertDialog``.
      */
     namespace DialogResponse {
