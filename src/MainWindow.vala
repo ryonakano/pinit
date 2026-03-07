@@ -38,7 +38,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         width_request = 450;
         height_request = 400;
-        title = Define.APP_NAME;
+        title = Config.APP_NAME;
 
         model = new Model.DesktopFileModel ();
         model.load_failure.connect (on_load_failure);
