@@ -1,14 +1,14 @@
 # Japanese translations for com.github.ryonakano.pinit.
 # Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024, 2025.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021-2022, 2023, 2024, 2025, 2026.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2025-03-16 15:49+0000\n"
+"PO-Revision-Date: 2026-03-22 14:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
 "\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -100,7 +100,7 @@ msgstr "新しいエントリー"
 #. John Doe https://example.com
 #: src/Application.vala:310
 msgid "translator-credits"
-msgstr "Ryo Nakano"
+msgstr "Ryo Nakano <ryonakaknock3@gmail.com>"
 
 #: src/MainWindow.vala:78
 #, c-format
