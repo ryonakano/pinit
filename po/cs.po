@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-03-13 21:09+0000\n"
+"PO-Revision-Date: 2026-03-28 14:11+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/rosp/pinit/cs/>\n"
 "Language: cs\n"
@@ -33,7 +33,7 @@ msgstr "Připnout přenosné aplikace do spouštěče"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr "Desktop;File;Create;Edit;Info;Icon;AppImage;"
+msgstr "Desktop;Soubor;Vytvořit;Upravit;Info;Ikona;AppImage;"
 
 #: data/pinit.metainfo.xml.in.in:13
 msgid ""
