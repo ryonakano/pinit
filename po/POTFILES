@@ -1,6 +1,6 @@
 data/pinit.desktop.in.in
 data/pinit.metainfo.xml.in.in
-data/ui/help-overlay.blp
+data/ui/shortcuts-dialog.blp
 src/Application.vala
 src/MainWindow.vala
 src/View/EditView.vala
