@@ -1,24 +1,22 @@
-# Simplified Chinese translations for com.github.ryonakano.pinit.
+# Occitan translations for com.github.ryonakano.pinit.
 # Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.pinit package.
-# TSc2end <lianhaoxin2012@163.com>, 2023.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2024.
-# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+# Quentin PAGÈS <quentinantonin@free.fr>, 2026.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2024-05-04 15:05+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"rosp/pinit/zh_Hans/>\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2026-02-24 10:09+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://hosted.weblate.org/projects/rosp/pinit/oc/>\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -26,12 +24,11 @@ msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Creador de fichièrs de burèu"
 
 #: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
-#, fuzzy
 msgid "Pin portable apps to the launcher"
-msgstr "这将从启动器中移除应用。"
+msgstr "Penjar las aplicacions portablas a l'aviador"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
@@ -66,7 +63,7 @@ msgstr ""
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
@@ -84,10 +81,9 @@ msgid "Edit"
 msgstr ""
 
 #: data/ui/help-overlay.blp:28
-#, fuzzy
 msgctxt "shortcut window"
 msgid "New Entry"
-msgstr "新条目"
+msgstr ""
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -100,9 +96,9 @@ msgid "translator-credits"
 msgstr ""
 
 #: src/MainWindow.vala:78
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "无法删除文件“%s”"
+msgstr ""
 
 #: src/MainWindow.vala:79
 msgid "There was an error while removing the app entry."
@@ -110,9 +106,8 @@ msgstr ""
 
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
-#, fuzzy
 msgid "_Close"
-msgstr "关闭"
+msgstr ""
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
@@ -141,18 +136,16 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:163 src/View/FilesView.vala:164
-#, fuzzy
 msgid "_Cancel"
-msgstr "取消"
+msgstr ""
 
 #: src/MainWindow.vala:164
 msgid "_Discard"
 msgstr ""
 
 #: src/MainWindow.vala:165 src/View/EditView.vala:40
-#, fuzzy
 msgid "_Save"
-msgstr "保存"
+msgstr ""
 
 #: src/View/EditView.vala:69
 msgid "Required Fields"
@@ -164,30 +157,25 @@ msgstr ""
 
 #: src/View/EditView.vala:74
 msgid "App Name"
-msgstr "应用名"
+msgstr ""
 
 #: src/View/EditView.vala:75
-#, fuzzy
-#| msgid "Shown in the launcher or Dock."
 msgid "Shown in the launcher or dock."
-msgstr "在启动器或Dock中显示。"
+msgstr ""
 
 #: src/View/EditView.vala:80
 msgid "Exec File"
-msgstr "执行文件"
+msgstr ""
 
 #: src/View/EditView.vala:81
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
-"当你点击启动器中的应用快捷方式时启动的命令/程序（填写可执行文件的绝对路径或程"
-"序别名）。"
 
 #: src/View/EditView.vala:84
-#, fuzzy
 msgid "Select an executable file…"
-msgstr "选择一个可执行文件"
+msgstr ""
 
 #: src/View/EditView.vala:95
 msgid "Optional Fields"
@@ -199,18 +187,17 @@ msgstr ""
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
-msgstr "图标文件"
+msgstr ""
 
 #: src/View/EditView.vala:101
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
-msgstr "应用的图标（填写图标文件的绝对路径或图标别名）。"
+msgstr ""
 
 #: src/View/EditView.vala:104
-#, fuzzy
 msgid "Select an icon file…"
-msgstr "选择一个图标文件"
+msgstr ""
 
 #: src/View/EditView.vala:112
 msgid "Generic Name"
@@ -223,7 +210,7 @@ msgstr ""
 
 #: src/View/EditView.vala:118
 msgid "Comment"
-msgstr "评论"
+msgstr ""
 
 #: src/View/EditView.vala:119
 msgid ""
@@ -232,43 +219,32 @@ msgid ""
 msgstr ""
 
 #: src/View/EditView.vala:133
-#, fuzzy
 msgid "Advanced Configurations"
-msgstr "高级配置"
+msgstr ""
 
 #: src/View/EditView.vala:134
-#, fuzzy
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
-"在大多数情况下，填写上面的部分足以创建应用条目。但如果还不起作用，可以添加下"
-"面的配置。"
 
 #: src/View/EditView.vala:138
 msgid "Startup WM Class"
-msgstr "WM启动类"
+msgstr ""
 
 #: src/View/EditView.vala:139
-#, fuzzy
-#| msgid ""
-#| "Associate the app with a window that has this ID. Fill in this if a "
-#| "different or duplicated icon comes up to the dock when the app launches."
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
-"将应用与具有此 ID 的窗口相关联。如果应用启动时出现不同或重复的图标，请填写此"
-"项。"
 
 #: src/View/EditView.vala:144
 msgid "Run in Terminal"
-msgstr "在终端中运行"
+msgstr ""
 
 #: src/View/EditView.vala:145
-#, fuzzy
 msgid "Turn on if you want to register a CUI app."
-msgstr "运行CUI程序时勾选此项。"
+msgstr ""
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
@@ -281,32 +257,28 @@ msgid ""
 msgstr ""
 
 #: src/View/EditView.vala:155
-#, fuzzy
 msgid "_Open"
-msgstr "打开"
+msgstr ""
 
 #: src/View/EditView.vala:159
-#, fuzzy
 msgid "Open with Text Editor"
-msgstr "在文本编辑器中打开"
+msgstr ""
 
 #: src/View/EditView.vala:160
-#, fuzzy
 msgid "You can also edit more options by opening with a text editor."
-msgstr "在文本编辑器中修改更多选项。"
+msgstr ""
 
 #: src/View/EditView.vala:205
 msgid "New Entry"
-msgstr "新条目"
+msgstr ""
 
 #: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
 msgstr ""
 
 #: src/View/EditView.vala:241
-#, fuzzy
 msgid "Select Executable File"
-msgstr "选择一个可执行文件"
+msgstr ""
 
 #: src/View/EditView.vala:242 src/View/EditView.vala:299
 msgid "_Select"
@@ -314,31 +286,28 @@ msgstr ""
 
 #: src/View/EditView.vala:295
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr "ICO、PNG、SVG 或 XMP 文件"
+msgstr ""
 
 #: src/View/EditView.vala:298
-#, fuzzy
 msgid "Select Icon File"
-msgstr "选择一个图标文件"
+msgstr ""
 
 #: src/View/EditView.vala:397
-#, fuzzy
 msgid "Failed to Open with External App"
-msgstr "无法使用外部应用打开"
+msgstr ""
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
 msgstr ""
 
 #: src/View/EditView.vala:453
-#, fuzzy
 msgid "Edit Entry"
-msgstr "编辑条目"
+msgstr ""
 
 #: src/View/EditView.vala:455
-#, fuzzy, c-format
+#, c-format
 msgid "Edit “%s”"
-msgstr "编辑“%s”"
+msgstr ""
 
 #: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
@@ -355,27 +324,23 @@ msgstr ""
 
 #: src/View/FilesView.vala:32
 msgid "Create a new entry"
-msgstr "创建一个新条目"
+msgstr ""
 
 #: src/View/FilesView.vala:39
-#, fuzzy
 msgid "S_ystem"
-msgstr "系统"
+msgstr ""
 
 #: src/View/FilesView.vala:40
-#, fuzzy
 msgid "_Light"
-msgstr "亮"
+msgstr ""
 
 #: src/View/FilesView.vala:41
-#, fuzzy
 msgid "_Dark"
-msgstr "暗"
+msgstr ""
 
 #: src/View/FilesView.vala:44
-#, fuzzy
 msgid "_Style"
-msgstr "主题"
+msgstr ""
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
@@ -383,18 +348,17 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/FilesView.vala:49
-#, fuzzy, c-format
+#, c-format
 msgid "_About %s"
-msgstr "关于%s……"
+msgstr ""
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
 msgstr ""
 
 #: src/View/FilesView.vala:69
-#, fuzzy
 msgid "No Entries Found"
-msgstr "找不到有效的应用条目"
+msgstr ""
 
 #: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
@@ -402,12 +366,11 @@ msgstr ""
 
 #: src/View/FilesView.vala:117
 msgid "Delete…"
-msgstr "删除……"
+msgstr ""
 
 #: src/View/FilesView.vala:154
-#, fuzzy
 msgid "Delete Entry?"
-msgstr "删除的条目。"
+msgstr ""
 
 #: src/View/FilesView.vala:156
 #, c-format
@@ -416,25 +379,23 @@ msgstr ""
 
 #: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
-msgstr "这将从启动器中移除应用。"
+msgstr ""
 
 #: src/View/FilesView.vala:165
-#, fuzzy
 msgid "_Delete"
-msgstr "删除"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:63
-#, fuzzy
 msgid "Sound &amp; Video"
-msgstr "影音"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:64
 msgid "Audio"
-msgstr "音乐"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:65
 msgid "Video"
-msgstr "视频"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
@@ -442,16 +403,15 @@ msgstr ""
 
 #: src/Widget/CategoriesRow.vala:67
 msgid "Education"
-msgstr "教育"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:68
-#, fuzzy
 msgid "Games"
-msgstr "游戏"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:69
 msgid "Graphics"
-msgstr "图形"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
@@ -459,29 +419,27 @@ msgstr ""
 
 #: src/Widget/CategoriesRow.vala:71
 msgid "Office"
-msgstr "办公"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:72
 msgid "Science"
-msgstr "科学"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:73
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:74
-#, fuzzy
 msgid "System Tools"
-msgstr "系统"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
 msgstr ""
 
 #: src/Widget/CategoriesRow.vala:82
-#, fuzzy
 msgid "Categories"
-msgstr "应用类别"
+msgstr ""
 
 #: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
@@ -492,9 +450,8 @@ msgid "Keyword"
 msgstr ""
 
 #: src/Widget/KeywordsRow.vala:36
-#, fuzzy
 msgid "Delete keyword"
-msgstr "删除的条目。"
+msgstr ""
 
 #: src/Widget/KeywordsRow.vala:57
 msgid "Keywords"
@@ -507,100 +464,3 @@ msgstr ""
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
 msgstr ""
-
-#~ msgid "Pin It!"
-#~ msgstr "Pin It!"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
-
-#, fuzzy
-#~ msgid "Support opening in a text editor"
-#~ msgstr "在文本编辑器中修改更多选项。"
-
-#, fuzzy
-#~| msgid "Exec File"
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "执行文件"
-
-#, c-format
-#~ msgid "Cannot open %s: %s"
-#~ msgstr "无法打开%s：%s"
-
-#~ msgid "Updated entry."
-#~ msgstr "更新的条目。"
-
-#, fuzzy
-#~| msgid ""
-#~| "Create the shortcut to your favorite portable apps into your app launcher"
-#~ msgid "Pin shortcuts for your favorite portable apps to your app launcher"
-#~ msgstr "在应用启动器中创建便携式程序快捷方式"
-
-#~ msgid "File Name"
-#~ msgstr "文件名"
-
-#, fuzzy
-#~| msgid "Name of the file where these app info is saved."
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr "保存应用信息的文件名。"
-
-#~ msgid "Suffix of the file"
-#~ msgstr "文件后缀"
-
-#, c-format
-#~ msgid "Could not write to file “%s”"
-#~ msgstr "无法写入文件“%s”"
-
-#~ msgid "Recommendations for naming"
-#~ msgstr "命名建议"
-
-#, fuzzy
-#~| msgid ""
-#~| "It is recommended to use only alphabets, numbers, and underscores, and "
-#~| "none begins with numbers."
-#~ msgid ""
-#~ "It is recommended to use only alphanumeric characters and underscores. "
-#~ "Don't begin with a number."
-#~ msgstr "建议只使用字母、数字和下划线，且不要以数字开头。"
-
-#, c-format
-#~ msgid "For example, you should use \"%s\" for the 2D game, SuperTux."
-#~ msgstr "举个例子，你应该为2D游戏- SuperTux使用“%s”。"
-
-#, c-format
-#~ msgid "For more info, see %s."
-#~ msgstr "更多信息参见%s。"
-
-#~ msgid "the file naming specification by freedesktop.org"
-#~ msgstr "文件命名规范由freedesktop.org制定"
-
-#~ msgid "Preferences"
-#~ msgstr "首选项"
-
-#~ msgid "If you've never created one, click the + button on the top."
-#~ msgstr "如果你从未进行过创建操作，请点击顶部的 + 按钮。"
-
-#, c-format
-#~ msgid "Are you sure you want to delete “%s”?"
-#~ msgstr "你确定要删除“%s”吗？"
-
-#~ msgid "Development"
-#~ msgstr "开发"
-
-#~ msgid "Network"
-#~ msgstr "网络"
-
-#~ msgid "Utility"
-#~ msgstr "公共"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "描述此应用的用途。"
-
-#~ msgid "Type of the app, multiply selectable."
-#~ msgstr "应用类型（可多选）。"
-
-#~ msgid ""
-#~ "Also, use at least one period to make sure to be separated into at least "
-#~ "two elements."
-#~ msgstr "同时，至少要使用一个句号，以确保最少分成两个元素。"

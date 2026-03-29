@@ -14,7 +14,7 @@ Other features include:
 ### From Flathub or AppCenter (Recommended)
 You can install Pin It! from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.pinit)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/com.github.ryonakano.pinit)
 
 You should install Pin It! from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
 
@@ -45,7 +45,7 @@ You'll need the following dependencies to build:
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
 * libgtk-4-dev (>= 4.10)
-* meson (>= 0.58.0)
+* meson (>= 1.5.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:

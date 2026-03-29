@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2021-2025 Ryo Nakano -->
+<!-- Copyright 2021-2026 Ryo Nakano -->
 <component type="desktop-application">
   <id>@APP_ID@</id>
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name translate="no">Pin It!</name>
+  <name translate="no">@APP_NAME@</name>
   <summary>Pin portable apps to the launcher</summary>
   <description>
     <p>
@@ -25,12 +25,12 @@
   <screenshots>
     <screenshot type="default">
       <caption>App window in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/@VERSION@/data/screenshots/@DE@/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/@APP_REVISION@/data/screenshots/@DE@/screenshot-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>App window in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/pinit/@VERSION@/data/screenshots/@DE@/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/pinit/@APP_REVISION@/data/screenshots/@DE@/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -59,7 +59,21 @@
   <url type="vcs-browser">https://github.com/ryonakano/pinit</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
+  <!--
+    We intentionally don't support translation for the descriptions in release notes
+    because only a few past release notes would be often shown in the app store
+    even if translators translated all of them, which is not worthy.
+  -->
   <releases>
+    <release version="2.2.1" date="2026-02-06" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Flatpak: Update GNOME runtime to 49</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.2.0" date="2025-08-09" urgency="medium">
       <description translate="no">
         <p>

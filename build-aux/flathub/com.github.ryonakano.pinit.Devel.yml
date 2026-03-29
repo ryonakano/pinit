@@ -1,6 +1,6 @@
 id: com.github.ryonakano.pinit.Devel
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.pinit.Devel
 finish-args:
@@ -10,20 +10,11 @@ finish-args:
   - --filesystem=home
   # For drawing icons
   - --device=dri
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/vala
 modules:
-  - name: blueprint-compiler
-    buildsystem: meson
-    cleanup:
-      - '*'
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/blueprint-compiler.git
-        tag: 0.18.0
-        commit: 07c9c9df9cd1b6b4454ecba21ee58211e9144a4b
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
-
   - name: pinit
     buildsystem: meson
     config-opts:

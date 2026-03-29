@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 /**
@@ -38,7 +38,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         width_request = 450;
         height_request = 400;
-        title = Define.APP_NAME;
+        title = Config.APP_NAME;
 
         model = new Model.DesktopFileModel ();
         model.load_failure.connect (on_load_failure);

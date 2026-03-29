@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class View.FilesView : Adw.NavigationPage {
@@ -22,7 +22,7 @@ public class View.FilesView : Adw.NavigationPage {
         toolbar_view.add_top_bar (headerbar);
         toolbar_view.set_content (content);
 
-        title = Define.APP_NAME;
+        title = Config.APP_NAME;
         child = toolbar_view;
         width_request = 350;
     }
@@ -46,7 +46,7 @@ public class View.FilesView : Adw.NavigationPage {
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Util.is_on_pantheon ()) {
             ///TRANSLATORS: %s will be replaced by the app name
-            menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
+            menu.append (_("_About %s").printf (Config.APP_NAME), "app.about");
         }
 
         var menu_button = new Gtk.MenuButton () {

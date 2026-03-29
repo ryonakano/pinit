@@ -1,19 +1,12 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 /**
  * Defines constants used in the project widely.
  */
 namespace Define {
-    /**
-     * The name of the application.
-     *
-     * Use this constant to prevent the app name from being translated.
-     */
-    public const string APP_NAME = "Pin It!";
-
     /**
      * Response IDs used in ``Adw.AlertDialog``.
      */
