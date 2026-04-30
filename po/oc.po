@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-02-24 10:09+0000\n"
+"PO-Revision-Date: 2026-05-01 19:09+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://hosted.weblate.org/projects/rosp/pinit/oc/>\n"
 "Language: oc\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -68,12 +68,12 @@ msgstr "General"
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Acorchis clavièr"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Quitar"
 
 #: data/ui/help-overlay.blp:24
 msgctxt "shortcut window"
@@ -93,7 +93,7 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:310
 msgid "translator-credits"
-msgstr ""
+msgstr "Quentin PAGÈS"
 
 #: src/MainWindow.vala:78
 #, c-format
@@ -107,7 +107,7 @@ msgstr ""
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
-msgstr ""
+msgstr "_Tampar"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
@@ -328,33 +328,33 @@ msgstr ""
 
 #: src/View/FilesView.vala:39
 msgid "S_ystem"
-msgstr ""
+msgstr "S_istèma"
 
 #: src/View/FilesView.vala:40
 msgid "_Light"
-msgstr ""
+msgstr "_Clar"
 
 #: src/View/FilesView.vala:41
 msgid "_Dark"
-msgstr ""
+msgstr "_Fosc"
 
 #: src/View/FilesView.vala:44
 msgid "_Style"
-msgstr ""
+msgstr "_Estile"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Acorchis clavièr"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "_A prepaus de %s"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú principal"
 
 #: src/View/FilesView.vala:69
 msgid "No Entries Found"
