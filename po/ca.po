@@ -481,32 +481,3 @@ msgstr ""
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
 msgstr ""
-
-#~ msgid "Pin It!"
-#~ msgstr "Pin It!"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
-
-#, fuzzy
-#~| msgid "Exec File"
-#~ msgctxt "shortcut window"
-#~ msgid "New File"
-#~ msgstr "Fitxer executable"
-
-#~ msgid "File Name"
-#~ msgstr "Nom del fitxer"
-
-#, fuzzy
-#~| msgid "Name of the file where these app info is saved."
-#~ msgid "Name of the .desktop file, where this app's info will be saved."
-#~ msgstr "Nom del fitxer on es desa aquesta informació de l'aplicació."
-
-#~ msgid "Suffix of the file"
-#~ msgstr "Sufix del fitxer"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferències"
-
-#~ msgid "A tooltip text to describe what the app helps you to do."
-#~ msgstr "Una descripció sobre què ajuda a fer l'aplicació."
