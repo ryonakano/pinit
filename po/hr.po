@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-05-10 20:10+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2026-05-11 10:55+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/pinit/hr/>"
 "\n"
 "Language: hr\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
-msgstr ""
+msgstr "Ostale funkcije uključuju:"
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
@@ -56,26 +56,26 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Prozor aplikacije u svijetlom modusu"
 
 #: data/pinit.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Prozor aplikacije u tamnom modusu"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Opće"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Tipkovni prečaci"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Zatvori aplikaciju"
 
 #: data/ui/help-overlay.blp:24
 msgctxt "shortcut window"
@@ -95,7 +95,7 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:310
 msgid "translator-credits"
-msgstr ""
+msgstr "Milo Ivir <mail@milotype.de>"
 
 #: src/MainWindow.vala:78
 #, c-format
@@ -109,7 +109,7 @@ msgstr ""
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
-msgstr ""
+msgstr "_Zatvori"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
@@ -330,33 +330,33 @@ msgstr ""
 
 #: src/View/FilesView.vala:39
 msgid "S_ystem"
-msgstr ""
+msgstr "S_ustav"
 
 #: src/View/FilesView.vala:40
 msgid "_Light"
-msgstr ""
+msgstr "S_vijetla"
 
 #: src/View/FilesView.vala:41
 msgid "_Dark"
-msgstr ""
+msgstr "_Tamna"
 
 #: src/View/FilesView.vala:44
 msgid "_Style"
-msgstr ""
+msgstr "_Stil"
 
 #: src/View/FilesView.vala:45
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tipkovni prečaci"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/FilesView.vala:49
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "_O aplikaciji %s"
 
 #: src/View/FilesView.vala:53
 msgid "Main Menu"
-msgstr ""
+msgstr "Glavni izbornik"
 
 #: src/View/FilesView.vala:69
 msgid "No Entries Found"
