@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-05-11 10:55+0000\n"
+"PO-Revision-Date: 2026-05-12 12:11+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/pinit/hr/>"
 "\n"
@@ -26,21 +26,23 @@ msgstr "@APP_NAME@"
 
 #: data/pinit.desktop.in.in:4
 msgid "Desktop File Creator"
-msgstr ""
+msgstr "Kreator datoteka za desktop"
 
 #: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
-msgstr ""
+msgstr "Prikvači prijenosne aplikacije na pokretač"
 
 #: data/pinit.desktop.in.in:11
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
+msgstr "Desktop;Datoteka;Stvori;Uredi;Informacije;Ikona;AppImage;"
 
 #: data/pinit.metainfo.xml.in.in:13
 msgid ""
 "Pin shortcuts for portable apps like raw executable files, AppImage files, "
 "etc. to the app launcher on your desktop."
 msgstr ""
+"Prikvači prečace za prijenosne aplikacije poput neobrađenih izvršnih "
+"datoteka, AppImage datoteka itd. u pokretač aplikacija na svom desktopu."
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
@@ -49,10 +51,12 @@ msgstr "Ostale funkcije uključuju:"
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
 msgstr ""
+"Uredi ili izbriši stvorene unose u aplikaciji bez otvaranja upravljača "
+"datoteka"
 
 #: data/pinit.metainfo.xml.in.in:21
 msgid "Automatically add the execute permission to the file you select"
-msgstr ""
+msgstr "Automatski dodaj dozvolu za izvršavanje odabranoj datoteci"
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
@@ -80,12 +84,12 @@ msgstr "Zatvori aplikaciju"
 #: data/ui/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Edit"
-msgstr ""
+msgstr "Uredi"
 
 #: data/ui/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
-msgstr ""
+msgstr "Novi unos"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -100,11 +104,11 @@ msgstr "Milo Ivir <mail@milotype.de>"
 #: src/MainWindow.vala:78
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr ""
+msgstr "Neuspjelo brisanje unosa od „%s”"
 
 #: src/MainWindow.vala:79
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Dogodila se greška prilikom uklanjanja unosa u aplikaciji."
 
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
@@ -113,220 +117,236 @@ msgstr "_Zatvori"
 
 #: src/MainWindow.vala:93
 msgid "Entry deleted."
-msgstr ""
+msgstr "Unos izbrisan."
 
 #: src/MainWindow.vala:106
 msgid "Entry updated."
-msgstr ""
+msgstr "Unos aktualiziran."
 
 #: src/MainWindow.vala:129
 msgid "Failed to Load Entries"
-msgstr ""
+msgstr "Neuspjelo učitavanje unosa"
 
 #: src/MainWindow.vala:130
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Dogodila se greška prilikom učitavanja unosa u aplikaciji."
 
 #: src/MainWindow.vala:158
 msgid "Save Changes?"
-msgstr ""
+msgstr "Spremiti promjene?"
 
 #: src/MainWindow.vala:159
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Otvoreni unosi sadrže nespremljene promjene. Promjene koje se ne spreme će "
+"se zauvijek izgubiti."
 
 #: src/MainWindow.vala:163 src/View/FilesView.vala:164
 msgid "_Cancel"
-msgstr ""
+msgstr "Od_ustani"
 
 #: src/MainWindow.vala:164
 msgid "_Discard"
-msgstr ""
+msgstr "Od_baci"
 
 #: src/MainWindow.vala:165 src/View/EditView.vala:40
 msgid "_Save"
-msgstr ""
+msgstr "_Spremi"
 
 #: src/View/EditView.vala:69
 msgid "Required Fields"
-msgstr ""
+msgstr "Obavezna polja"
 
 #: src/View/EditView.vala:70
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Za spremanje se sljedeća polja moraju ispuniti."
 
 #: src/View/EditView.vala:74
 msgid "App Name"
-msgstr ""
+msgstr "Ime aplikacije"
 
 #: src/View/EditView.vala:75
 msgid "Shown in the launcher or dock."
-msgstr ""
+msgstr "Prikazuje se u pokretaču ili docku."
 
 #: src/View/EditView.vala:80
 msgid "Exec File"
-msgstr ""
+msgstr "Izvršna datoteka"
 
 #: src/View/EditView.vala:81
 msgid ""
 "The command/app launched when you click the app entry in the launcher. "
 "Specify in an absolute path or an app's alias name."
 msgstr ""
+"Naredba/aplikacija se pokreće kad klikneš na unos aplikacije u pokretaču. "
+"Navedi apsolutnu stazu ili ime aliasa aplikacije."
 
 #: src/View/EditView.vala:84
 msgid "Select an executable file…"
-msgstr ""
+msgstr "Odaberi jednu izvršnu datoteku …"
 
 #: src/View/EditView.vala:95
 msgid "Optional Fields"
-msgstr ""
+msgstr "Opcionalna polja"
 
 #: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
+msgstr "Popunjavanje ovih polja poboljšava otkrivanje u pokretaču aplikacija."
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
-msgstr ""
+msgstr "Datoteka ikone"
 
 #: src/View/EditView.vala:101
 msgid ""
 "The icon branding the app. Specify in an absolute path or an icon's alias "
 "name."
 msgstr ""
+"Ikona aplikacije koja služi kao brend. Navedi apsolutnu stazu ili ime aliasa "
+"ikone."
 
 #: src/View/EditView.vala:104
 msgid "Select an icon file…"
-msgstr ""
+msgstr "Odaberi jednu datoteku ikone …"
 
 #: src/View/EditView.vala:112
 msgid "Generic Name"
-msgstr ""
+msgstr "Generičko ime"
 
 #: src/View/EditView.vala:113
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
-msgstr ""
+msgstr "Generičko ime aplikacije, na primjer „Web Browser” ili „Mail Client”."
 
 #: src/View/EditView.vala:118
 msgid "Comment"
-msgstr ""
+msgstr "Komentar"
 
 #: src/View/EditView.vala:119
 msgid ""
 "Descibes the app. May appear as a tooltip when you hover over the app entry "
 "in the launcher/dock."
 msgstr ""
+"Opisuje aplikaciju. Možda će se pojaviti kao savjetni oblačić kada pređe "
+"mišem preko unosa aplikacije u pokretaču/docku."
 
 #: src/View/EditView.vala:133
 msgid "Advanced Configurations"
-msgstr ""
+msgstr "Napredne konfiguracije"
 
 #: src/View/EditView.vala:134
 msgid ""
 "You can create most app entries just by filling in the sections above. "
 "However, some apps may require the advanced configuration options below."
 msgstr ""
+"Većinu unosa u aplikaciji možeš stvoriti jednostavnim ispunjavanjem gornjih "
+"odjeljaka. Međutim, neke aplikacije mogu zahtijevati napredne "
+"konfiguracijske opcije u nastavku."
 
 #: src/View/EditView.vala:138
 msgid "Startup WM Class"
-msgstr ""
+msgstr "Pokretanje WM klasa"
 
 #: src/View/EditView.vala:139
 msgid ""
 "Associate the app with a window that has this ID. Use this if a different or "
 "duplicated icon appears in the dock when the app launches."
 msgstr ""
+"Poveži aplikaciju s prozorom koji ima ovaj ID. Koristi to ako se u docku pri "
+"pokretanju aplikacije pojavi drugačija ili dupla ikona."
 
 #: src/View/EditView.vala:144
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Pokreni u terminalu"
 
 #: src/View/EditView.vala:145
 msgid "Turn on if you want to register a CUI app."
-msgstr ""
+msgstr "Uključi ako želiš registrirati CUI aplikaciju."
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
-msgstr ""
+msgstr "Sakrij u izborniku aplikacija"
 
 #: src/View/EditView.vala:151
 msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"Korisno je kada se aplikacija neće pokrenuti samostalno, ali je želiš "
+"povezati s vrstama datoteka za otvaranje datoteka s aplikacijom iz "
+"upravljača datoteka."
 
 #: src/View/EditView.vala:155
 msgid "_Open"
-msgstr ""
+msgstr "_Otvori"
 
 #: src/View/EditView.vala:159
 msgid "Open with Text Editor"
-msgstr ""
+msgstr "Otvori s uređivačem teksta"
 
 #: src/View/EditView.vala:160
 msgid "You can also edit more options by opening with a text editor."
-msgstr ""
+msgstr "Također može urediti više opcija otvaranjem s tekstualnim uređivačem."
 
 #: src/View/EditView.vala:205
 msgid "New Entry"
-msgstr ""
+msgstr "Novi unos"
 
 #: src/View/EditView.vala:221 src/View/EditView.vala:429
 msgid "Untitled App"
-msgstr ""
+msgstr "Neimenovana aplikacija"
 
 #: src/View/EditView.vala:241
 msgid "Select Executable File"
-msgstr ""
+msgstr "Odaberi izvršnu datoteku"
 
 #: src/View/EditView.vala:242 src/View/EditView.vala:299
 msgid "_Select"
-msgstr ""
+msgstr "O_daberi"
 
 #: src/View/EditView.vala:295
 msgid "ICO, PNG, SVG, or XMP files"
-msgstr ""
+msgstr "ICO, PNG, SVG ili XMP datoteke"
 
 #: src/View/EditView.vala:298
 msgid "Select Icon File"
-msgstr ""
+msgstr "Odaberi datoteku ikone"
 
 #: src/View/EditView.vala:397
 msgid "Failed to Open with External App"
-msgstr ""
+msgstr "Neuspjelo otvaranje s eksternom aplikacijom"
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Dogodila se greška prilikom otvaranja datoteke s eksternom aplikacijom."
 
 #: src/View/EditView.vala:453
 msgid "Edit Entry"
-msgstr ""
+msgstr "Uredi unos"
 
 #: src/View/EditView.vala:455
 #, c-format
 msgid "Edit “%s”"
-msgstr ""
+msgstr "Uredi „%s”"
 
 #: src/View/EditView.vala:471
 msgid "Failed to Save Entry"
-msgstr ""
+msgstr "Neuspjelo spremanje unosa"
 
 #: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Neuspjelo spremanje unosa od „%s”"
 
 #: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Dogodila se greška prilikom spremanja unosa u aplikaciji."
 
 #: src/View/FilesView.vala:32
 msgid "Create a new entry"
-msgstr ""
+msgstr "Stvori novi unos"
 
 #: src/View/FilesView.vala:39
 msgid "S_ystem"
@@ -360,109 +380,110 @@ msgstr "Glavni izbornik"
 
 #: src/View/FilesView.vala:69
 msgid "No Entries Found"
-msgstr ""
+msgstr "Nije pronađen nijedan unos"
 
 #: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Za stvaranje klikni na + gumb na vrhu."
 
 #: src/View/FilesView.vala:117
 msgid "Delete…"
-msgstr ""
+msgstr "Izbriši …"
 
 #: src/View/FilesView.vala:154
 msgid "Delete Entry?"
-msgstr ""
+msgstr "Izbrisati unos?"
 
 #: src/View/FilesView.vala:156
 #, c-format
 msgid "Delete Entry of “%s”?"
-msgstr ""
+msgstr "Izbrisati unos „%s”?"
 
 #: src/View/FilesView.vala:161
 msgid "This removes the app from the launcher."
-msgstr ""
+msgstr "Ovime se aplikacija uklanja iz pokretača."
 
 #: src/View/FilesView.vala:165
 msgid "_Delete"
-msgstr ""
+msgstr "_Izbriši"
 
 #: src/Widget/CategoriesRow.vala:63
 msgid "Sound &amp; Video"
-msgstr ""
+msgstr "Zvuk i video"
 
 #: src/Widget/CategoriesRow.vala:64
 msgid "Audio"
-msgstr ""
+msgstr "Audiosnimke"
 
 #: src/Widget/CategoriesRow.vala:65
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: src/Widget/CategoriesRow.vala:66
 msgid "Programming"
-msgstr ""
+msgstr "Programiranje"
 
 #: src/Widget/CategoriesRow.vala:67
 msgid "Education"
-msgstr ""
+msgstr "Obrazovanje"
 
 #: src/Widget/CategoriesRow.vala:68
 msgid "Games"
-msgstr ""
+msgstr "Igre"
 
 #: src/Widget/CategoriesRow.vala:69
 msgid "Graphics"
-msgstr ""
+msgstr "Slike"
 
 #: src/Widget/CategoriesRow.vala:70
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/Widget/CategoriesRow.vala:71
 msgid "Office"
-msgstr ""
+msgstr "Ured"
 
 #: src/Widget/CategoriesRow.vala:72
 msgid "Science"
-msgstr ""
+msgstr "Znanost"
 
 #: src/Widget/CategoriesRow.vala:73
 msgid "Settings"
-msgstr ""
+msgstr "Postavke"
 
 #: src/Widget/CategoriesRow.vala:74
 msgid "System Tools"
-msgstr ""
+msgstr "Alati sustava"
 
 #: src/Widget/CategoriesRow.vala:75
 msgid "Accessories"
-msgstr ""
+msgstr "Pomagala"
 
 #: src/Widget/CategoriesRow.vala:82
 msgid "Categories"
-msgstr ""
+msgstr "Kategorije"
 
 #: src/Widget/CategoriesRow.vala:83
 msgid "Categories applicable to the app. (You can select more than one.)"
 msgstr ""
+"Kategorije koje su primjenjive na aplikaciju. (Možeš odabrati više od jedne.)"
 
 #: src/Widget/KeywordsRow.vala:32
 msgid "Keyword"
-msgstr ""
+msgstr "Ključna riječ"
 
 #: src/Widget/KeywordsRow.vala:36
 msgid "Delete keyword"
-msgstr ""
+msgstr "Izbriši ključnu riječ"
 
 #: src/Widget/KeywordsRow.vala:57
 msgid "Keywords"
-msgstr ""
+msgstr "Ključne riječi"
 
 #: src/Widget/KeywordsRow.vala:58
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Te se riječi mogu koristiti kao pojmovi za pretraživanje."
 
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
-msgstr ""
+msgstr "Dodaj novu ključnu riječ"
