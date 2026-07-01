@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-03-28 14:11+0000\n"
+"PO-Revision-Date: 2026-07-01 13:06+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/rosp/pinit/cs/>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -55,21 +55,16 @@ msgstr ""
 "souborů"
 
 #: data/pinit.metainfo.xml.in.in:21
-#, fuzzy
 msgid "Automatically add the execute permission to the file you select"
-msgstr "Automaticky přidejte oprávnění ke spuštění do souboru, který vyberete"
+msgstr "Automaticky přidat oprávnění ke spuštění pro soubor, který vyberete"
 
 #: data/pinit.metainfo.xml.in.in:27
-#, fuzzy
-#| msgid "Files view in the light mode"
 msgid "App window in the light mode"
-msgstr "Zobrazení souborů ve světlém režimu"
+msgstr "Okno aplikace ve světlém režimu"
 
 #: data/pinit.metainfo.xml.in.in:32
-#, fuzzy
-#| msgid "Files view in the dark mode"
 msgid "App window in the dark mode"
-msgstr "Zobrazení souborů v tmavém režimu"
+msgstr "Okno aplikace v tmavém režimu"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -107,13 +102,13 @@ msgid "translator-credits"
 msgstr "Amerey.eu"
 
 #: src/MainWindow.vala:78
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Delete Entry of “%s”"
-msgstr "Nelze smazat soubor „%s“"
+msgstr "Nepodařilo se smazat položku „%s“"
 
 #: src/MainWindow.vala:79
 msgid "There was an error while removing the app entry."
-msgstr ""
+msgstr "Při odebírání položky aplikace došlo k chybě."
 
 #: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
@@ -134,7 +129,7 @@ msgstr "Nepodařilo se načíst položky"
 
 #: src/MainWindow.vala:130
 msgid "There was an error while loading app entries."
-msgstr ""
+msgstr "Při načítání položek aplikací došlo k chybě."
 
 #: src/MainWindow.vala:158
 msgid "Save Changes?"
@@ -145,6 +140,8 @@ msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
 msgstr ""
+"Otevřené položky obsahují neuložené změny. Pokud nebudou uloženy, budou "
+"nevratně ztraceny."
 
 #: src/MainWindow.vala:163 src/View/FilesView.vala:164
 msgid "_Cancel"
@@ -164,7 +161,7 @@ msgstr "Vyžadované kolonky"
 
 #: src/View/EditView.vala:70
 msgid "The following fields need to be filled to save."
-msgstr ""
+msgstr "Aby bylo možné uložit je třeba, aby byly vyplněné následující kolonky."
 
 #: src/View/EditView.vala:74
 msgid "App Name"
@@ -196,7 +193,7 @@ msgstr "Volitelné kolonky"
 
 #: src/View/EditView.vala:96
 msgid "Filling these fields improves discoverability in the app launcher."
-msgstr ""
+msgstr "Vyplnění těchto kolonek zlepší objevitelnost ve spouštěči aplikací."
 
 #: src/View/EditView.vala:100
 msgid "Icon File"
@@ -220,6 +217,7 @@ msgstr "Obecný název"
 msgid ""
 "Generic name of the app, for example \"Web Browser\" or \"Mail Client\"."
 msgstr ""
+"Obecný název aplikace – např. „Webový prohlížeč“ nebo „E-mailový klient“."
 
 #: src/View/EditView.vala:118
 msgid "Comment"
@@ -262,9 +260,8 @@ msgid "Run in Terminal"
 msgstr "Spustit v Terminálu"
 
 #: src/View/EditView.vala:145
-#, fuzzy
 msgid "Turn on if you want to register a CUI app."
-msgstr "Zaškrtněte, pokud chcete zaregistrovat aplikaci CUI."
+msgstr "Zapněte, pokud chcete zaregistrovat CUI aplikaci."
 
 #: src/View/EditView.vala:150
 msgid "Hide in Applications Menu"
@@ -275,6 +272,8 @@ msgid ""
 "Useful when you won't launch the app by itself, but want to associate it "
 "with filetypes to open files with the app from file managers."
 msgstr ""
+"Užitečné pokud aplikaci nebudete spouštět vy, ale chcete ji přiřadit k typům "
+"souborů pro jejich otevření aplikací ze správců souborů."
 
 #: src/View/EditView.vala:155
 msgid "_Open"
@@ -285,9 +284,8 @@ msgid "Open with Text Editor"
 msgstr "Otevřít v textovém editoru"
 
 #: src/View/EditView.vala:160
-#, fuzzy
 msgid "You can also edit more options by opening with a text editor."
-msgstr "Další možnosti můžete upravit otevřením v textovém editoru."
+msgstr "Další předvolby můžete upravit otevřením v textovém editoru."
 
 #: src/View/EditView.vala:205
 msgid "New Entry"
@@ -314,13 +312,12 @@ msgid "Select Icon File"
 msgstr "Vybrat soubor ikony"
 
 #: src/View/EditView.vala:397
-#, fuzzy
 msgid "Failed to Open with External App"
-msgstr "Nelze otevřít pomocí externí aplikace"
+msgstr "Nepodařilo se otevřít pomocí externí aplikace"
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
-msgstr ""
+msgstr "Při otevírání souboru externí aplikací došlo k chybě."
 
 #: src/View/EditView.vala:453
 msgid "Edit Entry"
@@ -338,11 +335,11 @@ msgstr "Položku se nepodařilo uložit"
 #: src/View/EditView.vala:474
 #, c-format
 msgid "Failed to Save Entry of “%s”"
-msgstr ""
+msgstr "Nepodařilo se uložit položku „%s“"
 
 #: src/View/EditView.vala:479
 msgid "There was an error while saving the app entry."
-msgstr ""
+msgstr "Při ukládání položky aplikace došlo k chybě."
 
 #: src/View/FilesView.vala:32
 msgid "Create a new entry"
@@ -384,7 +381,7 @@ msgstr "Nenalezeny žádné položky"
 
 #: src/View/FilesView.vala:70
 msgid "Click the + button on the top to create one."
-msgstr ""
+msgstr "Pro vytvoření nějaké klikněte na tlačítku +."
 
 #: src/View/FilesView.vala:117
 msgid "Delete…"
@@ -481,7 +478,7 @@ msgstr "Klíčová slova"
 
 #: src/Widget/KeywordsRow.vala:58
 msgid "These words can be used as search terms."
-msgstr ""
+msgstr "Tato slova je možné použít jako pojmy při vyhledávání."
 
 #: src/Widget/KeywordsRow.vala:63
 msgid "Add a new keyword"
