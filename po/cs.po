@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:27+0900\n"
-"PO-Revision-Date: 2026-07-01 13:06+0000\n"
+"PO-Revision-Date: 2026-07-04 20:01+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/rosp/pinit/cs/>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: data/pinit.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: data/pinit.metainfo.xml.in.in:16
 msgid "Other features include:"
-msgstr "Mezi další funkce patří:"
+msgstr "Mezi ostatní funkce patří:"
 
 #: data/pinit.metainfo.xml.in.in:20
 msgid "Edit or delete created app entries without opening the file manager"
@@ -60,11 +60,11 @@ msgstr "Automaticky přidat oprávnění ke spuštění pro soubor, který vyber
 
 #: data/pinit.metainfo.xml.in.in:27
 msgid "App window in the light mode"
-msgstr "Okno aplikace ve světlém režimu"
+msgstr "Okno aplikace ve světlém zobrazení"
 
 #: data/pinit.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr "Okno aplikace v tmavém režimu"
+msgstr "Okno aplikace v tmavém zobrazení"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
