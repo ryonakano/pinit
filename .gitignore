@@ -1,13 +1,7 @@
 # build dirs
 .flatpak-builder
 builddir*
-repo
-*.flatpak
-
-# vim
-*.swp
-*~
-*.un~
 
 # subprojects
-subprojects/blueprint-compiler
+subprojects/*
+!subprojects/*.wrap
