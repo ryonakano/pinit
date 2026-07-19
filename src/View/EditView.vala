@@ -171,8 +171,8 @@ public class View.EditView : Adw.NavigationPage {
 
         var clamp = new Adw.Clamp () {
             child = content,
-            maximum_size = 500,
-            tightening_threshold = 400,
+            maximum_size = 1000,
+            tightening_threshold = 800,
             unit = Adw.LengthUnit.SP,
             margin_top = 32,
             margin_bottom = 32,
