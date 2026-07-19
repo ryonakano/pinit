@@ -24,7 +24,7 @@ public class View.FilesView : Adw.NavigationPage {
 
         title = Config.APP_NAME;
         child = toolbar_view;
-        width_request = 350;
+        width_request = 300;
     }
 
     private Gtk.Widget setup_headerbar () {

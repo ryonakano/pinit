@@ -45,7 +45,15 @@
   <supports>
     <control>pointing</control>
     <control>keyboard</control>
+    <control>touch</control>
   </supports>
+
+  <requires>
+    <!-- taken from width_request of MainWindow -->
+    <display_length side="shortest" compare="ge">300</display_length>
+    <!-- taken from height_request of MainWindow -->
+    <display_length side="longest" compare="ge">400</display_length>
+  </requires>
 
   <!-- developer_name has deprecated since AppStream 1.0 -->
   <developer_name translate="no">Ryo Nakano</developer_name>

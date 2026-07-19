@@ -36,7 +36,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         add_action_entries (ACTION_ENTRIES, this);
 
-        width_request = 450;
+        width_request = 300;
         height_request = 400;
         title = Config.APP_NAME;
 
