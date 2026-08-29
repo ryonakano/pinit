@@ -15,19 +15,6 @@ cleanup:
   - /lib/pkgconfig
   - /share/vala
 modules:
-  - name: blueprint-compiler
-    buildsystem: meson
-    cleanup:
-      - '*'
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/blueprint-compiler.git
-        tag: v0.22.2
-        commit: ed35ac74de0c1bb1f5e852410b97edd1f08904c9
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-
   - name: pinit
     buildsystem: meson
     config-opts:
