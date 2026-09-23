@@ -55,8 +55,6 @@
     <display_length side="longest" compare="ge">400</display_length>
   </requires>
 
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
     <name translate="no">Ryo Nakano</name>
   </developer>
