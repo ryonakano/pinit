@@ -71,6 +71,17 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="2.3.0" date="2026-10-03" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Support mobile device</li>
+          <li>EditView: Tweak width</li>
+          <li>Improve mobile support of the keyboard shortcut dialog</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.2.1" date="2026-02-06" urgency="low">
       <description translate="no">
         <ul>
