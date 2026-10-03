@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:27+0900\n"
+"POT-Creation-Date: 2026-10-03 17:30+0900\n"
 "PO-Revision-Date: 2025-08-30 16:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/pinit/tr/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.1-dev\n"
 
-#: data/pinit.desktop.in.in:3
+#: data/pinit.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in.in:4
+#: data/pinit.desktop.in.in:3
 msgid "Desktop File Creator"
 msgstr "Masaüstü Dosya Oluşturucu"
 
-#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+#: data/pinit.desktop.in.in:4 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "Taşınabilir uygulamaları başlatıcıya sabitle"
 
-#: data/pinit.desktop.in.in:11
+#: data/pinit.desktop.in.in:10
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Masaüstü;Dosya;Oluştur;Düzenle;Simge;Bilgi;AppImage;"
 
@@ -66,27 +66,27 @@ msgstr "Uygulama penceresi açık kipte"
 msgid "App window in the dark mode"
 msgstr "Uygulama penceresi koyu kipte"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Genel"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Çık"
 
-#: data/ui/help-overlay.blp:24
+#: data/ui/shortcuts-dialog.blp:25
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Düzenle"
 
-#: data/ui/help-overlay.blp:28
+#: data/ui/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Yeni Girdi"
@@ -97,45 +97,45 @@ msgstr "Yeni Girdi"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:310
+#: src/Application.vala:193
 msgid "translator-credits"
 msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:75
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "“%s” Girdisi Silinemedi"
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:76
 msgid "There was an error while removing the app entry."
 msgstr "Uygulama girdisi kaldırılırken hata oluştu."
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/MainWindow.vala:79 src/MainWindow.vala:129 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
 msgstr "_Kapat"
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:90
 msgid "Entry deleted."
 msgstr "Girdi silindi."
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:103
 msgid "Entry updated."
 msgstr "Girdi güncellendi."
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:126
 msgid "Failed to Load Entries"
 msgstr "Girdiler Yüklenemedi"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:127
 msgid "There was an error while loading app entries."
 msgstr "Uygulama girdileri yüklenirken hata oluştu."
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:155
 msgid "Save Changes?"
 msgstr "Değişiklikler Kaydedilsin Mi?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:156
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -143,15 +143,15 @@ msgstr ""
 "Açık girdiler kaydedilmemiş değişiklikler içeriyor. Kaydedilmemiş "
 "değişiklikler kalıcı olarak yitecek."
 
-#: src/MainWindow.vala:163 src/View/FilesView.vala:164
+#: src/MainWindow.vala:160 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:161
 msgid "_Discard"
 msgstr "_Gözden Çıkar"
 
-#: src/MainWindow.vala:165 src/View/EditView.vala:40
+#: src/MainWindow.vala:162 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_Kaydet"
 

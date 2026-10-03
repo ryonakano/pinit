@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:27+0900\n"
+"POT-Creation-Date: 2026-10-03 17:30+0900\n"
 "PO-Revision-Date: 2026-02-21 15:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/pinit/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,24 +20,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16.1-dev\n"
 
-#: data/pinit.desktop.in.in:3
+#: data/pinit.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in.in:4
+#: data/pinit.desktop.in.in:3
 msgid "Desktop File Creator"
 msgstr "Töölaua seadistusfailide looja"
 
-#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+#: data/pinit.desktop.in.in:4 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr ""
 "Kinnita üksikuid ja/või süsteemiväliseid rakendusi rakenduste käivitajasse"
 
-#: data/pinit.desktop.in.in:11
+#: data/pinit.desktop.in.in:10
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
-msgstr ""
-"Desktop;File;fail;loo;muuda;lisa;teave;rakendus;käivitaja;start;ikoon;"
-"AppImage;töölaud;töölauafail;"
+msgstr "Desktop;File;fail;loo;muuda;lisa;teave;rakendus;käivitaja;start;ikoon;AppImage;töölaud;töölauafail;"
 
 #: data/pinit.metainfo.xml.in.in:13
 msgid ""
@@ -69,27 +67,27 @@ msgstr "Heledas kujunduses rakenduse aken"
 msgid "App window in the dark mode"
 msgstr "Tumedas kujunduses rakenduse aken"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Üldised seadistused"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Klaviatuuri kiirklahvid"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Välju"
 
-#: data/ui/help-overlay.blp:24
+#: data/ui/shortcuts-dialog.blp:25
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Muuda"
 
-#: data/ui/help-overlay.blp:28
+#: data/ui/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Uus kirje"
@@ -100,45 +98,45 @@ msgstr "Uus kirje"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:310
+#: src/Application.vala:193
 msgid "translator-credits"
 msgstr "Priit Jõerüüt 2024-2026"
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:75
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "„%s“ kirje kustutamine ei õnnestunud"
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:76
 msgid "There was an error while removing the app entry."
 msgstr "Antud rakenduse kirje kustutamisel tekkis viga."
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/MainWindow.vala:79 src/MainWindow.vala:129 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
 msgstr "_Sulge"
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:90
 msgid "Entry deleted."
 msgstr "Kirje on kustutatud."
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:103
 msgid "Entry updated."
 msgstr "Kirje on uuendatud."
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:126
 msgid "Failed to Load Entries"
 msgstr "Kirjete laadimine ei õnnestunud"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:127
 msgid "There was an error while loading app entries."
 msgstr "Rakenduste kirjete laadimisel tekkis viga."
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:155
 msgid "Save Changes?"
 msgstr "Kas salvestame muudatused?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:156
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -146,15 +144,15 @@ msgstr ""
 "Avatud kirjetes on salvestamata muudatusi. Kui sa ei salvesta ja sulged, "
 "siis lähevad muudatused jäädavalt kaotsi."
 
-#: src/MainWindow.vala:163 src/View/FilesView.vala:164
+#: src/MainWindow.vala:160 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "_Katkesta"
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:161
 msgid "_Discard"
 msgstr "_Loobu"
 
-#: src/MainWindow.vala:165 src/View/EditView.vala:40
+#: src/MainWindow.vala:162 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_Salvesta"
 

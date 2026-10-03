@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:27+0900\n"
+"POT-Creation-Date: 2026-10-03 17:30+0900\n"
 "PO-Revision-Date: 2026-05-12 12:11+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/pinit/hr/>"
-"\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/pinit/hr/"
+">\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,19 +20,19 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.5-dev\n"
 
-#: data/pinit.desktop.in.in:3
+#: data/pinit.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in.in:4
+#: data/pinit.desktop.in.in:3
 msgid "Desktop File Creator"
 msgstr "Kreator datoteka za desktop"
 
-#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+#: data/pinit.desktop.in.in:4 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "Prikvači prijenosne aplikacije na pokretač"
 
-#: data/pinit.desktop.in.in:11
+#: data/pinit.desktop.in.in:10
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;Datoteka;Stvori;Uredi;Informacije;Ikona;AppImage;"
 
@@ -66,27 +66,27 @@ msgstr "Prozor aplikacije u svijetlom modusu"
 msgid "App window in the dark mode"
 msgstr "Prozor aplikacije u tamnom modusu"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Opće"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovni prečaci"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Zatvori aplikaciju"
 
-#: data/ui/help-overlay.blp:24
+#: data/ui/shortcuts-dialog.blp:25
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Uredi"
 
-#: data/ui/help-overlay.blp:28
+#: data/ui/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Novi unos"
@@ -97,45 +97,45 @@ msgstr "Novi unos"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:310
+#: src/Application.vala:193
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:75
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "Neuspjelo brisanje unosa od „%s”"
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:76
 msgid "There was an error while removing the app entry."
 msgstr "Dogodila se greška prilikom uklanjanja unosa u aplikaciji."
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/MainWindow.vala:79 src/MainWindow.vala:129 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
 msgstr "_Zatvori"
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:90
 msgid "Entry deleted."
 msgstr "Unos izbrisan."
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:103
 msgid "Entry updated."
 msgstr "Unos aktualiziran."
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:126
 msgid "Failed to Load Entries"
 msgstr "Neuspjelo učitavanje unosa"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:127
 msgid "There was an error while loading app entries."
 msgstr "Dogodila se greška prilikom učitavanja unosa u aplikaciji."
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:155
 msgid "Save Changes?"
 msgstr "Spremiti promjene?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:156
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -143,15 +143,15 @@ msgstr ""
 "Otvoreni unosi sadrže nespremljene promjene. Promjene koje se ne spreme će "
 "se zauvijek izgubiti."
 
-#: src/MainWindow.vala:163 src/View/FilesView.vala:164
+#: src/MainWindow.vala:160 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "Od_ustani"
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:161
 msgid "_Discard"
 msgstr "Od_baci"
 
-#: src/MainWindow.vala:165 src/View/EditView.vala:40
+#: src/MainWindow.vala:162 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_Spremi"
 
@@ -320,7 +320,8 @@ msgstr "Neuspjelo otvaranje s eksternom aplikacijom"
 
 #: src/View/EditView.vala:398
 msgid "There was an error while opening the file with an external app."
-msgstr "Dogodila se greška prilikom otvaranja datoteke s eksternom aplikacijom."
+msgstr ""
+"Dogodila se greška prilikom otvaranja datoteke s eksternom aplikacijom."
 
 #: src/View/EditView.vala:453
 msgid "Edit Entry"

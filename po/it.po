@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:27+0900\n"
+"POT-Creation-Date: 2026-10-03 17:30+0900\n"
 "PO-Revision-Date: 2025-10-13 08:07+0000\n"
 "Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/pinit/it/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.14-dev\n"
 
-#: data/pinit.desktop.in.in:3
+#: data/pinit.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in.in:4
+#: data/pinit.desktop.in.in:3
 msgid "Desktop File Creator"
 msgstr "Creatore di File Desktop"
 
-#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+#: data/pinit.desktop.in.in:4 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "Aggiungi app portatili al launcher"
 
-#: data/pinit.desktop.in.in:11
+#: data/pinit.desktop.in.in:10
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr "Desktop;File;Crea;Modifica;Info;Icona;AppImage;"
 
@@ -66,27 +66,27 @@ msgstr "Finestra dell'app in modalità chiara"
 msgid "App window in the dark mode"
 msgstr "Finestra dell'app in modalità scura"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Generale"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Esci"
 
-#: data/ui/help-overlay.blp:24
+#: data/ui/shortcuts-dialog.blp:25
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "Modifica"
 
-#: data/ui/help-overlay.blp:28
+#: data/ui/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "Nuova Voce"
@@ -97,45 +97,45 @@ msgstr "Nuova Voce"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:310
+#: src/Application.vala:193
 msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:75
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "Impossibile eliminare la voce \"%s\""
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:76
 msgid "There was an error while removing the app entry."
 msgstr "Si è verificato un errore durante la rimozione della voce dell'app."
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/MainWindow.vala:79 src/MainWindow.vala:129 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
 msgstr "_Chiudi"
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:90
 msgid "Entry deleted."
 msgstr "Voce eliminata."
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:103
 msgid "Entry updated."
 msgstr "Voce aggiornata."
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:126
 msgid "Failed to Load Entries"
 msgstr "Impossibile caricare le voci"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:127
 msgid "There was an error while loading app entries."
 msgstr "Si è verificato un errore durante il caricamento delle voci dell'app."
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:155
 msgid "Save Changes?"
 msgstr "Salvare le modifiche?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:156
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -143,15 +143,15 @@ msgstr ""
 "Le voci aperte contengono modifiche non salvate. Le modifiche non salvate "
 "andranno perse definitivamente."
 
-#: src/MainWindow.vala:163 src/View/FilesView.vala:164
+#: src/MainWindow.vala:160 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "_Annulla"
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:161
 msgid "_Discard"
 msgstr "_Scarta"
 
-#: src/MainWindow.vala:165 src/View/EditView.vala:40
+#: src/MainWindow.vala:162 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "_Salva"
 

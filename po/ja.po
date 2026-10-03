@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.pinit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:27+0900\n"
+"POT-Creation-Date: 2026-10-03 17:30+0900\n"
 "PO-Revision-Date: 2026-05-02 16:26+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/>"
-"\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/pinit/ja/"
+">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.17.1\n"
 
-#: data/pinit.desktop.in.in:3
+#: data/pinit.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/pinit.desktop.in.in:4
+#: data/pinit.desktop.in.in:3
 msgid "Desktop File Creator"
 msgstr "デスクトップファイル作成アプリ"
 
-#: data/pinit.desktop.in.in:5 data/pinit.metainfo.xml.in.in:11
+#: data/pinit.desktop.in.in:4 data/pinit.metainfo.xml.in.in:11
 msgid "Pin portable apps to the launcher"
 msgstr "ポータブルアプリをランチャーにピン留めします"
 
-#: data/pinit.desktop.in.in:11
+#: data/pinit.desktop.in.in:10
 msgid "Desktop;File;Create;Edit;Info;Icon;AppImage;"
 msgstr ""
 "Desktop;File;Create;Edit;Info;Icon;AppImage;デスクトップ;ファイル;作成;編集;"
@@ -67,27 +67,27 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "全般"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "終了する"
 
-#: data/ui/help-overlay.blp:24
+#: data/ui/shortcuts-dialog.blp:25
 msgctxt "shortcut window"
 msgid "Edit"
 msgstr "編集"
 
-#: data/ui/help-overlay.blp:28
+#: data/ui/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "New Entry"
 msgstr "新しいエントリー"
@@ -98,45 +98,45 @@ msgstr "新しいエントリー"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:310
+#: src/Application.vala:193
 msgid "translator-credits"
 msgstr "Ryo Nakano <ryonakaknock3@gmail.com>"
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:75
 #, c-format
 msgid "Failed to Delete Entry of “%s”"
 msgstr "“%s”のエントリーを削除できませんでした"
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:76
 msgid "There was an error while removing the app entry."
 msgstr "アプリのエントリーを削除中にエラーが発生しました。"
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:132 src/View/EditView.vala:400
+#: src/MainWindow.vala:79 src/MainWindow.vala:129 src/View/EditView.vala:400
 #: src/View/EditView.vala:481
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:90
 msgid "Entry deleted."
 msgstr "エントリーを削除しました。"
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:103
 msgid "Entry updated."
 msgstr "エントリーを更新しました。"
 
-#: src/MainWindow.vala:129
+#: src/MainWindow.vala:126
 msgid "Failed to Load Entries"
 msgstr "エントリーの読み込みに失敗"
 
-#: src/MainWindow.vala:130
+#: src/MainWindow.vala:127
 msgid "There was an error while loading app entries."
 msgstr "アプリのエントリーを読み込み中にエラーが発生しました。"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:155
 msgid "Save Changes?"
 msgstr "変更を保存しますか?"
 
-#: src/MainWindow.vala:159
+#: src/MainWindow.vala:156
 msgid ""
 "Open entries contain unsaved changes. Changes which are not saved will be "
 "permanently lost."
@@ -144,15 +144,15 @@ msgstr ""
 "開いているエントリーに未保存の変更内容が含まれています。保存しないと変更内容"
 "が完全に失われます。"
 
-#: src/MainWindow.vala:163 src/View/FilesView.vala:164
+#: src/MainWindow.vala:160 src/View/FilesView.vala:164
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:161
 msgid "_Discard"
 msgstr "破棄(_D)"
 
-#: src/MainWindow.vala:165 src/View/EditView.vala:40
+#: src/MainWindow.vala:162 src/View/EditView.vala:40
 msgid "_Save"
 msgstr "保存(_S)"
 
