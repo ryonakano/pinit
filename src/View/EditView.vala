@@ -21,7 +21,7 @@ public class View.EditView : Adw.NavigationPage {
     private Adw.EntryRow generic_name_entry;
     private Adw.EntryRow comment_entry;
     private Widget.CategoriesRow categories_row;
-    private Widget.KeywordsRow keywords_row;
+    private Widget.MultiEntryExpanderRow keywords_row;
     private Adw.EntryRow startup_wm_class_entry;
     private Adw.SwitchRow terminal_row;
     private Adw.SwitchRow nodisplay_row;
@@ -123,7 +123,11 @@ public class View.EditView : Adw.NavigationPage {
         categories_row = new Widget.CategoriesRow ();
         optional_group.add (categories_row);
 
-        keywords_row = new Widget.KeywordsRow ();
+        keywords_row = new Widget.MultiEntryExpanderRow (
+            _("Keywords"),
+            _("These words can be used as search terms."),
+            _("Keyword")
+        );
         optional_group.add (keywords_row);
 
         /*
@@ -345,7 +349,7 @@ public class View.EditView : Adw.NavigationPage {
             desktop_file.value_categories = categories_row.to_strv ();
         });
 
-        keywords_row.keywords_changed.connect (() => {
+        keywords_row.entry_changed.connect (() => {
             if (is_loading) {
                 return;
             }

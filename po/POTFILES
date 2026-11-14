@@ -6,4 +6,4 @@ src/MainWindow.vala
 src/View/EditView.vala
 src/View/FilesView.vala
 src/Widget/CategoriesRow.vala
-src/Widget/KeywordsRow.vala
+src/Widget/MultiEntryExpanderRow.vala
