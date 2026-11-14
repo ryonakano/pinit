@@ -19,7 +19,7 @@ sources = files(
   'View/EditView.vala',
   'View/FilesView.vala',
   'Widget/CategoriesRow.vala',
-  'Widget/KeywordsRow.vala',
+  'Widget/MultiEntryExpanderRow.vala',
   'Application.vala',
   'Define.vala',
   'MainWindow.vala',
