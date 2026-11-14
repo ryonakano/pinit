@@ -29,8 +29,8 @@ public class Widget.MultiEntryExpanderRow : Adw.ExpanderRow {
         /**
          * Create a new {@link Widget.MultiEntryExpanderRow.EntryRow}.
          *
-         * @param title  the title for each text entry
-         * @param text   the text to set to the text property
+         * @param title     the title for each text entry
+         * @param text      the text to set to the text property
          */
         public EntryRow (string title, string text) {
             Object (
@@ -61,9 +61,9 @@ public class Widget.MultiEntryExpanderRow : Adw.ExpanderRow {
     /**
      * Create a new {@link Widget.MultiEntryExpanderRow}.
      *
-     * @param title        the title for this row.
-     * @param subtitle     the subtitle for this row
-     * @param entry_title  the title for each text entry
+     * @param title         the title for this row.
+     * @param subtitle      the subtitle for this row
+     * @param entry_title   the title for each text entry
      */
     public MultiEntryExpanderRow (string title, string subtitle, string entry_title) {
         Object (
@@ -108,7 +108,7 @@ public class Widget.MultiEntryExpanderRow : Adw.ExpanderRow {
     /**
      * Reflect texts in a string array to the UI.
      *
-     * @param texts texts that should be loaded to text entries represented in a string array
+     * @param texts     texts that should be loaded to text entries represented in a string array
      */
     public void from_strv (string[] texts) {
         // Clear all of the currently added entries
@@ -125,7 +125,7 @@ public class Widget.MultiEntryExpanderRow : Adw.ExpanderRow {
     /**
      * Add new entry.
      *
-     * @param text   the text
+     * @param text      the text
      */
     public void add_entry (string text = "") {
         var row = new EntryRow (entry_title, text);
@@ -143,7 +143,7 @@ public class Widget.MultiEntryExpanderRow : Adw.ExpanderRow {
     /**
      * Remove row.
      *
-     * @param row   the {@link Widget.MultiEntryExpanderRow.EntryRow} to remove
+     * @param row       the {@link Widget.MultiEntryExpanderRow.EntryRow} to remove
      */
     private void remove_row (EntryRow row) {
         rows.remove (row);
